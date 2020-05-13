@@ -129,7 +129,7 @@ Table of Contents:
 <p>首先，我假设你已经用了一个本地 Hugo 文件夹，网站建设已经基本完成，运行 <code>hugo server -D</code>，打开 <a href="http://localhost:1313">http://localhost:1313</a> 后网页显示一切正常。如果这些还没弄好，请先把网站在本地建设好之后再考虑部署到网上。</p>
 <p>注意⚠：</p>
 <ul>
-<li>在进行下面的步骤之前，你最好先把 hugo 文件夹中的 <code>public</code> 和 <code>resources</code>这两个文件夹删除。如果你里面有 README.md 的话，请先拿出来，之后，你在放进去，替换掉我们随后要新加的 README.md。</li>
+<li>在进行下面的步骤之前，你最好先把 hugo 文件夹中的 <code>public</code> 和 <code>resources</code>这两个文件夹删除。如果你里面有 README.md 的话，请先拿出来。</li>
 <li>从现在开始，不要手动往 hugo 本地文件夹里添加任何东西，不然以下的代码会出错。</li>
 </ul>
 <p>打开 Github, 新建一个仓库。仓库名称为 你的 Github 用户名.github.io。比如，我的 Github 用户名为 hhao1992, 我需要在 Repository name 这里输入：hhao1992.github.io。Description 这里写入自己以及别人可以理解的描述即可。然后选择 Public。随后的 Initialize this repository with a README ，暂时不要选。全部设置好之后，点击 Create repository 。设置如下图：</p>
@@ -165,7 +165,7 @@ git push -u origin master
 
 <h1 id="建立-sources-分支">建立 sources 分支</h1>
 <p>第二步，我们需要回到 Github, 建立一个 sources<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 分支。</p>
-<p>回到我们刚才创建的仓库，在 1 commit 底下有一个关于 Branch 的选择，如下图：</p>
+<p>回到我们刚才创建的仓库，刷新一下页面。你会看到在 1 commit 底下有一个关于 Branch 的选择，如下图：</p>
 <figure>
     <img src="/media/gitpage/branch.png"/> <figcaption>
             <h4>仓库分支</h4>
@@ -179,7 +179,7 @@ git push -u origin master
 git checkout sources
 </code></pre></div><p>输入完之后，记得点一下回车键，这样最后一行才会被执行，以下的代码也一样。</p>
 <h1 id="将-public-文件夹放到-master-分支">将 <code>public</code> 文件夹放到 master 分支</h1>
-<p>紧接着，在 Terminal 中输入以下代码。输入完之后，稍等一会二，让程序运行一下，停止之后，最后别忘了点击一下回车键：</p>
+<p>紧接着，在 Terminal 中输入以下代码。输入完之后，先稍等一会儿，让程序运行一下，停止之后，再点击一下回车键，以运行最后一行代码：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#408080;font-style:italic"># 注意⚠：此部分的代码块只可运行一次！</span>
 <span style="color:#408080;font-style:italic">#!/usr/bin/env bash</span>
 <span style="color:#408080;font-style:italic"># This script does the required work to set up your personal GitHub Pages</span>
@@ -217,7 +217,11 @@ git subtree add --prefix<span style="color:#666">=</span>public <span style="col
 msg <span style="color:#ba2121">&#34;Pulling down the just committed file to help avoid merge conflicts&#34;</span>
 git subtree pull --prefix<span style="color:#666">=</span>public <span style="color:#b62;font-weight:bold">\
 </span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master
-</code></pre></div><p>然后，在 Terminal 中输入</p>
+</code></pre></div><p>如果 Terminal 中出现 <code>fatal: refusing to merge unrelated histories</code> 这样的错误，请接着在 Terminal 中输入：</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git subtree pull --prefix<span style="color:#666">=</span>public <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master --squash
+</code></pre></div><p>这个方法是在 <a href="https://hisoka0917.github.io/git/2018/04/23/add-exist-repo-as-subtree/">Hisoka Blog</a> 看到的。感谢原作者。</p>
+<p>随后，在 Terminal 中输入</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
 </code></pre></div><p>我输入完之后 Terminal 出现如下内容：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#666">(</span>base<span style="color:#666">)</span> 149-160-181-57:hugo Tal$ git status
@@ -244,7 +248,14 @@ git commit -m <span style="color:#ba2121">&#34;adding file(s).&#34;</span>
 git push
 </code></pre></div><p>注意，如果你在上面的 Terminal 结果中的 <code>Untract files:</code> 这一块，除了有 <code>.gitignore</code> 之外还有别的，那么你在代码中 <code>git add .gitignore</code> 这一行下面，也用 <code>git add</code> 来上传这个或这些文件。</p>
 <p>比如，在 Termial 结果中，<code>Untract files:</code> 这一行， <code>.gitignore</code> 之下还有，<code>layouts/</code>，那么，你就需要在<code>git add .gitignore</code> 这一行下面，<code>git commit -m &quot;adding files.&quot;</code> 这一行上面，输入 <code>git add layouts/</code>。</p>
-<p>随后，我们需要在 Terminal 中输入以下代码：</p>
+<p>如果一切正常，并没有显示说有什么 <code>Untract files:</code>，只是显示</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Your branch is ahead of <span style="color:#ba2121">&#39;origin/sources&#39;</span> by <span style="color:#666">2</span> commits.
+  <span style="color:#666">(</span>use <span style="color:#ba2121">&#34;git push&#34;</span> to publish your <span style="color:#008000">local</span> commits<span style="color:#666">)</span>
+</code></pre></div><p>那么你只需要输入你下代码：</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add .
+git commit -m <span style="color:#ba2121">&#34;adding files&#34;</span>
+git push
+</code></pre></div><p>随后，我们需要在 Terminal 中输入以下代码：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#bc7a00">#!/usr/bin/env bash
 </span><span style="color:#bc7a00"></span><span style="color:#408080;font-style:italic"># This script allows you to easily and quickly generate and deploy your website</span>
 <span style="color:#408080;font-style:italic"># using Hugo to your personal GitHub Pages repository. This script requires a</span>

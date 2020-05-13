@@ -26,7 +26,7 @@ Amber 帖子中提到的方法是由 [Jente Hidskes](https://www.hjdskes.nl/blog
 
 注意⚠：
 
-- 在进行下面的步骤之前，你最好先把 hugo 文件夹中的 `public` 和 `resources`这两个文件夹删除。如果你里面有 README.md 的话，请先拿出来，之后，你在放进去，替换掉我们随后要新加的 README.md。
+- 在进行下面的步骤之前，你最好先把 hugo 文件夹中的 `public` 和 `resources`这两个文件夹删除。如果你里面有 README.md 的话，请先拿出来。
 - 从现在开始，不要手动往 hugo 本地文件夹里添加任何东西，不然以下的代码会出错。
 
 
@@ -59,7 +59,7 @@ git push -u origin master
 # 建立 sources 分支
 第二步，我们需要回到 Github, 建立一个 sources[^1] 分支。
 
-回到我们刚才创建的仓库，在 1 commit 底下有一个关于 Branch 的选择，如下图：
+回到我们刚才创建的仓库，刷新一下页面。你会看到在 1 commit 底下有一个关于 Branch 的选择，如下图：
 
 {{<figure src="/media/gitpage/branch.png" title="仓库分支">}}
 
@@ -78,7 +78,7 @@ git checkout sources
 
 # 将 `public` 文件夹放到 master 分支
 
-紧接着，在 Terminal 中输入以下代码。输入完之后，稍等一会二，让程序运行一下，停止之后，最后别忘了点击一下回车键：
+紧接着，在 Terminal 中输入以下代码。输入完之后，先稍等一会儿，让程序运行一下，停止之后，再点击一下回车键，以运行最后一行代码：
 
 ```bash
 # 注意⚠：此部分的代码块只可运行一次！
@@ -119,7 +119,17 @@ msg "Pulling down the just committed file to help avoid merge conflicts"
 git subtree pull --prefix=public \
     https://github.com/$USERNAME/$USERNAME.github.io.git master
 ```
-然后，在 Terminal 中输入 
+如果 Terminal 中出现 `fatal: refusing to merge unrelated histories` 这样的错误，请接着在 Terminal 中输入：
+
+```bash 
+git subtree pull --prefix=public \
+    https://github.com/$USERNAME/$USERNAME.github.io.git master --squash
+```
+
+这个方法是在 [Hisoka Blog](https://hisoka0917.github.io/git/2018/04/23/add-exist-repo-as-subtree/) 看到的。感谢原作者。
+
+
+随后，在 Terminal 中输入 
 
 ```bash
 git status
@@ -159,6 +169,21 @@ git push
 注意，如果你在上面的 Terminal 结果中的 `Untract files:` 这一块，除了有 `.gitignore` 之外还有别的，那么你在代码中 `git add .gitignore` 这一行下面，也用 `git add` 来上传这个或这些文件。
 
 比如，在 Termial 结果中，`Untract files:` 这一行， `.gitignore` 之下还有，`layouts/`，那么，你就需要在`git add .gitignore` 这一行下面，`git commit -m "adding files."` 这一行上面，输入 `git add layouts/`。
+
+如果一切正常，并没有显示说有什么 `Untract files:`，只是显示 
+
+```bash
+Your branch is ahead of 'origin/sources' by 2 commits.
+  (use "git push" to publish your local commits)
+```
+
+那么你只需要输入你下代码：
+
+```bash
+git add .
+git commit -m "adding files"
+git push
+```
 
 随后，我们需要在 Terminal 中输入以下代码：
 
