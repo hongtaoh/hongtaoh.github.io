@@ -1,0 +1,152 @@
+---
+title: Using Markdown in Hugo post
+author: Hongtao Hao
+date: '2020-01-28'
+slug: using-markdown-in-hugo-post
+categories: []
+tags: []
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Exercise 4.1 
+```{r}
+df <- HairEyeColor # Changing the name of HairEyecolor
+show (df) # displaying the dataframe
+e.h.freq <- apply (df, c('Eye','Hair'), sum) # To get a table where 'Eye color' is the row and 'Hair color' is the column. This line of code will sum across sex. 
+e.h.prop <- e.h.freq / sum (e.h.freq) # Generating joint proportions in each cell.
+show (round (e.h.prop, 2)) # Round off the values in e.h.prop to the 2nd number of decimal places and then display the dataframe. 
+h.freq <- apply (df, c('Hair'), sum) # This will sum across sex and eye, and display the number of people having a specific hair color. 
+h.prop <- h.freq / sum (h.freq) # This will display the marginal propabilities (Hair)
+show ( round(h.prop,2) ) # Round off and display the dataframe.
+e.freq <- apply (df, c('Eye'), sum) # This will sum across sex and hair, and display the number of people having a specific eye color.
+e.prop <- e.freq /sum (e.freq) # This will display the marginal probabilities (Eye)
+show (round(e.prop, 2) ) # Round off and display the dataframe. 
+e.h.prop ['Blue', ] / e.prop ['Blue'] # This is p(h|e=blue), i.e., the probabilities of the hair colors given that eye color is blue. 
+# To get the probabilities of hair colors given Brown eyes:
+e.h.prop ['Brown',] / e.prop ['Brown']
+# To get the probabilities of eye colors given Brown hair:
+e.h.prop [, 'Brown'] / h.prop ['Brown']
+
+```
+
+# Exercise 4.2
+```{r}
+set.seed(47405)
+N <- 500
+pHeads <- 0.8
+flipSequence <- sample (x = c(0,1), prob = c(1-pHeads,pHeads), size = N, replace = T)
+num.heads <- cumsum (flipSequence)
+num.flips <- c (1:N)
+prop.heads <- num.heads / num.flips
+plot (num.flips, prop.heads, type = 'o', log='x', 
+      col="skyblue", xlim = c(1,N), ylim = c(0.0,1.0), cex.axis = 1.5,
+      xlab = "Flip Number", ylab = "Proportion Heads", cex.lab = 1.5,
+      main = "Running Proportion of Heads", cex.main=1.5)
+abline( h=pHeads, lty="dotted")
+flipLetters <- paste (c("T", "H")[flipSequence[1:10]+1],collapse = "")
+displayString <- paste0( "Flip Sequence =" , flipLetters , "...")
+text (N, .5, displayString, adj = c(1,0.5), cex = 1.3)
+text (N, .4, paste("End Proportion = ", prop.heads[N]), adj=c(1,0.5), cex=1.3)
+```
+# 3
+```{r}
+set.seed(1)
+x <- seq(5, 15, length=1000)
+y <- dnorm(x, mean=10, sd=.20)
+plot(x, y, type="l", lwd=1, col="red")
+
+```
+
+# 3A
+```{r}
+set.seed(1)
+dnorm(9.9,mean=10, sd=.20)
+```
+
+# 3B
+```{r}
+set.seed(1)
+# Generating a random sample of 100,000 values from the normal distribution:
+heapOdata <- rnorm (100000, mean = 10.0, sd = .20)
+hist(heapOdata, breaks = 51, col = "orange", main = "rnorm") # Having a quick overview of this set of random numbers.
+```
+
+# 3C
+```{r}
+num.between <- sum( heapOdata >= 9.8 & heapOdata < 10.0 ) # counting how many numbers fall between the interval
+prob.mass <- num.between / 100000 # Calculating probability mass
+approx.prob <- prob.mass / (10.0-9.8) # Calculating probability density (probability mass / bin width)
+approx.prob 
+# which is approximately the same as Part A.
+```
+
+# 4
+
+According to Baye's rule, among all joint outcomes with "negative results", the proportion of people having the disease is $p (user|-)$. Specifically:
+
+$$p (user|-) = \frac{p (-|user)\cdot p(user)}{p(-)}$$
+We should notice that the prior, $p(user)$ is now the posterior computed from the [Table 5.4](https://www.sciencedirect.com/science/article/pii/B9780124058880000052#t0025) in the book. Also notice that,
+
+$$P(-) = \sum_{θ^*} \cdot P (-|θ^∗) \cdot P(θ^*)  $$
+Now, I will compute the posterior from [Table 5.4](https://www.sciencedirect.com/science/article/pii/B9780124058880000052#t0025):
+
+$$P (user|+) = \frac {0.99 \cdot 0.001}{0.99 \cdot 0.001 + 0.05 \cdot (1-0.001)}$$
+Using R, we know that the result is:
+
+```{r}
+posterior <- (0.99*0.001)/(0.99*0.001+0.05*(1-0.001))
+posterior
+```
+
+
+\[
+\begin{eqnarray}
+P (user|-) & = & \frac{P (-|user)\cdot P(user)}{P(-)}\\
+\\
+& = & \frac{P (-|user)\cdot P(user)}{\sum_{θ^*} \cdot P (-|θ^∗) \cdot P(θ^*)}\\
+\\
+& = & \frac {0.01 \cdot 0.01943463 }{P(-|user) \cdot P(user) + P(-|non-user) \cdot P (non-user)} \\
+\\
+& = & \frac {0.01 \cdot 0.01943463 }{0.01 \cdot 0.01943463 + 0.95 \cdot (1-0.01943463)}
+\end{eqnarray}
+\]
+
+Calculating using R:
+
+```{r}
+(0.01*posterior) / {0.01*posterior+(0.95*(1-posterior))}
+```
+
+Therefore, the probability that the person has the disease given that the re-test shows "negative" is 0.0002085862.
+
+
+# 5
+
+## 5A
+Test     User   Non-user   Margin 
+------- ------ ---------- ------- 
++         99      4995     5094 
+-         1       94905    94906 
+Margin   100    99,900    100,000
+
+## 5B
+The proportion of people who have the disease given that the test result is positive:
+
+```{r}
+99/5094
+```
+
+## 5C & 5D
+```{r}
+upper.left <- 10000 * 0.99
+upper.left
+upper.right <- 9990000 * 0.05
+upper.right
+lower.left <- 10000 * 0.99 * 0.01
+lower.left
+lower.right <- 9990000 * 0.05 * 0.95
+lower.right
+lower.left / (lower.left+lower.right) # The result is the same as the answer to Exercise 5.1. 
+```
