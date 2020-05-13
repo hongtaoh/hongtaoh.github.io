@@ -1,0 +1,830 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab02 - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hhao1992.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/en-vitae/">Vitae</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/cn/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">Lab02</h1>
+
+<p>YY Ahn 
+ / 2020-03-21 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hhao1992/hhao1992.github.io/edit/sources/content/en/blog/lab02.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body-text list-text">
+<h1 id="w2-lab-data-processing-basics-and-john-snows-map">W2 Lab: Data processing basics and John Snow&rsquo;s map</h1>
+<p>Follow the contents of this notebook and answer all questions (e.g. <strong>Q1: &hellip;</strong>)</p>
+<h2 id="if-you-are-not-familiar-with-python-yet">If you are not familiar with Python yet&hellip;</h2>
+<p>Maybe you can quickly review these basics first.</p>
+<ul>
+<li><a href="https://docs.python.org/3.6/tutorial/introduction.html#numbersnumbers">numbers</a> and <a href="https://docs.python.org/3.6/tutorial/introduction.html#strings">strings</a>;</li>
+<li><a href="https://docs.python.org/3.6/tutorial/controlflow.html#if-statements">if</a> and <a href="https://docs.python.org/3.6/tutorial/controlflow.html#for-statements">for</a> statement</li>
+<li>data structure (<a href="https://docs.python.org/3.6/tutorial/introduction.html#lists">lists</a>, <a href="https://docs.python.org/3.6/tutorial/datastructures.html#sets">sets</a>, <a href="https://docs.python.org/3.6/tutorial/datastructures.html#dictionaries">dictionaries</a>)</li>
+<li><a href="https://docs.python.org/3.6/tutorial/controlflow.html#defining-functions">functions</a> and <a href="https://docs.python.org/3.6/tutorial/modules.html">modules</a></li>
+</ul>
+<p><a href="https://developers.google.com/edu/python/?hl=en">Google&rsquo;s Python Class</a> is also a nice resource.</p>
+<h2 id="jupyter--pandas--awesomeness">Jupyter + Pandas = Awesomeness</h2>
+<p><a href="http://jupyter.org">Jupyter notebook (lab)</a> (and <a href="https://ipython.org">IPython</a>) and <a href="http://pandas.pydata.org">Pandas</a> may be two most important libraries responsible for the <code>Python</code>'s rise in data science. <code>Jupyter</code> lets you interactively explore datasets and code; <code>Pandas</code> lets you handle tabular datasets with superb speed and convenience. And they work so well together! In many cases, <code>Jupyter</code> and <code>Pandas</code> are all you need to load, clean, transform, visualize, and understand a dataset.</p>
+<p>If you are not familiar with <code>Pandas</code>, you may want to follow their official tutorial called <a href="http://pandas.pydata.org/pandas-docs/stable/10min.html">10 Minutes to pandas</a> now or in the near future.</p>
+<h2 id="importing-pandas">Importing pandas</h2>
+<p>The convention for importing <code>pandas</code> is the following</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">pandas</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">pd</span>
+</code></pre></div><p>You can check the version of the library. Because pandas is fast-evolving library, you want to make sure that you have the up-to-date version of the library.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pd<span style="color:#666">.</span>__version__
+</code></pre></div><pre><code>'0.24.2'
+</code></pre>
+<h2 id="loading-a-csv-data-file">Loading a CSV data file</h2>
+<p>Using pandas, you can read tabular data files in <a href="https://pandas.pydata.org/pandas-docs/stable/io.html">many formats and through many protocols</a>. Pandas supports not only flat files such as <code>.csv</code>, but also various other formats including clipboard, Excel, JSON, HTML, Feather, Parquet, SQL, Google BigQuery, and so on. Moreover, you can pass a local file path or a URL. If it&rsquo;s on Amazon S3, just pass a url like <code>s3://path/to/file.csv</code>. If it&rsquo;s on a webpage, then just use <code>https://some/url.csv</code>.</p>
+<p>Let&rsquo;s load a dataset about the location of pumps in the John Snow&rsquo;s map. You can download the file to your computer and try to load it using the local path too.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df <span style="color:#666">=</span> pd<span style="color:#666">.</span>read_csv(<span style="color:#ba2121">&#39;https://raw.githubusercontent.com/yy/dviz-course/master/data/pumps.csv&#39;</span>)
+</code></pre></div><p><code>df</code> stands for &ldquo;<a href="https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe">Data Frame</a>&quot;, which is a fundamental data object in Pandas. You can take a look at the dataset by looking at the first few lines.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df<span style="color:#666">.</span>head() 
+</code></pre></div><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>8.651201</td>
+      <td>17.891600</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10.984780</td>
+      <td>18.517851</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>13.378190</td>
+      <td>17.394541</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>14.879830</td>
+      <td>17.809919</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>8.694768</td>
+      <td>14.905470</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><strong>Q1: can you print only the first three lines?</strong> Refer: http://pandas.pydata.org/pandas-docs/stable/index.html</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic"># TODO: write your code here</span>
+pump_df[:<span style="color:#666">3</span>]
+</code></pre></div><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>8.651201</td>
+      <td>17.891600</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10.984780</td>
+      <td>18.517851</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>13.378190</td>
+      <td>17.394541</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>You can also sample several rows randomly. If the data is sorted in some ways, sampling may give you a rather unbiased view of the dataset.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df<span style="color:#666">.</span>sample(<span style="color:#666">5</span>)
+</code></pre></div><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>8.864416</td>
+      <td>12.753540</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>8.999440</td>
+      <td>5.101023</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>16.005110</td>
+      <td>5.046838</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>8.651201</td>
+      <td>17.891600</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>12.571360</td>
+      <td>11.727170</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>You can also figure out the number of rows in the dataset by running</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000">len</span>(pump_df)
+</code></pre></div><pre><code>13
+</code></pre>
+<p>Note that <code>df.size</code> does not give you the number of rows. It tells you the number of elements.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df<span style="color:#666">.</span>size
+</code></pre></div><pre><code>26
+</code></pre>
+<p>You can also look into the shape of the dataset as well as what are the columns in the dataset.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df<span style="color:#666">.</span>shape  <span style="color:#408080;font-style:italic"># 13 rows and 2 columns</span>
+</code></pre></div><pre><code>(13, 2)
+</code></pre>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df<span style="color:#666">.</span>columns
+</code></pre></div><pre><code>Index(['X', 'Y'], dtype='object')
+</code></pre>
+<p>You can also check out basic descriptive statistics of the whole dataset by using <code>describe()</code> method.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df<span style="color:#666">.</span>describe()
+</code></pre></div><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>13.000000</td>
+      <td>13.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>12.504677</td>
+      <td>11.963446</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>3.376869</td>
+      <td>4.957821</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>8.651201</td>
+      <td>5.046838</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>8.999440</td>
+      <td>7.958250</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>12.571360</td>
+      <td>11.727170</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>14.879830</td>
+      <td>17.394541</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>18.914391</td>
+      <td>18.517851</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>You can slice the data like a list</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df[:<span style="color:#666">2</span>]
+</code></pre></div><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>8.651201</td>
+      <td>17.891600</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10.984780</td>
+      <td>18.517851</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df[<span style="color:#666">-</span><span style="color:#666">2</span>:]
+</code></pre></div><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>16.00511</td>
+      <td>5.046838</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>8.99944</td>
+      <td>5.101023</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df[<span style="color:#666">1</span>:<span style="color:#666">5</span>]
+</code></pre></div><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>10.984780</td>
+      <td>18.517851</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>13.378190</td>
+      <td>17.394541</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>14.879830</td>
+      <td>17.809919</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>8.694768</td>
+      <td>14.905470</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>or filter rows using some conditions.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df[pump_df<span style="color:#666">.</span>X <span style="color:#666">&gt;</span> <span style="color:#666">13</span>]
+</code></pre></div><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>13.378190</td>
+      <td>17.394541</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>14.879830</td>
+      <td>17.809919</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>13.521460</td>
+      <td>7.958250</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>16.434891</td>
+      <td>9.252130</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>18.914391</td>
+      <td>9.737819</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>16.005110</td>
+      <td>5.046838</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Now let&rsquo;s load another CSV file that documents the cholera deaths. The URL is https://raw.githubusercontent.com/yy/dviz-course/master/data/deaths.csv</p>
+<p><strong>Q2: load the death dataset and inspect it</strong></p>
+<ol>
+<li><strong>load this dataset as <code>death_df</code>.</strong></li>
+<li>**show the first 2 rows. **</li>
+<li><strong>show the total number of rows.</strong></li>
+</ol>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic"># TODO: write your code here. You probably want to create multiple cells. </span>
+death_df<span style="color:#666">=</span>pd<span style="color:#666">.</span>read_csv(<span style="color:#ba2121">&#39;https://raw.githubusercontent.com/yy/dviz-course/master/data/deaths.csv&#39;</span>)
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_df[:<span style="color:#666">2</span>]
+</code></pre></div><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>13.588010</td>
+      <td>11.09560</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>9.878124</td>
+      <td>12.55918</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000">len</span>(death_df)
+</code></pre></div><pre><code>578
+</code></pre>
+<h2 id="some-visualizations">Some visualizations?</h2>
+<p>Let&rsquo;s visualize them! Pandas actually provides <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html">a nice visualization interface</a> that uses <a href="https://matplotlib.org">matplotlib</a> under the hood. You can do many basic plots without learning <code>matplotlib</code>. So let&rsquo;s try.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_df<span style="color:#666">.</span>plot()
+</code></pre></div><pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff421fbc470&gt;
+</code></pre>
+<p><img src="/media/lab02_files/lab02_37_1.png" alt="png"></p>
+<p>Oh by the way, depending on your environment, you may not see any plot. If you don&rsquo;t see anything run the following command.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#666">%</span>matplotlib inline
+</code></pre></div><p>The commands that start with <code>%</code> is called <a href="http://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-matplotlib">the magic commands</a>, which are available in IPython and Jupyter. The purpose of this command is telling the IPython / Jupyter to show the plot right here instead of trying to use other external viewers.</p>
+<p>Anyway, this doesn&rsquo;t seem like the plot we want. Instead of putting each row as a point in a 2D plane by using the X and Y as the coordinate, it just created a line chart. Let&rsquo;s fix it. Please take a look at <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html">the plot method documentation</a>. How should we change the command? Which <code>kind</code> of plot do we want to draw?</p>
+<p>Yes, we want to draw a <em>scatter plot</em> using x and y as the Cartesian coordinates.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_df<span style="color:#666">.</span>plot(x<span style="color:#666">=</span><span style="color:#ba2121">&#39;X&#39;</span>, y<span style="color:#666">=</span><span style="color:#ba2121">&#39;Y&#39;</span>, kind<span style="color:#666">=</span><span style="color:#ba2121">&#39;scatter&#39;</span>, label<span style="color:#666">=</span><span style="color:#ba2121">&#39;Deaths&#39;</span>)
+</code></pre></div><pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff41f68c780&gt;
+</code></pre>
+<p><img src="/media/lab02_files/lab02_42_1.png" alt="png"></p>
+<p>I think I want to reduce the size of the dots and change the color to black. But it is difficult to find how to do that! It is sometimes quite annoying to figure out how to change how the visualization looks, especially when we use <code>matplotlib</code>. Unlike some other advanced tools, <code>matplotlib</code> does not provide a very coherent way to adjust your visualizations. That&rsquo;s one of the reasons why there are lots of visualization libraries that <em>wrap</em> <code>matplotlib</code>. Anyway, this is how you do it.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_df<span style="color:#666">.</span>plot(x<span style="color:#666">=</span><span style="color:#ba2121">&#39;X&#39;</span>, y<span style="color:#666">=</span><span style="color:#ba2121">&#39;Y&#39;</span>, kind<span style="color:#666">=</span><span style="color:#ba2121">&#39;scatter&#39;</span>, label<span style="color:#666">=</span><span style="color:#ba2121">&#39;Deaths&#39;</span>, s<span style="color:#666">=</span><span style="color:#666">2</span>, c<span style="color:#666">=</span><span style="color:#ba2121">&#39;black&#39;</span>)
+</code></pre></div><pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff41f6827b8&gt;
+</code></pre>
+<p><img src="/media/lab02_files/lab02_44_1.png" alt="png"></p>
+<p>Can we visualize both deaths and pumps?</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_df<span style="color:#666">.</span>plot(x<span style="color:#666">=</span><span style="color:#ba2121">&#39;X&#39;</span>, y<span style="color:#666">=</span><span style="color:#ba2121">&#39;Y&#39;</span>, s<span style="color:#666">=</span><span style="color:#666">2</span>, c<span style="color:#666">=</span><span style="color:#ba2121">&#39;black&#39;</span>, kind<span style="color:#666">=</span><span style="color:#ba2121">&#39;scatter&#39;</span>, label<span style="color:#666">=</span><span style="color:#ba2121">&#39;Deaths&#39;</span>)
+pump_df<span style="color:#666">.</span>plot(x<span style="color:#666">=</span><span style="color:#ba2121">&#39;X&#39;</span>, y<span style="color:#666">=</span><span style="color:#ba2121">&#39;Y&#39;</span>, kind<span style="color:#666">=</span><span style="color:#ba2121">&#39;scatter&#39;</span>, c<span style="color:#666">=</span><span style="color:#ba2121">&#39;red&#39;</span>, s<span style="color:#666">=</span><span style="color:#666">8</span>, label<span style="color:#666">=</span><span style="color:#ba2121">&#39;Pumps&#39;</span>)
+</code></pre></div><pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff41f5b49b0&gt;
+</code></pre>
+<p><img src="/medialab02_files/lab02_46_1.png" alt="png"></p>
+<p><img src="/media/lab02_files/lab02_46_2.png" alt="png"></p>
+<h2 id="figure-and-axes">Figure and Axes</h2>
+<p>Why do we have two separate plots? The reason is that, by default, the <code>plot</code> method creates a new plot. In order to avoid it, we need to either create an <a href="https://matplotlib.org/api/axes_api.html">Axes</a> and tell <code>plot</code> to use that axes. What is an <code>axes</code>? See this illustration.</p>
+<img src="https://matplotlib.org/1.5.1/_images/fig_map.png" alt="figure, axes, and axis" style="width: 500px;"/>
+<p>A figure can contain multiple axes (<a href="https://matplotlib.org/gallery/subplots_axes_and_figures/subplot_demo.html#sphx-glr-gallery-subplots-axes-and-figures-subplot-demo-py">link</a>):</p>
+<p><img src="https://matplotlib.org/_images/sphx_glr_subplot_demo_001.png" alt="multipleaxes"></p>
+<p>and an axes can contain multiple plots (<a href="https://matplotlib.org/gallery/api/two_scales.html#sphx-glr-gallery-api-two-scales-py">link</a>).</p>
+<p><img src="https://matplotlib.org/_images/sphx_glr_two_scales_001.png" alt="multipleplots"></p>
+<p>Conveniently, when you call <code>plot</code> method, it creates an axes and returns it to you</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ax <span style="color:#666">=</span> death_df<span style="color:#666">.</span>plot(x<span style="color:#666">=</span><span style="color:#ba2121">&#39;X&#39;</span>, y<span style="color:#666">=</span><span style="color:#ba2121">&#39;Y&#39;</span>, s<span style="color:#666">=</span><span style="color:#666">2</span>, c<span style="color:#666">=</span><span style="color:#ba2121">&#39;black&#39;</span>, kind<span style="color:#666">=</span><span style="color:#ba2121">&#39;scatter&#39;</span>, label<span style="color:#666">=</span><span style="color:#ba2121">&#39;Deaths&#39;</span>)
+</code></pre></div><p><img src="/media/lab02_files/lab02_48_0.png" alt="png"></p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ax
+</code></pre></div><pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff41f5cf390&gt;
+</code></pre>
+<p>Then you can pass this axes object to another plot to put both plots in the same axes.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ax <span style="color:#666">=</span> death_df<span style="color:#666">.</span>plot(x<span style="color:#666">=</span><span style="color:#ba2121">&#39;X&#39;</span>, y<span style="color:#666">=</span><span style="color:#ba2121">&#39;Y&#39;</span>, s<span style="color:#666">=</span><span style="color:#666">2</span>, c<span style="color:#666">=</span><span style="color:#ba2121">&#39;black&#39;</span>, alpha<span style="color:#666">=</span><span style="color:#666">0.5</span>, kind<span style="color:#666">=</span><span style="color:#ba2121">&#39;scatter&#39;</span>, label<span style="color:#666">=</span><span style="color:#ba2121">&#39;Deaths&#39;</span>)
+pump_df<span style="color:#666">.</span>plot(x<span style="color:#666">=</span><span style="color:#ba2121">&#39;X&#39;</span>, y<span style="color:#666">=</span><span style="color:#ba2121">&#39;Y&#39;</span>, kind<span style="color:#666">=</span><span style="color:#ba2121">&#39;scatter&#39;</span>, c<span style="color:#666">=</span><span style="color:#ba2121">&#39;red&#39;</span>, s<span style="color:#666">=</span><span style="color:#666">8</span>, label<span style="color:#666">=</span><span style="color:#ba2121">&#39;Pumps&#39;</span>, ax<span style="color:#666">=</span>ax)
+</code></pre></div><pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff41f58f2b0&gt;
+</code></pre>
+<p><img src="/media/lab02_files/lab02_51_1.png" alt="png"></p>
+<h2 id="voronoi-diagram">Voronoi diagram</h2>
+<p>Let&rsquo;s try the Voronoi diagram. You can use the <code>scipy.spatial.Voronoi</code> and <code>scipy.spatial.voronoi_plot_2d</code> from <code>scipy</code>, the <em>scientific python</em> library.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">scipy.spatial</span> <span style="color:#008000;font-weight:bold">import</span> Voronoi, voronoi_plot_2d
+</code></pre></div><p>Take a look at the documentation of <a href="https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.spatial.Voronoi.html#scipy.spatial.Voronoi">Voronoi</a> and <a href="https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.spatial.voronoi_plot_2d.html">voronoi_plot_2d</a> and</p>
+<p><strong>Q3: produce a Voronoi diagram that shows the deaths, pumps, and voronoi cells</strong></p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic"># you&#39;ll need this</span>
+points <span style="color:#666">=</span> pump_df<span style="color:#666">.</span>values
+points
+</code></pre></div><pre><code>array([[ 8.6512012, 17.8915997],
+       [10.9847803, 18.5178509],
+       [13.37819  , 17.3945408],
+       [14.8798304, 17.8099194],
+       [ 8.694768 , 14.9054699],
+       [ 8.8644161, 12.75354  ],
+       [12.5713596, 11.72717  ],
+       [10.6609697,  7.428647 ],
+       [13.5214596,  7.95825  ],
+       [16.4348907,  9.2521296],
+       [18.9143906,  9.7378187],
+       [16.0051098,  5.0468378],
+       [ 8.9994402,  5.1010232]])
+</code></pre>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic"># TODO: your code here</span>
+vor<span style="color:#666">=</span>Voronoi(points)
+vor
+voronoi_plot_2d(vor, show_vertices<span style="color:#666">=</span>False, ax<span style="color:#666">=</span>ax, show_points<span style="color:#666">=</span>False)
+</code></pre></div><p><img src="/media/lab02_files/lab02_56_0.png" alt="png"></p>
+<h2 id="saving-the-figure">Saving the figure</h2>
+<p>You can also save your figure into PDF, PNG, etc. If you run the following, the plot will not only be displayed here, but also be saved as <code>foo.png</code>.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">matplotlib.pyplot</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">plt</span>
+plt<span style="color:#666">.</span>plot([<span style="color:#666">1</span>,<span style="color:#666">2</span>,<span style="color:#666">3</span>], [<span style="color:#666">4</span>,<span style="color:#666">2</span>,<span style="color:#666">3</span>])
+plt<span style="color:#666">.</span>savefig(<span style="color:#ba2121">&#39;foo.png&#39;</span>)
+</code></pre></div><p><img src="/media/lab02_files/lab02_58_0.png" alt="png"></p>
+<p><strong>Q4: Save your Voronoi diagram. Make sure that your plot contains the scatterplot of deaths &amp; pumps as well as the Voronoi cells</strong></p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic"># TODO: your code here</span>
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">matplotlib.pyplot</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">plt</span>
+voronoi_plot_2d(vor, show_vertices<span style="color:#666">=</span>False, ax<span style="color:#666">=</span>ax, show_points<span style="color:#666">=</span>False)
+plt<span style="color:#666">.</span>savefig(<span style="color:#ba2121">&#39;voronoi_diagram&#39;</span>)
+</code></pre></div><pre><code>&lt;Figure size 432x288 with 0 Axes&gt;
+</code></pre>
+<p>Ok, that was a brief introduction to <code>pandas</code> and some simple visualizations. Now let&rsquo;s talk about web a little bit.</p>
+<h2 id="html--css-basics">HTML &amp; CSS Basics</h2>
+<h3 id="seting-up-a-local-python-web-server">Seting up a local Python web server</h3>
+<p>Many browsers don&rsquo;t allow loading files locally due to security concerns. If you work with Javascript and datasets, this can cause some troubles. We can get around by simply running a local web server with Python (did you know that there is a simple HTTP server module in Python? 😎):</p>
+<ul>
+<li>
+<p>Open the Command Prompt (windows) or your terminal.</p>
+</li>
+<li>
+<p>Move to the working directory by typing <code>cd &lt;FOLDER_LOCATION&gt;</code>. If you run your webserver here, then this becomes the root of the website.</p>
+</li>
+<li>
+<p>Type</p>
+<p><code>python -m http.server</code>.</p>
+</li>
+</ul>
+<p>If successful, you&rsquo;ll see</p>
+<pre><code>Serving HTTP on 0.0.0.0 port 8000 …
+</code></pre>
+<p>This means that now your computer is running a webserver and its IP address is 0.0.0.0 and the port is 8000. Now you can open a browser and type &ldquo;0.0.0.0:8000&rdquo; on the address bar to connect to this webserver. Equivalently, you can type &ldquo;localhost:8000&rdquo;. After typing, click on the different links. You can also directly access one of these links by typing in <code>localhost:8000/NAME_OF_YOUR_FILE.html</code> in the address bar.</p>
+<h3 id="html-review">HTML review</h3>
+<p>Webpages are written in a standard markup language called HTML (HyperText Markup Language). The basic syntax of HTML consists of elements enclosed within <code>&lt;</code> and <code>&gt;</code> symbols. Browsers such as Firefox and Chrome parse these tags and <em>render</em> the content of a webpage in the designated format.</p>
+<p>Here is a list of important tags and their descriptions.</p>
+<ul>
+<li>
+<p><code>html</code> - Surrounds the entire document.</p>
+</li>
+<li>
+<p><code>head</code> - Contains info about the document itself. E.g. the title, any external stylesheets or scripts, etc.</p>
+</li>
+<li>
+<p><code>title</code> - Assigns title to page. This title is used while bookmarking.</p>
+</li>
+<li>
+<p><code>body</code> - The main part of the document.</p>
+</li>
+<li>
+<p><code>h1</code>, <code>h2</code>, <code>h3</code>, &hellip; - Headings (Smaller the number, larger the size).</p>
+</li>
+<li>
+<p><code>p</code> - Paragraph.</p>
+</li>
+<li>
+<p><code>br</code> - Line break.</p>
+</li>
+<li>
+<p><code>em</code> - emphasize text.</p>
+</li>
+<li>
+<p><code>strong</code> or <code>b</code> - Bold font.</p>
+</li>
+<li>
+<p><code>a</code> - Defines a hyperlink and allows you to link out to the other webpages.</p>
+</li>
+<li>
+<p><code>img</code> - Place an image.</p>
+</li>
+<li>
+<p><code>ul</code>, <code>ol</code>, <code>li</code> - Unordered lists with bullets, ordered lists with numbers and each item in list respectively.</p>
+</li>
+<li>
+<p><code>table</code>, <code>th</code>, <code>td</code>, <code>tr</code> - Make a table, specifying contents of each cell.</p>
+</li>
+<li>
+<p><code>&lt;!--&gt;</code> - Comments – will not be displayed.</p>
+</li>
+<li>
+<p><code>span</code> - This will not visibly change anything on the webpage. But it is important while referencing in CSS or JavaScript. It spans a section of text, say, within a paragraph.</p>
+</li>
+<li>
+<p><code>div</code> - This will not visibly change anything on the webpage. But it is important while referencing in CSS or JavaScript. It stands for division and allocates a section of a page.</p>
+</li>
+</ul>
+<h3 id="css-review">CSS review</h3>
+<p>While HTML directly deals with the content and structure, CSS (Cascading Style Sheets) is the primary language that is used for the look and formatting of a web document.</p>
+<p>A CSS stylesheet consists of one or more selectors, properties and values. For example:</p>
+<pre><code>body {   
+  background-color: white;   
+  color: steelblue;   
+}
+</code></pre>
+<p>Selectors are the HTML elements to which the specific styles (combination of properties and values) will be applied. In the above example, all text within the <code>body</code> tags will be in steelblue.</p>
+<p>There are three ways to include CSS code in HTML. This is called &ldquo;referencing&rdquo;.</p>
+<p>Embed CSS in HTML - You can place the CSS code within <code>style</code> tags inside the <code>head</code> tags. This way you can keep everything within a single HTML file but does make the code lengthy.</p>
+<pre><code>&lt;head&gt;  			
+    &lt;style type=&quot;text/css&quot; 	
+    .description {
+    font: 16px times-new-roman;
+    }
+    .viz {
+    font: 10px sans-serif;
+    } 
+    &lt;/style&gt;
+</code></pre>
+<p>Reference an external stylesheet from HTML - This is a much cleaner way but results in the creation of another file. To do this, you can copy the CSS code into a text file and save it as a .css file in the same folder as the HTML file. In the document head in the HTML code, you can then do the following:</p>
+<pre><code>&lt;head&gt;
+ &lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheet.css&quot;&gt;
+&lt;/head&gt;
+</code></pre>
+<p>Attach inline styles - You can also directly attach the styles in-line along with the main HTML code in the body. This makes it easy to customize specific elements but makes the code very messy, because the design and content get mixed up.</p>
+<pre><code>&lt;p style=&quot;color: green; font-size:36px; font-weight:bold;&quot;&gt;
+Inline styles can be handy sometimes.
+&lt;/p&gt;
+</code></pre>
+<p>**Q5: Create a simple HTML page that displays the Voronoi diagram that you saved. Feel free to add more plots, explanations, and any styles. Make sure to check you can run the Python webserver and open the HTML file that you created. **</p>
+<p>Btw, you can also export Jupyter notebook into various formats. Click <code>File -&gt; Export Notebook As</code> and play with it.</p>
+<h2 id="now-submit-your-work">Now submit your work</h2>
+<p>Rename your <code>.ipynb</code> and <code>HTML</code> (CSS) files in the format of <code>lab02_lastname_firstname</code>, and upload to Canvas.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+</code></pre></div> 
+
+<p style="color:#777;">Last modified on 2020-05-13</p>
+
+</div>
+<a href="#top"><i class="fa fa-arrow-circle-up" style="font-size: 30px; color: black;"></i></a>  
+</main>
+
+  <footer class="footer">
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+<script type="text/javascript" src="/js/tw_cn.js"></script>
+<script type="text/javascript">
+var defaultEncoding = 2; 
+var translateDelay = 0; 
+var cookieDomain = "http://www.hhao1992.githu.io/"; 
+var msgToTraditionalChinese = "繁体"; 
+var msgToSimplifiedChinese = "简体"; 
+var translateButtonId = "translateLink"; 
+translateInitilization();
+</script>
+
+
+<ul class="footer-links">
+          
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="https://bookdown.org/yihui/blogdown/images/logo.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hhao1992/hhao1992.github.io" class="footer-links-kudos">Content in <img src="https://simpleicons.org/icons/github.svg" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+
+
+
+  </footer>
+  </body>
+</html>
+
+

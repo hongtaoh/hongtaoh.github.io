@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>科技 on 郝鸿涛::Hongtao Hao</title>
+    <link>https://hhao1992.github.io/cn/codes/</link>
+    <description>Recent content in 科技 on 郝鸿涛::Hongtao Hao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://hhao1992.github.io/cn/codes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo 如何部署到 Github Pages</title>
+      <link>https://hhao1992.github.io/cn/2020/01/22/deploy-on-github/</link>
+      <pubDate>Wed, 22 Jan 2020 17:04:17 -0500</pubDate>
+      
+      <guid>https://hhao1992.github.io/cn/2020/01/22/deploy-on-github/</guid>
+      <description>正好自己要重新做一遍，我便在这里把步骤记录下来。
+Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，一个是 YOUR-PROJECT&amp;gt; (e.g. blog)，另一个是 &amp;lt;USERNAME&amp;gt;.github.io 。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 public 文件夹。
+这种设置的问题在于，你的博客更新的可能不仅仅是内容，掌管着网页格式的 layout 文件以及 css 文件也可能会更新。如果你需要让别人看到你的网页格式源代码，即，你的 layout 文件以及 css 文件，那么你每次更新的时候，不仅需要更新 &amp;lt;USERNAME&amp;gt;.github.io ，还需要更新 YOUR-PROJECT&amp;gt; (e.g. blog)。这一点，那篇教程 也提到了：
+ You can then run ./deploy.sh &amp;ldquo;Your optional commit message&amp;rdquo; to send changes to .github.io. Note that you likely will want to commit changes to your  repository as well.
+ 我在 Amber Thomas 的 这篇帖子 找到了解决办法：在 &amp;lt;USERNAME&amp;gt;.github.io  仓库中建两个分支 (brance): sources 和 master。其中 sources 放 Hugo 文件夹所有内容，master 只放 public 文件夹内容。</description>
+    </item>
+    
+    <item>
+      <title>Hugo 如何实现脚注</title>
+      <link>https://hhao1992.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</link>
+      <pubDate>Tue, 21 Jan 2020 12:22:37 -0500</pubDate>
+      
+      <guid>https://hhao1992.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</guid>
+      <description>Hugo 从 v0.60.0开始，Markdown 解析器不再使用 Blackfriday, 改用由 yuin1 编写的 goldmark 。
+这次变动我目前感觉比较明显的是：
+blackfriday 支持 免计数 形式的脚注。所谓免计数，就是说，你可以在文本后直接跟脚注的具体内容，比如
+比如[^看到了吗？] 这种形式在 blackfriday 是支持的，但是 goldmark 不支持，你必须这样：
+比如[^1] 然后在文末，加上以下内容才可以：
+[^1]: 看到了吗？ 这一点，有人在 Github 上提过，想在 goldmark 中实现 免计数 脚注，但是目前貌似依然不支持。
+  应该是一个日本人，他的 Github 网页在这里 &amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+    <item>
+      <title>Hugo 如何使用思源宋体</title>
+      <link>https://hhao1992.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</link>
+      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhao1992.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</guid>
+      <description>先给自己填一个坑。 主要参考：
+ Indev. Journal Reuixiy Another random blog  </description>
+    </item>
+    
+    <item>
+      <title>如何将 Hugo 部署到 Netlify</title>
+      <link>https://hhao1992.github.io/cn/2020/01/04/hugo-netlify-deployment/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hhao1992.github.io/cn/2020/01/04/hugo-netlify-deployment/</guid>
+      <description>首先，什么是部署？为什么要部署？
+其实，准确的说，我们要做的是先把我们在本地的 hugo 文件夹托管到 github，这是第一步。第二步将 hugo 文件夹中的 public 文件夹与 netlify 连接起来，这样 public 文件夹里的内容就变成了我们想要的网站。
+我们部署网站的目的就是让本地的内容可以送达互联网，这样别人才能看到我们创作的内容。
+hugo的官方文档 讲到了如何部署到 netlify，但是第一步，即，先将本地的hugo文件托管到 github，它没有讲。Allison Hill 写的 hugo建站教程 也提到了部署到netlify的方法，但是她漏了一项，即，写入 netlify.toml 这个文件。谢益辉大神写的 blogdown: Creating Websites with R Markdown 这本书对我帮助非常大，但是很奇怪的是，书中涉及到 netlify部署 只是非常简单地介绍了一下原理，对于具体流程则没有涉及。此外，Marvin&amp;rsquo;s Blog 以及 Sulinehk&amp;rsquo;s blog 也都专门讲过 hugo 的 netlify 部署，但是有些内容有些过时，比如自定义域名时的DNS设置。
+这篇帖子是针对像我一样的计算机小白的，我会详细把每一步解释清楚。以下主要以苹果电脑为例，使用windows系统的同学可以作为参考，但我不保证过程正确。
+一、创建本地 hugo 文件夹 这个文件夹是你一开始通过hugo new site xxx 建立的那个文件夹，比如如果你用的hugo new site quickstart，那么quickstart文件夹就是我们要托管到github的本地文件夹，当然，不一定非得用quickstart这个名字，你想用mysite, myblog, hugo-website, my-website&amp;hellip;都可以。如果你还不知道怎么开始用hugo，可以参考olOwOlo的那篇 《hugo从入门到会用》。这里我们就用quickstart为例。
+二、Github 新建仓库 首先登陆github，如果你还没有注册github账号，请参考大漠穷秋的 这篇帖子。登陆成功之后，如下图所示，点击右上角的那个加号，然后点击&amp;rsquo;new repository&amp;rsquo;。这里的repository是仓库的意思。
+  新建 Github 仓库   点击之后，在 &amp;lsquo;repository name&amp;rsquo; 这一栏，填入任何你一个你喜欢的名字作为你的仓库名称。注意，github仓库的名称不一定非要和本地仓库名称一样，这里我用hugo-website，你可以用你喜欢的。在description中你可以对这个仓库进行描述，这样你自己以及别人可以一眼知道这个仓库是做什么的，我这里填入 &amp;ldquo;My personal website deployed on Netlify&amp;rdquo;，当然，你用中文也可以。然后，public or private 这里，我们选择默认的 public。在 &amp;ldquo;initialize this repository with a README&amp;rdquo; 这儿，我们不要加。我试过一开始加上，但是后面的步骤会很麻烦，老是出错，所以这里切记不要加</description>
+    </item>
+    
+  </channel>
+</rss>
