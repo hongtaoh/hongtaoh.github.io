@@ -1,0 +1,11 @@
+/*@import url(https://fonts.googleapis.com/css?family=Noto+Serif+SC);*/
+
+body {
+	font-family:  'Source Sans Pro', 'IBM Plex Serif', 'Noto Serif SC', 'Noto Serif CJK SC', 'Noto Serif CJK', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif', 'Source-han-serif-sc',  sans-serif;
+	font-weight: 400;
+	font-size:19px;
+}
+code {
+  font-family: Courier, 'Courier New', "Lucida Console", Monaco, monospace;
+  font-size: 17px;
+}

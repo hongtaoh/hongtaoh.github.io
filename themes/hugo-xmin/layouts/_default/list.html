@@ -1,0 +1,30 @@
+{{ partial "header.html" . }}
+
+<!-- The following is what the bookdown has originally. It means that "if this list is not the homepage, show its title. "
+{{if not .IsHome }}
+<h1>{{ .Title | markdownify }}</h1>
+{{ end }}
+I don't want to show titles of lists, even if it is not the homepage, so I decided not to use the code here. You might ask why I don't like showing the title for non-homepages, I guess it is because the title will be in plural forms. I am wondering HOW CAN I MAKE IT INTO A SINGULAR FORM.-->
+
+<main class = "content" role="main">
+
+<div class="body-text list-text">
+{{ .Content }}
+
+
+{{if not .IsHome}}
+<ul>
+  {{ $pages := .Pages }}
+  {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
+  {{ range (where $pages "Section" "!=" "") }}
+  <p>
+  <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+  </p>
+  {{ end }}
+</ul>
+{{ end }}
+</div>
+</main>
+
+{{ partial "footer.html" . }} 
