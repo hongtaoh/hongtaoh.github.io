@@ -70,7 +70,8 @@ type : nolisting
 - Python (Mostly for data visualization; Altair, Seaborn, Matplotlib, Pandas, Numpy)
 
 
+## Slides
 
-
+- ICA 2020 Presentation: [HTML](/slides/ICA2020.html/)
 
 
