@@ -103,26 +103,26 @@ git push -u origin master
 
 # 五、将 Github 仓库部署于Netlify
 
-{{<figure src="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/blogdown-signpost-5.png" title="图片作者：Allison Hill " height="600" width="600">}}
+{{<figure src="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/blogdown-signpost-5.png" title="图片作者：Allison Hill ">}}
 
 [Netlify](https://www.netlify.com/) 提供免费的静态网站托管服务，它可以帮我们把 Github 仓库里的文件以网页形式发布到互联网。
 
 如果你还没有注册 Netlify 账号，那么请先打开上面的网址，进行注册 (Sing up)。已经注册的胖友点击 登陆 (Sing in)。刚开始注册的胖友，可能会被带到如下网页：
 
-{{<figure src="https://d33wubrfki0l68.cloudfront.net/0e9f9cefe968382536d4e4baa66e49945ad2694c/e20ef/images/hosting-and-deployment/hosting-on-netlify/netlify-signup.jpg" title="图片来源：Hugo 官网" numbered="true" height="500" width="500">}}
+{{<figure src="https://d33wubrfki0l68.cloudfront.net/0e9f9cefe968382536d4e4baa66e49945ad2694c/e20ef/images/hosting-and-deployment/hosting-on-netlify/netlify-signup.jpg" title="图片来源：Hugo 官网">}}
 
 因为我们用的是 Github, 所以这里选择 Github, 然后会被带到授权页面，如下：
 
-{{<figure src="https://d33wubrfki0l68.cloudfront.net/66276caf9e5deee836ba60fab50f78f6074e3ca0/0cc43/images/hosting-and-deployment/hosting-on-netlify/netlify-first-authorize.jpg" title="图片来源：Hugo 官网" numbered="true" height="500" width="500">}}
+{{<figure src="https://d33wubrfki0l68.cloudfront.net/66276caf9e5deee836ba60fab50f78f6074e3ca0/0cc43/images/hosting-and-deployment/hosting-on-netlify/netlify-first-authorize.jpg" title="图片来源：Hugo 官网">}}
 
 请点击："Authorize application （授权此应用）"
 
 
 进入之后，点击 'New Site from Git'，如下图：
-{{<figure src="/media/netlify/netlify-new-site-from-git.png" title="Netlify 新建基于 Git 的网站" height="500" width="500">}}
+{{<figure src="/media/netlify/netlify-new-site-from-git.png" title="Netlify 新建基于 Git 的网站">}}
 
 如果你是第一次登陆，随后可能会进入如下授权页面：
-{{<figure src="https://d33wubrfki0l68.cloudfront.net/dd85bd12e419baeb7ef56e45c43235d2004ce341/77531/images/hosting-and-deployment/hosting-on-netlify/netlify-authorize-added-permissions.jpg" title="图片来源：Hugo 官网" height="500" width="500">}}
+{{<figure src="https://d33wubrfki0l68.cloudfront.net/dd85bd12e419baeb7ef56e45c43235d2004ce341/77531/images/hosting-and-deployment/hosting-on-netlify/netlify-authorize-added-permissions.jpg" title="图片来源：Hugo 官网" >}}
 
 **注**：以上四张图片中有三张来自 Hugo 官网上 [*Host on Netlify*](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/) 这篇文章，因为我之前已经在 Netlify 注册过了，所以我进入后不会出现那三个页面，只能引用这篇文章的图片。在此表示感谢。
 
@@ -133,7 +133,7 @@ git push -u origin master
 
 之后，点击我们刚才建的仓库，因为我的仓库名称是 hugo-website , 因此点击它：
 
-{{<figure src="/media/netlify/netlify-select-github-repo.png" title="选择相应的 Github 仓库" height="700" width="700">}}
+{{<figure src="/media/netlify/netlify-select-github-repo.png" title="选择相应的 Github 仓库">}}
 
 在随后的页面里，在 Basic build settings 这里，将 build command 设置成 hugo_你的 hugo version 。比如，我的 hugo version 是 0.62.0 , 那么我就填：hugo_0.62.0 。如何看自己的 hugo version 呢？ 很简单，在 terminal 终端输入: `hugo version`，然后看输出的结果就好。
 
