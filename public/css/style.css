@@ -10,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
+  image-rendering: -webkit-optimize-contrast;
 } 
 
 .footer { 
@@ -337,7 +338,6 @@ figure img {
   max-width: 100%;
   margin: auto auto 4px;
 }
-
 
 hr {
   display: block;

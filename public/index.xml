@@ -11,6 +11,16 @@
     
     
     <item>
+      <title>How to fix blurry images in Mac Chrome</title>
+      <link>https://hhao1992.github.io/en/2020/05/14/chrome-mac-blurry-image-fix/</link>
+      <pubDate>Thu, 14 May 2020 16:35:13 -0400</pubDate>
+      
+      <guid>https://hhao1992.github.io/en/2020/05/14/chrome-mac-blurry-image-fix/</guid>
+      <description>I never used Chrome before but after upgrading my MacOS, I started trying Chrome. I created my personal blog using Hugo. The thing is, when I viewed my site using Chrome on my Mac, all images are so blurry. I tried again on Safari, things were fine; I tried it in Chrome on a Windowns PC, things were also fine.
+While I was scratching my head, I came across this answer by pastullo on Stackexchange.</description>
+    </item>
+    
+    <item>
       <title>人人献出一点爱，让尘肺病不在</title>
       <link>https://hhao1992.github.io/cn/2020/04/30/love-from-everyone-conquers-neumoconiosis/</link>
       <pubDate>Thu, 30 Apr 2020 11:28:02 -0400</pubDate>

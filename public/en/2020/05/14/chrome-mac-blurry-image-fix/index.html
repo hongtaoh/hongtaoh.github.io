@@ -1,10 +1,10 @@
+<a name="top"></a>
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-	<meta name="generator" content="Hugo 0.70.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home - 郝鸿涛::Hongtao Hao</title>
+    <title>How to fix blurry images in Mac Chrome - 郝鸿涛::Hongtao Hao</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
@@ -61,25 +61,71 @@
 </nav>
       </header>
 
-
-
-
 <main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How to fix blurry images in Mac Chrome</h1>
+
+<p>Hongtao Hao 
+ / 2020-05-14 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hhao1992/hhao1992.github.io/edit/sources/content/en/blog/chrome-mac-blurry-image-fix.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="body-text list-text">
+<p>I never used Chrome before but after upgrading my MacOS, I started trying Chrome. I created my personal blog using Hugo. The thing is, when I viewed my site using Chrome on my Mac, all images are so blurry. I tried again on Safari, things were fine; I tried it in Chrome on a Windowns PC, things were also fine.</p>
+<p>While I was scratching my head, I came across <a href="https://stackoverflow.com/a/42216003">this</a> answer by pastullo on Stackexchange.</p>
+<p>The fix was really simple: I only added this following single line of CSS in my style sheet, as pastullo suggested:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSS" data-lang="CSS"><span style="color:#008000;font-weight:bold">body</span> {
+	image-rendering: <span style="color:#008000">-webkit-</span>optimize-contrast;
+}
+</code></pre></div><p>This fix literally saved my day. Thanks Stackexchange.</p>
+<p>From below you can see the change.</p>
 <figure>
-    <img src="/media/hongtao.jpg" width="450"/> <figcaption>
-            <h4>In Key West, Dec. 2019, courtsey of Michelle Zhan </h4>
+    <img src="/media/ENBlog/blurry.png"/> <figcaption>
+            <h4>Before</h4>
         </figcaption>
 </figure>
 
-<p>I&rsquo;m a second year Master&rsquo;s student at <a href="https://mediaschool.indiana.edu/index.html">the Media School of Indiana University</a>, advised by <a href="https://mediaschool.indiana.edu/people/profile.html?p=nicomart">Dr. Nicole Martins</a>. I earned my first Master&rsquo;s degree in Journalism from Renmin University of China, Beijing. You can view my journalism pieces in <a href="https://www.symposium.org/content?a=75"><em>St.Gallen Symposium Magazine</em></a>. My research focus is on interpersonal interactions enabled by emerging communiation technolgoies. I am passionate about the future of human interactions, largely inspired by <a href="https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)"><em>The Three-Body Problem</em></a>, a famous Chinese sci-fi novel by <a href="https://en.wikipedia.org/wiki/Liu_Cixin">Liu Cixin</a>. I love R and Python.</p>
-<p>这是郝鸿涛的个人主页。2016年从河北师范大学英语专业毕业后，到人大附中附属大学读硕士（新闻学）。随后在<a href="https://mediaschool.indiana.edu/index.html">美国印第安纳大学媒体学院</a>读第二个硕士。最骄傲的一件事是在2015年第一届&quot;外研社杯”全国英语阅读大赛中<a href="/cn/2020/01/06/fltrp-reading-contest/">获奖</a>。最难忘的一次经历是参加<a href="/cn/2020/01/17/2017-st.gallen-memory/">瑞士圣加仑论坛</a>。目前在鼓捣<a href="/cn/stats/">统计学</a>和<a href="/cn/codes/">编程</a>。智商相当一般，高考复读了一年才考到一所双非。自律、喜静、极简。有米的时候喜欢满世界各地跑。</p>
+<figure>
+    <img src="/media/ENBlog/clear.png"/> <figcaption>
+            <h4>After</h4>
+        </figcaption>
+</figure>
 
+ 
 
-
+<p style="color:#777;">Last modified on 2020-05-14</p>
 
 </div>
+<a href="#top"><i class="fa fa-arrow-circle-up" style="font-size: 30px; color: black;"></i></a>  
 </main>
 
   <footer class="footer">
@@ -103,10 +149,6 @@ translateInitilization();
 <ul class="footer-links">
           
           <li>
-            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
-          </li>
-          
-          <li>
             <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="https://bookdown.org/yihui/blogdown/images/logo.png" width="20" height="20"></a>
           </li>
           <li>
@@ -122,4 +164,5 @@ translateInitilization();
   </footer>
   </body>
 </html>
- 
+
+
