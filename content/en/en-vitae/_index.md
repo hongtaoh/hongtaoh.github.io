@@ -72,6 +72,6 @@ type : nolisting
 
 ## Slides
 
-- ICA 2020 Presentation: [HTML](/slides/ICA2020.html/)
+- ICA 2020 Presentation: [HTML](/slides/ICA2020.html)
 
 
