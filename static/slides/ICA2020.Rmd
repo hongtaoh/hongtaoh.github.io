@@ -137,10 +137,22 @@ background-position: 50% 50%
 6. In selfies, Chinese women **did not** score higher on cuteness than White women.
 
 ---
+# Links
+
+.pull-left[
+To access the slides, scan the QR code below:
+
+<img src="/media/ica2020/ICA2020_QR.svg" width=20%>
+]
+
+.pull-right[
+To access the slides, scan the QR code below:
+
+<img src="/media/ica2020/ICA2020_QR.svg" width=20%>
+]
+
+---
 class: inverse, center, middle
-background-image: url(/media/ica2020/ICA2020_QR.svg)
-background-size: 20%
-background-position: 50% 90%
 
 # Thanks!
 
@@ -148,7 +160,9 @@ Slides created via the R package [**xaringan**](https://github.com/yihui/xaringa
 
 Slides source codes can be found  [**here**](https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/slides/ICA2020.Rmd).
 
-To access the slides, scan the QR code below:
+
+
+
 
 
 
