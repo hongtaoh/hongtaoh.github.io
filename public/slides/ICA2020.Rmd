@@ -93,7 +93,7 @@ women’s selfies on Weibo.
 
 - Two coders (Chinese male)
 
-- 20 hours training before Intercoder reliability (ICR) calculation
+- 20 hours of training before Intercoder reliability (ICR) calculation
  
 - Initial ICR and final ICR for all previously mentioned variables are above .75
 
@@ -124,11 +124,11 @@ background-position: 50% 50%
 ---
 # Discussions
 
-1. White women took more body-shot selfies than Chinese women.
+1. White women post more body-shot selfies than Chinese women.
 
 2. White women **did not** post more mirror selfies than Chinese women. 
 
-3. For White women alone, they took significantly more **headshot** selfies than body-shot selfies.
+3. For White women alone, they post significantly more **headshot** selfies than body-shot selfies.
 
 4. White women on Twitter exhibited a higher level of body exposure only in terms of **cleavage**.
 
@@ -148,7 +148,7 @@ Slides created via the R package [**xaringan**](https://github.com/yihui/xaringa
 
 Slides source codes can be found  [**here**](https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/slides/ICA2020.Rmd).
 
-To access the slides, scan QR code below:
+To access the slides, scan the QR code below:
 
 
 
