@@ -111,4 +111,7 @@ en = "/en/:year/:month/:day/:slug/"
   endLevel = 2
   ordered = true
   startLevel = 1
+
+[imaging]
+quality = 100
       
