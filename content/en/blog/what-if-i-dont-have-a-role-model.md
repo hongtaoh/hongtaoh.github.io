@@ -13,8 +13,4 @@ From the first grade, our teachers and books told us that we must have a goal, t
 
 Last year, it was confirmed by Yale University that the 1953 study never occurred. It’s a total fabrication. In a TED talk-- “stop searching for your passion”, the speaker Terri said passion is not a job. She wants us to throw the idea away that our life can be successful only if we can find our passion. Throw it away. I believe the same goes for role models. When young we might have a yardstick of success and have a role model. But it’s natural that we change our role model over time and it’s also natural that we can’t find one at some point in our life. 
 
-Not having a role model does not necessarily mean that our life will be static and a failure. I came to this university not because I had admired a RUCer before. I major in journalism not because any reporters had been my role models. They just happened. 
-
-So, if you have a role model, congrats. But if you don’t, just like me, please do believe that your life will also work out OK.
-
 
