@@ -54,7 +54,7 @@ en = "/en/:year/:month/:day/:slug/"
     homeText = "You just need a Hugo blog from scratch"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
-    GithubEdit = "https://github.com/hhao1992/hhao1992.github.io/edit/sources/content/"
+    GithubEdit = "https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/"
     favicon = "/ht10.ico"
 
 [params.logo]
