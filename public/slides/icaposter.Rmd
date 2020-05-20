@@ -1,5 +1,5 @@
 ---
-main_topsize: 0.14 #percent coverage of the poster
+main_topsize: 0.144 #percent coverage of the poster
 main_bottomsize: 0.1
 main_fontfamily: Yanone Kaffeesatz
 main_textcol: "#8134AF"
