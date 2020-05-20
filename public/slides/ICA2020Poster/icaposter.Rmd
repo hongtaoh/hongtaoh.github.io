@@ -137,7 +137,7 @@ plot.title = element_text(color="red", size=20, face="bold.italic")
 
 `t (282.28) = 3.02, p = .003, d = .27`: White women exhibited a higher degree of midriff exposure than Chinese women. 
 
-### H4(c), Buttock ![](/Use/media/ica2020/buttock_results.png){width=8%} [^10]
+### H4(c), Buttock ![](/media/ica2020/buttock_results.png){width=8%} [^10]
 
 `t (498) = .43, p = .669, d = .04`: White women did not show a higher degree of buttock exposure than Chinese women. 
 
@@ -161,10 +161,7 @@ plot.title = element_text(color="red", size=20, face="bold.italic")
 
 `t (479.69) = -1.56, p = .119, d = .14`, Chinese women did not show a higher level of cuteness than White women. 
 
-
-
 # References & Footnotes
-
 [^1]: Frith, Shaw & Cheng, 2005; Staley & Zhan, 2011; Wu & Lang, 2018
 [^2]: Frith et al., 2005
 [^3]: Little, 2012; Sprengelmeyer et al., 2009
