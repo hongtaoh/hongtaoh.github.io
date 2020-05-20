@@ -32,8 +32,7 @@ output:
     self_contained: false
     pandoc_args: --mathjax
     number_sections: false
-    css: style.css
-bibliography: packages.bib
+bibliography: 
 link-citations: true
 body_textsize: 40px
 ---
@@ -68,13 +67,9 @@ Do Chinese women’s selfies on Weibo `r fa("weibo", fill="red")` and White wome
 
 - Studies on cuteness in Asian context focused on adults, whereas those in Western context focused on infants.[^3]
 
-![](/Users/Tal/Desktop/icaposter/images/4.png){width=880px}
+![](/media/ica2020/4.png){width=880px}
 
 Note: Click [here](https://github.com/hongtaoh/ICA2020Poster/blob/master/icon_photo_attri.md) to see a full list of icon/photo attibutions. 
-
-```{r, include=FALSE}
-knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
-```
 
 # 3. Methods
 ## Data collection
@@ -93,7 +88,7 @@ knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
 </p>
 
 ```{r}
-dt = read.csv(file='variables.csv')
+dt = read.csv(file='/Users/Tal/Desktop/hugo/static/files/variables.csv')
 kable(dt) %>%
   kable_styling(bootstrap_options = "striped", font_size = 100)
 ```
@@ -121,50 +116,47 @@ plot.title = element_text(color="red", size=20, face="bold.italic")
 
 ## 4.2 Results
 
-### H1, Shot size ![](/Users/Tal/Desktop/icaposter//images/camera.png){width=8%} [^5]
+### H1, Shot size ![](/media/ica2020/camera.png){width=8%} [^5]
 
 `Chi Square(1, N = 500) = 4.20, p = .040`: White women post more body shots than Chinese women.
 
-### H2, Mirror selfie ![](/Users/Tal/Desktop/icaposter/images/mirror.png){width=8%} [^6]
+### H2, Mirror selfie ![](/media/ica2020/mirror.png){width=8%} [^6]
 
 `Chi Square(1, N = 500) = .62, p = .430`: White women did not take more mirror selfies than Chinese women[^7].
 
-### H4(a), Cleavage ![](/Users/Tal/Desktop/icaposter/images/bra.png){width=8%} [^8]
+### H4(a), Cleavage ![](/media/ica2020/bra.png){width=8%} [^8]
 
 `Chi Square(2, N = 500) = 43.41, p < .001`: White women displayed a significantly higher level of cleavage/breasts exposure than Chinese women.
 
-### H4(b), Midriff ![](/Users/Tal/Desktop/icaposter/images/midriff.png){width=8%} [^9]
+### H4(b), Midriff ![](/media/ica2020/midriff.png){width=8%} [^9]
 
 `t (282.28) = 3.02, p = .003, d = .27`: White women exhibited a higher degree of midriff exposure than Chinese women. 
 
-### H4(c), Buttock ![](/Users/Tal/Desktop/icaposter/images/buttock_results.png){width=8%} [^10]
+### H4(c), Buttock ![](/media/ica2020/buttock_results.png){width=8%} [^10]
 
 `t (498) = .43, p = .669, d = .04`: White women did not show a higher degree of buttock exposure than Chinese women. 
 
-### H4(d), Thigh[^11] ![](/Users/Tal/Desktop/icaposter/images/thigh-leg.png){width=8%} [^12]
+### H4(d), Thigh[^11] ![](/media/ica2020/thigh-leg.png){width=8%} [^12]
 
 `Chi Square(1, N = 500) = .22, p = .640`: White women did not show a higher degree of thigh exposure than Chinese women.
 
-### H5 (a), Hair display ![](/Users/Tal/Desktop/icaposter/images/hair_display.png){width=8%}
+### H5 (a), Hair display ![](/media/ica2020/hair_display.png){width=8%}
 
 `Chi Square(2, N = 500) = 32.17, p < .001`: White women displayed a significantly higher level sexual suggestiveness through hair display than Chinese women. 
 
-### H5 (b), Pose ![](/Users/Tal/Desktop/icaposter/images/pose.png){width=8%} [^13]
+### H5 (b), Pose ![](/media/ica2020/pose.png){width=8%} [^13]
 
 `Chi Square(1, N = 500) = 8.51, p = .004`: White women showed a higher level sexual suggestiveness via pose than Chinese women.
 
-### H5(c), Self-tourching[^14] ![](/Users/Tal/Desktop/icaposter/images/touching.png){width=8%}
+### H5(c), Self-tourching[^14] ![](/media/ica2020/touching.png){width=8%}
 
 `Chi Square(1, N = 500) = 6.85, p = .009`. However, the direction was the opposite: Chinese women exhibited more sexual suggestiveness through self-touching than White women. 
 
-### RQ1, Cuteness ![](/Users/Tal/Desktop/icaposter/images/kawaii.jpeg){width=8%}
+### RQ1, Cuteness ![](/media/ica2020/kawaii.jpeg){width=8%}
 
 `t (479.69) = -1.56, p = .119, d = .14`, Chinese women did not show a higher level of cuteness than White women. 
 
-
-
 # References & Footnotes
-
 [^1]: Frith, Shaw & Cheng, 2005; Staley & Zhan, 2011; Wu & Lang, 2018
 [^2]: Frith et al., 2005
 [^3]: Little, 2012; Sprengelmeyer et al., 2009
