@@ -1,0 +1,217 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Completely Uninstall Homebrew From a Mac - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hhao1992.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/en-vitae/">Vitae</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/cn/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How to Completely Uninstall Homebrew From a Mac</h1>
+
+<p>Hongtao Hao 
+ / 2020-05-23 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-05-23-how-to-completely-uninstall-homebrew-from-a-mac.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body-text list-text">
+<p>My Macbook Air is pretty old<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, so I cannot put up with any useless files that take up a lot of space on my laptop.</p>
+<p>When installed, Homebrew takes up over 400MB. That&rsquo;s a lot of space, at least for me.</p>
+<p>I installed Homebrew and then I wanted to delete it. So I went to <code>/usr/local/bin/</code>. I was lost. I couldn&rsquo;t know which files to delete. Since <code>/usr/local/bin/</code> is a hidden folder in Mac, I don&rsquo;t want to mess up with it. However, my urge to delete files I don&rsquo;t need to use was so strong that I ended up delete a lot of files except for <code>bin</code> in this folder<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<p>Out of idol curiosity, and a desire to make sure I didn&rsquo;t delete any important files, I want to check what files will be created when I install Homebrew.</p>
+<p>Here is the result:</p>
+<figure>
+    <img src="/media/enblog/uninstall-homebrew-before.png"/> <figcaption>
+            <h4>Before installation</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/media/enblog/uninstall-homebrew-after.png"/> <figcaption>
+            <h4>After installation</h4>
+        </figcaption>
+</figure>
+
+<p>So, installing Homebrew has created all the files except for the <code>/bin</code> folder. Also, it has created a <code>brew</code> within the <code>/bin</code> folder.</p>
+<p>To uninstall Homebrew, the official method is to run <a href="https://github.com/homebrew/install#uninstall-homebrew">this</a> following command in your Terminal:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/bin/bash -c <span style="color:#ba2121">&#34;</span><span style="color:#008000;font-weight:bold">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh<span style="color:#008000;font-weight:bold">)</span><span style="color:#ba2121">&#34;</span>
+</code></pre></div><p>First, you need to confirm your wish to uninstall:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Warning: This script will remove:
+/Users/Tal/Library/Caches/Homebrew/
+/usr/local/Caskroom/
+/usr/local/Cellar/
+/usr/local/bin/brew -&gt; /usr/local/bin/brew
+Are you sure you want to uninstall Homebrew? This will remove your installed packages! <span style="color:#666">[</span>y/N<span style="color:#666">]</span> 
+</code></pre></div><p>Input <code>y</code> if you are sure. Then the following messages will appear in Terminal:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#666">==</span>&gt; Homebrew uninstalled!
+The following possible Homebrew files were not deleted:
+/usr/local/.com.apple.installer.keep
+/usr/local/Homebrew/
+/usr/local/bin/
+/usr/local/etc/
+/usr/local/share/
+/usr/local/var/
+You may wish to remove them yourself.
+</code></pre></div><figure>
+    <img src="/media/enblog/uninstall-home-brew-terminal.png"/> <figcaption>
+            <h4>Messages in Terminal</h4>
+        </figcaption>
+</figure>
+
+<p>First of all, how can we access the hidden <code>usr/</code> folder?</p>
+<p>Type this following line in your Terminal:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open -a Finder /usr/local/
+</code></pre></div><p>You can delete the following files as specified above:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usr/local/Homebrew/
+/usr/local/etc/
+/usr/local/share/
+/usr/local/var/
+</code></pre></div><p>However, you SHOULD NEVER delete <code>/usr/local/bin/</code>!</p>
+<p>I didn&rsquo;t check how much spece these files take up, but deleting files I know I don&rsquo;t need makes me happy.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>I bought it back in 2015. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>This is too reckless. I don&rsquo;t recommend you to be like this. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+ 
+
+<p style="color:#777;">Last modified on 2020-05-23</p>
+
+</div>
+<a href="#top"><i class="fa fa-arrow-circle-up" style="font-size: 30px; color: black;"></i></a>  
+</main>
+
+<footer class="footer">
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+<script type="text/javascript" src="/js/tw_cn.js"></script>
+<script type="text/javascript">
+var defaultEncoding = 2; 
+var translateDelay = 0; 
+var cookieDomain = "http://www.hhao1992.githu.io/"; 
+var msgToTraditionalChinese = "繁体"; 
+var msgToSimplifiedChinese = "简体"; 
+var translateButtonId = "translateLink"; 
+translateInitilization();
+</script>
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="https://bookdown.org/yihui/blogdown/images/logo.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos">Content in <img src="https://simpleicons.org/icons/github.svg" width="22" height="22"></a>
+            
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> CC BY-NC-SA 4.0 </a>
+          </li>
+     </ul>
+</footer>
+
+    </div>
+
+
+
+  </footer>
+  </body>
+</html>
+
+

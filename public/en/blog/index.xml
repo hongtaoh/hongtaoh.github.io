@@ -11,6 +11,17 @@
     
     
     <item>
+      <title>How to Completely Uninstall Homebrew From a Mac</title>
+      <link>https://hhao1992.github.io/en/2020/05/23/uninstall-homebrew-completely/</link>
+      <pubDate>Sat, 23 May 2020 15:21:45 -0400</pubDate>
+      
+      <guid>https://hhao1992.github.io/en/2020/05/23/uninstall-homebrew-completely/</guid>
+      <description>My Macbook Air is pretty old1, so I cannot put up with any useless files that take up a lot of space on my laptop.
+When installed, Homebrew takes up over 400MB. That&amp;rsquo;s a lot of space, at least for me.
+I installed Homebrew and then I wanted to delete it. So I went to /usr/local/bin/. I was lost. I couldn&amp;rsquo;t know which files to delete. Since /usr/local/bin/ is a hidden folder in Mac, I don&amp;rsquo;t want to mess up with it.</description>
+    </item>
+    
+    <item>
       <title>How to fix blurry images in Mac Chrome</title>
       <link>https://hhao1992.github.io/en/2020/05/14/chrome-mac-blurry-image-fix/</link>
       <pubDate>Thu, 14 May 2020 16:35:13 -0400</pubDate>
