@@ -23,6 +23,6 @@ This fix literally saved my day. Thanks Stackexchange.
 
 From below you can see the change.
 
-{{<figure src="/media/ENBlog/blurry.png" title="Before">}}
+{{<figure src="/media/enblog/blurry.png" title="Before">}}
 
-{{<figure src="/media/ENBlog/clear.png" title="After">}}
+{{<figure src="/media/enblog/clear.png" title="After">}}
