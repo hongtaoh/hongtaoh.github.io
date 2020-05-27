@@ -11,6 +11,18 @@
     
     
     <item>
+      <title>非常规方法导出微信通讯录</title>
+      <link>https://hhao1992.github.io/cn/2020/05/27/wechat-contacts-extracting/</link>
+      <pubDate>Wed, 27 May 2020 16:41:49 -0400</pubDate>
+      
+      <guid>https://hhao1992.github.io/cn/2020/05/27/wechat-contacts-extracting/</guid>
+      <description>我微信上有将近800个好友。我在为之后彻底不用微信做准备，因此需要把这800个好友认真浏览一遍，看哪些需要我进一步联系，好问一下他们微信外的联系方式，哪些则不用管。
+直接在手机端查看自然可以，但是我试过几次后，发现实在不行，每次都是没看几个就坚持不下去了，而且看的时候无法做标记，第二次看还是两眼一抹黑。我想把通讯录导出来，打印出来，我可以在纸上一点点勾勾画画，做备注。
+找了很多方法，有很多程序员提倡用爬虫的方法，但是我的微信网页端无法登录，因此放弃了。最后看到一篇帖子后，我就想，也许可以把这800人截图下来。
+说干就干。我打开电脑端微信，然后把视图缩小。紧接着把通讯录一个个截图，并从01开始标号。每一个截图里大概有10位好友左右。然后把这些截图一个个拼接到 PPT 上，再打印出来。大概12页就可以把800个好友都包括进来了，而且好处是截图里包含了头像。比只导出文字要好一些。</description>
+    </item>
+    
+    <item>
       <title>人人献出一点爱，让尘肺病不在</title>
       <link>https://hhao1992.github.io/cn/2020/04/30/love-from-everyone-conquers-neumoconiosis/</link>
       <pubDate>Thu, 30 Apr 2020 11:28:02 -0400</pubDate>

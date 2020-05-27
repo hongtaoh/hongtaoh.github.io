@@ -11,6 +11,16 @@
     
     
     <item>
+      <title>How Solve the Problem of &#34;Remote Origin Already Exists&#34;</title>
+      <link>https://hhao1992.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</link>
+      <pubDate>Mon, 25 May 2020 10:10:19 -0400</pubDate>
+      
+      <guid>https://hhao1992.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</guid>
+      <description>Here is my situation: I want to use another GitHub account. I need to transfer a repo from my old account to the new one. Maybe there is an easy way to transfer, but it is beyong my ability now (I guess it&amp;rsquo;s complicated so I didn&amp;rsquo;t even bother searching for an answer).
+So I git clone the repo from my old account and tried to push it to my new accout.</description>
+    </item>
+    
+    <item>
       <title>How to Completely Uninstall Homebrew From a Mac</title>
       <link>https://hhao1992.github.io/en/2020/05/23/uninstall-homebrew-completely/</link>
       <pubDate>Sat, 23 May 2020 15:21:45 -0400</pubDate>

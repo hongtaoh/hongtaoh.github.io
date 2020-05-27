@@ -1,9 +1,10 @@
+<a name="top"></a>
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>English blog - 郝鸿涛::Hongtao Hao</title>
+    <title>How Solve the Problem of &#34;Remote Origin Already Exists&#34; - 郝鸿涛::Hongtao Hao</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
@@ -60,79 +61,66 @@
 </nav>
       </header>
 
-
-
-
 <main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How Solve the Problem of &#34;Remote Origin Already Exists&#34;</h1>
+
+<p>Hongtao Hao 
+ / 2020-05-25 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-05-25-error-shooting-remote-origin-already-exists.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="body-text list-text">
-<h2 id="blog">Blog</h2>
+<p>Here is my situation: I want to use another GitHub account. I need to transfer a repo from my old account to the new one. Maybe there is an easy way to transfer, but it is beyong my ability now (I guess it&rsquo;s complicated so I didn&rsquo;t even bother searching for an answer).</p>
+<p>So I <code>git clone</code> the repo from my old account and tried to push it to my new accout. Then, a error occured:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fatal: remote origin already exists.
+</code></pre></div><p>There are two ways to solve this problem:</p>
+<ol>
+<li>Change the URL</li>
+</ol>
+<p><a href="https://stackoverflow.com/questions/16330404/how-to-remove-remote-origin-from-git-repo">Here</a> is where I found the answer. Many thanks to <a href="https://stackoverflow.com/users/1881136/kahowell">kahowell</a>.</p>
+<p>Simply use:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote set-url origin https://github.com/new.url.here
+</code></pre></div><ol start="2">
+<li>Creating a new folder</li>
+</ol>
+<p>Just create a new folder, and then drag all the files from the old folder into the new folder. The original git remote will be automatically erased.</p>
+<p>Done.</p>
+ 
 
-
-
-
-<ul>
-  
-  
-  
-  <p>
-  <span class="date">2020-05-25</span>
-    <a href="/en/2020/05/25/remote-origin-already-exists-error-shooting/">How Solve the Problem of &ldquo;Remote Origin Already Exists&rdquo;</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-05-23</span>
-    <a href="/en/2020/05/23/uninstall-homebrew-completely/">How to Completely Uninstall Homebrew From a Mac</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-05-14</span>
-    <a href="/en/2020/05/14/chrome-mac-blurry-image-fix/">How to fix blurry images in Mac Chrome</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-04-30</span>
-    <a href="/en/2020/04/30/what-do-i-think-about-ted-talks/">What Do I Think About TED Talks</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-04-19</span>
-    <a href="/en/2020/04/19/why-so-many-people-love-dr.-fauci/">Why so many people love Dr. Fauci</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-04-12</span>
-    <a href="/en/2020/04/12/role-model/">What if I don&rsquo;t have a role model?</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-03-26</span>
-    <a href="/en/2020/03/26/pagedown-error-shooting/">Pagedown Error Shooting</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-03-21</span>
-    <a href="/en/2020/03/21/lab02/">Lab02</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-02-25</span>
-    <a href="/en/2020/02/25/b2b-communication/">Brain-to-brain communication and the Mindnet</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-01-29</span>
-    <a href="/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/">How to Install and Upgrade Hugo on Mac</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-01-28</span>
-    <a href="/en/2020/01/28/using-markdown-in-hugo-post/">Using Markdown in Hugo post</a>
-  </p>
-  
-</ul>
+<p style="color:#777;">Last modified on 2020-05-25</p>
 
 </div>
+<a href="#top"><i class="fa fa-arrow-circle-up" style="font-size: 30px; color: black;"></i></a>  
 </main>
 
 <footer class="footer">
@@ -156,10 +144,6 @@ translateInitilization();
      <ul class="footer-links">
           
           <li>
-            <a href="/en/blog/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
-          </li>
-          
-          <li>
             
             <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="https://bookdown.org/yihui/blogdown/images/logo.png" width="20" height="20"></a>
           </li>
@@ -180,4 +164,5 @@ translateInitilization();
   </footer>
   </body>
 </html>
- 
+
+

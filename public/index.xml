@@ -11,6 +11,45 @@
     
     
     <item>
+      <title>非常规方法导出微信通讯录</title>
+      <link>https://hhao1992.github.io/cn/2020/05/27/wechat-contacts-extracting/</link>
+      <pubDate>Wed, 27 May 2020 16:41:49 -0400</pubDate>
+      
+      <guid>https://hhao1992.github.io/cn/2020/05/27/wechat-contacts-extracting/</guid>
+      <description>我微信上有将近800个好友。我在为之后彻底不用微信做准备，因此需要把这800个好友认真浏览一遍，看哪些需要我进一步联系，好问一下他们微信外的联系方式，哪些则不用管。
+直接在手机端查看自然可以，但是我试过几次后，发现实在不行，每次都是没看几个就坚持不下去了，而且看的时候无法做标记，第二次看还是两眼一抹黑。我想把通讯录导出来，打印出来，我可以在纸上一点点勾勾画画，做备注。
+找了很多方法，有很多程序员提倡用爬虫的方法，但是我的微信网页端无法登录，因此放弃了。最后看到一篇帖子后，我就想，也许可以把这800人截图下来。
+说干就干。我打开电脑端微信，然后把视图缩小。紧接着把通讯录一个个截图，并从01开始标号。每一个截图里大概有10位好友左右。然后把这些截图一个个拼接到 PPT 上，再打印出来。大概12页就可以把800个好友都包括进来了，而且好处是截图里包含了头像。比只导出文字要好一些。</description>
+    </item>
+    
+    <item>
+      <title>Bookdown 和 ElegantBookdown 使用心得</title>
+      <link>https://hhao1992.github.io/cn/2020/05/26/bookdown-tips/</link>
+      <pubDate>Tue, 26 May 2020 16:00:21 -0400</pubDate>
+      
+      <guid>https://hhao1992.github.io/cn/2020/05/26/bookdown-tips/</guid>
+      <description>最近的一周一直在调试 Bookdown。其实，Bookdown 本身并不难，益辉大神 在他的那本 bookdown: Authoring Books and Technical Documents with R Markdown 已经介绍的非常清楚。我一直在调试的、也是我一直不会的主要集中在 PDF 的样式上，比如：
+ PDF 中的 &amp;ldquo;Chapter 1&amp;rdquo; 如何改成「第一章」？  HTML 上改的话比较容易。如果你也是用的 bookdown-demo 来开始的话，那么在根目录下找到 _bookdown.yml 这个文档，然后把 chapter_name: &amp;quot;Chapter &amp;quot; 改成 chapter_name: [&amp;quot;第 &amp;quot;, &amp;quot; 章&amp;quot;]1 就好了。
+注意，这里标点是英文的。汉子和第二个英文引号之间有一个英文空格，是为了让版面更漂亮一些。不加空格的话，就是 「第N章」，加上空格就是「第 N 章」，所以还是加上吧。
+但是，PDF 中还是显示 「Chapter N」。我知道肯定能改，但我感觉比较困难，所以就放弃了。虽然可能只是在 preamble.tex 里加一行代码的事，但我可能要花几天的时间才能知道那行代码是啥。果断放弃。
+ PDF 的空白页如何删除？
+  PDF 如何上每一页的文本对齐，而非 bookdown 预设的那样一左一右？
+  PDF 中如何更改中文引语的字体？
+  等等。
+我知道是我要求太苛刻了。Bookdown 原本主要是为网页版书籍准备的，而非 PDF 版。因此，Bookdown 官网 上摆出的那些书籍中，有一些根本就没有把 PDF 版放上去。</description>
+    </item>
+    
+    <item>
+      <title>How Solve the Problem of &#34;Remote Origin Already Exists&#34;</title>
+      <link>https://hhao1992.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</link>
+      <pubDate>Mon, 25 May 2020 10:10:19 -0400</pubDate>
+      
+      <guid>https://hhao1992.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</guid>
+      <description>Here is my situation: I want to use another GitHub account. I need to transfer a repo from my old account to the new one. Maybe there is an easy way to transfer, but it is beyong my ability now (I guess it&amp;rsquo;s complicated so I didn&amp;rsquo;t even bother searching for an answer).
+So I git clone the repo from my old account and tried to push it to my new accout.</description>
+    </item>
+    
+    <item>
       <title>How to Completely Uninstall Homebrew From a Mac</title>
       <link>https://hhao1992.github.io/en/2020/05/23/uninstall-homebrew-completely/</link>
       <pubDate>Sat, 23 May 2020 15:21:45 -0400</pubDate>
