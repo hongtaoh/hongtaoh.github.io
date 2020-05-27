@@ -217,7 +217,7 @@ body{
 
 2. [xeCJK 宏包文档 2020年版](http://mirrors.ibiblio.org/CTAN/macros/xetex/latex/xecjk/xeCJK.pdf)；
 
-如果你是想快速学一下 LaTeX, 可以看看 [《简单粗暴 LaTeX》](http://static.latexstudio.net/wp-content/uploads/2017/08/Note-by-LaTeX-cn.pdf)。最新版请关注该项目的[GigHub Repo](https://github.com/wklchris/Note-by-LaTeX)。
+如果你是想快速学一下 LaTeX, 可以看看 [《简单粗暴 LaTeX》](http://static.latexstudio.net/wp-content/uploads/2017/08/Note-by-LaTeX-cn.pdf)。最新版请关注该项目的 [GigHub Repo](https://github.com/wklchris/Note-by-LaTeX)。
 
 如果你需要用到很多 LaTeX, 可以考虑在线版的 [Overleaf](https://www.overleaf.com/)，可以省却很多自己下载超大的 TeX 的麻烦。如果你只是在 R 中偶尔用，那么谢益辉的 [TinyTex](https://yihui.org/tinytex/) 就够用了。
 
@@ -225,6 +225,6 @@ body{
 
 
 [^1]: 这行代码来自 [ElegantBookdown](https://github.com/XiangyunHuang/ElegantBookdown)。在此表示感谢黄湘云、叶飞两位作者。
-[^2]: 也有可能是 「已有 Block {#theorem-block}」这个板块中必须要留一个，只是因为我的删除顺序，才出现只有这个板块只有第一段代码必须保留的情况。这个我就不去重新试验了，读者有空可以自己试试。
+[^2]: 也有可能是 「已有 Block {#theorem-block}」这个板块中必须要留一个，只是因为我的删除顺序，才出现只有第一段代码必须保留的情况。这个我就不去重新试验了，读者有空可以自己试试。
 
 
