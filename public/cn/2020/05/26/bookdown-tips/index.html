@@ -165,7 +165,7 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
 <p>有一个办法是，到 <code>_bookdown.yml</code> 这个文件，把 <code>lem: &quot;引理 &quot;</code> 中的「引理」改成你想改的名字。也就是说，肯定要有个内容，你可以改成你需要的标题，比如 「提示」、「注意」、「备注」等等，根据自己的需要改就好。</p>
 <p>但是，有个问题是，这个修改只能在 HTML 结果中显示出来，PDF 还是显示 「引理 0.1」。可咋办？</p>
 <p>我的解决办法是直接把上面 <code>lemma</code> 改成了 <code>remark</code>，这样结果中是「注」，而且也没有标数字，我很满意了。</p>
-<p>如果你不满意这个解决方案，可能就要自己找一下如何在 PDF 版中修改诸如 <code>lemma</code>, <code>remark</code>  等预设好的中文对应词了。或者，你得自己想一下，如果可以直接删除掉上面我说的不可删除的办法。我暂时没有解决方案。</p>
+<p>如果你不满意这个解决方案，可能就要自己找一下如何在 PDF 版中修改诸如 <code>lemma</code>, <code>remark</code>  等预设好的中文对应词了。或者，你得自己想一下，如果可何直接删除掉。我暂时没有解决方案。</p>
 <p>其次，我是直接把下面这几行删除了：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">bibliography<span style="color:#666">:</span> 
  <span style="color:#666">-</span> book.bib
