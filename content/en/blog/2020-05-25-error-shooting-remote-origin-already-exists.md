@@ -1,5 +1,5 @@
 ---
-title: How Solve the Problem of "Remote Origin Already Exists"
+title: How to Solve the Problem of "Remote Origin Already Exists"
 date: 2020-05-25T10:10:19-04:00
 author: Hongtao Hao
 slug: remote-origin-already-exists-error-shooting
