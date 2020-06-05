@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>日志 on 郝鸿涛::Hongtao Hao</title>
-    <link>https://hhao1992.github.io/cn/thoughts/</link>
+    <link>https://hongtaoh.github.io/cn/thoughts/</link>
     <description>Recent content in 日志 on 郝鸿涛::Hongtao Hao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://hhao1992.github.io/cn/thoughts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hongtaoh.github.io/cn/thoughts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>如何下载 YouTube 视频</title>
-      <link>https://hhao1992.github.io/cn/2020/06/04/youtube-download/</link>
+      <link>https://hongtaoh.github.io/cn/2020/06/04/youtube-download/</link>
       <pubDate>Thu, 04 Jun 2020 08:45:57 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/06/04/youtube-download/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/06/04/youtube-download/</guid>
       <description>很多介绍下载 YouTube 视频的方法都涉及下载软件或者浏览器插件，但其实没有必要。这里 介绍到了一个非常简单的方法：找到你想下载的 YouTube 视频网址，然后在 &amp;ldquo;youtube&amp;rdquo; 前加上 &amp;ldquo;add&amp;rdquo; 就可以了。具体有不懂的，打开上面给出的链接，就明白了。</description>
     </item>
     
     <item>
       <title>非常规方法导出微信通讯录</title>
-      <link>https://hhao1992.github.io/cn/2020/05/27/wechat-contacts-extracting/</link>
+      <link>https://hongtaoh.github.io/cn/2020/05/27/wechat-contacts-extracting/</link>
       <pubDate>Wed, 27 May 2020 16:41:49 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/05/27/wechat-contacts-extracting/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/05/27/wechat-contacts-extracting/</guid>
       <description>我微信上有将近800个好友。我在为之后彻底不用微信做准备，因此需要把这800个好友认真浏览一遍，看哪些需要我进一步联系，好问一下他们微信外的联系方式，哪些则不用管。
 直接在手机端查看自然可以，但是我试过几次后，发现实在不行，每次都是没看几个就坚持不下去了，而且看的时候无法做标记，第二次看还是两眼一抹黑。我想把通讯录导出来，打印出来，我可以在纸上一点点勾勾画画，做备注。
 找了很多方法，有很多程序员提倡用爬虫的方法，但是我的微信网页端无法登录，因此放弃了。最后看到一篇帖子后，我就想，也许可以把这800人截图下来。
@@ -33,10 +33,10 @@
     
     <item>
       <title>人人献出一点爱，让尘肺病不在</title>
-      <link>https://hhao1992.github.io/cn/2020/04/30/love-from-everyone-conquers-neumoconiosis/</link>
+      <link>https://hongtaoh.github.io/cn/2020/04/30/love-from-everyone-conquers-neumoconiosis/</link>
       <pubDate>Thu, 30 Apr 2020 11:28:02 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/04/30/love-from-everyone-conquers-neumoconiosis/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/04/30/love-from-everyone-conquers-neumoconiosis/</guid>
       <description>注：原文写于 2016 年 12 月
  这几天，北京的雾霾再次成为刷屏的热词。
 大爱清尘发起人王克勤曾说： “人们每天都为城市的PM2.5忧心忡忡，可PM2.5在尘肺病面前根本不值一提”。
@@ -100,10 +100,10 @@
     
     <item>
       <title>大爱清尘，能救一个是一个 （深度报道）</title>
-      <link>https://hhao1992.github.io/cn/2020/04/30/help-one-after-another/</link>
+      <link>https://hongtaoh.github.io/cn/2020/04/30/help-one-after-another/</link>
       <pubDate>Thu, 30 Apr 2020 11:04:49 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/04/30/help-one-after-another/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/04/30/help-one-after-another/</guid>
       <description>注：原文写于 2016 年 12 月
    大爱清尘办公室入口   在北京中关村附近的地下一层，有一个60平米左右的办公室，十几个穿着绿色制服的工作人员在紧张忙碌着。
 这里是大爱清尘全国中心的办公室。
@@ -142,10 +142,10 @@
     
     <item>
       <title>想法何时写</title>
-      <link>https://hhao1992.github.io/cn/2020/04/30/when-to-write/</link>
+      <link>https://hongtaoh.github.io/cn/2020/04/30/when-to-write/</link>
       <pubDate>Thu, 30 Apr 2020 06:04:52 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/04/30/when-to-write/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/04/30/when-to-write/</guid>
       <description>最近的一个感受是，平常有很多想法，但是老是因为自己平常太忙，还有很多别的事情要做，这些想法就永远无法变成文字和更深入的思考。还有一个原因是自己会产生一个疑问：我的这些文字和想法对别人有用吗？我总是觉得没什么用，也就没有很强的动力去把自己的想法写出来。
 其实啊，自己的想法不见得非要对别人有用。许多我觉得对别人有用的文章，最后可能别人都不会看。比如我写的那两篇如何将 Hugo 部署到 Netlify 或者 GitHub, 虽然我写了很久，也觉得填补了网上许多教程的空白，但是也不见得很多人看1。
 另外就是，想法其实是需要我坐下来，静下心来去写，一边写，一边才能把想法深入，不然就永远无法把想法具体化。我还想到的一点是，也就是在 How to Write A Lot 这本书里提到的，你要给自己第一个时间，专门用来干某事。
@@ -157,10 +157,10 @@
     
     <item>
       <title>如果我的高中能再来一遍</title>
-      <link>https://hhao1992.github.io/cn/2020/04/19/if-senior-high-again/</link>
+      <link>https://hongtaoh.github.io/cn/2020/04/19/if-senior-high-again/</link>
       <pubDate>Sun, 19 Apr 2020 10:57:52 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/04/19/if-senior-high-again/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/04/19/if-senior-high-again/</guid>
       <description>  来源：河北新闻网   很久之前就想过这个问题。高中对我来说是一个遗憾，由于一些原因，我的高中支离破碎，后半部分是在家里度过的。甚至高四复读，我也是在学校旁边的出租房里度过。一段不堪回首的艰苦岁月。
 对高中有一种情怀一是因为自己两次高考都是失败，最后去了一所双非大学，虽然我现在觉得她其实给我了很多，但难免不会幻想如果我的高中正常，我会有什么样的一个结果。另一个我对高中有情怀的原因是，现在我每天拼命学习，而且也意识到高中那些知识的重要性，比如古文，比如数学，比如物理化学1等。
 文科？ 理科？ 如果我能回到高中，我不会选文科。不管是从实用主义的角度考虑还是从对我的契合度考虑，我都觉得文科不是一个好的选择。对我来说，地理还好点，政治和历史的随机性和主观性太强。或者说我一直找不到考高分的原理。我在复读的时候，班上有一个人，平常考试文综总是240多甚至250多，高考的时候好像也是240多，我一直搞不懂他咋做到的。
@@ -182,19 +182,19 @@
     
     <item>
       <title>少用的这个字</title>
-      <link>https://hhao1992.github.io/cn/2020/03/13/limit-using-this-character/</link>
+      <link>https://hongtaoh.github.io/cn/2020/03/13/limit-using-this-character/</link>
       <pubDate>Fri, 13 Mar 2020 11:40:57 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/03/13/limit-using-this-character/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/03/13/limit-using-this-character/</guid>
       <description>昨天看谢益辉博客中《变态中文》一文时，浏览到一个留言提到，能不用“的”这个字就不要用。我深以为然，并开始意识到自己平常对“的”这个字很滥用。故而，在改进自己那篇《你会被科技淘汰吗？》时，每一个“的”字我都很留意，看看是否可以去掉，结论是70%情况下，都可以去掉。即使原句不可以去掉，改一下句式就好了。</description>
     </item>
     
     <item>
       <title>你会被科技淘汰掉吗？</title>
-      <link>https://hhao1992.github.io/cn/2020/03/11/influence-of-technology/</link>
+      <link>https://hongtaoh.github.io/cn/2020/03/11/influence-of-technology/</link>
       <pubDate>Wed, 11 Mar 2020 09:53:37 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/03/11/influence-of-technology/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/03/11/influence-of-technology/</guid>
       <description>关于科技进步，有一种观点是虽然每次新科技出现，那个时代很多人害怕这种科技有不好影响，但随着时间推移，人们会发现其实这些科技的不好影响并没有那么严重。从电报、录音机、照相机、广播、到电视、个人计算机、互联网，再到现在智能手机、社交媒体、段视频、人工智能，一开始总会有很多人担心这些科技给人们，特别是青少年带来不良影响，但往往随后会看到其实并没有那么可怕。
 我的看法是，对人类整体而言，这些科技的不良影响确实不太可怕。但，这只是对人类整体而言。因为，不管发生什么，至少总会有人可以不被这些科技以不好地方式影响到，那么这批人便可不受影响，继续进步、繁衍。但是，对个人而言，这些科技可能会毁掉一个人，甚至一个家庭。类似物种进化，经过这一劫的人便可存活，而被这些科技淘汰的人，便很可能一生碌碌无为。
 不管承认与否，科技对人类的影响不管是从广度还是从深度上来说都越来越大。从广度上来讲，每个人生活都被科技包裹。以中国来说，70、80年代，只有少数人有电视，90年代，有移动电话、个人电脑是少数人。20世纪初，有智能手机也是少数人。但是，现在呢？即使你家庭条件普通，这些科技也都成了必需品。现在小孩子都可以接触到所有这些科技。
@@ -206,10 +206,10 @@
     
     <item>
       <title>2020年西北大学 MTS 博士项目校园面试 － 经历和体会</title>
-      <link>https://hhao1992.github.io/cn/2020/03/01/northwestern-compus-visit/</link>
+      <link>https://hongtaoh.github.io/cn/2020/03/01/northwestern-compus-visit/</link>
       <pubDate>Sun, 01 Mar 2020 11:05:47 -0500</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/03/01/northwestern-compus-visit/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/03/01/northwestern-compus-visit/</guid>
       <description>面试大约三周后，我收到西北的拒信，以下内容我不会修改，但请谨慎阅读。
  收到面试通知 2019年年末申请的西北大学传播学院 (Northwestern School of Communication)的 MTS (Media, Technology, &amp;amp; Society) 项目。2020年1月27日收到了 Aaron Shaw 教授发来的面试通知邮件。之后收到 Madeleine Agaton 发来的具体校园参观和面试的相关信息。
 面试被安排在2月27日到29日。所以，MTS 项目大概在面试之前的一个月发通知。这里需要注意的是，很多学校都是先发录取和候补名单，或者校园参访、面试的邮件，拒信一般要等校园参访结束，或者录取邮件发完后的一两周内才会发。我申请的项目中，密歇根大学 (Information School) 是这样，南加大 (Annenberg School for Communication) 也是这样。因为我在 Gradcafe 上早就看到申请这两个学校的人报录取，但是我等到两周后才收到拒信。我挺理解这些学校的做法，这么做也是为了把学校的损失降到最小。万一被录取的人中，有人在收到录取后立马告诉学校说不会去，那么如果学校是录取、拒信一起发的话，就没办法把发出的拒信再收回来。故而很多学校选择先发录取和候补名单，过一两周之后再发拒信。当然，这是我个人的猜测。
@@ -223,10 +223,10 @@
     
     <item>
       <title>只问耕耘，不问收获</title>
-      <link>https://hhao1992.github.io/cn/2020/02/21/just-do-it/</link>
+      <link>https://hongtaoh.github.io/cn/2020/02/21/just-do-it/</link>
       <pubDate>Fri, 21 Feb 2020 13:38:01 -0500</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/02/21/just-do-it/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/02/21/just-do-it/</guid>
       <description>最近陆续收到了斯坦福、康奈尔、宾西法尼亚的拒信。自己很受打击。回想起两年前自己的决定，我没有任何的后悔，但是有不甘和伤心。
 两年前，自己还在人大读书的时候，申请了十几个博士项目，最后运气很好，拿到了威斯康星麦迪逊（Comm Arts)、德州奥斯汀 (RTF)、雪城、印第安纳大学的博士录取。出乎所有人预料的是，我最终决定拒掉所有的博士录取。我本来想在家里自学一年，当年 12 月份再重新申请。后来仔细思考后认识到学术研究还是需要一些资源，加上我当时统计连门都没入，闭门造车不太可能写出来会议论文。而且没有国外的硕士学位想申请到美国名校的博士项目，也是难上加难。自己靠运气拿到了这四个博士录取，再申请也许就没有这么好的运气了。
 联系了印第安纳大学，他们说我去读硕士他们也会给我全额助教奖学金，我便答应了。前往前不着村、后不着店的布卢明顿读我的第二个硕士。
@@ -241,10 +241,10 @@
     
     <item>
       <title>美国提供全奖的新闻传播硕士项目</title>
-      <link>https://hhao1992.github.io/cn/2020/02/01/us-communication-phd-programs/</link>
+      <link>https://hongtaoh.github.io/cn/2020/02/01/us-communication-phd-programs/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/02/01/us-communication-phd-programs/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/02/01/us-communication-phd-programs/</guid>
       <description>在美国，新闻传播相关的博士项目一般都是提供全奖的，所以这里不再介绍。每年都有从国内读硕士，然后去美国读博士的，比如现任浙江大学传媒与国际文化学院院长的韦路，人大的潘文静老师。我也认识朋友从国内高校硕士毕业然后收到德州奥斯汀、印第安纳、威斯康星麦迪逊、雪城、天普、科罗拉多波德尔、密歇根州立、加州大学戴维斯分校等学校传播学博士项目全额奖学金的。不过貌似现在越来越难，许多学校会倾向于录取有美国硕士学历的学生，因为国内的传播学和美国的传播学基本不是一个学科。
 注意：以下内容主要是针对以后想读博士、做研究、当教授的朋友，对于想从事新闻、传媒、公共关系、广播电视编导等偏实践项目的朋友，以下内容并不太适合。
 对于家里多金，10万美金不算什么的土豪朋友，也没必要接着往下看了。。
@@ -261,10 +261,10 @@
     
     <item>
       <title>中美自黑文化的差异</title>
-      <link>https://hhao1992.github.io/cn/2020/01/18/underbrag-cn-and-usa/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/18/underbrag-cn-and-usa/</link>
       <pubDate>Sat, 18 Jan 2020 11:19:33 -0500</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/01/18/underbrag-cn-and-usa/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/18/underbrag-cn-and-usa/</guid>
       <description>前几天，在 John Kruschke 老师的 一门统计课 上，他讲到他去德国参观哥廷根的高斯故居。他说他到达故居时是晚上，周围一个人都没有，但是他又想去进去看看。他便推开门走了进去。
 他对我们说，如果里面有人，他就会跟那个人说 “Hey, I am just a stupid American having a look here^[原话记不清，大意是这个意思]”。 大意就是“嘿，我就是个傻不愣登的美国人，进来看看”。当然，整个班都笑了。
 我笑过之后，就想，一个中国老师敢这么自黑吗？试想一下，一个中国老师，课上说道，去高斯故居，然后打算在里面有人的时候，说，“Hey, I am just a stupid Chinese having a look here” （嘿，我就是个傻不愣登的中国人，想进来看看) 。我估计底下的中国学生不仅不会笑，而且会认为这个老师看不起自己的中国人身份。
@@ -277,10 +277,10 @@
     
     <item>
       <title>最令我难忘的三天, 记 2017年瑞士圣加仑论坛参会</title>
-      <link>https://hhao1992.github.io/cn/2020/01/17/2017-st.gallen-memory/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/17/2017-st.gallen-memory/</link>
       <pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/01/17/2017-st.gallen-memory/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/17/2017-st.gallen-memory/</guid>
       <description>参会结束之后，在茵特拉肯的一个青年旅舍阳台上   我从来没想到，我会有机会到瑞士！而且去了两次！
 时间猛然回到2017年．．．
 缘起 我和圣加仑论坛的缘分源于2016年底在人大研究生院官网上看到的一则通知。原文链接已经找不到了，不过我在人大财政金融学院找到了一份差不多的，在这里 。
@@ -313,10 +313,10 @@
     
     <item>
       <title>第一届”外研社杯“英语阅读大赛获奖感悟及备赛经历</title>
-      <link>https://hhao1992.github.io/cn/2020/01/06/fltrp-reading-contest/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/06/fltrp-reading-contest/</link>
       <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/01/06/fltrp-reading-contest/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/06/fltrp-reading-contest/</guid>
       <description>  获奖时刻   激动的一刻 在说备赛经验之前，请容我先分享一下至今难忘的一段经历：
 比赛结果出来前一天，我总有预感自己会得到季军。晚上还梦到了。
 第二天，我正在观看演讲比赛，一个电话打过来。

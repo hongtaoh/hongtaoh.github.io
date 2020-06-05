@@ -2,30 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>English blog on 郝鸿涛::Hongtao Hao</title>
-    <link>https://hhao1992.github.io/en/blog/</link>
+    <link>https://hongtaoh.github.io/en/blog/</link>
     <description>Recent content in English blog on 郝鸿涛::Hongtao Hao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://hhao1992.github.io/en/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hongtaoh.github.io/en/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Build A Website Using Hugo without Programming Skills</title>
+      <link>https://hongtaoh.github.io/en/2020/06/05/get-started-with-hugo/</link>
+      <pubDate>Fri, 05 Jun 2020 09:26:26 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/06/05/get-started-with-hugo/</guid>
+      <description>A friend asked me whether I can help him create his own personal website. I have long been wanting to write a simple tutorial on this and now I think it&amp;rsquo;s time to do that.
+In this age of informaiton, it&amp;rsquo;s important to have your online presence. It not only helps others to know you more quickly; it also helps you to express yourself to, and share your experiences and knowledge with, the outside world.</description>
+    </item>
+    
+    <item>
       <title>How to Solve the Problem of &#34;Remote Origin Already Exists&#34;</title>
-      <link>https://hhao1992.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</link>
+      <link>https://hongtaoh.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</link>
       <pubDate>Mon, 25 May 2020 10:10:19 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</guid>
       <description>Here is my situation: I want to use another GitHub account. I need to transfer a repo from my old account to the new one. Maybe there is an easy way to transfer, but it is beyong my ability now (I guess it&amp;rsquo;s complicated so I didn&amp;rsquo;t even bother searching for an answer).
 So I git clone the repo from my old account and tried to push it to my new accout.</description>
     </item>
     
     <item>
       <title>How to Completely Uninstall Homebrew From a Mac</title>
-      <link>https://hhao1992.github.io/en/2020/05/23/uninstall-homebrew-completely/</link>
+      <link>https://hongtaoh.github.io/en/2020/05/23/uninstall-homebrew-completely/</link>
       <pubDate>Sat, 23 May 2020 15:21:45 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/en/2020/05/23/uninstall-homebrew-completely/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/05/23/uninstall-homebrew-completely/</guid>
       <description>My Macbook Air is pretty old1, so I cannot put up with any useless files that take up a lot of space on my laptop.
 When installed, Homebrew takes up over 400MB. That&amp;rsquo;s a lot of space, at least for me.
 I installed Homebrew and then I wanted to delete it. So I went to /usr/local/bin/. I was lost. I couldn&amp;rsquo;t know which files to delete. Since /usr/local/bin/ is a hidden folder in Mac, I don&amp;rsquo;t want to mess up with it.</description>
@@ -33,49 +43,49 @@ I installed Homebrew and then I wanted to delete it. So I went to /usr/local/bin
     
     <item>
       <title>How to fix blurry images in Mac Chrome</title>
-      <link>https://hhao1992.github.io/en/2020/05/14/chrome-mac-blurry-image-fix/</link>
+      <link>https://hongtaoh.github.io/en/2020/05/14/chrome-mac-blurry-image-fix/</link>
       <pubDate>Thu, 14 May 2020 16:35:13 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/en/2020/05/14/chrome-mac-blurry-image-fix/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/05/14/chrome-mac-blurry-image-fix/</guid>
       <description>I never used Chrome before but after upgrading my MacOS, I started trying Chrome. I created my personal blog using Hugo. The thing is, when I viewed my site using Chrome on my Mac, all images are so blurry. I tried again on Safari, things were fine; I tried it in Chrome on a Windowns PC, things were also fine.
 While I was scratching my head, I came across this answer by pastullo on Stackexchange.</description>
     </item>
     
     <item>
       <title>What Do I Think About TED Talks</title>
-      <link>https://hhao1992.github.io/en/2020/04/30/what-do-i-think-about-ted-talks/</link>
+      <link>https://hongtaoh.github.io/en/2020/04/30/what-do-i-think-about-ted-talks/</link>
       <pubDate>Thu, 30 Apr 2020 06:19:02 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/en/2020/04/30/what-do-i-think-about-ted-talks/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/04/30/what-do-i-think-about-ted-talks/</guid>
       <description>TED talks say that they have ideas worth spreading, but I am not sure whether these ideas are worth listening.
 Many people really like TED talks. These talks were and possibly still are very popular among Chinese students who regard TED talks as a valuable resource to learn English. In this aspect, I agree. TED is very helpful for English learners like me1. After all, most of the speakers are native speakers and their talks are very good for learners to practice listening and speaking.</description>
     </item>
     
     <item>
       <title>Why so many people love Dr. Fauci</title>
-      <link>https://hhao1992.github.io/en/2020/04/19/why-so-many-people-love-dr.-fauci/</link>
+      <link>https://hongtaoh.github.io/en/2020/04/19/why-so-many-people-love-dr.-fauci/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/en/2020/04/19/why-so-many-people-love-dr.-fauci/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/04/19/why-so-many-people-love-dr.-fauci/</guid>
       <description>When I saw the news that there is a petition to name Dr. Anthony Fauci the sexiest man alive, I was puzzled. I have been hearing this name for a long time, since the outbreak of COVID-19 in the United States but have never seen his image and heard of him talking.
 Through pure serendipity, I came across this video of Mark Zuckerberg interviewing Dr. Fauci. I was amazed by how calm, confident, and knowledgebale Dr.</description>
     </item>
     
     <item>
       <title>What if I don&#39;t have a role model?</title>
-      <link>https://hhao1992.github.io/en/2020/04/12/role-model/</link>
+      <link>https://hongtaoh.github.io/en/2020/04/12/role-model/</link>
       <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/en/2020/04/12/role-model/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/04/12/role-model/</guid>
       <description>In elementary school, when asked what I wanted to be when I grew up, just as many other kids, I said I wanted to be a scientist. But many years later when I was graduating from college, I didn’t know where I was heading. There was no longer a great role model guiding my life. I got frightened, especially when many classmates constantly asked me: what do you want to do after graduation?</description>
     </item>
     
     <item>
       <title>Pagedown Error Shooting</title>
-      <link>https://hhao1992.github.io/en/2020/03/26/pagedown-error-shooting/</link>
+      <link>https://hongtaoh.github.io/en/2020/03/26/pagedown-error-shooting/</link>
       <pubDate>Thu, 26 Mar 2020 11:15:17 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/en/2020/03/26/pagedown-error-shooting/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/03/26/pagedown-error-shooting/</guid>
       <description>I am now trying to create my curriculum vitae using Pagedown by Yihui Xie. My Mac system is very old: I am still using OS XYosemite (10.10.5). Therefore, I face limitations on the version of R I can use.
 Error when downloading Pagedown When downloading pagedown, I tried the method recommended by the Pagedown Homepage, i.e., remotes::install_github(&#39;rstudio/pagedown&#39;) but this does not work for me. There will always be errors.
 It will tell me that:</description>
@@ -83,10 +93,10 @@ It will tell me that:</description>
     
     <item>
       <title>Lab02</title>
-      <link>https://hhao1992.github.io/en/2020/03/21/lab02/</link>
+      <link>https://hongtaoh.github.io/en/2020/03/21/lab02/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/en/2020/03/21/lab02/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/03/21/lab02/</guid>
       <description>W2 Lab: Data processing basics and John Snow&amp;rsquo;s map Follow the contents of this notebook and answer all questions (e.g. Q1: &amp;hellip;)
 If you are not familiar with Python yet&amp;hellip; Maybe you can quickly review these basics first.
  numbers and strings; if and for statement data structure (lists, sets, dictionaries) functions and modules  Google&amp;rsquo;s Python Class is also a nice resource.
@@ -95,29 +105,29 @@ Jupyter + Pandas = Awesomeness Jupyter notebook (lab) (and IPython) and Pandas m
     
     <item>
       <title>Brain-to-brain communication and the Mindnet</title>
-      <link>https://hhao1992.github.io/en/2020/02/25/b2b-communication/</link>
+      <link>https://hongtaoh.github.io/en/2020/02/25/b2b-communication/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/en/2020/02/25/b2b-communication/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/02/25/b2b-communication/</guid>
       <description>A conceptual description of how b2b communication works, by Hongtao Hao   Where Does Brain-to-brain Communication Come From? “The Internet of Things” (IoT) captures people’s imagination. Experts envision that things in the future would be interconnected and freely share information with each other. For example, a car, through sensors, would be connected with tunnels and bridges it passes through and all other vehicles. Based on IoT technology and big data, an intelligent transportation system (ITS) could be built which promotes safety, efficiency, and conveniences1.</description>
     </item>
     
     <item>
       <title>How to Install and Upgrade Hugo on Mac</title>
-      <link>https://hhao1992.github.io/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/</link>
+      <link>https://hongtaoh.github.io/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/</link>
       <pubDate>Wed, 29 Jan 2020 11:05:22 -0500</pubDate>
       
-      <guid>https://hhao1992.github.io/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/</guid>
       <description>I am only talking about installing and upgrading Hugo on mac in this post. A very important guide is the Hugo&amp;rsquo;s official tutorial on installing Hugo. Homebrew is the easiest way. I did not use this method simply because my MacOS version is so old that I could not install and upgrade Hugo through Homebrew. If you are like me, you can read on.
 I chose the second method, which is called &amp;ldquo;Tarball&amp;rdquo; in Hugo&amp;rsquo;s tutorial.</description>
     </item>
     
     <item>
       <title>Using Markdown in Hugo post</title>
-      <link>https://hhao1992.github.io/en/2020/01/28/using-markdown-in-hugo-post/</link>
+      <link>https://hongtaoh.github.io/en/2020/01/28/using-markdown-in-hugo-post/</link>
       <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/en/2020/01/28/using-markdown-in-hugo-post/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/01/28/using-markdown-in-hugo-post/</guid>
       <description>Exercise 4.1 df &amp;lt;- HairEyeColor # Changing the name of HairEyecolor show (df) # displaying the dataframe ## , , Sex = Male ## ## Eye ## Hair Brown Blue Hazel Green ## Black 32 11 10 3 ## Brown 53 50 25 15 ## Red 10 10 7 7 ## Blond 3 30 5 8 ## ## , , Sex = Female ## ## Eye ## Hair Brown Blue Hazel Green ## Black 36 9 5 2 ## Brown 66 34 29 14 ## Red 16 7 7 7 ## Blond 4 64 5 8 e.</description>
     </item>
     

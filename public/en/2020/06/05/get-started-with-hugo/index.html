@@ -1,0 +1,460 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Build A Website Using Hugo without Programming Skills - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hongtaoh.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/en-vitae/">Vitae</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/cn/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">Build A Website Using Hugo without Programming Skills</h1>
+
+<p>Hongtao Hao 
+ / 2020-06-05 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-06-05-how-to-get-started-with-hugo-with-no-programming-background.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+<aside class="toc">
+Table of Contents:
+<nav id="TableOfContents">
+  <ol>
+    <li><a href="#wordpress-or-hugo">WordPress or Hugo</a></li>
+    <li><a href="#try-simple-themes-in-the-begining">Try simple themes in the begining</a></li>
+    <li><a href="#first-meeting-with-git-and-hugo">First meeting with Git and Hugo</a>
+      <ol>
+        <li><a href="#installing-hugo">Installing Hugo</a></li>
+        <li><a href="#cloning-the-theme">Cloning the theme</a></li>
+      </ol>
+    </li>
+    <li><a href="#customizing-the-theme-a-little-bit">Customizing the theme a little bit</a></li>
+    <li><a href="#github">GitHub</a></li>
+    <li><a href="#netlify">Netlify</a></li>
+    <li><a href="#more-knowledge-about-hugo">More Knowledge about Hugo</a>
+      <ol>
+        <li><a href="#how-to-add-a-new-post">How to add a new post</a></li>
+      </ol>
+    </li>
+    <li><a href="#whats-next">What&rsquo;s Next</a></li>
+  </ol>
+</nav>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body-text list-text">
+<p>A friend asked me whether I can help him create his own personal website. I have long been wanting to write a simple tutorial on this and now I think it&rsquo;s time to do that.</p>
+<p>In this age of informaiton, it&rsquo;s important to have your online presence. It not only helps others to know you more quickly; it also helps you to express yourself to, and share your experiences and knowledge with, the outside world.</p>
+<p>Note: All instructions below assume that you are using a Mac. If you are a Windowns or Linux user, you can still read this post but I don&rsquo;t guarantee that it will help you.</p>
+<h1 id="wordpress-or-hugo">WordPress or Hugo</h1>
+<p>Before getting started, a key question you should have is which tool you want to use to build your website.</p>
+<p>The most popular website building tool is definitely WordPress, which is said to contribute to 80% of the web today<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. To make your decision on which tool to choose, please read these two articles comparing Wordpress and Hugo, one by <a href="https://www.strattic.com/jekyll-hugo-wordpress-pros-cons-static-site-generators/">Rebecca Markowitz</a>, and the other by <a href="https://regisphilibert.com/blog/2019/01/from-wordpress-to-hugo-a-mindset-transition/">Regis</a>. You can also read a comparison between the two from <a href="https://dev.to/tylerlwsmith/my-impressions-of-hugo-as-a-wordpress-developer-1hho">a WordPress developer&rsquo;s perspctive</a>.</p>
+<p>The benefits of using Hugo are obvious: It&rsquo;s super fast; you&rsquo;ll have control over the whole website generating process; more freedom to create your own style (which means more time as well).</p>
+<p>However, if you choose to use Hugo, be prepared to spend some time learning how to code<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<p>You can also check themes by <a href="https://themes.gohugo.io/">Hugo</a> and <a href="https://wordpress.com/themes">WordPress</a> to make a decision.</p>
+<p>If you choose WordPress, you can stop here, as this tutorial will be about using Hugo. Sorry.</p>
+<h1 id="try-simple-themes-in-the-begining">Try simple themes in the begining</h1>
+<p>In Hugo, you&rsquo;ll need Markdown to write your posts. Whenever you forget how to use Markdown, please refer to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">this cheat sheet</a>.</p>
+<p>Hugo provides a lot of themes. As the popularity of Hugo increases, there are more and more themes coming up. My suggestion for beginners is don&rsquo;t spend much time in the begining on choosing themes. Just get started with the simplest theme and as you become familiar with Hugo, you can try complext ones or even create your own. This is for two reasons:</p>
+<ol>
+<li>
+<p>If you have little to no programming skills, it&rsquo;s very difficult for you to customize complex themes. Even though there are many themes, chances are that you won&rsquo;t be 100% satisfied with any of them, so you&rsquo;ll want to make a lot of changes. The more complexity, the more difficulty to customize it. This leads to the second reason.</p>
+</li>
+<li>
+<p>You&rsquo;ll get tired with the theme you like now so you probably will change it again later.</p>
+</li>
+</ol>
+<p>For this tutorial, I&rsquo;ll use this <a href="https://github.com/yihui/hugo-lithium">hugo-lithium-theme</a>, created by <a href="https://themes.gohugo.io/hugo-lithium-theme/">Jonathan Rutheiser</a> and later modified by <a href="https://yihui.org/">Yihui Xie</a>. I&rsquo;ll use the <a href="https://github.com/yihui/hugo-lithium">modified version</a>.</p>
+<h1 id="first-meeting-with-git-and-hugo">First meeting with Git and Hugo</h1>
+<h2 id="installing-hugo">Installing Hugo</h2>
+<p>Let&rsquo;s get started. I&rsquo;ll show you how I use this theme to build a simple website.</p>
+<p>First of all, you need to install Hugo. To do that, please read <a href="https://hongtaoh.com/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/">my earlier post</a> about Hugo installation.</p>
+<p>If you don&rsquo;t know how to open <code>Terminal</code> on your Mac: on the upper-right corner of the screen, you&rsquo;ll see a search icon. Click it and then type <code>Terminal</code>, then press Enter key on your keyboard.</p>
+<h2 id="cloning-the-theme">Cloning the theme</h2>
+<p>After opening your Terminal, first check whether you have correctly installed Hugo. All the following codes, if not specified otherwises, should run in your Terminal.</p>
+<p>Input the following code and press Enter key:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo version
+</code></pre></div><p>If it shows something like <code>Hugo Static Site Generator v0.70.0-7F47B99E ...</code>, then you should be fine.</p>
+<p>Please remember your Hugo version. In the case above, the result shows that the version is <code>0.70.0</code>. Your version might be different. Write it down now since we&rsquo;ll need this version number later.</p>
+<p>Then copy and past the following codes, and press the Enter key<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site lithium <span style="color:#408080;font-style:italic"># You can change lithium to any other name you like</span>
+</code></pre></div><p>You then should see the folder named <code>lithium</code> on your Desktop.</p>
+<p>Then go to Terminal again, copy and past the following codes, and press the Enter key:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/yihui/hugo-lithium
+</code></pre></div><p>You&rsquo;ll see a folder named &ldquo;hugo-lithium&rdquo; on your Desktop. What you&rsquo;ll need to later seems to be a little complex, but I&rsquo;ll explain in deatil:</p>
+<p>Open the folder of &ldquo;lithium&rdquo;, under the directory of &ldquo;themes&rdquo;, create a new folder called &ldquo;hugo-lithium&rdquo;. Then, go to the &ldquo;hugo-lithium&rdquo; folder on your Desktop (not the one you just created under the &ldquo;themes&rdquo; folder). Drag all the contents in this &ldquo;hugo-lithium&rdquo; folder on your Desktop into the &ldquo;hugo-lithium&rdquo; folder you just created under the &ldquo;themes&rdquo; folder.</p>
+<p>Go to the folder &ldquo;lithium&rdquo; on your Desktop, open themes -&gt; hugo-lithium -&gt; exampleSite, and then copy the three files/folders in <code>exampleSite</code>, namely <code>config.toml</code>, <code>content</code>, and <code>static</code>. Then go to the root of your <code>lithium</code> folder<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> and paste these three files. What I mean by <strong>the root</strong>: the first level of the lithium folder, namely what you&rsquo;ll see when you first open the folder, not going deeper.</p>
+<p>Please note: If you paste these three folders at the root of your lithium folder, Mac will ask you whether you want to merge or replace files because the root already has folders/files with the same name. Replacing is better.</p>
+<p>However, you should be aware that <strong>this will eradicate</strong> all the content in your original folder. <strong>If you have important files in the original folders</strong>, you should never click <strong>Replace</strong>. In fact, if you have important data in your original folder, you&rsquo;d better generate a new site folder using <code>hugo new site ...</code> command, rather than working in the current folder.</p>
+<p>After this is done, open the <code>config.toml</code>. Change <code>baseurl = &quot;/&quot;</code> to <code>baseurl = &quot;https://yourdomain.com/&quot;</code>. Save the changes by pressing Ctrl+S on your keyboard.</p>
+<p>Then copy and past the following code, and press the Enter key<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+</code></pre></div><p>You should be able to see the following:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Web Server is available at http://localhost:1313/ <span style="color:#666">(</span><span style="color:#008000">bind</span> address 127.0.0.1<span style="color:#666">)</span>
+Press Ctrl+C to stop
+</code></pre></div><p>If so, copy and paste <code>http://localhost:1313/</code> in your browser. You should be able to see this simple website.</p>
+<p>If everything is going well, we will change the site for a little bit.</p>
+<p>Before we make changes, go to Terminal, and then press Ctrl+C to stop the Web Server.</p>
+<h1 id="customizing-the-theme-a-little-bit">Customizing the theme a little bit</h1>
+<p>Go to the <code>config.toml</code> file in the root of <code>lithium</code> folder, You can find these:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[menu.main]]
+    name = <span style="color:#ba2121">&#34;About&#34;</span>
+    url = <span style="color:#ba2121">&#34;/about/&#34;</span>
+[[menu.main]]
+    name = <span style="color:#ba2121">&#34;GitHub&#34;</span>
+    url = <span style="color:#ba2121">&#34;https://github.com/rstudio/blogdown&#34;</span>
+[[menu.main]]
+    name = <span style="color:#ba2121">&#34;Twitter&#34;</span>
+    url = <span style="color:#ba2121">&#34;https://twitter.com/rstudio&#34;</span>
+</code></pre></div><p>Please change these the above to the following contents:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[menu.main]]
+    name = <span style="color:#ba2121">&#34;About&#34;</span>
+    url = <span style="color:#ba2121">&#34;/about/&#34;</span>
+[[menu.main]]
+    name = <span style="color:#ba2121">&#34;Post&#34;</span>
+    url = <span style="color:#ba2121">&#34;/post/&#34;</span>
+</code></pre></div><p>This is to delete the <code>GitHub</code> and <code>Twitter</code> section and add a <code>Blog</code> section.</p>
+<p>Now, please have a closer look at the <code>lithium</code> folder. You can find the <code>content</code> folder. This is the folder where all the contents, mainly posts, will be created and stored. Right now, you can see a file called <code>about.md</code> and a folder called <code>post</code>.</p>
+<p>Now, open a text editer. I like using Sublime Text but you can use any other editors you like. Create a new file, and type the following codes into the new file:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#39;Blog&#39;
+date: &#39;&#39;
+---
+</code></pre></div><p>Name the file as <code>_index.md</code>, save it, and put it into the folder of <code>post</code> we just talked about.</p>
+<p>Okay, now please copy and past the following code again:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+</code></pre></div><p>Now, you should be able to see two sections: About and Post. For the purpose of a very simple website, it is enough. Now, what you may want to change is the home page since when you go to this site, what you see is the post section rather home page itself. This is because we don&rsquo;t have a <code>_index.md</code> file in the root of <code>content</code> folder.</p>
+<p>Now, we&rsquo;ll create a homepage by editing this <code>_index.md</code> we just created.</p>
+<p>Copy and paste the codes <a href="https://raw.githubusercontent.com/hongtaoh/hugo-tutorial/master/content/_index.md"><strong>here</strong></a> into this <code>_index.md</code>.</p>
+<p>Refresh your borwser, you should be able to see the changes. However, the posts are still in the home page. How should be remove them?</p>
+<p>We have to change <code>list.html</code> file. Open it this way: <code>Themes -&gt; hugo-lithium -&gt; layouts -&gt; _default -&gt; list.html</code>. Open this file using a text editor like Sublime Text rather than the browser.</p>
+<p>Replace the contents in that file with these codes:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ partial &#34;header.html&#34; . }}
+
+&lt;<span style="color:#008000;font-weight:bold">main</span> <span style="color:#7d9029">class</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;content&#34;</span> <span style="color:#7d9029">role</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;main&#34;</span>&gt;
+
+  {{ if and .IsHome .Content }}
+  &lt;<span style="color:#008000;font-weight:bold">article</span> <span style="color:#7d9029">class</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;article&#34;</span>&gt;
+    &lt;<span style="color:#008000;font-weight:bold">div</span> <span style="color:#7d9029">class</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;article-content&#34;</span>&gt;
+      {{ .Content }}
+    &lt;/<span style="color:#008000;font-weight:bold">div</span>&gt;
+  &lt;/<span style="color:#008000;font-weight:bold">article</span>&gt;
+  {{ else }}
+  &lt;<span style="color:#008000;font-weight:bold">div</span> <span style="color:#7d9029">class</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;archive&#34;</span>&gt;
+    {{ range (where .Site.RegularPages &#34;Type&#34; &#34;post&#34;).GroupByDate &#34;2006&#34; }}
+    &lt;<span style="color:#008000;font-weight:bold">h2</span> <span style="color:#7d9029">class</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;archive-title&#34;</span>&gt;{{ .Key }}&lt;/<span style="color:#008000;font-weight:bold">h2</span>&gt;
+    {{ range .Pages }}
+    &lt;<span style="color:#008000;font-weight:bold">article</span> <span style="color:#7d9029">class</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;archive-item&#34;</span>&gt;
+      &lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#7d9029">href</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;{{ .RelPermalink }}&#34;</span> <span style="color:#7d9029">class</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;archive-item-link&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;
+      &lt;<span style="color:#008000;font-weight:bold">span</span> <span style="color:#7d9029">class</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;archive-item-date&#34;</span>&gt;
+        {{ .Date.Format &#34;2006/01/02&#34; }}
+      &lt;/<span style="color:#008000;font-weight:bold">span</span>&gt;
+    &lt;/<span style="color:#008000;font-weight:bold">article</span>&gt;
+    {{ end }}
+    {{ end }}
+  &lt;/<span style="color:#008000;font-weight:bold">div</span>&gt;
+  {{ end }}
+
+&lt;/<span style="color:#008000;font-weight:bold">main</span>&gt;
+
+{{ partial &#34;footer.html&#34; . }}
+</code></pre></div><p>This solution came from <a href="https://github.com/rbind/daijiang">Daijaing Li&rsquo;s personal website</a>. His website is a great example of how to utilize the Lithium theme. Feel free to git clone his website.</p>
+<p>Save the changes and then refresh the browser, now the posts in the homepage should be gone.</p>
+<p>Now, we have the homepage, About, and Post section. This should be enough for a simple website.</p>
+<p>Please note that this post is not intended to be an extensive guide to website building with Hugo. If you want much more personal touch on websites than what I have covered above, you need more knowledge and Hugo structure, CSS, and HTML.</p>
+<p>If you want to make a lot of changes, or that you want to use a fancier, and more complex theme, I highly recommend you to read Yihui Xie&rsquo;s book: <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a>. Although this book is about how to build website using the R pacakge of <code>blogdown</code>, you&rsquo;ll get a deeper understanding about Hugo by reading this book.</p>
+<p>In this book, you&rsquo;ll want to read in more detail the section of <a href="https://bookdown.org/yihui/blogdown/templates.html#how-to">2.5 Templates</a>, and <a href="https://bookdown.org/yihui/blogdown/custom-layouts.html">2.6 Custom layouts</a>.</p>
+<p>As I said, a deeper knowledge of Hugo, CSS, and HTML is beyond the scope of this simple tutorial.</p>
+<p>Now, I assume that you have your local website read (you are satisfied with what you see in the browser now).</p>
+<p>Go to <code>Terminal</code>, press Ctrl+C to kill the web server. We&rsquo;ll learn how to put this site online.</p>
+<h1 id="github">GitHub</h1>
+<p>First of all, you need to create a GitHub account. When this is done, click &ldquo;new repository&rdquo;:</p>
+<figure>
+    <img src="/media/netlify/deploy-1.png"/> <figcaption>
+            <h4>Create a new GitHub Repo</h4>
+        </figcaption>
+</figure>
+
+<p>Then do the following:</p>
+<figure>
+    <img src="/media/enblog/new-github-repo.png"/> 
+</figure>
+
+<p>You can use any name you want. Choose &ldquo;public&rdquo; rather than &ldquo;private&rdquo;. Then click &ldquo;Create repository&rdquo;.</p>
+<p>You&rsquo;ll see this:</p>
+<figure>
+    <img src="/media/enblog/repo-https.png"/> 
+</figure>
+
+<p>Later, you&rsquo;ll need to copy the url by clicking the button on the right.</p>
+<p>Now, if you have followed the tutorial, in your Termail, you are still in the directory of <code>lithium</code>. Just to be sure, please type the following code in Terminal to check the current directory:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">pwd</span>
+</code></pre></div><p>If it shows the current working directory is <code>lithium</code>, then you can move on with the following. If not, please google by yourself how to navigate to a specific folder. I won&rsquo;t go in detail here.</p>
+<p>Then copy and paste the following codes:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">echo</span> <span style="color:#ba2121">&#34;# hugo tutorial website&#34;</span> &gt;&gt; README.md
+git init
+rm -rf public
+hugo
+git add README.md
+git add .
+git commit -m <span style="color:#ba2121">&#34;first commit&#34;</span>
+<span style="color:#408080;font-style:italic"># For below, please change the url to your own.</span> 
+git remote add origin https://github.com/hongtaoh/hugo-tutorial.git
+git push -u origin master
+</code></pre></div><p>Refresh your GitHub page, you should be able to see the changes.</p>
+<h1 id="netlify">Netlify</h1>
+<p>Now, we need to set up a Netlify account.</p>
+<p>Open the website of <a href="https://www.netlify.com/">Netlify</a>. If you don&rsquo;t have a Netlify accout yet, you need to Sign Up.</p>
+<p>Choose GitHub:</p>
+<figure>
+    <img src="https://d33wubrfki0l68.cloudfront.net/0e9f9cefe968382536d4e4baa66e49945ad2694c/e20ef/images/hosting-and-deployment/hosting-on-netlify/netlify-signup.jpg"/> <figcaption>
+            <h4>Source：Hugo</h4>
+        </figcaption>
+</figure>
+
+<p>Click &ldquo;Authorize application&rdquo;:</p>
+<figure>
+    <img src="https://d33wubrfki0l68.cloudfront.net/66276caf9e5deee836ba60fab50f78f6074e3ca0/0cc43/images/hosting-and-deployment/hosting-on-netlify/netlify-first-authorize.jpg"/> <figcaption>
+            <h4>Source：Hugo</h4>
+        </figcaption>
+</figure>
+
+<p>Click &ldquo;New site from Git&rdquo;:</p>
+<figure>
+    <img src="/media/netlify/netlify-new-site-from-git.png"/> 
+</figure>
+
+<p>Authorize application again (if you are using Netlify for the first time):</p>
+<figure>
+    <img src="https://d33wubrfki0l68.cloudfront.net/dd85bd12e419baeb7ef56e45c43235d2004ce341/77531/images/hosting-and-deployment/hosting-on-netlify/netlify-authorize-added-permissions.jpg"/> <figcaption>
+            <h4>Source：Hugo</h4>
+        </figcaption>
+</figure>
+
+<p>NOTE: In the above, the 1st, 2nd, and 4th picture were from <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/">Host of Netlify</a>.</p>
+<p>Choose Github:</p>
+<figure>
+    <img src="/media/netlify/netlify-create-a-new-site-github.png"/> <figcaption>
+            <h4>Deployment source should be Github</h4>
+        </figcaption>
+</figure>
+
+<p>Then choose the GitHub repository you just created.</p>
+<p>Set the Deploy this way:</p>
+<figure>
+    <img src="/media/enblog/deploy-setting.png"/> 
+</figure>
+
+<p>Be sure to use your own Hugo version here. Before we click &ldquo;Deploy site&rdquo;, we still need add a file into our <code>lithium</code> folder, as suggested in the tutorial of <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/">Host of Netlify</a> by Hugo.</p>
+<p>Open a text editor, copy and paste the following codes:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[build]
+publish = <span style="color:#ba2121">&#34;public&#34;</span>
+command = <span style="color:#ba2121">&#34;hugo --gc --minify&#34;</span>
+
+[context.production.environment]
+HUGO_VERSION = <span style="color:#ba2121">&#34;0.70.0&#34;</span> <span style="color:#408080;font-style:italic">#Change it to your own Hugo version</span>
+HUGO_ENV = <span style="color:#ba2121">&#34;production&#34;</span>
+HUGO_ENABLEGITINFO = <span style="color:#ba2121">&#34;true&#34;</span>
+
+[context.split1]
+command = <span style="color:#ba2121">&#34;hugo --gc --minify --enableGitInfo&#34;</span>
+
+[context.split1.environment]
+HUGO_VERSION = <span style="color:#ba2121">&#34;0.70.0&#34;</span> <span style="color:#408080;font-style:italic">#Change it to your own Hugo version</span>
+HUGO_ENV = <span style="color:#ba2121">&#34;production&#34;</span>
+
+[context.deploy<span style="">-</span>preview]
+command = <span style="color:#ba2121">&#34;hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL&#34;</span>
+
+[context.deploy<span style="">-</span>preview.environment]
+HUGO_VERSION = <span style="color:#ba2121">&#34;0.70.0&#34;</span> <span style="color:#408080;font-style:italic">#Change it to your own Hugo version</span>
+
+[context.branch<span style="">-</span>deploy]
+command = <span style="color:#ba2121">&#34;hugo --gc --minify -b $DEPLOY_PRIME_URL&#34;</span>
+
+[context.branch<span style="">-</span>deploy.environment]
+HUGO_VERSION = <span style="color:#ba2121">&#34;0.70.0&#34;</span> <span style="color:#408080;font-style:italic">#Change it to your own Hugo version</span>
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = <span style="color:#ba2121">&#34;true&#34;</span>
+</code></pre></div><p>Save the file, name it as <code>netlify.toml</code> and put it to the root of <code>lithium</code> folder. Then copy and paste the following codes in your Terminal:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add .
+git commit -m <span style="color:#ba2121">&#34;uploading netlify.toml&#34;</span>
+git push
+</code></pre></div><p>Refresh your GitHub page, you should be able to see the newly added <code>netlify.toml</code>.</p>
+<p>Then go back to Netlify, click &ldquo;Deploy site&rdquo;. Wait for a while, you should be able to see the website.</p>
+<figure>
+    <img src="/media/enblog/netlify-domain-settings.png"/> 
+</figure>
+
+<p>The url seems very ugly. Lest change it. Click &ldquo;Domain settings&rdquo; (as is shown above). Click on &ldquo;Options&rdquo;, and then &ldquo;Edit site name&rdquo;:</p>
+<figure>
+    <img src="/media/enblog/netlify-edit-site-name.png"/> 
+</figure>
+
+<p>Then you can input a name you like, as long as it is still available:</p>
+<figure>
+    <img src="/media/enblog/netlify-edit-site-name-02.png"/> 
+</figure>
+
+<p>Then the website url is changed to <a href="https://hugo-tutorial.netlify.app/">https://hugo-tutorial.netlify.app/</a>.</p>
+<h1 id="more-knowledge-about-hugo">More Knowledge about Hugo</h1>
+<h2 id="how-to-add-a-new-post">How to add a new post</h2>
+<p>Using codes like this:</p>
+<pre><code>hugo new post/2020-06-05-another-markdown.md
+</code></pre><h1 id="whats-next">What&rsquo;s Next</h1>
+<p>As I said, this post is not intended to be a comprehensive guide to creating a complicated website using Hugo. To do that, you are expected to spend some, if not a lot of, time on studying Hugo, CSS, and HTML. If you have a lot of personal preferences, do expect a lot of frustrucation, especially if you are a programming newbie like me.</p>
+<p>Again, I recommend you to read the <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> book in detail if you want more custimization in your website building.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Source come from <a href="https://regisphilibert.com/blog/2019/01/from-wordpress-to-hugo-a-mindset-transition">Regis</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>I spent at least 150 hours on creating my own website using Hugo, for your reference. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>You only need to press the Enter key once, after you have pasted all the three lines of codees. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>If you have used a different name than lithium, you should go to that folder on your Desktop. <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>When you type code by yourself, you should press the Enter key at the end of every line, since you can only type one line at time. When you copy and paste lines into Terminal, you should press Enter key at the end of the last line of code. I won&rsquo;t repeat &ldquo;press the Enter key&rdquo; in the following section, but you should bear in mind that you need to press it by yourself. <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+ 
+
+<p style="color:#777;">Last modified on 2020-06-05</p>
+
+</div>
+<a href="#top"><i class="fa fa-arrow-circle-up" style="font-size: 30px; color: black;"></i></a>  
+</main>
+
+<footer class="footer">
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+<script type="text/javascript" src="/js/tw_cn.js"></script>
+<script type="text/javascript">
+var defaultEncoding = 2; 
+var translateDelay = 0; 
+var cookieDomain = "http://www.hhao1992.githu.io/"; 
+var msgToTraditionalChinese = "繁体"; 
+var msgToSimplifiedChinese = "简体"; 
+var translateButtonId = "translateLink"; 
+translateInitilization();
+</script>
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="https://bookdown.org/yihui/blogdown/images/logo.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos">Content in <img src="https://simpleicons.org/icons/github.svg" width="22" height="22"></a>
+            
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> CC BY-NC-SA 4.0 </a>
+          </li>
+     </ul>
+</footer>
+
+    </div>
+
+
+
+  </footer>
+  </body>
+</html>
+
+

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>统计学 on 郝鸿涛::Hongtao Hao</title>
-    <link>https://hhao1992.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
+    <link>https://hongtaoh.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
     <description>Recent content in 统计学 on 郝鸿涛::Hongtao Hao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://hhao1992.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hongtaoh.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>贝叶斯统计思想入门（二)：概率</title>
-      <link>https://hhao1992.github.io/cn/2020/02/02/bayesian-stats-chapter4/</link>
+      <link>https://hongtaoh.github.io/cn/2020/02/02/bayesian-stats-chapter4/</link>
       <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/02/02/bayesian-stats-chapter4/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/02/02/bayesian-stats-chapter4/</guid>
       <description>上篇，也就是第二章，k老师主要是简单介绍了一下贝叶斯的方法。第三章是介绍了 r 语言的基本操作，这里不再介绍。从第四章开始，整本书渐渐进入主体，开始涉及贝叶斯的核心。
 第四章开始讲概率 (probability)。概率是用来描述不确定性 (uncertainty) 的。假如我现在抛一枚硬币，掉下来之后有可能是正面朝上，也可能是背面朝上。每当我们讨论一种结果的可能性的时候，我们其实在头脑里想到了所有可能的结果，这些所有可能的结果叫做样本空间 (sample space)。
 如果这个硬币质地良好，那么正面朝上的概率是 50%。如果质地粗糙，那么正面朝上的概率有可能大于50%，也可能小于50%。我们用希腊字母 θ 来表示正面朝上的概率。如果 $\theta = 50\%$ ，那说明硬币质地良好。
@@ -32,10 +32,10 @@ n &amp;lt;- 10000 pheads &amp;lt;- 0.8 flips&amp;lt;-sample (x=c(0,1),prob=c(1-p
     
     <item>
       <title>贝叶斯统计思想入门（一)：概述</title>
-      <link>https://hhao1992.github.io/cn/2020/01/18/bayesian-stats-chapter2/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/18/bayesian-stats-chapter2/</link>
       <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/01/18/bayesian-stats-chapter2/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/18/bayesian-stats-chapter2/</guid>
       <description>前言：这篇文章是我上约翰.克鲁斯克老师 (John Kruschke) 的《贝叶斯数据分析》 (P533: Bayesian Data Analysis) 这门课时，在课下看他的教材 Doing Bayesian Data Analysis (Second Edition) 所做的笔记。
 贝叶斯的本质是对于可能性1(credibility) 的重置 (reallocation)。比如，早上刚出家门，你看到门前地面是湿的。这个有很多种可能的原因：下雨了、小孩子撒尿了、环卫工人刚打扫了、物业洒水车刚洒了水、有人不小心把水杯里的水洒出来了、外星人来过自己的家然后离开的时候不小心留下的痕迹&amp;hellip;这些所有的可能，在我们获得进一步数据之前，都有着自己的先验概率 (prior probability)。这些先验概率，是我们主观上认为的可能性，比如根据我们往常的生活经验，下雨的可能性要比外星人到访高的多。虽然高得多，我们获得的信息毕竟是有限的，因为我们只是观察了门前的一小块地。因此，这些可能性都是存在的。
 然后，我们接着在路上走，发现不仅整条路都是湿的，而且房屋顶都是湿的，那么我们对概率进行重置：下雨的可能性进步一提升，而之前有可能的洒水车洒过水的可能性下降，因为洒水车不可能把水洒到房顶上。

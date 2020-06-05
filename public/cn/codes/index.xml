@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>编程 on 郝鸿涛::Hongtao Hao</title>
-    <link>https://hhao1992.github.io/cn/codes/</link>
+    <link>https://hongtaoh.github.io/cn/codes/</link>
     <description>Recent content in 编程 on 郝鸿涛::Hongtao Hao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://hhao1992.github.io/cn/codes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hongtaoh.github.io/cn/codes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bookdown 和 ElegantBookdown 使用心得</title>
-      <link>https://hhao1992.github.io/cn/2020/05/26/bookdown-tips/</link>
+      <link>https://hongtaoh.github.io/cn/2020/05/26/bookdown-tips/</link>
       <pubDate>Tue, 26 May 2020 16:00:21 -0400</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/05/26/bookdown-tips/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/05/26/bookdown-tips/</guid>
       <description>最近的一周一直在调试 Bookdown。其实，Bookdown 本身并不难，益辉大神 在他的那本 bookdown: Authoring Books and Technical Documents with R Markdown 已经介绍的非常清楚。我一直在调试的、也是我一直不会的主要集中在 PDF 的样式上，比如：
  PDF 中的 &amp;ldquo;Chapter 1&amp;rdquo; 如何改成「第一章」？  HTML 上改的话比较容易。如果你也是用的 bookdown-demo 来开始的话，那么在根目录下找到 _bookdown.yml 这个文档，然后把 chapter_name: &amp;quot;Chapter &amp;quot; 改成 chapter_name: [&amp;quot;第 &amp;quot;, &amp;quot; 章&amp;quot;]1 就好了。
 注意，这里标点是英文的。汉子和第二个英文引号之间有一个英文空格，是为了让版面更漂亮一些。不加空格的话，就是 「第N章」，加上空格就是「第 N 章」，所以还是加上吧。
@@ -29,10 +29,10 @@
     
     <item>
       <title>Hugo 如何部署到 Github Pages</title>
-      <link>https://hhao1992.github.io/cn/2020/01/22/deploy-on-github/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</link>
       <pubDate>Wed, 22 Jan 2020 17:04:17 -0500</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/01/22/deploy-on-github/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</guid>
       <description>正好自己要重新做一遍，我便在这里把步骤记录下来。
 Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，一个是 YOUR-PROJECT&amp;gt; (e.g. blog)，另一个是 &amp;lt;USERNAME&amp;gt;.github.io 。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 public 文件夹。
 这种设置的问题在于，你的博客更新的可能不仅仅是内容，掌管着网页格式的 layout 文件以及 css 文件也可能会更新。如果你需要让别人看到你的网页格式源代码，即，你的 layout 文件以及 css 文件，那么你每次更新的时候，不仅需要更新 &amp;lt;USERNAME&amp;gt;.github.io ，还需要更新 YOUR-PROJECT&amp;gt; (e.g. blog)。这一点，那篇教程 也提到了：
@@ -42,10 +42,10 @@ Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，�
     
     <item>
       <title>Hugo 如何实现脚注</title>
-      <link>https://hhao1992.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</link>
       <pubDate>Tue, 21 Jan 2020 12:22:37 -0500</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</guid>
       <description>Hugo 从 v0.60.0开始，Markdown 解析器不再使用 Blackfriday, 改用由 yuin1 编写的 goldmark 。
 这次变动我目前感觉比较明显的是：
 blackfriday 支持 免计数 形式的脚注。所谓免计数，就是说，你可以在文本后直接跟脚注的具体内容，比如
@@ -58,20 +58,20 @@ blackfriday 支持 免计数 形式的脚注。所谓免计数，就是说，你
     
     <item>
       <title>Hugo 如何使用思源宋体</title>
-      <link>https://hhao1992.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</link>
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</guid>
       <description>先给自己填一个坑。 主要参考：
  Indev. Journal Reuixiy Another random blog  </description>
     </item>
     
     <item>
       <title>如何将 Hugo 部署到 Netlify</title>
-      <link>https://hhao1992.github.io/cn/2020/01/04/hugo-netlify-deployment/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hhao1992.github.io/cn/2020/01/04/hugo-netlify-deployment/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</guid>
       <description>首先，什么是部署？为什么要部署？
 其实，准确的说，我们要做的是先把我们在本地的 hugo 文件夹托管到 github，这是第一步。第二步将 hugo 文件夹中的 public 文件夹与 netlify 连接起来，这样 public 文件夹里的内容就变成了我们想要的网站。
 我们部署网站的目的就是让本地的内容可以送达互联网，这样别人才能看到我们创作的内容。
