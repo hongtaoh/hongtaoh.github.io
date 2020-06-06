@@ -394,7 +394,7 @@ Every time you want to upload new content, you can run `bash deploy.sh` at the r
 
 If you encounter problems in the above steps, don't feel discouraged. You can check out the final `lithium` file here: [https://github.com/hongtaoh/hugo-tutorial](https://github.com/hongtaoh/hugo-tutorial).
 
-Of course you can `git clone` this repository. However, be sure to use `git remote remove origin` before you use `git init`, which was discussed [here]().
+Of course you can `git clone` this repository. However, be sure to use `git remote remove origin` before you use `git init`, which was discussed at the end of [the section about Github](https://hongtaoh.com/en/2020/06/05/get-started-with-hugo/#github) in this post.
 
 # What's Next
 
