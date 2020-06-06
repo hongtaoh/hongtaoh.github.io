@@ -11,7 +11,7 @@ A friend asked me whether I can help him create his own personal website. I have
 
 In this age of informaiton, it's important to have your online presence. It not only helps others to know you more quickly; it also helps you to express yourself to, and share your experiences and knowledge with, the outside world. 
 
-Note: All instructions below assume that you are using a Mac. If you are a Windowns or Linux user, you can still read this post but I don't guarantee that it will help you. 
+Note: All instructions below assume that you are using a Mac. If you are a Windows or Linux user, you can still read this post but I don't guarantee that it will help you. 
 
 # WordPress or Hugo
 
@@ -101,7 +101,7 @@ Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ```
 
-If so, copy and paste `http://localhost:1313/` in your browser. You should be able to see this simple website. 
+If so, click [http://localhost:1313/](http://localhost:1313/), you should be able to see this simple website in your browser. 
 
 If everything is going well, we will change the site for a little bit. 
 
@@ -123,7 +123,7 @@ Go to the `config.toml` file in the root of `lithium` folder, You can find these
     url = "https://twitter.com/rstudio"
 ```
 
-Please change these the above to the following contents:
+Please change codes above to the following contents:
 
 ```toml
 [[menu.main]]
