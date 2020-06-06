@@ -108,6 +108,8 @@ Table of Contents:
         <li><a href="#how-to-add-a-new-post">How to add a new post</a></li>
       </ol>
     </li>
+    <li><a href="#keep-deploying">Keep Deploying</a></li>
+    <li><a href="#final-repo">Final Repo</a></li>
     <li><a href="#whats-next">What&rsquo;s Next</a></li>
   </ol>
 </nav>
@@ -384,7 +386,26 @@ git push
 <h2 id="how-to-add-a-new-post">How to add a new post</h2>
 <p>Using codes like this:</p>
 <pre><code>hugo new post/2020-06-05-another-markdown.md
-</code></pre><h1 id="whats-next">What&rsquo;s Next</h1>
+</code></pre><h1 id="keep-deploying">Keep Deploying</h1>
+<p>Every time you update you contents, you need to upload them. You&rsquo;ll need to copy and paste the following codes in Terminal every time:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf public <span style="color:#408080;font-style:italic"># delete the public folder</span>
+hugo <span style="color:#408080;font-style:italic"># rebuild the website</span>
+git add . <span style="color:#408080;font-style:italic"># prepare uploads</span>
+git commit -m <span style="color:#ba2121">&#34;your message this time&#34;</span>
+git push 
+</code></pre></div><p>However, if you update your website often, doing this every time you want to upload new contents can be tedious. Is there a better way? Of course.</p>
+<p>Save the following script as <code>deploy.sh</code> and put this script at the root directory of your <code>lithium</code> folder.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf public
+hugo 
+git add .  
+<span style="color:#19177c">msg</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;rebuilding site </span><span style="color:#008000;font-weight:bold">$(</span>date<span style="color:#008000;font-weight:bold">)</span><span style="color:#ba2121">&#34;</span> 
+git commit -m <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$msg</span><span style="color:#ba2121">&#34;</span>
+git push
+</code></pre></div><p>Every time you want to upload new content, you can run <code>bash deploy.sh</code> at the root directory of your <code>lithium</code> folder. This will automate deployment. Wait for around 20 seconds, you&rsquo;ll be able to see the changes in your website. Yes, Hugo+GitHub+Netlify is this fast!</p>
+<h1 id="final-repo">Final Repo</h1>
+<p>If you encounter problems in the above steps, don&rsquo;t feel discouraged. You can check out the final <code>lithium</code> file here: <a href="https://github.com/hongtaoh/hugo-tutorial">https://github.com/hongtaoh/hugo-tutorial</a>.</p>
+<p>Of course you can <code>git clone</code> this repository. However, be sure to use <code>git remote remove origin</code> before you use <code>git init</code>, which was discussed <a href="">here</a>.</p>
+<h1 id="whats-next">What&rsquo;s Next</h1>
 <p>As I said, this post is not intended to be a comprehensive guide to creating a complicated website using Hugo. To do that, you are expected to spend some, if not a lot of, time on studying Hugo, CSS, and HTML. If you have a lot of personal preferences, do expect a lot of frustrucation, especially if you are a programming newbie like me.</p>
 <p>Again, I recommend you to read the <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> book in detail if you want more custimization in your website building.</p>
 <section class="footnotes" role="doc-endnotes">

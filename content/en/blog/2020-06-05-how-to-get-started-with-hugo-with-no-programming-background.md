@@ -363,6 +363,39 @@ Using codes like this:
 hugo new post/2020-06-05-another-markdown.md
 ```
 
+# Keep Deploying
+
+Every time you update you contents, you need to upload them. You'll need to copy and paste the following codes in Terminal every time:
+
+```bash
+rm -rf public # delete the public folder
+hugo # rebuild the website
+git add . # prepare uploads
+git commit -m "your message this time"
+git push 
+```
+
+However, if you update your website often, doing this every time you want to upload new contents can be tedious. Is there a better way? Of course.
+
+Save the following script as `deploy.sh` and put this script at the root directory of your `lithium` folder.
+
+```bash
+rm -rf public
+hugo 
+git add .  
+msg="rebuilding site $(date)" 
+git commit -m "$msg"
+git push
+```
+
+Every time you want to upload new content, you can run `bash deploy.sh` at the root directory of your `lithium` folder. This will automate deployment. Wait for around 20 seconds, you'll be able to see the changes in your website. Yes, Hugo+GitHub+Netlify is this fast!
+
+# Final Repo
+
+If you encounter problems in the above steps, don't feel discouraged. You can check out the final `lithium` file here: [https://github.com/hongtaoh/hugo-tutorial](https://github.com/hongtaoh/hugo-tutorial).
+
+Of course you can `git clone` this repository. However, be sure to use `git remote remove origin` before you use `git init`, which was discussed [here]().
+
 # What's Next
 
 As I said, this post is not intended to be a comprehensive guide to creating a complicated website using Hugo. To do that, you are expected to spend some, if not a lot of, time on studying Hugo, CSS, and HTML. If you have a lot of personal preferences, do expect a lot of frustrucation, especially if you are a programming newbie like me. 
