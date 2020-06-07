@@ -134,7 +134,7 @@ Please change codes above to the following contents:
     url = "/post/"
 ```
 
-This is to delete the `GitHub` and `Twitter` section and add a `Blog` section. 
+This is to delete the `GitHub` and `Twitter` section and add a `Post` section. 
 
 Now, please have a closer look at the `lithium` folder. You can find the `content` folder. This is the folder where all the contents, mainly posts, will be created and stored. Right now, you can see a file called `about.md` and a folder called `post`. 
 
