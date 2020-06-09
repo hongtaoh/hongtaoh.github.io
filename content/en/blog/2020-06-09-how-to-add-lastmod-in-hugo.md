@@ -8,7 +8,7 @@ toc: false
 ---
 Earlier, I thought this must be a difficult undertaking, but later I found this is relatively easy to accomplish. 
 
-The solution was [here](https://discourse.gohugo.io/t/last-modified-date-for-posts/23363), posted by funkydan2.
+The solution was [here](https://discourse.gohugo.io/t/last-modified-date-for-posts/23363/2), posted by funkydan2.
 
 According to Hugo's documentation on [Page Variables](https://gohugo.io/variables/page/), there are two ways to specify last modification date. One way is to specify the `.Lastmod` in a content's front matter. That is to say, while you are specifying the `title`, `date`, `author`, `slug`, etc., you also specify `lastmod`. The second way is through `.GitInfo`. 
 

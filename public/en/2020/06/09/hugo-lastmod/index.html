@@ -101,7 +101,7 @@
 
 <div class="body-text list-text">
 <p>Earlier, I thought this must be a difficult undertaking, but later I found this is relatively easy to accomplish.</p>
-<p>The solution was <a href="https://discourse.gohugo.io/t/last-modified-date-for-posts/23363">here</a>, posted by funkydan2.</p>
+<p>The solution was <a href="https://discourse.gohugo.io/t/last-modified-date-for-posts/23363/2">here</a>, posted by funkydan2.</p>
 <p>According to Hugo&rsquo;s documentation on <a href="https://gohugo.io/variables/page/">Page Variables</a>, there are two ways to specify last modification date. One way is to specify the <code>.Lastmod</code> in a content&rsquo;s front matter. That is to say, while you are specifying the <code>title</code>, <code>date</code>, <code>author</code>, <code>slug</code>, etc., you also specify <code>lastmod</code>. The second way is through <code>.GitInfo</code>.</p>
 <p>I recommend using the <a href="https://gohugo.io/variables/git/#lastmod">.GitInfo</a>. This method is better because it is automatic.</p>
 <p>In your <code>single.html</code> within <code>layouts</code> -&gt; <code>_default</code>, you simply add this line of code:</p>
