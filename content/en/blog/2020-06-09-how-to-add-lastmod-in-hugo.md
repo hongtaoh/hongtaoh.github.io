@@ -24,4 +24,4 @@ Then, in your `config.toml`, you simply add `enableGitInfo = true`.
 
 You can check my [single.html](https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/themes/hugo-xmin/layouts/_default/single.html) and [config.toml](https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/config.toml) setting for a reference. 
 
-Please note that this is just an example, there are many ways to achieve the goal. You are encouraged to do it in your own way (if you have enough time...).
+Please note that this is just an example. There are many ways to achieve the goal. You are encouraged to do it in your own way (if you have enough time...).
