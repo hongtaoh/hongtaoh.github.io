@@ -11,7 +11,7 @@ A friend asked me whether I can help him create his own personal website. I have
 
 In this age of informaiton, it's important to have your online presence. It not only helps others to know you more quickly; it also helps you to express yourself to, and share your experiences and knowledge with, the outside world. 
 
-Note: All instructions below assume that you are using a Mac. If you are a Windows or Linux user, you can still read this post but I don't guarantee that it will help you. 
+Note: All instructions below assume that you are using a Mac. If you are a Windows or Linux user, you can still read this post but I can't guarantee it will help you. 
 
 # WordPress or Hugo
 
