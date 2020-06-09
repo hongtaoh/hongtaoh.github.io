@@ -32,7 +32,7 @@ If you choose WordPress, you can stop here, as this tutorial will be about using
 
 In Hugo, you'll need Markdown to write your posts. Whenever you forget how to use Markdown, please refer to [this cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-Hugo provides a lot of themes. As the popularity of Hugo increases, there are more and more themes coming up. My suggestion for beginners is don't spend much time in the begining on choosing themes. Just get started with the simplest theme and as you become familiar with Hugo, you can try complext ones or even create your own. This is for two reasons: 
+Hugo provides a lot of themes. As the popularity of Hugo increases, there are more and more themes coming up. My suggestion for beginners is don't spend much time in the begining on choosing themes. Just get started with the simplest theme and as you become familiar with Hugo, you can try complex ones or even create your own. This is for two reasons: 
 
 1. If you have little to no programming skills, it's very difficult for you to customize complex themes. Even though there are many themes, chances are that you won't be 100% satisfied with any of them, so you'll want to make a lot of changes. The more complexity, the more difficulty to customize it. This leads to the second reason. 
 
