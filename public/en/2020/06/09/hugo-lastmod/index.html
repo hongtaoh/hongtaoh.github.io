@@ -1,9 +1,10 @@
+<a name="top"></a>
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>English blog - 郝鸿涛::Hongtao Hao</title>
+    <title>How to Add Last Modification Date in Hugo - 郝鸿涛::Hongtao Hao</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
@@ -60,89 +61,60 @@
 </nav>
       </header>
 
-
-
-
 <main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How to Add Last Modification Date in Hugo</h1>
+
+<p>Hongtao Hao 
+ / 2020-06-09 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-06-09-how-to-add-lastmod-in-hugo.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="body-text list-text">
-<h2 id="blog">Blog</h2>
+<p>Earlier, I thought this must be a difficult undertaking, but later I found this is relatively easy to accomplish.</p>
+<p>The solution was <a href="https://discourse.gohugo.io/t/last-modified-date-for-posts/23363">here</a>, posted by funkydan2.</p>
+<p>According to Hugo&rsquo;s documentation on <a href="https://gohugo.io/variables/page/">Page Variables</a>, there are two ways to specify last modification date. One way is to specify the <code>.Lastmod</code> in a content&rsquo;s front matter. That is to say, while you are specifying the <code>title</code>, <code>date</code>, <code>author</code>, <code>slug</code>, etc., you also specify <code>lastmod</code>. The second way is through <code>.GitInfo</code>.</p>
+<p>I recommend using the <a href="https://gohugo.io/variables/git/#lastmod">.GitInfo</a>. This method is better because it is automatic.</p>
+<p>In your <code>single.html</code> within <code>layouts</code> -&gt; <code>_default</code>, you simply add this line of code:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">p</span>&gt;Last modified on {{ .Page.Lastmod.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#008000;font-weight:bold">p</span>&gt;
+</code></pre></div><p>Then, in your <code>config.toml</code>, you simply add <code>enableGitInfo = true</code>.</p>
+<p>You can check my <a href="https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/themes/hugo-xmin/layouts/_default/single.html">single.html</a> and <a href="https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/config.toml">config.toml</a> setting for a reference.</p>
+<p>Please note that this is just an example, there are many ways to achieve the goal. You are encouraged to do it in your own way (if you have enough time&hellip;).</p>
+ 
 
-
-
-
-<ul>
-  
-  
-  
-  <p>
-  <span class="date">2020-06-09</span>
-    <a href="/en/2020/06/09/hugo-lastmod/">How to Add Last Modification Date in Hugo</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-06-05</span>
-    <a href="/en/2020/06/05/get-started-with-hugo/">Build A Website Using Hugo without Programming Skills</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-05-25</span>
-    <a href="/en/2020/05/25/remote-origin-already-exists-error-shooting/">How to Solve the Problem of &ldquo;Remote Origin Already Exists&rdquo;</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-05-23</span>
-    <a href="/en/2020/05/23/uninstall-homebrew-completely/">How to Completely Uninstall Homebrew From a Mac</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-05-14</span>
-    <a href="/en/2020/05/14/chrome-mac-blurry-image-fix/">How to fix blurry images in Mac Chrome</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-04-30</span>
-    <a href="/en/2020/04/30/what-do-i-think-about-ted-talks/">What Do I Think About TED Talks</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-04-19</span>
-    <a href="/en/2020/04/19/why-so-many-people-love-dr.-fauci/">Why so many people love Dr. Fauci</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-04-12</span>
-    <a href="/en/2020/04/12/role-model/">What if I don&rsquo;t have a role model?</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-03-26</span>
-    <a href="/en/2020/03/26/pagedown-error-shooting/">Pagedown Error Shooting</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-03-21</span>
-    <a href="/en/2020/03/21/lab02/">Lab02</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-02-25</span>
-    <a href="/en/2020/02/25/b2b-communication/">Brain-to-brain communication and the Mindnet</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-01-29</span>
-    <a href="/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/">How to Install and Upgrade Hugo on Mac</a>
-  </p>
-  
-  <p>
-  <span class="date">2020-01-28</span>
-    <a href="/en/2020/01/28/using-markdown-in-hugo-post/">Using Markdown in Hugo post</a>
-  </p>
-  
-</ul>
+<p style="color:#777;">Last modified on 2020-06-09</p>
 
 </div>
+<a href="#top"><i class="fa fa-arrow-circle-up" style="font-size: 30px; color: black;"></i></a>  
 </main>
 
 <footer class="footer">
@@ -166,10 +138,6 @@ translateInitilization();
      <ul class="footer-links">
           
           <li>
-            <a href="/en/blog/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
-          </li>
-          
-          <li>
             
             <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="https://bookdown.org/yihui/blogdown/images/logo.png" width="20" height="20"></a>
           </li>
@@ -190,4 +158,5 @@ translateInitilization();
   </footer>
   </body>
 </html>
- 
+
+

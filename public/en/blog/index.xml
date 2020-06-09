@@ -11,6 +11,17 @@
     
     
     <item>
+      <title>How to Add Last Modification Date in Hugo</title>
+      <link>https://hongtaoh.github.io/en/2020/06/09/hugo-lastmod/</link>
+      <pubDate>Tue, 09 Jun 2020 12:04:06 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/06/09/hugo-lastmod/</guid>
+      <description>Earlier, I thought this must be a difficult undertaking, but later I found this is relatively easy to accomplish.
+The solution was here, posted by funkydan2.
+According to Hugo&amp;rsquo;s documentation on Page Variables, there are two ways to specify last modification date. One way is to specify the .Lastmod in a content&amp;rsquo;s front matter. That is to say, while you are specifying the title, date, author, slug, etc., you also specify lastmod.</description>
+    </item>
+    
+    <item>
       <title>Build A Website Using Hugo without Programming Skills</title>
       <link>https://hongtaoh.github.io/en/2020/06/05/get-started-with-hugo/</link>
       <pubDate>Fri, 05 Jun 2020 09:26:26 -0400</pubDate>
