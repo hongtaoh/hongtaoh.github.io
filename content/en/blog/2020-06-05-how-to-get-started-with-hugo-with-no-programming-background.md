@@ -23,7 +23,7 @@ The benefits of using Hugo are obvious: It's super fast; you'll have control ove
 
 However, if you choose to use Hugo, be prepared to spend some time learning how to code[^2].
 
-You can also check themes by [Hugo](https://themes.gohugo.io/) and [WordPress](https://wordpress.com/themes) to make a decision. 
+You can also check out themes by [Hugo](https://themes.gohugo.io/) and [WordPress](https://wordpress.com/themes) to make a decision. 
 
 If you choose WordPress, you can stop here, as this tutorial will be about using Hugo. Sorry. 
 
@@ -36,7 +36,7 @@ Hugo provides a lot of themes. As the popularity of Hugo increases, there are mo
 
 1. If you have little to no programming skills, it's very difficult for you to customize complex themes. Even though there are many themes, chances are that you won't be 100% satisfied with any of them, so you'll want to make a lot of changes. The more complexity, the more difficulty to customize it. This leads to the second reason. 
 
-2. You'll get tired with the theme you like now so you probably will change it again later. 
+2. You'll get tired of the theme you like now so you probably will change it again later. 
 
 For this tutorial, I'll use this [hugo-lithium-theme](https://github.com/yihui/hugo-lithium), created by [Jonathan Rutheiser](https://themes.gohugo.io/hugo-lithium-theme/) and later modified by [Yihui Xie](https://yihui.org/). I'll use the [modified version](https://github.com/yihui/hugo-lithium). 
 
