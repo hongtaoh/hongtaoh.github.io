@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to Solve the Problem of &#34;Remote Origin Already Exists&#34; - 郝鸿涛::Hongtao Hao</title>
+    <title>Some Mac Terminal Command Basics - 郝鸿涛::Hongtao Hao</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
@@ -64,10 +64,10 @@
 <main class = "content" role="main">
 <div style="text-align: center">
 
-<h1 class="article-title">How to Solve the Problem of &#34;Remote Origin Already Exists&#34;</h1>
+<h1 class="article-title">Some Mac Terminal Command Basics</h1>
 
 <p>Hongtao Hao 
- / 2020-05-25 </p>
+ / 2020-06-14 </p>
 
 <hr/>
 </div>
@@ -80,7 +80,7 @@
   
   
   
-  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-05-25-error-shooting-remote-origin-already-exists.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-06-14-terminal-command-basics.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
   </a>
   
   
@@ -100,26 +100,15 @@
 
 
 <div class="body-text list-text">
-<p>Here is my situation: I want to use another GitHub account. I need to transfer a repo from my old account to the new one. Maybe there is an easy way to transfer, but it is beyong my ability now (I guess it&rsquo;s complicated so I didn&rsquo;t even bother searching for an answer).</p>
-<p>So I <code>git clone</code> the repo from my old account and tried to push it to my new accout. Then, a error occured:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fatal: remote origin already exists.
-</code></pre></div><p>There are two ways to solve this problem:</p>
-<ol>
-<li>Change the URL</li>
-</ol>
-<p><a href="https://stackoverflow.com/questions/16330404/how-to-remove-remote-origin-from-git-repo">Here</a> is where I found the answer. Many thanks to <a href="https://stackoverflow.com/users/1881136/kahowell">kahowell</a>.</p>
-<p>Simply use:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote set-url origin https://github.com/new.url.here
-</code></pre></div><p>However, if you just want to remove the remote (and add a new one later), you can use the following line of code to remove remote:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote remove origin 
-</code></pre></div><ol start="2">
-<li>Creating a new folder</li>
-</ol>
-<p>Just create a new folder, and then drag all the files from the old folder into the new folder. The original git remote will be automatically erased.</p>
-<p>Done.</p>
+<h2 id="changing-folderfile-name">Changing folder/file name</h2>
+<p>If you are too lazy to change the folder or file name manually, you can do that in Terminal. What you need to do is first to go to a the direction the folder/file is located in. For example, if you are changing the name of a folder on your Desktop, then you need to <code>cd Destkop</code> first. Then:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv oldfoldername newfoldername
+</code></pre></div><p>The same is for when you are changing a file&rsquo;s name.</p>
+<h2 id="open-a-new-termainl-windown">Open A New Termainl Windown</h2>
+<p>Simpply press <code>command+N</code></p>
  
 
-<p style="color:#777;">Last modified on 2020-06-02</p>
+<p style="color:#777;">Last modified on 2020-06-14</p>
 
 </div>
 <a href="#top"><i class="fa fa-arrow-circle-up" style="font-size: 30px; color: black;"></i></a>  

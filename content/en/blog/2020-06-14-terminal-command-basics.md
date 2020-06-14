@@ -1,0 +1,23 @@
+---
+title: Some Mac Terminal Command Basics
+date: 2020-06-14T10:04:34-04:00
+author: Hongtao Hao
+slug: terminal-command-basics-on-mac
+draft: false
+toc: false
+---
+
+## Changing folder/file name
+
+If you are too lazy to change the folder or file name manually, you can do that in Terminal. What you need to do is first to go to a the direction the folder/file is located in. For example, if you are changing the name of a folder on your Desktop, then you need to `cd Destkop` first. Then:
+
+```bash
+mv oldfoldername newfoldername
+```
+
+The same is for when you are changing a file's name.
+
+## Open A New Termainl Windown
+
+Simpply press `command+N`
+
