@@ -7,7 +7,7 @@ draft: false
 toc: false
 ---
 
-## Changing folder/file name
+## Changing Folder/File Name
 
 If you are too lazy to change the folder or file name manually, you can do that in Terminal. What you need to do is first to go to a the direction the folder/file is located in. For example, if you are changing the name of a folder on your Desktop, then you need to `cd Destkop` first. Then:
 
@@ -17,7 +17,13 @@ mv oldfoldername newfoldername
 
 The same is for when you are changing a file's name.
 
-## Open A New Termainl Windown
+## Opening A New Termainl Windown
 
 Simpply press `command+N`
+
+## Checking Which Directory You Are Currently In
+
+```bash
+pwd
+```
 
