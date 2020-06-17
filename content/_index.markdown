@@ -2,7 +2,7 @@
 title: Home
 ---
 
-{{<figure src="/media/hongtao.jpg" title="In Key West, Dec. 2019, courtsey of Michelle Zhan " width="450">}}
+{{<figure src="/media/hongtao.jpg" title="In Key West, Dec. 2019, courtesy of Michelle Zhan " width="450">}}
 
 I graduated with a Master's degree in Media Arts and Sciences from [the Media School of Indiana University](https://mediaschool.indiana.edu/index.html), advised by [Dr. Nicole Martins](https://mediaschool.indiana.edu/people/profile.html?p=nicomart). I earned my first Master's degree in Journalism from Renmin University of China, Beijing. You can view my journalism pieces in [_St.Gallen Symposium Magazine_](https://www.symposium.org/content?a=75). My research focus is on interpersonal interactions enabled by emerging communiation technolgoies. I am passionate about the future of human interactions, largely inspired by [_The Three-Body Problem_](https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)), a famous Chinese sci-fi novel by [Liu Cixin](https://en.wikipedia.org/wiki/Liu_Cixin). I love R and Python. 
 
