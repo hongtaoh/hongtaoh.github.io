@@ -11,6 +11,18 @@
     
     
     <item>
+      <title>Implementing Edit This Page on Github for a Hugo Website</title>
+      <link>https://hongtaoh.github.io/en/2020/06/18/implement-edit-on-github/</link>
+      <pubDate>Thu, 18 Jun 2020 11:10:20 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/06/18/implement-edit-on-github/</guid>
+      <description>I saw this quesiton on this thread but the answer by bep did not solve the problem.
+The solution can be found in Yihui Xie&amp;rsquo;s book of Blogdown.
+However, when I tried this this block of codes recommended by Yihui, I still couldn&amp;rsquo;t implement this function of editing on GitHub:
+{{ with .File.Path }} &amp;lt;a href=&amp;quot;https://github.com/.../{{ . }}&amp;quot;&amp;gt;Edit this page&amp;lt;/a&amp;gt; {{ end }} I tried the second block of codes on Yihui&amp;rsquo;s book, and it works.</description>
+    </item>
+    
+    <item>
       <title>Some Mac Terminal Command Basics</title>
       <link>https://hongtaoh.github.io/en/2020/06/14/terminal-command-basics-on-mac/</link>
       <pubDate>Sun, 14 Jun 2020 10:04:34 -0400</pubDate>
