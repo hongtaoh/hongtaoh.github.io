@@ -1,5 +1,5 @@
 ---
-title: Implementing Edit This Page on Github for a Hugo Website
+title: How to Implement Edit This Page on Github for a Hugo Website
 date: 2020-06-18T11:10:20-04:00
 author: Hongtao Hao
 slug: implement-edit-on-github
