@@ -46,6 +46,17 @@ GithubEdit = "https://github.com/USER/REPO/edit/"
 
 Also, the code above might be dependent on your `permalinks` setting in your `config.toml`. 
 
+Here, please note that there might be replication in urls. For example, in [this project](https://github.com/hongtaoh/guoxinban), I have this:
+
+```toml
+[permalinks]
+post = "/:year/:month/:day/:filename/"
+```
+
+Then the url of a post should be like `https://mydomain//2017/08/30/amid-rising-hiv/`. It does not contain `post`. When I open the "pen" mentioned above in GitHub, the url is like this: `https://github.com/hongtaoh/guoxinban/edit/master/content/post/amid-rising-hiv.md`. It contains `post`.
+
+Then, what should I put in the `GithubEdit`? I tried `https://github.com/hongtaoh/guoxinban/edit/master/content/post`, but then I cliked the "Edit this page on GitHub" button in my website, the url had two `post`s. So I changed the `GithubEdit` to this: `https://github.com/hongtaoh/guoxinban/edit/master/content/`, and then it worked. 
+
 Then, depending on where you want to add "edit this page on GitHub", add the following codes:
 
 ```html
@@ -96,6 +107,8 @@ The setting in `config.toml` is the same. However, codes that should be in your 
 In fact, no matter whether your website contains `.Rmd` files, you can use the above codes anyway...
 
 You can also refer to [this repo](https://github.com/hongtaoh/hugo-tutorial).
+
+
 
 Many thanks to Yihui's contributions. 
 
