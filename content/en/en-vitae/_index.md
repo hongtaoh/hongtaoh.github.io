@@ -10,7 +10,7 @@ type : nolisting
 
 ## Education
 
-- 2018 ~ 2020 (expected), M.A. in Media Arts and Sciences, Indiana Univeristy Bloomington (GPA: 4.00/4.00)
+- 2018 ~ 2020, M.A. in Media Arts and Sciences, Indiana Univeristy Bloomington (GPA: 4.00/4.00)
    - Committee: Nicole Martins (Chair), Daneille Kilgo, Bryant Paul
 - 2016 ~ 2018, M.A. in Journalism, Renmin University of China (GPA:3.92/4.00)
 - 2012 ~ 2016, B.A. in English, Hebei Normal University (GPA: 3.92/4.00)
