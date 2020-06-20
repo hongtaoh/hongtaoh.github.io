@@ -7,6 +7,7 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
 enableGitInfo = true
+enableRobotsTXT = true
 
 [permalinks]
 cn = "/cn/:year/:month/:day/:slug/"
