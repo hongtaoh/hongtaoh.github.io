@@ -132,13 +132,19 @@ Table of Contents:
 <p>Note: All instructions below assume that you are using a Mac. If you are a Windows or Linux user, you can still read this post but I can&rsquo;t guarantee it will help you.</p>
 <h1 id="wordpress-or-hugo">WordPress or Hugo</h1>
 <p>Before getting started, a key question you should have is which tool you want to use to build your website.</p>
-<p>The most popular website building tool is definitely WordPress, which is said to contribute to 80% of the web today<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. To make your decision on which tool to choose, please read these two articles comparing Wordpress and Hugo, one by <a href="https://www.strattic.com/jekyll-hugo-wordpress-pros-cons-static-site-generators/">Rebecca Markowitz</a>, and the other by <a href="https://regisphilibert.com/blog/2019/01/from-wordpress-to-hugo-a-mindset-transition/">Regis</a>. You can also read a comparison between the two from <a href="https://dev.to/tylerlwsmith/my-impressions-of-hugo-as-a-wordpress-developer-1hho">a WordPress developer&rsquo;s perspctive</a>.</p>
+<p>The most popular website building tool is definitely WordPress, which is said to contribute to 80% of the web today<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. To make your decision on which tool to choose, please read these two articles comparing Wordpress and Hugo, one by <a href="https://www.strattic.com/jekyll-hugo-wordpress-pros-cons-static-site-generators/" target="_blank" rel="noreferrer noopener">Rebecca Markowitz</a>
+, and the other by <a href="https://regisphilibert.com/blog/2019/01/from-wordpress-to-hugo-a-mindset-transition/" target="_blank" rel="noreferrer noopener">Regis</a>
+. You can also read a comparison between the two from <a href="https://dev.to/tylerlwsmith/my-impressions-of-hugo-as-a-wordpress-developer-1hho" target="_blank" rel="noreferrer noopener">a WordPress developer&rsquo;s perspctive</a>
+.</p>
 <p>The benefits of using Hugo are obvious: It&rsquo;s super fast; you&rsquo;ll have control over the whole website generating process; more freedom to create your own style (which means more time as well).</p>
 <p>However, if you choose to use Hugo, be prepared to spend some time learning how to code<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
-<p>You can also check out themes by <a href="https://themes.gohugo.io/">Hugo</a> and <a href="https://wordpress.com/themes">WordPress</a> to make a decision.</p>
+<p>You can also check out themes by <a href="https://themes.gohugo.io/" target="_blank" rel="noreferrer noopener">Hugo</a>
+ and <a href="https://wordpress.com/themes" target="_blank" rel="noreferrer noopener">WordPress</a>
+ to make a decision.</p>
 <p>If you choose WordPress, you can stop here, as this tutorial will be about using Hugo. Sorry.</p>
 <h1 id="try-simple-themes-in-the-begining">Try simple themes in the begining</h1>
-<p>In Hugo, you&rsquo;ll need Markdown to write your posts. Whenever you forget how to use Markdown, please refer to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">this cheat sheet</a>.</p>
+<p>In Hugo, you&rsquo;ll need Markdown to write your posts. Whenever you forget how to use Markdown, please refer to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank" rel="noreferrer noopener">this cheat sheet</a>
+.</p>
 <p>Hugo provides a lot of themes. As the popularity of Hugo increases, there are more and more themes coming up. My suggestion for beginners is don&rsquo;t spend much time in the begining on choosing themes. Just get started with the simplest theme and as you become familiar with Hugo, you can try complex ones or even create your own. This is for two reasons:</p>
 <ol>
 <li>
@@ -148,11 +154,16 @@ Table of Contents:
 <p>You&rsquo;ll get tired of the theme you like now so you probably will change it again later.</p>
 </li>
 </ol>
-<p>For this tutorial, I&rsquo;ll use this <a href="https://github.com/yihui/hugo-lithium">hugo-lithium-theme</a>, created by <a href="https://themes.gohugo.io/hugo-lithium-theme/">Jonathan Rutheiser</a> and later modified by <a href="https://yihui.org/">Yihui Xie</a>. I&rsquo;ll use the <a href="https://github.com/yihui/hugo-lithium">modified version</a>.</p>
+<p>For this tutorial, I&rsquo;ll use this <a href="https://github.com/yihui/hugo-lithium" target="_blank" rel="noreferrer noopener">hugo-lithium-theme</a>
+, created by <a href="https://themes.gohugo.io/hugo-lithium-theme/" target="_blank" rel="noreferrer noopener">Jonathan Rutheiser</a>
+ and later modified by <a href="https://yihui.org/" target="_blank" rel="noreferrer noopener">Yihui Xie</a>
+. I&rsquo;ll use the <a href="https://github.com/yihui/hugo-lithium" target="_blank" rel="noreferrer noopener">modified version</a>
+.</p>
 <h1 id="first-meeting-with-git-and-hugo">First meeting with Git and Hugo</h1>
 <h2 id="installing-hugo">Installing Hugo</h2>
 <p>Let&rsquo;s get started. I&rsquo;ll show you how I use this theme to build a simple website.</p>
-<p>First of all, you need to install Hugo. To do that, please read <a href="https://hongtaoh.com/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/">my earlier post</a> about Hugo installation.</p>
+<p>First of all, you need to install Hugo. To do that, please read <a href="https://hongtaoh.com/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/" target="_blank" rel="noreferrer noopener">my earlier post</a>
+ about Hugo installation.</p>
 <p>If you don&rsquo;t know how to open <code>Terminal</code> on your Mac: on the upper-right corner of the screen, you&rsquo;ll see a search icon. Click it and then type <code>Terminal</code>, then press Enter key on your keyboard.</p>
 <h2 id="cloning-the-theme">Cloning the theme</h2>
 <p>After opening your Terminal, first check whether you have correctly installed Hugo. All the following codes, if not specified otherwises, should run in your Terminal.</p>
@@ -176,7 +187,8 @@ Table of Contents:
 </code></pre></div><p>You should be able to see the following:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Web Server is available at http://localhost:1313/ <span style="color:#666">(</span><span style="color:#008000">bind</span> address 127.0.0.1<span style="color:#666">)</span>
 Press Ctrl+C to stop
-</code></pre></div><p>If so, click <a href="http://localhost:1313/">http://localhost:1313/</a>, you should be able to see this simple website in your browser.</p>
+</code></pre></div><p>If so, click <a href="http://localhost:1313/" target="_blank" rel="noreferrer noopener">http://localhost:1313/</a>
+, you should be able to see this simple website in your browser.</p>
 <p>If everything is going well, we will change the site for a little bit.</p>
 <p>Before we make changes, go to Terminal, and then press Ctrl+C to stop the Web Server.</p>
 <h1 id="customizing-the-theme-a-little-bit">Customizing the theme a little bit</h1>
@@ -209,7 +221,8 @@ date: &#39;&#39;
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
 </code></pre></div><p>Now, you should be able to see two sections: About and Post. For the purpose of a very simple website, it is enough. Now, what you may want to change is the home page since when you go to this site, what you see is the post section rather home page itself. This is because we don&rsquo;t have a <code>_index.md</code> file in the root of <code>content</code> folder.</p>
 <p>Now, we&rsquo;ll create a homepage by editing this <code>_index.md</code> we just created.</p>
-<p>Copy and paste the codes <a href="https://raw.githubusercontent.com/hongtaoh/hugo-tutorial/master/content/_index.md"><strong>here</strong></a> into this <code>_index.md</code>.</p>
+<p>Copy and paste the codes <a href="https://raw.githubusercontent.com/hongtaoh/hugo-tutorial/master/content/_index.md" target="_blank" rel="noreferrer noopener"><strong>here</strong></a>
+ into this <code>_index.md</code>.</p>
 <p>Refresh your borwser, you should be able to see the changes. However, the posts are still in the home page. How should be remove them?</p>
 <p>We have to change <code>list.html</code> file. Open it this way: <code>Themes -&gt; hugo-lithium -&gt; layouts -&gt; _default -&gt; list.html</code>. Open this file using a text editor like Sublime Text rather than the browser.</p>
 <p>Replace the contents in that file with these codes:</p>
@@ -242,12 +255,16 @@ date: &#39;&#39;
 &lt;/<span style="color:#008000;font-weight:bold">main</span>&gt;
 
 {{ partial &#34;footer.html&#34; . }}
-</code></pre></div><p>This solution came from <a href="https://github.com/rbind/daijiang">Daijaing Li&rsquo;s personal website</a>. His website is a great example of how to utilize the Lithium theme. Feel free to git clone his website.</p>
+</code></pre></div><p>This solution came from <a href="https://github.com/rbind/daijiang" target="_blank" rel="noreferrer noopener">Daijaing Li&rsquo;s personal website</a>
+. His website is a great example of how to utilize the Lithium theme. Feel free to git clone his website.</p>
 <p>Save the changes and then refresh the browser, now the posts in the homepage should be gone.</p>
 <p>Now, we have the homepage, About, and Post section. This should be enough for a simple website.</p>
 <p>Please note that this post is not intended to be an extensive guide to website building with Hugo. If you want much more personal touch on websites than what I have covered above, you need more knowledge and Hugo structure, CSS, and HTML.</p>
-<p>If you want to make a lot of changes, or that you want to use a fancier, and more complex theme, I highly recommend you to read Yihui Xie&rsquo;s book: <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a>. Although this book is about how to build website using the R pacakge of <code>blogdown</code>, you&rsquo;ll get a deeper understanding about Hugo by reading this book.</p>
-<p>In this book, you&rsquo;ll want to read in more detail the section of <a href="https://bookdown.org/yihui/blogdown/templates.html#how-to">2.5 Templates</a>, and <a href="https://bookdown.org/yihui/blogdown/custom-layouts.html">2.6 Custom layouts</a>.</p>
+<p>If you want to make a lot of changes, or that you want to use a fancier, and more complex theme, I highly recommend you to read Yihui Xie&rsquo;s book: <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noreferrer noopener">blogdown: Creating Websites with R Markdown</a>
+. Although this book is about how to build website using the R pacakge of <code>blogdown</code>, you&rsquo;ll get a deeper understanding about Hugo by reading this book.</p>
+<p>In this book, you&rsquo;ll want to read in more detail the section of <a href="https://bookdown.org/yihui/blogdown/templates.html#how-to" target="_blank" rel="noreferrer noopener">2.5 Templates</a>
+, and <a href="https://bookdown.org/yihui/blogdown/custom-layouts.html" target="_blank" rel="noreferrer noopener">2.6 Custom layouts</a>
+.</p>
 <p>As I said, a deeper knowledge of Hugo, CSS, and HTML is beyond the scope of this simple tutorial.</p>
 <p>Now, I assume that you have your local website read (you are satisfied with what you see in the browser now).</p>
 <p>Go to <code>Terminal</code>, press Ctrl+C to kill the web server. We&rsquo;ll learn how to put this site online.</p>
@@ -288,7 +305,8 @@ git push -u origin master
 </code></pre></div><p>Refresh your GitHub page, you should be able to see the changes.</p>
 <h1 id="netlify">Netlify</h1>
 <p>Now, we need to set up a Netlify account.</p>
-<p>Open the website of <a href="https://www.netlify.com/">Netlify</a>. If you don&rsquo;t have a Netlify accout yet, you need to Sign Up.</p>
+<p>Open the website of <a href="https://www.netlify.com/" target="_blank" rel="noreferrer noopener">Netlify</a>
+. If you don&rsquo;t have a Netlify accout yet, you need to Sign Up.</p>
 <p>Choose GitHub:</p>
 <figure>
     <img src="https://d33wubrfki0l68.cloudfront.net/0e9f9cefe968382536d4e4baa66e49945ad2694c/e20ef/images/hosting-and-deployment/hosting-on-netlify/netlify-signup.jpg"/> <figcaption>
@@ -315,7 +333,8 @@ git push -u origin master
         </figcaption>
 </figure>
 
-<p>NOTE: In the above, the 1st, 2nd, and 4th picture were from <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/">Host of Netlify</a>.</p>
+<p>NOTE: In the above, the 1st, 2nd, and 4th picture were from <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" target="_blank" rel="noreferrer noopener">Host of Netlify</a>
+.</p>
 <p>Choose Github:</p>
 <figure>
     <img src="/media/netlify/netlify-create-a-new-site-github.png"/> <figcaption>
@@ -329,7 +348,8 @@ git push -u origin master
     <img src="/media/enblog/deploy-setting.png"/> 
 </figure>
 
-<p>Be sure to use your own Hugo version here. Before we click &ldquo;Deploy site&rdquo;, we still need add a file into our <code>lithium</code> folder, as suggested in the tutorial of <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/">Host of Netlify</a> by Hugo.</p>
+<p>Be sure to use your own Hugo version here. Before we click &ldquo;Deploy site&rdquo;, we still need add a file into our <code>lithium</code> folder, as suggested in the tutorial of <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" target="_blank" rel="noreferrer noopener">Host of Netlify</a>
+ by Hugo.</p>
 <p>Open a text editor, copy and paste the following codes:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[build]
 publish = <span style="color:#ba2121">&#34;public&#34;</span>
@@ -381,7 +401,8 @@ git push
     <img src="/media/enblog/netlify-edit-site-name-02.png"/> 
 </figure>
 
-<p>Then the website url is changed to <a href="https://hugo-tutorial.netlify.app/">https://hugo-tutorial.netlify.app/</a>.</p>
+<p>Then the website url is changed to <a href="https://hugo-tutorial.netlify.app/" target="_blank" rel="noreferrer noopener">https://hugo-tutorial.netlify.app/</a>
+.</p>
 <h1 id="more-knowledge-about-hugo">More Knowledge about Hugo</h1>
 <h2 id="how-to-add-a-new-post">How to add a new post</h2>
 <p>Using codes like this:</p>
@@ -403,16 +424,20 @@ git commit -m <span style="color:#ba2121">&#34;</span><span style="color:#19177c
 git push
 </code></pre></div><p>Every time you want to upload new content, you can run <code>bash deploy.sh</code> at the root directory of your <code>lithium</code> folder. This will automate deployment. Wait for around 20 seconds, you&rsquo;ll be able to see the changes in your website. Yes, Hugo+GitHub+Netlify is this fast!</p>
 <h1 id="final-repo">Final Repo</h1>
-<p>If you encounter problems in the above steps, don&rsquo;t feel discouraged. You can check out the final <code>lithium</code> file here: <a href="https://github.com/hongtaoh/hugo-tutorial">https://github.com/hongtaoh/hugo-tutorial</a>.</p>
-<p>Of course you can <code>git clone</code> this repository. However, be sure to use <code>git remote remove origin</code> before you use <code>git init</code>, which was discussed at the end of <a href="https://hongtaoh.com/en/2020/06/05/get-started-with-hugo/#github">the section about Github</a> in this post.</p>
+<p>If you encounter problems in the above steps, don&rsquo;t feel discouraged. You can check out the final <code>lithium</code> file here: <a href="https://github.com/hongtaoh/hugo-tutorial" target="_blank" rel="noreferrer noopener">https://github.com/hongtaoh/hugo-tutorial</a>
+.</p>
+<p>Of course you can <code>git clone</code> this repository. However, be sure to use <code>git remote remove origin</code> before you use <code>git init</code>, which was discussed at the end of <a href="https://hongtaoh.com/en/2020/06/05/get-started-with-hugo/#github" target="_blank" rel="noreferrer noopener">the section about Github</a>
+ in this post.</p>
 <h1 id="whats-next">What&rsquo;s Next</h1>
 <p>As I said, this post is not intended to be a comprehensive guide to creating a complicated website using Hugo. To do that, you are expected to spend some, if not a lot of, time on studying Hugo, CSS, and HTML. If you have a lot of personal preferences, do expect a lot of frustrucation, especially if you are a programming newbie like me.</p>
-<p>Again, I recommend you to read the <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> book in detail if you want more custimization in your website building.</p>
+<p>Again, I recommend you to read the <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noreferrer noopener">blogdown</a>
+ book in detail if you want more custimization in your website building.</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>Source come from <a href="https://regisphilibert.com/blog/2019/01/from-wordpress-to-hugo-a-mindset-transition">Regis</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Source come from <a href="https://regisphilibert.com/blog/2019/01/from-wordpress-to-hugo-a-mindset-transition" target="_blank" rel="noreferrer noopener">Regis</a>
+. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
 <p>I spent at least 150 hours on creating my own website using Hugo, for your reference. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>

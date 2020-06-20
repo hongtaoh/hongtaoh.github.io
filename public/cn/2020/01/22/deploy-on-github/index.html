@@ -117,16 +117,23 @@ Table of Contents:
 
 <div class="body-text list-text">
 <p>正好自己要重新做一遍，我便在这里把步骤记录下来。</p>
-<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages">Hugo官网上的那篇教程</a> 有个问题是，你需要两个 Github 仓库，一个是 <code>YOUR-PROJECT&gt; (e.g. blog)</code>，另一个是 <code>&lt;USERNAME&gt;.github.io </code>。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 <code>public</code> 文件夹。</p>
-<p>这种设置的问题在于，你的博客更新的可能不仅仅是内容，掌管着网页格式的 <code>layout</code> 文件以及 <code>css</code> 文件也可能会更新。如果你需要让别人看到你的网页格式源代码，即，你的 <code>layout</code> 文件以及 <code>css</code> 文件，那么你每次更新的时候，不仅需要更新 <code>&lt;USERNAME&gt;.github.io </code>，还需要更新 <code>YOUR-PROJECT&gt; (e.g. blog)</code>。这一点，<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages">那篇教程</a> 也提到了：</p>
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages" target="_blank" rel="noreferrer noopener">Hugo官网上的那篇教程</a>
+ 有个问题是，你需要两个 Github 仓库，一个是 <code>YOUR-PROJECT&gt; (e.g. blog)</code>，另一个是 <code>&lt;USERNAME&gt;.github.io </code>。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 <code>public</code> 文件夹。</p>
+<p>这种设置的问题在于，你的博客更新的可能不仅仅是内容，掌管着网页格式的 <code>layout</code> 文件以及 <code>css</code> 文件也可能会更新。如果你需要让别人看到你的网页格式源代码，即，你的 <code>layout</code> 文件以及 <code>css</code> 文件，那么你每次更新的时候，不仅需要更新 <code>&lt;USERNAME&gt;.github.io </code>，还需要更新 <code>YOUR-PROJECT&gt; (e.g. blog)</code>。这一点，<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages" target="_blank" rel="noreferrer noopener">那篇教程</a>
+ 也提到了：</p>
 <blockquote>
 <p>You can then run ./deploy.sh &ldquo;Your optional commit message&rdquo; to send changes to <USERNAME>.github.io. Note that you likely will want to commit changes to your <YOUR-PROJECT> repository as well.</p>
 </blockquote>
-<p>我在 <a href="https://amber.rbind.io/">Amber Thomas</a> 的 <a href="https://amber.rbind.io/2016/12/19/website/">这篇帖子</a> 找到了解决办法：在 <code>&lt;USERNAME&gt;.github.io </code> 仓库中建两个分支 (brance): sources 和 master。其中 sources 放 Hugo 文件夹所有内容，master 只放 <code>public</code> 文件夹内容。</p>
-<p>Amber 帖子中提到的方法是由 <a href="https://www.hjdskes.nl/blog/deploying-hugo-on-personal-gh-pages/index.html">Jente Hidskes</a> 首次提出来的，Jente 之后对他原本的方法作出了<a href="https://www.hjdskes.nl/blog/update-deploying-hugo-on-personal-gh-pages/index.html">更新</a>。以下的教程参考全程参考这三篇帖子，也参考 Hugo 那篇教程。</p>
+<p>我在 <a href="https://amber.rbind.io/" target="_blank" rel="noreferrer noopener">Amber Thomas</a>
+ 的 <a href="https://amber.rbind.io/2016/12/19/website/" target="_blank" rel="noreferrer noopener">这篇帖子</a>
+ 找到了解决办法：在 <code>&lt;USERNAME&gt;.github.io </code> 仓库中建两个分支 (brance): sources 和 master。其中 sources 放 Hugo 文件夹所有内容，master 只放 <code>public</code> 文件夹内容。</p>
+<p>Amber 帖子中提到的方法是由 <a href="https://www.hjdskes.nl/blog/deploying-hugo-on-personal-gh-pages/index.html" target="_blank" rel="noreferrer noopener">Jente Hidskes</a>
+ 首次提出来的，Jente 之后对他原本的方法作出了<a href="https://www.hjdskes.nl/blog/update-deploying-hugo-on-personal-gh-pages/index.html" target="_blank" rel="noreferrer noopener">更新</a>
+。以下的教程参考全程参考这三篇帖子，也参考 Hugo 那篇教程。</p>
 <p>⚠ 以下内容以苹果电脑为例子，使用 Windows 的朋友可以作为参考，但我不保证结果正确。</p>
 <h1 id="新建-usernamegithubio--仓库并将本地仓库上传">新建 <code>&lt;USERNAME&gt;.github.io </code> 仓库并将本地仓库上传</h1>
-<p>首先，我假设你已经用了一个本地 Hugo 文件夹，网站建设已经基本完成，运行 <code>hugo server -D</code>，打开 <a href="http://localhost:1313">http://localhost:1313</a> 后网页显示一切正常。如果这些还没弄好，请先把网站在本地建设好之后再考虑部署到网上。</p>
+<p>首先，我假设你已经用了一个本地 Hugo 文件夹，网站建设已经基本完成，运行 <code>hugo server -D</code>，打开 <a href="http://localhost:1313" target="_blank" rel="noreferrer noopener">http://localhost:1313</a>
+ 后网页显示一切正常。如果这些还没弄好，请先把网站在本地建设好之后再考虑部署到网上。</p>
 <p>注意⚠：</p>
 <ul>
 <li>在进行下面的步骤之前，你最好先把 hugo 文件夹中的 <code>public</code> 和 <code>resources</code>这两个文件夹删除。如果你里面有 README.md 的话，请先拿出来。</li>
@@ -220,7 +227,8 @@ git subtree pull --prefix<span style="color:#666">=</span>public <span style="co
 </code></pre></div><p>如果 Terminal 中出现 <code>fatal: refusing to merge unrelated histories</code> 这样的错误，请接着在 Terminal 中输入：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git subtree pull --prefix<span style="color:#666">=</span>public <span style="color:#b62;font-weight:bold">\
 </span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master --squash
-</code></pre></div><p>这个方法是在 <a href="https://hisoka0917.github.io/git/2018/04/23/add-exist-repo-as-subtree/">Hisoka Blog</a> 看到的。感谢原作者。</p>
+</code></pre></div><p>这个方法是在 <a href="https://hisoka0917.github.io/git/2018/04/23/add-exist-repo-as-subtree/" target="_blank" rel="noreferrer noopener">Hisoka Blog</a>
+ 看到的。感谢原作者。</p>
 <p>随后，在 Terminal 中输入</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
 </code></pre></div><p>我输入完之后 Terminal 出现如下内容：</p>
@@ -293,12 +301,16 @@ git subtree push --prefix<span style="color:#666">=</span>public <span style="co
 
 <p>点开链接，就能看到自己的网站了。</p>
 <h1 id="日常更新">日常更新</h1>
-<p>打开一个文本编辑器，比如 <a href="https://www.typora.io/">Typora</a>，<a href="https://www.cnblogs.com/wind128/p/4409422.html">Sublime Text</a> 等。新建一个名为 deploy.sh 的文档，把上面刚刚运行的复制进去。</p>
+<p>打开一个文本编辑器，比如 <a href="https://www.typora.io/" target="_blank" rel="noreferrer noopener">Typora</a>
+，<a href="https://www.cnblogs.com/wind128/p/4409422.html" target="_blank" rel="noreferrer noopener">Sublime Text</a>
+ 等。新建一个名为 deploy.sh 的文档，把上面刚刚运行的复制进去。</p>
 <p>每次更新的时候，只需要在 Terminal 中输入以下代码即可：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bash deploy.sh
 </code></pre></div><h1 id="自定义域名">自定义域名</h1>
-<p>这部分其实很容易。我的域名是在 <a href="https://www.namecheap.com/">Namecheap</a> 买的。其他地方在设置上应该差不多。这里我就以 Namecheap 举例。</p>
-<p>其实，Namecheap 自己已经给出了 <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages">解决方法</a>。</p>
+<p>这部分其实很容易。我的域名是在 <a href="https://www.namecheap.com/" target="_blank" rel="noreferrer noopener">Namecheap</a>
+ 买的。其他地方在设置上应该差不多。这里我就以 Namecheap 举例。</p>
+<p>其实，Namecheap 自己已经给出了 <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages" target="_blank" rel="noreferrer noopener">解决方法</a>
+。</p>
 <p>按照上面的方法，你在买完域名后，到 Manage 页面里的 Advanced DNS。首先把网站自动加的那两个 Record 删除，在 Namecheap, 网站自动加了 CNAME Record 和 URL Redirect Record, 把这两个先删除。随后，点击 &ldquo;Add New Record&rdquo;，新加四个 A Record, 这四个 Record 的 Host 填 @ , value 分别填下面四个：</p>
 <ul>
 <li>185.199.108.153</li>
@@ -315,7 +327,8 @@ git subtree push --prefix<span style="color:#666">=</span>public <span style="co
 </figure>
 
 <p>这些设置好之后，我们需要让 Github 知道我们想把 <code>https://&lt;username&gt;.github.io</code> 这个网址转到 我们自己买的域名。怎么告诉呢？</p>
-<p>Github 的 <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">官方指南</a> 给出了方法。到 <code>&lt;username&gt;/&lt;username&gt;.github.io</code> 这个仓库，找到 Settings, 然后在 GitHub Pages 中的 Custom domain 这里填入我们自己的域名即可。</p>
+<p>Github 的 <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site" target="_blank" rel="noreferrer noopener">官方指南</a>
+ 给出了方法。到 <code>&lt;username&gt;/&lt;username&gt;.github.io</code> 这个仓库，找到 Settings, 然后在 GitHub Pages 中的 Custom domain 这里填入我们自己的域名即可。</p>
 <figure>
     <img src="https://help.github.com/assets/images/help/pages/save-custom-domain.png"/> <figcaption>
             <h4>图片来源：GitHub</h4>

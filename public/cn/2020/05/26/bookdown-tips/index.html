@@ -122,11 +122,15 @@ Table of Contents:
 
 
 <div class="body-text list-text">
-<p>最近的一周一直在调试 <a href="https://github.com/rstudio/bookdown">Bookdown</a>。其实，Bookdown 本身并不难，<a href="https://yihui.org/">益辉大神</a> 在他的那本 <a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a> 已经介绍的非常清楚。我一直在调试的、也是我一直不会的主要集中在 PDF 的样式上，比如：</p>
+<p>最近的一周一直在调试 <a href="https://github.com/rstudio/bookdown" target="_blank" rel="noreferrer noopener">Bookdown</a>
+。其实，Bookdown 本身并不难，<a href="https://yihui.org/" target="_blank" rel="noreferrer noopener">益辉大神</a>
+ 在他的那本 <a href="https://bookdown.org/yihui/bookdown/" target="_blank" rel="noreferrer noopener">bookdown: Authoring Books and Technical Documents with R Markdown</a>
+ 已经介绍的非常清楚。我一直在调试的、也是我一直不会的主要集中在 PDF 的样式上，比如：</p>
 <ol>
 <li>PDF 中的 &ldquo;Chapter 1&rdquo; 如何改成「第一章」？</li>
 </ol>
-<p>HTML 上改的话比较容易。如果你也是用的 <a href="https://github.com/rstudio/bookdown-demo">bookdown-demo</a> 来开始的话，那么在根目录下找到 <code>_bookdown.yml</code> 这个文档，然后把 <code>chapter_name: &quot;Chapter &quot;</code> 改成 <code>chapter_name: [&quot;第 &quot;, &quot; 章&quot;]</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 就好了。</p>
+<p>HTML 上改的话比较容易。如果你也是用的 <a href="https://github.com/rstudio/bookdown-demo" target="_blank" rel="noreferrer noopener">bookdown-demo</a>
+ 来开始的话，那么在根目录下找到 <code>_bookdown.yml</code> 这个文档，然后把 <code>chapter_name: &quot;Chapter &quot;</code> 改成 <code>chapter_name: [&quot;第 &quot;, &quot; 章&quot;]</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 就好了。</p>
 <p>注意，这里标点是英文的。汉子和第二个英文引号之间有一个英文空格，是为了让版面更漂亮一些。不加空格的话，就是 「第N章」，加上空格就是「第 N 章」，所以还是加上吧。</p>
 <p>但是，PDF 中还是显示 「Chapter N」。我知道肯定能改，但我感觉比较困难，所以就放弃了。虽然可能只是在 <code>preamble.tex</code> 里加一行代码的事，但我可能要花几天的时间才能知道那行代码是啥。果断放弃。</p>
 <ol start="2">
@@ -141,8 +145,11 @@ Table of Contents:
 </li>
 </ol>
 <p>等等。</p>
-<p>我知道是我要求太苛刻了。Bookdown 原本主要是为网页版书籍准备的，而非 PDF 版。因此，<a href="https://bookdown.org/">Bookdown 官网</a> 上摆出的那些书籍中，有一些根本就没有把 PDF 版放上去。</p>
-<p>不过，随后找到了 由黄湘云、叶飞两位在 <a href="https://github.com/ElegantLaTeX/ElegantBook">ElegantBook</a> 基础上制作的 <a href="https://github.com/XiangyunHuang/ElegantBookdown">ElegantBookdown</a>。实在是帮到我好多。</p>
+<p>我知道是我要求太苛刻了。Bookdown 原本主要是为网页版书籍准备的，而非 PDF 版。因此，<a href="https://bookdown.org/" target="_blank" rel="noreferrer noopener">Bookdown 官网</a>
+ 上摆出的那些书籍中，有一些根本就没有把 PDF 版放上去。</p>
+<p>不过，随后找到了 由黄湘云、叶飞两位在 <a href="https://github.com/ElegantLaTeX/ElegantBook" target="_blank" rel="noreferrer noopener">ElegantBook</a>
+ 基础上制作的 <a href="https://github.com/XiangyunHuang/ElegantBookdown" target="_blank" rel="noreferrer noopener">ElegantBookdown</a>
+。实在是帮到我好多。</p>
 <p>有了 ElegantBookdown 的模版，事情就轻松多了。不过我还是为一些小问题伤透了脑筋，下面主要是介绍一下我使用 ElegantBookdown 的心得。</p>
 <h1 id="indexrmd-哪些能改哪些不能改"><code>index.Rmd</code> 哪些能改哪些不能改？</h1>
 <p>ElegantBookdown 中，<code>index.Rmd</code> 最不好修改。其他几个都只有内容，但 <code>index.Rmd</code> 中有很多参数设置。</p>
@@ -172,11 +179,13 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
  <span style="color:#666">-</span> packages.bib
 </code></pre></div><p>没什么问题。</p>
 <p>如果你没有表格、图，或者不想在 PDF 中放这些，可以直接把 <code>lot</code>, <code>lof</code> 后的 <code>yes</code> 去掉。</p>
-<p>根据谢益辉的 <a href="https://bookdown.org/yihui/bookdown/publishers.html">说明</a>, 这里 lot 表示 List of Tables, lof 表示 List of Figures.</p>
+<p>根据谢益辉的 <a href="https://bookdown.org/yihui/bookdown/publishers.html" target="_blank" rel="noreferrer noopener">说明</a>
+, 这里 lot 表示 List of Tables, lof 表示 List of Figures.</p>
 <p>其他内容根据自己的情况修改就好，至少在 HTML 和 PDF 版中没有太大影响。最末尾的 epub 内容，如果你会体会 epub 格式的文档，最好还是修改一下。</p>
 <p><code>index.Rmd</code> 修改这部分我就讲到这里。</p>
 <h1 id="pdf-的中文字体怎么改">PDF 的中文字体怎么改？</h1>
-<p>在不修改 <code>ElegantBookdown</code> <a href="https://github.com/XiangyunHuang/ElegantBookdown">愿文档</a> 中的 <code>preamble.tex</code> 的情况下，我直接点 Rstudio 中的 <code>Build Book</code>，结果显示错误，大意是说找不到 Adobe Song Std 和其他 Adobe 字体。</p>
+<p>在不修改 <code>ElegantBookdown</code> <a href="https://github.com/XiangyunHuang/ElegantBookdown" target="_blank" rel="noreferrer noopener">愿文档</a>
+ 中的 <code>preamble.tex</code> 的情况下，我直接点 Rstudio 中的 <code>Build Book</code>，结果显示错误，大意是说找不到 Adobe Song Std 和其他 Adobe 字体。</p>
 <p>我用的是 Macbook Air。如果你也是，那么解决方法很简单，只需要把 Adobe 字体替换成相应的苹果电脑自带字体就好，</p>
 <table>
 <thead>
@@ -214,35 +223,54 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
 \setCJKfamilyfont{zhhei}{Adobe Heiti Std} 
 \setCJKfamilyfont{zhkai}{Adobe Kaiti Std} 
 \setCJKfamilyfont{zhfs}{Adobe Fangsong Std}
-</code></pre></div><p>你当然也可以去 <a href="https://github.com/adobe-fonts">Adobe Fonts 的Github 官网</a> 下载<a href="https://github.com/adobe-fonts/source-han-serif/tree/release">思源宋体</a> 和 <a href="https://github.com/adobe-fonts/source-han-sans/tree/release">思源黑体</a>。然后按上面的方法替换。不过没有太大的区别。</p>
+</code></pre></div><p>你当然也可以去 <a href="https://github.com/adobe-fonts" target="_blank" rel="noreferrer noopener">Adobe Fonts 的Github 官网</a>
+ 下载<a href="https://github.com/adobe-fonts/source-han-serif/tree/release" target="_blank" rel="noreferrer noopener">思源宋体</a>
+ 和 <a href="https://github.com/adobe-fonts/source-han-sans/tree/release" target="_blank" rel="noreferrer noopener">思源黑体</a>
+。然后按上面的方法替换。不过没有太大的区别。</p>
 <h1 id="pdf-中中文引语的字体怎么改成和不一样的字体">PDF 中，中文引语的字体怎么改成和不一样的字体？</h1>
 <p>很简单，如果上面的关于字体的代码你都没有删除的话，只需要加两行代码：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#008000;font-weight:bold">\usepackage</span><span style="color:#008000">{</span>csquotes<span style="color:#008000">}</span>
 <span style="color:#008000;font-weight:bold">\AtBeginEnvironment</span><span style="color:#008000">{</span>quote<span style="color:#008000">}{</span><span style="color:#008000;font-weight:bold">\CJKfamily</span><span style="color:#008000">{</span>zhkai<span style="color:#008000">}}</span>
 </code></pre></div><p>我是把引语改成了楷体，你当然可以改成别的你喜欢的字体。</p>
 <p>真的是「一行代码千行泪」啊。为了这两行代码我苦苦找了很久。</p>
-<p>这个解决方法是我在 Stackoverflow 的 <a href="https://tex.stackexchange.com/a/288556">这个回答</a> 中看到的。谢谢回答者 <a href="https://tex.stackexchange.com/users/586/torbj%c3%b8rn-t">Torbjørn T</a>.</p>
+<p>这个解决方法是我在 Stackoverflow 的 <a href="https://tex.stackexchange.com/a/288556" target="_blank" rel="noreferrer noopener">这个回答</a>
+ 中看到的。谢谢回答者 <a href="https://tex.stackexchange.com/users/586/torbj%c3%b8rn-t" target="_blank" rel="noreferrer noopener">Torbjørn T</a>
+.</p>
 <h1 id="pdf-中正文字体的字号怎么改">PDF 中正文字体的字号怎么改？</h1>
 <p>也很简单：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#008000;font-weight:bold">\setCJKmainfont</span><span style="color:#7d9029">[Scale=1.5]</span><span style="color:#008000">{</span>STSong<span style="color:#008000">}</span>
-</code></pre></div><p>这个解决方法是我在 Stackoverflow 的 <a href="https://tex.stackexchange.com/questions/258434/changing-chinese-font-size">这个回答</a> 中看到的。谢谢回答者 <a href="https://tex.stackexchange.com/users/92107/zelphir-kaltstahl">Zelphir Kaltstahl</a>.</p>
+</code></pre></div><p>这个解决方法是我在 Stackoverflow 的 <a href="https://tex.stackexchange.com/questions/258434/changing-chinese-font-size" target="_blank" rel="noreferrer noopener">这个回答</a>
+ 中看到的。谢谢回答者 <a href="https://tex.stackexchange.com/users/92107/zelphir-kaltstahl" target="_blank" rel="noreferrer noopener">Zelphir Kaltstahl</a>
+.</p>
 <h2 id="有个问题是那引用部分的字号怎么改">有个问题是，那引用部分的字号怎么改？</h2>
 <p>用上面的方法似乎不管用了。不过，可以用这个方法：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#008000;font-weight:bold">\AtBeginEnvironment</span><span style="color:#008000">{</span>quote<span style="color:#008000">}{</span><span style="color:#008000;font-weight:bold">\CJKfamily</span><span style="color:#008000">{</span>zhkai<span style="color:#008000">}</span><span style="color:#008000;font-weight:bold">\large</span><span style="color:#008000">}</span>
-</code></pre></div><p>Latex 的十种字体大小使用方法请看<a href="https://www.sascha-frank.com/latex-font-size.html">这里</a>。</p>
+</code></pre></div><p>Latex 的十种字体大小使用方法请看<a href="https://www.sascha-frank.com/latex-font-size.html" target="_blank" rel="noreferrer noopener">这里</a>
+。</p>
 <h1 id="pdf-中的行间距怎么调整">PDF 中的行间距怎么调整？</h1>
-<p>一开始，试着用 <a href="https://texblog.org/2011/09/30/quick-note-on-line-spacing/">texblog</a> 上一篇 <a href="https://texblog.org/2011/09/30/quick-note-on-line-spacing/">Quick note on line spacing</a> 提到的方法，但是不行。</p>
-<p>后来看到了 名为 <a href="https://liam.page/">始终</a> 的博主专门介绍行距的 <a href="https://liam.page/2013/10/17/LaTeX-Linespace/">这篇帖子</a>。他已经提到了正确的方法，但比较隐蔽，还是不会用。</p>
-<p>后来终于在 <a href="http://blog.sina.com.cn/s/blog_5e16f1770100ns4r.html">这篇帖子</a> 中找到了方法：</p>
+<p>一开始，试着用 <a href="https://texblog.org/2011/09/30/quick-note-on-line-spacing/" target="_blank" rel="noreferrer noopener">texblog</a>
+ 上一篇 <a href="https://texblog.org/2011/09/30/quick-note-on-line-spacing/" target="_blank" rel="noreferrer noopener">Quick note on line spacing</a>
+ 提到的方法，但是不行。</p>
+<p>后来看到了 名为 <a href="https://liam.page/" target="_blank" rel="noreferrer noopener">始终</a>
+ 的博主专门介绍行距的 <a href="https://liam.page/2013/10/17/LaTeX-Linespace/" target="_blank" rel="noreferrer noopener">这篇帖子</a>
+。他已经提到了正确的方法，但比较隐蔽，还是不会用。</p>
+<p>后来终于在 <a href="http://blog.sina.com.cn/s/blog_5e16f1770100ns4r.html" target="_blank" rel="noreferrer noopener">这篇帖子</a>
+ 中找到了方法：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#008000;font-weight:bold">\renewcommand</span><span style="color:#008000">{</span><span style="color:#008000;font-weight:bold">\baselinestretch</span><span style="color:#008000">}{</span>1.5<span style="color:#008000">}</span> <span style="color:#408080;font-style:italic">% 行间距
 </span></code></pre></div><h1 id="pdf-中的字间距怎么调整">PDF 中的字间距怎么调整？</h1>
-<p>上面 <a href="http://blog.sina.com.cn/s/blog_5e16f1770100ns4r.html">那篇</a> 帖子提到的 <code>\renewcommand{\CJKglue}{\hskip 1pt plus 0.08\baselineskip}</code> 这个办法我试了不管用。</p>
-<p>不过后来在 <a href="http://math.ecnu.edu.cn/~jypan/intro_c.html?language=1&amp;id=95">潘建瑜</a> 老师的 <a href="http://math.ecnu.edu.cn/~jypan/Latex/lect/lect05CTeX.pdf">一篇 CTeX 介绍 PPT</a> 中找到了方法：</p>
+<p>上面 <a href="http://blog.sina.com.cn/s/blog_5e16f1770100ns4r.html" target="_blank" rel="noreferrer noopener">那篇</a>
+ 帖子提到的 <code>\renewcommand{\CJKglue}{\hskip 1pt plus 0.08\baselineskip}</code> 这个办法我试了不管用。</p>
+<p>不过后来在 <a href="http://math.ecnu.edu.cn/~jypan/intro_c.html?language=1&amp;id=95" target="_blank" rel="noreferrer noopener">潘建瑜</a>
+ 老师的 <a href="http://math.ecnu.edu.cn/~jypan/Latex/lect/lect05CTeX.pdf" target="_blank" rel="noreferrer noopener">一篇 CTeX 介绍 PPT</a>
+ 中找到了方法：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#008000;font-weight:bold">\ziju</span><span style="color:#008000">{</span>1.0<span style="color:#008000">}</span>
-</code></pre></div><p>其实，这个答案在 <a href="http://m.newsmth.net/article/TeX/321611">这里</a> 已经有了，但是那位答主并没有说清楚 <code>\ziju</code> 这个命令具体怎么用，所以我错过了。</p>
+</code></pre></div><p>其实，这个答案在 <a href="http://m.newsmth.net/article/TeX/321611" target="_blank" rel="noreferrer noopener">这里</a>
+ 已经有了，但是那位答主并没有说清楚 <code>\ziju</code> 这个命令具体怎么用，所以我错过了。</p>
 <h1 id="如何修改-html-output-中正文的字号">如何修改 HTML Output 中正文的字号？</h1>
-<p><a href="https://stackoverflow.com/questions/40215141/bookdown-how-can-i-change-the-size-of-the-chapter-titles">这里</a> 提到了如何修改标题的字号，但是并没有提到如何修改正文的字号。</p>
-<p>我后来在 <a href="https://github.com/rstudio/bookdown/issues/846">这个 GitHub Issue</a> 的问题中找到了解决方法：在 Bookdown 文件夹的根目录下的 <code>style.css</code> 中，加入如下代码：</p>
+<p><a href="https://stackoverflow.com/questions/40215141/bookdown-how-can-i-change-the-size-of-the-chapter-titles" target="_blank" rel="noreferrer noopener">这里</a>
+ 提到了如何修改标题的字号，但是并没有提到如何修改正文的字号。</p>
+<p>我后来在 <a href="https://github.com/rstudio/bookdown/issues/846" target="_blank" rel="noreferrer noopener">这个 GitHub Issue</a>
+ 的问题中找到了解决方法：在 Bookdown 文件夹的根目录下的 <code>style.css</code> 中，加入如下代码：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#008000;font-weight:bold">p</span>{
   <span style="color:#008000;font-weight:bold">font-size</span>: <span style="color:#666">12</span><span style="color:#b00040">pt</span>; <span style="">/*</span> <span style="">或者其他字号，根据自己的情况来改</span>
 }
@@ -259,19 +287,26 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
 <p>有几个非常哈的 Latex 资料。其实，处理中文，主要用到 <code>CTeX</code> 和 <code>xeCJK</code> 这两个包。</p>
 <ol>
 <li>
-<p><a href="http://mirrors.ibiblio.org/CTAN/language/chinese/ctex/ctex.pdf">CTeX 宏集手册 2020年版</a>；</p>
+<p><a href="http://mirrors.ibiblio.org/CTAN/language/chinese/ctex/ctex.pdf" target="_blank" rel="noreferrer noopener">CTeX 宏集手册 2020年版</a>
+；</p>
 </li>
 <li>
-<p><a href="http://mirrors.ibiblio.org/CTAN/macros/xetex/latex/xecjk/xeCJK.pdf">xeCJK 宏包文档 2020年版</a>；</p>
+<p><a href="http://mirrors.ibiblio.org/CTAN/macros/xetex/latex/xecjk/xeCJK.pdf" target="_blank" rel="noreferrer noopener">xeCJK 宏包文档 2020年版</a>
+；</p>
 </li>
 </ol>
-<p>如果你是想快速学一下 LaTeX, 可以看看 <a href="http://static.latexstudio.net/wp-content/uploads/2017/08/Note-by-LaTeX-cn.pdf">《简单粗暴 LaTeX》</a>。最新版请关注该项目的 <a href="https://github.com/wklchris/Note-by-LaTeX">GigHub Repo</a>。</p>
-<p>如果你需要用到很多 LaTeX, 可以考虑在线版的 <a href="https://www.overleaf.com/">Overleaf</a>，可以省却很多自己下载超大的 TeX 的麻烦。如果你只是在 R 中偶尔用，那么谢益辉的 <a href="https://yihui.org/tinytex/">TinyTex</a> 就够用了。</p>
+<p>如果你是想快速学一下 LaTeX, 可以看看 <a href="http://static.latexstudio.net/wp-content/uploads/2017/08/Note-by-LaTeX-cn.pdf" target="_blank" rel="noreferrer noopener">《简单粗暴 LaTeX》</a>
+。最新版请关注该项目的 <a href="https://github.com/wklchris/Note-by-LaTeX" target="_blank" rel="noreferrer noopener">GigHub Repo</a>
+。</p>
+<p>如果你需要用到很多 LaTeX, 可以考虑在线版的 <a href="https://www.overleaf.com/" target="_blank" rel="noreferrer noopener">Overleaf</a>
+，可以省却很多自己下载超大的 TeX 的麻烦。如果你只是在 R 中偶尔用，那么谢益辉的 <a href="https://yihui.org/tinytex/" target="_blank" rel="noreferrer noopener">TinyTex</a>
+ 就够用了。</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>这行代码来自 <a href="https://github.com/XiangyunHuang/ElegantBookdown">ElegantBookdown</a>。在此表示感谢黄湘云、叶飞两位作者。 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>这行代码来自 <a href="https://github.com/XiangyunHuang/ElegantBookdown" target="_blank" rel="noreferrer noopener">ElegantBookdown</a>
+。在此表示感谢黄湘云、叶飞两位作者。 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
 <p>也有可能是 「已有 Block {#theorem-block}」这个板块中必须要留一个，只是因为我的删除顺序，才出现只有第一段代码必须保留的情况。这个我就不去重新试验了，读者有空可以自己试试。 <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
