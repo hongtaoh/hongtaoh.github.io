@@ -16,9 +16,9 @@
       <pubDate>Sat, 20 Jun 2020 10:15:27 -0400</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/06/20/blocking-cutestat/</guid>
-      <description>CuteStat can be really annoying. When I first built my website, and search my name in Google, the mydomain.cutestat.com appeared on top of the resarch restults and it&amp;rsquo;s so ugly.
+      <description>CuteStat can be really annoying. When I first built my website, and searched my name in Google, mydomain.cutestat.com appeared on top of the resarch restults and it&amp;rsquo;s so ugly!
 How can we block CuteStat from crawliing our websites?
-A very direct way to do this is to go to the bottom of CuteStat , and open Update or Remove .
+A direct way to do this is to go to the bottom of CuteStat , and open Update or Remove .
 CuteStat asked us to add a robots.txt file in our website with the following codes:</description>
     </item>
     

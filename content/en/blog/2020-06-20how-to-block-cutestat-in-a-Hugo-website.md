@@ -1,17 +1,17 @@
 ---
 title: How to Block Cutestat in a Hugo Website
 date: 2020-06-20T10:15:27-04:00
-author: Hongtao
+author: Hongtao Hao
 slug: blocking-cutestat
 draft: false
 toc: false
 ---
 
-[CuteStat](https://www.cutestat.com/) can be really annoying. When I first built my website, and search my name in Google, the `mydomain.cutestat.com` appeared on top of the resarch restults and it's so ugly. 
+[CuteStat](https://www.cutestat.com/) can be really annoying. When I first built my website, and searched my name in Google, `mydomain.cutestat.com` appeared on top of the resarch restults and it's so ugly!
 
 How can we block CuteStat from crawliing our websites?
 
-A very direct way to do this is to go to the bottom of [CuteStat](https://www.cutestat.com/), and open [Update or Remove](https://www.cutestat.com/remove).
+A direct way to do this is to go to the bottom of [CuteStat](https://www.cutestat.com/), and open [Update or Remove](https://www.cutestat.com/remove).
 
 CuteStat asked us to add a `robots.txt` file in our website with the following codes:
 
