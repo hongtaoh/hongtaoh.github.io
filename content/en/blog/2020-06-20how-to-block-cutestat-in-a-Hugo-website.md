@@ -4,10 +4,10 @@ date: 2020-06-20T10:15:27-04:00
 author: Hongtao Hao
 slug: blocking-cutestat
 draft: false
-toc: false
+toc: true
 ---
 
-[CuteStat](https://www.cutestat.com/) can be really annoying. When I first built my website, and searched my name in Google, `mydomain.cutestat.com` appeared on top of the resarch restults and it's so ugly!
+[CuteStat](https://www.cutestat.com/) can be really annoying. When I first built my website, and searched my name in Google, `mydomain.cutestat.com` appeared on top of the resarch restults and it was so ugly!
 
 How can we block CuteStat from crawliing our websites?
 
@@ -41,7 +41,7 @@ Disallow: /
 
 When it's done, put it as `/layouts/robots.txt` or `/themes/<THEME>/layouts/robots.txt`, as Hugo's [official guideline](https://gohugo.io/templates/robots/#robotstxt-template-lookup-order) suggests. 
 
-# Remove Data on CuteStat
+# Removing Data on CuteStat
 
 Then, go back to CuteStat's [Update or Remove](https://www.cutestat.com/remove), input your domain name and chose "Remove Information". CuteStats now won't be able to crawl your website anymore. 
 
@@ -49,4 +49,4 @@ Hope it works.
 
 
 
-[^1]: I assumed that your config file is in `toml`. 
+[^1]: I assumed that your config file is  `toml` file. 
