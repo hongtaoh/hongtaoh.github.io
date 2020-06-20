@@ -101,9 +101,12 @@
 
 <div class="body-text list-text">
 <p>I saw this quesiton on <a href="https://discourse.gohugo.io/t/how-to-implement-edit-this-page-on-github/1166" target="_blank" rel="noreferrer noopener">this thread</a>
+
  but the answer by <a href="https://discourse.gohugo.io/t/how-to-implement-edit-this-page-on-github/1166/2" target="_blank" rel="noreferrer noopener">bep</a>
+
  did not solve the problem.</p>
 <p>The solution can be found in Yihui Xie&rsquo;s book of <a href="https://bookdown.org/yihui/blogdown/templates.html#how-to" target="_blank" rel="noreferrer noopener">Blogdown</a>
+
 .</p>
 <p>However, when I tried this this block of codes recommended by Yihui, I still couldn&rsquo;t implement this function of editing on GitHub:</p>
 <pre><code>{{ with .File.Path }}
@@ -113,7 +116,9 @@
 <p>The key trick is that you need to add <code>{{ $.Scratch.Set &quot;FilePath&quot; .File.Path }}</code> to the codes above.</p>
 <p>I&rsquo;ll summarize the solution here.</p>
 <p>First of all, go to the GitHub repo of your website and open a post. For example, for me, I will go to <a href="https://github.com/hongtaoh/hongtaoh.github.io/tree/sources/content/en/blog" target="_blank" rel="noreferrer noopener">this page</a>
+
  and open a post (it does not matter which post you choose to open). For example, I&rsquo;ll open <a href="https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/content/en/blog/2020-06-14-terminal-command-basics.md" target="_blank" rel="noreferrer noopener">this post</a>
+
 .</p>
 <p>Then, on top of this post, you can see this:</p>
 <figure>
@@ -131,6 +136,7 @@ GithubEdit = <span style="color:#ba2121">&#34;https://github.com/USER/REPO/edit/
 </code></pre></div><p><strong>The above is just an example. You should use your own USER and REPO name.</strong></p>
 <p>Also, the code above might be dependent on your <code>permalinks</code> setting in your <code>config.toml</code>.</p>
 <p>Here, please note that there might be replication in urls. For example, in <a href="https://github.com/hongtaoh/guoxinban" target="_blank" rel="noreferrer noopener">this project</a>
+
 , I have this:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[permalinks]
 post = <span style="color:#ba2121">&#34;/:year/:month/:day/:filename/&#34;</span>
@@ -148,16 +154,23 @@ post = <span style="color:#ba2121">&#34;/:year/:month/:day/:filename/&#34;</span
             {{ end }}
 &lt;/<span style="color:#008000;font-weight:bold">span</span>&gt;
 </code></pre></div><p>If you are not sure where to add this block of these codes, study these three websites and their GitHub repos closely by yourself: <a href="https://github.com/rbind/blogdown-demo" target="_blank" rel="noreferrer noopener">Blogdown-repo</a>
+
 , <a href="https://github.com/hongtaoh/hongtaoh.github.io" target="_blank" rel="noreferrer noopener">my personal website</a>
+
 , and <a href="https://github.com/hongtaoh/guoxinban" target="_blank" rel="noreferrer noopener">RUC International Journalism</a>
+
 .</p>
 <p>If you want to customize the style of the words of &ldquo;Edit this page on Github&rdquo;, you can use this in the above codes:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#7d9029">href</span><span style="color:#666">=</span><span style="color:#ba2121">&#39;{{ . }}{{ $.Scratch.Get &#34;FilePath&#34; }}&#39;</span> <span style="color:#7d9029">class</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;btn&#34;</span>&gt;Edit this page on GitHub&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;
 </code></pre></div><p>A good example is the style on <a href="https://blogdown-demo.rbind.io/" target="_blank" rel="noreferrer noopener">Blogdown-demo</a>
+
 . <a href="https://github.com/rbind/blogdown-demo/blob/master/static/css/custom.css" target="_blank" rel="noreferrer noopener">Here</a>
+
  is the CSS of this style.</p>
 <p>If you want to use a icon rather than the words of &ldquo;Edit this page on Github&rdquo;, study <a href="https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/themes/hugo-xmin/layouts/_default/single.html" target="_blank" rel="noreferrer noopener">my setting</a>
+
 , or that on <a href="https://github.com/rbind/daijiang/blob/master/layouts/partials/article_meta.html" target="_blank" rel="noreferrer noopener">Daijiang Li&rsquo;s personal website</a>
+
 .</p>
 <ol start="2">
 <li>If your website also contains <code>.Rmd</code> file:</li>
@@ -180,6 +193,7 @@ post = <span style="color:#ba2121">&#34;/:year/:month/:day/:filename/&#34;</span
 &lt;/<span style="color:#008000;font-weight:bold">span</span>&gt;
 </code></pre></div><p>In fact, no matter whether your website contains <code>.Rmd</code> files, you can use the above codes anyway&hellip;</p>
 <p>You can also refer to <a href="https://github.com/hongtaoh/hugo-tutorial" target="_blank" rel="noreferrer noopener">this repo</a>
+
 .</p>
 <p>Many thanks to Yihui&rsquo;s contributions.</p>
 <section class="footnotes" role="doc-endnotes">
@@ -187,6 +201,7 @@ post = <span style="color:#ba2121">&#34;/:year/:month/:day/:filename/&#34;</span
 <ol>
 <li id="fn:1" role="doc-endnote">
 <p>This comes from Yihui&rsquo;s <a href="https://bookdown.org/yihui/blogdown/templates.html#how-to" target="_blank" rel="noreferrer noopener">Blogdown book</a>
+
  <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>

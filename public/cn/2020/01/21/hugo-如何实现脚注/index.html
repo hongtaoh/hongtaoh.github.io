@@ -103,10 +103,15 @@
 
 <div class="body-text list-text">
 <p><a href="https://gohugo.io/" target="_blank" rel="noreferrer noopener">Hugo</a>
+
  从 <a href="https://github.com/gohugoio/hugo/releases/tag/v0.60.0" target="_blank" rel="noreferrer noopener">v0.60.0</a>
+
 开始，Markdown 解析器不再使用 <a href="https://github.com/russross/blackfriday" target="_blank" rel="noreferrer noopener">Blackfriday</a>
+
 , 改用由 <a href="https://github.com/yuin" target="_blank" rel="noreferrer noopener">yuin</a>
+
 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 编写的 <a href="https://github.com/yuin/goldmark" target="_blank" rel="noreferrer noopener">goldmark</a>
+
  。</p>
 <p>这次变动我目前感觉比较明显的是：</p>
 <p>blackfriday 支持 <code>免计数</code> 形式的脚注。所谓<code>免计数</code>，就是说，你可以在文本后直接跟脚注的具体内容，比如</p>
@@ -116,12 +121,14 @@
 </code></pre></div><p>然后在文末，加上以下内容才可以：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">[^1]: 看到了吗？
 </code></pre></div><p>这一点，有人在 Github 上<a href="https://github.com/yuin/goldmark/issues/92" target="_blank" rel="noreferrer noopener">提过</a>
+
 ，想在 goldmark 中实现 <code>免计数</code> 脚注，但是目前貌似依然不支持。</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
 <p>应该是一个日本人，他的 Github 网页在<a href="https://github.com/yuin" target="_blank" rel="noreferrer noopener">这里</a>
+
  <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>

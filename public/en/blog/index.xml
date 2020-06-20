@@ -11,6 +11,18 @@
     
     
     <item>
+      <title>How to Open Link in New Tab in Hugo</title>
+      <link>https://hongtaoh.github.io/en/2020/06/20/new-tab-in-hugo/</link>
+      <pubDate>Sat, 20 Jun 2020 09:12:03 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/06/20/new-tab-in-hugo/</guid>
+      <description>The default of Hugo is that when you open a link in a page rendered by markdown, you&amp;rsquo;ll stay in the current tab. How can we enable openning a new tab then?
+The answer was provided by PrasdPen .
+Go to layouts/_default, create a new folder and name it as _markup. Then add a render-link.html with the following code:
+&amp;lt;a href=&amp;#34;{{ .Destination | safeURL }}&amp;#34;{{ with .Title}} title=&amp;#34;{{ . }}&amp;#34;{{ end }}{{ if strings.</description>
+    </item>
+    
+    <item>
       <title>How to Implement Edit This Page on Github for a Hugo Website</title>
       <link>https://hongtaoh.github.io/en/2020/06/18/implement-edit-on-github/</link>
       <pubDate>Thu, 18 Jun 2020 11:10:20 -0400</pubDate>

@@ -106,27 +106,41 @@
 <p>Maybe you can quickly review these basics first.</p>
 <ul>
 <li><a href="https://docs.python.org/3.6/tutorial/introduction.html#numbersnumbers" target="_blank" rel="noreferrer noopener">numbers</a>
+
  and <a href="https://docs.python.org/3.6/tutorial/introduction.html#strings" target="_blank" rel="noreferrer noopener">strings</a>
+
 ;</li>
 <li><a href="https://docs.python.org/3.6/tutorial/controlflow.html#if-statements" target="_blank" rel="noreferrer noopener">if</a>
+
  and <a href="https://docs.python.org/3.6/tutorial/controlflow.html#for-statements" target="_blank" rel="noreferrer noopener">for</a>
+
  statement</li>
 <li>data structure (<a href="https://docs.python.org/3.6/tutorial/introduction.html#lists" target="_blank" rel="noreferrer noopener">lists</a>
+
 , <a href="https://docs.python.org/3.6/tutorial/datastructures.html#sets" target="_blank" rel="noreferrer noopener">sets</a>
+
 , <a href="https://docs.python.org/3.6/tutorial/datastructures.html#dictionaries" target="_blank" rel="noreferrer noopener">dictionaries</a>
+
 )</li>
 <li><a href="https://docs.python.org/3.6/tutorial/controlflow.html#defining-functions" target="_blank" rel="noreferrer noopener">functions</a>
+
  and <a href="https://docs.python.org/3.6/tutorial/modules.html" target="_blank" rel="noreferrer noopener">modules</a>
+
 </li>
 </ul>
 <p><a href="https://developers.google.com/edu/python/?hl=en" target="_blank" rel="noreferrer noopener">Google&rsquo;s Python Class</a>
+
  is also a nice resource.</p>
 <h2 id="jupyter--pandas--awesomeness">Jupyter + Pandas = Awesomeness</h2>
 <p><a href="http://jupyter.org" target="_blank" rel="noreferrer noopener">Jupyter notebook (lab)</a>
+
  (and <a href="https://ipython.org" target="_blank" rel="noreferrer noopener">IPython</a>
+
 ) and <a href="http://pandas.pydata.org" target="_blank" rel="noreferrer noopener">Pandas</a>
+
  may be two most important libraries responsible for the <code>Python</code>'s rise in data science. <code>Jupyter</code> lets you interactively explore datasets and code; <code>Pandas</code> lets you handle tabular datasets with superb speed and convenience. And they work so well together! In many cases, <code>Jupyter</code> and <code>Pandas</code> are all you need to load, clean, transform, visualize, and understand a dataset.</p>
 <p>If you are not familiar with <code>Pandas</code>, you may want to follow their official tutorial called <a href="http://pandas.pydata.org/pandas-docs/stable/10min.html" target="_blank" rel="noreferrer noopener">10 Minutes to pandas</a>
+
  now or in the near future.</p>
 <h2 id="importing-pandas">Importing pandas</h2>
 <p>The convention for importing <code>pandas</code> is the following</p>
@@ -137,10 +151,12 @@
 </code></pre>
 <h2 id="loading-a-csv-data-file">Loading a CSV data file</h2>
 <p>Using pandas, you can read tabular data files in <a href="https://pandas.pydata.org/pandas-docs/stable/io.html" target="_blank" rel="noreferrer noopener">many formats and through many protocols</a>
+
 . Pandas supports not only flat files such as <code>.csv</code>, but also various other formats including clipboard, Excel, JSON, HTML, Feather, Parquet, SQL, Google BigQuery, and so on. Moreover, you can pass a local file path or a URL. If it&rsquo;s on Amazon S3, just pass a url like <code>s3://path/to/file.csv</code>. If it&rsquo;s on a webpage, then just use <code>https://some/url.csv</code>.</p>
 <p>Let&rsquo;s load a dataset about the location of pumps in the John Snow&rsquo;s map. You can download the file to your computer and try to load it using the local path too.</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df <span style="color:#666">=</span> pd<span style="color:#666">.</span>read_csv(<span style="color:#ba2121">&#39;https://raw.githubusercontent.com/yy/dviz-course/master/data/pumps.csv&#39;</span>)
 </code></pre></div><p><code>df</code> stands for &ldquo;<a href="https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe" target="_blank" rel="noreferrer noopener">Data Frame</a>
+
 &quot;, which is a fundamental data object in Pandas. You can take a look at the dataset by looking at the first few lines.</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pump_df<span style="color:#666">.</span>head() 
 </code></pre></div><div>
@@ -605,7 +621,9 @@ death_df<span style="color:#666">=</span>pd<span style="color:#666">.</span>read
 </code></pre>
 <h2 id="some-visualizations">Some visualizations?</h2>
 <p>Let&rsquo;s visualize them! Pandas actually provides <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html" target="_blank" rel="noreferrer noopener">a nice visualization interface</a>
+
  that uses <a href="https://matplotlib.org" target="_blank" rel="noreferrer noopener">matplotlib</a>
+
  under the hood. You can do many basic plots without learning <code>matplotlib</code>. So let&rsquo;s try.</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_df<span style="color:#666">.</span>plot()
 </code></pre></div><pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff421fbc470&gt;
@@ -614,8 +632,10 @@ death_df<span style="color:#666">=</span>pd<span style="color:#666">.</span>read
 <p>Oh by the way, depending on your environment, you may not see any plot. If you don&rsquo;t see anything run the following command.</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#666">%</span>matplotlib inline
 </code></pre></div><p>The commands that start with <code>%</code> is called <a href="http://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-matplotlib" target="_blank" rel="noreferrer noopener">the magic commands</a>
+
 , which are available in IPython and Jupyter. The purpose of this command is telling the IPython / Jupyter to show the plot right here instead of trying to use other external viewers.</p>
 <p>Anyway, this doesn&rsquo;t seem like the plot we want. Instead of putting each row as a point in a 2D plane by using the X and Y as the coordinate, it just created a line chart. Let&rsquo;s fix it. Please take a look at <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html" target="_blank" rel="noreferrer noopener">the plot method documentation</a>
+
 . How should we change the command? Which <code>kind</code> of plot do we want to draw?</p>
 <p>Yes, we want to draw a <em>scatter plot</em> using x and y as the Cartesian coordinates.</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_df<span style="color:#666">.</span>plot(x<span style="color:#666">=</span><span style="color:#ba2121">&#39;X&#39;</span>, y<span style="color:#666">=</span><span style="color:#ba2121">&#39;Y&#39;</span>, kind<span style="color:#666">=</span><span style="color:#ba2121">&#39;scatter&#39;</span>, label<span style="color:#666">=</span><span style="color:#ba2121">&#39;Deaths&#39;</span>)
@@ -636,12 +656,15 @@ pump_df<span style="color:#666">.</span>plot(x<span style="color:#666">=</span><
 <p><img src="/media/lab02_files/lab02_46_2.png" alt="png"></p>
 <h2 id="figure-and-axes">Figure and Axes</h2>
 <p>Why do we have two separate plots? The reason is that, by default, the <code>plot</code> method creates a new plot. In order to avoid it, we need to either create an <a href="https://matplotlib.org/api/axes_api.html" target="_blank" rel="noreferrer noopener">Axes</a>
+
  and tell <code>plot</code> to use that axes. What is an <code>axes</code>? See this illustration.</p>
 <img src="https://matplotlib.org/1.5.1/_images/fig_map.png" alt="figure, axes, and axis" style="width: 500px;"/>
 <p>A figure can contain multiple axes (<a href="https://matplotlib.org/gallery/subplots_axes_and_figures/subplot_demo.html#sphx-glr-gallery-subplots-axes-and-figures-subplot-demo-py" target="_blank" rel="noreferrer noopener">link</a>
+
 ):</p>
 <p><img src="https://matplotlib.org/_images/sphx_glr_subplot_demo_001.png" alt="multipleaxes"></p>
 <p>and an axes can contain multiple plots (<a href="https://matplotlib.org/gallery/api/two_scales.html#sphx-glr-gallery-api-two-scales-py" target="_blank" rel="noreferrer noopener">link</a>
+
 ).</p>
 <p><img src="https://matplotlib.org/_images/sphx_glr_two_scales_001.png" alt="multipleplots"></p>
 <p>Conveniently, when you call <code>plot</code> method, it creates an axes and returns it to you</p>
@@ -660,7 +683,9 @@ pump_df<span style="color:#666">.</span>plot(x<span style="color:#666">=</span><
 <p>Let&rsquo;s try the Voronoi diagram. You can use the <code>scipy.spatial.Voronoi</code> and <code>scipy.spatial.voronoi_plot_2d</code> from <code>scipy</code>, the <em>scientific python</em> library.</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">scipy.spatial</span> <span style="color:#008000;font-weight:bold">import</span> Voronoi, voronoi_plot_2d
 </code></pre></div><p>Take a look at the documentation of <a href="https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.spatial.Voronoi.html#scipy.spatial.Voronoi" target="_blank" rel="noreferrer noopener">Voronoi</a>
+
  and <a href="https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.spatial.voronoi_plot_2d.html" target="_blank" rel="noreferrer noopener">voronoi_plot_2d</a>
+
  and</p>
 <p><strong>Q3: produce a Voronoi diagram that shows the deaths, pumps, and voronoi cells</strong></p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic"># you&#39;ll need this</span>

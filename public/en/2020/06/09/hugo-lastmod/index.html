@@ -102,16 +102,21 @@
 <div class="body-text list-text">
 <p>Earlier, I thought this must be a difficult undertaking, but later I found this is relatively easy to accomplish.</p>
 <p>The solution was <a href="https://discourse.gohugo.io/t/last-modified-date-for-posts/23363/2" target="_blank" rel="noreferrer noopener">here</a>
+
 , posted by funkydan2.</p>
 <p>According to Hugo&rsquo;s documentation on <a href="https://gohugo.io/variables/page/" target="_blank" rel="noreferrer noopener">Page Variables</a>
+
 , there are two ways to specify last modification date. One way is to specify the <code>.Lastmod</code> in a content&rsquo;s front matter. That is to say, while you are specifying the <code>title</code>, <code>date</code>, <code>author</code>, <code>slug</code>, etc., you also specify <code>lastmod</code>. The second way is through <code>.GitInfo</code>.</p>
 <p>I recommend using the <a href="https://gohugo.io/variables/git/#lastmod" target="_blank" rel="noreferrer noopener">.GitInfo</a>
+
 . This method is better because it is automatic.</p>
 <p>In your <code>single.html</code> within <code>layouts</code> -&gt; <code>_default</code>, you simply add this line of code:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">p</span>&gt;Last modified on {{ .Page.Lastmod.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#008000;font-weight:bold">p</span>&gt;
 </code></pre></div><p>Then, in your <code>config.toml</code>, you simply add <code>enableGitInfo = true</code>.</p>
 <p>You can check my <a href="https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/themes/hugo-xmin/layouts/_default/single.html" target="_blank" rel="noreferrer noopener">single.html</a>
+
  and <a href="https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/config.toml" target="_blank" rel="noreferrer noopener">config.toml</a>
+
  setting for a reference.</p>
 <p>Please note that this is just an example. There are many ways to achieve the goal. You are encouraged to do it in your own way (if you have enough time&hellip;).</p>
  
