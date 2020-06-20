@@ -125,6 +125,11 @@
 GithubEdit = <span style="color:#ba2121">&#34;https://github.com/USER/REPO/edit/&#34;</span>
 </code></pre></div><p><strong>The above is just an example. You should use your own USER and REPO name.</strong></p>
 <p>Also, the code above might be dependent on your <code>permalinks</code> setting in your <code>config.toml</code>.</p>
+<p>Here, please note that there might be replication in urls. For example, in <a href="https://github.com/hongtaoh/guoxinban">this project</a>, I have this:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[permalinks]
+post = <span style="color:#ba2121">&#34;/:year/:month/:day/:filename/&#34;</span>
+</code></pre></div><p>Then the url of a post should be like <code>https://mydomain//2017/08/30/amid-rising-hiv/</code>. It does not contain <code>post</code>. When I open the &ldquo;pen&rdquo; mentioned above in GitHub, the url is like this: <code>https://github.com/hongtaoh/guoxinban/edit/master/content/post/amid-rising-hiv.md</code>. It contains <code>post</code>.</p>
+<p>Then, what should I put in the <code>GithubEdit</code>? I tried <code>https://github.com/hongtaoh/guoxinban/edit/master/content/post</code>, but then I cliked the &ldquo;Edit this page on GitHub&rdquo; button in my website, the url had two <code>post</code>s. So I changed the <code>GithubEdit</code> to this: <code>https://github.com/hongtaoh/guoxinban/edit/master/content/</code>, and then it worked.</p>
 <p>Then, depending on where you want to add &ldquo;edit this page on GitHub&rdquo;, add the following codes:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">span</span>&gt;
         	{{ if .IsPage}} 
