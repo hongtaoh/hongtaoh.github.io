@@ -1,5 +1,5 @@
 ---
-title: How to Block Cutestat in a Hugo Website
+title: How to Block CuteStat in a Hugo Website
 date: 2020-06-20T10:15:27-04:00
 author: Hongtao Hao
 slug: blocking-cutestat
