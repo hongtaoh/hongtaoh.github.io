@@ -230,6 +230,7 @@ msg="rebuilding site $(date)" #获得此次更新的日期
 git commit -m "$msg" #让 Git 在 Github 仓库写入这次更新的日期
 git push origin master #上传
 ```
+> 请注意：<i class="fa fa-exclamation-triangle"></i> 用这几行代码的前提是你不会直接在 GitHub 上加或者减东西东西。也就是说，GitHub 上的 remote 要和你电脑上相对应的本地文件夹内容完全一致。
 
 每次输入些代码挺烦的，有没有更简单的办法？当然有，谁让我们是（伪）程序员呢。
 
