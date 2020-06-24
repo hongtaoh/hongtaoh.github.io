@@ -11,6 +11,73 @@
     
     
     <item>
+      <title>How to Block CuteStat in a Hugo Website</title>
+      <link>https://hongtaoh.github.io/en/2020/06/20/blocking-cutestat/</link>
+      <pubDate>Sat, 20 Jun 2020 10:15:27 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/06/20/blocking-cutestat/</guid>
+      <description>CuteStat can be really annoying. When I first built my website, and searched my name in Google, mydomain.cutestat.com appeared on top of the resarch restults and it was so ugly!
+How can we block CuteStat from crawliing our websites?
+A direct way to do this is to go to the bottom of CuteStat , and open Update or Remove .
+CuteStat asked us to add a robots.txt file in our website with the following codes:</description>
+    </item>
+    
+    <item>
+      <title>How to Open Link in New Tab in Hugo</title>
+      <link>https://hongtaoh.github.io/en/2020/06/20/new-tab-in-hugo/</link>
+      <pubDate>Sat, 20 Jun 2020 09:12:03 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/06/20/new-tab-in-hugo/</guid>
+      <description>The default of Hugo is that when you open a link in a page rendered by markdown, you&amp;rsquo;ll stay in the current tab. How can we enable openning a new tab then?
+The answer was provided by PrasdPen .
+Go to layouts/_default, create a new folder and name it as _markup. Then add a render-link.html with the following code:
+&amp;lt;a href=&amp;#34;{{ .Destination | safeURL }}&amp;#34;{{ with .Title}} title=&amp;#34;{{ . }}&amp;#34;{{ end }}{{ if strings.</description>
+    </item>
+    
+    <item>
+      <title>How to Implement Edit This Page on Github for a Hugo Website</title>
+      <link>https://hongtaoh.github.io/en/2020/06/18/implement-edit-on-github/</link>
+      <pubDate>Thu, 18 Jun 2020 11:10:20 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/06/18/implement-edit-on-github/</guid>
+      <description>I saw this quesiton on this thread but the answer by bep did not solve the problem.
+The solution can be found in Yihui Xie&amp;rsquo;s book of Blogdown .
+However, when I tried this this block of codes recommended by Yihui, I still couldn&amp;rsquo;t implement this function of editing on GitHub:
+{{ with .File.Path }} &amp;lt;a href=&amp;quot;https://github.com/.../{{ . }}&amp;quot;&amp;gt;Edit this page&amp;lt;/a&amp;gt; {{ end }} I tried the second block of codes on Yihui&amp;rsquo;s book, and it works.</description>
+    </item>
+    
+    <item>
+      <title>Some Mac Terminal Command Basics</title>
+      <link>https://hongtaoh.github.io/en/2020/06/14/terminal-command-basics-on-mac/</link>
+      <pubDate>Sun, 14 Jun 2020 10:04:34 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/06/14/terminal-command-basics-on-mac/</guid>
+      <description>Changing Folder/File Name If you are too lazy to change the folder or file name manually, you can do that in Terminal. What you need to do is first to go to a the direction the folder/file is located in. For example, if you are changing the name of a folder on your Desktop, then you need to cd Destkop first. Then:
+mv oldfoldername newfoldername The same is for when you are changing a file&amp;rsquo;s name.</description>
+    </item>
+    
+    <item>
+      <title>How to Add Last Modification Date in Hugo</title>
+      <link>https://hongtaoh.github.io/en/2020/06/09/hugo-lastmod/</link>
+      <pubDate>Tue, 09 Jun 2020 12:04:06 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/06/09/hugo-lastmod/</guid>
+      <description>Earlier, I thought this must be a difficult undertaking, but later I found this is relatively easy to accomplish.
+The solution was here , posted by funkydan2.
+According to Hugo&amp;rsquo;s documentation on Page Variables , there are two ways to specify last modification date. One way is to specify the .Lastmod in a content&amp;rsquo;s front matter. That is to say, while you are specifying the title, date, author, slug, etc., you also specify lastmod.</description>
+    </item>
+    
+    <item>
+      <title>Build A Website Using Hugo without Programming Skills</title>
+      <link>https://hongtaoh.github.io/en/2020/06/05/get-started-with-hugo/</link>
+      <pubDate>Fri, 05 Jun 2020 09:26:26 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/06/05/get-started-with-hugo/</guid>
+      <description>A friend asked me whether I can help him create his own personal website. I have long been wanting to write a simple tutorial on this and now I think it&amp;rsquo;s time to do that.
+In this age of informaiton, it&amp;rsquo;s important to have your online presence. It not only helps others to know you more quickly; it also helps you to express yourself to, and share your experiences and knowledge with, the outside world.</description>
+    </item>
+    
+    <item>
       <title>如何下载 YouTube 视频</title>
       <link>https://hongtaoh.github.io/cn/2020/06/04/youtube-download/</link>
       <pubDate>Thu, 04 Jun 2020 08:45:57 -0400</pubDate>
@@ -46,6 +113,37 @@
   PDF 中如何更改中文引语的字体？
   等等。
 我知道是我要求太苛刻了。Bookdown 原本主要是为网页版书籍准备的，而非 PDF 版。因此，Bookdown 官网 上摆出的那些书籍中，有一些根本就没有把 PDF 版放上去。</description>
+    </item>
+    
+    <item>
+      <title>How to Solve the Problem of &#34;Remote Origin Already Exists&#34;</title>
+      <link>https://hongtaoh.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</link>
+      <pubDate>Mon, 25 May 2020 10:10:19 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</guid>
+      <description>Here is my situation: I want to use another GitHub account. I need to transfer a repo from my old account to the new one. Maybe there is an easy way to transfer, but it is beyong my ability now (I guess it&amp;rsquo;s complicated so I didn&amp;rsquo;t even bother searching for an answer).
+So I git clone the repo from my old account and tried to push it to my new accout.</description>
+    </item>
+    
+    <item>
+      <title>How to Completely Uninstall Homebrew From a Mac</title>
+      <link>https://hongtaoh.github.io/en/2020/05/23/uninstall-homebrew-completely/</link>
+      <pubDate>Sat, 23 May 2020 15:21:45 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/05/23/uninstall-homebrew-completely/</guid>
+      <description>My Macbook Air is pretty old1, so I cannot put up with any useless files that take up a lot of space on my laptop.
+When installed, Homebrew takes up over 400MB. That&amp;rsquo;s a lot of space, at least for me.
+I installed Homebrew and then I wanted to delete it. So I went to /usr/local/bin/. I was lost. I couldn&amp;rsquo;t know which files to delete. Since /usr/local/bin/ is a hidden folder in Mac, I don&amp;rsquo;t want to mess up with it.</description>
+    </item>
+    
+    <item>
+      <title>How to fix blurry images in Mac Chrome</title>
+      <link>https://hongtaoh.github.io/en/2020/05/14/chrome-mac-blurry-image-fix/</link>
+      <pubDate>Thu, 14 May 2020 16:35:13 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/05/14/chrome-mac-blurry-image-fix/</guid>
+      <description>I never used Chrome before but after upgrading my MacOS, I started trying Chrome. I created my personal blog using Hugo. The thing is, when I viewed my site using Chrome on my Mac, all images are so blurry. I tried again on Safari, things were fine; I tried it in Chrome on a Windowns PC, things were also fine.
+While I was scratching my head, I came across this answer by pastullo on Stackexchange.</description>
     </item>
     
     <item>
@@ -158,6 +256,16 @@
     </item>
     
     <item>
+      <title>What Do I Think About TED Talks</title>
+      <link>https://hongtaoh.github.io/en/2020/04/30/what-do-i-think-about-ted-talks/</link>
+      <pubDate>Thu, 30 Apr 2020 06:19:02 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/04/30/what-do-i-think-about-ted-talks/</guid>
+      <description>TED talks say that they have ideas worth spreading, but I am not sure whether these ideas are worth listening.
+Many people really like TED talks. These talks were and possibly still are very popular among Chinese students who regard TED talks as a valuable resource to learn English. In this aspect, I agree. TED is very helpful for English learners like me1. After all, most of the speakers are native speakers and their talks are very good for learners to practice listening and speaking.</description>
+    </item>
+    
+    <item>
       <title>想法何时写</title>
       <link>https://hongtaoh.github.io/cn/2020/04/30/when-to-write/</link>
       <pubDate>Thu, 30 Apr 2020 06:04:52 -0400</pubDate>
@@ -198,12 +306,44 @@
     </item>
     
     <item>
+      <title>Why so many people love Dr. Fauci</title>
+      <link>https://hongtaoh.github.io/en/2020/04/19/why-so-many-people-love-dr.-fauci/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/04/19/why-so-many-people-love-dr.-fauci/</guid>
+      <description>When I saw the news that there is a petition to name Dr. Anthony Fauci the sexiest man alive, I was puzzled. I have been hearing this name for a long time, since the outbreak of COVID-19 in the United States but have never seen his image and heard of him talking.
+Through pure serendipity, I came across this video of Mark Zuckerberg interviewing Dr. Fauci. I was amazed by how calm, confident, and knowledgebale Dr.</description>
+    </item>
+    
+    <item>
       <title>What if I don&#39;t have a role model?</title>
       <link>https://hongtaoh.github.io/en/2020/04/12/role-model/</link>
       <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/04/12/role-model/</guid>
       <description>In elementary school, when asked what I wanted to be when I grew up, just as many other kids, I said I wanted to be a scientist. But many years later when I was graduating from college, I didn’t know where I was heading. There was no longer a great role model guiding my life. I got frightened, especially when many classmates constantly asked me: what do you want to do after graduation?</description>
+    </item>
+    
+    <item>
+      <title>Pagedown Error Shooting</title>
+      <link>https://hongtaoh.github.io/en/2020/03/26/pagedown-error-shooting/</link>
+      <pubDate>Thu, 26 Mar 2020 11:15:17 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/03/26/pagedown-error-shooting/</guid>
+      <description>I am now trying to create my curriculum vitae using Pagedown by Yihui Xie . My Mac system is very old: I am still using OS XYosemite (10.10.5). Therefore, I face limitations on the version of R I can use.
+Error when downloading Pagedown When downloading pagedown, I tried the method recommended by the Pagedown Homepage , i.e., remotes::install_github(&#39;rstudio/pagedown&#39;) but this does not work for me. There will always be errors.</description>
+    </item>
+    
+    <item>
+      <title>Lab02</title>
+      <link>https://hongtaoh.github.io/en/2020/03/21/lab02/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/03/21/lab02/</guid>
+      <description>W2 Lab: Data processing basics and John Snow&amp;rsquo;s map Follow the contents of this notebook and answer all questions (e.g. Q1: &amp;hellip;)
+If you are not familiar with Python yet&amp;hellip; Maybe you can quickly review these basics first.
+ numbers and strings ; if and for statement data structure (lists , sets , dictionaries ) functions and modules   Google&amp;rsquo;s Python Class is also a nice resource.
+Jupyter + Pandas = Awesomeness Jupyter notebook (lab) (and IPython ) and Pandas may be two most important libraries responsible for the Python&#39;s rise in data science.</description>
     </item>
     
     <item>
@@ -258,6 +398,15 @@ iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepa
     </item>
     
     <item>
+      <title>Brain-to-brain communication and the Mindnet</title>
+      <link>https://hongtaoh.github.io/en/2020/02/25/b2b-communication/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/02/25/b2b-communication/</guid>
+      <description>A conceptual description of how b2b communication works, by Hongtao Hao   Where Does Brain-to-brain Communication Come From? “The Internet of Things” (IoT) captures people’s imagination. Experts envision that things in the future would be interconnected and freely share information with each other. For example, a car, through sensors, would be connected with tunnels and bridges it passes through and all other vehicles. Based on IoT technology and big data, an intelligent transportation system (ITS) could be built which promotes safety, efficiency, and conveniences1.</description>
+    </item>
+    
+    <item>
       <title>只问耕耘，不问收获</title>
       <link>https://hongtaoh.github.io/cn/2020/02/21/just-do-it/</link>
       <pubDate>Fri, 21 Feb 2020 13:38:01 -0500</pubDate>
@@ -273,6 +422,25 @@ iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepa
 我像一头狮子一样，目标始终锁定在我的希望和梦想。多少次为了一个好的 GPA 而在每一节课上认真准备好做作业，即使受到委屈也不退缩。多少次为了能有会议论文，而拼尽全力地收数据、学统计、码字。自己依然记得一个会议投稿期限到的时候，凌晨2、3点回到家里。走在漆黑小路上，内心很欣慰。
 曾国藩的一个信条是“只问耕耘，不问收获”。经历过这个过程，我发现这确实是人生应该信持的观念。当你为了梦想拼尽了全力，当你不过一切往前冲，即使最终失败，在之后的人生中，你真的可以做到不后悔，不遗憾，不会痛恨自己没有努力。
 而这，也就够了。</description>
+    </item>
+    
+    <item>
+      <title>贝叶斯统计思想入门（二)：概率</title>
+      <link>https://hongtaoh.github.io/cn/2020/02/02/bayesian-stats-chapter4/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/02/02/bayesian-stats-chapter4/</guid>
+      <description>上篇，也就是第二章，k老师主要是简单介绍了一下贝叶斯的方法。第三章是介绍了 r 语言的基本操作，这里不再介绍。从第四章开始，整本书渐渐进入主体，开始涉及贝叶斯的核心。
+第四章开始讲概率 (probability)。概率是用来描述不确定性 (uncertainty) 的。假如我现在抛一枚硬币，掉下来之后有可能是正面朝上，也可能是背面朝上。每当我们讨论一种结果的可能性的时候，我们其实在头脑里想到了所有可能的结果，这些所有可能的结果叫做样本空间 (sample space)。
+如果这个硬币质地良好，那么正面朝上的概率是 50%。如果质地粗糙，那么正面朝上的概率有可能大于50%，也可能小于50%。我们用希腊字母 θ 来表示正面朝上的概率。如果 $\theta = 50\%$ ，那说明硬币质地良好。
+另一个层面，我们对于 $\theta$ 的值其实也是有预设的。如果这枚硬币是国家铸币厂生产的，那么 θ=50% 的概率会很高，如 $p(\theta = 0.5)＝0.99$, 如果这枚硬币是小作坊生产的，那么 $p(\theta = 0.5)$ 可能只有0.01.
+回到样本空间这个概念。抛一枚硬币这个事件的样本空间有2种可能的结果：正面朝上、背面朝上。猜测硬币的质地时，样本空间有无数种可能的结果：从 $\theta ＝0.0$ 到 $\theta ＝1.0$ 之间所有的数字都有可能。
+你可能像我一样对掷硬币已经不耐烦了，因为已经在太多教材中看过。但是k教授说到，掷硬币可以用来代表几乎所有二元性的事件：选a还是选b、药物有效还是无效、正确还是错误等等。所以我们还是要研究掷硬币。
+当我们说，一个质地良好的硬币，正面朝上的概率是50%时，我们是说，将这个硬币抛掷无数次，有50%的次数是正面朝上的。也就是说，这个概率是指，从长远来看的相对频率。
+有两种方法来获取这个从长远来看的相对频率：
+ 模拟； 数学公式推导  第一种方法，模拟。我们用 R 语言来模拟。假设计算机预算 $\theta = 0.8$，也就是正面朝上的概率是 80％，但是我们不知道。我们只能通过观察计算机的掷币结果来推测。
+下面我们在计算机上模拟抛掷一枚 $\theta = 0.8$ 的硬币一万次。代码1如下：
+n &amp;lt;- 10000 pheads &amp;lt;- 0.8 flips&amp;lt;-sample (x=c(0,1),prob=c(1-pheads, pheads),size=n, replace=TRUE) num.heads &amp;lt;- cumsum(flips) total.toss &amp;lt;- c(1:n) prob.</description>
     </item>
     
     <item>
@@ -293,6 +461,16 @@ iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepa
 以上项目是我几乎肯定会给全奖的，就是说只要录取你就会给你钱，一般不会说给你录取，但是不给钱。
  以下是一些可能会给全奖，但是特别困难，或者我不太确定的项目：
 圣地亚哥州立大学 (Sen Diego State University, School of Communication), 克莱姆森大学(Clemson University, Department of Communication), 俄亥俄州立大学(The Ohio State Univeristy, School of Communication), 加州大学戴维斯分校(UC Davis, Department of Communication), 德州奥斯汀大学(UT Austin, Moody College of Communication 下的四个部门：Adversiting, Journalism, Communication Studies, RTF), 俄亥俄大学( Scripps College of Communication), 马里兰大学 (Department of Communication)，亚利桑那州立大学（Arizona State University, The Hugh Downs School of Human Communication)，爱荷华大学(The University of Iowa, Communication Studies)</description>
+    </item>
+    
+    <item>
+      <title>How to Install and Upgrade Hugo on Mac</title>
+      <link>https://hongtaoh.github.io/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/</link>
+      <pubDate>Wed, 29 Jan 2020 11:05:22 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/</guid>
+      <description>I am only talking about installing and upgrading Hugo on mac in this post. A very important guide is the Hugo&amp;rsquo;s official tutorial on installing Hugo . Homebrew is the easiest way. I did not use this method simply because my MacOS version is so old that I could not install and upgrade Hugo through Homebrew. If you are like me, you can read on.
+I chose the second method, which is called &amp;ldquo;Tarball&amp;rdquo; in Hugo&amp;rsquo;s tutorial .</description>
     </item>
     
     <item>
@@ -357,6 +535,22 @@ blackfriday 支持 免计数 形式的脚注。所谓免计数，就是说，你
 但是美国的话，貌似不仅限于“自”黑，你也可以黑你的身份。比如，你说“我就是个傻不愣登的美国人”，没有人会觉得有什么不妥。
 这种差异的底端原因是什么呢？
 不知道。</description>
+    </item>
+    
+    <item>
+      <title>贝叶斯统计思想入门（一)：概述</title>
+      <link>https://hongtaoh.github.io/cn/2020/01/18/bayesian-stats-chapter2/</link>
+      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/01/18/bayesian-stats-chapter2/</guid>
+      <description>前言：这篇文章是我上约翰.克鲁斯克老师 (John Kruschke ) 的《贝叶斯数据分析》 (P533: Bayesian Data Analysis ) 这门课时，在课下看他的教材 Doing Bayesian Data Analysis (Second Edition)  所做的笔记。
+贝叶斯的本质是对于可能性1(credibility) 的重置 (reallocation)。比如，早上刚出家门，你看到门前地面是湿的。这个有很多种可能的原因：下雨了、小孩子撒尿了、环卫工人刚打扫了、物业洒水车刚洒了水、有人不小心把水杯里的水洒出来了、外星人来过自己的家然后离开的时候不小心留下的痕迹&amp;hellip;这些所有的可能，在我们获得进一步数据之前，都有着自己的先验概率 (prior probability)。这些先验概率，是我们主观上认为的可能性，比如根据我们往常的生活经验，下雨的可能性要比外星人到访高的多。虽然高得多，我们获得的信息毕竟是有限的，因为我们只是观察了门前的一小块地。因此，这些可能性都是存在的。
+然后，我们接着在路上走，发现不仅整条路都是湿的，而且房屋顶都是湿的，那么我们对概率进行重置：下雨的可能性进步一提升，而之前有可能的洒水车洒过水的可能性下降，因为洒水车不可能把水洒到房顶上。
+Kruschke 老师的教材中的图2.1 对这一过程进行了进一步阐释。这张图展示了从一开始认为 A, B, C, D 都有可能是罪犯，而且可能性相同，然后一步一步找到新的线索，最后认定 D 是罪犯的过程。
+  图2.1, 来源: Kruschke 老师的教材 p.17   贝叶斯统计中很关键的一步是找到可能的解释情况。比如看到门前的路面是湿的，我们已经想到了很多可能的情况，但是不可能把这些情况穷尽。比如，也有可能是一个人在正好经过你的家门的时候，接到一个电话，然后她就哭了，于是门前的路面就湿了，等等。我们也不用试着去穷尽可能情况，只需要找到我们感兴趣的几个情况就好。通过分析，我们可以看到这几个情况是否很好地解释了我们观察到的数据，如果没有，那么我们再去找别的可能的情况。这一过程叫做 posterior predictive check.
+很多的时候，一种可能性由一个数学公式来代表，然后看哪个公式可以更好得描述观察到的数据（具体来说，是看是否契合数据的趋势 (trends)以及分散度 (spread) 。从图2.4 可以看到， 两个数学公式中，明显第一个公式更好地描述了观察到的数据。需要注意的是，数学公式和观察到的数据之间并不存在因果关系。
+  图2.4, 来源: Kruschke 老师的教材 p.23   Kruschke 老师举了一个身高－体重的例子。图2.5 左边的图中，小圆圈代表了具体的每个人的身高－体重数据。
+  图2.5, 来源: Kruschke 老师的教材 p.</description>
     </item>
     
     <item>
