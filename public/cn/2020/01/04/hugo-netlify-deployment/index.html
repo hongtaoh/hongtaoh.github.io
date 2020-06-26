@@ -406,6 +406,9 @@ git push origin master <span style="color:#408080;font-style:italic">#上传</sp
 <li>他提到了在运行 <code>hugo</code> 之前要先用 <code>rm -rf public</code> 删除 public 文件夹。但是，在随后的 deploy.sh 文件中，他并没有把 <code>rm -rf public</code> 包括进来；</li>
 <li>他提到，每次更新，只需要输入 <code>./deploy</code>， 但是这行代码我试过，不成功。</li>
 </ol>
+<blockquote>
+<p>请注意：<i class="far fa-clipboard"></i> 我和 Codepool 的作者联系了之后，发现是我错了。第二个点我还是不懂，也许是另一种执行方式。不过第一点，我试了一下，<code>hugo</code> 命令前 用不用 <code>rm -rf public</code> 结果都是一样的。我之前是觉得，不用 <code>rm -rf public</code> 的话，只能更新或者新加 <code>content</code> 文件夹里的东西，而如果 <code>content</code> 里有删除的话，<code>public</code> 文件夹里还是会有，并不会删除。但是我试了一下，其实<code>public</code> 文件夹是和 <code>content</code> 同步的。</p>
+</blockquote>
 <p>这两点，如果不是错误的话，就是我哪里没弄懂。</p>
 <h1 id="七如果你跟着这篇教程走还是碰到了错误">七、如果你跟着这篇教程走，还是碰到了错误&hellip;</h1>
 <ol>
