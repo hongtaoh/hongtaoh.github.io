@@ -6,7 +6,9 @@ type : nolisting
 
 <i class="fa fa-envelope"></i> :: [hhao@iu.edu](mailto:hhao@iu.edu)
 
-<i class="fa fa-globe"></i> :: [https://hongtaoh.com](https://hongtaoh.com/)
+<i class="fa fa-globe" style="font-size: 19pt"></i> :: [https://hongtaoh.com](https://hongtaoh.com/)
+
+<i class="fa fa-github" style="font-size: 19pt"></i> :: [@hongtaoh](https://github.com/hongtaoh)
 
 ## Education
 
@@ -22,6 +24,10 @@ type : nolisting
 3. Hao, H. (Nov., 2019). *Digital divide: theoretical review and future research suggestions*. Paper presented at the 105th Annual Conference of the National Communication Association, Baltimore.
 4. Hao, H. (May, 2019). *Global expansion of China’s media for soft power promotion*. Paper presented at the 69th Annual Conference of the International Communication Association, Washington, DC. 
     - ***Second Top Student Paper*** 
+
+## Projects
+
+- [MSCH-C101 at Indiana University](https://c101.hongtaoh.com/)
 
 ## Awards & Honors
 
@@ -48,7 +54,7 @@ type : nolisting
 
 ## Teaching Experience
 - 2020 Spring, Associate Instructor for MSCH-C101
-   - Built a class website for my students: [C1010 with Hongtao](https://c101.netlify.com/)
+   - Built a class website for my students: [C1010 with Hongtao](https://c101.hongtaoh.com/)
 - 2018-2019, Graduate Assistant, The Media School of Indiana University Bloomington
 - 2016 June-July, English Writing Instructor, New Oriental Education and Technology Inc., Beijing
    - Worked intensively for two months with over 200 hours of practice after three-month training in pedagogy
