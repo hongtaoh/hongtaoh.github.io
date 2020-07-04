@@ -11,7 +11,7 @@ I saw this quesiton on [this thread](https://discourse.gohugo.io/t/how-to-implem
 
 The solution can be found in Yihui Xie's book of [Blogdown](https://bookdown.org/yihui/blogdown/templates.html#how-to).
 
-However, when I tried this this block of codes recommended by Yihui, I still couldn't implement this function of editing on GitHub:
+However, when I tried the block of codes recommended by Yihui, I still couldn't implement this function of editing on GitHub:
 
 ```
 {{ with .File.Path }}
