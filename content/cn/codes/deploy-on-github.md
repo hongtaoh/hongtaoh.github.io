@@ -260,7 +260,7 @@ Github 的 [官方指南](https://help.github.com/en/github/working-with-github-
 
 这个是可以的。但这会带来一个问题。
 
-当我们在 ustom domain 输入我们的自定义域名后，master 这个 branch 会自动加一个 CNAME 文件。由于 master branch 其实就是我们本地 Hugo 文件夹里的 public 文件夹，而 Hugo 每次自动生成 public 文件夹并不会自动加 CNAME 文件，这就造成了本地仓库和远程仓库的不一致，会导致我们无法将本地仓库上传，因此 Hugo 网站也就无法更新。解决的办法很简单，只需要在我们之前提到的 deploy.sh 文件中加三行代码即可。这三行代码要加在 `hugo` 之后，`msg "Pushing the updated ...` 之前。加哪三行代码呢？
+当我们在 custom domain 输入我们的自定义域名后，master 这个 branch 会自动加一个 CNAME 文件。由于 master branch 其实就是我们本地 Hugo 文件夹里的 public 文件夹，而 Hugo 每次自动生成 public 文件夹并不会自动加 CNAME 文件，这就造成了本地仓库和远程仓库的不一致，会导致我们无法将本地仓库上传，因此 Hugo 网站也就无法更新。解决的办法很简单，只需要在我们之前提到的 deploy.sh 文件中加三行代码即可。这三行代码要加在 `hugo` 之后，`msg "Pushing the updated ...` 之前。加哪三行代码呢？
 
 ```bash
 cd public # cd 到 public 文件夹
