@@ -49,4 +49,4 @@ Hope it works.
 
 
 
-[^1]: I assumed that your config file is  `toml` file. 
+[^1]: I assumed that your config file is a `toml` file. 
