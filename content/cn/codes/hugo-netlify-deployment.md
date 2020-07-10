@@ -252,7 +252,7 @@ bash deploy.sh
 
 > 请注意：<i class="fa fa-exclamation-triangle"></i> 我和 Codepool 的作者联系了之后，发现是我错了。第二个点我还是不懂，也许是另一种执行方式。不过第一点，我试了一下，`hugo` 命令运行之前 用不用 `rm -rf public` 结果都是一样的。我之前是觉得，不用 `rm -rf public` 的话，只能更新或者新加 `content` 文件夹里的东西，而如果 `content` 里有删除的话，`public` 文件夹里还是会有，并不会删除。但是我试了一下，其实`public` 文件夹是和 `content` 同步的。
 
-> 但是，像[Mike Dane](https://www.mikedane.com/about/) 在[这篇文章](https://www.mikedane.com/static-site-generators/hugo/building-hosting/) 里提到的，如果你的网站变动比较大，比如你的 `layout` 文件夹有大的变动，那么不先删除 `public` 文件夹就运行 `hugo` 命令，很可能网站不会反映所有的变动。因为，稳妥起见，还是在 `hugo` 之前，加上`rm -rf public`。
+> 但是，像[Mike Dane](https://www.mikedane.com/about/) 在[这篇文章](https://www.mikedane.com/static-site-generators/hugo/building-hosting/) 里提到的，如果你的网站变动比较大，比如你的 `layout` 文件夹有大的变动，那么不先删除 `public` 文件夹就运行 `hugo` 命令，很可能网站不会反映所有的变动。因此，稳妥起见，还是在 `hugo` 之前，加上`rm -rf public`。
 
 
 # 七、如果你跟着这篇教程走，还是碰到了错误...
