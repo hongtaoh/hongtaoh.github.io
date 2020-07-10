@@ -54,7 +54,7 @@ type : nolisting
 
 ## Teaching Experience
 - 2020 Spring, Associate Instructor for MSCH-C101
-   - Built a class website for my students: [C1010 with Hongtao](https://c101.hongtaoh.com/)
+   - Built a class website for my students: [C101 with Hongtao](https://c101.hongtaoh.com/)
 - 2018-2019, Graduate Assistant, The Media School of Indiana University Bloomington
 - 2016 June-July, English Writing Instructor, New Oriental Education and Technology Inc., Beijing
    - Worked intensively for two months with over 200 hours of practice after three-month training in pedagogy
