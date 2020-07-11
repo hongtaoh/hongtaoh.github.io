@@ -104,7 +104,7 @@ The setting in `config.toml` is the same. However, codes that should be in your 
 </span>
 ```
 
-In fact, no matter whether your website contains `.Rmd` files, you can use the above codes anyway...
+In fact, no matter whether your website contains `.Rmd` files or not, you can use the above codes anyway...
 
 You can also refer to [this repo](https://github.com/hongtaoh/hugo-tutorial).
 
