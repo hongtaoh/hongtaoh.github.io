@@ -11,6 +11,18 @@
     
     
     <item>
+      <title>How to Use Legacy Jupyterbook</title>
+      <link>https://hongtaoh.github.io/en/2020/07/25/legacy-jupyterbook/</link>
+      <pubDate>Sat, 25 Jul 2020 16:13:58 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/07/25/legacy-jupyterbook/</guid>
+      <description>Jupyterbook totally changed the way a book is built in April 2020. The final legacy version is v0.6.5 . You can compare the legacy demo with the newest version demo .
+You can download the legacy version here .
+In this article, I&amp;rsquo;ll briefly talk about how to use this legacy version of jupyterbook together with GitHub and Netlify.
+First off, you should install the legacy version using pip install jupyter-book==0.</description>
+    </item>
+    
+    <item>
       <title>Good Hugo Themes for a Simple Website</title>
       <link>https://hongtaoh.github.io/en/2020/07/18/good-themes/</link>
       <pubDate>Sat, 18 Jul 2020 14:15:43 -0400</pubDate>

@@ -5,3 +5,5 @@ type : nolisting
 
 欢迎光临！
 
+郝鸿涛的联系方式：hhao@iu.edu (2020年1月1号之前都能用)
+
