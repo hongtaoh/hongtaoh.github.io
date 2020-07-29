@@ -159,7 +159,7 @@ Latex 的十种字体大小使用方法请看[这里](https://www.sascha-frank.c
 
 一开始，试着用 [texblog](https://texblog.org/2011/09/30/quick-note-on-line-spacing/) 上一篇 [Quick note on line spacing](https://texblog.org/2011/09/30/quick-note-on-line-spacing/) 提到的方法，但是不行。
 
-后来看到了 名为 [始终](https://liam.page/) 的博主专门介绍行距的 [这篇帖子](https://liam.page/2013/10/17/LaTeX-Linespace/)。他已经提到了正确的方法，但比较隐蔽，还是不会用。
+后来看到了名为[始终](https://liam.page/) 的博主专门介绍行距的 [这篇帖子](https://liam.page/2013/10/17/LaTeX-Linespace/)。他已经提到了正确的方法，但比较隐蔽，还是不会用。
 
 后来终于在 [这篇帖子](http://blog.sina.com.cn/s/blog_5e16f1770100ns4r.html) 中找到了方法：
 
