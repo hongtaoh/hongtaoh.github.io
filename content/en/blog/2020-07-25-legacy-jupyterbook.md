@@ -66,10 +66,9 @@ Then go to [Netlify](www.netlify.com/) and connect to the GitHub repo. When depl
 
 You can view the example I provided above [here](https://legacy-jupyterbook.netlify.app/intro).
 
-If you want to make changes later, use the following script:
+If you want to make changes later, first please `cd path/to/YourProject` and then use the following script:
 
 ```bash
-cd path/to/YourProject
 rm -rf _build #If you are familiar with Jekyll, you'll know what _build mean here.
 cd ..
 jupyter-bok build YourProject
