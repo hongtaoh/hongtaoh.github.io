@@ -71,7 +71,7 @@ If you want to make changes later, first please `cd path/to/YourProject` and the
 ```bash
 rm -rf _build #If you are familiar with Jekyll, you'll know what _build mean here.
 cd ..
-jupyter-bok build YourProject
+jupyter-book build YourProject
 cd YourProject
 git add .
 msg="rebuilding site $(date)" 
