@@ -174,9 +174,6 @@ git push origin master
 <p>Then go to <a href="www.netlify.com/">Netlify</a>
 
  and connect to the GitHub repo. When deploy with Nellify, it will automatically know that this is a Jekyll theme and you don&rsquo;t need to change anything. I am not detailing what you can do with Netlify here. Please look for information about it by yourself if you are not familiar with it already.</p>
-<p>You can view the example I provided above <a href="https://legacy-jupyterbook.netlify.app/intro" target="_blank" rel="noreferrer noopener">here</a>
-
-.</p>
 <p>If you want to make changes later, first please <code>cd path/to/YourProject</code> and then use the following script:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf _build <span style="color:#408080;font-style:italic">#If you are familiar with Jekyll, you&#39;ll know what _build mean here.</span>
 <span style="color:#008000">cd</span> ..
@@ -187,6 +184,11 @@ git add .
 git commit -m <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$msg</span><span style="color:#ba2121">&#34;</span> 
 git push origin master
 </code></pre></div><p>You can store this file as <code>deploy.sh</code>, save it to the root directory of YourProject. Every time after you&rsquo;ve make all the changes you want, at the root directory of YourProject, simply run <code>bash deploy.sh</code> and Github and Netlify will deploy by themseles.</p>
+<p>Finally, you can view the final product of the example I provided above <a href="https://legacy-jupyterbook.netlify.app/" target="_blank" rel="noreferrer noopener">here</a>
+
+. And <a href="https://github.com/hongtaoh/legacy-jupyterbook" target="_blank" rel="noreferrer noopener">here</a>
+
+ is the GitHub repository.</p>
 <h1 id="changing-content">Changing content</h1>
 <p>I am not detailing how to customize the content here. You simply need to change it in the <code>content</code> folder at the root directory, and then make corressponding changes to <code>toc.yml</code> under the <code>_data</code> folder. You can find more information in the <a href="https://legacy.jupyterbook.org/intro.html" target="_blank" rel="noreferrer noopener">official guide</a>
 
