@@ -64,8 +64,6 @@ The above solution come from [here](https://www.bookstack.cn/read/jupyterbook/81
 
 Then go to [Netlify](www.netlify.com/) and connect to the GitHub repo. When deploy with Nellify, it will automatically know that this is a Jekyll theme and you don't need to change anything. I am not detailing what you can do with Netlify here. Please look for information about it by yourself if you are not familiar with it already. 
 
-You can view the example I provided above [here](https://legacy-jupyterbook.netlify.app/intro).
-
 If you want to make changes later, first please `cd path/to/YourProject` and then use the following script:
 
 ```bash
@@ -80,6 +78,8 @@ git push origin master
 ```
 
 You can store this file as `deploy.sh`, save it to the root directory of YourProject. Every time after you've make all the changes you want, at the root directory of YourProject, simply run `bash deploy.sh` and Github and Netlify will deploy by themseles. 
+
+Finally, you can view the final product of the example I provided above [here](https://legacy-jupyterbook.netlify.app/). And [here](https://github.com/hongtaoh/legacy-jupyterbook) is the GitHub repository. 
 
 # Changing content
 I am not detailing how to customize the content here. You simply need to change it in the `content` folder at the root directory, and then make corressponding changes to `toc.yml` under the `_data` folder. You can find more information in the [official guide](https://legacy.jupyterbook.org/intro.html)
