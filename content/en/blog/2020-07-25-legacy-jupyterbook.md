@@ -1,7 +1,7 @@
 ---
 title: How to Use Legacy Jupyterbook
 date: 2020-07-25T16:13:58-04:00
-author: Hongtao 
+author: Hongtao Hao
 slug: legacy-jupyterbook
 draft: false
 toc: true
