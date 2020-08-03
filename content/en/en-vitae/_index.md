@@ -44,7 +44,7 @@ type : nolisting
 - 2019 May, Journalist, *St.Gallen Symposium Magazine*, Switzerland 
 
   - ["It's not just about spending more money."](https://www.symposium.org/articles/its-not-just-about-spending-more-money) (Interviewing Deputy Prime Minister of Singapore)
-  - [Freeman Shen's electric dream](https://www.symposium.org/articles/freeman-shens-electric-dream) (Interviewing CEO of WM Motor, a leading Chi- nese electric car maker)
+  - [Freeman Shen's electric dream](https://www.symposium.org/articles/freeman-shens-electric-dream) (Interviewing CEO of WM Motor, a leading Chinese electric car maker)
   - [What role should government play?](https://www.symposium.org/articles/what-role-should-governments-play) (Interviewing young politicians from India, Argentina, and Sri Lanka)
 
 - 2017 July, News Editor and Translator, *China Daily*, Beijing
