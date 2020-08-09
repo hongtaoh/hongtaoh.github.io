@@ -1,5 +1,5 @@
 ---
-title: How to update Pandoc for Rmarkdown and Bookdown
+title: How to Update Pandoc for Rmarkdown And Bookdown
 date: 2020-08-09T09:54:22-04:00
 author: Hongtao Hao
 slug: updating-pandoc

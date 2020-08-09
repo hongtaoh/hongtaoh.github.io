@@ -1,5 +1,5 @@
 ---
-title: Why so many people love Dr. Fauci
+title: Why Do So Many People Love Dr. Fauci
 date: 2020-04-19
 author: Hongtao Hao
 draft: false
