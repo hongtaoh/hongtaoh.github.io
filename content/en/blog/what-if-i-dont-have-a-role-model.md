@@ -1,5 +1,5 @@
 ---
-title: What if I don't have a role model?
+title: What If I Don't Have A Role Model?
 date: 2020-04-12
 author: Hongtao Hao
 slug: role-model
