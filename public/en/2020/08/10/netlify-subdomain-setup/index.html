@@ -109,7 +109,7 @@
 </figure>
 
 <p>The most confusing point is shown above. It asks you to add a custom domain in the format of <code>www.yourdomain.com</code>. However, that is for configuring a custom <em>domain</em>, not a custom <em>subdomain</em>. Then, what should you do?</p>
-<p>If you have your own domain, <code>www.yourdomain.com</code> and the domain for your Netlify project is <code>abc.netlify.app</code>. If you want to have a custom subdomain of <code>www.abc.yourdomain.com</code>, then you only need to input <code>abc</code> in the box (in the picture above).</p>
+<p>If you have your own domain, <code>www.yourdomain.com</code> and the domain for your Netlify project is <code>abc.netlify.app</code>. If you want to have a custom subdomain of <code>www.abc.yourdomain.com</code>, then you only need to input <code>abc.yourdomain.com</code> in the box (in the picture above).</p>
 <p>Then, follow the instruction <a href="https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-a-subdomain" target="_blank" rel="noreferrer noopener">here</a>
 
 . What you should do is simply add a <strong>CNAME record</strong> with <code>abc</code> as the <strong>host</strong> and <code>abc.netlify.app</code> as the <strong>value</strong>.</p>
