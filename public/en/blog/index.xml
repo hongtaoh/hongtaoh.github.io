@@ -11,6 +11,17 @@
     
     
     <item>
+      <title>How to Set up A Custom Subdomain For Netlify</title>
+      <link>https://hongtaoh.github.io/en/2020/08/10/netlify-subdomain-setup/</link>
+      <pubDate>Mon, 10 Aug 2020 14:45:39 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/08/10/netlify-subdomain-setup/</guid>
+      <description>To configure a custom subdomain for Netlify (for example, to point legacy-jupyterbook.hongtaoh.com to legacy-jupyterbook.netlify.app) should be very easy, but the instructions on Netlify can be a little confusing, even misleading.
+The most confusing point is shown below. It asks you to add a custom domain in the format of www.yourdomain.com. However, that is for configuring a custom domain, not a custom subdomain. Then, what should you do.
+  The confusing instruction   For example, if you have your own domain, www.</description>
+    </item>
+    
+    <item>
       <title>How to Update Pandoc for Rmarkdown And Bookdown</title>
       <link>https://hongtaoh.github.io/en/2020/08/09/updating-pandoc/</link>
       <pubDate>Sun, 09 Aug 2020 09:54:22 -0400</pubDate>

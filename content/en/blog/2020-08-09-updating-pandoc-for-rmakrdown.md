@@ -33,7 +33,7 @@ I have to say that I didn't verify whether the way suggested by Yihui will work.
 
 My solution was inspired by [the post above](https://community.rstudio.com/t/how-to-make-r-markdown-use-an-updated-version-of-pandoc-on-my-mac/19923).
 
-First, you need to check the version of `Pandoc` that is used by Rstudio. Simply input `/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc -v` in your terminal, as suggested by [Andrea](https://community.rstudio.com/t/how-to-make-r-markdown-use-an-updated-version-of-pandoc-on-my-mac/19923). If the output shows that Rstudio is using an older version of `Pandoc` rather than the new version you just downloaded, then you can do the following to manually upgrade it. 
+First, you need to check the version of `Pandoc` that is used by Rstudio. Simply input `/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc -v`[^1] in your terminal, as suggested by [Andrea](https://community.rstudio.com/t/how-to-make-r-markdown-use-an-updated-version-of-pandoc-on-my-mac/19923). If the output shows that Rstudio is using an older version of `Pandoc` rather than the new version you just downloaded, then you can do the following to manually upgrade it. 
 
 Simply use `open -a Finder /Applications/RStudio.app/Contents/MacOS/pandoc/` to open the folder where `Pandoc` used by Rstudio is stored. Copy the new `Pandoc` (by `open -a Finder A/B/C`, the code in the first step of Yihui's solution, as shown above.) and paste it to `/Applications/RStudio.app/Contents/MacOS/pandoc/`.
 
@@ -41,6 +41,6 @@ It should work.
 
 However, as Yihui also noted [here](https://community.rstudio.com/t/updated-pandoc-now-getting-an-error-when-i-knit-dyld-lazy-symbol-binding-failed/47692/4). Pandoc 2.9. x or higher versions might not work for lower version of MacOS.
 
-
+[^1]: Of course, you can also use `rmarkdown::pandoc_version()` in Rstudio to see the pandoc version used by Rstudio. 
 
 
