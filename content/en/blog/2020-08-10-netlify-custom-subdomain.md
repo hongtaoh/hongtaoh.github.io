@@ -12,7 +12,7 @@ To configure a custom subdomain for Netlify (for example, to point `legacy-jupyt
 
 The most confusing point is shown above. It asks you to add a custom domain in the format of `www.yourdomain.com`. However, that is for configuring a custom *domain*, not a custom *subdomain*. Then, what should you do?
 
-If you have your own domain, `www.yourdomain.com` and the domain for your Netlify project is `abc.netlify.app`. If you want to have a custom subdomain of `www.abc.yourdomain.com`, then you only need to input `abc` in the box (in the picture above). 
+If you have your own domain, `www.yourdomain.com` and the domain for your Netlify project is `abc.netlify.app`. If you want to have a custom subdomain of `www.abc.yourdomain.com`, then you only need to input `abc.yourdomain.com` in the box (in the picture above). 
 
 Then, follow the instruction [here](https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-a-subdomain). What you should do is simply add a **CNAME record** with `abc` as the **host** and `abc.netlify.app` as the **value**. 
 
