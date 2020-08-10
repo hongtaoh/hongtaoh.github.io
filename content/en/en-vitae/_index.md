@@ -27,7 +27,13 @@ type : nolisting
 
 ## Projects
 
-- [MSCH-C101 at Indiana University](https://c101.hongtaoh.com/)
+### Big:
+
+- MSCH-C101 at Indiana University ([Website](https://c101.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
+
+### Small:
+- Hugo Tutorial([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
+- Using Legacy Jupyterbook ([Website](https://legacy-jupyterbook.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/legacy-jupyterbook))
 
 ## Awards & Honors
 

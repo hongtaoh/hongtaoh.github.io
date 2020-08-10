@@ -200,7 +200,7 @@ Replace the contents in that file with these codes:
 {{ partial "footer.html" . }}
 ```
 
-This solution came from [Daijaing Li's personal website](https://github.com/rbind/daijiang). His website is a great example of how to utilize the Lithium theme. Feel free to git clone his website. 
+This solution came from [Daijaing Li's personal website](https://github.com/rbind/daijiang). His website is a great example of how to utilize the Lithium theme. Feel free to `git clone` his website. 
 
 Save the changes and then refresh the browser, now the posts in the homepage should be gone. 
 
