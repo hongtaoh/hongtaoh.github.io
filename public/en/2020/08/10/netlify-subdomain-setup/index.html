@@ -102,14 +102,14 @@
 
 <div class="body-text list-text">
 <p>To configure a custom subdomain for Netlify (for example, to point <code>legacy-jupyterbook.hongtaoh.com</code> to <code>legacy-jupyterbook.netlify.app</code>) should be very easy, but the instructions on Netlify can be a little confusing, even misleading.</p>
-<p>The most confusing point is shown below. It asks you to add a custom domain in the format of <code>www.yourdomain.com</code>. However, that is for configuring a custom <em>domain</em>, not a custom <em>subdomain</em>. Then, what should you do.</p>
 <figure>
     <img src="/media/enblog/netlify-subdomain-setup.png"/> <figcaption>
             <h4>The confusing instruction</h4>
         </figcaption>
 </figure>
 
-<p>For example, if you have your own domain, <code>www.yourdomain.com</code> and the domain for your Netlify project is <code>abc.netlify.app</code>. If you want to have a custom subdomain of <code>www.abc.yourdomain.com</code>, then you only need to input <code>abc</code> in the box shown below.</p>
+<p>The most confusing point is shown above. It asks you to add a custom domain in the format of <code>www.yourdomain.com</code>. However, that is for configuring a custom <em>domain</em>, not a custom <em>subdomain</em>. Then, what should you do?</p>
+<p>If you have your own domain, <code>www.yourdomain.com</code> and the domain for your Netlify project is <code>abc.netlify.app</code>. If you want to have a custom subdomain of <code>www.abc.yourdomain.com</code>, then you only need to input <code>abc</code> in the box (in the picture above).</p>
 <p>Then, follow the instruction <a href="https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-a-subdomain" target="_blank" rel="noreferrer noopener">here</a>
 
 . What you should do is simply add a <strong>CNAME record</strong> with <code>abc</code> as the <strong>host</strong> and <code>abc.netlify.app</code> as the <strong>value</strong>.</p>
