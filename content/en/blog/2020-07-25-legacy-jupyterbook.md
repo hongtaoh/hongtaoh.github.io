@@ -62,7 +62,7 @@ git push origin master
 ```
 The above solution come from [here](https://www.bookstack.cn/read/jupyterbook/8124f882effb2130.md#What%20is%20this%20Gemfile.lock%20file%20or%20why%20am%20I%20getting%20Jekyll%20dependency%20warnings?).
 
-Then go to [Netlify](www.netlify.com/) and connect to the GitHub repo. When deploy with Nellify, it will automatically know that this is a Jekyll theme and you don't need to change anything. I am not detailing what you can do with Netlify here. Please look for information about it by yourself if you are not familiar with it already. 
+Then go to [Netlify](www.netlify.com/) and connect to the GitHub repo. When we deploy the Jupyterbook project with Nellify, it will automatically know that this is a Jekyll theme and you don't need to change anything. I am not detailing what you can do with Netlify here. Please look for information about it by yourself if you are not familiar with it already. 
 
 If you want to make changes later, first please `cd path/to/YourProject` and then use the following script:
 
