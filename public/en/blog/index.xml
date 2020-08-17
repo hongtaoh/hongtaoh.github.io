@@ -11,6 +11,18 @@
     
     
     <item>
+      <title>Amazon Shipping Scam</title>
+      <link>https://hongtaoh.github.io/en/2020/08/17/amazon-shipping-scam/</link>
+      <pubDate>Mon, 17 Aug 2020 15:08:13 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/08/17/amazon-shipping-scam/</guid>
+      <description>After clicking &amp;ldquo;Buy Now&amp;rdquo;, you&amp;rsquo;ll see in &amp;ldquo;Total&amp;rdquo; that the price is much higher than it should be. This is because Amazon chooses the default shipping method which charges around $8 even though the stuff you are purchasing should include free shipping.
+What should we do then?
+Click the first row which says &amp;ldquo;Arriving &amp;hellip;&amp;quot;, and from there, choose &amp;ldquo;FREE Shipping&amp;rdquo;.
+Lesson learned: Never be deceiful as Amazon.</description>
+    </item>
+    
+    <item>
       <title>How to Set up A Custom Subdomain For Netlify</title>
       <link>https://hongtaoh.github.io/en/2020/08/10/netlify-subdomain-setup/</link>
       <pubDate>Mon, 10 Aug 2020 14:45:39 -0400</pubDate>
