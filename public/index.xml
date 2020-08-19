@@ -214,7 +214,7 @@ In this age of informaiton, it&amp;rsquo;s important to have your online presenc
       
       <guid>https://hongtaoh.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</guid>
       <description>Here is my situation: I want to use another GitHub account. I need to transfer a repo from my old account to the new one. Maybe there is an easy way to transfer, but it is beyong my ability now (I guess it&amp;rsquo;s complicated so I didn&amp;rsquo;t even bother searching for an answer).
-So I git clone the repo from my old account and tried to push it to my new accout.</description>
+So I git clone the repo from my old account and tried to push it to my new account.</description>
     </item>
     
     <item>
