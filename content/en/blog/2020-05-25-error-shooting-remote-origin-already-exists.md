@@ -8,7 +8,7 @@ toc: false
 ---
 Here is my situation: I want to use another GitHub account. I need to transfer a repo from my old account to the new one. Maybe there is an easy way to transfer, but it is beyong my ability now (I guess it's complicated so I didn't even bother searching for an answer).
 
-So I `git clone` the repo from my old account and tried to push it to my new accout. Then, a error occured: 
+So I `git clone` the repo from my old account and tried to push it to my new account. Then, a error occured: 
 
 ```bash
 fatal: remote origin already exists.
