@@ -11,6 +11,17 @@
     
     
     <item>
+      <title>Understanding igraph&#39;s degree distribution function and plotting the distribution in R</title>
+      <link>https://hongtaoh.github.io/en/2020/08/19/igraph-distribution/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/08/19/igraph-distribution/</guid>
+      <description>The R package igraph is very useful. However, its degree and degree_distribution function is not so straightforward. Also, it might be challenging to plot degree distribution.
+Getting a deeper understanding of degree() and degree_distribution() To explore these two function, let’s first draw a simple network.
+library(igraph) g1 &amp;lt;- graph( edges=c(1,2, 1,3, 2,3, 3,4), n=4, directed=FALSE) plot(g1) Okay, now let’s have a look at its nodes’ degrees and its degree distribution.</description>
+    </item>
+    
+    <item>
       <title>Amazon Shipping Scam</title>
       <link>https://hongtaoh.github.io/en/2020/08/17/amazon-shipping-scam/</link>
       <pubDate>Mon, 17 Aug 2020 15:08:13 -0400</pubDate>
