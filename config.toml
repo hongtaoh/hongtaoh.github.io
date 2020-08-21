@@ -46,9 +46,13 @@ en = "/en/:year/:month/:day/:slug/"
     url = "cn/thoughts/"
     weight = 4
 [[menu.cn]]
+    name = "学英语"
+    url = "cn/english/"
+    weight = 5
+[[menu.cn]]
     name = "English"
     url = "/"
-    weight = 5
+    weight = 6
 
 [params]
     description = "Peronal website of Hongtao Hao"
