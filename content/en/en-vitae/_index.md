@@ -61,7 +61,8 @@ type : nolisting
 ## Teaching Experience
 - 2020 Spring, Associate Instructor for MSCH-C101
    - Built a class website for my students: [C101 with Hongtao](https://c101.hongtaoh.com/)
-- 2018-2019, Graduate Assistant, The Media School of Indiana University Bloomington
+- 2019 Spring & Fall, Graduate Assistant for C207-Intro to Media Industry and Management by Matt Pierce, 125 students
+- 2018 Fall, Graduate Assistant for C200-The Videogame Industry by Nathan Mishler, 60 students
 - 2016 June-July, English Writing Instructor, New Oriental Education and Technology Inc., Beijing
    - Worked intensively for two months with over 200 hours of practice after three-month training in pedagogy
 
