@@ -15,7 +15,7 @@ For example, if we have a chunk label without a figure caption:
 plot(pressure)
 ```
 
-We cannot reference it: Figure \@ref(fig: first-label). 
+We cannot reference it: Figure \@ref(fig:first-label). 
 
 This is because without a figure caption, the figure won't be numbered. Without a number, the figure cannot be referenced. 
 
