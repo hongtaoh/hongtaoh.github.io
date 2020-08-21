@@ -10,7 +10,7 @@ output:
     toc: true
 ---
 ******
-The R package `igraph` is very useful. However, its `degree` and `degree_distribution` function is not so straightforward. Also, it might be challenging to plot degree distribution. 
+The R package `igraph` is very useful. However, its `degree()` and `degree_distribution()` function is not so straightforward. Also, it might be challenging to plot degree distribution. 
 
 # Getting a deeper understanding of degree() and degree_distribution()
 
