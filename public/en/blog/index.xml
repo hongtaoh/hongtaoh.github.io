@@ -18,7 +18,7 @@
       <guid>https://hongtaoh.github.io/en/2020/08/21/do-include-a-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown/</guid>
       <description>Yihui documented figure referencing very well. There is only one thing I need to add: do remember to add a figure caption if you want to reference it.
 For example, if we have a chunk label without a figure caption:
-plot(pressure) We cannot reference it: Figure @ref(fig: first-label).
+plot(pressure) We cannot reference it: Figure ??.
 This is because without a figure caption, the figure won’t be numbered. Without a number, the figure cannot be referenced.
 Simply adding a figure caption solves the problem:</description>
     </item>
