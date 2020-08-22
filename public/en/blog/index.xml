@@ -24,6 +24,15 @@ Simply adding a figure caption solves the problem:</description>
     </item>
     
     <item>
+      <title>Reading &#34;gml&#34; file using igraph</title>
+      <link>https://hongtaoh.github.io/en/2020/08/21/reading-gml-file-using-igraph/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/08/21/reading-gml-file-using-igraph/</guid>
+      <description>Adding &#34;&#34;.</description>
+    </item>
+    
+    <item>
       <title>Understanding igraph&#39;s degree distribution function and plotting the distribution in R</title>
       <link>https://hongtaoh.github.io/en/2020/08/19/igraph-distribution/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
