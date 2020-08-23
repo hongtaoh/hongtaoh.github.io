@@ -35,6 +35,7 @@ Table of Contents:
 </aside>
 {{ end }}
 
+<!--
 {{ if .IsPage}}
 {{ if .File.Path}}
 {{ $Rmd := (print .File.BaseFileName ".Rmd") }}
@@ -47,6 +48,8 @@ Table of Contents:
 {{ end }}
 {{ end }}
 {{ end }}
+-->
+
 <div class="body-text list-text">
 {{ .Content }} 
 {{ if eq .Section "en"}}
