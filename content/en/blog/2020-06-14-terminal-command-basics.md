@@ -21,6 +21,19 @@ The same is for when you are changing a file's name.
 
 Simpply press `command+N`
 
+## Opening A File
+
+`open Path/to/file/file.docx`
+
+If you want to open the file with a specific application:
+
+`open Path/to/file/file.docx -a TextEdit`
+
+If the application to open the file with has more than two words:
+
+`open Path/to/file/file.docx -a "Sublime Text"`
+
+
 ## Checking Which Directory You Are Currently In
 
 ```bash
