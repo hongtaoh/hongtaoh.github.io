@@ -34,21 +34,9 @@ en = "/en/:year/:month/:day/:slug/"
     url = "/cn/"
     weight = 1
 [[menu.cn]]
-    name = "统计学"
-    url = "/cn/stats/"
-    weight = 2
-[[menu.cn]]
-    name = "编程"
-    url = "/cn/codes/"
-    weight = 3
-[[menu.cn]]
     name = "日志"
-    url = "cn/thoughts/"
+    url = "cn/blog/"
     weight = 4
-[[menu.cn]]
-    name = "学英语"
-    url = "cn/english/"
-    weight = 5
 [[menu.cn]]
     name = "English"
     url = "/"

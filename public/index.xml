@@ -36,6 +36,31 @@ After class 是说某一节课结束，而 after classes 则是说一整天的�
     </item>
     
     <item>
+      <title>区分 After Class 和 After Classes</title>
+      <link>https://hongtaoh.github.io/cn/2020/08/21/after-class-after-classes/</link>
+      <pubDate>Fri, 21 Aug 2020 16:10:58 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/08/21/after-class-after-classes/</guid>
+      <description>我在这里 和 这里 看到的解答。
+After class 是说某一节课结束，而 after classes 则是说一整天的课都结束，也就是放学了。
+例句   Xiao Ming, please go to the teacher&amp;rsquo;s office after class. 小明，下课后去老师办公室一趟。
+  Xiao Ming, let&amp;rsquo;s go partying after classes. 小明，放学后咱一起去开趴吧。
+  参考  https://english.stackexchange.com/questions/406771/after-class-vs-after-classes  https://hinative.com/en-US/questions/438363   </description>
+    </item>
+    
+    <item>
+      <title>区分 on stage, on stages, onstage, 和 on the stage</title>
+      <link>https://hongtaoh.github.io/cn/2020/08/21/stage/</link>
+      <pubDate>Fri, 21 Aug 2020 16:10:58 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/08/21/stage/</guid>
+      <description>On stage 是一个副词。它说的是一个人作为演员在舞台上表演这个状态。这里的 stage 不指某一个具体的舞台，而是取其抽象意。与其将 on stage 翻译成“在舞台上”，不如翻译成“表演、当演员1”。比如，Apart from a quick costtume change, Xiao Hong was on stage every minute of the two-hour play2. 除了快速的换了换衣服，整个两个小时的话剧，小红一直都在台上表演。
+On stages 指的是在很多个舞台上表演，这里的舞台依然是抽象意。比如，He wants to be on stages throughout Europe3
+Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可以作为形容词的用法。比如 His onstage behavior was so insane today. Onstage 作为副词更为常见，其指的是“一个人在台上”的这个状态，比如：
+ She needs to be onstage throughout the show. She walked onstage and all the audiences applauded4. Onstage, all the actors and actresses were so energetic5.</description>
+    </item>
+    
+    <item>
       <title>区分 on stage, on stages, onstage, 和 on the stage</title>
       <link>https://hongtaoh.github.io/cn/2020/08/21/stage/</link>
       <pubDate>Fri, 21 Aug 2020 16:10:58 -0400</pubDate>
@@ -256,6 +281,23 @@ In this age of informaiton, it&amp;rsquo;s important to have your online presenc
 直接在手机端查看自然可以，但是我试过几次后，发现实在不行，每次都是没看几个就坚持不下去了，而且看的时候无法做标记，第二次看还是两眼一抹黑。我想把通讯录导出来，打印出来，我可以在纸上一点点勾勾画画，做备注。
 找了很多方法，有很多程序员提倡用爬虫的方法，但是我的微信网页端无法登录，因此放弃了。最后看到一篇帖子后，我就想，也许可以把这800人截图下来。
 说干就干。我打开电脑端微信，然后把视图缩小。紧接着把通讯录一个个截图，并从01开始标号。每一个截图里大概有10位好友左右。然后把这些截图一个个拼接到 PPT 上，再打印出来。大概12页就可以把800个好友都包括进来了，而且好处是截图里包含了头像。比只导出文字要好一些。</description>
+    </item>
+    
+    <item>
+      <title>Bookdown 和 ElegantBookdown 使用心得</title>
+      <link>https://hongtaoh.github.io/cn/2020/05/26/bookdown-tips/</link>
+      <pubDate>Tue, 26 May 2020 16:00:21 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/05/26/bookdown-tips/</guid>
+      <description>最近的一周一直在调试 Bookdown 。其实，Bookdown 本身并不难，益辉大神 在他的那本 bookdown: Authoring Books and Technical Documents with R Markdown 已经介绍的非常清楚。我一直在调试的、也是我一直不会的主要集中在 PDF 的样式上，比如：
+ PDF 中的 &amp;ldquo;Chapter 1&amp;rdquo; 如何改成「第一章」？  HTML 上改的话比较容易。如果你也是用的 bookdown-demo 来开始的话，那么在根目录下找到 _bookdown.yml 这个文档，然后把 chapter_name: &amp;quot;Chapter &amp;quot; 改成 chapter_name: [&amp;quot;第 &amp;quot;, &amp;quot; 章&amp;quot;]1 就好了。
+注意，这里标点是英文的。汉字和第二个英文引号之间有一个英文空格，是为了让版面更漂亮一些。不加空格的话，就是 「第N章」，加上空格就是「第 N 章」，所以还是加上吧。
+但是，PDF 中还是显示 「Chapter N」。我知道肯定能改，但我感觉比较困难，所以就放弃了。虽然可能只是在 preamble.tex 里加一行代码的事，但我可能要花几天的时间才能知道那行代码是啥。果断放弃。
+ PDF 的空白页如何删除？
+  PDF 如何上每一页的文本对齐，而非 bookdown 预设的那样一左一右？
+  PDF 中如何更改中文引语的字体？
+  等等。
+我知道是我要求太苛刻了。Bookdown 原本主要是为网页版书籍准备的，而非 PDF 版。因此，Bookdown 官网 上摆出的那些书籍中，有一些根本就没有把 PDF 版放上去。</description>
     </item>
     
     <item>
@@ -541,6 +583,16 @@ iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepa
     </item>
     
     <item>
+      <title>R aggregate 求不同组平均数，如何处理缺失值</title>
+      <link>https://hongtaoh.github.io/cn/2020/03/06/r-aggregate-function-na/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/03/06/r-aggregate-function-na/</guid>
+      <description>今天碰到的一个问题是，用 aggregate 求不同组平均数的时候，缺失值不好处理。下面通过用 iris 这个经典数据说一下如果处理缺失值。
+iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepal.Length Sepal.Width Petal.Length Petal.Width Species ## 68 5.8 2.7 4.1 1.0 versicolor ## 24 5.1 3.3 1.7 0.5 setosa ## 4 4.6 3.1 1.5 0.2 setosa ## 54 5.5 2.3 4.0 1.3 versicolor ## 34 5.5 4.2 1.4 0.2 setosa iris[c(1,5,15,30,45,90,145),4] &amp;lt;- NA #制造缺失值 aggregate(x=iris$Petal.Width, by=list(iris$Species), FUN=mean) ## Group.1 x ## 1 setosa NA ## 2 versicolor NA ## 3 virginica NA aggregate(x=iris$Petal.</description>
+    </item>
+    
+    <item>
       <title>2020年西北大学 MTS 博士项目校园面试 － 经历和体会</title>
       <link>https://hongtaoh.github.io/cn/2020/03/01/northwestern-compus-visit/</link>
       <pubDate>Sun, 01 Mar 2020 11:05:47 -0500</pubDate>
@@ -582,6 +634,25 @@ iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepa
 我像一头狮子一样，目标始终锁定在我的希望和梦想。多少次为了一个好的 GPA 而在每一节课上认真准备好做作业，即使受到委屈也不退缩。多少次为了能有会议论文，而拼尽全力地收数据、学统计、码字。自己依然记得一个会议投稿期限到的时候，凌晨2、3点回到家里。走在漆黑小路上，内心很欣慰。
 曾国藩的一个信条是“只问耕耘，不问收获”。经历过这个过程，我发现这确实是人生应该信持的观念。当你为了梦想拼尽了全力，当你不过一切往前冲，即使最终失败，在之后的人生中，你真的可以做到不后悔，不遗憾，不会痛恨自己没有努力。
 而这，也就够了。</description>
+    </item>
+    
+    <item>
+      <title>贝叶斯统计思想入门（二)：概率</title>
+      <link>https://hongtaoh.github.io/cn/2020/02/02/bayesian-stats-chapter4/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/02/02/bayesian-stats-chapter4/</guid>
+      <description>上篇，也就是第二章，k老师主要是简单介绍了一下贝叶斯的方法。第三章是介绍了 r 语言的基本操作，这里不再介绍。从第四章开始，整本书渐渐进入主体，开始涉及贝叶斯的核心。
+第四章开始讲概率 (probability)。概率是用来描述不确定性 (uncertainty) 的。假如我现在抛一枚硬币，掉下来之后有可能是正面朝上，也可能是背面朝上。每当我们讨论一种结果的可能性的时候，我们其实在头脑里想到了所有可能的结果，这些所有可能的结果叫做样本空间 (sample space)。
+如果这个硬币质地良好，那么正面朝上的概率是 50%。如果质地粗糙，那么正面朝上的概率有可能大于50%，也可能小于50%。我们用希腊字母 θ 来表示正面朝上的概率。如果 $\theta = 50\%$ ，那说明硬币质地良好。
+另一个层面，我们对于 $\theta$ 的值其实也是有预设的。如果这枚硬币是国家铸币厂生产的，那么 θ=50% 的概率会很高，如 $p(\theta = 0.5)＝0.99$, 如果这枚硬币是小作坊生产的，那么 $p(\theta = 0.5)$ 可能只有0.01.
+回到样本空间这个概念。抛一枚硬币这个事件的样本空间有2种可能的结果：正面朝上、背面朝上。猜测硬币的质地时，样本空间有无数种可能的结果：从 $\theta ＝0.0$ 到 $\theta ＝1.0$ 之间所有的数字都有可能。
+你可能像我一样对掷硬币已经不耐烦了，因为已经在太多教材中看过。但是k教授说到，掷硬币可以用来代表几乎所有二元性的事件：选a还是选b、药物有效还是无效、正确还是错误等等。所以我们还是要研究掷硬币。
+当我们说，一个质地良好的硬币，正面朝上的概率是50%时，我们是说，将这个硬币抛掷无数次，有50%的次数是正面朝上的。也就是说，这个概率是指，从长远来看的相对频率。
+有两种方法来获取这个从长远来看的相对频率：
+ 模拟； 数学公式推导  第一种方法，模拟。我们用 R 语言来模拟。假设计算机预算 $\theta = 0.8$，也就是正面朝上的概率是 80％，但是我们不知道。我们只能通过观察计算机的掷币结果来推测。
+下面我们在计算机上模拟抛掷一枚 $\theta = 0.8$ 的硬币一万次。代码1如下：
+n &amp;lt;- 10000 pheads &amp;lt;- 0.8 flips&amp;lt;-sample (x=c(0,1),prob=c(1-pheads, pheads),size=n, replace=TRUE) num.heads &amp;lt;- cumsum(flips) total.toss &amp;lt;- c(1:n) prob.</description>
     </item>
     
     <item>
@@ -656,6 +727,35 @@ Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，�
     </item>
     
     <item>
+      <title>Hugo 如何部署到 Github Pages</title>
+      <link>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</link>
+      <pubDate>Wed, 22 Jan 2020 17:04:17 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</guid>
+      <description>正好自己要重新做一遍，我便在这里把步骤记录下来。
+Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，一个是 YOUR-PROJECT&amp;gt; (e.g. blog)，另一个是 &amp;lt;USERNAME&amp;gt;.github.io 。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 public 文件夹。
+这种设置的问题在于，你的博客更新的可能不仅仅是内容，掌管着网页格式的 layout 文件以及 css 文件也可能会更新。如果你需要让别人看到你的网页格式源代码，即，你的 layout 文件以及 css 文件，那么你每次更新的时候，不仅需要更新 &amp;lt;USERNAME&amp;gt;.github.io ，还需要更新 YOUR-PROJECT&amp;gt; (e.g. blog)。这一点，那篇教程 也提到了：
+ You can then run ./deploy.sh &amp;ldquo;Your optional commit message&amp;rdquo; to send changes to .github.io. Note that you likely will want to commit changes to your  repository as well.
+ 我在 Amber Thomas 的 这篇帖子 找到了解决办法：在 &amp;lt;USERNAME&amp;gt;.github.io  仓库中建两个分支 (brance): sources 和 master。其中 sources 放 Hugo 文件夹所有内容，master 只放 public 文件夹内容。</description>
+    </item>
+    
+    <item>
+      <title>Hugo 如何实现脚注</title>
+      <link>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</link>
+      <pubDate>Tue, 21 Jan 2020 12:22:37 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</guid>
+      <description>Hugo 从 v0.60.0 开始，Markdown 解析器不再使用 Blackfriday , 改用由 yuin 1 编写的 goldmark 。
+这次变动我目前感觉比较明显的是：
+blackfriday 支持 免计数 形式的脚注。所谓免计数，就是说，你可以在文本后直接跟脚注的具体内容，比如
+比如[^看到了吗？] 这种形式在 blackfriday 是支持的，但是 goldmark 不支持，你必须这样：
+比如[^1] 然后在文末，加上以下内容才可以：
+[^1]: 看到了吗？ 这一点，有人在 Github 上提过 ，想在 goldmark 中实现 免计数 脚注，但是目前貌似依然不支持。
+  应该是一个日本人，他的 Github 网页在这里 &amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+    <item>
       <title>Hugo 如何实现脚注</title>
       <link>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</link>
       <pubDate>Tue, 21 Jan 2020 12:22:37 -0500</pubDate>
@@ -682,6 +782,16 @@ blackfriday 支持 免计数 形式的脚注。所谓免计数，就是说，你
     </item>
     
     <item>
+      <title>Hugo 如何使用思源宋体</title>
+      <link>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</link>
+      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</guid>
+      <description>先给自己填一个坑。 主要参考：
+ Indev. Journal  Reuixiy  Another random blog   </description>
+    </item>
+    
+    <item>
       <title>中美自黑文化的差异</title>
       <link>https://hongtaoh.github.io/cn/2020/01/18/underbrag-cn-and-usa/</link>
       <pubDate>Sat, 18 Jan 2020 11:19:33 -0500</pubDate>
@@ -695,6 +805,22 @@ blackfriday 支持 免计数 形式的脚注。所谓免计数，就是说，你
 但是美国的话，貌似不仅限于“自”黑，你也可以黑你的身份。比如，你说“我就是个傻不愣登的美国人”，没有人会觉得有什么不妥。
 这种差异的底端原因是什么呢？
 不知道。</description>
+    </item>
+    
+    <item>
+      <title>贝叶斯统计思想入门（一)：概述</title>
+      <link>https://hongtaoh.github.io/cn/2020/01/18/bayesian-stats-chapter2/</link>
+      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/01/18/bayesian-stats-chapter2/</guid>
+      <description>前言：这篇文章是我上约翰.克鲁斯克老师 (John Kruschke ) 的《贝叶斯数据分析》 (P533: Bayesian Data Analysis ) 这门课时，在课下看他的教材 Doing Bayesian Data Analysis (Second Edition)  所做的笔记。
+贝叶斯的本质是对于可能性1(credibility) 的重置 (reallocation)。比如，早上刚出家门，你看到门前地面是湿的。这个有很多种可能的原因：下雨了、小孩子撒尿了、环卫工人刚打扫了、物业洒水车刚洒了水、有人不小心把水杯里的水洒出来了、外星人来过自己的家然后离开的时候不小心留下的痕迹&amp;hellip;这些所有的可能，在我们获得进一步数据之前，都有着自己的先验概率 (prior probability)。这些先验概率，是我们主观上认为的可能性，比如根据我们往常的生活经验，下雨的可能性要比外星人到访高的多。虽然高得多，我们获得的信息毕竟是有限的，因为我们只是观察了门前的一小块地。因此，这些可能性都是存在的。
+然后，我们接着在路上走，发现不仅整条路都是湿的，而且房屋顶都是湿的，那么我们对概率进行重置：下雨的可能性进步一提升，而之前有可能的洒水车洒过水的可能性下降，因为洒水车不可能把水洒到房顶上。
+Kruschke 老师的教材中的图2.1 对这一过程进行了进一步阐释。这张图展示了从一开始认为 A, B, C, D 都有可能是罪犯，而且可能性相同，然后一步一步找到新的线索，最后认定 D 是罪犯的过程。
+  图2.1, 来源: Kruschke 老师的教材 p.17   贝叶斯统计中很关键的一步是找到可能的解释情况。比如看到门前的路面是湿的，我们已经想到了很多可能的情况，但是不可能把这些情况穷尽。比如，也有可能是一个人在正好经过你的家门的时候，接到一个电话，然后她就哭了，于是门前的路面就湿了，等等。我们也不用试着去穷尽可能情况，只需要找到我们感兴趣的几个情况就好。通过分析，我们可以看到这几个情况是否很好地解释了我们观察到的数据，如果没有，那么我们再去找别的可能的情况。这一过程叫做 posterior predictive check.
+很多的时候，一种可能性由一个数学公式来代表，然后看哪个公式可以更好得描述观察到的数据（具体来说，是看是否契合数据的趋势 (trends)以及分散度 (spread) 。从图2.4 可以看到， 两个数学公式中，明显第一个公式更好地描述了观察到的数据。需要注意的是，数学公式和观察到的数据之间并不存在因果关系。
+  图2.4, 来源: Kruschke 老师的教材 p.23   Kruschke 老师举了一个身高－体重的例子。图2.5 左边的图中，小圆圈代表了具体的每个人的身高－体重数据。
+  图2.5, 来源: Kruschke 老师的教材 p.</description>
     </item>
     
     <item>
@@ -785,6 +911,22 @@ Kruschke 老师的教材中的图2.1 对这一过程进行了进一步阐释。�
   外研社比赛我从大一就开始关注，每年都会参加，算来我总共参加了六次，演讲三次，写作两次，阅读一次，虽然演讲和写作由于各种原因（其实就是因为自己渣&amp;hellip;) 没进入国赛。 &amp;#x21a9;&amp;#xfe0e;
  请注意，这篇文章是我在2015年写的，外研社的阅读大赛都已经经过了4、5年的变化了，以此我不敢保证我的经验对于目前的比赛还有用。 &amp;#x21a9;&amp;#xfe0e;
    </description>
+    </item>
+    
+    <item>
+      <title>如何将 Hugo 部署到 Netlify</title>
+      <link>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</guid>
+      <description>首先，什么是部署？为什么要部署？
+其实，准确的说，我们要做的是先把我们在本地的 hugo 文件夹托管到 github，这是第一步。第二步将 hugo 文件夹中的 public 文件夹与 netlify 连接起来，这样 public 文件夹里的内容就变成了我们想要的网站。
+我们部署网站的目的就是让本地的内容可以送达互联网，这样别人才能看到我们创作的内容。
+hugo的官方文档 讲到了如何部署到 netlify，但是第一步，即，先将本地的hugo文件托管到 github，它没有讲。Allison Hill 写的 hugo建站教程 也提到了部署到netlify的方法，但是她漏了一项，即，写入 netlify.toml 这个文件。谢益辉大神写的 blogdown: Creating Websites with R Markdown 这本书对我帮助非常大，但是很奇怪的是，书中涉及到 netlify部署 只是非常简单地介绍了一下原理，对于具体流程则没有涉及。此外，Marvin&amp;rsquo;s Blog 以及 Sulinehk&amp;rsquo;s blog 也都专门讲过 hugo 的 netlify 部署，但是有些内容有些过时，比如自定义域名时的DNS设置。
+这篇帖子是针对像我一样的计算机小白的，我会详细把每一步解释清楚。以下主要以苹果电脑为例，使用windows系统的同学可以作为参考，但我不保证过程正确。
+一、创建本地 hugo 文件夹 这个文件夹是你一开始通过hugo new site xxx 建立的那个文件夹，比如如果你用的hugo new site quickstart，那么quickstart文件夹就是我们要托管到github的本地文件夹，当然，不一定非得用quickstart这个名字，你想用mysite, myblog, hugo-website, my-website&amp;hellip;都可以。如果你还不知道怎么开始用hugo，可以参考olOwOlo的那篇 《hugo从入门到会用》 。这里我们就用quickstart为例。
+二、Github 新建仓库 首先登陆github，如果你还没有注册github账号，请参考大漠穷秋的 这篇帖子 。登陆成功之后，如下图所示，点击右上角的那个加号，然后点击&amp;rsquo;new repository&amp;rsquo;。这里的repository是仓库的意思。
+  新建 Github 仓库   点击之后，在 &amp;lsquo;repository name&amp;rsquo; 这一栏，填入任何你一个你喜欢的名字作为你的仓库名称。注意，github仓库的名称不一定非要和本地仓库名称一样，这里我用hugo-website，你可以用你喜欢的。在description中你可以对这个仓库进行描述，这样你自己以及别人可以一眼知道这个仓库是做什么的，我这里填入 &amp;ldquo;My personal website deployed on Netlify&amp;rdquo;，当然，你用中文也可以。然后，public or private 这里，我们选择默认的 public。在 &amp;ldquo;initialize this repository with a README&amp;rdquo; 这儿，我们不要加。我试过一开始加上，但是后面的步骤会很麻烦，老是出错，所以这里切记不要加</description>
     </item>
     
     <item>
