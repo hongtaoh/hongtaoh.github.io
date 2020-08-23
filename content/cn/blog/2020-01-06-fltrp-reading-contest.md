@@ -1,5 +1,5 @@
 ---
-title: 第一届”外研社杯“英语阅读大赛获奖感悟及备赛经历
+title: 第一届“外研社杯”英语阅读大赛获奖感悟及备赛经历
 author: 郝鸿涛
 date: '2020-01-06'
 slug: fltrp-reading-contest

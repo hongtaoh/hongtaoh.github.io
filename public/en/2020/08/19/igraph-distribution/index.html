@@ -108,6 +108,7 @@
 <li><a href="#how-to-draw-a-bar-chart-to-display-a-networks-degree-distribution">How to draw a bar chart to display a network’s degree distribution</a></li>
 <li><a href="#how-to-draw-a-histogram-to-display-a-networks-nodes-degrees">How to draw a histogram to display a network’s nodes degrees</a></li>
 </ul></li>
+<li><a href="#another-option">Another option</a></li>
 </ul>
 </div>
 
@@ -339,6 +340,10 @@ Figure 3: <code>vcount()-1</code> doesn’t fit quite well here
 <p>The second problem is how to set the breaks. We first used <code>breaks = 0:(max(G)+1)</code> but it will show <span class="math inline">\(k=0\)</span> and <span class="math inline">\(k=1\)</span> combined, which is not what we want. Then, we tried <code>breaks = seq(0,(max(deg_random)+1), by=0.5)</code>. It got better but was still not quite ideal. Then we set the start of the <code>seq()</code> to be <span class="math inline">\(1\)</span> and the result was good enough.</p>
 <p>The third issue is the short Y-axis scale. We solved the problem using <code>range(pretty())</code>.</p>
 </div>
+</div>
+<div id="another-option" class="section level1">
+<h1>Another option</h1>
+<p><a href="https://chengjunwang.com/">Chengjun Wang</a> <a href="https://chengjunwang.com/web_data_analysis/demo2_simulate_networks/">defined</a> the function <code>plot_degree_distribution()</code> and <code>fit_power_law()</code>, which I found to be very useful.</p>
 </div>
  
 

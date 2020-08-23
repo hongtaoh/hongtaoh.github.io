@@ -29,7 +29,7 @@ toc: false
 
 就我所知，截至目前（2018年11月）还给国际生提供全额奖学金（所谓全额奖学金，并不是说白给你钱，而是你要做助教或者助研，然后每个月给你1300-2000美金不等的生活费，然后学费全免）的新闻传播学硕士项目有（我比较熟悉传播学，对于新闻学，大家自己多搜一下）：
 
-亚利桑那大学 (Arizona University, The Department of Communication), 印第安纳大学(Indiana University, Media School)，犹他大学(University of Utah, Department of Communication), 马凯特大学 (Marquette University, Diederich College of Communication)，明尼苏达大学 (University of Minnesota, Hubbard School of Journalism & Mass Communication), 华盛顿州立大学(Washington State University, Murrow College of Communication)，普渡大学(Purdue, Brian Lamb School of Communication，但是普渡要求口语要上27）
+亚利桑那大学 (Arizona University, The Department of Communication), 印第安纳大学(Indiana University, Media School)，犹他大学(University of Utah, Department of Communication), 马凯特大学 (Marquette University, Diederich College of Communication)，明尼苏达大学 (University of Minnesota, Hubbard School of Journalism & Mass Communication), 华盛顿州立大学(Washington State University, Murrow College of Communication)，俄亥俄州立大学(The Ohio State Univeristy, School of Communication)，普渡大学(Purdue, Brian Lamb School of Communication，但是普渡要求口语要上27）
 
 以上项目是我几乎肯定会给全奖的，就是说只要录取你就会给你钱，一般不会说给你录取，但是不给钱。
 
@@ -37,7 +37,7 @@ toc: false
 
 以下是一些可能会给全奖，但是特别困难，或者我不太确定的项目：
 
-圣地亚哥州立大学 (Sen Diego State University, School of Communication), 克莱姆森大学(Clemson University, Department of Communication), 俄亥俄州立大学(The Ohio State Univeristy, School of Communication), 加州大学戴维斯分校(UC Davis, Department of Communication), 德州奥斯汀大学(UT Austin, Moody College of Communication 下的四个部门：Adversiting, Journalism, Communication Studies, RTF), 俄亥俄大学( Scripps College of Communication), 马里兰大学 (Department of Communication)，亚利桑那州立大学（Arizona State University, The Hugh Downs School of Human Communication)，爱荷华大学(The University of Iowa, Communication Studies)
+圣地亚哥州立大学 (Sen Diego State University, School of Communication), 克莱姆森大学(Clemson University, Department of Communication), 加州大学戴维斯分校(UC Davis, Department of Communication), 德州奥斯汀大学(UT Austin, Moody College of Communication 下的四个部门：Adversiting, Journalism, Communication Studies, RTF), 俄亥俄大学( Scripps College of Communication), 马里兰大学 (Department of Communication)，亚利桑那州立大学（Arizona State University, The Hugh Downs School of Human Communication)，爱荷华大学(The University of Iowa, Communication Studies)
 
 对这些项目感兴趣的朋友请自己联系一下招生负责人，问问有没有硕士全奖 (Will you provide teaching assistanships for Masters' students?)
 

@@ -302,3 +302,6 @@ To decide on the X-axis scale, we tried `vcount()-1` but the result was not idea
 The second problem is how to set the breaks. We first used `breaks = 0:(max(G)+1)` but it will show $k=0$  and $k=1$ combined, which is not what we want. Then, we tried `breaks = seq(0,(max(deg_random)+1), by=0.5)`. It got better but was still not quite ideal. Then we set the start of the `seq()` to be $1$ and the result was good enough. 
 
 The third issue is the short Y-axis scale. We solved the problem using `range(pretty())`. 
+
+# Another option
+[Chengjun Wang](https://chengjunwang.com/) [defined](https://chengjunwang.com/web_data_analysis/demo2_simulate_networks/) the function `plot_degree_distribution()` and `fit_power_law()`, which I found to be very useful. 

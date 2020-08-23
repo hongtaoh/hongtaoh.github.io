@@ -100,7 +100,7 @@ Simply adding a figure caption solves the problem:</description>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/08/19/igraph-distribution/</guid>
-      <description>Getting a deeper understanding of degree() and degree_distribution() Plotting the distribution Going back to histogram Deciding on X-axis scale Adjusting a histogram’s breaks Adjusting a histogram’s Y-axis  Conclusion How to draw a bar chart to display a network’s degree distribution How to draw a histogram to display a network’s nodes degrees    The R package igraph is very useful. However, its degree() and degree_distribution() function is not so straightforward.</description>
+      <description>Getting a deeper understanding of degree() and degree_distribution() Plotting the distribution Going back to histogram Deciding on X-axis scale Adjusting a histogram’s breaks Adjusting a histogram’s Y-axis  Conclusion How to draw a bar chart to display a network’s degree distribution How to draw a histogram to display a network’s nodes degrees  Another option   The R package igraph is very useful. However, its degree() and degree_distribution() function is not so straightforward.</description>
     </item>
     
     <item>
@@ -688,10 +688,10 @@ n &amp;lt;- 10000 pheads &amp;lt;- 0.8 flips&amp;lt;-sample (x=c(0,1),prob=c(1-p
 硕士期间好好做研究，跟着老师国际发表，然后申请美国的博士项目。
 2. 本科毕业后直接申请美国硕士项目 对于能力特别强的人，本科期间有会议论文，甚至有发表经历的朋友，可以直接申请美国的全奖硕士（申请博士的话就太难了）。这部分是这篇文章的主题，下面重点会讲美国有哪些提供全奖的新闻传播学硕士项目。
 就我所知，截至目前（2018年11月）还给国际生提供全额奖学金（所谓全额奖学金，并不是说白给你钱，而是你要做助教或者助研，然后每个月给你1300-2000美金不等的生活费，然后学费全免）的新闻传播学硕士项目有（我比较熟悉传播学，对于新闻学，大家自己多搜一下）：
-亚利桑那大学 (Arizona University, The Department of Communication), 印第安纳大学(Indiana University, Media School)，犹他大学(University of Utah, Department of Communication), 马凯特大学 (Marquette University, Diederich College of Communication)，明尼苏达大学 (University of Minnesota, Hubbard School of Journalism &amp;amp; Mass Communication), 华盛顿州立大学(Washington State University, Murrow College of Communication)，普渡大学(Purdue, Brian Lamb School of Communication，但是普渡要求口语要上27）
+亚利桑那大学 (Arizona University, The Department of Communication), 印第安纳大学(Indiana University, Media School)，犹他大学(University of Utah, Department of Communication), 马凯特大学 (Marquette University, Diederich College of Communication)，明尼苏达大学 (University of Minnesota, Hubbard School of Journalism &amp;amp; Mass Communication), 华盛顿州立大学(Washington State University, Murrow College of Communication)，俄亥俄州立大学(The Ohio State Univeristy, School of Communication)，普渡大学(Purdue, Brian Lamb School of Communication，但是普渡要求口语要上27）
 以上项目是我几乎肯定会给全奖的，就是说只要录取你就会给你钱，一般不会说给你录取，但是不给钱。
  以下是一些可能会给全奖，但是特别困难，或者我不太确定的项目：
-圣地亚哥州立大学 (Sen Diego State University, School of Communication), 克莱姆森大学(Clemson University, Department of Communication), 俄亥俄州立大学(The Ohio State Univeristy, School of Communication), 加州大学戴维斯分校(UC Davis, Department of Communication), 德州奥斯汀大学(UT Austin, Moody College of Communication 下的四个部门：Adversiting, Journalism, Communication Studies, RTF), 俄亥俄大学( Scripps College of Communication), 马里兰大学 (Department of Communication)，亚利桑那州立大学（Arizona State University, The Hugh Downs School of Human Communication)，爱荷华大学(The University of Iowa, Communication Studies)</description>
+圣地亚哥州立大学 (Sen Diego State University, School of Communication), 克莱姆森大学(Clemson University, Department of Communication), 加州大学戴维斯分校(UC Davis, Department of Communication), 德州奥斯汀大学(UT Austin, Moody College of Communication 下的四个部门：Adversiting, Journalism, Communication Studies, RTF), 俄亥俄大学( Scripps College of Communication), 马里兰大学 (Department of Communication)，亚利桑那州立大学（Arizona State University, The Hugh Downs School of Human Communication)，爱荷华大学(The University of Iowa, Communication Studies)</description>
     </item>
     
     <item>
@@ -876,7 +876,7 @@ Kruschke 老师的教材中的图2.1 对这一过程进行了进一步阐释。�
     </item>
     
     <item>
-      <title>第一届”外研社杯“英语阅读大赛获奖感悟及备赛经历</title>
+      <title>第一届“外研社杯”英语阅读大赛获奖感悟及备赛经历</title>
       <link>https://hongtaoh.github.io/cn/2020/01/06/fltrp-reading-contest/</link>
       <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
       

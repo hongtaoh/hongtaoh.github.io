@@ -38,7 +38,7 @@ Simply adding a figure caption solves the problem:</description>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/08/19/igraph-distribution/</guid>
-      <description>Getting a deeper understanding of degree() and degree_distribution() Plotting the distribution Going back to histogram Deciding on X-axis scale Adjusting a histogram’s breaks Adjusting a histogram’s Y-axis  Conclusion How to draw a bar chart to display a network’s degree distribution How to draw a histogram to display a network’s nodes degrees    The R package igraph is very useful. However, its degree() and degree_distribution() function is not so straightforward.</description>
+      <description>Getting a deeper understanding of degree() and degree_distribution() Plotting the distribution Going back to histogram Deciding on X-axis scale Adjusting a histogram’s breaks Adjusting a histogram’s Y-axis  Conclusion How to draw a bar chart to display a network’s degree distribution How to draw a histogram to display a network’s nodes degrees  Another option   The R package igraph is very useful. However, its degree() and degree_distribution() function is not so straightforward.</description>
     </item>
     
     <item>
