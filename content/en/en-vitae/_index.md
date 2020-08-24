@@ -34,7 +34,7 @@ type : nolisting
   - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
 
 ### Small:
-- Hugo Tutorial([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
+- Hugo Tutorial ([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
 - Using Legacy Jupyterbook ([Website](https://legacy-jupyterbook.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/legacy-jupyterbook))
 
 ## Awards & Honors

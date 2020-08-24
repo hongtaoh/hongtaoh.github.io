@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hongtaoh.github.io/en/2020/08/24/blogdown-continous-local-preview/</loc>
+    <lastmod>2020-08-24T17:03:35-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hongtaoh.github.io/cn/2020/08/23/zhang-and-jobs/</loc>
     <lastmod>2020-08-23T09:47:57-04:00</lastmod>
   </url>
@@ -28,7 +33,7 @@
   </url>
   
   <url>
-    <loc>https://hongtaoh.github.io/en/2020/08/21/do-include-a-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown/</loc>
+    <loc>https://hongtaoh.github.io/en/2020/08/21/including-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown/</loc>
     <lastmod>2020-08-21T11:54:47-04:00</lastmod>
   </url>
   
@@ -38,7 +43,7 @@
   </url>
   
   <url>
-    <loc>https://hongtaoh.github.io/en/2020/08/19/igraph-distribution/</loc>
+    <loc>https://hongtaoh.github.io/en/2020/08/19/plot-degree-distribution-using-igraph/</loc>
     <lastmod>2020-08-23T14:34:03-04:00</lastmod>
   </url>
   
@@ -379,7 +384,7 @@
   
   <url>
     <loc>https://hongtaoh.github.io/en/en-vitae/</loc>
-    <lastmod>2020-08-21T17:21:32-04:00</lastmod>
+    <lastmod>2020-08-24T10:47:30-04:00</lastmod>
   </url>
   
   <url>

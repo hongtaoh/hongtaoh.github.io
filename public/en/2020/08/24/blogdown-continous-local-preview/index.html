@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Do include a fig.cap when referencing a figure in Bookdown or Blogdown - 郝鸿涛::Hongtao Hao</title>
+    <title>Continous Local Preview in Blogdown - 郝鸿涛::Hongtao Hao</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
@@ -65,10 +65,10 @@
 <main class = "content" role="main">
 <div style="text-align: center">
 
-<h1 class="article-title">Do include a fig.cap when referencing a figure in Bookdown or Blogdown</h1>
+<h1 class="article-title">Continous Local Preview in Blogdown</h1>
 
 <p>Hongtao Hao 
- / 2020-08-21 </p>
+ / 2020-08-24 </p>
 
 <hr/>
 </div>
@@ -81,7 +81,7 @@
   
   
   
-  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-08-21-do-include-a-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown.Rmd'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-08-24-blogdown-continuous-local-previewing.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
   </a>
   
   
@@ -93,27 +93,31 @@
 
 
 <div class="body-text list-text">
+<p>Yihui talked about local preview in Blogdown <a href="https://bookdown.org/yihui/blogdown/workflow.html" target="_blank" rel="noreferrer noopener">here</a>
 
+ and <a href="https://bookdown.org/yihui/blogdown/local-preview.html" target="_blank" rel="noreferrer noopener">here</a>
 
+, but they were not very straightforward.</p>
+<p>How to do it then?</p>
+<p>Basically, you only need to <code>Serve Site</code> once. In the drop list of <code>Addins</code>, choose <code>Serve Site</code>. Later, when you make changes in your <code>.Rmd</code> files, you just need to save the changes by <code>Command + S</code> (in Mac) or clicking the <code>Save</code> button in Rstudio. These changes will be updated automatically. You don&rsquo;t need to shut the Rstudio down and restart it at all.</p>
+<figure>
+    <img src="/media/enblog/save-and-serve.png" width="650"/> <figcaption>
+            <h4>Save and Serve Site in Blogdown</h4>
+        </figcaption>
+</figure>
 
-<p>Yihui <a href="https://bookdown.org/yihui/bookdown/figures.html">documented</a> figure referencing very well. There is only one thing I need to add: do remember to add a figure caption if you want to reference it.</p>
-<p>For example, if we have a chunk label without a figure caption:</p>
-<pre class="r"><code>plot(pressure)</code></pre>
-<p><img src="/en/blog/2020-08-21-do-include-a-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown_files/figure-html/first-label-1.png" width="672" /></p>
-<p>We cannot reference it: Figure <a href="#fig:first-label"><strong>??</strong></a>.</p>
-<p>This is because without a figure caption, the figure won’t be numbered. Without a number, the figure cannot be referenced.</p>
-<p>Simply adding a figure caption solves the problem:</p>
-<pre class="r"><code>plot(pressure)</code></pre>
-<div class="figure"><span id="fig:second-label"></span>
-<img src="/en/blog/2020-08-21-do-include-a-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown_files/figure-html/second-label-1.png" alt="temperature-pressure" width="672" />
-<p class="caption">
-Figure 1: temperature-pressure
-</p>
-</div>
-<p>Now we can reference it: Figure <a href="#fig:second-label">1</a></p>
+<p>It&rsquo;s not limited to changes in the body of the post. I tried changes in <code>title</code>, and <code>author</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and changes in these two areas will also be shown. However, changes in <code>slug</code> didn&rsquo;t update. I didn&rsquo;t try changes in <code>date</code>.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>It depends on your own YAML setting, of course. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
  
 
-<p style="color:#777;">Last modified on 2020-08-21</p>
+<p style="color:#777;">Last modified on 2020-08-24</p>
 
 </div>
 <a href="#top"><i class="fa fa-arrow-circle-up" style="font-size: 30px; color: black;"></i></a>  

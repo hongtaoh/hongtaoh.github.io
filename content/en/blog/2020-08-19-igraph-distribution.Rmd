@@ -1,13 +1,11 @@
 ---
-title: Understanding igraph's degree distribution function and plotting the distribution in R
+title: Plotting A Network's Degree Distribution Using igraph in R
 author: Hongtao Hao
 date: '2020-08-19'
-slug: igraph-distribution
-categories: []
-tags: []
+slug: plot-degree-distribution-using-igraph
 output:
   blogdown::html_page:
-    toc: true
+    toc: yes
 ---
 ******
 The R package `igraph` is very useful. However, its `degree()` and `degree_distribution()` function is not so straightforward. Also, it might be challenging to plot degree distribution. 

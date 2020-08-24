@@ -11,11 +11,22 @@
     
     
     <item>
-      <title>Do include a fig.cap when referencing a figure in Bookdown or Blogdown</title>
-      <link>https://hongtaoh.github.io/en/2020/08/21/do-include-a-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown/</link>
+      <title>Continous Local Preview in Blogdown</title>
+      <link>https://hongtaoh.github.io/en/2020/08/24/blogdown-continous-local-preview/</link>
+      <pubDate>Mon, 24 Aug 2020 17:03:35 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/08/24/blogdown-continous-local-preview/</guid>
+      <description>Yihui talked about local preview in Blogdown here and here , but they were not very straightforward.
+How to do it then?
+Basically, you only need to Serve Site once. In the drop list of Addins, choose Serve Site. Later, when you make changes in your .Rmd files, you just need to save the changes by Command + S (in Mac) or clicking the Save button in Rstudio. These changes will be updated automatically.</description>
+    </item>
+    
+    <item>
+      <title>Including `fig.cap` when referencing a figure in Bookdown or Blogdown</title>
+      <link>https://hongtaoh.github.io/en/2020/08/21/including-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown/</link>
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hongtaoh.github.io/en/2020/08/21/do-include-a-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/08/21/including-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown/</guid>
       <description>Yihui documented figure referencing very well. There is only one thing I need to add: do remember to add a figure caption if you want to reference it.
 For example, if we have a chunk label without a figure caption:
 plot(pressure) We cannot reference it: Figure ??.
@@ -24,20 +35,21 @@ Simply adding a figure caption solves the problem:</description>
     </item>
     
     <item>
-      <title>Reading &#34;gml&#34; file using igraph</title>
+      <title>Reading graphs using igraph in R</title>
       <link>https://hongtaoh.github.io/en/2020/08/21/reading-gml-file-using-igraph/</link>
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/08/21/reading-gml-file-using-igraph/</guid>
-      <description>Adding &#34;&#34;.</description>
+      <description>You can read the official documentation on read_graph() here for more info. Be sure to put the file name in between quotation marks. For example:
+library(igraph) read_graph(&amp;quot;lesmiss.gml&amp;quot;, format = &amp;quot;gml&amp;quot;) For more information on how to read local files, refer to this post.</description>
     </item>
     
     <item>
-      <title>Understanding igraph&#39;s degree distribution function and plotting the distribution in R</title>
-      <link>https://hongtaoh.github.io/en/2020/08/19/igraph-distribution/</link>
+      <title>Plotting A Network&#39;s Degree Distribution Using igraph in R</title>
+      <link>https://hongtaoh.github.io/en/2020/08/19/plot-degree-distribution-using-igraph/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hongtaoh.github.io/en/2020/08/19/igraph-distribution/</guid>
+      <guid>https://hongtaoh.github.io/en/2020/08/19/plot-degree-distribution-using-igraph/</guid>
       <description>Getting a deeper understanding of degree() and degree_distribution() Plotting the distribution Going back to histogram Deciding on X-axis scale Adjusting a histogram’s breaks Adjusting a histogram’s Y-axis  Conclusion How to draw a bar chart to display a network’s degree distribution How to draw a histogram to display a network’s nodes degrees  Another option   The R package igraph is very useful. However, its degree() and degree_distribution() function is not so straightforward.</description>
     </item>
     
