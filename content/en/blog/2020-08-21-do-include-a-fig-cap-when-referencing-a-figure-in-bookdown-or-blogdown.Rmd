@@ -1,11 +1,8 @@
 ---
-title: Do include a fig.cap when referencing a figure in Bookdown or Blogdown
+title: Including `fig.cap` when referencing a figure in Bookdown or Blogdown
 author: Hongtao Hao
 date: '2020-08-21'
-slug: do-include-a-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown
-categories: []
-tags: []
-toc: []
+slug: including-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown
 ---
 Yihui [documented](https://bookdown.org/yihui/bookdown/figures.html) figure referencing very well. There is only one thing I need to add: do remember to add a figure caption if you want to reference it. 
 
