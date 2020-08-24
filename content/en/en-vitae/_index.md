@@ -29,7 +29,9 @@ type : nolisting
 
 ### Big:
 
-- MSCH-C101 at Indiana University ([Website](https://c101.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
+- MSCH-C101 with Hongtao ([Website](https://c101.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
+
+  - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
 
 ### Small:
 - Hugo Tutorial([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
