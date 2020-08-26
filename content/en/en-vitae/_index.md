@@ -72,14 +72,14 @@ type : nolisting
 - 2019, Reviewer for International Communication Association
 
 ## Graduate Coursework
-1. [Intro to Bayesian Data Analysis](https://jkkweb.sitehost.iu.edu/jkkteach/P533/) (2020 Spring; Dr. John Kruschke)
+1. [Introduction to Bayesian Data Analysis I](https://jkkweb.sitehost.iu.edu/jkkteach/P533/) (2020 Spring; Dr. John Kruschke)
 2. [Data Visualization](http://yyahn.com/dviz-course/) (Dr. YY Ahn)
 3. Quantitative Methods for Public Health Research (**A+**) (Dr. Dong-Chul Seo)
-4. Intro to Stats in Media Research (**A+**) (Dr. Andrew Weaver)
+4. Introduction to Statistics in Media Research (**A+**) (Dr. Andrew Weaver)
 5. Content Analysis (Dr. Danielle Kilgo)
-6. Media Theory (Dr. Stephanie DeBore & Dr. Suzannah Comfort)
+6. Media Theories (Dr. Stephanie DeBore & Dr. Suzannah Comfort)
 7. Children and Media (**A+**) (Dr. Nicole Martins)
-8. Applied Social Science Research Methods to Media (Dr. Rob Potter)
+8. Applying Social Science Research Methods to Media (Dr. Rob Potter)
 
 
 ## Computer Skills

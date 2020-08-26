@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Reading graphs using igraph in R - 郝鸿涛::Hongtao Hao</title>
+    <title>Reading Online and Local Data Files in Rmarkdown, Bookdown, and Blogdown - 郝鸿涛::Hongtao Hao</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
@@ -65,10 +65,10 @@
 <main class = "content" role="main">
 <div style="text-align: center">
 
-<h1 class="article-title">Reading graphs using igraph in R</h1>
+<h1 class="article-title">Reading Online and Local Data Files in Rmarkdown, Bookdown, and Blogdown</h1>
 
 <p>Hongtao Hao 
- / 2020-08-21 </p>
+ / 2020-08-24 </p>
 
 <hr/>
 </div>
@@ -81,7 +81,7 @@
   
   
   
-  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-08-21-reading-gml-file-using-igraph.Rmd'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-08-24-reading-online-and-local-files-in-rmarkdown.Rmd'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
   </a>
   
   
@@ -95,11 +95,32 @@
 <div class="body-text list-text">
 
 
+<div id="TOC">
+<ul>
+<li><a href="#reading-online-files">Reading Online Files</a></li>
+<li><a href="#reading-local-files">Reading Local Files</a><ul>
+<li><a href="#specifying-paths">Specifying Paths</a></li>
+</ul></li>
+</ul>
+</div>
 
-<p>You can read the official documentation on <code>read_graph()</code> <a href="https://igraph.org/r/doc/read_graph.html">here</a> for more info. Be sure to <strong>put the file name in between quotation marks</strong>. For example:</p>
-<pre class="r"><code>library(igraph)
-read_graph(&quot;lesmiss.gml&quot;, format = &quot;gml&quot;)</code></pre>
-<p>For more information on how to read local files, refer to <a href="https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/">this post</a>.</p>
+<hr />
+<p><a href="https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/">Here</a> is a tutorial on how to read local data files in Rmarkdown. I found it very helpful. Nonetheless, I decided to write about this topic myself because the post is more complicated than it should be.</p>
+<p>We can read data files from two sources: online, or local.</p>
+<div id="reading-online-files" class="section level1">
+<h1>Reading Online Files</h1>
+<p>Reading online files is easy:</p>
+<pre class="r"><code>library(readr)
+hair &lt;- read_csv(&quot;https://hongtaoh.com/files/HGN.csv&quot;)</code></pre>
+</div>
+<div id="reading-local-files" class="section level1">
+<h1>Reading Local Files</h1>
+<p>To read local files in Rmarkdown, you can either specify the exact paths, or use the package of <code>here</code>. One thing worth noticing is that <code>R</code> can read any local files, either they are in the same root directory as your <code>Rmarkdown</code> file or not, if you specify the exact paths. However, if you use the package of <code>here</code>, the data file to be read must be in the same directory as your <code>Rmarkdown</code> file.</p>
+<div id="specifying-paths" class="section level2">
+<h2>Specifying Paths</h2>
+<pre class="r"><code>hair &lt;- read_csv(&quot;/path/to/your/file/filename.csv&quot;)</code></pre>
+</div>
+</div>
  
 
 <p style="color:#777;">Last modified on 2020-08-24</p>
