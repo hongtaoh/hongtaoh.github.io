@@ -1,0 +1,34 @@
+---
+title: Reading Online and Local Data Files in Rmarkdown, Bookdown, and Blogdown
+author: Hongtao Hao
+date: '2020-08-24'
+slug: reading-online-and-local-files-in-rmarkdown
+categories: []
+tags: []
+output:
+  blogdown::html_page:
+    toc: yes
+---
+******
+[Here](https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/) is a tutorial on how to read local data files in Rmarkdown. I found it very helpful. Nonetheless, I decided to write about this topic myself because the post is more complicated than it should be. 
+
+We can read data files from two sources: online, or local. 
+
+# Reading Online Files
+
+Reading online files is easy:
+
+```{r warning=FALSE, message=FALSE, eval=FALSE}
+library(readr)
+hair <- read_csv("https://hongtaoh.com/files/HGN.csv")
+```
+
+# Reading Local Files
+
+To read local files in Rmarkdown, you can either specify the exact paths, or use the package of `here`. One thing worth noticing is that `R` can read any local files, either they are in the same root directory as your `Rmarkdown` file or not, if you specify the exact paths. However, if you use the package of `here`, the data file to be read must be in the same directory as your `Rmarkdown` file. 
+
+## Specifying Paths
+
+```{r eval=FALSE}
+hair <- read_csv("/path/to/your/file/filename.csv")
+```
