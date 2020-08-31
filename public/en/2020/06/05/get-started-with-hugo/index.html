@@ -176,7 +176,8 @@ Table of Contents:
 </code></pre></div><p>If it shows something like <code>Hugo Static Site Generator v0.70.0-7F47B99E ...</code>, then you should be fine.</p>
 <p>Please remember your Hugo version. In the case above, the result shows that the version is <code>0.70.0</code>. Your version might be different. Write it down now since we&rsquo;ll need this version number later.</p>
 <p>Then copy and past the following codes, and press the Enter key<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site lithium <span style="color:#408080;font-style:italic"># You can change lithium to any other name you like</span>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> Desktop <span style="color:#408080;font-style:italic"># Navigate to the directory of your Desktop where we&#39;ll build our project. You can navigate to any directory you like, using cd.</span>
+hugo new site lithium <span style="color:#408080;font-style:italic"># You can change lithium to any other name you like</span>
 </code></pre></div><p>You then should see the folder named <code>lithium</code> on your Desktop.</p>
 <p>Then go to Terminal again, copy and past the following codes, and press the Enter key:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/yihui/hugo-lithium
@@ -185,9 +186,10 @@ Table of Contents:
 <p>Go to the folder &ldquo;lithium&rdquo; on your Desktop, open themes -&gt; hugo-lithium -&gt; exampleSite, and then copy the three files/folders in <code>exampleSite</code>, namely <code>config.toml</code>, <code>content</code>, and <code>static</code>. Then go to the root of your <code>lithium</code> folder<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> and paste these three files. What I mean by <strong>the root</strong>: the first level of the lithium folder, namely what you&rsquo;ll see when you first open the folder, not going deeper.</p>
 <p>Please note: If you paste these three folders at the root of your lithium folder, Mac will ask you whether you want to merge or replace files because the root already has folders/files with the same name. Replacing is better.</p>
 <p>However, you should be aware that <strong>this will eradicate</strong> all the content in your original folder. <strong>If you have important files in the original folders</strong>, you should never click <strong>Replace</strong>. In fact, if you have important data in your original folder, you&rsquo;d better generate a new site folder using <code>hugo new site ...</code> command, rather than working in the current folder.</p>
-<p>After this is done, open the <code>config.toml</code>. Change <code>baseurl = &quot;/&quot;</code> to <code>baseurl = &quot;https://yourdomain.com/&quot;</code>. Save the changes by pressing Ctrl+S on your keyboard.</p>
+<p>After this is done, open the <code>config.toml</code>. Change <code>baseurl = &quot;/&quot;</code> to <code>baseurl = &quot;https://yourdomain.com/&quot;</code>. Save the changes by pressing <code>Ctrl+S</code> on your keyboard.</p>
 <p>Then copy and past the following code, and press the Enter key<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> lithium <span style="color:#408080;font-style:italic"># Navigate to lithium</span>
+hugo server -D
 </code></pre></div><p>You should be able to see the following:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Web Server is available at http://localhost:1313/ <span style="color:#666">(</span><span style="color:#008000">bind</span> address 127.0.0.1<span style="color:#666">)</span>
 Press Ctrl+C to stop

@@ -66,6 +66,7 @@ Please remember your Hugo version. In the case above, the result shows that the 
 Then copy and past the following codes, and press the Enter key[^3]:
 
 ```bash
+cd Desktop # Navigate to the directory of your Desktop where we'll build our project. You can navigate to any directory you like, using cd.
 hugo new site lithium # You can change lithium to any other name you like
 ```
 
@@ -86,11 +87,12 @@ Please note: If you paste these three folders at the root of your lithium folder
 
 However, you should be aware that **this will eradicate** all the content in your original folder. **If you have important files in the original folders**, you should never click **Replace**. In fact, if you have important data in your original folder, you'd better generate a new site folder using `hugo new site ...` command, rather than working in the current folder.  
 
-After this is done, open the `config.toml`. Change `baseurl = "/"` to `baseurl = "https://yourdomain.com/"`. Save the changes by pressing Ctrl+S on your keyboard. 
+After this is done, open the `config.toml`. Change `baseurl = "/"` to `baseurl = "https://yourdomain.com/"`. Save the changes by pressing `Ctrl+S` on your keyboard. 
 
 Then copy and past the following code, and press the Enter key[^5]:
 
 ```bash
+cd lithium # Navigate to lithium
 hugo server -D
 ```
 

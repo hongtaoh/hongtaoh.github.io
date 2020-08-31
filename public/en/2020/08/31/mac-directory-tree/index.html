@@ -93,6 +93,111 @@
 
 
 <div class="body-text list-text">
+<p>I tried to simply the process as the original solution is still a little bit cumbersom.</p>
+<p>You can view the source codes of the GitHub Repository <a href="https://github.com/hongtaoh/tree-1.8.0" target="_blank" rel="noreferrer noopener">here</a>
+
+.</p>
+<p>What you need to do is to first open a new <code>Terminal</code>, and</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> Desktop <span style="color:#408080;font-style:italic"># Navigate to Desktop where we&#39;ll download the repo</span>
+git clone https://github.com/hongtaoh/tree-1.8.0 <span style="color:#408080;font-style:italic"># Clone the repo</span>
+mv ~/Desktop/tree-1.8.0/tree /usr/local/bin/ <span style="color:#408080;font-style:italic"># Move tree to /usr/local/bin</span>
+</code></pre></div><p>Done.</p>
+<p>You can generate the directory tree under a specific directory. For example,</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> tree-1.8.0
+tree
+</code></pre></div><p>or generate the directory by specify the exact path following <code>tree</code></p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree /anywhere/you/like/
+</code></pre></div><p>To remove <code>tree-1.8.0</code> from Desktop:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf tree-1.8.0
+</code></pre></div><hr>
+<blockquote>
+<p>You can still read the following instructions espeically you want to use only the codes from official sources for security reasons.</p>
+</blockquote>
+<p>I found a much better solution than <a href="/en/2020/08/31/mac-directory-tree/#my-previous-solution">what I previously wrote</a>
+
+. Many thanks to <a href="https://techion.com.au/blog/2018/5/24/printing-hierarchical-directory-structures" target="_blank" rel="noreferrer noopener">Michael Page&rsquo;s post</a>
+
+, <a href="https://web.archive.org/web/20130527203022/http://shaunchapman.me/post/329270449/how-to-install-the-tree-command-on-mac-os-x" target="_blank" rel="noreferrer noopener">Shaun Chapman&rsquo;s post</a>
+
+, <a href="https://superuser.com/a/359727" target="_blank" rel="noreferrer noopener">slhck&rsquo;s answer</a>
+
+, and <a href="https://superuser.com/a/448969" target="_blank" rel="noreferrer noopener">apouche&rsquo;s answer</a>
+
+.</p>
+<h1 id="intall-tree">Intall tree</h1>
+<p>Open a new <code>Terminal</code>, copy and paste the following codes, wait for a few seconds for the first several lines to run, and press <code>Enter</code> (otherwise the last line won&rsquo;t run). When you copy and past multiple lines into your <code>Terminal</code>, you should always press <code>Enter</code> to run the last line of code.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> Desktop
+curl -O ftp://mama.indstate.edu/linux/tree/tree-1.8.0.tgz
+tar xzvf tree-1.8.0.tgz
+<span style="color:#008000">cd</span> tree-1.8.0
+open Makefile -a TextEdit
+</code></pre></div><p>Then do what <a href="https://web.archive.org/web/20130527203022/http://shaunchapman.me/post/329270449/how-to-install-the-tree-command-on-mac-os-x" target="_blank" rel="noreferrer noopener">Shaun Chapman</a>
+
+ suggested:</p>
+<ol>
+<li>Comment out the following lines:</li>
+</ol>
+<figure>
+    <img src="/media/enblog/comment-linux.png" width="800"/> <figcaption>
+            <h4>Comment out these lines</h4>
+        </figcaption>
+</figure>
+
+<p>The result will be like this</p>
+<pre><code># Linux defaults:
+# CFLAGS=-ggdb -pedantic -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+#CFLAGS=-O4 -Wall  -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+#LDFLAGS=-s
+</code></pre><ol start="2">
+<li>Uncomment these lines:</li>
+</ol>
+<figure>
+    <img src="/media/enblog/uncomment-osx.png" width="700"/> <figcaption>
+            <h4>Uncomment these lines</h4>
+        </figcaption>
+</figure>
+
+<p>The result will be like this</p>
+<pre><code># Uncomment for OS X:
+# It is not allowed to install to /usr/bin on OS X any longer (SIP):
+prefix = /usr/local
+CC=cc
+CFLAGS=-O2 -Wall -fomit-frame-pointer -no-cpp-precomp
+LDFLAGS=
+MANDIR=/usr/share/man/man1
+OBJS+=strverscmp.o
+</code></pre><p>Save the changes using <code>Command + S</code>.</p>
+<p>Go back to your <code>Terminal</code>, copy and paste the following codes, and press <code>Enter</code>.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make
+sudo make install
+</code></pre></div><p>You&rsquo;ll be asked to input the passwords. Note that your input will be invisible.</p>
+<p>Installation is successful if you see</p>
+<figure>
+    <img src="/media/enblog/tree-installation.png" width="500"/> <figcaption>
+            <h4>Successful installation</h4>
+        </figcaption>
+</figure>
+
+<p>Also note that although it says that &ldquo;It is not allowed to install to /usr/bin on OS X any longer (SIP)&quot;, I can still install it. If it happens that you cannot install it, after <code>make</code>, you can try this</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv ~/Desktop/tree-1.8.0/tree /usr/local/bin/
+</code></pre></div><p>The above line will move <code>/tree-1.8.0/tree</code> to <code>usr/local/bin/</code>. <strong>Please not that you don&rsquo;t have to do this if <code>sudo make install</code> works for you!</strong></p>
+<p>Now let&rsquo;s go back to <code>Terminal</code> to delete both <code>tree-1.8.0</code> and <code>tree-1.8.0.tgz</code> since we don&rsquo;t need them anymore.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> .. <span style="color:#408080;font-style:italic"># Go back to Desktop</span>
+rm -rf tree-1.8.0
+rm -rf tree-1.8.0.tgz
+</code></pre></div><h1 id="use-tree">Use tree</h1>
+<p>Under the directory you are in, simply use <code>tree</code>. For exmaple, if you followed every of my steps above, you are in the directory of <code>tree-1.8.0</code>, then input <code>tree</code> in your <code>Terminal</code>, you&rsquo;ll see the directory tree of <code>tree-1.8.0</code>.</p>
+<p>When you are not in the directory whose structure you want to show, for example, if you open a new <code>Terminal</code> using <code>Command + N</code>, you can use</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree ~/Desktop/tree-1.8.0/
+</code></pre></div><p>to get the directory tree.</p>
+<p>I prefer the output of this method than that produced using the follwoing method, since it&rsquo;s much clearer and it has the same order as what you see in your original folder:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">├── Folder_1
+├── Folder_2
+├── Static
+│   └── Data
+│       └── YourData.csv
+└── YourBlogdownProject.RProj
+</code></pre></div><h1 id="my-previous-solution">My Previous Solution</h1>
 <p>How can I print a directory tree like this on Mac:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|____Folder_2
 |____YourBlogdownProj.RProj
@@ -108,6 +213,18 @@
 </code></pre></div><p>Save the change. Open a new <code>Terminal</code> using <code>Command + N</code>, nagivate to the folder of which you want to print a directory tree using <code>cd</code>, and simply type <code>tree</code> in your <code>Terminal</code>. A directory tree should unfold itself.</p>
 <h2 id="reference">Reference</h2>
 <ol>
+<li><a href="http://mama.indstate.edu/users/ice/tree/" target="_blank" rel="noreferrer noopener">http://mama.indstate.edu/users/ice/tree/</a>
+
+</li>
+<li><a href="https://web.archive.org/web/20130527203022/http://shaunchapman.me/post/329270449/how-to-install-the-tree-command-on-mac-os-x" target="_blank" rel="noreferrer noopener">https://web.archive.org/web/20130527203022/http://shaunchapman.me/post/329270449/how-to-install-the-tree-command-on-mac-os-x</a>
+
+</li>
+<li><a href="https://techion.com.au/blog/2018/5/24/printing-hierarchical-directory-structures" target="_blank" rel="noreferrer noopener">https://techion.com.au/blog/2018/5/24/printing-hierarchical-directory-structures</a>
+
+</li>
+<li><a href="https://superuser.com/questions/359723/mac-os-x-equivalent-of-the-ubuntu-tree-command/#448969" target="_blank" rel="noreferrer noopener">https://superuser.com/questions/359723/mac-os-x-equivalent-of-the-ubuntu-tree-command/#448969</a>
+
+</li>
 <li><a href="https://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/" target="_blank" rel="noreferrer noopener">https://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/</a>
 
 </li>
@@ -115,6 +232,9 @@
 
 </li>
 <li><a href="https://stackoverflow.com/questions/54228819/tree-command-not-found" target="_blank" rel="noreferrer noopener">https://stackoverflow.com/questions/54228819/tree-command-not-found</a>
+
+</li>
+<li><a href="https://support.apple.com/guide/terminal/move-and-copy-files-apddfb31307-3e90-432f-8aa7-7cbc05db27f7/mac" target="_blank" rel="noreferrer noopener">https://support.apple.com/guide/terminal/move-and-copy-files-apddfb31307-3e90-432f-8aa7-7cbc05db27f7/mac</a>
 
 </li>
 </ol>
