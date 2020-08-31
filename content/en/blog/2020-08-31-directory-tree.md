@@ -13,20 +13,20 @@ You can view the source codes of the GitHub Repository [here](https://github.com
 What you need to do is to first open a new `Terminal`, and 
 
 ```bash
-cd Desktop # Navigate to Desktop where we'll download the repo
+cd Desktop # Navigate to Desktop where we'll be downloading the repo
 git clone https://github.com/hongtaoh/tree-1.8.0 # Clone the repo
 mv ~/Desktop/tree-1.8.0/tree /usr/local/bin/ # Move tree to /usr/local/bin
 ```
 Done. 
 
-You can generate the directory tree under a specific directory. For example, 
+You can generate the directory tree under the current directory. For example, 
 
 ```bash
 cd tree-1.8.0
 tree
 ```
 
-or generate the directory by specify the exact path following `tree`
+or generate the directory by specifying the exact path following `tree`
 
 ```bash
 tree /anywhere/you/like/

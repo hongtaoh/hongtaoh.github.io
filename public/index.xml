@@ -19,8 +19,8 @@
       <description>I tried to simply the process as the original solution is still a little bit cumbersom.
 You can view the source codes of the GitHub Repository here .
 What you need to do is to first open a new Terminal, and
-cd Desktop # Navigate to Desktop where we&amp;#39;ll download the repo git clone https://github.com/hongtaoh/tree-1.8.0 # Clone the repo mv ~/Desktop/tree-1.8.0/tree /usr/local/bin/ # Move tree to /usr/local/bin Done.
-You can generate the directory tree under a specific directory.</description>
+cd Desktop # Navigate to Desktop where we&amp;#39;ll be downloading the repo git clone https://github.com/hongtaoh/tree-1.8.0 # Clone the repo mv ~/Desktop/tree-1.8.0/tree /usr/local/bin/ # Move tree to /usr/local/bin Done.
+You can generate the directory tree under the current directory.</description>
     </item>
     
     <item>
