@@ -31,7 +31,7 @@ Then, simply add the following on a new line:
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 ```
 
-Save the change. Open a new `Terminal` using `Command + N`, `cd` to the folder of which you want to print a directory tree, and simply type `tree` in your `Terminal`. A directory tree should unfold itself. 
+Save the change. Open a new `Terminal` using `Command + N`, nagivate to the folder of which you want to print a directory tree using `cd`, and simply type `tree` in your `Terminal`. A directory tree should unfold itself. 
 
 ## Reference
 1. [https://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/](https://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/)
