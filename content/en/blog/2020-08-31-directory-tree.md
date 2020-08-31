@@ -6,7 +6,6 @@ slug: mac-directory-tree
 draft: false
 toc: false
 ---
-
 How can I print a directory tree like this on Mac:
 
 ```bash
