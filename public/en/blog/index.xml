@@ -22,15 +22,12 @@ Basically, you only need to Serve Site once. In the drop list of Addins, choose 
     </item>
     
     <item>
-      <title>Reading Online and Local Data Files in Rmarkdown, Bookdown, and Blogdown</title>
+      <title>Reading Online and Local Data Files in Rmarkdown, Bookdown, or Blogdown</title>
       <link>https://hongtaoh.github.io/en/2020/08/24/reading-online-and-local-files-in-rmarkdown/</link>
       <pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/08/24/reading-online-and-local-files-in-rmarkdown/</guid>
-      <description>Reading Online Files Reading Local Files Specifying Paths    Here is a tutorial on how to read local data files in Rmarkdown. I found it very helpful. Nonetheless, I decided to write about this topic myself because the post is more complicated than it should be.
-We can read data files from two sources: online, or local.
-Reading Online Files Reading online files is easy:
-library(readr) hair &amp;lt;- read_csv(&amp;quot;https://hongtaoh.</description>
+      <description>Reading Online Files Reading Local Files Files in a different directory Files in a the same directory Relative path WITHOUT using here Relative path using here     Here is a tutorial on how to read local data files in Rmarkdown. I found it very helpful. Nonetheless, I decided to write on this topic again myself because that post is a bit more complicated than it should be.</description>
     </item>
     
     <item>
