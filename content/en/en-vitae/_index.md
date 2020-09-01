@@ -17,6 +17,11 @@ type : nolisting
 - 2016 ~ 2018, M.A. in Journalism, Renmin University of China (GPA:3.92/4.00)
 - 2012 ~ 2016, B.A. in English, Hebei Normal University (GPA: 3.92/4.00)
 
+## Research Experience
+
+- Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeon ("YY") Ahn](http://yongyeol.com/)
+    - Responsible for improving [COVID-19 visualizations](https://github.com/covid19-data/covid19-data)
+
 ## Peer-Reviewed Conference Presentations
 1. Hao, H. (May, 2020). *Cross-cultural comparisons of 'selfie-presentation': A content analysis*. Poster presented at the 70th Annual Conference of the International Communication Association, Converted from Australia to virtual due to COVID-19. 
     - [poster](https://hongtaoh.com/files/ICA_Poster_Actual_Size.pdf), [slides](https://hongtaoh.com/slides/ICA2020.html#1), [presentation video](https://player.vimeo.com/video/418504580), [GitHub repo](https://github.com/hongtaoh/ICA2020Poster)
@@ -25,19 +30,7 @@ type : nolisting
 4. Hao, H. (May, 2019). *Global expansion of China’s media for soft power promotion*. Paper presented at the 69th Annual Conference of the International Communication Association, Washington, DC. 
     - ***Second Top Student Paper*** 
 
-## Projects
-
-### Big:
-
-- MSCH-C101 with Hongtao ([Website](https://c101.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
-
-  - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
-
-### Small:
-- Hugo Tutorial ([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
-- Using Legacy Jupyterbook ([Website](https://legacy-jupyterbook.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/legacy-jupyterbook))
-
-## Awards & Honors
+## Honors & Fellowships
 
 - 2015, China's National Champion of the 1st ‘FLTRP Cup’ English Reading Contest, Beijing, China
    - 1<sup>st</sup>/ 200,000 undergraduate and graduate participants nationwide
@@ -47,6 +40,19 @@ type : nolisting
 - 2017, St. Gallen Wings of Excellence Award, University of St. Gallen, Switzerland
 - 2017, First Prize Academic Scholarship, Renmin University of China, Beijing, China
 - 2015, National Endeavor Fellowship, Hebei Normal Uniersity, Shijiazhuang, China
+
+## Projects
+
+### Big:
+
+- MSCH-C101 with Hongtao ([Website](https://c101.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/c101))
+
+  - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
+
+### Small:
+- Hugo Tutorial ([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
+- Using Legacy Jupyterbook ([Website](https://legacy-jupyterbook.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/legacy-jupyterbook))
+- [tree-1.8.0](https://github.com/hongtaoh/tree-1.8.0)
 
 ## Working Experience
 - 2019 May, Journalist, *St.Gallen Symposium Magazine*, Switzerland 

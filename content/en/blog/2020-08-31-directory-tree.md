@@ -37,6 +37,9 @@ To remove `tree-1.8.0` from Desktop:
 ```bash
 rm -rf tree-1.8.0
 ```
+
+I shared my answer [here](https://superuser.com/a/1582072/1214665).
+
 ---
 >You can still read the following instructions espeically you want to use only the codes from official sources for security reasons. 
 
