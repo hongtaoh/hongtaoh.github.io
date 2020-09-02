@@ -1,0 +1,24 @@
+---
+title: What I'm up to Right Now
+type : nolisting
+---
+- On my F1-OPT, volunteering as a research assistant for [Professor Yong-Yoel ("YY") Ahn](www.yongyeol.com);
+
+- Applying for PhD (2021 Fall) in communication (computational track), information science (dataviz track), and network science;
+
+- Learning D3.js through Scott Murray's [*Interactive Data Visualization for the Web, 2nd Ed.*](https://alignedleft.com/work/d3-book-2e), during which I'm helping improve and update Professor YY's [COVID-19 Data Visualization](https://github.com/covid19-data/covid19-data) project;
+
+- Learning the online version of [Info-I606 *Network Science*](http://yongyeol.com/teaching/2020SP_netsci_syllabus.pdf) taught by Professor YY, for which I am trying to create a tutorial on network sciecne for beginners like me, using [Yihui](https://yihui.org/)'s amazing [Bookdown](https://bookdown.org/yihui/bookdown/) pacakage;
+
+- Creating a website for Indiana University [Buddhist Study Association](https://www.facebook.com/buddhism.iu/), using the [Sam](https://themes.gohugo.io/hugo-theme-sam/) theme.
+
+
+### What I have been thinking of doing but haven't started yet
+- Porting the Jekyll theme [allenlab](https://github.com/mpa139/allanlab) to Hugo
+
+# You should add a new page as well: [https://nownownow.com/about](https://nownownow.com/about)
+
+
+
+
+
