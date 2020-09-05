@@ -18,7 +18,7 @@ type : nolisting
 ### What I have been thinking of doing but haven't started yet
 - Porting the Jekyll theme [allenlab](https://github.com/mpa139/allanlab) to Hugo
 
-# You should add a new page as well: [https://nownownow.com/about](https://nownownow.com/about)
+# You should add a now page as well: [https://nownownow.com/about](https://nownownow.com/about)
 
 
 
