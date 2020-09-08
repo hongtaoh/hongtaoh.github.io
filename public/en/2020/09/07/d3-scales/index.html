@@ -1,0 +1,172 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Understand D3 Scales - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hongtaoh.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/en-vitae/">Vitae</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/en/now/">Now</a></li>
+       
+       <li><a href="/cn/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How to Understand D3 Scales</h1>
+
+<p>Hongtao Hao 
+ / 2020-09-07 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-09-07-how-to-understand-d3-scales.Rmd'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+<div class="body-text list-text">
+
+
+
+<p>Most online tutorial on D3 scales, at best do not get the point, and at worst are really misleading.</p>
+<p>Before I move on, I’d like to specify two most important points I realized about D3 scales:</p>
+<ol style="list-style-type: decimal">
+<li><p>The essence of D3 scales is <strong><em>interpolation</em></strong> between two known points;</p></li>
+<li><p>D3 scales is supposed to capture <strong><em>relative positions</em></strong>, not <strong><em>absolute values</em></strong>.</p></li>
+</ol>
+<div id="why-bother-using-d3-scales-couldnt-we-plot-it-directly" class="section level2">
+<h2>Why Bother Using D3 Scales? Couldn’t We Plot It Directly?</h2>
+<p>Well, the thing is, sometimes the numbers are so big that we don’t have enough pixels to plot them directly.</p>
+<p>For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are going to plot a bar chart of this data. It would be best if we can draw it directly: five bars whose height (in pixels) is equal to the corresponding data value. The first bar will be 34 px tall, the second 59 px … the last bar 1299 px. For this dataset, it might be Okay to plot it this way. However, if we had another number, 999999, it would be impossible to draw a bar whose height is <code>999999px</code> simply because we don’t have such a big screen. That’s why we need to input domain and output range, both of which are basically intervals.</p>
+</div>
+<div id="what-are-input-domain-and-output-range" class="section level2">
+<h2>What are Input Domain and Output Range?</h2>
+<p>The input domain can be anything, as long as the minimum and the maximum number in our dataset is included in this interval. Note that the start of the input domain <strong>does not have to</strong> be <span class="math inline">\(0\)</span>. For the above dataset, let’s sat the input domain to be [30, 1300].</p>
+<p>Then what is an output range? Well, it can be anything too. Usually the output range is defined by the pixels we have. Let’s say our screen is only 120 pixels in height, and we set the output range to be [5, 110]. Again, the starting point of the output range does not have be <span class="math inline">\(0\)</span>.</p>
+</div>
+<div id="how-do-the-input-domain-and-output-range-work" class="section level2">
+<h2>How do the input domain and output range work?</h2>
+<p>What we are certain now is that the minimum (the starting point) in the input domain should also be the minimum (the starting point) of the output range. The same is for the maximum (the finishing point).</p>
+<p>The situation here is depicted in the figure below:</p>
+<p><img src="/media/enblog/d3_scale_02.png" /></p>
+<p>The question is, what are the corresponding values of <span class="math inline">\(34\)</span>, <span class="math inline">\(59\)</span>, <span class="math inline">\(109\)</span>, and <span class="math inline">\(544\)</span>?</p>
+<p>We can solve this problem can drawing a coordinate, with the X-axis representing the input domain and the Y-axis representing the output range.</p>
+<pre class="r"><code>plot(NULL, xlim = c(0, 120), ylim = c(0, 1300))
+points(5, 34, col=&quot;orange&quot;, pch=19, cex=1.5)
+points(110, 1300, col=&quot;skyblue&quot;, pch=19, cex=1.5)</code></pre>
+<p><img src="/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+ 
+
+<p style="color:#777;">Last modified on 2020-09-07</p>
+
+</div>
+<a href="#top"><i class="fa fa-arrow-circle-up" style="font-size: 30px; color: black;"></i></a>  
+</main>
+
+<footer class="footer">
+  
+
+
+
+<script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="/media/blogdown.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> Content in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+          
+     </ul>
+</footer>
+
+    </div>
+
+
+
+  </footer>
+  
+
+  </body>
+</html>
+
+

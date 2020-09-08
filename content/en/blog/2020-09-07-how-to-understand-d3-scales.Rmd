@@ -1,0 +1,48 @@
+---
+title: How to Understand D3 Scales
+author: Hongtao Hao
+date: '2020-09-07'
+slug: d3-scales
+categories: []
+tags: []
+---
+Most online tutorial on D3 scales, at best do not get the point, and at worst are really misleading. 
+
+Before I move on, I'd like to specify two most important points I realized about D3 scales:
+
+1. The essence of D3 scales is ***interpolation*** between two known points;
+
+2. D3 scales is supposed to capture ***relative  positions***, not ***absolute values***. 
+
+## Why Bother Using D3 Scales? Couldn't We Plot It Directly?
+
+Well, the thing is, sometimes the numbers are so big that we don't have enough pixels to plot them directly. 
+
+For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are going to plot a bar chart of this data. It would be best if we can draw it directly: five bars whose height (in pixels) is equal to the corresponding data value. The first bar will be 34 px tall, the second 59 px ...  the last bar 1299 px. For this dataset, it might be Okay to plot it this way. However, if we had another number, 999999, it would be impossible to draw a bar whose height is `999999px` simply because we don't have such a big screen. That's why we need to input domain and output range, both of which are basically intervals. 
+
+## What are Input Domain and Output Range?
+
+The input domain can be anything, as long as the minimum and the maximum number in our dataset is included in this interval. Note that the start of the input domain **does not have to** be $0$. For the above dataset, let's sat the input domain to be [30, 1300]. 
+
+Then what is an output range? Well, it can be anything too. Usually the output range is defined by the pixels we have. Let's say our screen is only 120 pixels in height, and we set the output range to be [5, 110]. Again, the starting point of the output range does not have be $0$. 
+
+## How do the input domain and output range work?
+What we are certain now is that the minimum (the starting point) in the input domain should also be the minimum (the starting point) of the output range. The same is for the maximum (the finishing point). 
+
+The situation here is depicted in the figure below:
+
+![](/media/enblog/d3_scale_02.png)
+
+The question is, what are the corresponding values of $34$, $59$, $109$, and $544$?
+
+We can solve this problem can drawing a coordinate, with the X-axis representing the input domain and the Y-axis representing the output range. 
+
+```{r}
+plot(NULL, xlim = c(0, 120), ylim = c(0, 1300))
+points(5, 34, col="orange", pch=19, cex=1.5)
+points(110, 1300, col="skyblue", pch=19, cex=1.5)
+```
+
+
+
+
