@@ -13,12 +13,12 @@ tags: []
 <p>Before I move on, I’d like to specify two most important points I realized about D3 scales:</p>
 <ol style="list-style-type: decimal">
 <li><p>The essence of D3 scales is <strong><em>interpolation</em></strong> between two known points;</p></li>
-<li><p>D3 scales is supposed to capture <strong><em>relative positions</em></strong>, not <strong><em>absolute values</em></strong>.</p></li>
+<li><p>D3 scales are supposed to capture <strong><em>relative positions</em></strong>, not <strong><em>absolute values</em></strong>.</p></li>
 </ol>
 <div id="why-bother-using-d3-scales-couldnt-we-plot-it-directly" class="section level2">
 <h2>Why Bother Using D3 Scales? Couldn’t We Plot It Directly?</h2>
 <p>Well, the thing is, sometimes the numbers are so big that we don’t have enough pixels to plot them directly.</p>
-<p>For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are going to plot a bar chart of this data. It would be best if we can draw it directly: five bars whose height (in pixels) is equal to the corresponding data value. The first bar will be 34 px tall, the second 59 px … the last bar 1299 px. For this dataset, it might be Okay to plot it this way. However, if we had another number, 999999, it would be impossible to draw a bar whose height is <code>999999px</code> simply because we don’t have such a big screen. That’s why we need to input domain and output range, both of which are basically intervals.</p>
+<p>For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are going to <strong>plot a bar chart of this data</strong>. It would be best if we can draw it directly: five bars whose height (in pixels) is equal to the corresponding data value. The first bar will be 34 px tall, the second 59 px … and the last 1299 px. For this dataset, it might be Okay to plot it this way. However, if we had another number, 999999, it would be impossible to draw a bar whose height is <code>999999px</code> simply because we don’t have such a big screen. That’s why we need to input domain and output range, both of which are basically intervals.</p>
 </div>
 <div id="what-are-input-domain-and-output-range" class="section level2">
 <h2>What are Input Domain and Output Range?</h2>
@@ -28,12 +28,17 @@ tags: []
 <div id="how-do-the-input-domain-and-output-range-work" class="section level2">
 <h2>How do the input domain and output range work?</h2>
 <p>What we are certain now is that the minimum (the starting point) in the input domain should also be the minimum (the starting point) of the output range. The same is for the maximum (the finishing point).</p>
+<p>That is to say, <span class="math inline">\(30\)</span> =&gt; <span class="math inline">\(5\)</span>, and <span class="math inline">\(1300\)</span> =&gt; <span class="math inline">\(110\)</span>.</p>
 <p>The situation here is depicted in the figure below:</p>
 <p><img src="/media/enblog/d3_scale_02.png" /></p>
 <p>The question is, what are the corresponding values of <span class="math inline">\(34\)</span>, <span class="math inline">\(59\)</span>, <span class="math inline">\(109\)</span>, and <span class="math inline">\(544\)</span>?</p>
-<p>We can solve this problem can drawing a coordinate, with the X-axis representing the input domain and the Y-axis representing the output range.</p>
-<pre class="r"><code>plot(NULL, xlim = c(0, 120), ylim = c(0, 1300))
-points(5, 34, col=&quot;orange&quot;, pch=19, cex=1.5)
-points(110, 1300, col=&quot;skyblue&quot;, pch=19, cex=1.5)</code></pre>
-<p><img src="/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>We can solve this problem by drawing a coordinate, with the X-axis representing the input domain and the Y-axis representing the output range.</p>
+<div class="figure" style="text-align: center"><span id="fig:input-output-mapping"></span>
+<img src="/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/input-output-mapping-1.png" alt="Mapping from input domain to output range" width="672" />
+<p class="caption">
+Figure 1: Mapping from input domain to output range
+</p>
+</div>
+<p>The two points we are certain are the orange one, which is [30, 5], and the blue one, which is [1300, 110]. Then the “mapping” is essentially we trying to interpolate from the orange point to the blue point. As we can see from Figure <a href="#fig:input-output-mapping">1</a> that there are so many different possible ways to interpolate between the two points.</p>
+<p>In our situation, we should</p>
 </div>

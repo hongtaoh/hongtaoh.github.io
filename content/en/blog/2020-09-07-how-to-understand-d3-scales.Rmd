@@ -12,13 +12,13 @@ Before I move on, I'd like to specify two most important points I realized about
 
 1. The essence of D3 scales is ***interpolation*** between two known points;
 
-2. D3 scales is supposed to capture ***relative  positions***, not ***absolute values***. 
+2. D3 scales are supposed to capture ***relative  positions***, not ***absolute values***. 
 
 ## Why Bother Using D3 Scales? Couldn't We Plot It Directly?
 
 Well, the thing is, sometimes the numbers are so big that we don't have enough pixels to plot them directly. 
 
-For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are going to plot a bar chart of this data. It would be best if we can draw it directly: five bars whose height (in pixels) is equal to the corresponding data value. The first bar will be 34 px tall, the second 59 px ...  the last bar 1299 px. For this dataset, it might be Okay to plot it this way. However, if we had another number, 999999, it would be impossible to draw a bar whose height is `999999px` simply because we don't have such a big screen. That's why we need to input domain and output range, both of which are basically intervals. 
+For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are going to **plot a bar chart of this data**. It would be best if we can draw it directly: five bars whose height (in pixels) is equal to the corresponding data value. The first bar will be 34 px tall, the second 59 px ...  and the last 1299 px. For this dataset, it might be Okay to plot it this way. However, if we had another number, 999999, it would be impossible to draw a bar whose height is `999999px` simply because we don't have such a big screen. That's why we need to input domain and output range, both of which are basically intervals. 
 
 ## What are Input Domain and Output Range?
 
@@ -29,20 +29,59 @@ Then what is an output range? Well, it can be anything too. Usually the output r
 ## How do the input domain and output range work?
 What we are certain now is that the minimum (the starting point) in the input domain should also be the minimum (the starting point) of the output range. The same is for the maximum (the finishing point). 
 
+That is to say, $30$ => $5$, and $1300$ => $110$.
+
 The situation here is depicted in the figure below:
 
 ![](/media/enblog/d3_scale_02.png)
 
 The question is, what are the corresponding values of $34$, $59$, $109$, and $544$?
 
-We can solve this problem can drawing a coordinate, with the X-axis representing the input domain and the Y-axis representing the output range. 
+We can solve this problem by drawing a coordinate, with the X-axis representing the input domain and the Y-axis representing the output range. 
 
-```{r}
-plot(NULL, xlim = c(0, 120), ylim = c(0, 1300))
-points(5, 34, col="orange", pch=19, cex=1.5)
-points(110, 1300, col="skyblue", pch=19, cex=1.5)
+```{r input-output-mapping, echo=FALSE, fig.align='center', fig.cap="Mapping from input domain to output range"}
+# Reference: https://stackoverflow.com/questions/20130017/interpolate-new-points-between-two-given-points
+x<-30:1300
+m1 <- 105 / 1270
+b1 <- 5 - m1*30
+fun1 <- function(x) m1*x + b1
+m2 <- 105 / (1300^2 - 30^2)
+b2 <- 5 - m2*(30^2)
+fun2 <- function(x) m2*x^2 + b2
+m3 <- 105 / (1300^3 - 30^3)
+b3 <- 5 - m3*(30^3)
+fun3 <- function(x) m3*x^3 + b3
+m4 <- 105 / (1300^4 - 30^4)
+b4 <- 5 - m4*(30^4)
+fun4 <- function(x) m4*x^4 + b4
+matplot(x,cbind(fun1(x),fun2(x),fun3(x),fun4(x)),
+        type="l" ,col=c("blue","red"),
+        xlab = "Input domain", ylab = "Output range",
+        main = "Mapping from input domain to output range")
+points(30, 5, col="orange", pch=19, cex=1.5)
+points(1300, 110, col="skyblue", pch=19, cex=1.5)
 ```
 
+```{r eval=FALSE, echo=FALSE}
+plot(NULL, xlim = c(0, 1300), ylim = c(0, 120), 
+     xlab = "Input domain", ylab = "Output range",
+     main = "Mapping from input domain to output range")
+lines(x, fun1(x), lty = 3)
+points (x, fun2(x), type = "p", col="red", cex=0.01)
+points (x, fun3(x), type = "p", col="green", cex=0.01)
+points (x, fun4(x), type = "p", col="blue", cex=0.01)
+# curve (fun2, from = 30, to = 1300, n =200) 
+# `This is`curve()`` not as good as `points()` because it will initiate a new plot.
+# If you really need to use it, you can add `par(new=TRUE)` before it. 
+# `plot(fun_2, 30, 1300)` This is similar to the `curve()` function above.
 
+x_approx <- c(30, 1300)
+y_approx <- c(5, 110)
+# approx(x_approx,y_approx, n=20)
+plot (approx(x_approx,y_approx, n=20))
+```
 
+The two points we are certain are the orange one, which is [30, 5], and the blue one, which is [1300, 110]. Then the "mapping" is essentially we trying to interpolate from the orange point to the blue point. As we can see from Figure \@ref(fig:input-output-mapping) that there are so many different possible ways to interpolate between the two points. 
+
+In our situation, we should 
 
