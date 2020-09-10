@@ -46,6 +46,7 @@ en = "/en/:year/:month/:day/:slug/"
     url = "/"
     weight = 6
 
+    
 [params]
     description = "Peronal website of Hongtao Hao"
     homeText = "You just need a Hugo blog from scratch"
@@ -53,6 +54,7 @@ en = "/en/:year/:month/:day/:slug/"
     MathJaxVersion = "2.7.5"
     GithubEdit = "https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/"
     favicon = "/ht10.ico"
+    footer = "&copy; Hongtao Hao 2019 -- 2020"
 
 [params.logo]
   url = "ht10.png"
