@@ -11,16 +11,12 @@
     
     
     <item>
-      <title>How to Understand D3 Scales</title>
+      <title>How to Understand D3.js Scales</title>
       <link>https://hongtaoh.github.io/en/2020/09/07/d3-scales/</link>
       <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/09/07/d3-scales/</guid>
-      <description>Most online tutorial on D3 scales, at best do not get the point, and at worst are really misleading.
-Before I move on, I’d like to specify two most important points I realized about D3 scales:
-The essence of D3 scales is interpolation between two known points;
- D3 scales are supposed to capture relative positions, not absolute values.
-  Why Bother Using D3 Scales? Couldn’t We Plot It Directly?</description>
+      <description>Why Bother Using D3 Scales? Couldn’t We Plot It Directly? What are Input Domain and Output Range? How do the input domain and output range work? D3 Scales Do Not Cpature Relative Length How does d3.scaleLinear() work? What Does d3.scaleLinear() Preserve? How to Maintain Relative Length? Closing Words Other resourses   Most online tutorial on D3 scales, at best do not get the point, and at worst are really misleading.</description>
     </item>
     
     <item>
