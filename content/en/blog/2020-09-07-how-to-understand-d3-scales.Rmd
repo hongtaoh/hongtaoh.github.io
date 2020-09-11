@@ -196,4 +196,4 @@ I found these articles on D3 scales helped me a lot, in order of helpfulness:
 4. [D3.js Scales](https://www.dashingd3js.com/d3js-scales) on [Dashing D3.js](https://www.dashingd3js.com/)
 5. [d3-scale official documentation on GitHub](https://github.com/d3/d3-scale)
 
-[^1]: Well, the min and max do not have to be within our dataset. D3 Scales can deal with this problem with `clamping`. That said, it's always better to make sure that your input domain contains all of your data.
+[^1]: Well, the min and max in our dataset do not have to be within the input domain. If they happen to be outside of the domain, D3 Scales can deal with this issue with `clamping`. That said, it's always better to make sure that your input domain contains all of your data.
