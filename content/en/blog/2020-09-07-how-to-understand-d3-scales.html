@@ -38,7 +38,7 @@ output:
 </div>
 <div id="what-are-input-domain-and-output-range" class="section level2">
 <h2>What are Input Domain and Output Range?</h2>
-<p>The input domain can be anything, as long as the minimum and the maximum number in our dataset is included in this interval. Note that the start of the input domain <strong>does not have to</strong> be <span class="math inline">\(0\)</span>. For the above dataset, let’s sat the input domain to be [30, 1300].</p>
+<p>The input domain can be anything, as long as the minimum and the maximum number in our dataset is included in this interval<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Note that the start of the input domain <strong>does not have to</strong> be <span class="math inline">\(0\)</span>. For the above dataset, let’s set the input domain to be [30, 1300].</p>
 <p>Then what is an output range? Well, it can be anything too. Usually the output range is defined by the pixels we have. Let’s say our screen is only 80 pixels in height, and we set the output range to be [10, 75]. Again, the starting point of the output range does not have be <span class="math inline">\(0\)</span>.</p>
 </div>
 <div id="how-do-the-input-domain-and-output-range-work" class="section level2">
@@ -125,5 +125,11 @@ Figure 2: D3 scales do not cpature relative length
 <li><a href="http://jonathansoma.com/tutorials/d3/using-scales/">Using scales</a> by <a href="http://jonathansoma.com/tutorials/d3/using-scales/">Jonathan Soma</a></li>
 <li><a href="https://www.dashingd3js.com/d3js-scales">D3.js Scales</a> on <a href="https://www.dashingd3js.com/">Dashing D3.js</a></li>
 <li><a href="https://github.com/d3/d3-scale">d3-scale official documentation on GitHub</a></li>
+</ol>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Well, the min and max do not have to be within our dataset. D3 Scales can deal with this problem with <code>clamping</code>. That said, it’s always better to make sure that your input domain contains all of your data.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>

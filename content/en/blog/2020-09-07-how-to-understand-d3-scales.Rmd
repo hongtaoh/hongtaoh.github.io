@@ -25,7 +25,7 @@ For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are 
 
 ## What are Input Domain and Output Range?
 
-The input domain can be anything, as long as the minimum and the maximum number in our dataset is included in this interval. Note that the start of the input domain **does not have to** be $0$. For the above dataset, let's sat the input domain to be [30, 1300]. 
+The input domain can be anything, as long as the minimum and the maximum number in our dataset is included in this interval[^1]. Note that the start of the input domain **does not have to** be $0$. For the above dataset, let's set the input domain to be [30, 1300]. 
 
 Then what is an output range? Well, it can be anything too. Usually the output range is defined by the pixels we have. Let's say our screen is only 80 pixels in height, and we set the output range to be [10, 75]. Again, the starting point of the output range does not have be $0$. 
 
@@ -195,3 +195,5 @@ I found these articles on D3 scales helped me a lot, in order of helpfulness:
 3. [Using scales](http://jonathansoma.com/tutorials/d3/using-scales/) by [Jonathan Soma](http://jonathansoma.com/tutorials/d3/using-scales/)
 4. [D3.js Scales](https://www.dashingd3js.com/d3js-scales) on [Dashing D3.js](https://www.dashingd3js.com/)
 5. [d3-scale official documentation on GitHub](https://github.com/d3/d3-scale)
+
+[^1]: Well, the min and max do not have to be within our dataset. D3 Scales can deal with this problem with `clamping`. That said, it's always better to make sure that your input domain contains all of your data.
