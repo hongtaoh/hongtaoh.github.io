@@ -4,9 +4,9 @@ type : nolisting
 ---
 2020-09-12:
 
-1. p1. Lazer. et al. (2020). Computational social science: Obstacles and opportunities. *Science, 369*(6507), 1060-1062.
+1. p1. Lazer et al. (2020). Computational social science: Obstacles and opportunities. *Science, 369*(6507), 1060-1062.
 
-2. Recapping Centola, D. (2010):
+2. Recapping Centola (2010):
 
 - Contribution: An experimental design that ran contrary to previous findings regarding the strength of weak ties. 
 - Conclusion: networks with local clustering are conducive to behavioral diffusion. 
