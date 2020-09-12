@@ -14,11 +14,7 @@ type : nolisting
 
 - Creating a website for Indiana University [Buddhist Study Association](https://www.facebook.com/buddhism.iu/), using the [Sam](https://themes.gohugo.io/hugo-theme-sam/) theme.
 
-
-### What I have been thinking of doing but haven't started yet
-- Porting the Jekyll theme [allenlab](https://github.com/mpa139/allanlab) to Hugo
-
-# You should add a now page as well: [https://nownownow.com/about](https://nownownow.com/about)
+## Perhaps you should add a now page as well: [https://nownownow.com/about](https://nownownow.com/about)
 
 
 
