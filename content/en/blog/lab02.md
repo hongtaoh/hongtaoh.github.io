@@ -4,6 +4,7 @@ title: Lab02
 date: 2020-03-21
 slug: lab02
 author: YY Ahn
+draft: true
 ---
 
 # W2 Lab: Data processing basics and John Snow's map

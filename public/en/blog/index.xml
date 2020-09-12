@@ -287,18 +287,6 @@ Error when downloading Pagedown When downloading pagedown, I tried the method re
     </item>
     
     <item>
-      <title>Lab02</title>
-      <link>https://hongtaoh.github.io/en/2020/03/21/lab02/</link>
-      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hongtaoh.github.io/en/2020/03/21/lab02/</guid>
-      <description>W2 Lab: Data processing basics and John Snow&amp;rsquo;s map Follow the contents of this notebook and answer all questions (e.g. Q1: &amp;hellip;)
-If you are not familiar with Python yet&amp;hellip; Maybe you can quickly review these basics first.
- numbers and strings ; if and for statement data structure (lists , sets , dictionaries ) functions and modules   Google&amp;rsquo;s Python Class is also a nice resource.
-Jupyter + Pandas = Awesomeness Jupyter notebook (lab) (and IPython ) and Pandas may be two most important libraries responsible for the Python&#39;s rise in data science.</description>
-    </item>
-    
-    <item>
       <title>Brain-to-brain communication and the Mindnet</title>
       <link>https://hongtaoh.github.io/en/2020/02/25/b2b-communication/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
