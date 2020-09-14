@@ -102,18 +102,34 @@
 <p>I installed Homebrew and then I wanted to delete it. So I went to <code>/usr/local/bin/</code>. I was lost. I couldn&rsquo;t know which files to delete. Since <code>/usr/local/bin/</code> is a hidden folder in Mac, I don&rsquo;t want to mess up with it. However, my urge to delete files I don&rsquo;t need to use was so strong that I ended up delete a lot of files except for <code>bin</code> in this folder<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
 <p>Out of idol curiosity, and a desire to make sure I didn&rsquo;t delete any important files, I want to check what files will be created when I install Homebrew.</p>
 <p>Here is the result:</p>
-<figure>
-    <img src="/media/enblog/uninstall-homebrew-before.png"/> <figcaption>
-            <h4>Before installation</h4>
-        </figcaption>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/uninstall-homebrew-before.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/uninstall-homebrew-before.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>Before installation</h4>
+        
+    </figcaption>
+    
 </figure>
-
-<figure>
-    <img src="/media/enblog/uninstall-homebrew-after.png"/> <figcaption>
-            <h4>After installation</h4>
-        </figcaption>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/uninstall-homebrew-after.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/uninstall-homebrew-after.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>After installation</h4>
+        
+    </figcaption>
+    
 </figure>
-
 <p>So, installing Homebrew has created all the files except for the <code>/bin</code> folder. Also, it has created a <code>brew</code> within the <code>/bin</code> folder.</p>
 <p>To uninstall Homebrew, the official method is to run <a href="https://github.com/homebrew/install#uninstall-homebrew" target="_blank" rel="noreferrer noopener">this</a>
 
@@ -136,12 +152,20 @@ The following possible Homebrew files were not deleted:
 /usr/local/share/
 /usr/local/var/
 You may wish to remove them yourself.
-</code></pre></div><figure>
-    <img src="/media/enblog/uninstall-home-brew-terminal.png"/> <figcaption>
-            <h4>Messages in Terminal</h4>
-        </figcaption>
+</code></pre></div><figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/uninstall-home-brew-terminal.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/uninstall-home-brew-terminal.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>Messages in Terminal</h4>
+        
+    </figcaption>
+    
 </figure>
-
 <p>First of all, how can we access the hidden <code>usr/</code> folder?</p>
 <p>Type this following line in your Terminal:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open -a Finder /usr/local/

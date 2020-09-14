@@ -144,12 +144,20 @@ open Makefile -a TextEdit
 <ol>
 <li>Comment out the following lines:</li>
 </ol>
-<figure>
-    <img src="/media/enblog/comment-linux.png" width="800"/> <figcaption>
-            <h4>Comment out these lines</h4>
-        </figcaption>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/comment-linux.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/comment-linux.png"
+            
+            width="800"/>
+    </a>
+    
+    <figcaption>
+        <h4>Comment out these lines</h4>
+        
+    </figcaption>
+    
 </figure>
-
 <p>The result will be like this</p>
 <pre><code># Linux defaults:
 # CFLAGS=-ggdb -pedantic -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
@@ -158,12 +166,20 @@ open Makefile -a TextEdit
 </code></pre><ol start="2">
 <li>Uncomment these lines:</li>
 </ol>
-<figure>
-    <img src="/media/enblog/uncomment-osx.png" width="700"/> <figcaption>
-            <h4>Uncomment these lines</h4>
-        </figcaption>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/uncomment-osx.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/uncomment-osx.png"
+            
+            width="700"/>
+    </a>
+    
+    <figcaption>
+        <h4>Uncomment these lines</h4>
+        
+    </figcaption>
+    
 </figure>
-
 <p>The result will be like this</p>
 <pre><code># Uncomment for OS X:
 # It is not allowed to install to /usr/bin on OS X any longer (SIP):
@@ -179,12 +195,20 @@ OBJS+=strverscmp.o
 sudo make install
 </code></pre></div><p>You&rsquo;ll be asked to input the passwords. Note that your input will be invisible.</p>
 <p>Installation is successful if you see</p>
-<figure>
-    <img src="/media/enblog/tree-installation.png" width="500"/> <figcaption>
-            <h4>Successful installation</h4>
-        </figcaption>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/tree-installation.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/tree-installation.png"
+            
+            width="500"/>
+    </a>
+    
+    <figcaption>
+        <h4>Successful installation</h4>
+        
+    </figcaption>
+    
 </figure>
-
 <p>Also note that although it says that &ldquo;It is not allowed to install to /usr/bin on OS X any longer (SIP)&quot;, I can still install it. If it happens that you cannot install it, after <code>make</code>, you can try this</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv ~/Desktop/tree-1.8.0/tree /usr/local/bin/
 </code></pre></div><p>The above line will move <code>/tree-1.8.0/tree</code> to <code>usr/local/bin/</code>. <strong>Please not that you don&rsquo;t have to do this if <code>sudo make install</code> works for you!</strong></p>

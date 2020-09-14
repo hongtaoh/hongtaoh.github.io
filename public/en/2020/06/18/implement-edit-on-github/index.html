@@ -118,10 +118,15 @@
 
 .</p>
 <p>Then, on top of this post, you can see this:</p>
-<figure>
-    <img src="/media/enblog/github-edit.png"/> 
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/github-edit.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/github-edit.png"
+            
+            />
+    </a>
+    
 </figure>
-
 <p>Click the &ldquo;pen&rdquo; and now you are viewing the &ldquo;editing&rdquo; page. Look at the url in your browser and you can find it should be something like this: <code>https://github.com/USER/REPO/edit/BRANCH/PATH/TO/FILE</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. In the example I was showing above, the url shold be: <code>https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-06-14-terminal-command-basics.md</code>.</p>
 <p>Okay, now we will be implementing the &ldquo;edit on GitHub&rdquo; feature.</p>
 <ol>
