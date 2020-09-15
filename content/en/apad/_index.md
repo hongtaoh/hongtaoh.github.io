@@ -2,9 +2,14 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-09-15
+Lazer et al. (2009). Life in the network: the coming age of computational social science. *Science, 323*(5915), 721.
+
+The potential of computational social science and how to make preparations for its future. 
+
 ## 2020-09-14
 
-p 1-3. Lazeret al. (2018). The science of fake news. *Science, 359*(6380), 1094-1096.
+p 1-3. Lazeret et al. (2018). The science of fake news. *Science, 359*(6380), 1094-1096.
 
 - Increasing partisan preferences in the US created a context for fake news to attract huge audiences;
 
@@ -15,8 +20,7 @@ p 1-3. Lazeret al. (2018). The science of fake news. *Science, 359*(6380), 1094-
 - Possible interventions:
 
   1. Encouraging people to use fact checking. However, we are not sure whether this is useful or not, partyly due to people's confirmation bias and desirability bias. 
-  2. Platforms
-
+  2. Internet oligoplies should collaborate with academia to understand how pervasive fake news is. Also, these oligoplies' power should be contained by, for example, legal systems. 
 
 ## 2020-09-13
 Lazer et al. (2020)
