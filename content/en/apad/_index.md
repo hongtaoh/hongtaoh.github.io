@@ -2,6 +2,14 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-9-16
+
+González-Bailón, S., Borge-Holthoefer, J., Rivero, A., & Moreno, Y. (2011). The dynamics of protest recruitment through an online network. Scientific reports, 1, 197.
+
+Study goal:
+
+Why isn't it published on Nature:
+
 ## 2020-09-15
 Lazer et al. (2009). Life in the network: the coming age of computational social science. *Science, 323*(5915), 721.
 
