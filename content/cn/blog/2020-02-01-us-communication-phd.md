@@ -29,7 +29,7 @@ toc: false
 
 就我所知，截至目前（2018年11月）还给国际生提供全额奖学金（所谓全额奖学金，并不是说白给你钱，而是你要做助教或者助研，然后每个月给你1300-2000美金不等的生活费，然后学费全免）的新闻传播学硕士项目有（我比较熟悉传播学，对于新闻学，大家自己多搜一下）：
 
-亚利桑那大学 (Arizona University, The Department of Communication), 印第安纳大学(Indiana University, Media School)，犹他大学(University of Utah, Department of Communication), 马凯特大学 (Marquette University, Diederich College of Communication)，明尼苏达大学 (University of Minnesota, Hubbard School of Journalism & Mass Communication), 华盛顿州立大学(Washington State University, Murrow College of Communication)，俄亥俄州立大学(The Ohio State Univeristy, School of Communication)，普渡大学(Purdue, Brian Lamb School of Communication，但是普渡要求口语要上27）
+亚利桑那大学 (Arizona University, The Department of Communication), 印第安纳大学(Indiana University, The Media School)，犹他大学(University of Utah, Department of Communication), 马凯特大学 (Marquette University, Diederich College of Communication)，明尼苏达大学 (University of Minnesota, Hubbard School of Journalism & Mass Communication), 华盛顿州立大学(Washington State University, Murrow College of Communication)，宾州州立大学 (Penn State U, [Department of Communication Arts and Sciences](https://cas.la.psu.edu/graduate))，俄亥俄州立大学(The Ohio State Univeristy, School of Communication)，普渡大学(Purdue, Brian Lamb School of Communication，但是普渡要求口语要上27）
 
 以上项目是我几乎肯定会给全奖的，就是说只要录取你就会给你钱，一般不会说给你录取，但是不给钱。
 
