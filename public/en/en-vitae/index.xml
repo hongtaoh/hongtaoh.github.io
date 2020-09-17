@@ -10,5 +10,16 @@
 	<atom:link href="https://hongtaoh.github.io/en/en-vitae/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title></title>
+      <link>https://hongtaoh.github.io/en/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/1/01/01/</guid>
+      <description>markdown-pdf /path
+Hongtao Hao CV Last updated: Spet. 17, 2020
+Education  2018 ~ 2020, M.A. in Media Arts and Sciences, Indiana Univeristy Bloomington (GPA: 4.00/4.00)  Committee: Nicole Martins (Chair), Daneille Kilgo, Bryant Paul   2016 ~ 2018, M.A. in Journalism, Renmin University of China (GPA:3.92/4.00) 2012 ~ 2016, B.A. in English, Hebei Normal University (GPA: 3.92/4.00)  Research Experience  Aug. 2020 ~ present, Research Assistant at YY Lab for Professor Yong-Yeol (&amp;ldquo;YY&amp;rdquo;) Ahn  Responsible for improving COVID-19 visualizations    Peer-Reviewed Conference Presentations  Hao, H.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -754,7 +754,7 @@ n &amp;lt;- 10000 pheads &amp;lt;- 0.8 flips&amp;lt;-sample (x=c(0,1),prob=c(1-p
 硕士期间好好做研究，跟着老师国际发表，然后申请美国的博士项目。
 2. 本科毕业后直接申请美国硕士项目 对于能力特别强的人，本科期间有会议论文，甚至有发表经历的朋友，可以直接申请美国的全奖硕士（申请博士的话就太难了）。这部分是这篇文章的主题，下面重点会讲美国有哪些提供全奖的新闻传播学硕士项目。
 就我所知，截至目前（2018年11月）还给国际生提供全额奖学金（所谓全额奖学金，并不是说白给你钱，而是你要做助教或者助研，然后每个月给你1300-2000美金不等的生活费，然后学费全免）的新闻传播学硕士项目有（我比较熟悉传播学，对于新闻学，大家自己多搜一下）：
-亚利桑那大学 (Arizona University, The Department of Communication), 印第安纳大学(Indiana University, The Media School)，犹他大学(University of Utah, Department of Communication), 马凯特大学 (Marquette University, Diederich College of Communication)，明尼苏达大学 (University of Minnesota, Hubbard School of Journalism &amp;amp; Mass Communication), 华盛顿州立大学(Washington State University, Murrow College of Communication)，宾州州立大学 (Penn State U, Department of Communication Arts and Sciences )，俄亥俄州立大学(The Ohio State Univeristy, School of Communication)，普渡大学(Purdue, Brian Lamb School of Communication，但是普渡要求口语要上27）</description>
+亚利桑那大学 (Arizona University, The Department of Communication), 印第安纳大学(Indiana University, The Media School)，犹他大学(University of Utah, Department of Communication), 马凯特大学 (Marquette University, Diederich College of Communication)，明尼苏达大学 (University of Minnesota, Hubbard School of Journalism &amp;amp; Mass Communication), 华盛顿州立大学(Washington State University, Murrow College of Communication)，宾州州立大学 (Penn State U, Department of Communication Arts and Sciences1 )，俄亥俄州立大学(The Ohio State Univeristy, School of Communication)，普渡大学(Purdue, Brian Lamb School of Communication，但是普渡要求口语要上27）</description>
     </item>
     
     <item>
@@ -1006,6 +1006,17 @@ hugo的官方文档 讲到了如何部署到 netlify，但是第一步，即，�
 一、创建本地 hugo 文件夹 这个文件夹是你一开始通过hugo new site xxx 建立的那个文件夹，比如如果你用的hugo new site quickstart，那么quickstart文件夹就是我们要托管到github的本地文件夹，当然，不一定非得用quickstart这个名字，你想用mysite, myblog, hugo-website, my-website&amp;hellip;都可以。如果你还不知道怎么开始用hugo，可以参考olOwOlo的那篇 《hugo从入门到会用》 。这里我们就用quickstart为例。
 二、Github 新建仓库 首先登陆github，如果你还没有注册github账号，请参考大漠穷秋的 这篇帖子 。登陆成功之后，如下图所示，点击右上角的那个加号，然后点击&amp;rsquo;new repository&amp;rsquo;。这里的repository是仓库的意思。
   新建 Github 仓库   点击之后，在 &amp;lsquo;repository name&amp;rsquo; 这一栏，填入任何你一个你喜欢的名字作为你的仓库名称。注意，github仓库的名称不一定非要和本地仓库名称一样，这里我用hugo-website，你可以用你喜欢的。在description中你可以对这个仓库进行描述，这样你自己以及别人可以一眼知道这个仓库是做什么的，我这里填入 &amp;ldquo;My personal website deployed on Netlify&amp;rdquo;，当然，你用中文也可以。然后，public or private 这里，我们选择默认的 public。在 &amp;ldquo;initialize this repository with a README&amp;rdquo; 这儿，我们不要加。我试过一开始加上，但是后面的步骤会很麻烦，老是出错，所以这里切记不要加</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hongtaoh.github.io/en/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/1/01/01/</guid>
+      <description>markdown-pdf /path
+Hongtao Hao CV Last updated: Spet. 17, 2020
+Education  2018 ~ 2020, M.A. in Media Arts and Sciences, Indiana Univeristy Bloomington (GPA: 4.00/4.00)  Committee: Nicole Martins (Chair), Daneille Kilgo, Bryant Paul   2016 ~ 2018, M.A. in Journalism, Renmin University of China (GPA:3.92/4.00) 2012 ~ 2016, B.A. in English, Hebei Normal University (GPA: 3.92/4.00)  Research Experience  Aug. 2020 ~ present, Research Assistant at YY Lab for Professor Yong-Yeol (&amp;ldquo;YY&amp;rdquo;) Ahn  Responsible for improving COVID-19 visualizations    Peer-Reviewed Conference Presentations  Hao, H.</description>
     </item>
     
     <item>

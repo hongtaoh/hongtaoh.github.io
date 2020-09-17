@@ -1,14 +1,6 @@
----
-title: Curriculum Vitae
-type : nolisting
----
-# Hongtao Hao
-
-<i class="fa fa-envelope"></i> :: [hhao@iu.edu](mailto:hhao@iu.edu)
-
-<i class="fa fa-globe" style="font-size: 19pt"></i> :: [https://hongtaoh.com](https://hongtaoh.com/)
-
-<i class="fa fa-github" style="font-size: 19pt"></i> :: [@hongtaoh](https://github.com/hongtaoh)
+markdown-pdf /path
+# Hongtao Hao CV
+Last updated: Spet. 17, 2020
 
 ## Education
 
@@ -19,12 +11,11 @@ type : nolisting
 
 ## Research Experience
 
-- Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn](http://yongyeol.com/)
-    - Responsible for improving [COVID-19 visualizations](https://github.com/covid19-data/covid19-data)
+- Aug. 2020 ~ present, Research Assistant at YY Lab for Professor Yong-Yeol ("YY") Ahn
+    - Responsible for improving COVID-19 visualizations
 
 ## Peer-Reviewed Conference Presentations
 1. Hao, H. (May, 2020). *Cross-cultural comparisons of 'selfie-presentation': A content analysis*. Poster presented at the 70th Annual Conference of the International Communication Association, Converted from Australia to virtual due to COVID-19. 
-    - [poster](https://hongtaoh.com/files/ICA_Poster_Actual_Size.pdf), [slides](https://hongtaoh.com/slides/ICA2020.html#1), [presentation video](https://player.vimeo.com/video/418504580), [GitHub repo](https://github.com/hongtaoh/ICA2020Poster)
 2. Hao, H. (Nov., 2019). *Are Chinese selfies gender-stereotypical: a content analysis of selfies on Weibo*. Paper presented at the 105th Annual Conference of the National Communication Association, Baltimore, MD. 
 3. Hao, H. (Nov., 2019). *Digital divide: theoretical review and future research suggestions*. Paper presented at the 105th Annual Conference of the National Communication Association, Baltimore, MD. 
 4. Hao, H. (May, 2019). *Global expansion of China’s media for soft power promotion*. Paper presented at the 69th Annual Conference of the International Communication Association, Washington, DC. 
@@ -33,7 +24,6 @@ type : nolisting
 ## Honors & Fellowships
 
 - 2015, China's National Champion of the 1st ‘FLTRP Cup’ English Reading Contest, Beijing, China
-   - 1<sup>st</sup>/ 200,000 undergraduate and graduate participants nationwide
 - 2019, Second top student paper award, Public Diplomacy Interest Group, International Communication Association, Washington, DC. 
 - 2019, Annette & Lars Willnat Travel Fellowship, Indiana University, USA
 - 2019, College or Arts and Sciences Travel Grant, Indiana University, USA
@@ -45,24 +35,22 @@ type : nolisting
 
 ### Big:
 
-- MSCH-C101 with Hongtao ([Website](https://c101.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/c101))
-
-  - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
+- MSCH-C101 with Hongtao (https://c101.hongtaoh.com/),
 
 ### Small:
-- Hugo Tutorial ([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
-- Using Legacy Jupyterbook ([Website](https://legacy-jupyterbook.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/legacy-jupyterbook))
-- IU BSA ([Website](https://iubsa.netlify.app/), [Github Repo](https://github.com/hongtaoh/bsa))
+- Hugo Tutorial (https://hugo-tutorial.hongtaoh.com/)
+- Using Legacy Jupyterbook (https://legacy-jupyterbook.hongtaoh.com/)
+- IU BSA (https://iubsa.netlify.app/)
 
 ### Tiny:
-- [tree-1.8.0](https://github.com/hongtaoh/tree-1.8.0)
+- tree-1.8.0 (https://github.com/hongtaoh/tree-1.8.0)
 
 ## Working Experience
 - 2019 May, Journalist, *St.Gallen Symposium Magazine*, St. Gallen, Switzerland 
 
-  - ["It's not just about spending more money."](https://www.symposium.org/articles/its-not-just-about-spending-more-money) (Interviewing Deputy Prime Minister of Singapore)
-  - [Freeman Shen's electric dream](https://www.symposium.org/articles/freeman-shens-electric-dream) (Interviewing CEO of WM Motor, a leading Chinese electric car maker)
-  - [What role should government play?](https://www.symposium.org/articles/what-role-should-governments-play) (Interviewing young politicians from India, Argentina, and Sri Lanka)
+  - "It's not just about spending more money." (Interviewing Deputy Prime Minister of Singapore)
+  - Freeman Shen's electric dream (Interviewing CEO of WM Motor, a leading Chinese electric car maker)
+  - What role should government play? (Interviewing young politicians from India, Argentina, and Sri Lanka)
 
 - 2017 July, News Editor & Translator, *China Daily*, Beijing, China
 
@@ -71,9 +59,9 @@ type : nolisting
 
 ## Teaching Experience
 - Indiana University, Bloomington, IN
-   - 2020 Spring, MSCH C101 Introduction to Media, Associate Instructor, 40 students  (Class Website: [C101 with Hongtao](https://c101.hongtaoh.com/)) <!--for Professor Mike Conway-->
-   - 2019 Spring & Fall, MSCH C207 Introduction to Media Industry and Management, Teaching Assistant, 125 students <!--for for Matt Pierce-->
-   - 2018 Fall, MSCH C200 Videogame Industry: System and Management, Teaching Assistant, 60 students <!--for for Nathan Mishler-->
+   - 2020 Spring, MSCH C101 Introduction to Media, Associate Instructor, 40 students  (Class Website: https://c101.hongtaoh.com/)
+   - 2019 Spring & Fall, MSCH C207 Introduction to Media Industry and Management, Teaching Assistant, 125 students
+   - 2018 Fall, MSCH C200 Videogame Industry: System and Management, Teaching Assistant, 60 students 
 
 -  New Oriental Education and Technology Inc., Beijing, China
    - 2016 June-July, English Writing Instructor (Worked intensively for two months with over 200 hours of practice after three-month training in pedagogy)
@@ -82,8 +70,8 @@ type : nolisting
 - 2019, Reviewer for International Communication Association
 
 ## Graduate Coursework
-1. [Introduction to Bayesian Data Analysis I](https://jkkweb.sitehost.iu.edu/jkkteach/P533/) (Dr. John Kruschke)
-2. [Data Visualization](http://yyahn.com/dviz-course/) (Dr. YY Ahn)
+1. Introduction to Bayesian Data Analysis I (Dr. John Kruschke)
+2. Data Visualization (Dr. YY Ahn)
 3. Quantitative Methods for Public Health Research (**A+**) (Dr. Dong-Chul Seo)
 4. Introduction to Statistics in Media Research (**A+**) (Dr. Andrew Weaver)
 5. Content Analysis (Dr. Danielle Kilgo)
@@ -97,8 +85,6 @@ type : nolisting
 - Python (Mostly for data visualization; Altair, Seaborn, Matplotlib, Pandas, Numpy)
 
 
-## Slides
 
-- ICA 2020 Presentation: [HTML](/slides/ICA2020.html)
 
 
