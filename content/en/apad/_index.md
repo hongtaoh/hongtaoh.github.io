@@ -2,6 +2,11 @@
 title: A Paper A Day
 type : nolisting
 ---
+
+## 2020-09-18
+
+Ferrara, E., Varol, O., Davis, C., Menczer, F., & Flammini, A. (2016). The rise of social bots. *Communications of the ACM, 59*(7), 96-104.
+
 ## 2020-09-17
 Hilbert, M., & López, P. (2011). The world’s technological capacity to store, communicate, and compute information. *Science, 332*(6025), 60-65.
 
