@@ -7,11 +7,11 @@ Hilbert, M., & López, P. (2011). The world’s technological capacity to store,
 
 ## 2020-09-16
 
-González-Bailón, S., Borge-Holthoefer, J., Rivero, A., & Moreno, Y. (2011). The dynamics of protest recruitment through an online network. *Scientific reports*, 1, 197.
+González-Bailón, S., Borge-Holthoefer, J., Rivero, A., & Moreno, Y. (2011). The dynamics of protest recruitment through an online network. *Scientific reports, 1*, 197.
 
 - Study goal: Study whether and how social network sites encourage recruitment in social movements.
 
-- Why isn't it published on *Nature* or *Science*: A first look at this paper made me feel that it should have published on *Nature* or *Science*. I believe the authors must have tried. After reading the whole paper, I concluded that lack of sufficient evidence might have been the reason why it didn't manage to do so. As the authors have mentioned in their limitations part, there were simply so many factors other than Twitter that influenced the movement in question, and it was impossible to single them out. 
+- Why wasn't it published on *Nature* or *Science*: A first look at this paper made me feel that it should have published on *Nature* or *Science*. I believe the authors must have tried. After reading the whole paper, I concluded that lack of sufficient evidence might have been the reason why it didn't manage to do so. As the authors have mentioned in their limitations part, there were so many factors other than Twitter that influenced the movement in question, and it was impossible to single them out. 
 
 ## 2020-09-15
 Lazer et al. (2009). Life in the network: the coming age of computational social science. *Science, 323*(5915), 721.

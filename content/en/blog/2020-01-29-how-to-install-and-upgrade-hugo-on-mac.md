@@ -9,9 +9,9 @@ I chose the second method, which is called "Tarball" in Hugo's [tutorial](https:
 
 In fact, there are only two steps:
 
-1. Go to the page of [official Hugo release](https://github.com/gohugoio/hugo/releases) where you can find the latest version of Hugo. And then download the file of [hugo_0.63.2_macOS-64bit.tar.gz](https://github.com/gohugoio/hugo/releases/download/v0.63.2/hugo_0.63.2_macOS-64bit.tar.gz)[^1].
+1. Go to the page of [official Hugo release](https://github.com/gohugoio/hugo/releases) where you can find the latest version of Hugo. And then download the file of [hugo_0.70.0_macOS-64bit.tar.gz](https://github.com/gohugoio/hugo/releases/download/v0.70.0/hugo_0.70.0_macOS-64bit.tar.gz)[^1].
 
-2. Open Terminal, and type `open -a Finder /usr/local/bin`[^2]. This will open the folder of `/usr/local/bin`. Then drag the `hugo` file in `hugo_0.63.2_macOS-64bit.tar.gz` that you just downloaded and unzipped into the `/usr/local/bin`. If you are upgrading, just replace the old one. 
+2. Open Terminal, and type `open -a Finder /usr/local/bin`[^2]. This will open the folder of `/usr/local/bin`. Then drag the `hugo` file in `hugo_0.70.0_macOS-64bit.tar.gz` that you just downloaded and unzipped into the `/usr/local/bin`. If you are upgrading, just replace the old one. 
 
 Done. 
 

@@ -23,7 +23,7 @@ toc: true
 这个文件夹是你一开始通过hugo new site xxx 建立的那个文件夹，比如如果你用的hugo new site quickstart，那么quickstart文件夹就是我们要托管到github的本地文件夹，当然，不一定非得用quickstart这个名字，你想用mysite, myblog, hugo-website, my-website...都可以。如果你还不知道怎么开始用hugo，可以参考olOwOlo的那篇 [《hugo从入门到会用》](https://blog.olowolo.com/post/hugo-quick-start/)。这里我们就用quickstart为例。
 
 # 二、Github 新建仓库
-首先登陆github，如果你还没有注册github账号，请参考大漠穷秋的 [这篇帖子](https://damoqiongqiu.github.io/jekyll/2017/07/03/%E5%88%A9%E7%94%A8github%E5%92%8Cjekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlog-4.html)。登陆成功之后，如下图所示，点击右上角的那个加号，然后点击'new repository'。这里的repository是仓库的意思。
+首先登陆github，如果你还没有注册github账号，请参考[这篇帖子](https://blog.csdn.net/qq_41782425/article/details/85179912)。登陆成功之后，如下图所示，点击右上角的那个加号，然后点击'new repository'。这里的repository是仓库的意思。
 
 {{<figure src="/media/netlify/deploy-1.png" title="新建 Github 仓库">}}
 
