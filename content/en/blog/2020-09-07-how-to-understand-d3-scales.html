@@ -15,7 +15,7 @@ output:
 <li><a href="#why-bother-using-d3-scales-couldnt-we-plot-it-directly">Why Bother Using D3 Scales? Couldn’t We Plot It Directly?</a></li>
 <li><a href="#what-are-input-domain-and-output-range">What are Input Domain and Output Range?</a></li>
 <li><a href="#how-do-the-input-domain-and-output-range-work">How do the input domain and output range work?</a></li>
-<li><a href="#d3-scales-do-not-cpature-relative-length">D3 Scales Do Not Cpature Relative Length</a></li>
+<li><a href="#d3-scales-do-not-capture-relative-length">D3 Scales Do Not Capture Relative Length</a></li>
 <li><a href="#how-does-d3.scalelinear-work">How does d3.scaleLinear() work?</a></li>
 <li><a href="#what-does-d3.scalelinear-preserve">What Does d3.scaleLinear() Preserve?</a></li>
 <li><a href="#how-to-maintain-relative-length">How to Maintain Relative Length?</a></li>
@@ -51,6 +51,28 @@ output:
 <p>We can solve this problem by drawing a coordinate, with the X-axis representing the input domain and the Y-axis representing the output range. Why? Because as we can see from the transformations from input domain to output range, the relationship can be expressed as</p>
 <p><span class="math display">\[y = function (x)\]</span></p>
 <p>where <span class="math inline">\(y\)</span> is values in the output range and <span class="math inline">\(x\)</span> represent values in the input domain.</p>
+<pre class="r"><code>x&lt;-30:1300
+m0 &lt;- 65 / (1300^0.5 - 30^0.5)
+b0 &lt;- 10 - m0*(30^0.5)
+fun0 &lt;- function(x) m0*x^0.5 + b0
+m1 &lt;- 65 / 1270
+b1 &lt;- 10 - m1*30
+fun1 &lt;- function(x) m1*x + b1
+m2 &lt;- 65 / (1300^2 - 30^2)
+b2 &lt;- 10 - m2*(30^2)
+fun2 &lt;- function(x) m2*x^2 + b2
+m3 &lt;- 65 / (1300^3 - 30^3)
+b3 &lt;- 10 - m3*(30^3)
+fun3 &lt;- function(x) m3*x^3 + b3
+m4 &lt;- 65 / (1300^4 - 30^4)
+b4 &lt;- 10 - m4*(30^4)
+fun4 &lt;- function(x) m4*x^4 + b4
+matplot(x,cbind(fun0(x), fun1(x),fun2(x),fun3(x),fun4(x)),
+        type=&quot;l&quot; ,col=c(&quot;blue&quot;,&quot;red&quot;),
+        xlab = &quot;Input domain&quot;, ylab = &quot;Output range&quot;,
+        main = &quot;Mapping from input domain to output range&quot;)
+points(30, 10, col=&quot;orange&quot;, pch=19, cex=1.5)
+points(1300, 75, col=&quot;skyblue&quot;, pch=19, cex=1.5)</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:input-output-mapping"></span>
 <img src="/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/input-output-mapping-1.png" alt="Mapping from input domain to output range" width="672" />
 <p class="caption">
@@ -62,9 +84,18 @@ Figure 1: Mapping from input domain to output range
 <p><span class="math display">\[y = mx + b\]</span></p>
 <p>Simple math will let us know that for out example here, <span class="math inline">\(m = 0.051, b = 8.465\)</span>.</p>
 </div>
-<div id="d3-scales-do-not-cpature-relative-length" class="section level2">
-<h2>D3 Scales Do Not Cpature Relative Length</h2>
+<div id="d3-scales-do-not-capture-relative-length" class="section level2">
+<h2>D3 Scales Do Not Capture Relative Length</h2>
 <p>Okay. Let’s plot the bars now.</p>
+<pre class="r"><code>par(mfrow=c(1,2))
+input.domain &lt;- c (34, 59, 109, 544, 1299)
+output.range &lt;- fun1(input.domain)
+barplot(input.domain, ylim = c(0, 1400),
+        col = &quot;orange&quot;,
+        main = &quot;Bar heights in input domain&quot;)
+barplot(output.range, ylim = c(0, 80),
+        col = &quot;skyblue&quot;,
+        main = &quot;Bar heights in output range&quot;)</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:no-relative-length"></span>
 <img src="/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/no-relative-length-1.png" alt="D3 scales do not cpature relative length" width="672" />
 <p class="caption">
