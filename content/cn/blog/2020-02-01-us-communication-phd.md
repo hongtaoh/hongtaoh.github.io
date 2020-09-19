@@ -63,4 +63,4 @@ toc: false
 
 想看下世界上传播学大体名单的话，可以看看[上海交大给出的名单](http://www.shanghairanking.com/Shanghairanking-Subject-Rankings/communication.html)。排名别太当真。
 
-[^1]:Department of Communication Arts and Sciences 明确说了硕士是给钱的 (2020-09-16我看的时候仍然是)， 但是 Donald P. Bellisario College of Communications 给不给钱我不知道，清自己问一下。
+[^1]:Department of Communication Arts and Sciences 明确说了硕士是给钱的 (2020-09-16我看的时候仍然是)， 但是 Donald P. Bellisario College of Communications 给不给钱我不知道，请自己问一下。
