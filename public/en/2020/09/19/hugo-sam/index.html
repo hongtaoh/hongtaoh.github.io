@@ -93,6 +93,18 @@
 </span>
 
 
+<aside class="toc">
+Table of Contents:
+<nav id="TableOfContents">
+  <ol>
+    <li><a href="#install-nodejs-npm-postcss-cli-and-autoprefixer">Install Node.js, npm, postcss-cli, and autoprefixer</a></li>
+    <li><a href="#locally-preview-the-project">Locally preview the project</a></li>
+    <li><a href="#deploy-through-netlify">Deploy through Netlify</a></li>
+    <li><a href="#example">Example</a></li>
+  </ol>
+</nav>
+</aside>
+
 
 
 
@@ -107,10 +119,10 @@
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Error: EACCES: permission denied, access <span style="color:#ba2121">&#39;/usr/local/lib/node_modules&#39;</span>
 </code></pre></div><p><a href="https://stackoverflow.com/questions/48910876/error-eacces-permission-denied-access-usr-local-lib-node-modules" target="_blank" rel="noreferrer noopener">This thread</a>
 
- documented this issue. To solve the problem, you can follow <a href="https://stackoverflow.com/a/59575266" target="_blank" rel="noreferrer noopener">this answer</a>
+ documented this problem. To solve it, simply follow <a href="https://stackoverflow.com/a/59575266" target="_blank" rel="noreferrer noopener">this answer</a>
 
 .</p>
-<p>Bascailly, instead of installing <code>npm</code> through a Node installer, we install it through <code>nvm</code>.</p>
+<p>Bascailly, instead of installing <code>npm</code> through a Node installer, you might install it through <code>nvm</code>.</p>
 <ol>
 <li>Install <code>nvm</code>.</li>
 </ol>
@@ -136,16 +148,13 @@
 </code></pre></div><p>How to solve this problem?</p>
 <p>I assume that you have downloaded the <a href="https://github.com/victoriadrake/hugo-theme-sam" target="_blank" rel="noreferrer noopener">hugo-theme sam</a>
 
- using <code>git clone</code>. Then, simply copy the <code>/exampleSite/resources</code> into the root directory of your hugo project.</p>
+ using <code>git clone</code>. Then, simply copy the <code>/exampleSite/resources</code> and paste it into the root directory of your hugo project.</p>
 <h1 id="deploy-through-netlify">Deploy through Netlify</h1>
 <p>If you are deploying your project via Netlify:</p>
-<p>First of, don&rsquo;t use the <code>netlify.toml</code> within <code>hugo-theme-sam</code> provided by <a href="https://github.com/victoriadrake" target="_blank" rel="noreferrer noopener">Victoria</a>
+<p>First, don&rsquo;t use the <code>netlify.toml</code> within <code>hugo-theme-sam</code>. Instead, use the <code>netlify.toml</code> <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" target="_blank" rel="noreferrer noopener">here</a>
 
-. Instead, use the <code>netlify.toml</code> provided <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" target="_blank" rel="noreferrer noopener">here</a>
-
- by Hugo. Be sure to edit the <code>HUGO_VERSION</code> accordingly.</p>
-<p>You need to put this <code>netlify.toml</code> file at the root directory of your Hugo project.</p>
-<p>Still, when you deploy, you might encounter this problem:</p>
+. Be sure to edit the <code>HUGO_VERSION</code> accordingly. Put this <code>netlify.toml</code> file at the root directory of your Hugo project.</p>
+<p>When you deploy, it might fail and Netlify might give you this error message:</p>
 <pre><code>Building sites … ERROR 2020/09/16 20:06:07 Transformation failed: POSTCSS: failed to transform &quot;css/main.css&quot; (text/css): PostCSS not found; install with &quot;npm install postcss-cli&quot;. See https://gohugo.io/hugo-pipes/postcss/
 </code></pre><p>This problem can be solved by <a href="https://github.com/victoriadrake/hugo-theme-introduction/issues/210#issuecomment-651869483" target="_blank" rel="noreferrer noopener">this answer</a>
 

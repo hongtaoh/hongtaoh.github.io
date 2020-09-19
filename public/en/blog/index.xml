@@ -18,7 +18,7 @@
       <guid>https://hongtaoh.github.io/en/2020/09/19/hugo-sam/</guid>
       <description>There are several things you need to prepare to preview locally and deploy a Hugo site which uses the Sam theme .
 Install Node.js, npm, postcss-cli, and autoprefixer Victoria recommends installing Node.js and npm this way . However, after the installation, when running npm install -g postcss-cli and npm install -g autoprefixer to install postcss-cli and autoprefixer, a permission error might occur:
-Error: EACCES: permission denied, access &amp;#39;/usr/local/lib/node_modules&amp;#39; This thread documented this issue.</description>
+Error: EACCES: permission denied, access &amp;#39;/usr/local/lib/node_modules&amp;#39; This thread documented this problem.</description>
     </item>
     
     <item>
