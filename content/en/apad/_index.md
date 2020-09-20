@@ -3,6 +3,41 @@ title: A Paper A Day
 type : nolisting
 ---
 
+## 2020-09-20
+Ferrara et al. (2016)
+
+The work is indeed significant. It compared the spreading of true and false news on Twitter and concluded that the false spread faster, deeper, and farther than the truth. False political news, in particular, is diffused especially broadly and deeply. 
+
+- Was it because those who spread the false were more influential or active?
+
+Not really. Those who spread false news had fewer followers, followed fewer people on Twitter, are less likely to be verified, and had been on Twitter for less time. 
+
+- Was it because false news was more noval and users are more likely to retweet information with more novelty?
+
+  - False rumors were indeed more novel than the truth;
+  - False news was objectively more novel, but did users get it? 
+    - Yes, replies to false news showed greater surprise and disgust, whereas the truth inspired more sadness and joy. 
+
+- Was it because of selection bias? I mean, the tweets from the six organizations might not be representative of all tweets. 
+  - The authors verified a second sample of Tweets, which were labled by three undergraduates students as true, false, or mixed. Again, the results were the same. 
+
+- Did false news spread faster, deeper, farther, and more broadly because of bot activities? I mean, was it because bot crazily retweeted and replied to false news?
+  - Two bot-detection algorithms were applied independently to detect and remove bots before data analysis. Results were the same. This has significant implications: that false news travelled faster and farther not because of bots, but because of humans. 
+
+### I had several issues:
+1. Bad data visualization
+
+At first glance, data visualization in this article is good. However, most of the figures used only red and green and therefore are not friendly to color-blinded people.
+
+2. Content analysis
+
+They should report Kreppendorf's alpha rather than 90%
+
+3. No hypotheses beforehand
+
+## 2020-09-19
+Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. *Science, 359*(6380), 1146-1151.
+
 ## 2020-09-18
 
 Ferrara, E., Varol, O., Davis, C., Menczer, F., & Flammini, A. (2016). The rise of social bots. *Communications of the ACM, 59*(7), 96-104.
