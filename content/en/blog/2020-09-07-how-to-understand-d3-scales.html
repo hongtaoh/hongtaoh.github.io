@@ -1,5 +1,5 @@
 ---
-title: How to Understand D3.js Scales
+title: How to Understand D3.js Continuous Scales
 author: Hongtao Hao
 date: '2020-09-07'
 slug: d3-scales
@@ -26,11 +26,12 @@ output:
 
 <hr />
 <p>Most online tutorial on D3 scales, at best do not get the point, and at worst are really misleading.</p>
-<p>Before I move on, I’d like to specify two most important points I realized about D3 scales:</p>
+<p>Before I move on, I’d like to specify two most important points I realized about D3 continuous scales:</p>
 <ol style="list-style-type: decimal">
-<li><p>The essence of D3 scales is <strong><em>interpolation</em></strong> between two known points;</p></li>
-<li><p>D3 scales are supposed to capture <strong><em>relative positions</em></strong>, not <strong><em>relative length</em></strong>.</p></li>
+<li><p>The essence of D3 continuous scales is <strong><em>interpolation</em></strong> between two known points;</p></li>
+<li><p>D3 continuous scales are supposed to capture <strong><em>relative positions</em></strong>, not <strong><em>relative length</em></strong>.</p></li>
 </ol>
+<p>All this blog post is about D3 continuous scales. I might omit the word “continuous” in the following.</p>
 <div id="why-bother-using-d3-scales-couldnt-we-plot-it-directly" class="section level2">
 <h2>Why Bother Using D3 Scales? Couldn’t We Plot It Directly?</h2>
 <p>Well, the thing is, sometimes the numbers are so big that we don’t have enough pixels to plot them directly.</p>
