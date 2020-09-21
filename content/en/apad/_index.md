@@ -2,9 +2,13 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-09-21
+Hullman, J., Kay, M., Kim, Y. S., & Shrestha, S. (2017). Imagining replications: Graphical prediction & discrete visualizations improve recall & estimation of effect uncertainty. *IEEE transactions on visualization and computer graphics, 24*(1), 446-456.
+
+Continue from 2nd para. of 3.2 (Evaluations with Users) tomorrow. 
 
 ## 2020-09-20
-Ferrara et al. (2016)
+Vosoughi et al. (2018)
 
 The work is indeed significant. It compared the spreading of true and false news on Twitter and concluded that the false spread faster, deeper, and farther than the truth. False political news, in particular, is diffused especially broadly and deeply. 
 
