@@ -2,6 +2,18 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-09-22
+
+1. Hullman et al. (2017)
+
+2. Kay, M., Nelson, G. L., & Hekler, E. B. (2016, May). Researcher-centered design of statistics: Why Bayesian statistics better fit the culture and incentives of HCI. In *Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems* (pp. 4521-4532).
+
+- Bayesian approaches make knowledge accrual possible without meta-analysis approaches
+
+- Even though scholars use effect size and confidence intervals, the ultimate goal of looking for small *p*s will ruin everything. 
+
+(p.4)
+
 ## 2020-09-21
 Hullman, J., Kay, M., Kim, Y. S., & Shrestha, S. (2017). Imagining replications: Graphical prediction & discrete visualizations improve recall & estimation of effect uncertainty. *IEEE transactions on visualization and computer graphics, 24*(1), 446-456.
 
