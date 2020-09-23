@@ -2,11 +2,11 @@
 
 
 body {
-	font-family:  'Source Sans Pro', 'Lato', 'PT Serif', 'IBM Plex Serif', 'Alegreya', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif', 'Source-han-serif-sc',  sans-serif;
+	font-family:  Lato, Helvetica Neue, 'Open Sans', 'Source Sans Pro', 'PT Serif', 'IBM Plex Serif', 'Alegreya', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif', 'Source-han-serif-sc',  sans-serif;
 	font-weight: 400;
 	font-size:19px;
 }
 code {
-  font-family: 'Menlo', 'Courier', 'Courier New', "Lucida Console", Monaco, monospace;
+  font-family: 'Courier', 'Courier New', 'Monaco', 'Menlo', monospace;
   font-size: 17px;
 }
