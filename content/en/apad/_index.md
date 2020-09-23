@@ -47,7 +47,7 @@ At first glance, data visualization in this article is good. However, most of th
 
 2. Content analysis
 
-They should report Kreppendorf's alpha rather than 90%
+They should report Krippendorff's alpha rather than an agreement of 90%
 
 3. No hypotheses beforehand
 
