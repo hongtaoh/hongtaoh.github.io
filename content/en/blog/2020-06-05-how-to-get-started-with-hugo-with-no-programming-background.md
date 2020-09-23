@@ -77,7 +77,7 @@ Then go to Terminal again, copy and past the following codes, and press the Ente
 ```bash
 git clone https://github.com/yihui/hugo-lithium
 ```
-You'll see a folder named "hugo-lithium" on your Desktop. What you'll need to later seems to be a little complex, but I'll explain in deatil:
+You'll see a folder named "hugo-lithium" on your Desktop. What you'll need to do later seems to be a little complex, but I'll explain in deatil:
 
 Open the folder of "lithium", under the directory of "themes", create a new folder called "hugo-lithium". Then, go to the "hugo-lithium" folder on your Desktop (not the one you just created under the "themes" folder). Drag all the contents in this "hugo-lithium" folder on your Desktop into the "hugo-lithium" folder you just created under the "themes" folder. 
 
