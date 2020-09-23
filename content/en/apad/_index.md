@@ -2,6 +2,12 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-09-23
+
+Finished Kay et al. (2016). 
+
+Helping researchers in different fields set priors might be something worth doing in the future. 
+
 ## 2020-09-22
 
 1. Hullman et al. (2017)
