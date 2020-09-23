@@ -5,6 +5,7 @@ body {
 	font-family:  Lato, Helvetica Neue, 'Open Sans', 'Source Sans Pro', 'PT Serif', 'IBM Plex Serif', 'Alegreya', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif', 'Source-han-serif-sc',  sans-serif;
 	font-weight: 400;
 	font-size:19px;
+	line-height: 28px;
 }
 code {
   font-family: 'Courier', 'Courier New', 'Monaco', 'Menlo', monospace;
