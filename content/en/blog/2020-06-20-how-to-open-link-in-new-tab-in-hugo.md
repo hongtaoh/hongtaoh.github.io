@@ -15,7 +15,6 @@ Go to `layouts/_default`, create a new folder and name it as `_markup`. Then add
 
 ```html
 <a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noreferrer noopener"{{ end }}>{{ .Text | safeHTML }}</a>
-
 ```
 
 This code was initiall provided by [Agrim Prasad](https://agrimprasad.com/post/hugo-goldmark-markdown/) and then improved by [h-enk](https://discourse.gohugo.io/t/how-to-open-link-in-new-tab-with-hugos-new-goldmark-markdown-renderer-in-v0-62-0/22540/7). The main difference is the addition of `rel="noreferrer noopener"`. 
