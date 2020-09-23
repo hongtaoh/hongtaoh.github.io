@@ -14,7 +14,6 @@ body {
 } 
 
 .footer { 
-  font:'Open Sans', 'Noto Serif SC', 'Noto Serif TC', sans-serif;
   text-align: center; font-size: 19px;
   padding: 30px 0;
 } 
@@ -66,7 +65,7 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   text-align: right;
-  font-family: Alegreya;
+  font-family: 'Alegrey', 'Source Han Serif SC';
 }
 
 .nav-logo {
@@ -262,6 +261,7 @@ h6 {
   line-height: 1.25;
   text-align: center;
   font-family: 'IBM Plex Serif', 'Source Han Serif SC';
+  font-size:19.5px;
 }
 
 h1 {
@@ -313,6 +313,8 @@ p {
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 1px solid;
+  font-family: 'Alegrey', 'Source Han Serif SC';
+  font-size:19.5px;
 }
 
 .body-text.list-text a:hover {
