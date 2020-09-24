@@ -25,8 +25,8 @@ type : nolisting
 ## Peer-Reviewed Conference Presentations
 1. Hao, H. (May, 2020). *Cross-cultural comparisons of 'selfie-presentation': A content analysis*. Poster presented at the 70th Annual Conference of the International Communication Association, Converted from Australia to virtual due to COVID-19. 
     - [poster](https://hongtaoh.com/files/ICA_Poster_Actual_Size.pdf), [slides](https://hongtaoh.com/slides/ICA2020.html#1), [presentation video](https://player.vimeo.com/video/418504580), [GitHub repo](https://github.com/hongtaoh/ICA2020Poster)
-2. Hao, H. (Nov., 2019). *Are Chinese selfies gender-stereotypical: a content analysis of selfies on Weibo*. Paper presented at the 105th Annual Conference of the National Communication Association, Baltimore, MD. 
-3. Hao, H. (Nov., 2019). *Digital divide: theoretical review and future research suggestions*. Paper presented at the 105th Annual Conference of the National Communication Association, Baltimore, MD. 
+2. Hao, H. (Nov., 2019). *Are Chinese selfies gender-stereotypical: A content analysis of selfies on Weibo*. Paper presented at the 105th Annual Conference of the National Communication Association, Baltimore, MD. 
+3. Hao, H. (Nov., 2019). *Digital divide: Theoretical review and future research suggestions*. Paper presented at the 105th Annual Conference of the National Communication Association, Baltimore, MD. 
 4. Hao, H. (May, 2019). *Global expansion of China’s media for soft power promotion*. Paper presented at the 69th Annual Conference of the International Communication Association, Washington, DC. 
     - ***Second Top Student Paper*** 
 
