@@ -3,7 +3,7 @@ title:
 type: nolisting
 ---
 
-{{<figure src="/media/great_wall_samll.png" title="On the Great Wall in 2017, photo by Jude Wang (王秀全)" width="500">}}
+{{<figure src="/media/great_wall_samll.png" title="On the Great Wall in 2017, photo by Jude Wang (王秀全)" width="480">}}
 
 I graduated with a Master's degree in Media Arts and Sciences from [the Media School of Indiana University](https://mediaschool.indiana.edu/index.html) in 2020, advised by [Dr. Nicole Martins](https://mediaschool.indiana.edu/people/profile.html?p=nicomart). I am currently working as a research assistant for [Professor Yong-Yeol Ahn](http://yongyeol.com/) at IU Department of Informatics, doing projects on data visualization and learning network science. I earned my first Master's degree in Journalism from Renmin University of China, Beijing. You can view my journalism pieces in [_St.Gallen Symposium Magazine_](https://www.symposium.org/content?a=75). I am a fan of [_The Three-Body Problem_](https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)). I love R and Python. 
 

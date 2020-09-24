@@ -1,5 +1,6 @@
 <footer class="footer">
   {{ partial "foot_custom.html" . }}
+  <script async src="//yihui.name/js/center-img.js"></script>
 
      <ul class="footer-links">
           {{ with .OutputFormats.Get "RSS" }}
@@ -29,8 +30,6 @@
      </ul>
 </footer>
 
-    </div>
-
 <!--
   {{ if eq .Section "cn"}}
   <div class="footer-text">©郝鸿涛 2020 <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"> CC BY-NC-SA 4.0 </a> <br /> <a href = "https://gohugo.io/"> Hugo </a>  驱动，<a href = "https://themes.gohugo.io/hugo-xmin/"> Xmin </a> 框架，内容存于 <a href = "https://github.com/hhao1992/hhao1992.github.io"> Github </a> </div>
@@ -39,13 +38,3 @@
   {{ end }}
  -->
 
-  </footer>
-  <!-- Load PhotoSwipe js if the load-photoswipe shortcode has been used -->
-{{ if ($.Scratch.Get "photoswipeloaded") }}
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="/js/load-photoswipe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
-{{ end }}
-  </body>
-</html>
