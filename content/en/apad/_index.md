@@ -2,6 +2,20 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-09-24
+1. Bakshy, E., Messing, S., & Adamic, L. A. (2015). Exposure to ideologically diverse news and opinion on Facebook. *Science, 348*(6239), 1130-1132.
+
+- Among 7 million distinct URLs shared by 10 million Facebook users in the US, 13% were hard news;
+
+- Around 20% of a person's friends had the opposite political affiliation;
+
+- Liberals had fewer friends who shared news from the other side;
+
+- Controlling for the position of the news feed, it seemed conservatives were more likely to click on cross-cutting content, i.e., news that came from the other side; This result suprised me. 
+
+2. Del Vicario et al. (2016). The spreading of misinformation online. *Proceedings of the National Academy of Sciences, 113*(3), 554-559.
+
+
 ## 2020-09-23
 
 Finished Kay et al. (2016). 

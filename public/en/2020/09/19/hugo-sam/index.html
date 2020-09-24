@@ -126,17 +126,17 @@ Table of Contents:
  documented this problem. To solve it, simply follow <a href="https://stackoverflow.com/a/59575266" target="_blank" rel="noreferrer noopener">this answer</a>
 
 .</p>
-<p>Bascailly, instead of installing <code>npm</code> through a Node installer, you might install it through <code>nvm</code>.</p>
+<p>The idea is, instead of installing <code>npm</code> through a Node installer, you can install it using <code>nvm</code>.</p>
 <ol>
 <li>Install <code>nvm</code>.</li>
 </ol>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 </code></pre></div><p>You can run the above line of code no matter what directory you are at.</p>
 <ol start="2">
-<li>Install <code>Node.js</code> and <code>npm</code>.</li>
+<li>Install <code>Node.js</code> and <code>npm</code> via <code>nvm</code>.</li>
 </ol>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nvm install stable
-</code></pre></div><p>After <code>Node.js</code> and <code>npm</code> are installed, you can start installing <code>postcss-cli</code> and <code>autoprefixer</code>. Be sure run the codes at the root directory of your Hugo project.</p>
+</code></pre></div><p>Then, you can install <code>postcss-cli</code> and <code>autoprefixer</code>.</p>
 <p>The following codes come from <a href="https://github.com/victoriadrake/hugo-theme-introduction/issues/210#issuecomment-645661326" target="_blank" rel="noreferrer noopener">this answer</a>
 
  on <a href="https://github.com/victoriadrake/hugo-theme-introduction/issues/210" target="_blank" rel="noreferrer noopener">this thread</a>
@@ -147,18 +147,45 @@ Table of Contents:
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo npm i -g autoprefixer 
 </code></pre></div><p>You will be asked to input your passwords. If you are using a Mac, your input will be invisible. However, it will be processed anyway. So don&rsquo;t worry. Just input your passwords and press <code>Enter</code>.</p>
 <h1 id="locally-preview-the-project">Locally preview the project</h1>
-<p>When previewing the website using <code>hugo -server -D</code>, Hugo might give this error:</p>
+<p>When previewing the website, Hugo might give this error:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">TOCSS: failed to transform <span style="color:#ba2121">&#34;css/main.tmp.css&#34;</span> <span style="color:#666">(</span>text/x-sass<span style="color:#666">)</span>: resource <span style="color:#ba2121">&#34;sass/sass/style.sass_7642ba43b3212fd7d7ba324df3b88b0c&#34;</span> not found in file cache
-</code></pre></div><p>How to solve this problem?</p>
-<p>I assume that you have downloaded the <a href="https://github.com/victoriadrake/hugo-theme-sam" target="_blank" rel="noreferrer noopener">hugo-theme sam</a>
-
- using <code>git clone</code>. Then, simply copy the <code>/exampleSite/resources</code> and paste it into the root directory of your hugo project.</p>
+</code></pre></div><p>To solve this problem, simply copy the <code>/exampleSite/resources</code> and paste it into the root directory of your hugo project.</p>
 <h1 id="deploy-through-netlify">Deploy through Netlify</h1>
 <p>If you are deploying your project via Netlify:</p>
 <p>First, don&rsquo;t use the <code>netlify.toml</code> within <code>hugo-theme-sam</code>. Instead, use the <code>netlify.toml</code> <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" target="_blank" rel="noreferrer noopener">here</a>
 
 . Be sure to edit the <code>HUGO_VERSION</code> accordingly. Put this <code>netlify.toml</code> file at the root directory of your Hugo project.</p>
-<p>When you deploy, it might fail and Netlify might give you this error message:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"> [build]
+ publish = <span style="color:#ba2121">&#34;public&#34;</span>
+ command = <span style="color:#ba2121">&#34;hugo --gc --minify&#34;</span>
+
+ [context.production.environment]
+ HUGO_VERSION = <span style="color:#ba2121">&#34;0.75.1&#34;</span>
+ HUGO_ENV = <span style="color:#ba2121">&#34;production&#34;</span>
+ HUGO_ENABLEGITINFO = <span style="color:#ba2121">&#34;true&#34;</span>
+
+ [context.split1]
+ command = <span style="color:#ba2121">&#34;hugo --gc --minify --enableGitInfo&#34;</span>
+
+ [context.split1.environment]
+ HUGO_VERSION = <span style="color:#ba2121">&#34;0.75.1&#34;</span>
+ HUGO_ENV = <span style="color:#ba2121">&#34;production&#34;</span>
+
+ [context.deploy<span style="">-</span>preview]
+ command = <span style="color:#ba2121">&#34;hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL&#34;</span>
+
+ [context.deploy<span style="">-</span>preview.environment]
+ HUGO_VERSION = <span style="color:#ba2121">&#34;0.75.1&#34;</span>
+
+ [context.branch<span style="">-</span>deploy]
+ command = <span style="color:#ba2121">&#34;hugo --gc --minify -b $DEPLOY_PRIME_URL&#34;</span>
+
+ [context.branch<span style="">-</span>deploy.environment]
+ HUGO_VERSION = <span style="color:#ba2121">&#34;0.75.1&#34;</span>
+
+ [context.next.environment]
+ HUGO_ENABLEGITINFO = <span style="color:#ba2121">&#34;true&#34;</span>
+</code></pre></div><p>The deployment might fail and give you this error:</p>
 <pre><code>Building sites … ERROR 2020/09/16 20:06:07 Transformation failed: POSTCSS: failed to transform &quot;css/main.css&quot; (text/css): PostCSS not found; install with &quot;npm install postcss-cli&quot;. See https://gohugo.io/hugo-pipes/postcss/
 </code></pre><p>This problem can be solved by <a href="https://github.com/victoriadrake/hugo-theme-introduction/issues/210#issuecomment-651869483" target="_blank" rel="noreferrer noopener">this answer</a>
 
