@@ -2,6 +2,11 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-09-25
+Del Vicario et al. (2016).
+
+
+
 ## 2020-09-24
 1. Bakshy, E., Messing, S., & Adamic, L. A. (2015). Exposure to ideologically diverse news and opinion on Facebook. *Science, 348*(6239), 1130-1132.
 
