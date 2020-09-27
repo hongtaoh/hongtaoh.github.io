@@ -4,15 +4,15 @@ type : nolisting
 ---
 ## 2020-09-27
 
-1. Stivers et al. (2009) Universals and cultural variation in turn-taking in conversation. *Proceedings of the National Academy of Sciences, 106*(26), 10587-10592.
+1. Stivers et al. (2009). Universals and cultural variation in turn-taking in conversation. *Proceedings of the National Academy of Sciences, 106*(26), 10587-10592.
 
 2. Liljeros et al. (2001)
 
   - For both males and females, the cumulative distribution of the number of partners in the previous 12 months almost perfectly followed a straight line, indicating scale-free power-law characteristics;
 
-  - For both genders, the cumulative distribution of the total number sexual partners in the entire lifetime followed a straight line only when $k > 20$. 
+  - For both genders, the cumulative distribution of the total number sexual partners in the entire lifetime followed a straight line only when `$k > 20$`. 
 
-  - The network of sexual partners is a scale-free one, meaning that you cannot assume, for example, 90% of the individuals have 3 - 10 partners. This is simply because there is no inherent scale. It's a crazy world, literally. I cannot believe that a fair number of people have over 100, even 1000 partners. Isn't this a crazy world?
+  - The network of sexual partners is a scale-free one, meaning that you cannot assume, for example, 90% of the individuals have 3 - 10 partners. This is simply because there is no inherent scale. It's a crazy world, literally. I cannot believe that there are people who have over 100, even 1000 partners in their lifetime. Isn't this a crazy world?
 
 Other notes:
 
@@ -25,7 +25,7 @@ Other notes:
 
 This piece is a little bit too technical for me, especially the second part that involve modeling. Also, I had difficulty understanding the conceptualization of "homogeneity" and "polarization".
 
-My main takeaway from this article:
+Major takeaways from this paper:
 
   - Information on social media quickly reach in 2 hours around 20% of the people it can reach in the end, and reach in 5 hours around 40%. This is true for both science and rumors. 
 

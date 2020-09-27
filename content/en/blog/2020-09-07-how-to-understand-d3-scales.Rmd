@@ -21,9 +21,9 @@ All this blog post is about D3 continuous scales. I might omit the word "continu
 
 ## Why Bother Using D3 Scales? Couldn't We Plot It Directly?
 
-Well, the thing is, sometimes the numbers are so big that we don't have enough pixels to plot them directly. 
+Well, the thing is, sometimes the numbers are so big that you don't have enough pixels to plot them directly. 
 
-For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are going to **plot a bar chart of this data**. It would be best if we can draw it directly: five bars whose height (in pixels) is equal to the corresponding data value. The first bar will be 34 px tall, the second 59 px ...  and the last 1299 px. For this dataset, it might be Okay to plot it this way. However, if we had another number, 999999, it would be impossible to draw a bar whose height is `999999 px` simply because we don't have such a big screen. That's why we need to input domain and output range, both of which are basically intervals. 
+For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are going to **plot a bar chart of this data**. It would be best if we can draw it directly. Five bars whose heights (in pixels) are equal to the corresponding data values: The first bar will be 34 px tall, the second 59 px ...  and the last 1299 px. For this dataset, it might be Okay to plot it this way. However, if we had another number, 999999, it would be impossible to draw a bar whose height is `999999 px` simply because we don't have such a big screen. That's why we need to input domain and output range, both of which are basically intervals. 
 
 ## What are Input Domain and Output Range?
 
