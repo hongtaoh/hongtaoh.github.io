@@ -3,34 +3,27 @@ title: A Paper A Day
 type : nolisting
 ---
 ## 2020-09-26
-1. Del Vicario et al. (2016).
+### 1. Del Vicario et al. (2016).
 
 This piece is a little bit too technical for me, especially the second part that involve modeling. Also, I had difficulty understanding the conceptualization of "homogeneity" and "polarization".
 
 My main takeaway from this article:
 
-- Information on social media quickly reach in 2 hours around 20% of the people it can reach in the end, and reach in 5 hours around 40%. This is true for both science and rumors. 
+  - Information on social media quickly reach in 2 hours around 20% of the people it can reach in the end, and reach in 5 hours around 40%. This is true for both science and rumors. 
 
-- Science news is usually quickly diffused. However, long-lasting interest doesn't correspond to the size of the interest. This means, even though people keep sharing it, not a lot of people will be interested in it. 
+  - Science news is usually quickly diffused. However, long-lasting interest doesn't correspond to the size of the interest. This means, even though people keep sharing it, not a lot of people will be interested in it. 
 
-- Conspiracy rumors diffused slowly and its cascade size is positively correlated with its lifetime. Meaning that the longer it lasts, the more people become interested in it. 
+  - Conspiracy rumors diffused slowly and its cascade size is positively correlated with its lifetime. Meaning that the longer it lasts, the more people become interested in it. 
 
-2. Liljeros, F., Edling, C. R., Amaral, L. A. N., Stanley, H. E., & Åberg, Y. (2001). The web of human sexual contacts. *Nature, 411*(6840), 907-908.
+### 2. Liljeros, F., Edling, C. R., Amaral, L. A. N., Stanley, H. E., & Åberg, Y. (2001). The web of human sexual contacts. *Nature, 411*(6840), 907-908.
 
-This is the kind of study I admire, short, interesting, and impactful. 
+This is the kind of study I admire: short, interesting, and impactful. 
 
 
 
 ## 2020-09-25
 Del Vicario et al. (2016).
 
-This piece is a little bit too technical for me, especially the second part that involve modeling. 
-
-My main takeaway from this article:
-
-1. Information on social media quickly reach in 2 hours around 20% of the people it can reach in the end, and reach in 5 hours around 40%. This is true for both science and rumors. 
-
-2. Science news is usually quickly diffused. However, long
 
 
 ## 2020-09-24
