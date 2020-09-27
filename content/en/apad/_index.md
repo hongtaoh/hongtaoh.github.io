@@ -2,6 +2,24 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-09-27
+
+1. Stivers et al. (2009) Universals and cultural variation in turn-taking in conversation. *Proceedings of the National Academy of Sciences, 106*(26), 10587-10592.
+
+2. Liljeros et al. (2001)
+
+  - For both males and females, the cumulative distribution of the number of partners in the previous 12 months almost perfectly followed a straight line, indicating scale-free power-law characteristics;
+
+  - For both genders, the cumulative distribution of the total number sexual partners in the entire lifetime followed a straight line only when $k > 20$. 
+
+  - The network of sexual partners is a scale-free one, meaning that you cannot assume, for example, 90% of the individuals have 3 - 10 partners. This is simply because there is no inherent scale. It's a crazy world, literally. I cannot believe that a fair number of people have over 100, even 1000 partners. Isn't this a crazy world?
+
+Other notes:
+
+  - Thanks to this paper, I now know that for a power-law distribution to show a straight line, I need to use CDF (cumulative distribution function)
+
+  - One thing I didn't understand is that how could the authors conclud that "the rich get richer" by simply looking at Figure 2a? I don't think it a rigorous remark. 
+
 ## 2020-09-26
 ### 1. Del Vicario et al. (2016).
 
@@ -18,8 +36,6 @@ My main takeaway from this article:
 ### 2. Liljeros, F., Edling, C. R., Amaral, L. A. N., Stanley, H. E., & Åberg, Y. (2001). The web of human sexual contacts. *Nature, 411*(6840), 907-908.
 
 This is the kind of study I admire: short, interesting, and impactful. 
-
-
 
 ## 2020-09-25
 Del Vicario et al. (2016).
