@@ -33,7 +33,7 @@ type : nolisting
 ## Honors & Fellowships
 
 - 2015, China's National Champion of the 1st ‘FLTRP Cup’ English Reading Contest, Beijing, China
-   - 1<sup>st</sup>/ 200,000 undergraduate and graduate participants nationwide
+   - Ranked 1<sup>st</sup> among 200,000 undergraduate and graduate participants nationwide
 - 2019, Second top student paper award, Public Diplomacy Interest Group, International Communication Association, Washington, DC. 
 - 2019, Annette & Lars Willnat Travel Fellowship, Indiana University, USA
 - 2019, College or Arts and Sciences Travel Grant, Indiana University, USA
