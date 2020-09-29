@@ -2,6 +2,24 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-09-29
+
+Bullmore, E., & Sporns, O. (2009). Complex brain networks: graph theoretical analysis of structural and functional systems. *Nature reviews neuroscience, 10*(3), 186-198.
+
+## 2020-09-28
+
+Stivers et al. (2009)
+
+There is a universal patter for turn-taking. People aim to minimize gap and overlap in conversations. 
+
+- Slower:
+
+  1. Nonanswer responses
+  2. Disconfirmation responses
+  3. Responses ithout a visible component (e.g., head nods shrugs, head shakes, blinks, or eyebrow flashes)
+
+- Faster: Questions with gaze from the questioner
+
 ## 2020-09-27
 
 1. Stivers et al. (2009). Universals and cultural variation in turn-taking in conversation. *Proceedings of the National Academy of Sciences, 106*(26), 10587-10592.
