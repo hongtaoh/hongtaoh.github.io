@@ -17,7 +17,7 @@ Before I move on, I'd like to specify two most important points I realized about
 
 2. D3 continuous scales are supposed to capture ***relative  positions***, not ***relative length***. 
 
-All this blog post is about D3 continuous scales. I might omit the word "continuous" in the following.
+This blog post is all about D3 continuous scales. I might omit the word "continuous" in the following.
 
 ## Why Bother Using D3 Scales? Couldn't We Plot It Directly?
 
@@ -29,7 +29,7 @@ For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are 
 
 The input domain can be anything, as long as the minimum and the maximum number in our dataset is included in this interval[^1]. Note that the start of the input domain **does not have to** be $0$. For the above dataset, let's set the input domain to be [30, 1300]. 
 
-Then what is an output range? Well, it can be anything too. Usually the output range is defined by the pixels we have. Let's say our screen is only 80 pixels in height, and we set the output range to be [10, 75]. Again, the starting point of the output range does not have be $0$. 
+Then what is an output range? Well, it can be anything too. Usually the output range is defined by the pixels we have. Let's say our screen is only 80 pixels in height, and we set the output range to be [10, 75]. Again, the starting point of the output range does not have to be $0$. 
 
 ## How do the input domain and output range work?
 What we are certain now is that the minimum (the starting point) in the input domain should also be the minimum (the starting point) of the output range. The same is for the maximum (the finishing point). 
