@@ -2,9 +2,21 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-01
+1. Finished Bullmore & Sporns. (2009)
+
+2. Chambliss, D. F. (1989). The mundanity of excellence: An ethnographic report on stratification and Olympic swimmers. *Sociological theory, 7*(1), 70-86. 
+
+p2 -p7.
+
+## 2020-09-30
+Bullmore & Sporns. (2009). p6-p9.
+
 ## 2020-09-29
 
 Bullmore, E., & Sporns, O. (2009). Complex brain networks: graph theoretical analysis of structural and functional systems. *Nature reviews neuroscience, 10*(3), 186-198.
+
+p1-p6.
 
 ## 2020-09-28
 
