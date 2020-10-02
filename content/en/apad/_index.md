@@ -2,6 +2,11 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-02
+Chambliss. (1989). 
+
+p7-p12. 
+
 ## 2020-10-01
 1. Finished Bullmore & Sporns. (2009)
 
