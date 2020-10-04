@@ -43,18 +43,21 @@ type : nolisting
 
 ## Projects
 
-### Big:
+### Tutorials:
 
 - MSCH-C101 with Hongtao ([Website](https://c101.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/c101))
 
   - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
 
-### Small:
-- Hugo Tutorial ([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
+- D3book Companion ([Website](https://d3.hongtaoh.com/), [Github Repo](https://github.com/hongtaoh/d3book))
+
+- Building Websites with Hugo ([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
+
 - Using Legacy Jupyterbook ([Website](https://legacy-jupyterbook.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/legacy-jupyterbook))
 
 
-### Tiny:
+### Software:
+
 - [tree-1.8.0](https://github.com/hongtaoh/tree-1.8.0)
 
 ## Working Experience
