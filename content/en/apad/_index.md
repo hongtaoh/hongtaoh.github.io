@@ -2,24 +2,35 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-04
+
+Finished Chambliss. (1989). 
+
 ## 2020-10-03
 
-1. Excellence requires qualitative differentiation. Those who are more successful are doing **different** things, rather than **more of the same** thing. Quantitative changes do bring success, but only **whithin** the world you are currently in. You cannot go to **another world** by doing more of what you have been doing. Those who are top performers are better to be seen as **different** rather than as **better**. 
+>Superlative performance is really a confluence of dozens of small skills or activities, each one learned or stumbled upon, which have been carefully drilled into habit and then are fitted together in a synthesized whole. — Chambliss, D. F. (p. 81)
 
-2. Talent is not the reason for excellence. 
+### Excellence requires qualitative differentiation. 
 
-  - First of all, factors other than talent predict success more precisely. 
+Those who are more successful are doing **different** things, rather than **more of the same** things. Quantitative changes do bring success, but only **whithin** the world you are currently in. You cannot go to **another world** by doing more of what you have been doing. Those who are top performers are better to be seen as **different** rather than as **better**. 
 
-  - Second, you cannot distinguish talent from its effects, i.e., you cannot realize there is talent until someone succeeds. 
+### Talent is not the reason for excellence. 
 
-  - Third, the amount of talent needed for excellence is surprisingly low. 
+1. First of all, factors other than talent predict success more precisely. 
 
-3. Excellence is mundane.
+2. Second, you cannot distinguish talent from its effects, i.e., you cannot realize there is talent until someone succeeds. 
 
-  - Success is ordinary. Success is simply doing small tasks consistantly and correctly. 
+3. Third, the amount of talent needed for excellence is surprisingly small. 
 
-  - p. 15
+### Excellence is mundane.
 
+1. Success is ordinary. Success is simply doing small tasks consistantly and correctly.
+
+**Note** : Below are the notes on 2020-10-04 
+
+2. Motivation is also ordinary. Gold medalists did not think too far ahead. Instead, they focused on the most immediate goal, the so-called "small wins". For example, Steve Lundquist, who won two gold medals in swimming in the Los Angeles Olympics, set a goal that he would win every single siwm in every single practice. **Small wins added up to excellence and success**. 
+
+3. Don't take what you do as too important. You should maintain mundanity. If you are going to deliever a commencement speech in front of an audience of thousands, you should know that almost nobody cares about nor remembers what you have to say. When you are writing your doctoral thesis, you should also be aware that few people will read what you write. 
 
 
 ## 2020-10-02
