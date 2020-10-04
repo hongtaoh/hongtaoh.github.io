@@ -34,7 +34,7 @@ type : nolisting
 
 - 2015, China's National Champion of the 1st ‘FLTRP Cup’ English Reading Contest, Beijing, China
    - Ranked 1<sup>st</sup> among 200,000 undergraduate and graduate participants nationwide
-- 2019, Second top student paper award, Public Diplomacy Interest Group, International Communication Association, Washington, DC. 
+- 2019, Second top student paper award, Public Diplomacy Interest Group, International Communication Association, Washington, D.C. 
 - 2019, Annette & Lars Willnat Travel Fellowship, Indiana University, USA
 - 2019, College or Arts and Sciences Travel Grant, Indiana University, USA
 - 2017, St. Gallen Wings of Excellence Award, University of St. Gallen, Switzerland
@@ -52,7 +52,7 @@ type : nolisting
 ### Small:
 - Hugo Tutorial ([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
 - Using Legacy Jupyterbook ([Website](https://legacy-jupyterbook.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/legacy-jupyterbook))
-- IU BSA ([Website](https://iubsa.netlify.app/), [Github Repo](https://github.com/hongtaoh/bsa))
+
 
 ### Tiny:
 - [tree-1.8.0](https://github.com/hongtaoh/tree-1.8.0)

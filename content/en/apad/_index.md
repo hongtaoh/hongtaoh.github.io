@@ -2,6 +2,26 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-03
+
+1. Excellence requires qualitative differentiation. Those who are more successful are doing **different** things, rather than **more of the same** thing. Quantitative changes do bring success, but only **whithin** the world you are currently in. You cannot go to **another world** by doing more of what you have been doing. Those who are top performers are better to be seen as **different** rather than as **better**. 
+
+2. Talent is not the reason for excellence. 
+
+  - First of all, factors other than talent predict success more precisely. 
+
+  - Second, you cannot distinguish talent from its effects, i.e., you cannot realize there is talent until someone succeeds. 
+
+  - Third, the amount of talent needed for excellence is surprisingly low. 
+
+3. Excellence is mundane.
+
+  - Success is ordinary. Success is simply doing small tasks consistantly and correctly. 
+
+  - p. 15
+
+
+
 ## 2020-10-02
 Chambliss. (1989). 
 
