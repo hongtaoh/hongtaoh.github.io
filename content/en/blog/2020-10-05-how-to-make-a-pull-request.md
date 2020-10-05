@@ -65,7 +65,7 @@ After making changes to the local clone, you can push the changes to your fork.
 ```
 # First change directory to your local clone
 git add .
-git commit -m "Description of your changes."
+git commit -m "Description of your changes here."
 git push
 ```
 
@@ -77,6 +77,6 @@ See details [here](https://docs.github.com/en/free-pro-team@latest/github/collab
 
 # What to do before sending your pull request
 
-[Victorial Drake](https://github.com/victoriadrake) suggests opening an issue telling people make changes you make to make before sending the pull request. This is because if others don't think your changes are necessary, then you don't need to send it in the first place. 
+[Victorial Drake](https://github.com/victoriadrake) suggests opening an issue telling people what changes you are going to make before sending the pull request. This is because if others don't think your changes are necessary, then you don't need to send it in the first place. 
 
 [^1]: Please note that `$` and `>` are for demonstration only and you aren't supposed to type them in your Terminal. `$` is followed by what you want to type in Terminal, and `>` is followed the results from Terminal.
