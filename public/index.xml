@@ -11,6 +11,16 @@
     
     
     <item>
+      <title>What is sys.argv in Python and how to use it</title>
+      <link>https://hongtaoh.github.io/en/2020/10/05/python-sys-argv/</link>
+      <pubDate>Mon, 05 Oct 2020 11:58:54 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/10/05/python-sys-argv/</guid>
+      <description>While I was updating the data for Professor YY &amp;lsquo;s COVID19-data project , I noticed some lines of codes containing sys.argv. I didn&amp;rsquo;t understand it in the begining, nor was I sure how to use it. I understood it later. This post is to explain what sys.argv is and how to use it.
+Python sys.argv is essentially a variable from the sys module. This variable contains arguments that are to be passed to the python script you are calling in the command line1.</description>
+    </item>
+    
+    <item>
       <title>Troubleshooting for Using the Hugo Sam Theme</title>
       <link>https://hongtaoh.github.io/en/2020/09/19/hugo-sam/</link>
       <pubDate>Sat, 19 Sep 2020 09:59:23 -0400</pubDate>
