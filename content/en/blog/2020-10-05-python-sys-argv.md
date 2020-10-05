@@ -8,7 +8,7 @@ toc: false
 ---
 While I was updating the data for [Professor YY](https://github.com/yy/)'s [COVID19-data project](https://github.com/covid19-data/covid19-data), I noticed some lines of codes containing `sys.argv`. I didn't understand it in the begining, nor was I sure how to use it. I understood it later. This post is to explain what `sys.argv` is and how to use it. 
 
-Python `sys.argv` is essentially a variable from the [`sys`]((https://docs.python.org/3/library/sys.html)) module. This variable contains arguments that are to be passed to the python script you are calling in the command line[^1]. 
+Python `sys.argv` is essentially a variable from the [`sys`]((https://docs.python.org/3/library/sys.html)) module. This variable contains arguments that are to be passed to the python script you are calling in the command line[^1].
 
 I'll explain by example. 
 
