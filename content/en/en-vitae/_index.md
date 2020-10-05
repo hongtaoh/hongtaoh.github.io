@@ -34,10 +34,10 @@ type : nolisting
 
 - 2015, China's National Champion of the 1st ‘FLTRP Cup’ English Reading Contest, Beijing, China
    - Ranked 1<sup>st</sup> among 200,000 undergraduate and graduate participants nationwide
+- 2017, St. Gallen Wings of Excellence Award, St. Gallen Symposium, Switzerland
 - 2019, Second top student paper award, Public Diplomacy Interest Group, International Communication Association, Washington, D.C. 
 - 2019, Annette & Lars Willnat Travel Fellowship, Indiana University, USA
 - 2019, College or Arts and Sciences Travel Grant, Indiana University, USA
-- 2017, St. Gallen Wings of Excellence Award, University of St. Gallen, Switzerland
 - 2017, First Prize Academic Scholarship, Renmin University of China, Beijing, China
 - 2015, National Endeavor Fellowship, Hebei Normal Uniersity, Shijiazhuang, China
 
