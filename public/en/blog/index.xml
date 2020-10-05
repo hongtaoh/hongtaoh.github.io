@@ -11,7 +11,20 @@
     
     
     <item>
-      <title>What is sys.argv in Python and how to use it</title>
+      <title>How to Add Links to Headings in A Hugo Post</title>
+      <link>https://hongtaoh.github.io/en/2020/10/05/hugo-heading-link/</link>
+      <pubDate>Mon, 05 Oct 2020 15:07:06 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/10/05/hugo-heading-link/</guid>
+      <description>I tried the render hooks for headings , a new feature released in Hugo 0.71. However, it didn&amp;rsquo;t work for me.
+I then go back to the solution suggested by frerich . It worked.
+I changed the &amp;amp;para; to #.
+According to frerich, what you need to do is to add add-header-anchors.html whose content is shown below to /layouts/partials.
+{{ . | replaceRE &amp;#34;(&amp;lt;h[1-9] id=\&amp;#34;([^\&amp;#34;]+)\&amp;#34;.+)(&amp;lt;/h[1-9]+&amp;gt;)&amp;#34; `${1}&amp;lt;a href=&amp;#34;#${2}&amp;#34; class=&amp;#34;header-anchor&amp;#34; ariaLabel=&amp;#34;Anchor&amp;#34;&amp;gt;&amp;amp;para;&amp;lt;/a&amp;gt;${3}` | safeHTML }} Then, in /layouts/_default/single.</description>
+    </item>
+    
+    <item>
+      <title>What is sys.argv in Python and How to Use It</title>
       <link>https://hongtaoh.github.io/en/2020/10/05/python-sys-argv/</link>
       <pubDate>Mon, 05 Oct 2020 11:58:54 -0400</pubDate>
       

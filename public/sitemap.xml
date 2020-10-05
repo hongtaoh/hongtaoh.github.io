@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hongtaoh.github.io/en/2020/10/05/hugo-heading-link/</loc>
+    <lastmod>2020-10-05T15:07:06-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hongtaoh.github.io/en/2020/10/05/python-sys-argv/</loc>
     <lastmod>2020-10-05T13:59:27-04:00</lastmod>
   </url>

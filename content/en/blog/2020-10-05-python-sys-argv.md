@@ -1,5 +1,5 @@
 ---
-title: "What is sys.argv in Python and how to use it"
+title: "What is sys.argv in Python and How to Use It"
 date: 2020-10-05T11:58:54-04:00
 author: Hongtao Hao
 slug: python-sys-argv
