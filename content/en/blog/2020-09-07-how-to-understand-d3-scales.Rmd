@@ -128,7 +128,7 @@ Well, it's actually our fault rather than D3 scales'. Before I explain how come 
 
 [This tutorial](https://www.dashingd3js.com/d3js-scales) very well explains how `d3.scaleLinear()` works. I'll recap it here.
 
-Suppose the following is the input domain. The starting point is labeled as S and the end E. There are three data points, i.e., A, B, C. The distance between S and A is a, that between A and B is b, that between B and C is c, and that between C and E is d. Then, how will `d3.scaleLinear()` compute the corresponding value for data point A, B and C in the output range? 
+Suppose the following is the input domain. The starting point is labeled as S and the end E. There are three data points, i.e., A, B, C. The distance between S and A is a, that between A and B is b, that between B and C is c, and that between C and E is d. Then, how will `d3.scaleLinear()` compute the corresponding value for data point A, B and C in the output range?
 
 ![](/media/enblog/d3_scale_five_points.png)
 
@@ -160,7 +160,7 @@ In the output range:
 
 $$x_(a') = \frac{1}{3} X', y_(a') = \frac{1}{4} Y'$$
 
-I won't list these for $B, B', C, C'$ here. 
+I won't list these for $B, B', C, and C'$ here. 
 
 You see, for each data point, the relative coordinate **values** change but its relative **position** to both axes remains the same. 
 
