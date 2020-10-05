@@ -135,7 +135,7 @@ tree
 , and <a href="https://superuser.com/a/448969" target="_blank" rel="noreferrer noopener">apouche&rsquo;s answer</a>
 
 .</p>
-<h1 id="intall-tree">Intall tree</h1>
+<h1 id="intall-tree">Intall tree<a href="#intall-tree" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>Open a new <code>Terminal</code>, copy and paste the following codes, wait for a few seconds for the first several lines to run, and press <code>Enter</code> (otherwise the last line won&rsquo;t run). When you copy and past multiple lines into your <code>Terminal</code>, you should always press <code>Enter</code> to run the last line of code.</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> Desktop
 curl -O ftp://mama.indstate.edu/linux/tree/tree-1.8.0.tgz
@@ -220,7 +220,7 @@ sudo make install
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> .. <span style="color:#408080;font-style:italic"># Go back to Desktop</span>
 rm -rf tree-1.8.0
 rm -rf tree-1.8.0.tgz
-</code></pre></div><h1 id="use-tree">Use tree</h1>
+</code></pre></div><h1 id="use-tree">Use tree<a href="#use-tree" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>Under the directory you are in, simply use <code>tree</code>. For exmaple, if you followed every of my steps above, you are in the directory of <code>tree-1.8.0</code>, then input <code>tree</code> in your <code>Terminal</code>, you&rsquo;ll see the directory tree of <code>tree-1.8.0</code>.</p>
 <p>When you are not in the directory whose structure you want to show, for example, if you open a new <code>Terminal</code> using <code>Command + N</code>, you can use</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree ~/Desktop/tree-1.8.0/
@@ -232,7 +232,7 @@ rm -rf tree-1.8.0.tgz
 │   └── Data
 │       └── YourData.csv
 └── YourBlogdownProject.RProj
-</code></pre></div><h1 id="my-previous-solution">My Previous Solution</h1>
+</code></pre></div><h1 id="my-previous-solution">My Previous Solution<a href="#my-previous-solution" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>How can I print a directory tree like this on Mac:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">|____Folder_2
 |____YourBlogdownProj.RProj
@@ -246,7 +246,7 @@ rm -rf tree-1.8.0.tgz
 <p>Then, simply add the following on a new line:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">alias</span> <span style="color:#19177c">tree</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;find . -print | sed -e &#39;s;[^/]*/;|____;g;s;____|; |;g&#39;&#34;</span>
 </code></pre></div><p>Save the change. Open a new <code>Terminal</code> using <code>Command + N</code>, nagivate to the folder of which you want to print a directory tree using <code>cd</code>, and simply type <code>tree</code> in your <code>Terminal</code>. A directory tree should unfold itself.</p>
-<h2 id="reference">Reference</h2>
+<h2 id="reference">Reference<a href="#reference" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
 <ol>
 <li><a href="http://mama.indstate.edu/users/ice/tree/" target="_blank" rel="noreferrer noopener">http://mama.indstate.edu/users/ice/tree/</a>
 
@@ -273,7 +273,7 @@ rm -rf tree-1.8.0.tgz
 
 </li>
 </ol>
- 
+
 
 <p style="color:#777;">Last modified on 2020-09-01</p>
 

@@ -113,7 +113,7 @@ Table of Contents:
 
 
 <div class="body-text list-text">
-<h1 id="about-jupyterbook">About Jupyterbook</h1>
+<h1 id="about-jupyterbook">About Jupyterbook<a href="#about-jupyterbook" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>Jupyterbook totally changed the way a book is built in April 2020. The final legacy version is <a href="https://github.com/executablebooks/jupyter-book/releases/tag/v0.6.5" target="_blank" rel="noreferrer noopener">v0.6.5</a>
 
 . You can compare the <a href="https://legacy.jupyterbook.org/intro.html" target="_blank" rel="noreferrer noopener">legacy demo</a>
@@ -124,7 +124,7 @@ Table of Contents:
 <p>You can install the legacy version <a href="https://pypi.org/project/jupyter-book/0.6.5/" target="_blank" rel="noreferrer noopener">here</a>
 
 .</p>
-<h1 id="using-jupyterbook">Using Jupyterbook</h1>
+<h1 id="using-jupyterbook">Using Jupyterbook<a href="#using-jupyterbook" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>In this article, I&rsquo;ll briefly talk about how to use this legacy version of jupyterbook together with GitHub and Netlify.</p>
 <p>First off, you should install the legacy version using <code>pip install jupyter-book==0.6.5</code> as mentioned above. Then, I will show you how to start a book named &ldquo;legacy-jupyterbook&rdquo; on Desktop. I am asusming that you are using a Mac. All the following codes should run in Terminal.</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> Desktop <span style="color:#408080;font-style:italic"># or any other directory you want to place your project</span>
@@ -209,17 +209,17 @@ git add .
 git commit -m <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$msg</span><span style="color:#ba2121">&#34;</span> 
 git push origin master
 </code></pre></div><p>You can store this file as <code>deploy.sh</code>, save it to the root directory of YourProject. Every time after you&rsquo;ve make all the changes you want, at the root directory of YourProject, simply run <code>bash deploy.sh</code> and Github and Netlify will deploy by themseles.</p>
-<h1 id="example">Example</h1>
+<h1 id="example">Example<a href="#example" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>Finally, you can view the final product of the example I provided above <a href="https://legacy-jupyterbook.netlify.app/" target="_blank" rel="noreferrer noopener">here</a>
 
 . And <a href="https://github.com/hongtaoh/legacy-jupyterbook" target="_blank" rel="noreferrer noopener">here</a>
 
  is its GitHub repository.</p>
-<h1 id="changing-content">Changing content</h1>
+<h1 id="changing-content">Changing content<a href="#changing-content" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>I am not detailing how to customize the content here. You simply need to change it in the <code>content</code> folder at the root directory, and then make corressponding changes to <code>toc.yml</code> under the <code>_data</code> folder. You can find more information in the <a href="https://legacy.jupyterbook.org/intro.html" target="_blank" rel="noreferrer noopener">official guide</a>
 
 </p>
- 
+
 
 <p style="color:#777;">Last modified on 2020-08-11</p>
 

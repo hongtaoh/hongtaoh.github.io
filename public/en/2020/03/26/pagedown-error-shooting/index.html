@@ -117,7 +117,7 @@ Table of Contents:
  by <a href="https://yihui.org/" target="_blank" rel="noreferrer noopener">Yihui Xie</a>
 
 . My Mac system is very old: I am still using OS XYosemite (10.10.5). Therefore, I face limitations on the version of R I can use.</p>
-<h1 id="error-when-downloading-pagedown">Error when downloading Pagedown</h1>
+<h1 id="error-when-downloading-pagedown">Error when downloading Pagedown<a href="#error-when-downloading-pagedown" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>When downloading pagedown, I tried the method recommended by the <a href="https://github.com/rstudio/pagedown" target="_blank" rel="noreferrer noopener">Pagedown Homepage</a>
 
 , i.e., <code>remotes::install_github('rstudio/pagedown')</code> but this does not work for me. There will always be errors.</p>
@@ -141,7 +141,7 @@ Do you want to attempt to install these from sources<span style="color:#666">?</
 y<span style="color:#666">/</span>n<span style="color:#666">:</span>
 </code></pre></div><p>I input <code>y</code>, and then it worked.</p>
 <p>Thanks.</p>
-<h1 id="error-when-knitting">Error when Knitting</h1>
+<h1 id="error-when-knitting">Error when Knitting<a href="#error-when-knitting" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>I could not reproduce the problem now, but there seemed to be something wrong with my Pandoc version. I tried <a href="https://pandoc.org/installing.html#macos" target="_blank" rel="noreferrer noopener">this</a>
 
  method (using homebrew), but it did not work for me, probabily because of my old Mac OS version. I also tried simply downloaded the latested installer for macOS, but still, it did not work: ever after installing the latest version, when I typed <code>pandoc --version</code> in my Terminal, it still showed the old version number.</p>
@@ -151,7 +151,7 @@ y<span style="color:#666">/</span>n<span style="color:#666">:</span>
 
  and dragged the <code>pandoc</code> and <code>pandoc-citeproc</code> into my <code>/user/local/bin</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, but still, the terminal showed that I am using the old version, and Pagedown did not work.</p>
 <p>Then I took a closer look at what the Terminal says. It says my pandoc document is located in a place rather than <code>/user/local/bin</code>. That is the problem. So I dragged the the two files to the right location, and this time, it works. Terminal shows that I have the latest version of pandoc, and pagedown also worked.</p>
-<h1 id="error-when-rendering-pagedown-file">Error when rendering pagedown file</h1>
+<h1 id="error-when-rendering-pagedown-file">Error when rendering pagedown file<a href="#error-when-rendering-pagedown-file" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>When I clicked <code>Knit</code>, it worked. However, when I clicked the output <code>.html</code> file, it did not show anything on Firefox. Thanks to <a href="https://github.com/rstudio/pagedown/issues/103#issuecomment-583778685" target="_blank" rel="noreferrer noopener">an answer</a>
 
  in one of the Pagedown Github issues, I solved the problem. Simply changed <code>self_contained:false</code> to &lsquo;self_contained:true&rsquo; solved the problem.</p>
@@ -164,7 +164,7 @@ y<span style="color:#666">/</span>n<span style="color:#666">:</span>
 </li>
 </ol>
 </section>
- 
+
 
 <p style="color:#777;">Last modified on 2020-06-24</p>
 

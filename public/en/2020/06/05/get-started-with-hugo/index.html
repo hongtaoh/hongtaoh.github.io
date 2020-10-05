@@ -131,7 +131,7 @@ Table of Contents:
 <p>A friend asked me whether I can help him create his own personal website. I have long been wanting to write a simple tutorial on this and now I think it&rsquo;s time to do that.</p>
 <p>In this age of informaiton, it&rsquo;s important to have your online presence. It not only helps others to know you more quickly; it also helps you to express yourself to, and share your experiences and knowledge with, the outside world.</p>
 <p>Note: All instructions below assume that you are using a Mac. If you are a Windows or Linux user, you can still read this post but I can&rsquo;t guarantee it will help you.</p>
-<h1 id="wordpress-or-hugo">WordPress or Hugo</h1>
+<h1 id="wordpress-or-hugo">WordPress or Hugo<a href="#wordpress-or-hugo" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>Before getting started, a key question you should have is which tool you want to use to build your website.</p>
 <p>The most popular website building tool is definitely WordPress, which is said to contribute to 80% of the web today<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. To make your decision on which tool to choose, please read these two articles comparing Wordpress and Hugo, one by <a href="https://www.strattic.com/jekyll-hugo-wordpress-pros-cons-static-site-generators/" target="_blank" rel="noreferrer noopener">Rebecca Markowitz</a>
 
@@ -148,7 +148,7 @@ Table of Contents:
 
  to make a decision.</p>
 <p>If you choose WordPress, you can stop here, as this tutorial will be about using Hugo. Sorry.</p>
-<h1 id="try-simple-themes-in-the-begining">Try simple themes in the begining</h1>
+<h1 id="try-simple-themes-in-the-begining">Try simple themes in the begining<a href="#try-simple-themes-in-the-begining" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>In Hugo, you&rsquo;ll need Markdown to write your posts. Whenever you forget how to use Markdown, please refer to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank" rel="noreferrer noopener">this cheat sheet</a>
 
 .</p>
@@ -170,14 +170,14 @@ Table of Contents:
 . I&rsquo;ll use the <a href="https://github.com/yihui/hugo-lithium" target="_blank" rel="noreferrer noopener">modified version</a>
 
 .</p>
-<h1 id="first-meeting-with-git-and-hugo">First meeting with Git and Hugo</h1>
-<h2 id="installing-hugo">Installing Hugo</h2>
+<h1 id="first-meeting-with-git-and-hugo">First meeting with Git and Hugo<a href="#first-meeting-with-git-and-hugo" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<h2 id="installing-hugo">Installing Hugo<a href="#installing-hugo" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
 <p>Let&rsquo;s get started. I&rsquo;ll show you how I use this theme to build a simple website.</p>
 <p>First of all, you need to install Hugo. To do that, please read <a href="https://hongtaoh.com/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/" target="_blank" rel="noreferrer noopener">my earlier post</a>
 
  about Hugo installation.</p>
 <p>If you don&rsquo;t know how to open <code>Terminal</code> on your Mac: on the upper-right corner of the screen, you&rsquo;ll see a search icon. Click it and then type <code>Terminal</code>, then press Enter key on your keyboard.</p>
-<h2 id="cloning-the-theme">Cloning the theme</h2>
+<h2 id="cloning-the-theme">Cloning the theme<a href="#cloning-the-theme" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
 <p>After opening your Terminal, first check whether you have correctly installed Hugo. All the following codes, if not specified otherwises, should run in your Terminal.</p>
 <p>Input the following code and press Enter key:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo version
@@ -206,7 +206,7 @@ Press Ctrl+C to stop
 , you should be able to see this simple website in your browser.</p>
 <p>If everything is going well, we will change the site for a little bit.</p>
 <p>Before we make changes, go to Terminal, and then press Ctrl+C to stop the Web Server.</p>
-<h1 id="customizing-the-theme-a-little-bit">Customizing the theme a little bit</h1>
+<h1 id="customizing-the-theme-a-little-bit">Customizing the theme a little bit<a href="#customizing-the-theme-a-little-bit" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>Go to the <code>config.toml</code> file in the root of <code>lithium</code> folder, You can find these:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[menu.main]]
     name = <span style="color:#ba2121">&#34;About&#34;</span>
@@ -288,7 +288,7 @@ date: &#39;&#39;
 <p>As I said, a deeper knowledge of Hugo, CSS, and HTML is beyond the scope of this simple tutorial.</p>
 <p>Now, I assume that you have your local website read (you are satisfied with what you see in the browser now).</p>
 <p>Go to <code>Terminal</code>, press Ctrl+C to kill the web server. We&rsquo;ll learn how to put this site online.</p>
-<h1 id="github">GitHub</h1>
+<h1 id="github">GitHub<a href="#github" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>First of all, you need to create a GitHub account. When this is done, click &ldquo;new repository&rdquo;:</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="/media/netlify/deploy-1.png"  itemprop="contentUrl"> 
@@ -341,7 +341,7 @@ git commit -m <span style="color:#ba2121">&#34;first commit&#34;</span>
 git remote add origin https://github.com/hongtaoh/hugo-tutorial.git
 git push -u origin master
 </code></pre></div><p>Refresh your GitHub page, you should be able to see the changes.</p>
-<h1 id="netlify">Netlify</h1>
+<h1 id="netlify">Netlify<a href="#netlify" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>Now, we need to set up a Netlify account.</p>
 <p>Open the website of <a href="https://www.netlify.com/" target="_blank" rel="noreferrer noopener">Netlify</a>
 
@@ -502,11 +502,11 @@ git push
 <p>Then the website url is changed to <a href="https://hugo-tutorial.netlify.app/" target="_blank" rel="noreferrer noopener">https://hugo-tutorial.netlify.app/</a>
 
 .</p>
-<h1 id="more-knowledge-about-hugo">More Knowledge about Hugo</h1>
-<h2 id="how-to-add-a-new-post">How to add a new post</h2>
+<h1 id="more-knowledge-about-hugo">More Knowledge about Hugo<a href="#more-knowledge-about-hugo" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<h2 id="how-to-add-a-new-post">How to add a new post<a href="#how-to-add-a-new-post" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
 <p>Using codes like this:</p>
 <pre><code>hugo new post/2020-06-05-another-markdown.md
-</code></pre><h1 id="keep-deploying">Keep Deploying</h1>
+</code></pre><h1 id="keep-deploying">Keep Deploying<a href="#keep-deploying" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>Every time you update you contents, you need to upload them. You&rsquo;ll need to copy and paste the following codes in Terminal every time:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf public <span style="color:#408080;font-style:italic"># delete the public folder</span>
 hugo <span style="color:#408080;font-style:italic"># rebuild the website</span>
@@ -522,14 +522,14 @@ git add .
 git commit -m <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$msg</span><span style="color:#ba2121">&#34;</span>
 git push
 </code></pre></div><p>Every time you want to upload new content, you can run <code>bash deploy.sh</code> at the root directory of your <code>lithium</code> folder. This will automate deployment. Wait for around 20 seconds, you&rsquo;ll be able to see the changes in your website. Yes, Hugo+GitHub+Netlify is this fast!</p>
-<h1 id="final-repo">Final Repo</h1>
+<h1 id="final-repo">Final Repo<a href="#final-repo" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>If you encounter problems in the above steps, don&rsquo;t feel discouraged. You can check out the final <code>lithium</code> file here: <a href="https://github.com/hongtaoh/hugo-tutorial" target="_blank" rel="noreferrer noopener">https://github.com/hongtaoh/hugo-tutorial</a>
 
 .</p>
 <p>Of course you can <code>git clone</code> this repository. However, be sure to use <code>git remote remove origin</code> before you use <code>git init</code>, which was discussed at the end of <a href="https://hongtaoh.com/en/2020/06/05/get-started-with-hugo/#github" target="_blank" rel="noreferrer noopener">the section about Github</a>
 
  in this post.</p>
-<h1 id="whats-next">What&rsquo;s Next</h1>
+<h1 id="whats-next">What&rsquo;s Next<a href="#whats-next" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>As I said, this post is not intended to be a comprehensive guide to creating a complicated website using Hugo. To do that, you are expected to spend some, if not a lot of, time on studying Hugo, CSS, and HTML. If you have a lot of personal preferences, do expect a lot of frustrucation, especially if you are a programming newbie like me.</p>
 <p>Again, I recommend you to read the <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noreferrer noopener">blogdown</a>
 
@@ -556,7 +556,7 @@ git push
 </li>
 </ol>
 </section>
- 
+
 
 <p style="color:#777;">Last modified on 2020-09-23</p>
 

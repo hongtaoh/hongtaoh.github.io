@@ -151,7 +151,7 @@ Table of Contents:
 
 。实在是帮到我好多。</p>
 <p>有了 ElegantBookdown 的模版，事情就轻松多了。不过我还是为一些小问题伤透了脑筋，下面主要是介绍一下我使用 ElegantBookdown 的心得。</p>
-<h1 id="indexrmd-哪些能改哪些不能改"><code>index.Rmd</code> 哪些能改哪些不能改？</h1>
+<h1 id="indexrmd-哪些能改哪些不能改"><code>index.Rmd</code> 哪些能改哪些不能改？<a href="#indexrmd-哪些能改哪些不能改" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>ElegantBookdown 中，<code>index.Rmd</code> 最不好修改。其他几个都只有内容，但 <code>index.Rmd</code> 中有很多参数设置。</p>
 <p>我先说 <code>index.Rmd</code> 中的内容。</p>
 <p><code>\mainmatter</code> 要留下。如果没有这个，PDF 中就没有「第 1 章」、「第 2 章」 这样的标题了。</p>
@@ -184,7 +184,7 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
 , 这里 lot 表示 List of Tables, lof 表示 List of Figures.</p>
 <p>其他内容根据自己的情况修改就好，至少在 HTML 和 PDF 版中没有太大影响。最末尾的 epub 内容，如果你会体会 epub 格式的文档，最好还是修改一下。</p>
 <p><code>index.Rmd</code> 修改这部分我就讲到这里。</p>
-<h1 id="pdf-的中文字体怎么改">PDF 的中文字体怎么改？</h1>
+<h1 id="pdf-的中文字体怎么改">PDF 的中文字体怎么改？<a href="#pdf-的中文字体怎么改" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>在不修改 <code>ElegantBookdown</code> <a href="https://github.com/XiangyunHuang/ElegantBookdown" target="_blank" rel="noreferrer noopener">愿文档</a>
 
  中的 <code>preamble.tex</code> 的情况下，我直接点 Rstudio 中的 <code>Build Book</code>，结果显示错误，大意是说找不到 Adobe Song Std 和其他 Adobe 字体。</p>
@@ -232,7 +232,7 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
  和 <a href="https://github.com/adobe-fonts/source-han-sans/tree/release" target="_blank" rel="noreferrer noopener">思源黑体</a>
 
 。然后按上面的方法替换。不过没有太大的区别。</p>
-<h1 id="pdf-中中文引语的字体怎么改成和不一样的字体">PDF 中，中文引语的字体怎么改成和不一样的字体？</h1>
+<h1 id="pdf-中中文引语的字体怎么改成和不一样的字体">PDF 中，中文引语的字体怎么改成和不一样的字体？<a href="#pdf-中中文引语的字体怎么改成和不一样的字体" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>很简单，如果上面的关于字体的代码你都没有删除的话，只需要加两行代码：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#008000;font-weight:bold">\usepackage</span><span style="color:#008000">{</span>csquotes<span style="color:#008000">}</span>
 <span style="color:#008000;font-weight:bold">\AtBeginEnvironment</span><span style="color:#008000">{</span>quote<span style="color:#008000">}{</span><span style="color:#008000;font-weight:bold">\CJKfamily</span><span style="color:#008000">{</span>zhkai<span style="color:#008000">}}</span>
@@ -243,7 +243,7 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
  中看到的。谢谢回答者 <a href="https://tex.stackexchange.com/users/586/torbj%c3%b8rn-t" target="_blank" rel="noreferrer noopener">Torbjørn T</a>
 
 .</p>
-<h1 id="pdf-中正文字体的字号怎么改">PDF 中正文字体的字号怎么改？</h1>
+<h1 id="pdf-中正文字体的字号怎么改">PDF 中正文字体的字号怎么改？<a href="#pdf-中正文字体的字号怎么改" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>也很简单：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#008000;font-weight:bold">\setCJKmainfont</span><span style="color:#7d9029">[Scale=1.5]</span><span style="color:#008000">{</span>STSong<span style="color:#008000">}</span>
 </code></pre></div><p>这个解决方法是我在 Stackoverflow 的 <a href="https://tex.stackexchange.com/questions/258434/changing-chinese-font-size" target="_blank" rel="noreferrer noopener">这个回答</a>
@@ -251,13 +251,13 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
  中看到的。谢谢回答者 <a href="https://tex.stackexchange.com/users/92107/zelphir-kaltstahl" target="_blank" rel="noreferrer noopener">Zelphir Kaltstahl</a>
 
 .</p>
-<h2 id="有个问题是那引用部分的字号怎么改">有个问题是，那引用部分的字号怎么改？</h2>
+<h2 id="有个问题是那引用部分的字号怎么改">有个问题是，那引用部分的字号怎么改？<a href="#有个问题是那引用部分的字号怎么改" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
 <p>用上面的方法似乎不管用了。不过，可以用这个方法：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#008000;font-weight:bold">\AtBeginEnvironment</span><span style="color:#008000">{</span>quote<span style="color:#008000">}{</span><span style="color:#008000;font-weight:bold">\CJKfamily</span><span style="color:#008000">{</span>zhkai<span style="color:#008000">}</span><span style="color:#008000;font-weight:bold">\large</span><span style="color:#008000">}</span>
 </code></pre></div><p>Latex 的十种字体大小使用方法请看<a href="https://www.sascha-frank.com/latex-font-size.html" target="_blank" rel="noreferrer noopener">这里</a>
 
 。</p>
-<h1 id="pdf-中的行间距怎么调整">PDF 中的行间距怎么调整？</h1>
+<h1 id="pdf-中的行间距怎么调整">PDF 中的行间距怎么调整？<a href="#pdf-中的行间距怎么调整" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>一开始，试着用 <a href="https://texblog.org/2011/09/30/quick-note-on-line-spacing/" target="_blank" rel="noreferrer noopener">texblog</a>
 
  上一篇 <a href="https://texblog.org/2011/09/30/quick-note-on-line-spacing/" target="_blank" rel="noreferrer noopener">Quick note on line spacing</a>
@@ -272,7 +272,7 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
 
  中找到了方法：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#008000;font-weight:bold">\renewcommand</span><span style="color:#008000">{</span><span style="color:#008000;font-weight:bold">\baselinestretch</span><span style="color:#008000">}{</span>1.5<span style="color:#008000">}</span> <span style="color:#408080;font-style:italic">% 行间距
-</span></code></pre></div><h1 id="pdf-中的字间距怎么调整">PDF 中的字间距怎么调整？</h1>
+</span></code></pre></div><h1 id="pdf-中的字间距怎么调整">PDF 中的字间距怎么调整？<a href="#pdf-中的字间距怎么调整" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>上面 <a href="http://blog.sina.com.cn/s/blog_5e16f1770100ns4r.html" target="_blank" rel="noreferrer noopener">那篇</a>
 
  帖子提到的 <code>\renewcommand{\CJKglue}{\hskip 1pt plus 0.08\baselineskip}</code> 这个办法我试了不管用。</p>
@@ -285,7 +285,7 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
 </code></pre></div><p>其实，这个答案在 <a href="http://m.newsmth.net/article/TeX/321611" target="_blank" rel="noreferrer noopener">这里</a>
 
  已经有了，但是那位答主并没有说清楚 <code>\ziju</code> 这个命令具体怎么用，所以我错过了。</p>
-<h1 id="如何修改-html-output-中正文的字号">如何修改 HTML Output 中正文的字号？</h1>
+<h1 id="如何修改-html-output-中正文的字号">如何修改 HTML Output 中正文的字号？<a href="#如何修改-html-output-中正文的字号" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p><a href="https://stackoverflow.com/questions/40215141/bookdown-how-can-i-change-the-size-of-the-chapter-titles" target="_blank" rel="noreferrer noopener">这里</a>
 
  提到了如何修改标题的字号，但是并没有提到如何修改正文的字号。</p>
@@ -304,7 +304,7 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
   <span style="color:#008000;font-weight:bold">font-size</span>:<span style="color:#666">16</span><span style="color:#b00040">pt</span>;
 }
 </code></pre></div><p>揭晓答案：和 <code>.book{}</code> 一样的效果，改变的是左侧栏的字号。</p>
-<h1 id="latex-资料">LateX 资料</h1>
+<h1 id="latex-资料">LateX 资料<a href="#latex-资料" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>有几个非常哈的 Latex 资料。其实，处理中文，主要用到 <code>CTeX</code> 和 <code>xeCJK</code> 这两个包。</p>
 <ol>
 <li>
@@ -341,7 +341,7 @@ For any two random variables <span style="color:#666">$</span>X_1<span style="co
 </li>
 </ol>
 </section>
- 
+
 
 <p style="color:#777;">最后一次修改于 2020-07-29</p>
 

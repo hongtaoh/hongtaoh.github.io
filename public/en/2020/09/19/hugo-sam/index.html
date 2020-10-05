@@ -116,7 +116,7 @@ Table of Contents:
 <p>There are several things you need to prepare to preview locally and deploy a Hugo site which uses the <a href="https://github.com/victoriadrake/hugo-theme-sam" target="_blank" rel="noreferrer noopener">Sam theme</a>
 
 .</p>
-<h1 id="install-nodejs-npm-postcss-cli-and-autoprefixer">Install Node.js, npm, postcss-cli, and autoprefixer</h1>
+<h1 id="install-nodejs-npm-postcss-cli-and-autoprefixer">Install Node.js, npm, postcss-cli, and autoprefixer<a href="#install-nodejs-npm-postcss-cli-and-autoprefixer" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>Victoria recommends installing Node.js and npm <a href="https://www.npmjs.com/get-npm" target="_blank" rel="noreferrer noopener">this way</a>
 
 . <strong>However</strong>, after the installation, when running <code>npm install -g postcss-cli</code> and <code>npm install -g autoprefixer</code> to install <code>postcss-cli</code> and <code>autoprefixer</code>, a permission error might occur:</p>
@@ -146,11 +146,11 @@ Table of Contents:
 </code></pre></div><p>and</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo npm i -g autoprefixer 
 </code></pre></div><p>You will be asked to input your passwords. If you are using a Mac, your input will be invisible. However, it will be processed anyway. So don&rsquo;t worry. Just input your passwords and press <code>Enter</code>.</p>
-<h1 id="locally-preview-the-project">Locally preview the project</h1>
+<h1 id="locally-preview-the-project">Locally preview the project<a href="#locally-preview-the-project" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>When previewing the website, Hugo might give this error:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">TOCSS: failed to transform <span style="color:#ba2121">&#34;css/main.tmp.css&#34;</span> <span style="color:#666">(</span>text/x-sass<span style="color:#666">)</span>: resource <span style="color:#ba2121">&#34;sass/sass/style.sass_7642ba43b3212fd7d7ba324df3b88b0c&#34;</span> not found in file cache
 </code></pre></div><p>To solve this problem, simply copy the <code>/exampleSite/resources</code> and paste it into the root directory of your hugo project.</p>
-<h1 id="deploy-through-netlify">Deploy through Netlify</h1>
+<h1 id="deploy-through-netlify">Deploy through Netlify<a href="#deploy-through-netlify" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>If you are deploying your project via Netlify:</p>
 <p>First, don&rsquo;t use the <code>netlify.toml</code> within <code>hugo-theme-sam</code>. Instead, use the <code>netlify.toml</code> <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" target="_blank" rel="noreferrer noopener">here</a>
 
@@ -201,11 +201,11 @@ Table of Contents:
     <span style="color:#008000;font-weight:bold">&#34;autoprefixer&#34;</span>: <span style="color:#ba2121">&#34;9.8.4&#34;</span>
   }
 }
-</code></pre></div><h1 id="example">Example</h1>
+</code></pre></div><h1 id="example">Example<a href="#example" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>If you have trouble understanding the above parts, you can refer to <a href="https://github.com/hongtaoh/bsa" target="_blank" rel="noreferrer noopener">this example</a>
 
 .</p>
- 
+
 
 <p style="color:#777;">Last modified on 2020-09-24</p>
 

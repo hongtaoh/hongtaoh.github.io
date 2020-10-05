@@ -147,7 +147,7 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
 </figure>
 <p>我们会看到，抛掷一万次，正面朝上的频率越来越接近0.8，那么我们在不知道 <code>$\theta = 0.8$</code> 的情况下，看到这个结果，自然也就会猜到 <code>$\theta = 0.8$</code>。</p>
 <p>第二种方法是数学公式推导。比如有一个六面的骰子🎲，画了一个点的有一个面，两个点的有两个面，三个点的有三个面，那么用数学公式我们可以得出，抛掷骰子后，从长远来看，得到一个点的相对频率是1/6，两个点1/3，三个点1/2.</p>
-<h1 id="概率分布">概率分布</h1>
+<h1 id="概率分布">概率分布<a href="#概率分布" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>所谓概率分布，是指列出所有可能的结果及它们各自的对应的概率。Kruschke 老师的原话是：</p>
 <blockquote>
 <p>A probability <em>distribution</em> is simply a list of all possible outcomes and their corresponding probabilities (p.78).</p>
@@ -247,7 +247,7 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
 <p>那如果 <code>$x$</code> 是连续性变量呢？</p>
 <p><code>$$E[x] = \int dx \ p(x) x \tag{4.6}\label{eq4.6}$$</code></p>
 <p>这里 <code>$p(x)$</code> 是概率密度，那 <code>$dx \ p(x)$</code>便可以理解成区间无穷小的概率质量。上面这个公式应该不难理解。</p>
-<h1 id="最高密度区间-hdi">最高密度区间 (HDI)</h1>
+<h1 id="最高密度区间-hdi">最高密度区间 (HDI)<a href="#最高密度区间-hdi" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>描述一个分布，除了可以说明平均数和标准差，另一个重要方法是最高密度区间 (highest density interval; HDI)。HDI 首先是区间，这个区间有什么特征呢：这个区间所有点的概率密度大于这个区间外的点。</p>
 <p>对于 HDI，有两个个需要注意的点：</p>
 <ol>
@@ -269,7 +269,7 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
     
 </figure>
 <p>HDI 越宽，说明我们越不确定；越窄说明越确定。</p>
-<h1 id="边缘分布和条件分布">边缘分布和条件分布</h1>
+<h1 id="边缘分布和条件分布">边缘分布和条件分布<a href="#边缘分布和条件分布" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="/media/bayesian/table_4-1.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
@@ -382,7 +382,7 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
 </li>
 </ol>
 </section>
- 
+
 
 <p style="color:#777;">最后一次修改于 2020-08-23</p>
 

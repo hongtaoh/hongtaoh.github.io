@@ -132,11 +132,11 @@ Table of Contents:
 
  也都专门讲过 hugo 的 netlify 部署，但是有些内容有些过时，比如自定义域名时的DNS设置。</p>
 <p>这篇帖子是针对像我一样的计算机小白的，我会详细把每一步解释清楚。以下主要以苹果电脑为例，使用windows系统的同学可以作为参考，但我不保证过程正确。</p>
-<h1 id="一创建本地-hugo-文件夹">一、创建本地 hugo 文件夹</h1>
+<h1 id="一创建本地-hugo-文件夹">一、创建本地 hugo 文件夹<a href="#一创建本地-hugo-文件夹" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>这个文件夹是你一开始通过hugo new site xxx 建立的那个文件夹，比如如果你用的hugo new site quickstart，那么quickstart文件夹就是我们要托管到github的本地文件夹，当然，不一定非得用quickstart这个名字，你想用mysite, myblog, hugo-website, my-website&hellip;都可以。如果你还不知道怎么开始用hugo，可以参考olOwOlo的那篇 <a href="https://blog.olowolo.com/post/hugo-quick-start/" target="_blank" rel="noreferrer noopener">《hugo从入门到会用》</a>
 
 。这里我们就用quickstart为例。</p>
-<h1 id="二github-新建仓库">二、Github 新建仓库</h1>
+<h1 id="二github-新建仓库">二、Github 新建仓库<a href="#二github-新建仓库" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>首先登陆github，如果你还没有注册github账号，请参考大漠穷秋的 <a href="https://damoqiongqiu.github.io/jekyll/2017/07/03/%E5%88%A9%E7%94%A8github%E5%92%8Cjekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlog-4.html" target="_blank" rel="noreferrer noopener">这篇帖子</a>
 
 。登陆成功之后，如下图所示，点击右上角的那个加号，然后点击&rsquo;new repository&rsquo;。这里的repository是仓库的意思。</p>
@@ -187,7 +187,7 @@ Table of Contents:
     
 </figure>
 <p>好了，现在 github 部分我们就暂时操作完了，接下来来我们要做的是将本地的 quickstart 文件夹与 github 仓库连接起来。</p>
-<h1 id="三terminal-及-git-知识预备">三、Terminal 及 Git 知识预备</h1>
+<h1 id="三terminal-及-git-知识预备">三、Terminal 及 Git 知识预备<a href="#三terminal-及-git-知识预备" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>对 terminal 以及 git 的操作很熟悉的童鞋，这一部分的步骤可以忽略。</p>
 <hr>
 <p>苹果电脑请打开 terminal 。如果你还不会打开 terminal: 在电脑右上角的搜索🔍处，输入 terminal，回车，terminal（终端）就会出现。使用 Windows 的童鞋请打开 Git Bash 。</p>
@@ -222,7 +222,7 @@ Table of Contents:
 
 。</p>
 <hr>
-<h1 id="四将本地-quickstart-文件夹与-github-repository-进行关联">四、将本地 quickstart 文件夹与 github repository 进行关联</h1>
+<h1 id="四将本地-quickstart-文件夹与-github-repository-进行关联">四、将本地 quickstart 文件夹与 github repository 进行关联<a href="#四将本地-quickstart-文件夹与-github-repository-进行关联" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>这一步我参考的是 <a href="https://codepool.top/" target="_blank" rel="noreferrer noopener">不谇</a>
 
  的 <a href="https://codepool.top/posts/hugo-tutorial-11/" target="_blank" rel="noreferrer noopener">hugo 教程系列（十一）</a>
@@ -249,7 +249,7 @@ git push -u origin master
 
 使用 https 的仓库网址。因此，当你在别的网上教程中见到用的是 ssh 形式的网址，你直接换成 https 形式的就好，Git 都可以识别。上面我建的仓库的 ssh 形式的网址是：<code>git@github.com:hhao1992/hugo-website.git</code>。</p>
 <p>现在你刷新一下你的 Github 页面，如果不出意外的话，这个仓库里应该有东西了。很好，最重要的任务已经完成了，现在需要做的就是将 Github 仓库与 Netlify 进行关联。</p>
-<h1 id="五将-github-仓库部署于netlify">五、将 Github 仓库部署于Netlify</h1>
+<h1 id="五将-github-仓库部署于netlify">五、将 Github 仓库部署于Netlify<a href="#五将-github-仓库部署于netlify" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/blogdown-signpost-5.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
@@ -376,7 +376,7 @@ git push -u origin master
     </figcaption>
     
 </figure>
-<h2 id="稍等片刻">稍等片刻&hellip;</h2>
+<h2 id="稍等片刻">稍等片刻&hellip;<a href="#稍等片刻" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
 <p>到了这一步，在我们点击 “部署网站” 之前，还有一个非常关键的步骤，那便是在我们的本地 hugo 文件，以及与之相关联的 Github 远程 hugo 文件中，添加 netlify.toml 这个文件。这一步在 Hugo 官方的 <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" target="_blank" rel="noreferrer noopener"><em>Host on Netlify</em></a>
 
  也讲到了。</p>
@@ -422,7 +422,7 @@ git push
 
 ）</p>
 <p>好，不出意外的话，你刷新一下 Github ，应该就能看到新上传的文件了。</p>
-<h2 id="继续">继续！</h2>
+<h2 id="继续">继续！<a href="#继续" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
 <p>然后点击 &ldquo;Deploy site&rdquo;。不出意外的话，等一分钟左右，部署就成功了：</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="/media/netlify/netlify-deploy-success.png"  itemprop="contentUrl"> 
@@ -485,7 +485,7 @@ git push
     
 </figure>
 <p>好了，网站已经建好了，下面我们讲一下如何进行日常网站更新，因为我们不可能一辈子都不写一篇新文章（虽然有可能&hellip;) 。</p>
-<h1 id="六网站如何日常更新被粉丝催更了咋办">六、网站如何日常更新？（被粉丝催更了咋办？）</h1>
+<h1 id="六网站如何日常更新被粉丝催更了咋办">六、网站如何日常更新？（被粉丝催更了咋办？）<a href="#六网站如何日常更新被粉丝催更了咋办" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>本地的 Hugo 文件好更新，但是 Netlify 是根据 Github 仓库里的内容来建网站的，所以，这里的更新，更重要的是更新 Github 仓库。</p>
 <p>其实，我们刚才不就更新了吗？我们把本地新建的 netlify.toml 文件上传到 Github ，已经是在更新了。Hugo 的日常更新，和这个步骤类似，唯一的不同是，我们在更新之前，需要把本地 hugo 文件的 public 文件夹 删除，然后让 hugo 刷新网页内容。为什么要把 public 文件先删除呢？因为 public 文件并不会实时更新。<a href="https://www.mikedane.com/about/" target="_blank" rel="noreferrer noopener">Mike Dane</a>
 
@@ -530,12 +530,12 @@ git push origin master <span style="color:#408080;font-style:italic">#上传</sp
 
  里提到的，如果你的网站变动比较大，比如你的 <code>layout</code> 文件夹有大的变动，那么不先删除 <code>public</code> 文件夹就运行 <code>hugo</code> 命令，很可能网站不会反映所有的变动。因此，稳妥起见，还是在 <code>hugo</code> 之前，加上<code>rm -rf public</code>。</p>
 </blockquote>
-<h1 id="七如果你跟着这篇教程走还是碰到了错误">七、如果你跟着这篇教程走，还是碰到了错误&hellip;</h1>
+<h1 id="七如果你跟着这篇教程走还是碰到了错误">七、如果你跟着这篇教程走，还是碰到了错误&hellip;<a href="#七如果你跟着这篇教程走还是碰到了错误" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <ol>
 <li>再认真看一下，看看是不是漏了代码；</li>
 <li>看看 terminal 的错误提示是什么？我之前碰到过的一个错误提示大意是：<strong>没有找到 submoduel 代码</strong>。如果是这样的话，那么，你需要用 <code>git submodule</code> 来把 hugo 主题克隆下来，而不能用 <code>git clone</code>。这一点的原理我还没彻底搞清楚，不过你用 <code>git submodule</code> 试一下，应该可以。</li>
 </ol>
- 
+
 
 <p style="color:#777;">最后一次修改于 2020-08-23</p>
 

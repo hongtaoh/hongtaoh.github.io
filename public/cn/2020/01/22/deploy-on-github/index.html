@@ -130,7 +130,7 @@ Table of Contents:
 
 。以下的教程参考全程参考这三篇帖子，也参考 Hugo 那篇教程。</p>
 <p>⚠ 以下内容以苹果电脑为例子，使用 Windows 的朋友可以作为参考，但我不保证结果正确。</p>
-<h1 id="新建-usernamegithubio--仓库并将本地仓库上传">新建 <code>&lt;USERNAME&gt;.github.io </code> 仓库并将本地仓库上传</h1>
+<h1 id="新建-usernamegithubio--仓库并将本地仓库上传">新建 <code>&lt;USERNAME&gt;.github.io </code> 仓库并将本地仓库上传<a href="#新建-usernamegithubio--仓库并将本地仓库上传" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>首先，我假设你已经用了一个本地 Hugo 文件夹，网站建设已经基本完成，运行 <code>hugo server -D</code>，打开 <a href="http://localhost:1313" target="_blank" rel="noreferrer noopener">http://localhost:1313</a>
 
  后网页显示一切正常。如果这些还没弄好，请先把网站在本地建设好之后再考虑部署到网上。</p>
@@ -194,7 +194,7 @@ git push -u origin master
     </figcaption>
     
 </figure>
-<h1 id="建立-sources-分支">建立 sources 分支</h1>
+<h1 id="建立-sources-分支">建立 sources 分支<a href="#建立-sources-分支" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>第二步，我们需要回到 Github, 建立一个 sources<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 分支。</p>
 <p>回到我们刚才创建的仓库，刷新一下页面。你会看到在 1 commit 底下有一个关于 Branch 的选择，如下图：</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -217,7 +217,7 @@ git push -u origin master
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch
 git checkout sources
 </code></pre></div><p>输入完之后，记得点一下回车键，这样最后一行才会被执行，以下的代码也一样。</p>
-<h1 id="将-public-文件夹放到-master-分支">将 <code>public</code> 文件夹放到 master 分支</h1>
+<h1 id="将-public-文件夹放到-master-分支">将 <code>public</code> 文件夹放到 master 分支<a href="#将-public-文件夹放到-master-分支" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>紧接着，在 Terminal 中输入以下代码。输入完之后，先稍等一会儿，让程序运行一下，停止之后，再点击一下回车键，以运行最后一行代码：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#408080;font-style:italic"># 注意⚠：此部分的代码块只可运行一次！</span>
 <span style="color:#408080;font-style:italic">#!/usr/bin/env bash</span>
@@ -341,7 +341,7 @@ git subtree push --prefix<span style="color:#666">=</span>public <span style="co
     
 </figure>
 <p>点开链接，就能看到自己的网站了。</p>
-<h1 id="日常更新">日常更新</h1>
+<h1 id="日常更新">日常更新<a href="#日常更新" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>打开一个文本编辑器，比如 <a href="https://www.typora.io/" target="_blank" rel="noreferrer noopener">Typora</a>
 
 ，<a href="https://www.cnblogs.com/wind128/p/4409422.html" target="_blank" rel="noreferrer noopener">Sublime Text</a>
@@ -349,7 +349,7 @@ git subtree push --prefix<span style="color:#666">=</span>public <span style="co
  等。新建一个名为 deploy.sh 的文档，把上面刚刚运行的复制进去。</p>
 <p>每次更新的时候，只需要在 Terminal 中输入以下代码即可：</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bash deploy.sh
-</code></pre></div><h1 id="自定义域名">自定义域名</h1>
+</code></pre></div><h1 id="自定义域名">自定义域名<a href="#自定义域名" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <p>这部分其实很容易。我的域名是在 <a href="https://www.namecheap.com/" target="_blank" rel="noreferrer noopener">Namecheap</a>
 
  买的。其他地方在设置上应该差不多。这里我就以 Namecheap 举例。</p>
@@ -427,7 +427,7 @@ git push origin <span style="color:#ba2121">&#34;</span><span style="color:#1917
 msg <span style="color:#ba2121">&#34;Pushing the updated \`public\` folder to the \`master\` branch&#34;</span>
 git subtree push --prefix<span style="color:#666">=</span>public <span style="color:#b62;font-weight:bold">\
 </span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master
-</code></pre></div><h1 id="注意事项">注意事项</h1>
+</code></pre></div><h1 id="注意事项">注意事项<a href="#注意事项" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <ul>
 <li>如果你往根目录，也就是和 <code>content</code> 平行的这个目录新加文件，比如自定义域名时需要的 <code>CNAME</code>， 在运行 <code>bash deploy.sh</code> 命令之前，一定要先把这个新加的文件上传。</li>
 </ul>
@@ -446,7 +446,7 @@ git push
 </li>
 </ol>
 </section>
- 
+
 
 <p style="color:#777;">最后一次修改于 2020-08-23</p>
 
