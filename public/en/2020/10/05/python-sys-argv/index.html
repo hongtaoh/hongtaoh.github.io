@@ -124,7 +124,7 @@ OUT_FNAME <span style="color:#666">=</span> sys<span style="color:#666">.</span>
 
  locally. The location is <code>Desktop/Covid19-data/scripts/nyt_state_data.py</code>.</p>
 <p>In terminal, I&rsquo;ll call this script first, followed by three arguments passed to this script:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python /Desktop/covid19-data/scripts/nyt_state_data.py https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv https://raw.githubusercontent.com/hongtaoh/covid19-data/master/data_sources/wikipedia/ISO3166/usa_state_code.csv /Desktop/covid19-data/output/cases/cases_us_states_nyt_UPDATED_HT.csv
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python Desktop/covid19-data/scripts/nyt_state_data.py https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv https://raw.githubusercontent.com/hongtaoh/covid19-data/master/data_sources/wikipedia/ISO3166/usa_state_code.csv Desktop/covid19-data/output/cases/cases_us_states_nyt_UPDATED_HT.csv
 </code></pre></div><p>I know above code is very messay since the URLs of the two CSV files are pretty long. I&rsquo;ll demystify it this way:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python YourScript.py Arg1 Arg2 Arg3
 </code></pre></div><p>Arguments for <code>sys</code> are separated by space.</p>
