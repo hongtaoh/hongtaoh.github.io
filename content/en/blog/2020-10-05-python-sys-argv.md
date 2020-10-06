@@ -29,7 +29,7 @@ Let's say I have this [nyt_state_data.py](https://github.com/hongtaoh/covid19-da
 In terminal, I'll call this script first, followed by three arguments passed to this script:
 
 ```bash
-python /Desktop/covid19-data/scripts/nyt_state_data.py https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv https://raw.githubusercontent.com/hongtaoh/covid19-data/master/data_sources/wikipedia/ISO3166/usa_state_code.csv /Desktop/covid19-data/output/cases/cases_us_states_nyt_UPDATED_HT.csv
+python Desktop/covid19-data/scripts/nyt_state_data.py https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv https://raw.githubusercontent.com/hongtaoh/covid19-data/master/data_sources/wikipedia/ISO3166/usa_state_code.csv Desktop/covid19-data/output/cases/cases_us_states_nyt_UPDATED_HT.csv
 ```
 
 I know above code is very messay since the URLs of the two CSV files are pretty long. I'll demystify it this way:

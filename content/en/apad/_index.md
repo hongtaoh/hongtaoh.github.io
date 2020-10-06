@@ -2,6 +2,11 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-05
+Schmälzle et al. (2017). Brain connectivity dynamics during social interaction reflect social network structure. *Proceedings of the National Academy of Sciences, 114*(20), 5153-5158.
+
+p. 5153 -p.5157
+
 ## 2020-10-04
 
 Finished Chambliss. (1989). 
