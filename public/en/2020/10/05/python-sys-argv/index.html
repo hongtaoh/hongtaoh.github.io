@@ -110,22 +110,29 @@
 
  module. This variable contains arguments that are to be passed to the python script you are calling in the command line<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <p>I&rsquo;ll explain by example.</p>
-<p>First, take a look at this <a href="https://github.com/hongtaoh/covid19-data/blob/master/scripts/nyt_state_data.py" target="_blank" rel="noreferrer noopener"><code>nyt_state_data.py</code></a>
+<p>First, take a look at <a href="https://github.com/hongtaoh/covid19-data/blob/master/scripts/nyt_state_data.py" target="_blank" rel="noreferrer noopener"><code>nyt_state_data.py</code></a>
 
 . It has three <code>sys.argv</code> variables:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">NYT_STATE_DATA <span style="color:#666">=</span> sys<span style="color:#666">.</span>argv[<span style="color:#666">1</span>]
 USA_STATE_CODE_DATA <span style="color:#666">=</span> sys<span style="color:#666">.</span>argv[<span style="color:#666">2</span>]
 OUT_FNAME <span style="color:#666">=</span> sys<span style="color:#666">.</span>argv[<span style="color:#666">3</span>]
 </code></pre></div><p>By default, <code>sys.argv[0]</code> is the script name.</p>
-<p>Take a closer look at nyt_state_data.py](https://github.com/hongtaoh/covid19-data/blob/master/scripts/nyt_state_data.py), and you&rsquo;ll find that the first two <code>sys.argv</code> variables are <code>CSV</code> files to be read by <code>pandas</code> and the last one is a string or file location for the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html" target="_blank" rel="noreferrer noopener"><code>pandas.DataFrame.to_csv</code></a>
+<p>Take a closer look at <a href="https://github.com/hongtaoh/covid19-data/blob/master/scripts/nyt_state_data.py" target="_blank" rel="noreferrer noopener"><code>nyt_state_data.py</code></a>
+
+, and you&rsquo;ll find that the first two <code>sys.argv</code> variables are <code>CSV</code> files to be read by <code>pandas</code> and the last one is a string or file location for the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html" target="_blank" rel="noreferrer noopener"><code>pandas.DataFrame.to_csv</code></a>
 
  function.</p>
 <p>Let&rsquo;s say I have this <a href="https://github.com/hongtaoh/covid19-data/blob/master/scripts/nyt_state_data.py" target="_blank" rel="noreferrer noopener">nyt_state_data.py</a>
 
  locally. The location is <code>Desktop/Covid19-data/scripts/nyt_state_data.py</code>.</p>
 <p>In terminal, I&rsquo;ll call this script first, followed by three arguments passed to this script:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python Desktop/covid19-data/scripts/nyt_state_data.py https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv https://raw.githubusercontent.com/hongtaoh/covid19-data/master/data_sources/wikipedia/ISO3166/usa_state_code.csv Desktop/covid19-data/output/cases/cases_us_states_nyt_UPDATED_HT.csv
-</code></pre></div><p>I know above code is very messay since the URLs of the two CSV files are pretty long. I&rsquo;ll demystify it this way:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python Desktop/covid19-data/scripts/nyt_state_data.py https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv https://raw.githubusercontent.com/hongtaoh/covid19-data/master/data_sources/wikipedia/ISO3166/usa_state_code.csv Desktop/covid19-data/output/cases/cases_us_states_nyt_UP_TO_<span style="color:#008000;font-weight:bold">$(</span>date -v -1d <span style="color:#ba2121">&#39;+%d_%B_%Y&#39;</span><span style="color:#008000;font-weight:bold">)</span>.csv
+</code></pre></div><p>The date setting is based on These two sources: <a href="https://www.howtogeek.com/410442/how-to-display-the-date-and-time-in-the-linux-terminal-and-use-it-in-bash-scripts/" target="_blank" rel="noreferrer noopener">1</a>
+
+, <a href="https://apple.stackexchange.com/a/115836" target="_blank" rel="noreferrer noopener">2</a>
+
+</p>
+<p>I know above code is very messay since the URLs of the two CSV files are pretty long. I&rsquo;ll demystify it this way:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python YourScript.py Arg1 Arg2 Arg3
 </code></pre></div><p>Arguments for <code>sys</code> are separated by space.</p>
 <section class="footnotes" role="doc-endnotes">
@@ -142,7 +149,7 @@ OUT_FNAME <span style="color:#666">=</span> sys<span style="color:#666">.</span>
 </section>
 
 
-<p style="color:#777;">Last modified on 2020-10-05</p>
+<p style="color:#777;">Last modified on 2020-10-06</p>
 
 </div>
 <a href="#top"><i class="fa fa-arrow-circle-up" style="font-size: 30px; color: black;"></i></a>  

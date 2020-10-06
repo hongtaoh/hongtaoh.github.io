@@ -2,10 +2,23 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-06
+1. Finished Schmälzle et al. (2017).
+
+Main findings:
+
+- Social exclusion correlates increased connectivity in the brain's mentalizing system;
+
+- When excluded, people whose friends are sparsely connected with each other showed increased connectivity within key brain systems. 
+
+Overall, social exclusion / inclusion is related to connectivity within one's brain networks. Also, the density of one's friendship network has an effect on the connectivity change. 
+
+2. Eubank et al.(2004). Modelling disease outbreaks in realistic urban social networks. *Nature, 429*(6988), 180-184.
+
 ## 2020-10-05
 Schmälzle et al. (2017). Brain connectivity dynamics during social interaction reflect social network structure. *Proceedings of the National Academy of Sciences, 114*(20), 5153-5158.
 
-p. 5153 -p.5157
+p. 5153 -p.5156
 
 ## 2020-10-04
 
