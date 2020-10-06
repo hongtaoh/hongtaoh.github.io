@@ -21,7 +21,7 @@ Amber 帖子中提到的方法是由 [Jente Hidskes](https://www.hjdskes.nl/blog
 
 ⚠ 以下内容以苹果电脑为例子，使用 Windows 的朋友可以作为参考，但我不保证结果正确。
 
-# 新建 `<USERNAME>.github.io ` 仓库并将本地仓库上传
+# 新建 `<USERNAME>.github.io` 仓库并将本地仓库上传
 首先，我假设你已经用了一个本地 Hugo 文件夹，网站建设已经基本完成，运行 `hugo server -D`，打开 [http://localhost:1313](http://localhost:1313) 后网页显示一切正常。如果这些还没弄好，请先把网站在本地建设好之后再考虑部署到网上。
 
 注意⚠：
