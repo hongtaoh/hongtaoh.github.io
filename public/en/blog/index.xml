@@ -11,6 +11,18 @@
     
     
     <item>
+      <title>How to Download Wget for Mac without Homebrew</title>
+      <link>https://hongtaoh.github.io/en/2020/10/07/wget/</link>
+      <pubDate>Wed, 07 Oct 2020 11:53:04 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/10/07/wget/</guid>
+      <description>There are four ways to download Wget :
+ Via Xcode .  However, Xcode takes up more than 10 GB when installed. I don&amp;rsquo;t think it&amp;rsquo;s worth it to download Xcode simply for Wget.
+Official website of Gun  I tried to download wget2-1.99.2.tar.gz from https://ftp.gnu.org/gnu/wget/ which I got from https://www.gnu.org/software/wget/ .
+cd ~/Downloads curl -O https://ftp.gnu.org/gnu/wget/wget2-1.99.2.tar.gz tar -zxvf wget2-1.99.2.tar.gz cd wget2-1.99.2/ ./configure make make install wget http://ftp.gnu.org/gnu/wget/wget-1.19.5.tar.gz However, errors occured.</description>
+    </item>
+    
+    <item>
       <title>How to Make A Pull Request on GitHub</title>
       <link>https://hongtaoh.github.io/en/2020/10/05/github-pull-request/</link>
       <pubDate>Mon, 05 Oct 2020 16:56:56 -0400</pubDate>
