@@ -2,6 +2,18 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-07
+
+1. Finished Eubank et al. (2004)
+
+>Time of withdrawal to the home is by far the most important factor (in a disease outbreak in cities), followed by delay in response. This indicates that targeted vaccination is feasible when combined with fast detection. Ironically, the actual strategy used is much less important than either of these factors. -- Eubank et al. (2004)
+
+2. Centola, D. (2011). An experimental study of homophily in the adoption of health behavior. *Science, 334*(6060), 1269-1272.
+
+  - Within the homophilous condition, a higher percentage of non-obese people than obese people adopted the behavior (*P* < 0.05)
+
+  P.1270
+
 ## 2020-10-06
 1. Finished Schmälzle et al. (2017).
 
