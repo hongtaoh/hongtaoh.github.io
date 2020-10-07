@@ -25,7 +25,7 @@ The main difference between the [official solution](https://gohugo.io/getting-st
 
 I used the latter one (because it looks longer and safer...), but I guess both will work. 
 
-Wiat, but how can I make sure that readers will open an internal link rather than opening in a new tab?
+Wait, but how can I make sure that readers will open an internal link rather than opening in a new tab?
 
 As [Agrim Prasad](https://agrimprasad.com/post/hugo-goldmark-markdown/) pointed out, you can use relative links: `[my amazing post](/posts/my-amazing-post/)`
 
