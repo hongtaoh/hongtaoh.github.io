@@ -28,7 +28,7 @@ make install
 wget http://ftp.gnu.org/gnu/wget/wget-1.19.5.tar.gz
 ```
 
-However, errors occured. According to [this article](https://www.fossmint.com/install-and-use-wget-on-mac/), it seems I have to install Xcode first; otherwise running `/configure` won't be successful.
+However, errors occured. According to [this article](https://www.fossmint.com/install-and-use-wget-on-mac/), it seems I have to install Xcode first; otherwise running `./configure` won't be successful.
 
 3. [Brew](https://stackoverflow.com/a/33902055)
 
