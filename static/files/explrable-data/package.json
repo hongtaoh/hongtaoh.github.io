@@ -1,0 +1,14 @@
+{
+  "name": "@hongtaoh/explrable-data",
+  "main": "2926ee9c72b4e061@418.js",
+  "version": "418.0.0",
+  "homepage": "https://observablehq.com/@hongtaoh/explrable-data",
+  "author": {
+    "name": "Hongtao Hao",
+    "url": "https://observablehq.com/@hongtaoh"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
