@@ -16,7 +16,7 @@ We can see that homophily had a significant effect on adoption of healthy behavi
 4. Across conditions: homophily boosted both the number and the fraction of the obese who were exposed to the behavior (*P* < 0.05), using Mann-Whitney U test.. This happened despite that obese people initially had greater exposure in the unstructured networks. 
 
 
-5. Did homophily affect the adotion rate among those exposed? The effect was significant among exposed obese people (*P* < 0.01), using Mann-Whitney U test, but not among exposed non-obese individuals. 
+5. Did homophily affect the adotion rate among those exposed? The effect was significant among the exposed obese people (*P* < 0.01), using Mann-Whitney U test, but not among the exposed non-obese individuals. 
 
 
 ## 2020-10-07

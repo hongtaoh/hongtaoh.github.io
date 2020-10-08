@@ -1,4 +1,4 @@
-// https://observablehq.com/@hongtaoh/explrable-data@482
+// https://observablehq.com/@hongtaoh/explrable-data@485
 import define1 from "./e93997d5089d7165@2286.js";
 import define2 from "./e6e3f7f78308b284@274.js";
 
@@ -36,7 +36,7 @@ Time(season)
 )});
   main.variable(observer()).define(["md"], function(md){return(
 md`
-## 2. Slider
+## 2. Slider: Choose your confidence interval
 `
 )});
   main.variable(observer("viewof CI")).define("viewof CI", ["slider"], function(slider){return(
