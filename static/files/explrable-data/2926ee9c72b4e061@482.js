@@ -1,4 +1,4 @@
-// https://observablehq.com/@hongtaoh/explrable-data@418
+// https://observablehq.com/@hongtaoh/explrable-data@482
 import define1 from "./e93997d5089d7165@2286.js";
 import define2 from "./e6e3f7f78308b284@274.js";
 
@@ -7,7 +7,7 @@ export default function define(runtime, observer) {
   const fileAttachments = new Map([["winter-img.jpg",new URL("./files/b280fe0cb6da8e3b3092006feba40dee258839bd095bb69c3d36ee55d45e9f21ccde17db0b54199c79da6677d5a34ef975923b6671b80db4131c8e05d5ddd343",import.meta.url)]]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], function(md){return(
-md`# explrable data`
+md`# explorable data`
 )});
   main.variable(observer()).define(["md"], function(md){return(
 md`
@@ -23,12 +23,12 @@ select({
 })
 )});
   main.variable(observer("season")).define("season", ["Generators", "viewof season"], (G, _) => G.input(_));
-  main.variable(observer("Time")).define("Time", ["slide"], function(slide){return(
+  main.variable(observer("Time")).define("Time", ["html"], function(html){return(
 function Time (d) {
-  if (d == "Spring") {return slide.img`https://imagesvc.meredithcorp.io/v3/mm/image?url=https://static.onecms.io/wp-content/uploads/sites/28/2018/03/china-flowers-cherry-CHINASPRING318.jpg` } 
-  else if (d == "Summer") {return slide.img`https://park.ca/wp-content/uploads/2017/05/Summer-Insurance-Tips-1024x621.jpg`}
-  else if (d == "Fall") {return slide.img`https://www.rd.com/wp-content/uploads/2016/09/fall-photos-Iowa_Stewart.jpg`}
-  else {return slide.img`https://lapland.nordicvisitor.com/images/1/finland/winter-in-finland.jpg`}
+  if (d == "Spring") {return html`<img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https://static.onecms.io/wp-content/uploads/sites/28/2018/03/china-flowers-cherry-CHINASPRING318.jpg" width=800>`} 
+  else if (d == "Summer") {return html`<img src="https://park.ca/wp-content/uploads/2017/05/Summer-Insurance-Tips-1024x621.jpg" width=800>`}
+  else if (d == "Fall") {return html`<img src="https://www.rd.com/wp-content/uploads/2016/09/fall-photos-Iowa_Stewart.jpg" width=800>`}
+  else {return html`<img src="https://ukrainetrek.com/blog/wp-content/uploads/2014/04/winter-landscape-krynka-river-ukraine-3.jpg" width=800>`}
 }
 )});
   main.variable(observer()).define(["Time","season"], function(Time,season){return(
@@ -111,13 +111,13 @@ html `<button type = "button">Add data</button>`
   main.variable(observer("chart")).define("chart", ["d3","add","reset"], function(d3,add,reset)
 {
   
-  const width = 880;
+  const width = 1000;
   
   const height = 350;
   
   const dataset = [5, 10, 24, 16, 18, 19, 22, 9, 8, 17, 4, 6, 10, 12, 20];
   
-  const margin = ({top: 50, right: 200, bottom: 10, left: 10})
+  const margin = ({top: 50, right: 300, bottom: 10, left: 10})
   
   const svg = d3.create("svg").attr("width", width).attr("height", height)
   
@@ -161,6 +161,14 @@ html `<button type = "button">Add data</button>`
                              .attr("width", xScale.bandwidth())
                              .attr("height", d => yScale(d))
                              .attr("fill", d => "rgb("+ Math.round(d * 5) +", "+ Math.round(d * 2) +", "+ Math.floor(d * 9) +")");
+    
+    svg.selectAll("text")
+       .data([newNumber])
+       .join("text")
+         .attr("x", 850)
+         .attr("y", 50)
+         .attr("font-size", "45px")
+       .text(d => d)
                       
     })
   
@@ -169,6 +177,15 @@ html `<button type = "button">Add data</button>`
     while (dataset.length > 15) {
       dataset.pop()
     }
+    
+     svg.selectAll("text")
+       .data([1])
+       .join("text")
+         .attr("x", 800)
+         .attr("y", 50)
+         .attr("font-size", "45px")
+       .text("reset")
+     
     
     xScale.domain(d3.range(dataset.length));
     
