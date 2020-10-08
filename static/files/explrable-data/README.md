@@ -1,6 +1,6 @@
-# explrable data
+# explorable data
 
-https://observablehq.com/@hongtaoh/explrable-data@418
+https://observablehq.com/@hongtaoh/explrable-data@482
 
 View this notebook in your browser by running a web server in this folder. For
 example:

@@ -2,6 +2,23 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-08
+### Centola, D. (2010).
+
+1. Within the unstructured conition, there are more non-obese adopters than obese adopter, both in terms of number and percentage;
+
+2. Across conditions: homophily boosted adoption among both the obese (*P* < 0.01) and the non-obese people (*P* < 0.05), using Mann-Whitney U test. 
+
+We can see that homophily had a significant effect on adoption of healthy behaviors. However, is it because obese people are more likely to be **exposed** to the behavior, or those who are exposed are morely likely to adopt these behaviors in a homophilous group?
+
+3. It turns out that within both conditions, the relative percentage of the obese and the non-obese **did not** differ significantly. 
+
+4. Across conditions: homophily boosted both the number and the fraction of the obese who were exposed to the behavior (*P* < 0.05), using Mann-Whitney U test.. This happened despite that obese people initially had greater exposure in the unstructured networks. 
+
+
+5. Did homophily affect the adotion rate among those exposed? The effect was significant among exposed obese people (*P* < 0.01), using Mann-Whitney U test, but not among exposed non-obese individuals. 
+
+
 ## 2020-10-07
 
 1. Finished Eubank et al. (2004)
@@ -10,7 +27,7 @@ type : nolisting
 
 2. Centola, D. (2011). An experimental study of homophily in the adoption of health behavior. *Science, 334*(6060), 1269-1272.
 
-  - Within the homophilous condition, a higher percentage of non-obese people than obese people adopted the behavior (*P* < 0.05)
+  - Within the homophilous condition, a higher **percentage** of obese people than non-obese people adopted the behavior (*P* < 0.05).
 
   P.1270
 
