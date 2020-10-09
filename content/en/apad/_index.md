@@ -2,6 +2,11 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-09
+Centola, D., & Macy, M. (2007). Complex contagions and the weakness of long ties. *American journal of Sociology, 113*(3), 702-734.
+
+p. 702 - p.711
+
 ## 2020-10-08
 ### Centola, D. (2010).
 
@@ -17,6 +22,8 @@ We can see that homophily had a significant effect on adoption of healthy behavi
 
 
 5. Did homophily affect the adotion rate among those exposed? The effect was significant among the exposed obese people (*P* < 0.01), using Mann-Whitney U test, but not among the exposed non-obese individuals. 
+
+I like this study: simple, and impactful. 
 
 
 ## 2020-10-07
