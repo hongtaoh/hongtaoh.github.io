@@ -56,6 +56,12 @@ type : nolisting
 - Using Legacy Jupyterbook ([Website](https://legacy-jupyterbook.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/legacy-jupyterbook))
 
 
+### Websites
+
+- International Journalism Class at RUC ([Website](https://rucer.netlify.app/), [GitHub Repo](https://github.com/hongtaoh/guoxinban))
+
+- BAS @ IU ([Website](https://iubsa.netlify.app/), [GitHub Repo](https://github.com/hongtaoh/bsa))
+
 ### Software:
 
 - [tree-1.8.0](https://github.com/hongtaoh/tree-1.8.0)
@@ -95,10 +101,13 @@ type : nolisting
 8. Applying Social Science Research Methods to Media (Dr. Rob Potter)
 
 
-## Computer Skills
-- R 
-- Python (Mostly for data visualization; Altair, Seaborn, Matplotlib, Pandas, Numpy)
-
+## Computer Skills (in order of proficiency)
+- R (For statistical analysis, data visualization, and network analysis)
+- Python (Mostly for data visualization and network analysis: Altair, Seaborn, Matplotlib, Pandas, Numpy, networkx)
+- D3.js
+- JavaScript
+- CSS, HTML
+- LaTex
 
 ## Slides
 
