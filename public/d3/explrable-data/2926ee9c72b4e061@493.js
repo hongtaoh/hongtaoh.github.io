@@ -1,4 +1,4 @@
-// https://observablehq.com/@hongtaoh/explrable-data@485
+// https://observablehq.com/@hongtaoh/explrable-data@493
 import define1 from "./e93997d5089d7165@2286.js";
 import define2 from "./e6e3f7f78308b284@274.js";
 
@@ -7,7 +7,7 @@ export default function define(runtime, observer) {
   const fileAttachments = new Map([["winter-img.jpg",new URL("./files/b280fe0cb6da8e3b3092006feba40dee258839bd095bb69c3d36ee55d45e9f21ccde17db0b54199c79da6677d5a34ef975923b6671b80db4131c8e05d5ddd343",import.meta.url)]]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], function(md){return(
-md`# explorable data`
+md`# Explorable Data`
 )});
   main.variable(observer()).define(["md"], function(md){return(
 md`
@@ -165,7 +165,7 @@ html `<button type = "button">Add data</button>`
     svg.selectAll("text")
        .data([newNumber])
        .join("text")
-         .attr("x", 850)
+         .attr("x", 900)
          .attr("y", 50)
          .attr("font-size", "45px")
        .text(d => d)
@@ -178,15 +178,8 @@ html `<button type = "button">Add data</button>`
       dataset.pop()
     }
     
-     svg.selectAll("text")
-       .data([1])
-       .join("text")
-         .attr("x", 800)
-         .attr("y", 50)
-         .attr("font-size", "45px")
-       .text("reset")
-     
-    
+    svg.selectAll("text").remove()
+   
     xScale.domain(d3.range(dataset.length));
     
     yScale.domain([0, d3.max(dataset)]);
