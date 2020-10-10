@@ -96,7 +96,7 @@ Error: EACCES: permission denied, access &amp;#39;/usr/local/lib/node_modules&am
       <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/09/07/d3-scales/</guid>
-      <description>Why Bother Using D3 Scales? Couldn’t We Plot It Directly? What are Input Domain and Output Range? How do the input domain and output range work? D3 Scales Do Not Capture Relative Length How does d3.scaleLinear() work? What Does d3.scaleLinear() Preserve? How to Maintain Relative Length? Closing Words Other resourses   Most online tutorial on D3 scales, at best do not get the point, and at worst are really misleading.</description>
+      <description>Why Bother Using D3 Scales? Couldn’t We Plot It Directly? What are Input Domain and Output Range? How do the input domain and output range work? D3 Scales Do Not Capture Relative Length How does d3.scaleLinear() work? What Does d3.scaleLinear() Preserve? How to Maintain Relative Length? Closing Words Other resourses   Most online tutorials on D3 scales, at best do not get the point, and at worst are really misleading.</description>
     </item>
     
     <item>
