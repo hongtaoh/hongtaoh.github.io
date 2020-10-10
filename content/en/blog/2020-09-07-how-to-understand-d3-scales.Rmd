@@ -9,7 +9,7 @@ output:
     toc_depth: 2
 ---
 ---
-Most online tutorial on D3 scales, at best do not get the point, and at worst are really misleading. 
+Most online tutorials on D3 scales, at best do not get the point, and at worst are really misleading. 
 
 Before I move on, I'd like to specify two most important points I realized about D3 continuous scales:
 

@@ -27,7 +27,7 @@ type : nolisting
     - [poster](https://hongtaoh.com/files/ICA_Poster_Actual_Size.pdf), [slides](https://hongtaoh.com/slides/ICA2020.html#1), [presentation video](https://player.vimeo.com/video/418504580), [GitHub repo](https://github.com/hongtaoh/ICA2020Poster)
 2. Hao, H. (Nov., 2019). *Are Chinese selfies gender-stereotypical: A content analysis of selfies on Weibo*. Paper presented at the 105th Annual Conference of the National Communication Association, Baltimore, MD. 
 3. Hao, H. (Nov., 2019). *Digital divide: Theoretical review and future research suggestions*. Paper presented at the 105th Annual Conference of the National Communication Association, Baltimore, MD. 
-4. Hao, H. (May, 2019). *Global expansion of China’s media for soft power promotion*. Paper presented at the 69th Annual Conference of the International Communication Association, Washington, DC. 
+4. Hao, H. (May, 2019). *Global expansion of China’s media for soft power promotion*. Paper presented at the 69th Annual Conference of the International Communication Association, Washington, D.C. 
     - ***Second Top Student Paper*** 
 
 ## Honors & Fellowships
@@ -90,7 +90,7 @@ type : nolisting
 ## Service
 - 2019, Reviewer for International Communication Association
 
-## Graduate Coursework
+## Relevant Graduate Coursework
 1. [Introduction to Bayesian Data Analysis I](https://jkkweb.sitehost.iu.edu/jkkteach/P533/) (Dr. John Kruschke)
 2. [Data Visualization](http://yyahn.com/dviz-course/) (Dr. YY Ahn)
 3. Quantitative Methods for Public Health Research (**A+**) (Dr. Dong-Chul Seo)

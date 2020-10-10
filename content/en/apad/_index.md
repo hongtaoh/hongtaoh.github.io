@@ -2,6 +2,10 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-10
+
+The strength of weak ties should not be simply generalized to complex contagions, which requires affirmation from multiple sources. Therefore, not only the length, but also, and maybe more importantly, the width of the ties influences complex contagions.
+
 ## 2020-10-09
 Centola, D., & Macy, M. (2007). Complex contagions and the weakness of long ties. *American journal of Sociology, 113*(3), 702-734.
 
