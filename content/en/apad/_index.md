@@ -2,7 +2,14 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-11
+Shen & Williams (2011). Unpacking time online: Connecting internet and massively multiplayer online game use with psychosocial well-being. *Communication Research, 38*(1), 123-149.
+
+Main Takeaway: The psychological impact of Internet activities are nuanced. 
+
+
 ## 2020-10-10
+Finished Centola & Macy. (2007). Main Takeaway:
 
 The strength of weak ties should not be simply generalized to complex contagions, which requires affirmation from multiple sources. Therefore, not only the length, but also, and maybe more importantly, the width of the ties influences complex contagions.
 
