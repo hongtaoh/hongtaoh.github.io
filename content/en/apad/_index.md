@@ -2,6 +2,25 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-13
+1. Finished Sarma & Kay (2020). 
+
+Major take-aways:
+
+- "Weakly informed priors" are popular among scholars practicing Bayesian inferences. However, scholars might have differet interpretations of this concept and different strategies to implement it. 
+
+- Innovative prior elicitation interfaces can assist novice Bayesian practitioners set priors. 
+
+2. Giles, J. (2012). Making the links. *Nature, 488*(7412), 448-450.
+
+pp. 448-449.
+
+## 2020-10-12 [Completed on 2020-10-13]
+
+Sarma & Kay. (2020, April). Prior Setting In Practice: Strategies and rationales used in choosing prior distributions for Bayesian analysis. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (pp. 1-12).
+
+pp. 1-8
+
 ## 2020-10-11
 Shen & Williams (2011). Unpacking time online: Connecting internet and massively multiplayer online game use with psychosocial well-being. *Communication Research, 38*(1), 123-149.
 
