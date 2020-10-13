@@ -11,6 +11,18 @@
     
     
     <item>
+      <title>How to understand the difference between if statements and while loops</title>
+      <link>https://hongtaoh.github.io/en/2020/10/13/if-while/</link>
+      <pubDate>Tue, 13 Oct 2020 16:20:38 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/10/13/if-while/</guid>
+      <description>For beginners, whichever programming language you are learning, it might be difficult to differentiate the difference between if statements and while loop. In this blog post, I&amp;rsquo;ll take Python and Javascript as examples to illustrate the differences between the two.
+Both statements are made up of two parts:
+ Condition statement; and Conditional code.  Conditional code will be execuated only if the condition statements are true.
+Okay, those are the similaries.</description>
+    </item>
+    
+    <item>
       <title>How to Download Wget for Mac without Homebrew</title>
       <link>https://hongtaoh.github.io/en/2020/10/07/wget/</link>
       <pubDate>Wed, 07 Oct 2020 11:53:04 -0400</pubDate>
