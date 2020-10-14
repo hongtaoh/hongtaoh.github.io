@@ -2,6 +2,16 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-14
+
+1. Finished Giles (2012). 
+
+Thoughts: Professor Granovetter is right in pointing out that data itself might not help us have a deeper understanding of our society. After all, his seminal paper on "weak ties" is based on theoretical thinking rather than data. 
+
+What are most of the data in research papers used for? To test theories. But theories arise from thinking, not data. Data is limited. It's extremely difficult for most scholars to get high-quality large-scale data. That shouldn't become a barrier to theoretical advances. Scholars who cannot get access to quality data can focus on theoretical thinking. 
+
+2. Bollen, J., Mao, H., & Zeng, X. (2011). Twitter mood predicts the stock market. *Journal of computational science, 2*(1), 1-8.
+
 ## 2020-10-13
 1. Finished Sarma & Kay (2020). 
 
