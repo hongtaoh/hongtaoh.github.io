@@ -2,6 +2,12 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-15
+
+1. Finished Bollen, Mao, & Zeng. (2011)
+
+2. Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google Flu: traps in big data analysis. *Science, 343*(6176), 1203-1205.
+
 ## 2020-10-14
 
 1. Finished Giles (2012). 
@@ -122,7 +128,7 @@ Those who are more successful are doing **different** things, rather than **more
 
 **Note** : Below are the notes on 2020-10-04 
 
-2. Motivation is also ordinary. Gold medalists did not think too far ahead. Instead, they focused on the most immediate goal, the so-called "small wins". For example, Steve Lundquist, who won two gold medals in swimming in the Los Angeles Olympics, set a goal that he would win every single siwm in every single practice. **Small wins added up to excellence and success**. 
+2. Motivation is also ordinary. Gold medalists did not think too far ahead. Instead, they focused on the most immediate goals, the so-called "small wins". For example, Steve Lundquist, who won two gold medals in swimming in the Los Angeles Olympics, set a goal that he would win every single siwm in every single practice. **Small wins added up to excellence and success**. 
 
 3. Don't take what you do as too important. You should maintain mundanity. If you are going to deliever a commencement speech in front of an audience of thousands, you should know that almost nobody cares about nor remembers what you have to say. When you are writing your doctoral thesis, you should also be aware that few people will read what you write. 
 
