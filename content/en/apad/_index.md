@@ -2,11 +2,22 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-16
+Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google Flu: traps in big data analysis. *Science, 343*(6176), 1203-1205.
+
+Major takeaway: Big data research can learn from, and collaborate with small data research, which offers data that is not contained in big data. 
+
+I started to think about my selfie studies. Specifically, I looked at 1) whether there are cultural differences between Chinese women's selfies on China's Weibo, and White Women's selfies on Twitter. For example, is it true that Chinese women focus on their face whereas White women focus on their body in their selfies? Do Chinese women's selfies show more cuteness? 
+
+I also looked at 2) whether there are gender differences between men's selfies and women's selfies. For example, do women show more self-touching in selfies? 
+
+I used a small-data approach. Although I downloaded over 30,000 images from Twitter and 8,000 images from Weibo, I only selected 200 from each platfrom for analysis, simply because I didn't have that much man power to analyze them all. 
+
+Talking about dig data and small data research, I think I can combine the two here. Human content analysis can offer some insights and then directions for bid data research. After all, there are so many things to detect in a selfie: the gender of the person, his or her mood, surroundings, posture, facial expressions, etc. Deep learning algorithms need some directions so that they can give us the analysis we need. 
+
 ## 2020-10-15
 
-1. Finished Bollen, Mao, & Zeng. (2011)
-
-2. Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google Flu: traps in big data analysis. *Science, 343*(6176), 1203-1205.
+Finished Bollen, Mao, & Zeng. (2011)
 
 ## 2020-10-14
 

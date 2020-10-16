@@ -878,7 +878,7 @@ Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，�
       <guid>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</guid>
       <description>Hugo 从 v0.60.0 开始，Markdown 解析器不再使用 Blackfriday , 改用由 yuin 1 编写的 goldmark 。
 这次变动我目前感觉比较明显的是：
-blackfriday 支持 免计数 形式的脚注。所谓免计数，就是说，你可以在文本后直接跟脚注的具体内容，比如
+blackfriday 支持 自动计数 形式的脚注。所谓自动计数，就是说，你可以在文本后直接跟脚注的具体内容，比如
 比如[^看到了吗？] 这种形式在 blackfriday 是支持的，但是 goldmark 不支持，你必须这样：
 比如[^1] 然后在文末，加上以下内容才可以：
 [^1]: 看到了吗？ 这一点，有人在 Github 上提过 ，想在 goldmark 中实现 免计数 脚注，但是目前貌似依然不支持。
