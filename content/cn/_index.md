@@ -18,21 +18,10 @@ type : nolisting
 - 微博
 - Facebook
 
-{{< columns >}}
-
-This is my favorite project. I might have a lot ot say about this project but I am not sure whether you have some time to know about it. 
-
-I hope so | Right?
-
-{{< column >}}
-
-This is my favorite project. I might have a lot ot say about this project but I am not sure whether you have some time to know about it. 
-
-I hope so | Right?
-
-{{< endcolumn >}}
 
 {{< columns >}}
+
+{{<figure src="/media/information-knowledge-wisdom.png" title="Information, knowledge, and wisdom, made by Hongtao"  width="400">}}
 
 This is my second project. 
 
@@ -41,7 +30,6 @@ This is my second project.
 
 This is my favorite project. I might have a lot ot say about this project but I am not sure whether you have some time to know about it. 
 
-I hope so   |    Right?
 {{< endcolumn >}}
 
 
