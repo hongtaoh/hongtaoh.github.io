@@ -38,18 +38,6 @@ div.splitbox div.right {
                float:left;}
 }
 
-.header-anchor {
-  font-family: 'Lato';
-  text-decoration: none;
-  margin-top: 12px;
-  font-size: 16px;
-  padding: 6px 12px;
-  font-weight: bold;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  color: #fff
-}
-
 .footer { 
   text-align: center; font-size: 19px;
   padding: 30px 0;
@@ -170,7 +158,6 @@ div.splitbox div.right {
 .header-anchor:focus {
   background-color: gray;
 }
-
 
 .title {
   font-size: 1.1em; }
