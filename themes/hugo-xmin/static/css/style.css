@@ -41,14 +41,11 @@ div.splitbox div.right {
 .header-anchor {
   font-family: 'Lato';
   text-decoration: none;
-  color: blue;
-  display: inline-block;
   margin-top: 12px;
   font-size: 16px;
   padding: 6px 12px;
   font-weight: bold;
   border-radius: 3px;
-  background-color: rgba(174, 11, 42, 0.75);
   border: 1px solid transparent;
   color: #fff
 }
