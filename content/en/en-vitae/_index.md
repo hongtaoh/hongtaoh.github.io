@@ -49,7 +49,7 @@ type : nolisting
 
   - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
 
-- D3book Companion ([Website](https://d3.hongtaoh.com/), [Github Repo](https://github.com/hongtaoh/d3book))
+- D3book Companion ([Website](https://d3.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/d3book))
 
 - Building Websites with Hugo ([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
 

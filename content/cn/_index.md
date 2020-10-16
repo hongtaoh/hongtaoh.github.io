@@ -5,22 +5,43 @@ type : nolisting
 
 欢迎光临！
 
-郝鸿涛的联系方式：hhao@iu.edu (2021年1月1号之前一直都会用，之后变更我会更新)
+郝鸿涛的联系方式：hhao@iu.edu (2021年1月1号之前都会用，之后变更的湖我再更新)
 
 ---
-我彻底不登录的网站和彻底不用的手机应用
+我不再上的网站：
 
 - 知乎
 - 豆瓣 
 - 百度
 - 抖音
 - 快手
+- 微博
 - Facebook
 
-正在准备彻底注销的账号
+{{< columns >}}
 
-- 微信
+This is my favorite project. I might have a lot ot say about this project but I am not sure whether you have some time to know about it. 
 
+I hope so | Right?
 
+{{< column >}}
+
+This is my favorite project. I might have a lot ot say about this project but I am not sure whether you have some time to know about it. 
+
+I hope so | Right?
+
+{{< endcolumn >}}
+
+{{< columns >}}
+
+This is my second project. 
+
+{{< column >}}
+{{<figure src="/media/information-knowledge-wisdom.png" title="Information, knowledge, and wisdom, made by Hongtao"  width="400">}}
+
+This is my favorite project. I might have a lot ot say about this project but I am not sure whether you have some time to know about it. 
+
+I hope so   |    Right?
+{{< endcolumn >}}
 
 
