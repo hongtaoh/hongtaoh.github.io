@@ -69,8 +69,8 @@ type : nolisting
 ## Working Experience
 - 2019 May, Journalist, *St.Gallen Symposium Magazine*, St. Gallen, Switzerland 
 
-  - ["It's not just about spending more money."](https://www.symposium.org/articles/its-not-just-about-spending-more-money) (Interviewing Deputy Prime Minister of Singapore)
-  - [Freeman Shen's electric dream](https://www.symposium.org/articles/freeman-shens-electric-dream) (Interviewing CEO of WM Motor, a leading Chinese electric car maker)
+  - ["It's not just about spending more money."](https://www.symposium.org/articles/its-not-just-about-spending-more-money) (Interviewing Heng Swee Keat, Deputy Prime Minister of Singapore)
+  - [Freeman Shen's electric dream](https://www.symposium.org/articles/freeman-shens-electric-dream) (Interviewing Freeman Shen, CEO of WM Motor -- a leading Chinese electric car maker)
   - [What role should government play?](https://www.symposium.org/articles/what-role-should-governments-play) (Interviewing young politicians from India, Argentina, and Sri Lanka)
 
 - 2017 July, News Editor & Translator, *China Daily*, Beijing, China
