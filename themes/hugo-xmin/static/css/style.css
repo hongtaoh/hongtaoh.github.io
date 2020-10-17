@@ -17,13 +17,18 @@ body {
 div.splitbox {
   width:100%; 
   overflow:auto;
+  font-family: 'Lato';
+  border-top: .25rem solid #757575;
+  border-bottom: .25rem solid #757575;
+  padding: 1rem; 
+  margin-top: 1rem;
+  margin-bottom: 1em;
+  color: #757575;
 }
 
 div.splitbox div.left {
                width:30%;
                float:left;
-              font-family: 'Lato';
-               color: blue;
 }
 div.splitbox div.right {
                width:70%;
@@ -158,6 +163,7 @@ div.splitbox div.right {
 .header-anchor:focus {
   background-color: gray;
 }
+
 
 .title {
   font-size: 1.1em; }
