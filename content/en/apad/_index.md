@@ -6,7 +6,7 @@ type : nolisting
 
 Geman, D., & Geman, S. (2016). Opinion: Science in the age of selfies. *Proceedings of the National Academy of Sciences, 113*(34), 9384-9387.
 
-My thoughts are [here](/en/2020/10/17/science-selfies/)
+My thoughts are [here](/en/2020/10/17/science-selfies/).
 
 ## 2020-10-16
 Lazer, D., Kennedy, R., King, G., & Vespignani, A. (2014). The parable of Google Flu: traps in big data analysis. *Science, 343*(6176), 1203-1205.
