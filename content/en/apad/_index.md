@@ -21,7 +21,7 @@ Main takeaways:
 - "Female collaborations are more domestically oriented than are the collaborations of males from the same country"  (p. 213)
 
 
-My issue: How did the authors assign gender to each author? It seems to me that it's a very difficult job, especially when the names are non-Western. 
+My issue: How did the authors assign gender to each author? It seems to me that it's a very difficult job, especially when the names are of a non-Western origin. 
 
 ## 2020-10-17
 
