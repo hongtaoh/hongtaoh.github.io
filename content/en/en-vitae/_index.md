@@ -102,12 +102,16 @@ type : nolisting
 
 
 ## Computer Skills (in order of proficiency)
+### Program languages
 - R (For statistical analysis, data visualization, and network analysis)
 - Python (Mostly for data visualization and network analysis: Altair, Seaborn, Matplotlib, Pandas, Numpy, networkx)
 - D3.js
 - JavaScript
 - CSS, HTML
-- LaTex
+
+### Tools
+- Final Cut Pro
+- Sketch
 
 ## Slides
 

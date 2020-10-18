@@ -2,6 +2,27 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-18
+
+Larivière, Ni, Gingras, Cronin, & Sugimoto. (2013). Bibliometrics: Global gender disparities in science. *Nature News, 504*(7479), 211.
+
+> Barriers to women in science remain widely spread worldwide. 
+
+Main takeaways:
+
+- In the most productive countries, papers with women in dominent author positions, i.e., sole author, first author, and last author, are cited less than those with men in the same positions;
+
+- South America and Eastern Europe had greater gender parity in terms of proportion of authorships. 
+
+- Disciplines dominated by women all have to do with "care", for example, nursing; speech, language, and hearing; education.
+
+- Natural sciences and humanities are dominated by men. Social sciences had a higher proportion of femail authors. 
+
+- "Female collaborations are more domestically oriented than are the collaborations of males from the same country"  (p. 213)
+
+
+My issue: How did the authors assign gender to each author? It seems to me that it's a very difficult job, especially when the names are non-Western. 
+
 ## 2020-10-17
 
 Geman, D., & Geman, S. (2016). Opinion: Science in the age of selfies. *Proceedings of the National Academy of Sciences, 113*(34), 9384-9387.
