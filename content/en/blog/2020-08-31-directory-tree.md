@@ -45,7 +45,7 @@ I shared my answer [here](https://superuser.com/a/1582072/1214665).
 
 I found a much better solution than [what I previously wrote](/en/2020/08/31/mac-directory-tree/#my-previous-solution). Many thanks to [Michael Page's post](https://techion.com.au/blog/2018/5/24/printing-hierarchical-directory-structures), [Shaun Chapman's post](https://web.archive.org/web/20130527203022/http://shaunchapman.me/post/329270449/how-to-install-the-tree-command-on-mac-os-x), [slhck's answer](https://superuser.com/a/359727), and [apouche's answer](https://superuser.com/a/448969).
 
-# Intall tree
+# Install tree
 
 Open a new `Terminal`, copy and paste the following codes, wait for a few seconds for the first several lines to run, and press `Enter` (otherwise the last line won't run). When you copy and past multiple lines into your `Terminal`, you should always press `Enter` to run the last line of code. 
 
