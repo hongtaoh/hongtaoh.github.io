@@ -45,33 +45,33 @@ type : nolisting
 
 ### Tutorials:
 
-- MSCH-C101 with Hongtao ([Website](https://c101.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/c101))
+- MSCH-C101 with Hongtao [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://c101.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/c101)
 
   - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
 
-- D3book Companion ([Website](https://d3.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/d3book))
+- D3book Companion [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://d3.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/d3book)
 
-- Building Websites with Hugo ([Website](https://hugo-tutorial.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/hugo-tutorial))
+- Building Websites with Hugo [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://hugo-tutorial.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/hugo-tutorial)
 
-- Using Legacy Jupyterbook ([Website](https://legacy-jupyterbook.hongtaoh.com/), [GitHub Repo](https://github.com/hongtaoh/legacy-jupyterbook))
+- Using Legacy Jupyterbook [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://legacy-jupyterbook.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/legacy-jupyterbook)
 
 
 ### Websites
 
-- International Journalism Class at RUC ([Website](https://rucer.netlify.app/), [GitHub Repo](https://github.com/hongtaoh/guoxinban))
+- International Journalism Class at RUC [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://rucer.netlify.app/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/guoxinban)
 
-- BAS @ IU ([Website](https://iubsa.netlify.app/), [GitHub Repo](https://github.com/hongtaoh/bsa))
+- BAS @ IU [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://iubsa.netlify.app/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/bsa)
 
 ### Software:
 
-- [tree-1.8.0](https://github.com/hongtaoh/tree-1.8.0)
+- tree-1.8.0 [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/tree-1.8.0)
 
 ## Working Experience
 - 2019 May, Journalist, *St.Gallen Symposium Magazine*, St. Gallen, Switzerland 
 
   - ["It's not just about spending more money."](https://www.symposium.org/articles/its-not-just-about-spending-more-money) (Interviewing Heng Swee Keat, Deputy Prime Minister of Singapore)
   - [Freeman Shen's electric dream](https://www.symposium.org/articles/freeman-shens-electric-dream) (Interviewing Freeman Shen, CEO of WM Motor -- a leading Chinese electric car maker)
-  - [What role should government play?](https://www.symposium.org/articles/what-role-should-governments-play) (Interviewing young politicians from India, Argentina, and Sri Lanka)
+  - [What role should governments play?](https://www.symposium.org/articles/what-role-should-governments-play) (Interviewing young politicians from India, Argentina, and Sri Lanka)
 
 - 2017 July, News Editor & Translator, *China Daily*, Beijing, China
 
@@ -102,7 +102,7 @@ type : nolisting
 
 
 ## Computer Skills (in order of proficiency)
-### Program languages
+### Programming languages
 - R (For statistical analysis, data visualization, and network analysis)
 - Python (Mostly for data visualization and network analysis: Altair, Seaborn, Matplotlib, Pandas, Numpy, networkx)
 - D3.js
