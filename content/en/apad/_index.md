@@ -2,6 +2,12 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-19
+
+Fei-Fei, L., & Perona, P. (2005, June). A bayesian hierarchical model for learning natural scene categories. In *2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'05)* (Vol. 2, pp. 524-531). IEEE.
+
+It's all Greek to me. 
+
 ## 2020-10-18
 
 Larivière, Ni, Gingras, Cronin, & Sugimoto. (2013). Bibliometrics: Global gender disparities in science. *Nature News, 504*(7479), 211.
