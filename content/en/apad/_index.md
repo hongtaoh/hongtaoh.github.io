@@ -2,6 +2,14 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-20 
+
+Börner et al. (2018). Skill discrepancies between research, education, and jobs reveal the critical need to supply soft skills for the data economy. *Proceedings of the National Academy of Sciences, 115*(50), 12630-12637.
+
+Main takeaway: Soft skills are in high demand by the industry. 
+
+My issue: I like data viz. However, I do feel the visualizations in this paper are a little bit too much. 
+
 ## 2020-10-19
 
 Fei-Fei, L., & Perona, P. (2005, June). A bayesian hierarchical model for learning natural scene categories. In *2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'05)* (Vol. 2, pp. 524-531). IEEE.
