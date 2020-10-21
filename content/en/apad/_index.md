@@ -21,7 +21,7 @@ Börner et al. (2018). Skill discrepancies between research, education, and jobs
 
 Main takeaway: Soft skills are in high demand by the industry. 
 
-My issue: I like data viz. However, I do feel the visualizations in this paper are a little bit too much. 
+My issue: I like data viz. However, I feel visualizations in this paper are a little bit too much. 
 
 ## 2020-10-19
 
