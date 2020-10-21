@@ -2,6 +2,19 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-21
+Guo, P. J., Kim, J., & Rubin, R. (2014, March). How video production affects student engagement: An empirical study of MOOC videos. In *Proceedings of the first ACM conference on Learning@ scale conference* (pp. 41-50).
+
+pp. 1-7.
+
+### If I am asked to design a course for Coursera, I'd better:
+
+1. Segment videos into short chunks (< 6 minutes);
+2. Have my head recorded. Presentations should be inserted at opportune times are simply presented with a picture-in-picture view;
+3. Film in an informal setting where I can make eye contact with the potential audience, just like an office hour talk;
+4. If I don't want my head to be filmed, I'd better use Khan-style tutorials rather than slides;
+5. Spend time on preparing the video, with the specific purpose these videos in mind.
+
 ## 2020-10-20 
 
 Börner et al. (2018). Skill discrepancies between research, education, and jobs reveal the critical need to supply soft skills for the data economy. *Proceedings of the National Academy of Sciences, 115*(50), 12630-12637.
