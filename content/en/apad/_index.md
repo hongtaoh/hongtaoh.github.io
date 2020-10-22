@@ -2,6 +2,16 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-22
+
+1. Finished Guo et al. (2014)
+
+I admire this piece of research very much. Again, it's the ideal kind I am striving for: simple, straightforward, easy to understand, and yet impactful. 
+
+2. Lawrence, P. A. (2007). The mismeasurement of science. *Current Biology, 17*(15), R583-R585.
+
+pp. 1-2.
+
 ## 2020-10-21
 Guo, P. J., Kim, J., & Rubin, R. (2014, March). How video production affects student engagement: An empirical study of MOOC videos. In *Proceedings of the first ACM conference on Learning@ scale conference* (pp. 41-50).
 
@@ -13,7 +23,7 @@ pp. 1-7.
 2. Have my head recorded. Presentations should be inserted at opportune times or simply be presented with a picture-in-picture view;
 3. Film in an informal setting where I can make eye contact with the potential audience, just like in an office hour talk;
 4. If I don't want my head to be filmed, I'd better use Khan-style tutorials rather than slides;
-5. Spend time on designing the video, with the specific purpose these videos will serve in mind.
+5. Plan my lessions "specifically for an online video format" (p. 10) [**Edited on 2020-10-22**].
 
 ## 2020-10-20 
 
