@@ -1,5 +1,5 @@
 ---
-title: Hugo 如何部署到 Github Pages
+title: Hugo 如何部署到 GitHub Pages
 date: 2020-01-22T17:04:17-05:00
 slug: deploy-on-github
 author: 郝鸿涛

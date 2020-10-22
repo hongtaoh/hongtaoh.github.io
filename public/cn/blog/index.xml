@@ -405,7 +405,7 @@ n &amp;lt;- 10000 pheads &amp;lt;- 0.8 flips&amp;lt;-sample (x=c(0,1),prob=c(1-p
     </item>
     
     <item>
-      <title>Hugo 如何部署到 Github Pages</title>
+      <title>Hugo 如何部署到 GitHub Pages</title>
       <link>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</link>
       <pubDate>Wed, 22 Jan 2020 17:04:17 -0500</pubDate>
       
