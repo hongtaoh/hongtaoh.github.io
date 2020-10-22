@@ -12,7 +12,7 @@ type : nolisting
 
 - Learning the online version of [Info-I606 *Network Science*](http://yongyeol.com/teaching/2020SP_netsci_syllabus.pdf) taught by Professor YY, for which I am trying to create a tutorial on network sciecne for beginners like me, using [Yihui](https://yihui.org/)'s amazing [Bookdown](https://bookdown.org/yihui/bookdown/) pacakage;
 
-- Creating a website for Indiana University [Buddhist Study Association](https://www.facebook.com/buddhism.iu/), using the [Sam](https://themes.gohugo.io/hugo-theme-sam/) theme.
+- ~~Creating a website for Indiana University [Buddhist Study Association](https://www.facebook.com/buddhism.iu/), using the [Sam](https://themes.gohugo.io/hugo-theme-sam/) theme~~. Done!. Check it out [here](https://github.com/hongtaoh/bsa).
 
 ## Perhaps you should add a now page as well: [https://nownownow.com/about](https://nownownow.com/about)
 
