@@ -10,10 +10,10 @@ pp. 1-7.
 ### If I am asked to design a course for Coursera, I'd better:
 
 1. Segment videos into short chunks (< 6 minutes);
-2. Have my head recorded. Presentations should be inserted at opportune times are simply presented with a picture-in-picture view;
-3. Film in an informal setting where I can make eye contact with the potential audience, just like an office hour talk;
+2. Have my head recorded. Presentations should be inserted at opportune times or simply be presented with a picture-in-picture view;
+3. Film in an informal setting where I can make eye contact with the potential audience, just like in an office hour talk;
 4. If I don't want my head to be filmed, I'd better use Khan-style tutorials rather than slides;
-5. Spend time on preparing the video, with the specific purpose these videos in mind.
+5. Spend time on designing the video, with the specific purpose these videos will serve in mind.
 
 ## 2020-10-20 
 
