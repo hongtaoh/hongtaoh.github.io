@@ -23,7 +23,7 @@ pp. 1-7.
 2. Have my head recorded. Presentations should be inserted at opportune times or simply be presented with a picture-in-picture view;
 3. Film in an informal setting where I can make eye contact with the potential audience, just like in an office hour talk;
 4. If I don't want my head to be filmed, I'd better use Khan-style tutorials rather than slides;
-5. Plan my lessions "specifically for an online video format" (p. 10) [**Edited on 2020-10-22**].
+5. Plan my lessons "specifically for an online video format" (p. 10) [**Edited on 2020-10-22**].
 
 ## 2020-10-20 
 

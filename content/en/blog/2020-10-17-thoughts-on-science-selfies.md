@@ -24,11 +24,11 @@ This reminds me of an American scientist[^1] who says that he won't do the most 
 
 In terms of collaboration, I also don't believe that all great ideas emerge from groups or teams. Yihui Xie, who came with Rmarkdown and Bookdoww, tools that changed the way how people use R and write documents, also mentioned in one of his blog posts[^2] that he did the work by working alone. 
 
-For me, teams are great for implementing ideas, not for initiating ideas. For example, Fei-Fei Li and her colleagues completed the work of [ImageNet](http://image-net.org/papers/imagenet_cvpr09.pdf) by virtual of around [50,000 people from 167 countries](https://hyper.ai/8049) on Amazon Turk. This, of course, is an extreme case, but it illustrates that teams are useful when there exists a good idea, which, unfortunately, do not start from teams most of the time. 
+For me, teams are great for **implementing** ideas, not for **initiating** ideas. For example, Fei-Fei Li and her colleagues completed the work of [ImageNet](http://image-net.org/papers/imagenet_cvpr09.pdf) by virtual of around [50,000 people from 167 countries](https://hyper.ai/8049) on Amazon Turk. This, of course, is an extreme case, but it illustrates that teams are useful when there exists a good idea, which, unfortunately, do not start from teams most of the time. 
 
 ## 3. Pressure to publish a lot might inhibit deep thinking
 
-This I also agree with but am not sure how likely this will be changed. From a practical standpoint, if we don't count the number of publications and their citations, how can we evaluate the performance of a researcher **objectively**? If, as the two authors suggested, performance is judged by quality rather than quantity, who will be the judge? And how can we make sure that their evaluations are both accurate and fair? 
+This I also agree with but am not sure how likely this will change. From a practical standpoint, if we don't count the number of publications and their citations, how can we evaluate the performance of a researcher **objectively**? If, as the two authors suggested, performance is judged by quality rather than quantity, who will be the judge? And how can we make sure that their evaluations are both accurate and fair? 
 
 # What I can learn from this article: 
 
