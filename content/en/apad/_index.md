@@ -5,15 +5,15 @@ type : nolisting
 ## 2020-10-23
 ### How science and scientists are assessed today:
 
-- Impact factors. Journals are evaluated based on their impact factors. Schools, departments and scientists "are assessed according to the impact factors of the journals they published in" (p. R583). 
+- Impact factors: Journals are evaluated based on their impact factors. Schools, departments and scientists "are assessed according to the impact factors of the journals they published in" (p. R583). 
 
-- Number of citations. Scientists are evaluated according to the number of citations their publications receive.
+- Number of citations: Scientists are evaluated according to the number of citations their publications receive.
 
 ### Why these measures are flawed:
 
-- Impact factors reflect how many times, on average, each paper in a given journal gets cited in the two years following its publication. There are two problems with this measurement: 1) IF is about the journal, not about your paper. Even if your paper is flawed, or even wrong, it's still something you can boast, if it's a top journal; 2) Important findings might receive very few citations within years of its publication. IFs fail to solve this. 
+- Impact factors (IFs): IFs reflect how many times, on average, each paper in a given journal gets cited in the two years following its publication. There are two problems with this measurement: 1) IF is about the journal, not about your paper. Even if your paper is flawed, or even wrong, it's still something you can boast, if it gets published in a top journal; 2) Important findings may receive very few citations within two years since its publication. 
 
-- Citations: 1) As one the quotes below, people might cite papers because of convenience or visibility. Many people don't even need read the papers they cite. 2) Because citations are so important these days, there might be unethical behavior involved. For example, gatecrashing names by providing a reagent or data without acutally being involved in the study, or simply by power or authority. 
+- Number of citations: 1) People may cite papers simply because of convenience or visibility, not because of the significant of the studies. Many people don't even need read the papers they cite. 2) Because citations are so important these days, there might be unethical behavior involved. For instance, gatecrashing names by providing a reagent or data without acutally participating in the study, or simply by power or authority. 
 
 ### What problems can these measures cause:
 
