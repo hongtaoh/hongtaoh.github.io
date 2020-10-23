@@ -3,6 +3,9 @@ title: A Paper A Day
 type : nolisting
 ---
 ## 2020-10-23
+
+Lawrence, P. A. (2007).
+
 ### How science and scientists are assessed today:
 
 - Impact factors: Journals are evaluated based on their impact factors. Schools, departments and scientists "are assessed according to the impact factors of the journals they published in" (p. R583). 
