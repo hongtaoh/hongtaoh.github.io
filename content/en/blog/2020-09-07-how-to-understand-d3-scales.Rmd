@@ -23,11 +23,11 @@ This blog post is all about D3 continuous scales. I might omit the word "continu
 
 Well, the thing is, sometimes the numbers are so big that you don't have enough pixels to plot them directly. 
 
-For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are going to **plot a bar chart of this data**. It would be best if we can draw it directly. Five bars whose heights (in pixels) are equal to the corresponding data values: The first bar will be 34 px tall, the second 59 px ...  and the last 1299 px. For this dataset, it might be Okay to plot it this way. However, if we had another number, 999999, it would be impossible to draw a bar whose height is `999999 px` simply because we don't have such a big screen. That's why we need to input domain and output range, both of which are basically intervals. 
+For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are going to **plot a bar chart of this data**. It would be best if we can draw it directly. Five bars whose heights (in pixels) are equal to the corresponding data values: The first bar will be 34 px tall, the second 59 px ...  and the last 1299 px. For this dataset, it might be Okay to plot it this way. However, if we had another number, 999999, it would be impossible to draw a bar whose height is `999999 px` simply because we don't have such a big screen. That's why we need input domain and output range, both of which are basically intervals. 
 
 ## What are Input Domain and Output Range?
 
-The input domain can be anything, as long as the minimum and the maximum number in our dataset is included in this interval[^1]. Note that the start of the input domain **does not have to** be $0$. For the above dataset, let's set the input domain to be [30, 1300]. 
+The input domain can be anything, as long as the minimum and the maximum number in our dataset are included in this interval[^1]. Note that the start of the input domain **does not have to** be $0$. For the above dataset, let's set the input domain to be [30, 1300]. 
 
 Then what is an output range? Well, it can be anything too. Usually the output range is defined by the pixels we have. Let's say our screen is only 80 pixels in height, and we set the output range to be [10, 75]. Again, the starting point of the output range does not have to be $0$. 
 
