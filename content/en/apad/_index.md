@@ -2,6 +2,22 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-24
+Continuing Lawrence (2007).
+
+### What problems can these measures cause:
+
+- Authors might 1) complicate their methods section so that it's difficult for reviewers to fault; 2) hide results that do not fit with their arguments; 3) split the findings into multiple papers even if one paper is enough to cover all the results; 4) compress the results to meet the requirements of top journals like *Nature* or *Science*; 5) hype their work.
+
+  - I would add one: p-hacking.
+  - The point that authors might compliate their methods section resonate with me strongly. After reading papers each day for over 6 weeks, I felt that the methods section of some papers is so dense and complicated that, if I were the reviewer, I didn't have that much time and efforts and decode it! This, I think, is really a problem. As I mentioned multiple times, I feel the most ideal studies are those with **simple methodology** and yet **impactful results**. A perfet example is Professor Duncan Watts and Steven Strogatz's masterpiece of [*Collective dynamics of 'small world' networks*](http://materias.df.uba.ar/dnla2019c1/files/2019/03/watts-collective_dynamics-nature_1998.pdf).
+
+- Students have fewer opportunities to learn and fail. Since publiction is so important, group leaders may end up writing students' work. 
+
+  - I don't think this is true in social sciences. 
+
+- Scientists spend a large portion of their time networking, which might bring them more co-authors, and leave a positive impression on journal editors. 
+
 ## 2020-10-23
 
 Lawrence, P. A. (2007).
@@ -22,7 +38,7 @@ Lawrence, P. A. (2007).
 
 - Paper chase: Scientists spend so much time on writing and reviewing for, and submitting to top journals that they don't have much time left on solving scientific problems;
 
-- Scientists dodging uncharted area and unpopular topics since they bring too many risks. 
+- Scientists will dodge uncharted areas and unpopular topics which are too risky. 
 
 
 ## 2020-10-22
