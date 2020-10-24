@@ -1,0 +1,48 @@
+# Task 8: Axes{#task8}
+
+## Task 8-1 to 8-6
+From [Day 19](https://observablehq.com/@hongtaoh/day-nineteen-spet-12-2020)
+
+- 8-1. Create an axis on top of the chart for `xScale`. Assign a class named "axis" to the group element you just created at the end of the `svg` element. *hint* : think about whether you need to use `d3.axisTop()` or `d3.axisBottom()`. 
+
+- 8-2. Push the axis to the base of the chart using SVG *transformations*. 
+
+- 8-3. Style `path` and `line` in `.axis` such that they are in teal (*Hint*: using `stroke: teal;`). Style `text` such that it is Optima, sans-serif, bold, 14px, and in teal. 
+
+- 8-4. Set the rough number of ticks to be 5. // D3 might override it, though. 
+
+- 8-5. Only label 0, 100, 250, and 600, using `tickValues([])`. 
+
+- 8-6. Generate a Y-axis on the left. Set the rough number of ticks to be 5. Push this axis to the right by `margin.left` px. Also assign the class of "axis" to it.
+
+## Some key points about `Math`
+From [Day 20](https://observablehq.com/@hongtaoh/day-twenty-task-8-continued-2020-09-13)
+
+- `Math.random()` will generate random numbers less than 1.0. 
+- If `random = 8.9999`, then `Math.round(random) = 9 `  but `Math.floor(random) = 8`.
+- `Math` is **parallel** with `d3`, so `d3.Math....` is unnecessary and wrong.
+
+## Task 8-7 to 8-9
+From [Day 20](https://observablehq.com/@hongtaoh/day-twenty-task-8-continued-2020-09-13)
+
+- 8-7. Let the dataset be made up of 50 pairs of random numbers between 0 and 100 that are integers.
+
+- 8-8. Remove labels. 
+
+- 8-9. Treat values on x-axis as percentages with one decimal point precision. *Hint* : using `d3.format("")`, and `.tickFormat()`.
+
+## Task 8 Review
+
+From [Day 22](https://observablehq.com/@hongtaoh/day-twenty-two-spet-15th-2020)
+
+- 8-1. `g` element is a `group` element. It is an SVG element, just like `line`, `circle`, and `rect`. One thing different is that `g` element is invisible. It serves two functions: 
+
+  1. Helps us group other elements;
+  
+  2. Accepts transformations onto it, which is very handy.
+
+- 8-7. `for (var i = 0; i < 50; i++){}`. Two points to remember:
+
+  1. It should be `var i = 0`, rather than simply `i = 0`;
+  
+  2. Seperate the codes inside the bracket by `;`, not `,`.

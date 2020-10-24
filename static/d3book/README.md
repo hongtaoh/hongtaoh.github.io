@@ -1,0 +1,1 @@
+This website is based on Scott Murray's [*Interactive Data Visualization for the Web, 2nd Ed.*](https://alignedleft.com/work/d3-book-2e). The purpose of this website is to provide prompts by which you can practice coding in D3 again and again.  

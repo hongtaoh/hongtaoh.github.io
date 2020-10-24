@@ -1,0 +1,105 @@
+# Task 7: Scales{#task7}
+
+Basic Knowledge about Scales:
+
+1. Why using scales?
+From [Day 11](https://observablehq.com/@hongtaoh/day-eleven-sept-4th-2020)
+
+Scales are **functions** that map from an **input domain** to an **output range**.
+
+Why do we need scale. Imagine we have this dataset: [ 1, 2, 4, 10, 100, 1000, 50000, 10000000000000]. Now, I ask you to draw a bar chart of this dataset, with the height of each bar corresponding to each data value. The first method we can think of is that the first bar will be 1 pixel tall, the second 2 px tall, the third 4 px tall. But the last data value will be 10000000000000 tall! Can you imagine how big a display we need to accommodate this value? 
+
+Instead, we might better set the height of the last bar to be 1000, which is reasonable for most displays people are using today. Then, what will be the height of the third bar that corresponds to the value of 4? That's what **scales** do!
+
+2. Understanding Array
+From [Day 13](https://observablehq.com/@hongtaoh/day-thirteen-2020-09-06)
+
+What is an array? According to Scott's book, an array is "**a sequence of values**, conveniently stored in a single **variable**."
+
+3. How to find the largest number in a dataset
+
+If the dataset is a one-dimensional array, then it's very simple. Just use the `d3.max()`function is okay.
+
+For example:
+
+`var dataset_01 = [4, 5, 9, 10, 24, 56]`
+
+`d3.max(dataset_01)  //56` 
+
+However, things get a little bit more complicated when the dataset is two dimensional: an array of arrays. Simply put the dataset into `d3.max()` won't give us the largest number. 
+
+```js
+var dataset_02 = [
+  [0, 4], [5, 9], [8, 90], [47, 33], [55,99]
+  ]
+```
+
+`d3.max(dataset_02) //[8, 90]`
+
+Okay, what should we do then? If we want to identify the largest number among all the first number in each array within `dataset_02`, we can do it this way:
+
+```js
+d3.max(dataset_02, function(d){
+  return d[0];})
+```
+
+Here, `function(d){return d[0]}` is called an *accessor function*, as it helps us **access** the first number in each array. 
+
+How to understand the above code? I would understand it this way. `d3.max()` need to first have all the numbers we ask it to evaluate, in the example above, all the first numbers in each array. To get the first numbers, we need to use the accessor function. Then, there is a problem, what does the `d` mean? `d3.max()` doesn't know, so we have to specify that. We tell `d3.max()` that each `d` comes from `dataset_02`, then the stupid `d3.max()` will know where to find each `d`.
+
+## Task 7-1 to 7-9
+From [Day 13](https://observablehq.com/@hongtaoh/day-thirteen-2020-09-06)
+
+- 7-1. Based on Task 6-6. For the X coordinate, set the input domain to be [0, the largest number of d[0]], and the output range to be [0, w]. For the Y coordinate, set the input domain to be [0, the largest number of d[1]], and the output range to be [0, h]. 
+
+Change the location of each circle and annodated text accordingly. For the text, use "sans-serif" in 11px and in red. 
+
+- 7-2. Let the circles with larger y values be at the top of the plot and those with smaller values at the bottom. *Hint*: change the output range of `yScale`.
+
+- 7-3. To keep the circle elements 20 pixels away from the boarder of the SVG. *Hint*: create a padding of 20 and then change the output range of both `xScale` and `yScale`. 
+
+- 7-4. Texts on the far right are still being cut off, solve this problem. *Hint*: adjust the `range` of `xScale`.  
+
+Note that to create paddings on each side of our charts, a better way is Mike Bostock's [**Margin Convention**](https://observablehq.com/@d3/margin-convention). 
+
+- 7-5. Use the method of *Margin Convention* mentioned above. top: 20, right: 30, bottom: 30, left:40
+
+- 7-6. (**Please note that this is not the ideal way to scale cirlces! We'd better scale them by area rather than by radius. This is just for illustration and for the sake of exercise!**) Create a custom scale for radius such that the greater the y value, the bigger the radius. Let the domain be [0, the largest number of y value], and the range be [2, 5]. 
+
+- 7-7. Add an array to the original dataset, [600, 150].
+
+- 7-8. Change the width of the SVG to be 600, and the height 300. 
+
+- 7-9. Tell me what the functions of `nice()`, `rangeRound()`, and `clamp()` do and how to use them.
+
+## Task 7-10 & 7-11
+From [Day 18](https://observablehq.com/@hongtaoh/day-eighteen-sept-11-2020)
+
+- 7-10. Check out the element inspector after Task 7-1-9 is done. You'll find that the numbers for `cx` and `cy` are pretty long. Try to round up those numbers using the `rangeRound()` method;
+
+- 7-11. Scale those circles by area rather than by radius, such that the bigger the `y` value, the bigger the area of a circle. Let the area be within [0, 10]. *hint* : use `d3.scaleSqrt()`, and remember to replace `rScale` with `aScale`.
+
+    - Please note that for `aScale`, the starting point for both the input domain and the output range **must** be zero. If you don't understand why, read [my blog post on d3.js scales](https://hongtaoh.com/en/2020/09/07/d3-scales/).
+    
+    - Why should we use `d3.scaleSqrt()` here: If the `y` value of data point A is four times as big as that of data point B, then we want to make sure that Circle A's area is also four times as large as that of Circle B. To maintain this ratio, we need to make sure that Circle A's radius is **twice** as large as that of Circle B. `d3.scaleSqrt` maps from the input domain to the output range using this fomula: `y = m*x^(1/2) + b`, where `x` represents the input domain (i.e., the y value of data points, or the area of Circel A, B, C...) and `y` represents the output range (i.e., the radius of Circle A, B, C...). In our case, sine the starting point for both the input domain and the output range is zero, `b = 0`. Therefore, `y_1 / y_2 = (x_1 / x_2)^(1/2)`.
+
+## Task 7 Review
+### From [Day 18](https://observablehq.com/@hongtaoh/day-eighteen-sept-11-2020)
+
+- 7-1. You cannot use the function of `max` by calling itself. You have to call `d3` first, just like when you are using `scaleLinear()`. This is because both `scaleLinear()` and `max()` are `d3` functions or methods.
+
+- 7-5. 
+
+    - My original understanding of **margin convention** is wrong. There isn't magic involved here. What `var margin = ({  })` does here is simply assign numbers to names, so that those numbers can be referred to by calling `margin.top`, `margin.left`.... 
+    
+    - If the range of `yScale` was initially `[h, 0]`, do pay attention when you use margin convention. If you can do it right, you have clearly understood margin convention. *Hint* : **It should be `.range([h -  margin.bottom, margin.top])`**.
+    
+    - Why is that we should use `.range([h -  margin.bottom, margin.top])` here? The domain here is ([0, the maximum of d[1]), and we want circles with smaller d[1] values appear at bottom, so the range should start from `h` something. Now, suppose `margin.top = 20`, and `margin.bottom = 40`. If we use `.range([h - margin.top, margin.bottom])`, then `0` in the input domain will become `h -  margin.top`, and that will be the lowest point in our chart. Is this what we want? Not really. I want the lowest point to be at `h - margin.bottom`.
+    
+### From [Day 19](https://observablehq.com/@hongtaoh/day-nineteen-spet-12-2020)
+
+- 7-1. The order of codes does matter in D3.js. If I put `xScale` and `yScale` before `var dataset = ...`, then D3 would not be able to generate any results. This because I need to call `dataset` in `xScale` and `yScale`.
+
+### From [Day 22](https://observablehq.com/@hongtaoh/day-twenty-two-spet-15th-2020)
+
+7-1-5. In `var margin = ({top: 20, right: 30, bottom: 30, left: 40});`, you **should not**, and in fact **cannot**, put `;` right after `left:40`.

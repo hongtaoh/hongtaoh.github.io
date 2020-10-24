@@ -1,0 +1,268 @@
+# Task 9: Updates & Transiations{#task9}
+
+## Task 9-1
+### From [Day 20](https://observablehq.com/@hongtaoh/day-twenty-task-8-continued-2020-09-13)
+
+- 9-1-1. Make a normal-looking bar chart for this dataset: [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13, 11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ]. Width and height of the SVG: 600, 250.  
+### From [Day 21](https://observablehq.com/@hongtaoh/day-twenty-one-task-9-continued-2020-09-14)
+
+- 9-1-2. Create an `xScale` using `d3.scaleBand()`. Let the output range be ([0, w]), and assign 5 percent of the bandwidth to spacing in between bands. Use this `xScale` when setting `x`, and `width` of each `rect` accordingly. *Hint* : 
+  1. For `.domain()`, use [`d3.range()`](https://github.com/d3/d3-array#range). For example, `range(10)` will produce `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]`. **Note** that stop is exclusive. 
+  
+  2. `bandwidth()`. 
+
+- 9-1-3. Put the text of corresponding data values right in the middle of the top of each bar. Think hard about how to set the `x` (*Hint* : You'll need to use `xScale(i)`, and `xScale.bandwidht()`.
+
+- 9-1-4. Let the text "Click here" appear above the bar chart. When visitors click "Click here", the text "Hey, don't click that" will pop up. 
+
+  - *Hint* : Add a paragraph element before our javascript. Down at the end of our d3 code, select this new p, and add an *event listener* to the element. You'll use the `alert()` function within a `on` function.
+  
+  - What is an *event listener*: an anonymous function that listens for an event on an element or elements. 
+  
+  - The `.on` method takes on two arguments: the event type, and the listener itself which is an anonymous function. 
+
+- 9-1-5. Rather than generating the annoying pop-up text, updating the dataset. That is to say, after people click on the text, the bar chart will represent this updated dataset: `[11, 12, 15, 20, 18, 17, 16, 18, 23, 25, 5,10,13,19,21,25,22,18,15,13]`;
+
+- 9-1-6. Add transition to the bars heights.
+
+- 9-1-7. Let the transition last for 1 second. Now, we can see that labels did not have smooth transitions along with the bar heights. Add transition and duration to labels as well. 
+
+- 9-1-8. Make the rate of motion be linear using the `ease()` function. *Hint* : `easeLinear`.
+
+- 9-1-9. Create a one second delay before each transition. 
+
+- 9-1-10. Make the delay dynamic (so called "staggered delays") such that each element is delayed 100 ms more than the preceding one.
+
+### From [Day 22](https://observablehq.com/@hongtaoh/day-twenty-two-spet-15th-2020)
+
+- 9-1-11. Continue with 9-1-10. To scale the dynamic delay to the length of the dataset such that visitors need to wait for at most 1 second to see the last rect element move. 
+ 
+  - Why? If we only have 25 data values, 9-1-10 might be okay. However, if we have 1000 data points, then visitors have to wait for a very long time to see the transition finish. Scaling the delay to the length of the data makes more sense. 
+
+## Task 9-2
+
+Continue with Task 9-1-11. 
+
+### From [Day 23](https://observablehq.com/@hongtaoh/day-twenty-three-2020-09-16)
+
+- 9-2-1. Make changes so that every time you click, new data will show up with transitions. The new data will be an array of random **integers** with values between 0 and 24. Let the new array have the same length as the original one (the one before any updates). *Hint* : 
+
+  - Use a `for` loop;
+  
+  - `Math.random()` generates random numbers from $0$ up to, but not including $1$.
+
+- 9-2-2. Add extra logical to set the vertical placement and style of labels. "When the data value is less than or equal to 1, place the label up above the bar and set its fill to black. Otherwise, place and style the label normally" (p. 167). *Hint* : 
+```js
+if () {}
+  else {} 
+// Since we use function (d) { }, we need to add "return" in our if statement.
+// Also note that we still need to fill out the else {} part. We cannot leave it as blank. 
+```
+
+- 9-2-3. We earlier used `Math.random() * 25`. Replace `25` with a variable `maxValue`. Set the `maxValue` to be `100`. 
+
+**Note**: We'll stop editing bar charts temporarily starting from 9-2-4. 
+
+- 9-2-4. Based on the results we got from Task 8, do the following: 1. Delete the CSS for .axis path, line, and text; 2. Let the radius of each circle be a constant: 2 px. Then, do the following: 
+
+  1. Rename the class of xAxis as `x axis` and that of yAxis as `y axis`. 
+  
+  2. When people click on the text "Click here for new data", a new pair of 50 integers between 0 and 100 will show up. Make transitions to these changes and set the duration to be 1 second. Make sure that scales, and both axes are also updated. *Hint* : to update the axes, first select the axis, and make a transition, set the transition's duration, and call the axis generator. 
+
+- 9-2-5. Make changes to the code so that when you click the trigger, the fill of all the circles changes to magenta, and the radius becomes 3 px. When the transition is over, the fill changes to black and the radii become 2px. 
+
+    - *Hint* : Within circle-updating code, use two `.on()` statements, whithin which you need to first specify whether it's `start` or `end`, and then use an anonymous function to first select the current element and set the attributions. 
+
+- 9-2-6. Add a transition (which lasts for 1 second) to the start of the transition and see what will happen.
+
+### From [Day 25](https://observablehq.com/@hongtaoh/day-twenty-five-2020-09-18)
+
+- 9-2-7. Modify the code so that when you click the trigger, each circle will turn pink and its radius immediately increases from 2 to 7. Then circles move (1 second) to their new positions. In the end, circles **transition** (1 second) to original color and size. 
+
+- 9-2-8. "Instead of reelecting elements and calling a new transition on each one with `.on("end", ...)`, just tack a second transition onto the end of the chain." (p. 174). This chaining approach is recommended when "sequencing multiple transitions".
+
+### From [Day 28](https://observablehq.com/@hongtaoh/day-twenty-eight-task-9-2-continued-2020-09-21)
+
+- 9-2-9. **Go back to our bar charts.** Based on codes from Task 9-2-3. Make changes so that every time you click the trigger, a new integer between 0 and 24 will be added. Update both the bars and the text labels. The newly generated bars and labels will move from the right border of the SVG to its proper place. Make the transition last for half a second. *Hint* : Use `.merge()`.
+
+### From [Day 31](https://observablehq.com/@hongtaoh/day-31-2020-09-24)
+- 9-2-10. Create a `p` element with the text "Click here to remove data". Every time you click it, the first bar and its associated label will be removed. Add a transition (half a second) to the removal so that the **exiting** bar will move to the bottom-right corner of the SVG and then disappear. Make sure to update the bars and labels. 
+
+*Hint* : 
+- To remove the first data value from dataset, use `.shift()`;
+
+- To remove svg elements (rect and text), use `.exit().remove()`. The `.exit()` function returns a reference to the exiting element; Transition syntaxes should be added between `.exit()` and `.remove()`;
+
+- To make sure that the exiting bar moves to the bottom-right corner before disappearing, set its position after the transition and before the removal;
+
+- After the removal, we need to update the bars and labels. That's fairly easy. For `rect`, just use `svg.selectAll("rect")`, and then set its position, width, height and color using `attr("x", ...)...`. For `text`, first use `svg.selectAll("text").text(d => d)`, and then set texts' positions. 
+
+## Unsolved puzzles in Task 9
+
+### Puzzle one from [Day 26](https://observablehq.com/@hongtaoh/day-twenty-six-2020-09-19)
+
+Maybe the answer: See [Day 30](https://observablehq.com/@hongtaoh/day-thirty-2020-09-22).
+
+### Puzzle two
+Something I don't understand but don't have time to figure out:
+
+- I want to let the exiting label to turn red and move to the upper-right corner before disappearing, so I specified `.attr("x", w).attr("y", 0).` after the transition syntaxes and before `.remove()`. However, I noticed that it just cannot move horizontally. It keeps within its original horizontal position.
+
+- I just don't know why and how [Scott Murray's codes](https://github.com/scotthmurray/d3-book/blob/master/chapter_09/26_removing_values.html) worked. Why should we use `bars.enter()...` here? 
+
+- How to get the transition in [Scott Murray's codes](https://github.com/scotthmurray/d3-book/blob/master/chapter_09/26_removing_values.html) when updating the bars?
+
+- I used `dataset.pop()`, which is supposed to delete the last data value. Yes, when I used 
+
+```{js}
+svg.selectAll("rect")
+                .data(dataset)
+                .exit()
+                .transition()
+                .attr("x", w)
+                .attr("y", h)
+                .remove()
+```
+
+The exiting bar traveled from the left! Why???
+
+### Puzzle three from [Day 40](https://observablehq.com/@hongtaoh/day-40-2020-10-03)
+
+I was redoing [Task 9-2-1](https://d3.hongtaoh.com/task-9-2.html). The answer is [Chapter 09/17_randomized_data.html](https://github.com/scotthmurray/d3-book/blob/master/chapter_09/17_randomized_data.html). 
+
+The only difference is that I have already updated the `xScale` and `yScale` within the bar and text updating codes. Also, I made a "small" mistake: I put `dataset = []` **inside** the `for` loop. 
+
+To make the changes more noticeable, change the color of the bar to red within within the bar and text updating codes. Here are the things I didn't understand:
+
+- Why isn't the red obscuring the colors of previous rects?
+
+- Why is there a larger gap between the start of the first bar?
+
+See more information about d3 band scales [here](https://github.com/d3/d3-scale#band-scales).
+
+### Puzzle four and five from [Day 45](https://observablehq.com/@hongtaoh/day-45-2020-10-07)
+
+## Translating from D3 to Observable
+
+See [Day 27](https://observablehq.com/@hongtaoh/day-twenty-seven-2020-09-20)
+
+Some points worth mentioning:
+
+- You can write codes involving multiple variables by including them in curly brackets. If you don't use curly brackets, you have to dedicate one cell to each variable. See [this example](https://observablehq.com/@hongtaoh/bar-chart-cell-by-cell) if you don't know what "dedicating one cell to each variable" means. 
+
+- In the book, you normally write `var w = 600`. However, now `let` and `const` are preferred. Read [here](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/) and [here](https://hackernoon.com/js-var-let-or-const-67e51dbb716f) for explanations. 
+
+- To show the results, you need to use `return svg.node()`. Again, don't ask me why. 
+
+- By the way, `d => yScale(d)` is simply short for `function(d) { return yScale(d) }`. Similarly, `(d, i) => xScale(i)` means `function(d, i) { return xScale(i)}`
+
+## Understanding the `selectAll().data().enter().append()` pattern
+
+### From [Day 29](https://observablehq.com/@hongtaoh/day-twenty-nine-2020-09-22)
+
+- `svg.selectAll("placeholder-for-rects")` // This will select all placeholder elements and hand them off to the next step
+
+- `.data(dataset)` // This will bind data to the selected placeholder elements, and then return references to all elements to which data was just bound. References to these elements are called "update selection".
+
+- `.enter()` // Select elements that do not yet exist and hand them off to the next step.
+
+- `.append("rect")` // Create a rect element within each element returned by `enter()`, and then return reference to this newly created element. 
+
+## Task 9-1 Review
+
+### From [Day 21](https://observablehq.com/@hongtaoh/day-twenty-one-task-9-continued-2020-09-14)
+
+- 9-1-1. In `yScale`, if `.range(0, h)`, then the `y` axis should be `h - yScale(d)`. If `.range(h,0)`, then the `height` of bars should be `h - yScale(d)`.
+
+### From [Day 22](https://observablehq.com/@hongtaoh/day-twenty-two-spet-15th-2020)
+
+- 9-1-2. 
+  - It should be `paddingInner()`, rather than `PaddingInner()`.
+  - `{return "rgb( )"}`
+
+- 9-1-3. `.attr("text-anchor", "middle")`
+
+- 9-1-4. I should use `d3.select("p")`, rather than `svg.select("p")`. Why? Because the new `p` element is parallel with the `svg` element, I cannot select the `p` within `svg`. 
+
+- 9-1-6. The `.transition()` should be added within the anonymous function. It should be put after you have updated the data and before any changes. 
+
+- 9-1-8. It is `ease(d3.easeLinear()`, not `ease(d3.scaleLinear())`.
+
+- 9-1-9. Scott Murray was wrong. The position of `.delay()` is not flexible at all. It mush be put AFTER `.transition()`.
+
+- 9-1-10. Please keep in mind that if you have `.delay()` after the `.transition()`, then `duration()` is applied to each individual transition, rather than all transitions in aggregate.
+
+### Recap: functions you absolutely HAVE TO call `d3` first:
+
+- d3.scaleLinear() ...
+
+- d3.max()
+
+- d3.range()
+
+- d3.easeLinear
+
+### From [Day 23](https://observablehq.com/@hongtaoh/day-twenty-three-2020-09-16)
+
+- 9-1. `return "rgb(0, 0, " + Math.round(d*10) + ")"`. You are not allowed to have space between `rgb` and `(`.
+
+### From [Day 24](https://observablehq.com/@hongtaoh/untitled)
+
+- `xScale.bandwidth()`.
+
+- `d3.range()`, rather than `range()`.
+
+- Within the anonymous function of `.on()`, there is no need to write `return ...`
+
+### From [Day 29](https://observablehq.com/@hongtaoh/day-twenty-nine-2020-09-22)
+
+- 9-1-4. 
+  - `<p>Click Here</p>`. No need to use ""
+  - `alert("phrase here")`
+
+- 9-1-5. Even if you used `svg.selectAll("placeholder-for-rects")` to create and select placeholder elements to be used later, you still need to use `svg.selectAll("rect")` in `.on()` when you updating the data. 
+
+## Task 9-2 Review
+
+### From [Day 24](https://observablehq.com/@hongtaoh/untitled)
+
+- 9-2-2. `if(){return } else{ return }`
+
+- 9-2-4. 
+  - `d3.select("p)` rather than `d3.select(p)`
+  
+  - `.on("click", ...)` rather than `.on("Click", ...)`
+  
+  - `xScale.domain([0, d3.max(dataset, function(d){ return ...}])`. Be sure to add `dataset`.
+
+- 9-2-5.
+
+  - It should be `d3.select(this)`, rather than `svg.select(this)`.
+  
+  - "start" can be placed either before or after `duration()` and "end" should be placed at the end of the circle-updating code.
+
+- 9-2-6. Only one transition can be active for a given element at any given time.
+
+### From [Day 29](https://observablehq.com/@hongtaoh/day-twenty-nine-2020-09-22)
+- 9-2-5. Within `.on("start", ...)`, you need to use `d3.select(this)`, rather than `svg.select(this)`. 
+
+- 9-2-7. You can add many transitions you want. However, you cannot add a transition within in `.on("start", ...)`, which is designed for immediate transformations, not interpolated ones. 
+
+For example, the following is okay:
+
+```{js}
+svg.selectAll("circle")
+     .data(dataset)
+     .transtion()
+     .duration(1000)
+     .transition()
+     .duration(1000)
+     .
+     .
+     .
+```
+
+- 9-2-9.
+  - `bars.enter().append("rect")...` will return references to newly created element. Therefore, all the codes that follow will be used for this newly created bar, until you use `merge()`.
+
+
