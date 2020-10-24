@@ -1,0 +1,167 @@
+# Task 6: Drawing with Data{#task6}
+
+## Tasks 6-1
+From [Day 8](https://observablehq.com/@hongtaoh/spet-1-2020-day-eight)
+
+- 6-1-1. Make a bar chart, in which the height of each bar corresponds to its data value. 
+   - dataset = [5,10,15,20,25];
+   
+   - Attributes of the CSS, `div.bar`: `inline-block`, set the width to be `20px`, the height `75px`, and background color to be teal;
+
+- 6-1-2. Make the bar five times taller, and add some space (2px) between bars;
+
+- 6-1-3. Change the dataset to be made up of 25 random numbers that range from 0 to 30 (using `for` loop, `Math.random()`, and `.push()` );
+
+- 6-1-4. Make all the random numbers whole numbers (using `Math.round()`)
+
+## Task 6-2: Drawing SVGs
+From [Day 8](https://observablehq.com/@hongtaoh/spet-1-2020-day-eight)
+
+- 6-2-1, dataset = [5, 10, 15, 20, 25]
+
+- 6-2-2, Create a SVG within `<body></body>`; Set the width of the SVG to be 500, and the height to be 50;
+
+- 6-2-3, `var svg = d3.select("body").append("svg")`, what does this line of code do?
+
+- 6-2-4, Draw five circles, the x-pistion value of each circle's center is (index * 50) + 25, the y-position is half of the pre-defined height, and the value of the radius is the data value itself; 
+
+- 6-2-5, Fill the five circles with "yellow", the stroke being "orange", and the stroke width is half of the corresponding data values;
+
+- 6-2-6, Delete all the above codes except for the `div.bar{}` CSS styling, and then set the dataset to be `[ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ]`, generate `n` number of divs before the enclosing tag of `<body>`(n = the length of the above dataset; and yes, you still need the CSS between `<head> and </head>`), give it a class named as "bar". The height of each bar is five timees the corresponding data values. Attributions of the CSS, `div.bar`: inline-block, set the width to be 20px, the height 75px, background color is teal, and create a 2px margin between bars.
+
+## Task 6-3: Draw a new SVG chart
+From [Day 8](https://observablehq.com/@hongtaoh/spet-1-2020-day-eight)
+
+- 6-3-1. Still use the above dataset with 20 data values;
+
+- 6-3-2. Insert a new `SVG\` between `<body>` and `</body>`. Set the width of the SVG to be 500 and the height 100 pixels;
+
+- 6-3-3. Now, instead of creating `divs`, we'll be creating `rect` s. Create 20 `rect` s, each with x =0, y=0, width = 20, height = 100;
+
+- 6-3-4. Set the `x` to be dynamic, such that the ith rect has a x of `i*21`;
+
+- 6-3-5. Set the `x` to be flexible, such that each x = i * (w / dataset.length); Set the `width` of each rect to be flexible as well, each `width = w / dataset.length - 1`;
+
+- 6-3-6. Try to set the height of each rect to be the corresponding data value;
+
+- 6-3-7. Set the top of each bar to be `h-d` and the height of each bar to be the corresponding data value;
+
+- 6-3-8. Change `d` to be `d * 4`;
+
+- 6-3-9. Chagee the bar color to `teal`.
+
+## Task 6-4: Change bar color
+From [Day 9](https://observablehq.com/@hongtaoh/day-nine-spet-2-2020)
+
+- Based on Task 6-3, change the color of the bars using RGB. Let red and green components be fixed at zero. Let the blue component be the corresponding data value times 10, which then is rounded to the nearest whole number (using `Math.round()`)
+
+  - **I still do not understand why we should put the codes in between `"+ +"`. This is so difficult for me**. 
+
+## Task 6-5: Adjust labels
+From [Day 9](https://observablehq.com/@hongtaoh/day-nine-spet-2-2020)
+
+- 6-5-1. Add value labels on top of each bar;
+
+- 6-5-2. Move each value label down by 15 pixels and to the right by 5 pixels; Style the font. Use sans-serif, 11px, and in white. 
+
+## Task 6-6: Draw a scatterplot
+From [Day 10](https://observablehq.com/@hongtaoh/day-ten-sept-3rd-2020)
+
+- 6-6-1. First, create a SVG element before the enclosing tag of `<body>`. Set the width of the svg to be 500, and the height 100. Dataset = [ [5, 20], [480, 90], [250, 50], [100, 33], [330, 95], [410, 12], [475, 44], [25, 67], [85, 21], [220, 88] ]. In each hard bracket, the first number is the x, and the second the y. Draw a scatterplot of all these data points. Basically, you are expected to draw small circles. `cx` and `cy` are the above data points. Set the radius to be 5 pixels. 
+
+  - In the above `dataset`, `dataset[2][0] = 480`
+  
+
+- 6-6-2. Label each data point in the format of `d[0], d[1]`. Place each label right beside each data point (just use d[0] as x, and d[1] as y will do the job). Please note here that `text` can both be an SVG element and a D3 method. 
+
+*Chapter Six, Drawing the data* is finally over. We'll begin learning **scales**. p.117
+
+## Task 6 Review
+
+### Task 6-1 Review
+From [Day 9](https://observablehq.com/@hongtaoh/day-nine-spet-2-2020)
+
+- 6-1-1: 
+
+  - To specify the height of each bar, I should use `.style()`, rather than `.attr()`. In `D3.js`, `.style()` is to assign CSS styles to a HTML element. In CSS, we won't use `style` because everything is `style()`. In HTML, we do use it. For example, ` <div style="height: 75px;"></div>"`;
+  
+  - To make the height of each bar correspondes to its data value, I should use`function(d){return d + "px"}` rather than `function(d){return d }`;
+
+- 6-1-2: To add some space (2px) between bars, I need to use `margin-right: 2px` in the CSS (`div.bar{}`. To learn more about the differences between `padding`, `border`, `margin`, read [this amazing tutorial](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model);
+
+- 6-1-3:
+
+  - First, I need to initilize an empty array using `dataset = []`
+  
+  - In Javascript, `Math` is [a global object](https://www.w3schools.com/js/js_math.asp), whereas `.push()` is [an array method](https://www.w3schools.com/js/js_array_methods.asp). 
+  
+  - A `for` loop: `for (initialization; test; updata){
+}`
+
+### Task 6-2
+From [Day 9](https://observablehq.com/@hongtaoh/day-nine-spet-2-2020)
+
+- 6-2-4
+
+  - When drawing five circles, we used three terms, "svg", "circles", and "circle", which of them should be fixed, and which can be random? "svg" and "circle" should be fixed, but "circles" can be random;
+  
+  - One thing I still don't understand is that in Task 6-1-1, I have to use `function(d){return d + "px"}` rather than `function(d){return d }`. However, in Task 6-2-4, using `.attr("r", function(d){return d
+})` is fine, and in `.attr("cy", h/2)`, I don't need to put `""` to enclose `h/2`. I guess it's because of **the differences between `.style()` and `.attr()`**. But **how different? I don't know.**;
+
+  - When we need the index of the data values, we should use `function(d,i){}` even if we don't need the `d`. However, when we only need the `d`, we can simply use `function(d){}`.
+
+- 6-2-6: Again, we need to add `px` in `style`
+
+### Task 6-3 
+From [Day 9](https://observablehq.com/@hongtaoh/day-nine-spet-2-2020)
+
+To change the color of bars, we need to use `.attr("fill", "teal")`, rather than `.style()`.
+
+### Task 6-1
+From [Day Ten](https://observablehq.com/@hongtaoh/day-ten-sept-3rd-2020)
+
+- 6-1-1. Again, I forgot the difference between `.attr()` and `.style()`. 
+
+  - `.style()` assigns **CSS styles (properties and value)s** to **a HTML element**, just like the way we assign CSS styles when we are writing HTML. For example, `<div style="height: 75px;"></div>`.
+  
+  - In comparison, `.attr()` sets **an HTML attribute and its values** on a HTML element. Note that an element's class is stored as an HTML atrribute. 
+
+- 6-1-3. `A.push(B)` will put B to the end of A. `.push()` is an array method.
+
+### Task 6-2
+From [Day Ten](https://observablehq.com/@hongtaoh/day-ten-sept-3rd-2020)
+
+- 6-2-2. 
+
+  - `<svg>` is just like an HTML element. `width`, `height` are its attributs. `rect`, `circle`, `text` are all elements. `x`, `y`, `cx`, `cy` and `r` are all attributes. Read [this amazing tutorial](http://jonathansoma.com/tutorials/d3/using-attr-and-style/) to really understand what is an element and what are attributs. 
+  
+  - **I still did not understand it. Why is that I need to use `style()` to specify the `height` of `div` in **Task 6-1-1** but I need to use `.attr()` to specify the `height` of a `svg` here??** I guess it's because that for `div`, `height` is a CSS property, but for `svg`, `height` is an attribute? Maybe. 
+
+- 6-2-4. I need to use `svg.selectAll('circle')` rather than `svg.select('circle')`. Think about why for a moment;
+
+- 6-2-5. As the [amazing tutorial](http://jonathansoma.com/tutorials/d3/using-attr-and-style/) mentioned, here, using either `.attr()` or `.style()` is fine. The key difference is that I need to use `return d / 2 + "px"` for `stroke-wideth` when using `.style()`.
+
+### Concluding words on .style() and .attr():
+
+- For `<div>`, `height` is a CSS property, so I should use `style`;
+
+- For `<svg>`, `height`, `width`, `x`, `y`, `cx`, `cy`, `r` are  attributes, so I should use `attr()`;
+
+- For `<svg>`, `fill`, `stroke`, and `stroke-width` are also attributes. I can use either `style()` or `attr()`, but `style()` is better because it is not about **position** and **size**.
+
+- Refer to [this tutorial](http://jonathansoma.com/tutorials/d3/using-attr-and-style/) and [this tutorial](https://www.carlosrendon.me/unfinished_d3_book/d3_attr.html).
+
+### Task 6-5
+From [Day Eleven](https://observablehq.com/@hongtaoh/day-eleven-sept-4th-2020)
+
+- 6-5-1. When adding value labels on top of each bar, I should not use `rect.selectAll("text").data(dataset).enter().append("text")...`. Doing so will add twenty `text` element within each `rect` element! This is not I am looking for at all. Rather, I should use `svg.selectAll("text").data(dataset).enter().append("text")`.
+
+- 6-5-2. `.style("font-size", "11px")`.
+
+### Task 6-6
+From [Day Eleven](https://observablehq.com/@hongtaoh/day-eleven-sept-4th-2020)
+
+- 6-6-2. Whenever you use `function(){}`, remember to add `return`. 
+
+### Task 6-6
+From [Day Eighteen](https://observablehq.com/@hongtaoh/day-eighteen-sept-11-2020)

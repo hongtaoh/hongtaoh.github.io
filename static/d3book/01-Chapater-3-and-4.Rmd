@@ -1,0 +1,21 @@
+# Chapter 3 & 4{#chapter3_and_4}
+
+Some Key Points from Chapter 3 & 4
+
+- What are HTML elements: `html`, `head`, hyperlinks, `title`, `body`, `h1`, `h2`, `h3`, `p`, `div`, `span`, `img`, `ul`, `ol`, `li`, `em`, `strong`, `a`
+
+- `<a href="Link here">Content here</a>`, where `href` stands for **hypertext reference**;
+
+- Difference between `id` and `class`: each element can only have one `id` and each `id` can be used only once. In contrast, elements can have multiple `class`(separated by space), and each `class` can be used for multiple times. 
+
+- Comments: "`<!-- Comments here -->`"
+
+- **DOM** stands for *Document Object Model*, which refers to "the hierarchical structure of HTML" (p.50).
+
+- **CSS**: *Cascading Style Sheets*. How to use CSS: Check [here](https://www.w3schools.com/html/html_css.asp).
+
+- In CSS, a child adopts the style of the parent. 
+
+- **JavaScript**: Arrays, Objects, JSON (JavaScript Object Notation)
+
+- **SVG**: Scalable Vector Graphics

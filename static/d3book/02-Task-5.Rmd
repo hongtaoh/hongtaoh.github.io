@@ -1,0 +1,13 @@
+# Task 5{#task5}
+
+From [Day 6](https://observablehq.com/@hongtaoh/day-six)
+
+- 5-1. generate a `dataset` made up of five numbers: 5, 10, 15, 20, 25;
+
+- 5-2. generate five lines of texts, each line of text being "New paragraph!";
+
+- 5-3. generate five lines of texts: "I can count up to 5", "10", ...
+
+- 5-4. make all the five lines red;
+
+- 5-5. make only lines in which the number is above 15 red, and all else lines black.
