@@ -22,7 +22,7 @@ I agree. In my mind, mingling with other scholars at conferences is good to keep
 
 This reminds me of an American scientist[^1] who says that he won't do the most popular science. The fact that it is popular by no means indicates its importance. He suggests doing research that you consider significant, whether it's popular or not. 
 
-In terms of collaboration, I also don't believe that all great ideas emerge from groups or teams. Yihui Xie, who came with Rmarkdown and Bookdoww, tools that changed the way how people use R and write documents, also mentioned in one of his blog posts[^2] that he did the work by working alone. 
+In terms of collaboration, I also don't believe that all great ideas emerge from groups or teams. Yihui Xie, who came up with Rmarkdown and Bookdown, tools that changed the way how people use R and write documents, also mentioned in one of his blog posts[^2] that he did the work by working alone. 
 
 For me, teams are great for **implementing** ideas, not for **initiating** ideas. For example, Fei-Fei Li and her colleagues completed the work of [ImageNet](http://image-net.org/papers/imagenet_cvpr09.pdf) by virtual of around [50,000 people from 167 countries](https://hyper.ai/8049) on Amazon Turk. This, of course, is an extreme case, but it illustrates that teams are useful when there exists a good idea, which, unfortunately, do not start from teams most of the time. 
 
