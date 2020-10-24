@@ -1,8 +1,0 @@
-book_filename: "d3booktrial"
-repo: https://github.com/hongtaoh/d3book
-output_dir: _book
-language:
-  ui:
-    edit: "Edit"
-    chapter_name: "Unit "
-delete_merged_file: true
