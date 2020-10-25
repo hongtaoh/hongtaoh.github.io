@@ -2,6 +2,12 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-25
+Kramer, A. D., Guillory, J. E., & Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. *Proceedings of the National Academy of Sciences, 111*(24), 8788-8790.
+
+The key question this paper was trying to answer: does exposure to mood expressed in the news feed people see change the content they post that reflects their own mood change?
+
+
 ## 2020-10-24
 Continue reading Lawrence (2007).
 
