@@ -14,8 +14,10 @@ type : nolisting
 
 - 2018 ~ 2020, M.A. in Media Arts and Sciences, Indiana Univeristy Bloomington (GPA: 4.00/4.00)
    - Committee: Nicole Martins (Chair), Daneille Kilgo, Bryant Paul
+   - Relevant Coursework: [Introduction to Bayesian Data Analysis I](https://jkkweb.sitehost.iu.edu/jkkteach/P533/), [Data Visualization](http://yyahn.com/dviz-course/), Quantitative Methods for Public Health Research, Introduction to Statistics in Media Research, Content Analysis , Media Theories , Children and Media, Applying Social Science Research Methods to Media
+
 - 2016 ~ 2018, M.A. in Journalism, Renmin University of China (GPA:3.92/4.00)
-- 2012 ~ 2016, B.A. in English , Hebei Normal University (GPA: 3.92/4.00 ; Ranking: 1 / 44)
+- 2012 ~ 2016, B.A. in English , Hebei Normal University (Rank: 1 / 44; GPA: 3.92/4.00)
 
 ## Research Experience
 
@@ -33,8 +35,9 @@ type : nolisting
 ## Honors & Fellowships
 
 - 2015, China's National Champion of the 1st ‘FLTRP Cup’ English Reading Contest, Beijing, China
-   - Ranked 1<sup>st</sup> among 200,000 undergraduate and graduate participants nationwide
-- 2017, St. Gallen Wings of Excellence Award, St. Gallen Symposium, Switzerland
+   - Ranked 1<sup>st</sup> among 200,000 undergraduate and graduate participants nationwide （<!--[Results](https://heep.unipus.cn/news/xwnr.php?NewsID=3012), -->[School Report](http://www.hebtu.edu.cn/a/2015/12/14/20151214142833.html))
+- 2017, St. Gallen Wings of Excellence Award, the 47<sup>th</sup> [St. Gallen Symposium](https://www.symposium.org/), Switzerland
+  - One of 100 winners selected from nearly 1,000 contestants, representing 350 universities and 109 nationalities
 - 2019, Second top student paper award, Public Diplomacy Interest Group, International Communication Association, Washington, D.C. 
 - 2019, Annette & Lars Willnat Travel Fellowship, Indiana University, USA
 - 2019, College or Arts and Sciences Travel Grant, Indiana University, USA
@@ -67,11 +70,13 @@ type : nolisting
 - tree-1.8.0 [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/tree-1.8.0)
 
 ## Working Experience
-- 2019 May, Journalist, *St.Gallen Symposium Magazine*, St. Gallen, Switzerland 
+- 2019 May, Journalist, *49<sup>th</sup> St.Gallen Symposium Magazine*, St. Gallen, Switzerland 
+  - Worked in a team of 15 people from nine countries and four continents, supervised by [Andrew Curry](https://www.andrewcurry.com/), with the output of this [56-page magazine](https://www.symposium.org/sites/default/files/2019-11/Magazine%2049th%20St.%20Gallen%20Symposium.pdf)
+  - Representative work of mine:
 
-  - ["It's not just about spending more money."](https://www.symposium.org/articles/its-not-just-about-spending-more-money) (Interviewing Heng Swee Keat, Deputy Prime Minister of Singapore)
-  - [Freeman Shen's electric dream](https://www.symposium.org/articles/freeman-shens-electric-dream) (Interviewing Freeman Shen, CEO of WM Motor -- a leading Chinese electric car maker)
-  - [What role should governments play?](https://www.symposium.org/articles/what-role-should-governments-play) (Interviewing young politicians from India, Argentina, and Sri Lanka)
+    - ["It's not just about spending more money."](https://www.symposium.org/articles/its-not-just-about-spending-more-money) (Interviewing Heng Swee Keat, Deputy Prime Minister of Singapore)
+    - [Freeman Shen's electric dream](https://www.symposium.org/articles/freeman-shens-electric-dream) (Interviewing Freeman Shen, CEO of WM Motor -- a leading Chinese electric car maker)
+    - [What role should governments play?](https://www.symposium.org/articles/what-role-should-governments-play) (Interviewing young politicians from India, Argentina, and Sri Lanka)
 
 - 2017 July, News Editor & Translator, *China Daily*, Beijing, China
 
@@ -90,6 +95,7 @@ type : nolisting
 ## Service
 - 2019, Reviewer for International Communication Association
 
+<!--
 ## Relevant Graduate Coursework
 1. [Introduction to Bayesian Data Analysis I](https://jkkweb.sitehost.iu.edu/jkkteach/P533/) (Dr. John Kruschke)
 2. [Data Visualization](http://yyahn.com/dviz-course/) (Dr. YY Ahn)
@@ -98,13 +104,13 @@ type : nolisting
 5. Content Analysis (Dr. Danielle Kilgo)
 6. Media Theories (Dr. Stephanie DeBore & Dr. Suzannah Comfort)
 7. Children and Media (**A+**) (Dr. Nicole Martins)
-8. Applying Social Science Research Methods to Media (Dr. Rob Potter)
+8. Applying Social Science Research Methods to Media (Dr. Rob Potter) -->
 
 
 ## Computer Skills (in order of proficiency)
 ### Programming languages
-- R (Statistical analysis, and network analysis)
-- Python (Data visualization, and network analysis: Altair, Seaborn, Matplotlib, Pandas, Numpy, Networkx)
+- R (Statistical analysis, network analysis)
+- Python (Data manipulation & visualization, network analysis: Altair, Seaborn, Matplotlib, Pandas, Numpy, Networkx)
 - D3.js/JavaScript
 - CSS, HTML
 
