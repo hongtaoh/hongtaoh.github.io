@@ -6,7 +6,6 @@ author: 郝鸿涛
 toc: true
 ---
 
-
 正好自己要重新做一遍，我便在这里把步骤记录下来。
 
 [Hugo官网上的那篇教程](https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages) 有个问题是，你需要两个 Github 仓库，一个是 `YOUR-PROJECT> (e.g. blog)`，另一个是 `<USERNAME>.github.io `。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 `public` 文件夹。
