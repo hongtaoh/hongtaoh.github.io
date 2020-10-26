@@ -2,10 +2,28 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-26
+
+Continue with Kramer et al. (2014)
+
+### Why is this study needed?
+Correlational studies cannot answer this question since it cannot support causality. Controlled experiments can support causality, but they have these problems:
+  1. Exposure is not equal to interaction. In a controled experiment, mood change might come from interacting with a happy/sad person, rather than simply being exposed to that person's mood;
+  2. Nonverbal cues are unavoidable in a controlled experiment, thus making it impossible for us to disentangle the effect of verbal cues.
+
+Therefore, this study makes unique contributions to answering this question. 
+
+### Study design
+- Two parallell experiments: In experiment A, people see less positive emotional content whereas in experiment B, people see less negative emotional content. Both had a control condition, in which posts had an equal chance (see below) of being omitted, randomly (i.e., without considering their emotional velence).
+  - How much less? Good question! According to the authors, "each emotional post had between a 10% to 90% change (based on their User ID) of being omitted from their News Feed ..."
+  - Well, how do you categorize a post as positive or negative? Awesome question. If a post contains at least one positive word as defined by LIWC2007, then it is a **positive** post. The same is for negative posts. 
+
+
 ## 2020-10-25
 Kramer, A. D., Guillory, J. E., & Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. *Proceedings of the National Academy of Sciences, 111*(24), 8788-8790.
 
-The key question this paper was trying to answer: does exposure to mood expressed in the news feed people see change the content they post that reflects their own mood change?
+### Key question
+The key question this paper was trying to answer: does exposure to mood expressed in the News Feed on FB change the content people post (that reflects their mood changes)? Or in the authors own words, "whether exposure to verbal affective expressions lead to similar verbal expressions, a form of emotional contagion."
 
 
 ## 2020-10-24

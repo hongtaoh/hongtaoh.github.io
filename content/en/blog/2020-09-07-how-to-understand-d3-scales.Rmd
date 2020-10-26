@@ -120,7 +120,7 @@ barplot(output.range, ylim = c(0, 80),
 
 The first impression would be that it's relatively Okay, since the two seem to be comparable. However, if you look closer, you'll find that on the original scale, the input domain, the third bar is around 3 times taller than the first bar. However, on the transformed scale, the output range, the third bar is only twice as tall as the first. The relative height is not maintained, and therefore, the two results are not comparable. 
 
-"D3 scales sucks", you might say. "What was Mike Bostock thinking? D3 scales did not preserve comparability between the two results and they are misleading!".
+"D3 scales suck", you might say. "What was Mike Bostock thinking? D3 scales did not preserve comparability between the two results and they are misleading!".
 
 Well, it's actually our fault rather than D3 scales'. Before I explain how come that the two results are not comparable and how to avoid that, let me talk about how D3's `scaleLinear()` works.
 
