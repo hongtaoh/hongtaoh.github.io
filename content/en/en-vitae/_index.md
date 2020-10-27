@@ -22,7 +22,7 @@ type : nolisting
 ## Research Experience
 
 - Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn](http://yongyeol.com/)
-    - Responsible for improving [COVID-19 visualizations](https://github.com/covid19-data/covid19-data)
+    - Responsible for updating and improving [COVID-19 visualizations](https://github.com/covid19-data/covid19-data)
 
 ## Peer-Reviewed Conference Presentations
 1. Hao, H. (May, 2020). *Cross-cultural comparisons of 'selfie-presentation': A content analysis*. Poster presented at the 70th Annual Conference of the International Communication Association, Converted from Australia to virtual due to COVID-19. 
