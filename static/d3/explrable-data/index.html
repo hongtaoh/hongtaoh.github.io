@@ -6,33 +6,17 @@
   	<title>Explorable Data</title>
   	<style>
   		body {
-  			font-family: sans-serif;
   			line-height: 1.8;
   			font-size: 19px;
+        text-align: center;
   		}
   		h1{font-size: 200%}
   		h2{font-size: 150%}
   		h3{font-size: 120%}
 
-      #viewof-CI{
-  width:100em;
-  float:left;
-}
-
-#CIbody {
-  max-width: 700px;
-}
-
-      #add {
-  width: 15em;
-  float: left;
-  padding-bottom: 20px;
-}
-
-#reset {
-  width: 15em;
-  float: left;
-}
+      #chart {
+        position: center;
+      }
 
     </style>
   </head>
@@ -45,9 +29,15 @@
 
     <h1>2. Slider: Choose your confidence interval</h1>
     <div>
-      <div id="viewof-CI" style="width: 500px"></div>
+      <div id="viewof-CI"></div>
       Dataset: <div id="dataset"></div>
       <div id="CIbody"></div>
+    </div>
+
+    <h1>4. Chart</h1>
+    <div>
+      <div id="viewof-curr_date"></div>
+      <div id="chart2"></div>
     </div>
 
     <h1>3. Button: Adding values and reset</h1>
@@ -55,11 +45,15 @@
       <div id="add"></div>
       <div id="reset"></div>
       <div id="chart"></div>
+      <button type="button" onclick="window.location.href='https://observablehq.com/@hongtaoh/explrable-data#D_chart';">See the source code.</button>
     </div>
+
+
 
   	<script type="module">
       import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
       import notebook from "https://api.observablehq.com/@hongtaoh/explrable-data.js?v=3";
+      import notebook2 from "https://api.observablehq.com/d/87e6003e4f4aab00.js?v=3";
       const renders = {
       	"viewof season": "#viewof-season",
         "TimeSeason": "#TimeSeason",
@@ -69,6 +63,11 @@
         "reset": "#reset",
         "add": "#add",
         "D_chart": "#chart",
+      }
+
+      const renders2 = {
+        "viewof currDateT": "#viewof-curr_date",
+        "Tchart": "#chart2"
       }
 
       function render(_node, value) {
@@ -89,6 +88,16 @@
       const runtime = new Runtime();
       const main = runtime.module(notebook, name => {
         const selector = renders[name];
+        if (selector) {
+          return {fulfilled: (value) => render(document.querySelector(selector), value)}
+        } else {
+          return true;
+        }
+      });
+
+      const runtime2 = new Runtime();
+      const main2 = runtime2.module(notebook2, name => {
+        const selector = renders2[name];
         if (selector) {
           return {fulfilled: (value) => render(document.querySelector(selector), value)}
         } else {
