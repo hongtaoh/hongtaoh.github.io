@@ -26,7 +26,7 @@ Therefore, this study makes unique contributions to answering this question.
 
 - H2: "Opposite emotion should be inversely affected" (p. 8789): Group A should express increased negativity, and Group B should express increased positivity. 
 
-## Measurements & Measures
+## Measurements & Methods
 - To test the hypothese, how are negativity and positivity measured: The percentage of the words as either positive or negative produced by a person.
 - A check before running the experiment: all four groups did not differ in emotional expression in the week prior to the experiment. 
 - Why using a weighted linear regression:  It was described in the Study Design that the chance a post being omitted is not fixed. However, an effect was found that when people see fewer posts (i.e., more ommission), they in turn posted fewer words. Therefore, we need to account for this effect by assigning weights to people. Specifically, people having more ommission were given a higher weight in the regression. See details on p. 8789. 
