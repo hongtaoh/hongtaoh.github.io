@@ -7,6 +7,7 @@ categories:
   - 统计学
 tags:
   - 贝叶斯
+draft: true
 ---
 
 前言：这篇文章是我上约翰.克鲁斯克老师 ([John Kruschke](https://psych.indiana.edu/directory/faculty/kruschke-john.html)) 的《贝叶斯数据分析》 ([P533: Bayesian Data Analysis](https://jkkweb.sitehost.iu.edu/jkkteach/P533/)) 这门课时，在课下看他的教材 *[Doing Bayesian Data Analysis (Second Edition)](https://www.sciencedirect.com/book/9780124058880/doing-bayesian-data-analysis)* 所做的笔记。
