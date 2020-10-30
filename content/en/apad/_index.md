@@ -3,6 +3,8 @@ title: A Paper A Day
 type : nolisting
 ---
 ## 2020-10-30
+Dodds et al. (2015). [Human language reveals a universal positivity bias](https://www.pnas.org/content/112/8/2389). *Proceedings of the National Academy of Sciences, 112*(8), 2389-2394.
+
 PP.1-2
 
 Purpose: To study the positivity of human language
@@ -17,7 +19,7 @@ Procedure:
 2. Invite (and pay) native speakers to rate "how they felt in response to" (p.2390) each word on a 9-point Likert scale, with 1 representing the most negative or saddest, 5 neutral, and 9 the most positive or happiest. Each word receives 50 ratings, so there are 5 million human assessments in total. 
 
 Results:
-1. The result can be found in Fig. 1.
+1. The result can be found in [Fig. 1](https://www.pnas.org/content/pnas/112/8/2389/F1.large.jpg?width=800&height=600&carousel=1).
 
 ## 2020-10-29
 Finished Kramer et al. (2014)
