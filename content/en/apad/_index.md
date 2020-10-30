@@ -2,6 +2,23 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-30
+PP.1-2
+
+Purpose: To study the positivity of human language
+
+Material: 24 corpora of 10 languages, including Chinese (simplfied), Korean and Arabic
+
+Measure: a word's importance is measured by its frequency
+
+Procedure:
+
+1. For each language, obtain the most frequently used words (around 10K)
+2. Invite (and pay) native speakers to rate "how they felt in response to" (p.2390) each word on a 9-point Likert scale, with 1 representing the most negative or saddest, 5 neutral, and 9 the most positive or happiest. Each word receives 50 ratings, so there are 5 million human assessments in total. 
+
+Results:
+1. The result can be found in Fig. 1.
+
 ## 2020-10-29
 Finished Kramer et al. (2014)
 
