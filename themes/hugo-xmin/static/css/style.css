@@ -43,14 +43,6 @@ div.splitbox div.right {
                float:left;}
 }
 
-.notice {
-  min-height: 4em;
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  background: #f5f5f5 5px center/3em no-repeat;
-  background-image: url("/media/note.png");
-}
-
 .footer { 
   text-align: center; font-size: 19px;
   padding: 30px 0;
@@ -250,6 +242,16 @@ blockquote {
   font-family: 'Alegreya', 'Kaiti SC';
 }
 
+.notice {
+  min-height: 2.2em;
+  padding: 1em 1em 0.1em 4em;
+  background: #f5f5f5 2px top/3em no-repeat;
+  background-image: url("/media/note.png");
+  font-family: 'Georgia', 'Source Han Serif SC';
+  font-size: 19px;
+} /* The styling for .notice is based on Yihui Xie's Bookdown book's CSS: 
+  https://github.com/rstudio/bookdown/blob/master/inst/examples/css/style.css */
+
 table {
   font-size: 19px;
   margin: auto;
@@ -416,22 +418,28 @@ hr {
 .body-text.list-text a[href^="#fn:"]:before{ content: '[' }
 .body-text.list-text a[href^="#fn:"]:after{ content: ']' }
 
+@media screen and (max-width: 480px) {
 
+  body {
+    font-size: 16px;
+  }
 
-@media only screen and (max-width: 600px) {
-
-  body {font-size: 85%;}
   h1 {
-    font-size: 1.6em;
+    font-size: 28px;
   }
+
   h2 {
-    font-size: 1.1em;
+    font-size: 18px;
   }
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 1em;
+
+  h3, h4, h5, h6 {
+    font-size: 16px;
   }
+
+  pre, code {
+    font-size: 12px;
+  }
+
 }
+
 
