@@ -6,21 +6,27 @@ slug: dd-China
 draft: false
 toc: true
 ---
-# 摘要 
+{{% notice%}}
+A notice disclaimer
+{{% /notice %}}
+
+>原文写于郝鸿涛，2017年3月
+
+摘要 
 
 信息通信技术在现代生活的方方面面发挥越来越大的作用。“信息富有者”和“信息贫穷者”之间的差距因此得到广泛关注。本研究意在实证研究中国城乡数字鸿沟的现状及其对我国基础教育公平的影响。在分析中国和世界的数据的基础上，本研究发现中国城乡之间“物理接入”层面的数字鸿沟并未消失，而且有逐步扩大的趋势。本研究还发现城乡间其他各维度的数字鸿沟对教育公平也有很大影响，其中包括接入沟、设备沟、学校教育沟、网速沟、使用技能沟、使用内容沟和受益沟七个维度。这意味着中国大部分乡村学生无法享受与城市学生一样的由信息通信技术带来的教育改变。如果政府不采取必要措施，这一鸿沟仍将扩大。
 
-# 关键词
+关键词
 
 信息通信技术；信息通信技术；数字鸿沟；城乡差距；教育公平；远程教育
 
-# Digital Divide and Its Implications for Rural-Urban Educational Equity in China
+Digital Divide and Its Implications for Rural-Urban Educational Equity in China
 
-# Abstract
+Abstract
 
 Increasingly, ICTs weigh heavily on every fabric of society. As a result, considerable amount of attention has been devoted to the gap between the information haves and have-nots. This study empirically examines the status of this digital divide of various levels between rural and urban areas in China and its implications for equal access to educational resources among K-12 students. Based on statistics on China and the world, this paper reveals that in China, first-level digital divide did not disappear and is becoming larger. The study also concludes that divides of other dimensions are affecting educational equity, including divide in access, gadgets, schooling, Internet speed, Internet skills, contents consumed and benefits. This means that K-12 students in rural areas in China are lagging far behind their urban counterparts in terms of educational opportunities offered by the emerging ICTs. This will continue to be the case if the government do not take necessary efforts to bridge this wide and widening digital divide.
 
-# Keywords
+Keywords
 
 ICTs; digital divide; rural-urban divide; education equity; distance education
 
@@ -56,11 +62,11 @@ NTIA第一份针对数字鸿沟的报道《从网络中跌落：对美国农村�
 
 ## （二）第二道数字鸿沟
 
-随着电脑和互联网的加速普及，学者们开始意识到虽然互联网普及率差距在缩小，但已经获得电脑和接入互联网的人们在信息获取技能（DiMaggio, Hargittai, Celeste, & Shafer, 2004; Hargittai, 2002; Van Deursen & Van Dijk, 2010）和具体使用内容 (Van Deursen & Van Dijk, 2014; Van Dijk, 2012; Zillien, & Hargittai, 2009) 等方面还存在差距，学者将其称为“第二道数字鸿沟 (the second level digital divide)”（Attewell,2001; Hargittai.2001; Riggins & Dewan, 2005）。
+随着电脑和互联网的加速普及，学者们开始意识到虽然互联网普及率差距在缩小，但已经获得电脑和接入互联网的人们在信息获取技能（DiMaggio, Hargittai, Celeste, & Shafer, 2004; Hargittai, 2002）和具体使用内容 (Van Deursen & Van Dijk, 2014; Van Dijk, 2012; Zillien, & Hargittai, 2009) 等方面还存在差距，学者将其称为“第二道数字鸿沟 (the second level digital divide)”（Attewell,2001; Hargittai.2001; Riggins & Dewan, 2005）。
 
 这些学者们强调的是对数字鸿沟的研究绝不能止步于将人们简单地分为“有互联网接入”和“没有互联网接入”两类 (Hargittai, & Hinnant, 2008)；对数字鸿沟的解决也不能止步于“让每个公民都可以自由上网”。随着经济的发展，这并不是一个难以实现的目标：截止2016年，全世界已经有18个国家（或地区地区）的互联网普及率超过了90%；普及率最高的国家冰岛甚至实现了100％ 互联网普及 (“Internet users,”, 2016)。正如Wei, & Hindman (2011) 所言“随着互联网变得越来越普及，和接入相比，使用互联网的时间长短和使用质量是造成数字不均 (digital inequality) 更为重要的一个原因”。甚至有学者将数字鸿沟重新定义为：“可以有效使用像互联网这样的新信息与通讯工具的人和不能这么做的人之间存在的鸿沟”(Benton Foundation, 2001, 引自Wei, & Hindman, 2011)。
 
-很多研究也都表明在解决了互联网接入的问题后，使用者的社会经济地位 (江宇，2007; Peter, & Valkenburg, 2006; Zillien, & Hargittai, 2009)，年龄与受教育程度（Van Deursen & Van Dijk, 2010；Van Deursen & Van Dijk, 2014）等因素都会是影响使用者能否充分利用互联网接入的因素。因此，对数字鸿沟的研究与解决都有必要把视线扩展到互联网接入之后人们具体使用的技能、内容和意愿上。
+很多研究也都表明在解决了互联网接入的问题后，使用者的社会经济地位 (江宇，2007; Peter, & Valkenburg, 2006; Zillien, & Hargittai, 2009)，年龄与受教育程度（Van Deursen & Van Dijk, 2014）等因素都会是影响使用者能否充分利用互联网接入的因素。因此，对数字鸿沟的研究与解决都有必要把视线扩展到互联网接入之后人们具体使用的技能、内容和意愿上。
 
 # 二、数字鸿沟与教育公平
 
@@ -90,13 +96,15 @@ Warschauer (2007) 从学校（电脑）接入，家庭（电脑）接入，学�
 
 前文提到有学者将数字鸿沟分为“第一道数字鸿沟”与“第二道数字鸿沟”，而本文在参考这些学者观点的基础上，将一国的数字鸿沟分为以下8个变量上的4个维度（见表1）。
 
-理论上而言，如果将上面所有的变量和四序数字鸿沟全部函括，至少需要72个部分才能描绘出“中国数字鸿沟全景图”。之前的研究大都从多个人口统计学变量的角度探讨数字鸿沟对社会的各个方面的影响，而本文则缩小研究范围，将问题聚焦于众多人口统计学变量中“城乡”这个地区变量，和从小学到高中的“学龄青少年” (K-12 students) 这个年龄变量上的数字鸿沟在社会生活各个维度中（基础）“教育”[^2] (K-12 Education) 这个维度上的表现，这样可以从一个侧面来反映中国目前的数字鸿沟对社会带来的影响。
+理论上而言，如果将上面所有的变量和四序数字鸿沟全部函括，至少需要72个部分才能描绘出“中国数字鸿沟全景图”。之前的研究大都从多个人口统计学变量的角度探讨数字鸿沟对社会的各个方面的影响，而本文则缩小研究范围，将问题聚焦于众多人口统计学变量中“城乡”这个地区变量，和从小学到高中的“学龄青少年” (K-12 students) 这个年龄变量上的数字鸿沟在社会生活各个维度中（基础）“教育”[^2] 这个维度上的表现，这样可以从一个侧面来反映中国目前的数字鸿沟对社会带来的影响。
 
 在具体研究方法上，本文主要在分析国内外相关研究结果的基础上，收集、整理官方的统计数据以及其他学者论文中的数据，以此来说明数字鸿沟的现状。
 
-# 四、研究发现
+![table1](/media/boke/dd_table)
 
-## （一）接入沟
+## 四、研究发现
+
+### （一）接入沟
 
 毫无疑问，为了通过信息通讯技术中获取知识，学生需要互联网接入，对农村的学生更是这样。
 
@@ -104,7 +112,9 @@ Warschauer (2007) 从学校（电脑）接入，家庭（电脑）接入，学�
 
 农村的互联网普及率就本来比城市要低，农村的孩子相比城市的同龄人更不容易享受到互联网带来的学习生活中的各种便利。再加上农村家庭人口多于城市[^3]，农村孩子多人共享一台互联网设备的情况比城市要普遍。因此，相比于城市孩子，农村孩子接入并且利用互联网的可能性要低得多。
 
-## （二）设备沟
+{{<figure src="/media/boke/dd_figure" title="图一：中国城乡互联网普及率及差距">}}
+
+### （二）设备沟
 
 第39次《中国互联网络发展报告》指出，在中国，截至2016年12月，手机在上网设备中占主导地位：手机网民规模达6.95亿人，占总体网民的95.1% (p.35)。第38次《中国互联网络发展报告》的数据显示，截至2016年6月，仅通过手机上网的网民达到1.73亿，占总体网民规模的24.5% (p. 12)，也就是说中国每四个网民中，有一个只能通过手机来上网。
 
@@ -116,11 +126,11 @@ Yang et.al (2013)的调查数据与以上的推论一致：在对9所位于北�
 
 一份由隶属于芝麻街工作坊的非营利组织琼·甘茨·库尼中心（The Joan Ganz Cooney Center） 与罗格斯大学于2016年联合发布的题为《所有人的机遇？——低收入家庭的科技与学业》（*Opportunity for all? Technology and learning in lower-income families* (Rideout & Katz, 2016)）的报告显示，家庭安装高速稳定的互联网的孩子有与只能通过移动设备上网的孩子在网上从事的活动在某些方面有着很大的不同。
 
-具体而言，家庭安装宽带的孩子更倾向运用网络完成家庭作业（46%），这一比例在只能通过手机上网的孩子中只有40%。更为明显的差距体现在“通过网络查找感兴趣的内容”这一项上，装宽带的孩子（52%）与只能通过手机上网的孩子（35％）相比更倾向这么做[^6] (p.35)。 
+具体而言，家庭安装宽带的孩子更倾向运用网络完成家庭作业（46%），这一比例在只能通过手机上网的孩子中只有40%。更为明显的差距体现在“通过网络查找感兴趣的内容”这一项上，装宽带的孩子（52%）与只能通过手机上网的孩子（35％）相比更倾向这么做(p.35)[^6] 。 
 
 因此单纯地看互联网普及率是不够的，即使有一天农村的互联网普及率达到城镇的水平，如果农村的孩子只是在用手机上网，他们和那些使用电脑（台式或者笔记本）上网的城市人口之间的数字鸿沟依然存在。这样，城乡之间存在的教育不公平不仅不会消除，反而有扩大的可能。
 
-##（三）学校教育沟
+### （三）学校教育沟
 
 在城乡互联网普及率和电脑普及率存在较大差距的情况下，国家对中小学信息化的重视在一定程度上有助于缩小城乡数字鸿沟，促进城乡教育公平。“全国中小学互联网接入率由2011年的不足25%上升到85%，多媒体教室拥有率达77%”（刘延东,2015）。Yang, et al. (2013) 的数据也显示在 “在学校使用电脑” 这一项上，农村（69%）和城市（88%）的差距正在缩小，并且在一些基本的信息技术知识学习上，如学习开关机，打字，画画以及使用鼠标和键盘，农村学校和城市学校的差距很小。
 
@@ -136,7 +146,7 @@ Yang, et al. (2013) 的数据显示，在学习 “教育软件” 和 “电脑
 
 《中国青少年网络生活状况调查研究》(金盛华、吴嵩、周宗奎、雷雳，2015)也在一定程度上解释了城乡学校间，教师在使用和对待互联网上的差异。该调查显示，发达地区的教师在“使用互联网频率”，“在教学中使用互联网重要性的评价”“对学生使用互联网学习的支持程度”“指导学生使用互联网有效性”等方面的指数都高于欠发达地区。
 
-## （四）网速沟
+### （四）网速沟
 
 2016年教育部发布了《教育信息化“十三五”规划》（以下称《规划》），明确指出要通过“三通两平台”等途径实现教学资源的数字化与互联网化。国家的目标是“通过教育信息化，逐步缩小区域、城乡数字差距，大力促进教育公平，让亿万孩子同在蓝天下共享优质教育、通过知识改变命运”（习近平，2015）。
 
@@ -154,7 +164,7 @@ DiMaggio, et al.（2004) 指出硬件好坏会直接或间接影响使用者是�
 
 《规划》中也提到“城镇学校班均出口带宽不低于10M，有条件的农村学校班均出口带宽不低于5M”，因此政策上就决定了城乡，至少是在学校，网速是不一样的。而较低的网速肯定会对学生利用互联网学习以及教室利用互联网教学有影响。
 
-## （五）使用技能沟
+### （五）使用技能沟
 
 城乡学校间存在的数字鸿沟绝不仅仅是可以通过减少城乡学校间在互联网和电脑普及率、网速、对信息技术的重视和使用程度上的差异来解决的。这是因为学生从信息技术中获益多少在很大程度上还取决于他们使用互联网获取，处理和使用信息的技能。许多研究都表明，使用互联网技能的差异是当今时代数字鸿沟的重要体现 (DiMaggio, Hargittai, Celeste, & Shafer, 2004; Van Dijk, 2012; Van Deursen & Van Dijk, 2011)。
 
@@ -169,11 +179,12 @@ Van Dijk和他的同事Van Deursen 将数字／互联网技能归为六种(Van D
 |          | 内容创造技能 | 在网上上传自己的内容，比如设计或计划           |
 |          | 策略技能 | 运用数字媒体来达到职业或者个人目标             |
 
+
 为了研究不同人群使用互联网的技能，Hargittai (2002) 对54位来自新泽西州郊区的互联网用户的上网行为进行观察与研究。Hargittai 从两个维度来考察这些受试者的互联网技能 (online skills)：第一，是否能顺利完成某一项任务 （通过完成任务的个数来量化）；第二，完成某项任务所需时间。她的研究结果表明年龄，受教育程度以及先前使用互联网经验都对人们使用互联网的技能有影响。
 
 国内学者江宇（2007）对北京八个城区23所中学的2400名高中生进行了调查，结果证明“家庭社会经济地位越高的家庭，其孩子拥有的互联网技能越丰富”。而据国家统计局发布的统计年鉴，2015年中国城镇居民的人均可支配收入是农村居民的2.95倍。考虑到收入是一个人或者一个家庭社会经济地位的非常重要的组成部分和决定因素之一，而农村居民的年收入只有城镇居民的1/3左右，我们可以得出这样一个结论：农村的孩子在可以接入互联网的条件下，利用互联网检索、处理、运用信息的能力没有城镇的孩子强。
 
-## （六）使用内容沟
+### （六）使用内容沟
 
 同样作为互联网使用者，社会经济地位不同，使用互联网的内容也会不同：社会地位较高者更倾向于以“更有利”的方式来使用互联网（Van Dijk & van Deursen, 2014）；而那些社会地位较低的使用者则更倾向于使用互联网从事常规和浅显的任务（Van Dijk, 2005, 引自Van Dijk & Van Deursen,2014）。
 
@@ -183,7 +194,7 @@ Peter & Valkenburg (2006) 对749名荷兰青少年的一项调查研究显示社
 
 美国早在90年代中期和后期进行的一项名为国家教育进步评估(National Assessment of Educational Progress) 的研究就表明，非裔和拉丁裔四年级学生比白人四年级学生更可能每天用电脑来做功课 (Coley, Cradler, & Engel 1997; Wenglinsky, 1998, 引自 Attewell, 2001)。但是用电脑多并不意味着对学习好，因为“电脑很容易提供‘不受监督’的娱乐，如果想让电脑起到有效的教育效果，家长的帮助和努力是必不可少的，在这方面，电脑和传统的教育方式是一样的”(Attewell, 2001)。
 
-同样的，2010年，荷兰学者Van Deursen & Van Dijk（2010）发现教育程度较低的荷兰人平均每天在空闲时用来上网的时间（3.2小时）多于教育程度较高的荷兰人（2.6小时）。这一发现表明“像20世纪80年代和90年代那样，电脑和互联网使用时间由教育程度高的人群主导的情况已经被彻底改变了”（Van Dijk, 2012）。但是这些时间并不都是用来学习的。他们发现，在31个网上应用中（15个“严肃”的，6个“娱乐的”还有10个“中性”的），教育程度较低的荷兰人更可能使用娱乐性的应用。
+同样的，2010年，荷兰学者发现教育程度较低的荷兰人平均每天在空闲时用来上网的时间为 3.2小时，而对教育程度较高的荷兰人，这一数字表明。这一发现表明“像20世纪80年代和90年代那样，电脑和互联网使用时间由教育程度高的人群主导的情况已经被彻底改变了”（Van Dijk, 2012）。但是这些时间并不都是用来学习的。他们发现，在31个网上应用中（15个“严肃”的，6个“娱乐的”还有10个“中性”的），教育程度较低的荷兰人更可能使用娱乐性的应用。
 
 凯撒家庭基金会（Kaiser Family Foundation）用十年时间做的一项针对8-18岁青少年互联网媒体使用情况的调查显示，父母接受过大学及以上教育的孩子每天暴露在媒体（电视，电脑，收音机，影碟机，MP3,电子游戏机等）中的时间是10小时[^7]，比父母教育程度在大学以下的孩子少90分钟(Rideout, Foehr & Roberts, 2010, p.11)；而这一差距在1999年只有16分钟（陆绮雯，2012）。
 
@@ -191,11 +202,11 @@ Peter & Valkenburg (2006) 对749名荷兰青少年的一项调查研究显示社
 
 在城乡间社会经济地位，互联网和电脑普及率依然存在巨大差距的中国，农村青少年上网时间也许还没有超过城市同龄人，但是这种差距在互联网应用上已经开始显现。《2014年中国青少年上网行为研究报告》显示城镇和农村青少年在搜索引擎应用率上的差异达到11.3%，而在互联网游戏上的差异只有0.1%，是所有应用中农村和城镇差异最小的，可以看出“农村青少年偏重娱乐化的特点较为明显”（p.28）。杨盛青（2003）对350位兰州市民抽样调查的结果也显示：家庭收入越高，对电脑越熟悉，上网目的越明确。
 
-## （七）受益沟
+### （七）受益沟
 
 之前的“六道沟”主要是讨论接入和使用两个大的方面。然而，必不可少的一环是研究接入以及使用后的收获程度，即受益程度。
 
-之前提到，Attewell, & Battle（1999）认为NELS88中所证明的学生分数的提高可能不仅仅是因为电脑，因为“有电脑的孩子更倾向于来自于更富有以及教育程度更高的家庭”。他们的回归分析结果显示，在排除了家庭经济水平和文化资源后，“拥有家庭电脑仍然和更高的阅读和数学分数以及更高的学习成绩正相关”，但同时结果也指出“来自社会经济地位更高家庭的孩子从中受益更多”（见表3）
+之前提到，Attewell, & Battle（1999）认为NELS88中所证明的学生分数的提高可能不仅仅是因为电脑，因为“有电脑的孩子更倾向于来自于更富有以及教育程度更高的家庭”。他们的回归分析结果显示，在排除了家庭经济水平和文化资源后，有家庭电脑仍然和好的学习成绩正相关，但同时结果也指出家庭社会经济地位高的话，孩子从中受益更多。
 
 Zillien & Hargittai （2009）也指出 “那些原本就处于较高地位的使用者通过上网比社会经济地位较低的使用者得益更多”。
 
@@ -203,17 +214,13 @@ Attewell, & Battle（1999）引用Giacquinta et al. (1993)的研究对此现象�
 
 回到我国的现实，其实在具体使用内容和使用技能上和城市学生的差距就已经一定程度上决定了农村学生从互联网中的获益程度会比较低。再考虑到家庭社会经济地位差距以及随着带来的学校教育、父母指导水平上的差距，农村的学生更难以从信息通信技术中获得和城镇学生一样的益处。
 
-# 五、研究局限与建议
-
+## 五、研究局限与建议
 
 ## （一）局限
 
 1. 互联网对基础教育是否真的有帮助都不确定。虽然美国在上世纪末本世纪初进行了一些调查证明了成绩提升和信息通信技术使用之间的相关性，但我国缺少相关的实证研究。十多年后的现在，手机越来越普遍，互联网上的娱乐资源越来越多，这些互联网上的资源很可能会浪费学生的宝贵时间。而且，从小学到高中的知识基本上不太需要查阅太多互联网上的资料就可以吸收理解。总之，现在，在基础教育阶段，互联网是否真的和学习成绩正相关还需要进一步证明。如果最后证明两者并非正相关，本文的主题——数字鸿沟对城乡教育公平的影响也就没有研究的基础了。
-
 2. 在证明上文列出的中国城乡数字鸿沟的七种表现形式时，本文没有进行相关调查与实证研究，只是引用了二手的数据与结论，这一定程度上会影响本研究的信度。
-
 3. 城乡教育不公平是一个很复杂的社会问题，所涉及到的不仅仅是城乡中小学生在信息通信技术接入和使用方面的差距，其它方面，诸如两者在父母教育水平、教师整体水平、学校教学目标与方式、学校与家庭周边社会环境等等，都对教育不公有严重影响。
-
 
 ## （二）建议
 
@@ -221,15 +228,13 @@ Attewell, & Battle（1999）引用Giacquinta et al. (1993)的研究对此现象�
 
 2. 可以对我国典型的城镇以及农村进行抽样调查，用真实具体的数据说明城乡学生在以上提到的七个方面的差距。
 
-# 六、研究结论与启示
-
+## 六、研究结论
 
 通过分析中国城乡数字鸿沟在各个维度的表现及其对教育的影响，本研究发现中国城乡之间接入层面的数字鸿沟并未消失,而且城乡学生之间存在的其他层面的数字鸿沟也得以证实。因为这一道城乡数字鸿沟的存在，大部分乡村的学生无法与城市学生体验到一样的由信息通讯技术带来的教育改变。
 
 因此，政府为了保证城乡教育公平，首先一定要解决“接入”层面的问题，通过补贴、降费、提速等方式让越来越多的农村学生可以使用电脑，并接入较高速的互联网。但这些目标的实现并不意味了问题的解决，因为农村学生在学校教育、使用内容、使用技能与效率等方面和城镇学生存在的差距决定了他们即使在可以接入互联网的情况下也无法从中获得和城镇学生一样的帮助和提升。这三个方面的差距很大程度上取决于学生所在家庭的社会经济地位，这就涉及到整个社会的公平问题，而不仅仅是政府加大农村教育投入就可以解决的。只有在城乡实现真正意义上的平等后农村学生才有可能享受到和城市学生一样的由现代科技带来的教育进步。
 
-
-# 参考文献
+## 参考文献
 
 蔡翔. (2002). 全球信息贫富差距依然悬殊——从 “失落的链路” 到 “数字鸿沟” 所想到的. 现代电信科技, (5), 2-4.
 
@@ -243,7 +248,7 @@ Attewell, & Battle（1999）引用Giacquinta et al. (1993)的研究对此现象�
 
 22年前的今天 中国首次接入世界互联网 (2016). 环球网。检索于 [http://tech.huanqiu.com/discovery/2016-04/8816427.html](http://tech.huanqiu.com/discovery/2016-04/8816427.html) 
 
-《2015年青少年上网行为研究报告》. 检索于 [http://www.cnnic.net.cn/hlwfzyj/hlwxzbg/qsnbg/201608/P020160812393489128332.pdf](ttp://www.cnnic.net.cn/hlwfzyj/hlwxzbg/qsnbg/201608/P020160812393489128332.pdf)
+《2015年青少年上网行为研究报告》. 检索于 [http://www.cac.gov.cn/2016-08/13/c_1121534382.htm](http://www.cac.gov.cn/2016-08/13/c_1121534382.htm)
 
 《2015-2016中国移动教育市场研究报告》.检索于 [http://www.iimedia.cn/145388012717702n3l.pdf](http://www.iimedia.cn/145388012717702n3l.pdf)
 
@@ -321,11 +326,11 @@ Crandall, R. W., Lehr, W., & Litan, R. E. (2007). *The effects of broadband depl
 
 Digital Divide, (n.d.). [http://cs.stanford.edu/people/eroberts/cs201/projects/digital-divide/start.html](http://cs.stanford.edu/people/eroberts/cs201/projects/digital-divide/start.html) 
 
-Digital Nation: Expanding Internet Usage（2011）. Retrieved from [https://www.ntia.doc.gov/files/ntia/publications/ntia_internet_use_report_february_2011.pdf](https://www.ntia.doc.gov/files/ntia/publications/ntia_internet_use_report_february_2011.pdf)
+Digital Nation: Expanding Internet Usage (2011). Retrieved from [https://www.ntia.doc.gov/files/ntia/publications/ntia_internet_use_report_february_2011.pdf](https://www.ntia.doc.gov/files/ntia/publications/ntia_internet_use_report_february_2011.pdf)
 
 DiMaggio, P., Hargittai, E., Celeste, C., & Shafer, S. (2004). From unequal access to differentiated use: A literature review and agenda for research on digital inequality. *Social inequality*, 355-400.
 
-Dutta, S., Geiger, T., & Lanvin, B. (2015). The global information technology report 2015. In *World Economic Forum*. Retrieved from [http://www3.weforum.org/docs/WEF_Global_IT_Report_2015.pdf](http://www3.weforum.org/docs/WEF_Global_IT_Report_2015.pdf)
+Dutta, S., Geiger, T., & Lanvin, B. (2015). The global information technology report 2015. In *World Economic Forum*. 
 
 Falling Through the Net: A Survey of the “Have Nots” in Rural and Urban America (1995). Retrieved from [https://www.ntia.doc.gov/ntiahome/fallingthru.html](https://www.ntia.doc.gov/ntiahome/fallingthru.html)
 
@@ -359,7 +364,7 @@ Rideout, V. J., Foehr, U. G., & Roberts, D. F. (2010). Generation M [superscript
 
 Richtel, M. (2012, May,29). Wasting time is new divide in digital era. *The New York Times*. 
 
-Rideout, V., & Katz, V. (2016). Opportunity for All? Technology and Learning in Lower- Income Families. In *A Report* *of the Families and Media Project: The Joan Ganz Cooney Center at Sesame Workshop*. Retrieved from [http://www.joanganzcooneycenter.org/wpcontent/uploads/2016/01/jgcc_opportunityforall.pdf](http://www.joanganzcooneycenter.org/wp-content/uploads/2016/01/jgcc_opportunityforall.pdf)
+Rideout, V., & Katz, V. (2016). Opportunity for All? Technology and Learning in Lower- Income Families. In *A Report* *of the Families and Media Project: The Joan Ganz Cooney Center at Sesame Workshop*. Retrieved from [https://files.eric.ed.gov/fulltext/ED574416.pdf](https://files.eric.ed.gov/fulltext/ED574416.pdf)
 
 Riggins, F. J., & Dewan, S. (2005). The digital divide: Current and future research directions. *Journal of the* *Association for information systems*, *6*(12), 13.
 
@@ -367,9 +372,7 @@ Searching for Computer Science: Access and Barriers in U.S. K-12 Education (2015
 
 Understanding the Digital Divide. Retrieved from [http://www.oecd.org/internet/ieconomy/1888451.pdf](http://www.oecd.org/internet/ieconomy/1888451.pdf)
 
-Van Dijk, J. (2012). The Evolution of the Digital Divide: The Digital Divide turns to Inequality of Skills and Usage. Retrieved from [https://www.utwente.nl/en/bms/vandijk/news/The%20Evolution%20of%20the%20Digital%20Divide/Evolution%20of%20the%20Digital%20Divide%20Digital%20Enlightment%20Yearbook%202012.pdf](https://www.utwente.nl/en/bms/vandijk/news/The%20Evolution%20of%20the%20Digital%20Divide/Evolution%20of%20the%20Digital%20Divide%20Digital%20Enlightment%20Yearbook%202012.pdf)
-
-Van Deursen, A.J.A.M. & Van Dijk, J.A.G.M. (2010b). Trendrapport Computer‐ en Internetgebruik 2010. Een Nederlands en Europees perspectief. Enschede: Universiteit Twente. Retrieved from [https://www.utwente.nl/ctit/cfes/docs/Rapporten/2010_11_TrendrapportComputersInternet.pdf](https://www.utwente.nl/ctit/cfes/docs/Rapporten/2010_11_TrendrapportComputersInternet.pdf)
+Van Dijk, J. (2012). The Evolution of the Digital Divide: The Digital Divide turns to Inequality of Skills and Usage. 
 
 Van Deursen, A., & Van Dijk, J. (2011). Internet skills and the digital divide. *New Media & Society,* *13*(6), 893-911.
 
@@ -389,7 +392,6 @@ Yang, Y., Hu, X., Qu, Q., Lai, F., Shi, Y., Boswell, M., & Rozelle, S.. (2013). 
 
 Zillien, N., & Hargittai, E. (2009). Digital distinction: Status‐specific types of internet usage. *Social Science Quarterly*, *90*(2), 274-291.
 
-
 [^1]: 这个研究总共历时十二年，但是是分五次完成的。前四次完成年份分别为：1988， 1990，1992，1994。每次研究完成后也都会有各自的报告。第五次调查进行于2000年左右，这次调查完成后在整合前四次研究的基础上写出了一份总的报告（重点讨论了第五次调查）。因为这份研究开始于1998年，这五次调查统称为NELS88 (National Education Longitudinal Study of 1988)，每一次调查都是NELS88的一部分。因此当2000年之前的学者提到NELS88时，他们所指的研究应该是之前的四次调查中的某个或全部。 
 [^2]: 指幼儿园到高中阶段的教育。之所以没有把高等教育放在研究范围内是考虑到在我国，许多农村大学生会前往大城市求学，出生地在农村和出生地在城市的大学生在网络接入、设备、网速等方面的差距几乎已经消失。虽然有研究指出二者在网络使用能力上依然存在差距（孙立芳、李月，2008；曾凡斌，2011），这种差距在随后的大学学习以及毕业后的工作生活中有可能会进一步缩小。
 [^3]:卫计委发布的《中国家庭发展报告2015》中的数据显示中国家庭平均规模3.35人，其中农村家庭平均规模为3.56人，城镇家庭平均规模为3.07人。
@@ -397,5 +399,7 @@ Zillien, N., & Hargittai, E. (2009). Digital distinction: Status‐specific type
 [^5]:该论文没有指出“有网际网路接入”的具体标准是什么，但根据数据推测，手机上网应该不包括在内。
 [^6]: 但是报告也指出，在“从事有创意型的活动”，“和同学做学校的项目”，“和老师沟通”以及“写故事或者博客”这些项目上，两者没有明显差距，甚至是只能通过手机上网的孩子更倾向这么做。
 [^7]:不包括用电脑做作业，打电话或者发短信的时间，当同时使用多个媒体时，比如看电视的同时听音乐，时间重复计算。
+
+
 
 
