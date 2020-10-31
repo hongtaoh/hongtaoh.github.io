@@ -2,6 +2,13 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-10-31
+
+[Fig. 1](https://www.pnas.org/content/pnas/112/8/2389/F1.large.jpg?width=800&height=600&carousel=1) shows the happiness distribution of words in each language, but how each word varies in their happiness score between languages. Google Translate is uded. The result can be found in [Fig. 2](https://www.pnas.org/content/pnas/112/8/2389/F2.large.jpg?width=800&height=600&carousel=1). As can be seen, the order changed a little bit, but the overall patter remained. Spanish is the "happiest", and Chinese is the "saddest" (I highly doubt so, though).
+
+Another interesting question to ask is whether a word's happiness score is associated with its frequency of use. As can be see in [Fig. 3](https://www.pnas.org/content/pnas/112/8/2389/F3.large.jpg?width=800&height=600&carousel=1). It turns out they are not associated. 
+
+
 ## 2020-10-30
 Dodds et al. (2015). [Human language reveals a universal positivity bias](https://www.pnas.org/content/112/8/2389). *Proceedings of the National Academy of Sciences, 112*(8), 2389-2394.
 
