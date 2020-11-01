@@ -110,7 +110,7 @@ type : nolisting
 ## Computer Skills (in order of proficiency)
 ### Programming languages
 - R (Statistical analysis, network analysis)
-- Python (Data manipulation & visualization, network analysis: Altair, Seaborn, Matplotlib, Pandas, Numpy, Networkx)
+- Python (Data manipulation & visualization, network analysis: Altair, Seaborn, Matplotlib, Pandas, Numpy, NetworkX)
 - D3.js/JavaScript
 - CSS, HTML
 

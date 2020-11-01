@@ -2,7 +2,7 @@
 title: 美国提供全奖的新闻传播硕士项目
 author: 郝鸿涛
 date: '2020-02-01'
-slug: us-communication-phd-programs
+slug: us-communication-ma-programs
 categories: ["留学申请"]
 tags: ["传播学", "申请"]
 toc: false
