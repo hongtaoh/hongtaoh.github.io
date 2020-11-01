@@ -2,6 +2,20 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-11-01
+Steegen, S., Tuerlinckx, F., Gelman, A., & Vanpaemel, W. (2016). Increasing transparency through a multiverse analysis. *Perspectives on Psychological Science, 11*(5), 702-712.
+
+- Some common measures to solve the reproducibility crisis in social sciences: high power, adjusting the `$\alpha` level, focusing on estimation not on testing, using Bayesian statistics.
+
+- How can we increase transparency in research: pre-registration, sharing data & research materials. 
+
+- I agree that there are so many choices to make when dealing with raw data. So the same raw data might end up becoming many different datasets ready for analysis if it was processed by many researchers. This is what multiverse is trying to do: **to list all possible (and reasonable) datasets derived from the raw data, and show all possible statistical results**. 
+
+>A multiverse analysis displays the stability or robustness of a finding, ... across different options for all steps in data processing. (p. 703)
+
+PP. 702-707
+
+
 ## 2020-10-31
 
 [Fig. 1](https://www.pnas.org/content/pnas/112/8/2389/F1.large.jpg?width=800&height=600&carousel=1) shows the happiness distribution of words in each language, but how each word varies in their happiness score between languages. Google Translate is uded. The result can be found in [Fig. 2](https://www.pnas.org/content/pnas/112/8/2389/F2.large.jpg?width=800&height=600&carousel=1). As can be seen, the order changed a little bit, but the overall patter remained. Spanish is the "happiest", and Chinese is the "saddest" (I highly doubt so, though).
