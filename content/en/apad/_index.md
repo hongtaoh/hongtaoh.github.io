@@ -5,7 +5,7 @@ type : nolisting
 ## 2020-11-01
 Steegen, S., Tuerlinckx, F., Gelman, A., & Vanpaemel, W. (2016). Increasing transparency through a multiverse analysis. *Perspectives on Psychological Science, 11*(5), 702-712.
 
-- Some common measures to solve the reproducibility crisis in social sciences: high power, adjusting the `$\alpha` level, focusing on estimation not on testing, using Bayesian statistics.
+- Some common measures to solve the reproducibility crisis in social sciences: high power, adjusting the `$\alpha$` level, focusing on estimation not on testing, using Bayesian statistics.
 
 - How can we increase transparency in research: pre-registration, sharing data & research materials. 
 
@@ -567,7 +567,7 @@ Lazer et al. (2020)
 
 - Contribution: An experimental design that ran contrary to previous findings regarding the strength of weak ties. 
 - Conclusion: networks with local clustering are conducive to behavioral diffusion. 
-- Method: An experiment with two groups. One group found themselves in a random network, and the other group in a clustered-lattice network. **Degree distribution of the two networks are identical**.
+- Method: An experiment with two groups. One group found themselves in a random network, and the other group in a clustered-lattice network. **Degree distribution of the two networks is identical**.
 - Why could it be published on *Science*: Maybe the first empirical test of two competing hypotheses regarding the effect of network topology on behavior spreading.
 - My question: I didn't see many long ties in the "small-world network" in Figure 1.
 - Improvements: I didn't know all of the statistical tests used in this paper. I know Mann-Whitney U test but I don't know Kolmogorov-Smirnov. I am wondering whether the study could be conducted using Bayesian statistics. 
