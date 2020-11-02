@@ -27,7 +27,7 @@ If you don't want the logo at the bottom, or that you think the loading is too s
 
 This part is almost exactly the same as [embedding in a stand-alone webpage](en/2020/11/02/exporting-observable-notebook/#embed-manually). However, since in a Hugo blog post, the `head` and `body` are already defined, you don't need to define the `head` and don't need to manually write `<p>...</p>`, for which you can simply use Markdown (which is why Hugo is invented...).
 
-You should know that **within** a Hugo blog post, you can still (and herhaps need to) write `<div>...</div`, directly include a stylesheet with some CSS, and incldue the `<script type="module">`. You can see the source codes of this blog post [here]().
+You should know that **within** a Hugo blog post, you can still (and herhaps need to) write `<div>...</div`, directly include a stylesheet with some CSS, and incldue the `<script type="module">`. You can see the source codes of this blog post [here](https://raw.githubusercontent.com/hongtaoh/hongtaoh.github.io/sources/content/en/blog/2020-11-02-embed-observable-notebook-in-blogs.md).
 
 The below is what it looks like to manually embed this [Observable notebook](https://observablehq.com/@hongtaoh/explrable-data) of mine. 
 
