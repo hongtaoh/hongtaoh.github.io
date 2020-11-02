@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to Display Full Width Images in Hugo - 郝鸿涛::Hongtao Hao</title>
+    <title>How to Tell Hugo to Avoid Parsing HTML - 郝鸿涛::Hongtao Hao</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
@@ -73,7 +73,7 @@
 <main class = "content" role="main">
 <div style="text-align: center">
 
-<h1 class="article-title">How to Display Full Width Images in Hugo</h1>
+<h1 class="article-title">How to Tell Hugo to Avoid Parsing HTML</h1>
 
 <p>Hongtao Hao 
  / 2020-11-02 </p>
@@ -89,7 +89,7 @@
   
   
   
-  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-11-02-full-width-images.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-11-02-avoid-parsing-html.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
   </a>
   
   
@@ -101,50 +101,15 @@
 
 
 <div class="body-text list-text">
-<p>I originally thought it must be super difficult to have full width images in a Hugo post because the width of my body text is already defined and yet all figures have to be within body. I stumbled upon a very easy solution <a href="https://visionscarto.net/observable-jekyll/" target="_blank" rel="noreferrer noopener">here</a>
+<p>I found the solution <a href="https://stackoverflow.com/a/42528669" target="_blank" rel="noreferrer noopener">here</a>
 
-.</p>
-<p>Add the following<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> to your website stylesheet:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#00f;font-weight:bold">fullwidth</span> {
-  <span style="color:#008000;font-weight:bold">width</span>: <span style="color:#666">100</span><span style="color:#b00040">vw</span>;
-  <span style="color:#008000;font-weight:bold">position</span>: <span style="color:#008000;font-weight:bold">relative</span>;
-  <span style="color:#008000;font-weight:bold">left</span>: <span style="color:#666">50</span><span style="color:#b00040">%</span>;
-  <span style="color:#008000;font-weight:bold">right</span>: <span style="color:#666">50</span><span style="color:#b00040">%</span>;
-  <span style="color:#008000;font-weight:bold">margin-left</span>: <span style="color:#666">-50</span><span style="color:#b00040">vw</span>;
-  <span style="color:#008000;font-weight:bold">margin-right</span>: <span style="color:#666">-50</span><span style="color:#b00040">vw</span>;
-}
-</code></pre></div><p>Then, when using Hugo&rsquo;s default <code>figure</code> shortcode, include <code>class=&quot;fullwidth&quot;</code> :</p>
-<p>{{&lt;figure src=&quot;/media/sgs/sgs-hostel.jpg&quot; caption=&quot;At a hostel in Interlaken, Switzerland, May 2017, by Hongtao Hao&quot; class=&quot;fullwidth&quot;&gt;}}</p>
-<p>The result is like this:</p>
-<figure class="fullwidth" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a href="/media/sgs/sgs-hostel.jpg"  itemprop="contentUrl"> 
-        <img itemprop="thumbnail"
-            src="/media/sgs/sgs-hostel.jpg"
-            alt="At a hostel in Interlaken, Switzerland, May 2017, by Hongtao Hao"
-            />
-    </a>
-    
-    <figcaption>
-        
-        
-        <p>
-        At a hostel in Interlaken, Switzerland, May 2017, by Hongtao Hao
-        
-        </p>
-        
-    </figcaption>
-    
-</figure>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>It&rsquo;s not my creation, but the codes from <a href="https://visionscarto.net/observable-jekyll/" target="_blank" rel="noreferrer noopener">this tutorial</a>
+ by <a href="https://stackoverflow.com/users/7592858/hissatsu" target="_blank" rel="noreferrer noopener">Hissatsu</a>
 
-. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+. You can use <a href="http://coderstoolbox.net/string/#!encoding=xml&amp;action=encode&amp;charset=us_ascii" target="_blank" rel="noreferrer noopener">encode</a>
+
+ to convert <code>XML</code> to <code>US-ASCII</code>.</p>
+<p>For example:</p>
+<p>&lt;p&gt;I do not want to show this content.&lt;/p&gt;</p>
 
 
 <p style="color:#777;">Last modified on 2020-11-02</p>

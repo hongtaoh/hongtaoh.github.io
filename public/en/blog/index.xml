@@ -11,6 +11,17 @@
     
     
     <item>
+      <title>How to Tell Hugo to Avoid Parsing HTML</title>
+      <link>https://hongtaoh.github.io/en/2020/11/02/avoid-parsing-html/</link>
+      <pubDate>Mon, 02 Nov 2020 16:09:25 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/11/02/avoid-parsing-html/</guid>
+      <description>I found the solution here by Hissatsu . You can use encode to convert XML to US-ASCII.
+For example:
+&amp;lt;p&amp;gt;I do not want to show this content.&amp;lt;/p&amp;gt;</description>
+    </item>
+    
+    <item>
       <title>How to Display Full Width Images in Hugo</title>
       <link>https://hongtaoh.github.io/en/2020/11/02/full-width-image-hugo/</link>
       <pubDate>Mon, 02 Nov 2020 15:13:05 -0500</pubDate>
@@ -18,7 +29,7 @@
       <guid>https://hongtaoh.github.io/en/2020/11/02/full-width-image-hugo/</guid>
       <description>I originally thought it must be super difficult to have full width images in a Hugo post because the width of my body text is already defined and yet all figures have to be within body. I stumbled upon a very easy solution here .
 Add the following1 to your website stylesheet:
-.fullwidth { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; } Then, when using Hugo&amp;rsquo;s default figure shortcode, include class=&amp;quot;fullwidth&amp;quot;:</description>
+.fullwidth { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; } Then, when using Hugo&amp;rsquo;s default figure shortcode, include class=&amp;quot;fullwidth&amp;quot; :</description>
     </item>
     
     <item>
