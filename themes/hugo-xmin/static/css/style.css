@@ -331,14 +331,14 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 2em;
   font-weight: normal;
 }
 
 h4,
 h5,
 h6 {
-  font-size: 20em;
+  font-size: 1.4em;
   color: grey;
 }
 h6 {
