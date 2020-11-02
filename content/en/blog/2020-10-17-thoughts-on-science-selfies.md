@@ -6,7 +6,7 @@ slug: science-selfies
 draft: false
 toc: true
 ---
-I encountered this opinion article, [*Science in the age of selfies*](https://www.pnas.org/content/113/34/9384), published on *PNAS* when I searched for "selfies" on Google Scholar. I thought it was about selfies, but it was not at all. 
+I encountered this opinion article, [*Science in the age of selfies*](https://www.pnas.org/content/113/34/9384), published on *PNAS* when I searched "selfies" on Google Scholar. I thought it was about selfies, but it was not at all. 
 
 Although not about a topic I thought it was, this opinion is very well written and has some insightful ideas, at least for me. I will in the following talk about what I thought about several major arguments in this article and what I learned from them. 
 
