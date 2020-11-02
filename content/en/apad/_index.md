@@ -2,6 +2,30 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-11-02
+
+>We suggest that, if several processing choices are defensible, researchers should perform a multiverse analysis instead of a single data set analysis. 
+
+>A multiverse analysis is a way to avoid or at least reduce the problem of selective reporting by making the fragility or robustness of the results transparent, and it helps the identification of the most consequential choices. 
+
+>Even when confronted with only one arbitrary data processing choice, researchers should be transparent about it and reveal the sensitivity of the result to this choice. 
+
+>Increasing transparency in reporting through a multiverse analysis is valuable, regardless of the inferential framework (frequentist or Bayesian), and regardless of the specific way uncertainty is quantified: a *p* value, an effect size, a confidence (Cumming, 2013) or credibility (Kruschke, 2010) interval, or a Bayes Factor (Morey & Rouder, 2011).
+
+The authors aruged that "preregistration or blind analysis are not useful stretegies for deflating the multiverse" (p. 709). I totoally agree. I am not familiar with blind analysis, so I'll just talk about preregistration. As the authors noted, even the study is preregistered, the result is still just one of the many possible choice combinations, albeit preregistered made. Therefore, the results of a preregistered study are still arbitrary, if the research involves arbitrary, or "whimsical" choices in data construction. 
+
+The authors also talked about "model multiverse" at the end of the article. 
+
+Something I don't understand in this article:
+
+{{< reminder >}}
+When participants are excluded based on reported or computed cycle length, we do not consider next menstrual onset based on computed or reported cycle length, respectively.
+{{< end >}}
+
+{{< reminder >}}
+When only one choice is clearly and unambiguously the most appropriate one, variation across this choice is uninformative. 
+{{< end >}}
+
 ## 2020-11-01
 Steegen, S., Tuerlinckx, F., Gelman, A., & Vanpaemel, W. (2016). Increasing transparency through a multiverse analysis. *Perspectives on Psychological Science, 11*(5), 702-712.
 

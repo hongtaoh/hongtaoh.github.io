@@ -21,7 +21,7 @@ Add the following[^1] to your website stylesheet:
 }
 ```
 
-Then, when using Hugo's default `figure` shortcode, include `class="fullwidth"` :
+Then, when using Hugo's [built-in `figure` shortcode](https://gohugo.io/templates/shortcode-templates/#single-named-example-image), include `class="fullwidth"` :
 
 {{&lt;figure src=&quot;/media/sgs/sgs-hostel.jpg&quot; caption=&quot;At a hostel in Interlaken, Switzerland, May 2017, by Hongtao Hao&quot; class=&quot;fullwidth&quot;&gt;}}
 
