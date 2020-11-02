@@ -23,11 +23,6 @@ Add the following[^1] to your website stylesheet:
 
 Then, when using Hugo's default `figure` shortcode, include `class="fullwidth"`:
 
-{{< rawhtml >}}
-<p class="speshal-fancy-custom">
-    This is <strong>raw HTML</strong>, inside Markdown.
-  </p>
-{{< /rawhtml >}}
 
 {{<figure src="/media/sgs/sgs-hostel.jpg" caption="At a hostel in Interlaken, Switzerland, May 2017, by Hongtao Hao" class="fullwidth">}}
 
