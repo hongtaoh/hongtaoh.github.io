@@ -16,7 +16,7 @@
       <pubDate>Mon, 02 Nov 2020 15:13:05 -0500</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/11/02/full-width-image-hugo/</guid>
-      <description>I originally thought it must be super difficult to have full width images in Hugo because the width of my body text is already defined and yet all figures have to be within body. I stumbled upon a very easy solution here .
+      <description>I originally thought it must be super difficult to have full width images in a Hugo post because the width of my body text is already defined and yet all figures have to be within body. I stumbled upon a very easy solution here .
 Add the following1 to your website stylesheet:
 .fullwidth { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; } Then, when using Hugo&amp;rsquo;s default figure shortcode, include class=&amp;quot;fullwidth&amp;quot;:</description>
     </item>

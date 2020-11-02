@@ -101,7 +101,7 @@
 
 
 <div class="body-text list-text">
-<p>I originally thought it must be super difficult to have full width images in Hugo because the width of my body text is already defined and yet all figures have to be within body. I stumbled upon a very easy solution <a href="https://visionscarto.net/observable-jekyll/" target="_blank" rel="noreferrer noopener">here</a>
+<p>I originally thought it must be super difficult to have full width images in a Hugo post because the width of my body text is already defined and yet all figures have to be within body. I stumbled upon a very easy solution <a href="https://visionscarto.net/observable-jekyll/" target="_blank" rel="noreferrer noopener">here</a>
 
 .</p>
 <p>Add the following<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> to your website stylesheet:</p>
@@ -114,6 +114,8 @@
   <span style="color:#008000;font-weight:bold">margin-right</span>: <span style="color:#666">-50</span><span style="color:#b00040">vw</span>;
 }
 </code></pre></div><p>Then, when using Hugo&rsquo;s default <code>figure</code> shortcode, include <code>class=&quot;fullwidth&quot;</code>:</p>
+<p>{{&lt;figure src=&quot;/media/sgs/sgs-hostel.jpg&quot; caption=&quot;At a hostel in Interlaken, Switzerland, May 2017, by Hongtao Hao&quot; class=&quot;fullwidth&quot;&gt;}}</p>
+<p>The result is like this:</p>
 <figure class="fullwidth" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="/media/sgs/sgs-hostel.jpg"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
