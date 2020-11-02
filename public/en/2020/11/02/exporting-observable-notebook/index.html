@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to Export An Observable Notebook as A Stand-alone Webpage - 郝鸿涛::Hongtao Hao</title>
+    <title>How to Embed An Observable Notebook in A Stand-alone Webpage - 郝鸿涛::Hongtao Hao</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
@@ -73,7 +73,7 @@
 <main class = "content" role="main">
 <div style="text-align: center">
 
-<h1 class="article-title">How to Export An Observable Notebook as A Stand-alone Webpage</h1>
+<h1 class="article-title">How to Embed An Observable Notebook in A Stand-alone Webpage</h1>
 
 <p>Hongtao Hao 
  / 2020-11-02 </p>
@@ -101,11 +101,12 @@
 Table of Contents:
 <nav id="TableOfContents">
   <ol>
-    <li><a href="#exporting-is-not-embedding">Exporting is not embedding</a></li>
-    <li><a href="#how-to-export">How to export</a>
+    <li><a href="#embed-directly-via-iframe">Embed directly via iframe</a></li>
+    <li><a href="#embed-manually">Embed manually</a>
       <ol>
         <li><a href="#javascript-scripts-within-the-webpage">JavaScript scripts within the webpage</a></li>
-        <li><a href="#body-within-the-webpage">Body within the webpage</a></li>
+        <li><a href="#the-body">The <code>body</code></a></li>
+        <li><a href="#what-if-i-have-more-than-one-notebook-in-one-webpage">What if I have more than one notebook in one webpage</a></li>
         <li><a href="#more-examples">More examples</a></li>
       </ol>
     </li>
@@ -119,37 +120,38 @@ Table of Contents:
 <div class="body-text list-text">
 <p>After designing data visualizations on <a href="https://observablehq.com" target="_blank" rel="noreferrer noopener">ObserbableHQ</a>
 
-, you might want to present your viz in a stand-alone webpage. This post is to teach you how to do it.</p>
+, you might want to present your them in a stand-alone webpage. This post is to teach you how to do it.</p>
 <p>If you find my post not helpful, you can refer to <a href="https://observablehq.com/@observablehq/downloading-and-embedding-notebooks" target="_blank" rel="noreferrer noopener">Advanced Embedding and Downloading</a>
 
 .</p>
-<h1 id="exporting-is-not-embedding">Exporting is not embedding<a href="#exporting-is-not-embedding" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
-<p>First of all, exporting is different from embedding. It&rsquo;s relatively easy to embed a visualization. For <a href="https://observablehq.com/@hongtaoh/explrable-data" target="_blank" rel="noreferrer noopener">this example</a>
+<h1 id="embed-directly-via-iframe">Embed directly via iframe<a href="#embed-directly-via-iframe" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>It&rsquo;s relatively easy to embed a visualization directly . For <a href="https://observablehq.com/@hongtaoh/explrable-data" target="_blank" rel="noreferrer noopener">this example</a>
 
- of mine, it&rsquo;s very easy to embed <a href="https://observablehq.com/@hongtaoh/explrable-data#D_chart" target="_blank" rel="noreferrer noopener">this interactive chart</a>
+ of mine, to embed <a href="https://observablehq.com/@hongtaoh/explrable-data#D_chart" target="_blank" rel="noreferrer noopener">this chart</a>
 
-, whether it&rsquo;s on a blog or a webpage you are designing:</p>
+, I just need the following codes:</p>
 <pre><code>&lt;iframe width=&quot;100%&quot; height=&quot;534&quot; frameborder=&quot;0&quot;
   src=&quot;https://observablehq.com/embed/@hongtaoh/explrable-data?cell=reset&amp;cell=add&amp;cell=D_chart&quot;&gt;&lt;/iframe&gt;
 </code></pre><iframe width="100%" height="534" frameborder="0"
   src="https://observablehq.com/embed/@hongtaoh/explrable-data?cell=reset&cell=add&cell=D_chart"></iframe>
-<p>To embed, on your Observable Notebook, just click the three dots on the left side of a cell, then choose &ldquo;Embed&rdquo;. You will be directed to select cells to embed. Do as instructed. If you encounter problems with embedding, refer to <a href="https://observablehq.com/@jashkenas/handy-embed-code-generator" target="_blank" rel="noreferrer noopener">Handy Embed Code Generator</a>
+<p>To get the above lines of code, on your Observable Notebook, just click the <code>...</code> menu on the left side of a cell, then choose &ldquo;Embed&rdquo;. You will be directed to select cells to embed. Do as instructed. If you encounter problems with embedding, refer to <a href="https://observablehq.com/@jashkenas/handy-embed-code-generator" target="_blank" rel="noreferrer noopener">Handy Embed Code Generator</a>
 
 , or <a href="https://observablehq.com/@observablehq/troubleshooting-embedding" target="_blank" rel="noreferrer noopener">Troubleshooting Embedding</a>
 
 .</p>
 <p>However, as can be seen, you don&rsquo;t have much freedom<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> to edit the style of the elements, like the font, the positions of the buttons, and the like. And it&rsquo;s very slow to load.</p>
-<h1 id="how-to-export">How to export<a href="#how-to-export" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
-<p>Exporting the notebook as a stand-alone webpage gives you much more freedom. I am providing a minimal example <a href="https://hongtaoh.com/d3/explrable-data/" target="_blank" rel="noreferrer noopener">here</a>
+<h1 id="embed-manually">Embed manually<a href="#embed-manually" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>It&rsquo;s not very difficult to embed your visualizations manually in a stand-alone webpage. I am providing a minimal example <a href="https://hongtaoh.com/d3/explrable-data/" target="_blank" rel="noreferrer noopener">here</a>
 
-. You can download the source from the browser directly by right click. Be sure to choose &ldquo;Webpage, HTML only&rdquo; if you are using Chrome. If you don&rsquo;t know how to download, you can see the source code on GitHub <a href="https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/d3/explrable-data/index.html" target="_blank" rel="noreferrer noopener">here</a>
+, whose source codes can be seen <a href="https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/d3/explrable-data/index.html" target="_blank" rel="noreferrer noopener">here</a>
 
 .</p>
-<p>How did I do it?</p>
-<p>I won&rsquo;t explain the basic HTML elements in the page, as those are out of the scope of this tutorial. Go to the buttom of this source code, and pay your attention to the codes between <code>&lt;script type=&quot;module&quot;&gt;</code> and <code>&lt;/script&gt;</code>.</p>
+<p>I won&rsquo;t explain the basic HTML elements in the page, as those are out of the scope of this tutorial. Go to the buttom of the source codes, and pay your attention to the codes between <code>&lt;script type=&quot;module&quot;&gt;</code> and <code>&lt;/script&gt;</code>.</p>
 <h2 id="javascript-scripts-within-the-webpage">JavaScript scripts within the webpage<a href="#javascript-scripts-within-the-webpage" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
-<p>First, we import <code>Runtime</code> and <code>Inspector</code> from <code>https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js</code>. Then, we import the notebook you want to export. You can name it anything you like, not necessarily as <code>notebook</code>. You&rsquo;ll find that the notebook is always imported from <code>https://api.observablehq.com/@yourUsername/yourNotebook.js?v=3</code>. Edit it based on your own Observable username and your notebook URL. One thing worth noticing is that you can export private notebook as well, for example, forked notebooks you are working on, or those you don&rsquo;t want other people to see yet. To do that, go to the homepage of ObservableHQ, on the left side of the page, click &ldquo;notebooks&rdquo;, find your unpublished notebook, right click the three dots, and choose &ldquo;Enable link sharing&rdquo;. For private notebooks, the username will be simply <code>d</code>, and the notebook id is that after <code>d</code> shown in your notebook&rsquo;s URL.</p>
-<p>After importing <code>Runtime</code>, <code>Inspector</code>, and your notebook, we&rsquo;ll need to define a function called <code>render</code>:</p>
+<h3 id="import-runtime-inspector-and-your-notebook">Import <code>Runtime</code>, <code>Inspector</code>, and your notebook<a href="#import-runtime-inspector-and-your-notebook" class="header-anchor" ariaLabel="Anchor"> # </a></h3>
+<p>First, we import <code>Runtime</code> and <code>Inspector</code> from <code>https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js</code>. Then, we import the notebook you want to export. You can name it anything you like, not necessarily as <code>notebook</code>. You&rsquo;ll find that the notebook is always imported from <code>https://api.observablehq.com/@yourUsername/yourNotebook.js?v=3</code>. Edit it based on your own Observable username and your notebook URL. One thing worth noticing is that you can export private notebook as well, for example, forked notebooks you are working on, or those you don&rsquo;t want other people to see yet. To do that, go to the homepage of ObservableHQ, on the left side of the page, click &ldquo;notebooks&rdquo;, find your unpublished notebook, right click the <code>...</code> menu, and choose &ldquo;Enable link sharing&rdquo;. For private notebooks, the username will be simply <code>d</code>, and the notebook id is that after <code>d</code> shown in your notebook&rsquo;s URL.</p>
+<h3 id="define-render">Define <code>render</code><a href="#define-render" class="header-anchor" ariaLabel="Anchor"> # </a></h3>
+<p>After importing <code>Runtime</code>, <code>Inspector</code>, and your notebook, we&rsquo;ll need to define a function called <code>render</code> (or any other name you want):</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#008000;font-weight:bold">function</span> render(_node, value) {
         <span style="color:#008000;font-weight:bold">if</span> (<span style="color:#666">!</span>(value <span style="color:#008000;font-weight:bold">instanceof</span> Element)) {
           <span style="color:#008000;font-weight:bold">const</span> el <span style="color:#666">=</span> <span style="color:#008000">document</span>.createElement(<span style="color:#ba2121">&#34;span&#34;</span>);
@@ -168,6 +170,7 @@ Table of Contents:
 </code></pre></div><p>The above codes are note my creation, but from <a href="https://github.com/observablehq/examples/blob/main/breakout/index.html" target="_blank" rel="noreferrer noopener">observablehq/examples</a>
 
 .</p>
+<h3 id="assign-id-to-cells-you-are-importing">Assign <code>id</code> to cells you are importing<a href="#assign-id-to-cells-you-are-importing" class="header-anchor" ariaLabel="Anchor"> # </a></h3>
 <p>Then, we define an object in which we assign <code>id</code> to the cells we want to import.</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#008000;font-weight:bold">const</span> renders <span style="color:#666">=</span> {
       	<span style="color:#ba2121">&#34;viewof season&#34;</span><span style="color:#666">:</span> <span style="color:#ba2121">&#34;#viewof-season&#34;</span>,
@@ -180,6 +183,7 @@ Table of Contents:
         <span style="color:#ba2121">&#34;D_chart&#34;</span><span style="color:#666">:</span> <span style="color:#ba2121">&#34;#chart&#34;</span>,
       }
 </code></pre></div><p>The object does note have to be named as <code>renders</code>. You can name it anything you like. As you can see, within the curly brackets, we assign <code>id</code> to each of the cells we want to import. With <code>id</code>, we can 1) put visualizations into specific places within the webpage, and 2) edit their styles with CSS.</p>
+<h3 id="last-steps">Last steps<a href="#last-steps" class="header-anchor" ariaLabel="Anchor"> # </a></h3>
 <p>The last steps are:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#008000;font-weight:bold">const</span> runtime <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">new</span> Runtime();
 <span style="color:#008000;font-weight:bold">const</span> main <span style="color:#666">=</span> runtime.module(notebook, name =&gt; {
@@ -193,10 +197,26 @@ Table of Contents:
 </code></pre></div><p>Again, those codes are from <a href="https://github.com/observablehq/examples/blob/main/breakout/index.html" target="_blank" rel="noreferrer noopener">observablehq/examples</a>
 
 . In the above codes, the <code>runtime</code> after <code>const</code> in the first line can have any name you like, but you need to edit the <code>runtime</code> in the second line accordingly. The <code>notebook</code> in the second line should be whatever name you assign when you import your notebook. In the third line, the name <code>renders</code> should be the name you used in the above step.</p>
-<h2 id="body-within-the-webpage">Body within the webpage<a href="#body-within-the-webpage" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<h2 id="the-body">The <code>body</code><a href="#the-body" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
 <p>You can study the <a href="https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/d3/explrable-data/index.html" target="_blank" rel="noreferrer noopener">source code</a>
 
  in detail. I&rsquo;ll explain the basic ideas here. With <code>&lt;div id=&quot;viewof-season&quot;&gt;&lt;/div&gt;</code>, we&rsquo;ll put the relevant visualization there. If needed, you can edit the style within the CSS stylesheet with <code>#viewof-season {}</code>. I barely used any CSS in my example, so I simply place the CSS code within <code>style</code> tags of the webpage. If you want more complicated styling, of course you can reference an external CSS stylesheet.</p>
+<h2 id="what-if-i-have-more-than-one-notebook-in-one-webpage">What if I have more than one notebook in one webpage<a href="#what-if-i-have-more-than-one-notebook-in-one-webpage" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>It&rsquo;s not that difficult. First, import the second/third/&hellip; notebook as you import the first one. Remember that you need to use different names for different notebooks, for example, <code>import notebook2 from ...</code>, and <code>import notebook3 from ...</code>. Also, you need a different name than <code>renders</code> in <code>const renders = {}</code>, maybe <code>const rendersTwo = {}</code> and <code>const rendersThree = {}</code>. Then, use different names than <code>runtime</code> in the last steps.</p>
+<p>For example, for the second notebook, it might be:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#008000;font-weight:bold">const</span> runtime2 <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">new</span> Runtime();
+<span style="color:#008000;font-weight:bold">const</span> main <span style="color:#666">=</span> runtime2.module(notebook2, name =&gt; {
+   <span style="color:#008000;font-weight:bold">const</span> selector <span style="color:#666">=</span> rendersTwo[name];
+   <span style="color:#008000;font-weight:bold">if</span> (selector) {
+     <span style="color:#008000;font-weight:bold">return</span> {fulfilled<span style="color:#666">:</span> (value) =&gt; render(<span style="color:#008000">document</span>.querySelector(selector), value)}
+   } <span style="color:#008000;font-weight:bold">else</span> {
+     <span style="color:#008000;font-weight:bold">return</span> <span style="color:#008000;font-weight:bold">true</span>;
+   }
+  });
+</code></pre></div><p>After that, edit the <code>body</code> section as necessary.</p>
+<p>If you don&rsquo;t understand it, study <a href="https://github.com/hongtaoh/covid19-dashboard" target="_blank" rel="noreferrer noopener">this example</a>
+
+.</p>
 <h2 id="more-examples">More examples<a href="#more-examples" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
 <p>You can have a look at more examples of importing an Observable notebook in <a href="https://github.com/observablehq/examples/blob/main/breakout/index.html" target="_blank" rel="noreferrer noopener">observablehq/examples</a>
 

@@ -43,6 +43,15 @@ div.splitbox div.right {
                float:left;}
 }
 
+.fullwidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
 .footer { 
   text-align: center; font-size: 19px;
   padding: 30px 0;
@@ -317,17 +326,19 @@ h1 {
 article-title {margin-top: 0px;}
 
 h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+h3 {
   font-size: 22px;
   font-weight: normal;
 }
-h3 {
-  font-weight: normal;
-  font-size: 1.5em;
-}
+
 h4,
 h5,
 h6 {
-  font-size: 1.4em;
+  font-size: 20em;
   color: grey;
 }
 h6 {
@@ -418,7 +429,7 @@ hr {
 .body-text.list-text a[href^="#fn:"]:before{ content: '[' }
 .body-text.list-text a[href^="#fn:"]:after{ content: ']' }
 
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
 
   body {
     font-size: 16px;

@@ -11,14 +11,36 @@
     
     
     <item>
-      <title>How to Export An Observable Notebook as A Stand-alone Webpage</title>
+      <title>How to Display Full Width Images in Hugo</title>
+      <link>https://hongtaoh.github.io/en/2020/11/02/full-width-image-hugo/</link>
+      <pubDate>Mon, 02 Nov 2020 15:13:05 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/11/02/full-width-image-hugo/</guid>
+      <description>I originally thought it must be super difficult to have full width images in Hugo because the width of my body text is already defined and yet all figures have to be within body. I stumbled upon a very easy solution here .
+Add the following1 to your website stylesheet:
+.fullwidth { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; } Then, when using Hugo&amp;rsquo;s default figure shortcode, include class=&amp;quot;fullwidth&amp;quot;:</description>
+    </item>
+    
+    <item>
+      <title>How to Embed An Observable Notebook in A Hugo Blog</title>
+      <link>https://hongtaoh.github.io/en/2020/11/02/observable-hugo-embed/</link>
+      <pubDate>Mon, 02 Nov 2020 11:38:49 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/11/02/observable-hugo-embed/</guid>
+      <description>Embedding an Observable notebook in a Hugo blog post is no different than embedding it in a stand alone webpage . Also, you can read this tutorial on Observable Jekyll . Although it used Jekyll as an example, it&amp;rsquo;s exactly the same for Hugo.
+Direct embedding through iframe You can embed a visualization on ObservableHQ directly through an iframe. I talked it about how to do it here .
+This is the result:</description>
+    </item>
+    
+    <item>
+      <title>How to Embed An Observable Notebook in A Stand-alone Webpage</title>
       <link>https://hongtaoh.github.io/en/2020/11/02/exporting-observable-notebook/</link>
       <pubDate>Mon, 02 Nov 2020 09:03:10 -0500</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/11/02/exporting-observable-notebook/</guid>
-      <description>After designing data visualizations on ObserbableHQ , you might want to present your viz in a stand-alone webpage. This post is to teach you how to do it.
+      <description>After designing data visualizations on ObserbableHQ , you might want to present your them in a stand-alone webpage. This post is to teach you how to do it.
 If you find my post not helpful, you can refer to Advanced Embedding and Downloading .
-Exporting is not embedding First of all, exporting is different from embedding. It&amp;rsquo;s relatively easy to embed a visualization. For this example of mine, it&amp;rsquo;s very easy to embed this interactive chart , whether it&amp;rsquo;s on a blog or a webpage you are designing:</description>
+Embed directly via iframe It&amp;rsquo;s relatively easy to embed a visualization directly . For this example of mine, to embed this chart , I just need the following codes:</description>
     </item>
     
     <item>
