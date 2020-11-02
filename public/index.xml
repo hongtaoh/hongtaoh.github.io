@@ -11,6 +11,17 @@
     
     
     <item>
+      <title>How to Export An Observable Notebook as A Stand-alone Webpage</title>
+      <link>https://hongtaoh.github.io/en/2020/11/02/exporting-observable-notebook/</link>
+      <pubDate>Mon, 02 Nov 2020 09:03:10 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/11/02/exporting-observable-notebook/</guid>
+      <description>After designing data visualizations on ObserbableHQ , you might want to present your viz in a stand-alone webpage. This post is to teach you how to do it.
+If you find my post not helpful, you can refer to Advanced Embedding and Downloading .
+Exporting is not embedding First of all, exporting is different from embedding. It&amp;rsquo;s relatively easy to embed a visualization. For this example of mine, it&amp;rsquo;s very easy to embed this interactive chart , whether it&amp;rsquo;s on a blog or a webpage you are designing:</description>
+    </item>
+    
+    <item>
       <title>数字鸿沟对中国城乡教育公平的影响</title>
       <link>https://hongtaoh.github.io/cn/2020/10/30/dd-china/</link>
       <pubDate>Fri, 30 Oct 2020 18:07:02 -0400</pubDate>
