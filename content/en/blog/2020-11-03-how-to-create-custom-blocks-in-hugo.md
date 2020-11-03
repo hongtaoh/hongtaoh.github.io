@@ -6,7 +6,7 @@ slug: custom-blocks-hugo
 draft: false
 toc: false
 ---
-I thought creating custom blocks in Hugo would be difficult. But with Hugo's shortcode, and [the CSS](https://github.com/rstudio/bookdown/blob/master/inst/examples/css/style.css) from Yihui Xie's [Bookdown](https://github.com/rstudio/bookdown) project, it can be super easy. 
+I thought creating custom blocks in Hugo would be difficult. But with Hugo's shortcodes, and [the CSS](https://github.com/rstudio/bookdown/blob/master/inst/examples/css/style.css) from Yihui Xie's [Bookdown](https://github.com/rstudio/bookdown) project, it can be super easy. 
 
 # Download images and edit stylesheet
 

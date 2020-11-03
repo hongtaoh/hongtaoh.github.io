@@ -9,7 +9,7 @@ toc: true
 
 I learned how to contribute via making a pull request from the [contributing guidance](https://github.com/victoriadrake/hugo-theme-sam/blob/master/CONTRIBUTING.md) by [Victorial Drake](https://github.com/victoriadrake)
 
-# Step1: For a repo
+# Step1: Fork a repo
 Reference: [Fork a repo](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) from [GitHub Docs](https://docs.github.com/en)
 
 ## Forking the original repository

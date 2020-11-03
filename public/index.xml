@@ -11,7 +11,7 @@
     
     
     <item>
-      <title>How to Use Shortcode in Blogdown</title>
+      <title>How to Use Shortcodes in Blogdown</title>
       <link>https://hongtaoh.github.io/en/2020/11/03/shortcode-blogdown/</link>
       <pubDate>Tue, 03 Nov 2020 16:59:52 -0500</pubDate>
       
@@ -29,7 +29,7 @@ Thanks, Yihui !</description>
       <pubDate>Tue, 03 Nov 2020 15:58:03 -0500</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/11/03/custom-blocks-hugo/</guid>
-      <description>I thought creating custom blocks in Hugo would be difficult. But with Hugo&amp;rsquo;s shortcode, and the CSS from Yihui Xie&amp;rsquo;s Bookdown project, it can be super easy.
+      <description>I thought creating custom blocks in Hugo would be difficult. But with Hugo&amp;rsquo;s shortcodes, and the CSS from Yihui Xie&amp;rsquo;s Bookdown project, it can be super easy.
 Download images and edit stylesheet First of all, you&amp;rsquo;ll need to download five images from here : caution, important, note, tip, and warning.png. Add these images to the static folder of your Hugo project. I suppose you are add them to the root directory of static.</description>
     </item>
     
@@ -45,7 +45,7 @@ At the root of your local repository1, run:</description>
     </item>
     
     <item>
-      <title>How to Tell Hugo to Avoid Parsing HTML</title>
+      <title>How to Tell Hugo Not to Parse HTML</title>
       <link>https://hongtaoh.github.io/en/2020/11/02/avoid-parsing-html/</link>
       <pubDate>Mon, 02 Nov 2020 16:09:25 -0500</pubDate>
       
@@ -172,7 +172,7 @@ cd ~/Downloads curl -O https://ftp.gnu.org/gnu/wget/wget2-1.99.2.tar.gz tar -zxv
       <pubDate>Mon, 05 Oct 2020 16:56:56 -0400</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/10/05/github-pull-request/</guid>
-      <description>I learned how to contribute via making a pull request from the contributing guidance by Victorial Drake Step1: For a repo Reference: Fork a repo from GitHub Docs Forking the original repository Simply fork the project you would like to work on. For example, I forked Professor YY&amp;rsquo;s covid19-data . Here is what the fork looks like.
+      <description>I learned how to contribute via making a pull request from the contributing guidance by Victorial Drake Step1: Fork a repo Reference: Fork a repo from GitHub Docs Forking the original repository Simply fork the project you would like to work on. For example, I forked Professor YY&amp;rsquo;s covid19-data . Here is what the fork looks like.
 Making a local clone of your fork In Terminal, first navigate to the directory where you want to place this local clone.</description>
     </item>
     
