@@ -1,5 +1,5 @@
 ---
-title: "How to Tell Hugo to Avoid Parsing HTML"
+title: "How to Tell Hugo Not to Parse HTML"
 date: 2020-11-02T16:09:25-05:00
 author: Hongtao Hao
 slug: avoid-parsing-html

@@ -1,5 +1,5 @@
 ---
-title: "How to Use Shortcode in Blogdown"
+title: "How to Use Shortcodes in Blogdown"
 date: 2020-11-03T16:59:52-05:00
 author: Hongtao Hao
 slug: shortcode-blogdown
