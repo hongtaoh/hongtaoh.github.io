@@ -11,6 +11,17 @@
     
     
     <item>
+      <title>How to delete and ignore all .DS_Store files in GitHub Repositories</title>
+      <link>https://hongtaoh.github.io/en/2020/11/03/delete-ignore-ds-store/</link>
+      <pubDate>Tue, 03 Nov 2020 15:01:10 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/11/03/delete-ignore-ds-store/</guid>
+      <description>If you are using a Mac, chances are that you have a lot of .DS_Store files in all kinds of folders. While they don&amp;rsquo;t cause any problems, it might be ugly if these files appear in your GitHub repositories. How to delete and ignore all of them? This thread on Stack Overflow helped me quite a bit.
+First, delete all .DS_Store files The following solution came from here .
+At the root of your local repository1, run:</description>
+    </item>
+    
+    <item>
       <title>How to Tell Hugo to Avoid Parsing HTML</title>
       <link>https://hongtaoh.github.io/en/2020/11/02/avoid-parsing-html/</link>
       <pubDate>Mon, 02 Nov 2020 16:09:25 -0500</pubDate>
