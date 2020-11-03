@@ -16,7 +16,7 @@ The authors aruged that "preregistration or blind analysis are not useful strete
 
 The authors also talked about "model multiverse" at the end of the article. 
 
-Something I don't understand in this article:
+Something I don't understand yet in this paper:
 
 {{< reminder >}}
 When participants are excluded based on reported or computed cycle length, we do not consider next menstrual onset based on computed or reported cycle length, respectively.
@@ -434,7 +434,7 @@ Other notes:
   - One thing I didn't understand is that how could the authors conclud that "the rich get richer" by simply looking at Figure 2a? I don't think it a rigorous remark. 
 
 ## 2020-09-26
-### 1. Del Vicario et al. (2016).
+1. Del Vicario et al. (2016).
 
 This piece is a little bit too technical for me, especially the second part that involve modeling. Also, I had difficulty understanding the conceptualization of "homogeneity" and "polarization".
 
@@ -446,7 +446,7 @@ Major takeaways from this paper:
 
   - Conspiracy rumors diffused slowly and its cascade size is positively correlated with its lifetime. Meaning that the longer it lasts, the more people become interested in it. 
 
-### 2. Liljeros, F., Edling, C. R., Amaral, L. A. N., Stanley, H. E., & Åberg, Y. (2001). The web of human sexual contacts. *Nature, 411*(6840), 907-908.
+2. Liljeros, F., Edling, C. R., Amaral, L. A. N., Stanley, H. E., & Åberg, Y. (2001). The web of human sexual contacts. *Nature, 411*(6840), 907-908.
 
 This is the kind of study I admire: short, interesting, and impactful. 
 
