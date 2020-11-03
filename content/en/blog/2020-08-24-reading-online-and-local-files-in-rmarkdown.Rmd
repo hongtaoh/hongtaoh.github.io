@@ -1,5 +1,5 @@
 ---
-title: Reading Online and Local Data Files in Rmarkdown, Bookdown, or Blogdown
+title: How to read Local or Online Files in Rmarkdown, Bookdown, and Blogdown
 author: Hongtao Hao
 date: '2020-08-24'
 slug: reading-online-and-local-files-in-rmarkdown

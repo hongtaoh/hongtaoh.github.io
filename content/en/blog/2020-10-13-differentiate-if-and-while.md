@@ -1,5 +1,5 @@
 ---
-title: "How to understand the difference between if statements and while loops"
+title: "How to Understand the Difference Between If Statements and While Loops"
 date: 2020-10-13T16:20:38-04:00
 author: Hongtao Hao
 slug: if-while

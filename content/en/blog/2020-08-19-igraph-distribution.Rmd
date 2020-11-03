@@ -1,5 +1,5 @@
 ---
-title: Plotting A Network's Degree Distribution Using igraph in R
+title: How to plot a Network's Degree Distribution Using igraph in R
 author: Hongtao Hao
 date: '2020-08-19'
 slug: plot-degree-distribution-using-igraph

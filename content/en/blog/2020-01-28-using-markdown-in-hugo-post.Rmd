@@ -1,5 +1,5 @@
 ---
-title: Using Markdown in Hugo post
+title: Using Rmarkdown in Hugo post
 author: Hongtao Hao
 date: '2020-01-28'
 slug: using-markdown-in-hugo-post
