@@ -1,5 +1,5 @@
 ---
-title: Including fig.cap when referencing a figure in Bookdown or Blogdown
+title: Include fig.cap when referencing a figure in Bookdown or Blogdown
 author: Hongtao Hao
 date: '2020-08-21'
 slug: including-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown

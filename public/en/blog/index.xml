@@ -101,7 +101,7 @@ Although not about a topic I thought it was, this opinion is very well written a
     </item>
     
     <item>
-      <title>How to understand the difference between if statements and while loops</title>
+      <title>How to Understand the Difference Between If Statements and While Loops</title>
       <link>https://hongtaoh.github.io/en/2020/10/13/if-while/</link>
       <pubDate>Tue, 13 Oct 2020 16:20:38 -0400</pubDate>
       
@@ -213,7 +213,7 @@ Basically, you only need to Serve Site once. In the drop list of Addins, choose 
     </item>
     
     <item>
-      <title>Reading Online and Local Data Files in Rmarkdown, Bookdown, or Blogdown</title>
+      <title>How to read Local or Online Files in Rmarkdown, Bookdown, and Blogdown</title>
       <link>https://hongtaoh.github.io/en/2020/08/24/reading-online-and-local-files-in-rmarkdown/</link>
       <pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -222,7 +222,17 @@ Basically, you only need to Serve Site once. In the drop list of Addins, choose 
     </item>
     
     <item>
-      <title>Including fig.cap when referencing a figure in Bookdown or Blogdown</title>
+      <title>How to read graphs using igraph in R</title>
+      <link>https://hongtaoh.github.io/en/2020/08/21/reading-gml-file-using-igraph/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/08/21/reading-gml-file-using-igraph/</guid>
+      <description>You can read the official documentation on read_graph() here for more info. Be sure to put the file name in between quotation marks. For example:
+library(igraph) read_graph(&amp;quot;lesmiss.gml&amp;quot;, format = &amp;quot;gml&amp;quot;) For more information on how to read local files, refer to this post.</description>
+    </item>
+    
+    <item>
+      <title>Include fig.cap when referencing a figure in Bookdown or Blogdown</title>
       <link>https://hongtaoh.github.io/en/2020/08/21/including-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown/</link>
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -235,17 +245,7 @@ Simply adding a figure caption solves the problem:</description>
     </item>
     
     <item>
-      <title>Reading graphs using igraph in R</title>
-      <link>https://hongtaoh.github.io/en/2020/08/21/reading-gml-file-using-igraph/</link>
-      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hongtaoh.github.io/en/2020/08/21/reading-gml-file-using-igraph/</guid>
-      <description>You can read the official documentation on read_graph() here for more info. Be sure to put the file name in between quotation marks. For example:
-library(igraph) read_graph(&amp;quot;lesmiss.gml&amp;quot;, format = &amp;quot;gml&amp;quot;) For more information on how to read local files, refer to this post.</description>
-    </item>
-    
-    <item>
-      <title>Plotting A Network&#39;s Degree Distribution Using igraph in R</title>
+      <title>How to plot a Network&#39;s Degree Distribution Using igraph in R</title>
       <link>https://hongtaoh.github.io/en/2020/08/19/plot-degree-distribution-using-igraph/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -375,6 +375,16 @@ In this age of informaiton, it&amp;rsquo;s important to have your online presenc
     </item>
     
     <item>
+      <title>How to Build a Website Using Hugo without Programming Skills</title>
+      <link>https://hongtaoh.github.io/en/2020/06/05/get-started-with-hugo/</link>
+      <pubDate>Fri, 05 Jun 2020 09:26:26 -0400</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/06/05/get-started-with-hugo/</guid>
+      <description>A friend asked me whether I can help him create his own personal website. I have long been wanting to write a simple tutorial on this and now I think it&amp;rsquo;s time to do that.
+In this age of informaiton, it&amp;rsquo;s important to have your online presence. It not only helps others to know you more quickly; it also helps you to express yourself to, and share your experiences and knowledge with, the outside world.</description>
+    </item>
+    
+    <item>
       <title>How to Solve the Problem of &#34;Remote Origin Already Exists&#34;</title>
       <link>https://hongtaoh.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</link>
       <pubDate>Mon, 25 May 2020 10:10:19 -0400</pubDate>
@@ -464,7 +474,7 @@ I chose the second method, which is called &amp;ldquo;Tarball&amp;rdquo; in Hugo
     </item>
     
     <item>
-      <title>Using Markdown in Hugo post</title>
+      <title>Using Rmarkdown in Hugo post</title>
       <link>https://hongtaoh.github.io/en/2020/01/28/using-markdown-in-hugo-post/</link>
       <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
       
