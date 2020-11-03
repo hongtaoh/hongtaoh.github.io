@@ -18,7 +18,7 @@ To explore these two function, let's first draw a simple network.
 library(igraph)
 ```
 
-```{r}
+```{r simpleNetwork, echo=TRUE, fig.align='center', fig.cap="A simple network, g1"}
 g1 <- graph( edges=c(1,2, 1,3, 2,3, 3,4), n=4, directed=FALSE)
 plot(g1)
 ```
@@ -46,7 +46,8 @@ Then, we may wonder, what if we don't have all the degrees from the minimum to m
 
 Let's try.
 
-```{r}
+```{r anotherSimpleNetwork, echo=TRUE, fig.align='center', fig.cap="Another simple network, g2"}
+set.seed(1234)
 g2 <- graph( edges=c(1,2, 1,3, 2,3, 3,4, 4,5, 4,6, 4,7, 
                      4,8, 4,9, 4,10, 3,11, 2,12,
                      4,13, 4,14, 2,15, 6,12, 7,10), 
@@ -93,7 +94,7 @@ It works.
 
 Let's plot `g2` as well.
 
-```{r fig.cap="bar chart for g2 without adusting ylim"}
+```{r g2BarChart, fig.align="center", fig.cap="bar chart for g2 without adusting ylim"}
 t2 <- table (deg_2)
 sum(t2)
 relafreq_2 <- t2/sum(t2)
@@ -174,7 +175,7 @@ On second thought, I realized it's not necessarily a bad idea to show node degre
 
 Why do I say that they are not that different? I'll explain it using an example of a random graph. 
 
-```{r}
+```{r randomGraph, fig.align="center", fig.cap="A random graph"}
 set.seed(1234)
 random_graph <- sample_gnp(1000, 1/1000, directed = FALSE, loops = FALSE)
 plot(random_graph,
@@ -191,7 +192,9 @@ hist(deg_random,
      col = "skyblue")
 ```
 
->Note: The above figure has two problems: X-axis and Y-axis. We'll solve them later.
+`r blogdown::shortcode("reminder")`
+The above figure has two problems: X-axis and Y-axis. We'll solve them later.
+`r blogdown::shortcode("end")`
 
 Then, let's compare the above histogram with the corresponding bar chart:
 

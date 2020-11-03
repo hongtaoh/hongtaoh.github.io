@@ -34,7 +34,12 @@ output:
 <pre class="r"><code>library(igraph)</code></pre>
 <pre class="r"><code>g1 &lt;- graph( edges=c(1,2, 1,3, 2,3, 3,4), n=4, directed=FALSE)
 plot(g1)</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div class="figure" style="text-align: center"><span id="fig:simpleNetwork"></span>
+<img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/simpleNetwork-1.png" alt="A simple network, g1" width="672" />
+<p class="caption">
+Figure 1: A simple network, g1
+</p>
+</div>
 <p>Okay, now let’s have a look at its nodes’ degrees and its degree distribution.</p>
 <pre class="r"><code>deg_1 &lt;- degree(g1)
 deg_1</code></pre>
@@ -47,12 +52,18 @@ deg_1</code></pre>
 <p>Conclusion: <code>degree()</code> will tell us the degree of all the nodes. <code>degree_distribution()</code> will tell us the <strong>relative frequency</strong> of all the degrees.</p>
 <p>Then, we may wonder, what if we don’t have all the degrees from the minimum to maximum. For example, if we only have degrees of <span class="math inline">\(1,2,4,9\)</span>, will the <code>degree_distribution()</code> function show us the relative frequency of degree <span class="math inline">\(5\)</span> (which should be zero)?</p>
 <p>Let’s try.</p>
-<pre class="r"><code>g2 &lt;- graph( edges=c(1,2, 1,3, 2,3, 3,4, 4,5, 4,6, 4,7, 
+<pre class="r"><code>set.seed(1234)
+g2 &lt;- graph( edges=c(1,2, 1,3, 2,3, 3,4, 4,5, 4,6, 4,7, 
                      4,8, 4,9, 4,10, 3,11, 2,12,
                      4,13, 4,14, 2,15, 6,12, 7,10), 
              n=15, directed=FALSE)
 plot(g2)</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="figure" style="text-align: center"><span id="fig:anotherSimpleNetwork"></span>
+<img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/anotherSimpleNetwork-1.png" alt="Another simple network, g2" width="672" />
+<p class="caption">
+Figure 2: Another simple network, g2
+</p>
+</div>
 <pre class="r"><code>deg_2 &lt;- degree(g2)
 deg_2</code></pre>
 <pre><code>##  [1] 2 4 4 9 1 2 2 1 1 2 1 2 1 1 1</code></pre>
@@ -70,7 +81,7 @@ deg_2</code></pre>
      ylab = &quot;Frequency&quot;,
      main = &quot;Histogram of g1&#39;s nodes degrees, without adjusting breaks and ylim&quot;,
      col = &quot;skyblue&quot;)</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>However,as we can ses above, it doesn’t make much sense because all of the degrees are discrete numbers. Let’s try bar plot instead.</p>
 <pre class="r"><code>t1 &lt;- table (deg_1)
 sum(t1)</code></pre>
@@ -79,7 +90,7 @@ sum(t1)</code></pre>
 barplot(relafreq_1, xlab = &quot;k&quot;, ylab = &quot;Relative frequencies&quot;, 
         main = &quot;Degree distribution of g1, without adjusting ylim&quot;,
         col = &quot;orange&quot;)</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>It works.</p>
 <p>Let’s plot <code>g2</code> as well.</p>
 <pre class="r"><code>t2 &lt;- table (deg_2)
@@ -89,10 +100,10 @@ sum(t2)</code></pre>
 barplot(relafreq_2, xlab = &quot;k&quot;, ylab = &quot;Relative frequencies&quot;, 
         main =&quot;Degree distribution of g2, without adjusting ylim&quot;,
         col = &quot;orange&quot;)</code></pre>
-<div class="figure"><span id="fig:unnamed-chunk-10"></span>
-<img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-10-1.png" alt="bar chart for g2 without adusting ylim" width="672" />
+<div class="figure" style="text-align: center"><span id="fig:g2BarChart"></span>
+<img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/g2BarChart-1.png" alt="bar chart for g2 without adusting ylim" width="672" />
 <p class="caption">
-Figure 1: bar chart for g2 without adusting ylim
+Figure 3: bar chart for g2 without adusting ylim
 </p>
 </div>
 <p>We find that the Y-axis scale is too short for our values. I found a solution <a href="https://stackoverflow.com/a/50193822/13716814">here</a>. Before looking at the solution, let’s first try solving it by ourselves.</p>
@@ -103,14 +114,14 @@ Figure 1: bar chart for g2 without adusting ylim
         main=&quot;Degree distribution of g2, adjusting ylim using `c(0,max())`&quot;,
         col = &quot;orange&quot;,
         ylim = c(0, max(relafreq_2)))</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>The Y-axis scale is still too short.</p>
 <p>We may use <code>max(t2/sum(t2))+0.1</code>. It of course will be fine here, setting the Y-axis scale to be <span class="math inline">\([0,0.5]\)</span>:</p>
 <pre class="r"><code>barplot(relafreq_2, xlab=&quot;k&quot;, ylab = &quot;Relative frequencies&quot;, 
         main=&quot;Degree distribution of g2, adjusting ylim using `c(0,max()+0.1)`&quot;,
         col = &quot;orange&quot;,
         ylim = c(0, max(relafreq_2+0.1)))</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>However, this method may not be applicable to other situations. Is there a better way? Yes, let’s try the <code>pretty()</code> function mentioned above. Read <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/pretty.html">here</a> and <a href="https://statisticsglobe.com/pretty-r-function">here</a> to understand this function.</p>
 <p>Basically, <code>pretty()</code> function will return a sequence of values that are equally spaced and cover the minimum and maximum values of our input. For example:</p>
 <pre class="r"><code>a &lt;- c(0,1,2,3,0.5,1.2,0.001)
@@ -135,7 +146,7 @@ pretty(b)
         main=&quot;Degree distribution of g2, adjusting ylim using `range(pretty())`&quot;,
         col = &quot;orange&quot;,
         ylim = range(pretty(c(0,relafreq_2))))</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p>Some of you may wonder, why couldn’t we just use <code>range(pretty(relafreq_2))</code>. Well, <strong>we could</strong>. The thing is, if all degrees appeare at least once, then using <code>range(pretty(relafreq_2))</code> rather than <code>range(pretty(c(0,relafreq_2)))</code> means that the start of <code>ylim</code> won’t be <span class="math inline">\(0\)</span>, I guess. So it’s safer to use <code>range(pretty(c(0,relafreq_2)))</code>.</p>
 </div>
 <div id="going-back-to-histogram" class="section level1">
@@ -147,7 +158,12 @@ pretty(b)
 random_graph &lt;- sample_gnp(1000, 1/1000, directed = FALSE, loops = FALSE)
 plot(random_graph,
      main = &quot;Plotting random_graph&quot;) # It&#39;s not very pretty...</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<div class="figure" style="text-align: center"><span id="fig:randomGraph"></span>
+<img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/randomGraph-1.png" alt="A random graph" width="672" />
+<p class="caption">
+Figure 4: A random graph
+</p>
+</div>
 <p>Let’s draw its nodes degree</p>
 <pre class="r"><code>deg_random &lt;- degree(random_graph)
 hist(deg_random, 
@@ -157,12 +173,12 @@ hist(deg_random,
 <div class="figure"><span id="fig:rnd-g-hist"></span>
 <img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/rnd-g-hist-1.png" alt="Histogram of random_graph's nodes degrees, without adjustments" width="672" />
 <p class="caption">
-Figure 2: Histogram of random_graph’s nodes degrees, without adjustments
+Figure 5: Histogram of random_graph’s nodes degrees, without adjustments
 </p>
 </div>
-<blockquote>
-<p>Note: The above figure has two problems: X-axis and Y-axis. We’ll solve them later.</p>
-</blockquote>
+<p>{{% reminder %}}
+The above figure has two problems: X-axis and Y-axis. We’ll solve them later.
+{{% end %}}</p>
 <p>Then, let’s compare the above histogram with the corresponding bar chart:</p>
 <pre class="r"><code>t_random &lt;- table(deg_random)
 relafreq_random &lt;- t_random/sum(t_random)
@@ -171,7 +187,7 @@ barplot(relafreq_random, xlab = &quot;k&quot;,
         main = &quot;Degree distribution of random_graph, with ylim adjusted&quot;,
         ylim = range(pretty(c(0,relafreq_random))),
         col = &quot;orange&quot;)</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <p>They are not that different, right? Except for the fact that the histogram captures the absolute frequencies whereas the bar chart displays relative ones.</p>
 <div id="deciding-on-x-axis-scale" class="section level2">
 <h2>Deciding on X-axis scale</h2>
@@ -184,10 +200,10 @@ barplot(relafreq_random, xlab = &quot;k&quot;,
      col = &quot;skyblue&quot;,
      ylim = range(pretty(c(0,table(deg_random))))
      )</code></pre>
-<div class="figure"><span id="fig:unnamed-chunk-20"></span>
-<img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-20-1.png" alt="`vcount()-1` doesn't fit quite well here" width="672" />
+<div class="figure"><span id="fig:unnamed-chunk-16"></span>
+<img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-16-1.png" alt="`vcount()-1` doesn't fit quite well here" width="672" />
 <p class="caption">
-Figure 3: <code>vcount()-1</code> doesn’t fit quite well here
+Figure 6: <code>vcount()-1</code> doesn’t fit quite well here
 </p>
 </div>
 <p>As we can see above, the figure doesn’t show the nodes degrees in detail because the X-axis is too large. A better alternative might be <code>max(degree(G))+1</code> where <code>G</code> is the graph you are interested in:</p>
@@ -196,7 +212,7 @@ Figure 3: <code>vcount()-1</code> doesn’t fit quite well here
      xlab = &quot;k&quot;, 
      col = &quot;skyblue&quot;
      )</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 </div>
 <div id="adjusting-a-histograms-breaks" class="section level2">
 <h2>Adjusting a histogram’s breaks</h2>
@@ -205,7 +221,7 @@ Figure 3: <code>vcount()-1</code> doesn’t fit quite well here
 <pre><code>## deg_random
 ##   0   1   2   3   4   5 
 ## 357 365 207  55  10   6</code></pre>
-<p>This problem also occurs in Figure <a href="#fig:rnd-g-hist">2</a></p>
+<p>This problem also occurs in Figure <a href="#fig:rnd-g-hist">5</a></p>
 <p>How to solve this problem?</p>
 <p>We can simply change the breaks. Set it as <code>breaks = seq(0,(max(deg_random)+1), by=0.5)</code> so that there [0,1] will be divided into two parts. I learned this trick from <a href="https://stackoverflow.com/a/14585847/13716814">here</a>.</p>
 <pre class="r"><code>hist(deg_random, breaks = seq(0,(max(deg_random)+1), by=0.5), 
@@ -213,14 +229,14 @@ Figure 3: <code>vcount()-1</code> doesn’t fit quite well here
      xlab = &quot;k&quot;, 
      col = &quot;skyblue&quot;
      )</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <p>However, it’s still a little packed in <span class="math inline">\([0,1]\)</span>. Let’s try setting the start of the <code>seq()</code> to be <span class="math inline">\(-1\)</span>:</p>
 <pre class="r"><code>hist(deg_random, breaks = seq(-1,(max(deg_random)+1), by=0.5), 
      main = &quot;Hist of nodes degree for rnd_g, adjusting breaks using `seq()`&quot;,
      xlab = &quot;k&quot;, 
      col = &quot;skyblue&quot;
      )</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 <p>Now, it’s much clearer.</p>
 </div>
 <div id="adjusting-a-histograms-y-axis" class="section level2">
@@ -233,7 +249,7 @@ Figure 3: <code>vcount()-1</code> doesn’t fit quite well here
      col = &quot;skyblue&quot;,
      ylim = range(pretty(c(0,table(deg_random))))
      )</code></pre>
-<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p><img src="/en/blog/2020-08-19-igraph-distribution_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 </div>
 </div>
 <div id="conclusion" class="section level1">

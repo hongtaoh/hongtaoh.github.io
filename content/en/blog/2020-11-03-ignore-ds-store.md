@@ -22,7 +22,7 @@ git push origin master
 ```
 # Second, create a .gitignore file and ignore .DS_Store
 
-The following solution came from [here](https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files#configuring-ignored-files-for-a-single-repository) and [here](https://stackoverflow.com/a/54715555)
+The following solution came from [here](https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files#configuring-ignored-files-for-a-single-repository) and [here](https://stackoverflow.com/a/54715555).
 
 If you don't have it in your repository yet, create one:
 
@@ -44,4 +44,4 @@ echo .DS_Store >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 ```
 
-[^1]: All the codes in this post should be run at the root directory of your local repo. 
+[^1]: All the codes in this post are supposed to be run at the root directory of your local repo. 
