@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to Tell Hugo to Avoid Parsing HTML - 郝鸿涛::Hongtao Hao</title>
+    <title>How to Use Shortcode in Blogdown - 郝鸿涛::Hongtao Hao</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
@@ -73,10 +73,10 @@
 <main class = "content" role="main">
 <div style="text-align: center">
 
-<h1 class="article-title">How to Tell Hugo to Avoid Parsing HTML</h1>
+<h1 class="article-title">How to Use Shortcode in Blogdown</h1>
 
 <p>Hongtao Hao 
- / 2020-11-02 </p>
+ / 2020-11-03 </p>
 
 <hr/>
 </div>
@@ -89,7 +89,7 @@
   
   
   
-  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-11-02-avoid-parsing-html.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-11-03-shortcode-blogdown.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
   </a>
   
   
@@ -101,27 +101,27 @@
 
 
 <div class="body-text list-text">
-<p>I found the solution <a href="https://stackoverflow.com/a/42528669" target="_blank" rel="noreferrer noopener">here</a>
+<p>I found the way to use shortcodes in Blogdown <a href="https://github.com/rstudio/blogdown/issues/40#issuecomment-478863914" target="_blank" rel="noreferrer noopener">here</a>
 
- by <a href="https://stackoverflow.com/users/7592858/hissatsu" target="_blank" rel="noreferrer noopener">Hissatsu</a>
+.</p>
+<p>Take the shortcodes of <a href="/en/blog/custom-blocks-hugo/">my custom block</a>
 
-. You can use <a href="http://coderstoolbox.net/string/#!encoding=xml&amp;action=encode&amp;charset=us_ascii" target="_blank" rel="noreferrer noopener">encode</a>
+ as an example. If I want to use them in a post created by <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noreferrer noopener">Blogdown</a>
 
- convert <code>XML</code> to <code>US-ASCII</code>.</p>
-<p>For example:</p>
-<p>&lt;p&gt;I do not want to show this content.&lt;/p&gt;</p>
-<p>If you encode multiple lines of code, you&rsquo;ll find that the output will become only one line. You solve the problem by adding <code>&lt;/br&gt;</code> at the end of each line except the last line.</p>
-<p>For example, if I want the output to be this:</p>
-<p>{{&lt;  block class=&quot;note&quot;  &gt;}} </br>
-This is a note. </br>
-{{&lt; end &gt;}}</p>
-<p>I&rsquo;ll use this:</p>
-<pre><code>{{&amp;lt;  block class=&amp;quot;note&amp;quot;  &amp;gt;}} &lt;/br&gt;
-This is a note. &lt;/br&gt;
-{{&amp;lt; end &amp;gt;}}
-</code></pre>
+, I&rsquo;ll do it this way:</p>
+<pre><code>`r blogdown:shortcode(&quot;block&quot;, class=&quot;note&quot;)`
+Write my note information here.
+`r blogdown:shortcode(&quot;end&quot;)`
+</code></pre><p>The above codes will create this:</p>
+<p><div class="note">
+Write my note information here.
+</div></p>
+<p>Thanks, <a href="https://github.com/rstudio/blogdown/issues/40#issuecomment-300997712" target="_blank" rel="noreferrer noopener">Yihui</a>
 
-<p style="color:#777;">Last modified on 2020-11-02</p>
+!</p>
+
+
+<p style="color:#777;">Last modified on 2020-11-03</p>
 
 </div>
 <a href="#top"><i class="fa fa-arrow-circle-up" style="font-size: 30px; color: black;"></i></a>  

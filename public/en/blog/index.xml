@@ -11,6 +11,29 @@
     
     
     <item>
+      <title>How to Use Shortcode in Blogdown</title>
+      <link>https://hongtaoh.github.io/en/2020/11/03/shortcode-blogdown/</link>
+      <pubDate>Tue, 03 Nov 2020 16:59:52 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/11/03/shortcode-blogdown/</guid>
+      <description>I found the way to use shortcodes in Blogdown here .
+Take the shortcodes of my custom block as an example. If I want to use them in a post created by Blogdown , I&amp;rsquo;ll do it this way:
+`r blogdown:shortcode(&amp;quot;block&amp;quot;, class=&amp;quot;note&amp;quot;)` Write my note information here. `r blogdown:shortcode(&amp;quot;end&amp;quot;)` The above codes will create this:
+Write my note information here. 
+Thanks, Yihui !</description>
+    </item>
+    
+    <item>
+      <title>How to Create Custom Blocks in Hugo</title>
+      <link>https://hongtaoh.github.io/en/2020/11/03/custom-blocks-hugo/</link>
+      <pubDate>Tue, 03 Nov 2020 15:58:03 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/11/03/custom-blocks-hugo/</guid>
+      <description>I thought creating custom blocks in Hugo would be difficult. But with Hugo&amp;rsquo;s shortcode, and the CSS from Yihui Xie&amp;rsquo;s Bookdown project, it can be super easy.
+Download images and edit stylesheet First of all, you&amp;rsquo;ll need to download five images from here : caution, important, note, tip, and warning.png. Add these images to the static folder of your Hugo project. I suppose you are add them to the root directory of static.</description>
+    </item>
+    
+    <item>
       <title>How to delete and ignore all .DS_Store files in GitHub Repositories</title>
       <link>https://hongtaoh.github.io/en/2020/11/03/delete-ignore-ds-store/</link>
       <pubDate>Tue, 03 Nov 2020 15:01:10 -0500</pubDate>
@@ -27,9 +50,11 @@ At the root of your local repository1, run:</description>
       <pubDate>Mon, 02 Nov 2020 16:09:25 -0500</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/11/02/avoid-parsing-html/</guid>
-      <description>I found the solution here by Hissatsu . You can use encode to convert XML to US-ASCII.
+      <description>I found the solution here by Hissatsu . You can use encode convert XML to US-ASCII.
 For example:
-&amp;lt;p&amp;gt;I do not want to show this content.&amp;lt;/p&amp;gt;</description>
+&amp;lt;p&amp;gt;I do not want to show this content.&amp;lt;/p&amp;gt;
+If you encode multiple lines of code, you&amp;rsquo;ll find that the output will become only one line. You solve the problem by adding &amp;lt;/br&amp;gt; at the end of each line except the last line.
+For example, if I want the output to be this:</description>
     </item>
     
     <item>

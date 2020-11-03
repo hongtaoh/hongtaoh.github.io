@@ -2,6 +2,9 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-11-03
+
+
 ## 2020-11-02
 
 >We suggest that, if several processing choices are defensible, researchers should perform a multiverse analysis instead of a single data set analysis. 
