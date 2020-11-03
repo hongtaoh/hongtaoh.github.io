@@ -3,9 +3,27 @@ title: A Paper A Day
 type : nolisting
 ---
 ## 2020-11-03
+1. Finished Steegen et al. (2016)
 
+>In a more complete analysis, the multiverse of data sets could be corssed with the multiverse of models to further reveal the multiverse of statistical results. 
+
+This is so true. I have several thoughts about this point:
+
+First, it shows how arbitrary the choices in data processing and moldel picking are, and therefore, how arbitrary the statistical results might be. When I was doing research on selfie, I also had the same feeling. When I was doing the content analysis study comparing the differences in White women's selfies on Twitter and Chinese women's selfies on Weibo, I had to made so many arbitrary choices: whether to drop an item from a construct, whether to combine items, should I use a *t* test or nonparametric test, etc. 
+
+Second, doing multiverse analysis reporting is very methodologically challenging. I cannot imagine a Master student after attending one statistics class doing a project involving more than 200 choice combinations. 
+
+Finally, scholars will find it more diffcult to cite others' studies. Right now, it's fairly easy to cite because almost all research papers generate a **certin** result. With multiverse analysis, almost all studies will involve many **uncertainties**. This complicates how people interprete the statistical results. 
+
+That said, statistics is about **uncertainties**. It's certainly good to show these **uncertainties**. I think the science communitey, and the public, should be accustomed to seeing **uncertainties** in statistical results in the coming years. 
+
+2. Ahn, Y. Y., Han, S., Kwak, H., Moon, S., & Jeong, H. (2007, May). Analysis of topological characteristics of huge online social networking services. In *Proceedings of the 16th international conference on World Wide Web* (pp. 835-844).
+
+PP. 1-2
 
 ## 2020-11-02
+
+Continue with Steegen et al. (2016)
 
 >We suggest that, if several processing choices are defensible, researchers should perform a multiverse analysis instead of a single data set analysis. 
 
