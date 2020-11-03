@@ -336,19 +336,19 @@ h1 {
 article-title {margin-top: 0px;}
 
 h2 {
-  font-size: 24px;
+  font-size: 25px;
   font-weight: normal;
 }
 
 h3 {
-  font-size: 1.6em;
+  font-size: 22px;
   font-weight: normal;
 }
 
 h4,
 h5,
 h6 {
-  font-size: 1.4em;
+  font-size: 20px;
   color: grey;
 }
 h6 {
