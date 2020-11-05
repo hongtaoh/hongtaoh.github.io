@@ -27,7 +27,7 @@ Then, when using Hugo's [built-in `figure` shortcode](https://gohugo.io/template
 
 The result is like this:
 
-{{<figure src="/media/sgs/sgs-hostel.jpg" caption="At a hostel in Interlaken, Switzerland, May 2017, by Hongtao Hao" class="fullwidth">}}
+{{<figure src="/media/sgs/sgs-hostel.jpg" caption="On the balcony of a hostel in Interlaken, Switzerland, May 2017, by Hongtao Hao" class="fullwidth">}}
 
 
 [^1]: It's not my creation, but the codes from [this tutorial](https://visionscarto.net/observable-jekyll/).

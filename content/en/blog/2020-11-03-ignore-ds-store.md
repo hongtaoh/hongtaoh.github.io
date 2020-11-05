@@ -1,5 +1,5 @@
 ---
-title: "How to delete and ignore all .DS_Store files in GitHub Repositories"
+title: "How to Delete and Ignore All .DS_Store Files in GitHub Repositories"
 date: 2020-11-03T15:01:10-05:00
 author: Hongtao Hao
 slug: delete-ignore-ds-store
