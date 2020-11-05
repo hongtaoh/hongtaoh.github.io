@@ -23,6 +23,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
 <script>hljs.initHighlightingOnLoad();</script>
 
@@ -73,12 +76,37 @@
 <main class = "content" role="main">
 <div class="body-text list-text">
 <h1><span class="title">A Paper A Day</span></h1>
+<h2 id="2020-11-04-complted-on-2020-11-05">2020-11-04 [Complted on 2020-11-05]<a href="#2020-11-04-complted-on-2020-11-05" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<ul>
+<li>Three network sampling methods: node sampling, link sampling, and snowball sampling.
+<ul>
+<li>Node sampling: select randomly several nodes, and links between these selected nodes are included in the smaple;</li>
+<li>Link sampling: similar to node sampling, select randomly a bunch of links, and nodes attached to these links are included in the sample;</li>
+<li>Randomly select a seed node and do a breath-first-search until the number of selected nodes reaches expectation. Only links between selected nodes are included in the sample.</li>
+</ul>
+</li>
+</ul>
+<p><div class="renminder">
+I need to brush up on Breadth-First-Search. Forgot its algorithm.
+</div></p>
+<ul>
+<li>
+<p>Power-law degree distribution usually is plotted as a CCDF (complementary cumulative probability function). Yeah, I missed this point when I first learned power-law.</p>
+</li>
+<li>
+<p>Clustering coefficient of a node:</p>
+</li>
+</ul>
+<p><code>$$\frac{Number of existing links between its neighbors}{Number of all possible links between its neighbors}$$</code></p>
+<p>Its describes how well its neighbors are connected.</p>
+<p>The clustering coefficient of a network is the mean of all nodes&rsquo; clustering coefficient. It stands for the probability of a link between two randomly selected nodes that share a neighbor.</p>
+<p>It&rsquo;s also good to examine the distribution of clustering coefficient within a network.</p>
 <h2 id="2020-11-03">2020-11-03<a href="#2020-11-03" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
 <ol>
 <li>Finished Steegen et al. (2016)</li>
 </ol>
 <blockquote>
-<p>In a more complete analysis, the multiverse of data sets could be corssed with the multiverse of models to further reveal the multiverse of statistical results.</p>
+<p>In a more complete analysis, the multiverse of data sets could be crossed with the multiverse of models to further reveal the multiverse of statistical results.</p>
 </blockquote>
 <p>This is so true. I have several thoughts about this point:</p>
 <p>First, it shows how arbitrary the choices in data processing and moldel picking are, and therefore, how arbitrary the statistical results might be. When I was doing research on selfie, I also had the same feeling. When I was doing the content analysis study comparing the differences in White women&rsquo;s selfies on Twitter and Chinese women&rsquo;s selfies on Weibo, I had to made so many arbitrary choices: whether to drop an item from a construct, whether to combine items, should I use a <em>t</em> test or nonparametric test, etc.</p>
@@ -173,7 +201,7 @@ When only one choice is clearly and unambiguously the most appropriate one, vari
 </ul>
 <h3 id="thought">Thought<a href="#thought" class="header-anchor" ariaLabel="Anchor"> # </a></h3>
 <p>As the <em>Editorial Expression of Concern and Correction</em> said, it is &ldquo;a matter of concern&rdquo; that what we see on social media is to such a large extent manipulated by tech giants. As the study found, the content we see has an effect on our well-being. Even if they don&rsquo;t, users should be able to know what they are going through, rather than becoming a subject in an experiment we are ignorant of.</p>
-<h2 id="2020-10-28-edited-on-2020-10-29">2020-10-28 [Edited on 2020-10-29]<a href="#2020-10-28-edited-on-2020-10-29" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<h2 id="2020-10-28-completed-on-2020-10-29">2020-10-28 [Completed on 2020-10-29]<a href="#2020-10-28-completed-on-2020-10-29" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
 <p>Continue with Kramer et al. (2014)</p>
 <h3 id="measurements--measures">Measurements &amp; Measures<a href="#measurements--measures" class="header-anchor" ariaLabel="Anchor"> # </a></h3>
 <ul>
