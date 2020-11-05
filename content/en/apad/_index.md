@@ -2,27 +2,35 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2020-11-05
+
+It's insightful to examine the distribution of clustering coefficient of different degrees. The clustering coefficient of degree `$k$` is represented as `$C(k)$`.
+
+Degree of separation is the mean distance between two nodes.
+
+It surprised me that Professor YY used red and green for visualizations, which is unfriendly for color blind people. 
+
+PP. 4-9
+
 ## 2020-11-04 [Complted on 2020-11-05]
 - Three network sampling methods: node sampling, link sampling, and snowball sampling. 
   - Node sampling: select randomly several nodes, and links between these selected nodes are included in the smaple;
   - Link sampling: similar to node sampling, select randomly a bunch of links, and nodes attached to these links are included in the sample;
   - Randomly select a seed node and do a breath-first-search until the number of selected nodes reaches expectation. Only links between selected nodes are included in the sample. 
 
-{{<block class="renminder">}}
-I need to brush up on Breadth-First-Search. Forgot its algorithm. 
+{{<block class="reminder">}}
+I need to brush up on Breadth-First-Search. Forgot its algorithm already. 
 {{<end>}}
 
 - Power-law degree distribution usually is plotted as a CCDF (complementary cumulative probability function). Yeah, I missed this point when I first learned power-law. 
 
 - Clustering coefficient of a node: 
 
-`$$\frac{Number of existing links between its neighbors}{Number of all possible links between its neighbors}$$`
+`$$\frac{Number \ of \ existing \ links \ between \ its \ neighbors}{Number \ of \ all \ possible \ links \ between \ its \ neighbors}$$`
 
 Its describes how well its neighbors are connected.
 
-The clustering coefficient of a network is the mean of all nodes' clustering coefficient. It stands for the probability of a link between two randomly selected nodes that share a neighbor.
-
-It's also good to examine the distribution of clustering coefficient within a network. 
+The clustering coefficient of a network is the mean of all nodes' clustering coefficient. It stands for the probability of a link between two randomly selected nodes that share a neighbor. 
 
 ## 2020-11-03
 1. Finished Steegen et al. (2016)
