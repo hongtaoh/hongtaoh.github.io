@@ -13,7 +13,7 @@ body {
   image-rendering: -webkit-optimize-contrast;
 } 
 
-/* IPython split style */
+/* Two columns */
 div.splitbox {
   width:100%; 
   overflow:auto;

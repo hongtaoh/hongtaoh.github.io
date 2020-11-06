@@ -2,9 +2,23 @@
 title: A Paper A Day
 type : nolisting
 ---
-## 2020-11-05
+## 2020-11-06
+1. Finished Ahn et al. (2007) 
 
-It's insightful to examine the distribution of clustering coefficient of different degrees. The clustering coefficient of degree `$k$` is represented as `$C(k)$`.
+The second half of the paper is difficult for me, so I skimmed through it. 
+
+2. Schich et al. (2014). A network framework of cultural history. *Science, 345*(6196), 558-562.
+
+I skimmed through it. 
+
+3. Salehi, N., & Bernstein, M. S. (2018). Hive: Collective design through network rotation. *Proceedings of the ACM on Human-Computer Interaction, 2*(CSCW), 1-26.
+
+P. 1.
+
+## 2020-11-05
+Continue with Ahn et al. (2007)
+
+It's insightful to examine the distribution of clustering coefficient of different degrees. The clustering coefficient of degree `$ k $` is represented as `$ C(k) $`.
 
 Degree of separation is the mean distance between two nodes.
 
@@ -13,6 +27,8 @@ It surprised me that Professor YY used red and green for visualizations, which i
 PP. 4-9
 
 ## 2020-11-04 [Complted on 2020-11-05]
+Continue with Ahn et al. (2007)
+
 - Three network sampling methods: node sampling, link sampling, and snowball sampling. 
   - Node sampling: select randomly several nodes, and links between these selected nodes are included in the smaple;
   - Link sampling: similar to node sampling, select randomly a bunch of links, and nodes attached to these links are included in the sample;
