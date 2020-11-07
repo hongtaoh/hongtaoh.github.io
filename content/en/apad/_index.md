@@ -2,6 +2,12 @@
 title: A Paper A Day
 type : nolisting
 ---
+## 2017-11-07
+
+- To boost cooperative work, intermix people, not ideas. 
+
+PP. 1-10
+
 ## 2020-11-06
 1. Finished Ahn et al. (2007) 
 
