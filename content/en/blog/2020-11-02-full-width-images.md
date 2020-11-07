@@ -23,11 +23,11 @@ Add the following[^1] to your website stylesheet:
 
 Then, when using Hugo's [built-in `figure` shortcode](https://gohugo.io/templates/shortcode-templates/#single-named-example-image), include `class="fullwidth"` :
 
-{{&lt;figure src=&quot;/media/sgs/sgs-hostel.jpg&quot; caption=&quot;At a hostel in Interlaken, Switzerland, May 2017, by Hongtao Hao&quot; class=&quot;fullwidth&quot;&gt;}}
+{{&lt;figure src=&quot;/media/sgs/sgs-hostel.jpg&quot; caption=&quot;At a hostel in Interlaken, Switzerland, by Hongtao Hao in May 2017&quot; class=&quot;fullwidth&quot;&gt;}}
 
 The result is like this:
 
-{{<figure src="/media/sgs/sgs-hostel.jpg" caption="On the balcony of a hostel in Interlaken, Switzerland, May 2017, by Hongtao Hao" class="fullwidth">}}
+{{<figure src="/media/sgs/sgs-hostel.jpg" caption="On the balcony of a hostel in Interlaken, Switzerland, by Hongtao Hao in May 2017" class="fullwidth">}}
 
 
 [^1]: It's not my creation, but the codes from [this tutorial](https://visionscarto.net/observable-jekyll/).
