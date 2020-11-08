@@ -2,7 +2,17 @@
 title: A Paper A Day
 type : nolisting
 ---
-## 2017-11-07
+## 2020-11-08
+1. Finished Salehi & Bernstein (2018)
+
+This paper is a little bit too long. I skimmed through the last 2/3 of it. 
+
+2. Ahn, Y. Y., Ahnert, S. E., Bagrow, J. P., & Barabási, A. L. (2011). Flavor network and the principles of food pairing. *Scientific reports, 1,* 196.
+
+Main Takeaway: North American and European cuisine tends to combine ingredients with shared flavor but East Asian dishes don't. 
+
+## 2020-11-07
+Continue with Salehi & Bernstein (2018)
 
 - To boost cooperative work, intermix people, not ideas. 
 

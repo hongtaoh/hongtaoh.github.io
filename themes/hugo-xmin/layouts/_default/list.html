@@ -14,7 +14,7 @@
 {{if not .IsHome}}
 <ul>
   {{ $pages := .Pages }}
-  {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
+  <!--{{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}-->
   {{ range (where $pages "Section" "!=" "") }}
   <p>
   <span class="date">{{ .Date.Format "2006-01-02" }}</span>
