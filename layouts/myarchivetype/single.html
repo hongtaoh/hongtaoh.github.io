@@ -1,5 +1,8 @@
 {{ partial "header.html" . }}
 
+<main class = "content" role="main">
+
+<div class="body text list-text">
 {{ .Content}}
 
 <ul>
@@ -10,5 +13,6 @@
   </li>
   {{ end }}
 </ul>
-
+</div>
+</main>
 {{ partial "footer.html" . }}

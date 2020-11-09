@@ -1,6 +1,6 @@
 ---
 title: A Paper A Day
-type : nolisting
+type : apad
 ---
 ## 2020-11-08
 1. Finished Salehi & Bernstein (2018)
