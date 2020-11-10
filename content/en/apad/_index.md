@@ -2,13 +2,21 @@
 title: A Paper A Day
 type : apad
 ---
+## 2020-11-10
+
+Guilbeault, D., & Centola, D. (2020). Networked collective intelligence improves dissemination of scientific information regarding smoking risks. *Plos one, 15*(2), e0227813.
+
+Experimental Design: 1,600 people were assigned to three groups
+
+- Control groups consist of 40 smokers / 40 non-smokers. 
+
 ## 2020-11-09
 
 Centola (2020). Why Social Media Makes Us More Polarized and How to Fix It. Retrieved from https://www.scientificamerican.com/article/why-social-media-makes-us-more-polarized-and-how-to-fix-it/.
 
 >The more equity in people's social networks, the less biased and more informed groups will become--even when those groups start off with highly partisan opinions. 
 
-- The study design was quite simple. We believed that if we are put in a group consists of likeminded people (so called "echo chambers"), we probably won't develop ideas that are in the opposite side of the spectrum. However, two social media experiments found the opposite results. In one study, Democrats and Rebublicans were put into "echo chambers", and discussed polarizing issues such as gun control and abortion (Well, the authors did not mention abortion. I made it up). In another study that ensued, smokers and nonsmokers were also put into "echo chambers" and discussed the risks of cigatrette smoking. The results were similar: members in echo chambers moved towards a more moderate opinion and a more accurate understanding of the topics. 
+- The study design was quite simple. We believed that if we are put in a group consists of likeminded people (so called "echo chambers"), we probably won't develop ideas that are in the opposite side of the spectrum. However, two social media experiments found the opposite results. In one study, Democrats and Rebublicans were put into "echo chambers", and discussed polarizing issues such as gun control and abortion (Well, the authors did not mention abortion. I made it up). In another study that ensued, smokers and nonsmokers were also put into "echo chambers" and estimated the risks of cigatrette smoking. The results were similar: members in echo chambers moved towards a more moderate opinion and a more accurate understanding of the topics. 
 
 - Social media of our time exacerbates rather than eradicates partisan bias, because it's centralized, rather than egalitarian. In a centralized network, influencers filter or even block information. For example, if an influencer spreads a piece of wrong information, it might end up becoming an entrenched false belief in the whole community. In contract, in an egalitarian network, each person has an equal say, and ideas are weighed by its own quality rather than the influence of the people behind them. 
 
