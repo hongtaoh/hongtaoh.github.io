@@ -1,5 +1,5 @@
 ---
-title: Build A Website Using Hugo without Programming Skills
+title: How to Build a Website Using Hugo without Programming Skills
 date: 2020-06-05T09:26:26-04:00
 author: Hongtao Hao
 slug: get-started-with-hugo
