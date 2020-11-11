@@ -2,13 +2,33 @@
 title: A Paper A Day
 type : apad
 ---
-## 2020-11-10
+## 2020-11-11
+Continue with Guilbeault & Centola. (2020)
 
+Design: 
+1,600 people were recruited via Amazon’s Mechanical Turk. There are 10 independent trials in the experiment. Each trial involves 160 participants who were randomly assigned to the following three groups:
+   1. Control group: 40 smokers / 40 non-smokers, so 80 people in each trail. 
+   2. Anonymous network group: 40 people (20 smokers and 20 nonsmokers) were embedded into a random social network that is decentralized and anonymous.
+   3. Informative network group: 40 people (20 smokers and 20 nonsmokers) were put into a social network where they could see the usernames and the smoking status of their four network neighbors. 
+
+Procedure: 
+Participants were shown an [anti-smoking advertisment](https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0227813.g002) and were asked to estimate the health risk of smoking by answering this question: How many people (in millions) are predicted to die from tobacco use in developed countries, in 2030? Participants were incentivized by monetary reward awarded based on the accuracy of their final answer. Changes in answers' accuracy were measured by the difference between Round 1 and Round 3. 
+
+- Round 1: Participants in all group provided the answer independently. 
+- Round 2: Group 1 revise their estimates with independent reflection. Group 2 were shown the average response of their contacts and then revise their estimates. Group 3 were also shown the average response by their four contacts. They were also shown the usernames and the smoking status of their contacts. 
+
+Results:
+
+- Both smokers and nonsmokers were inaccurate at estimating the risk of smoking;
+- No significant improvement in estimate accuracy in the control group. 
+- The decrease in estimate error in group 2 was significantly greater than both smoker and nonsmokers in the control group;
+- The decrease in estimate error in group 3 was significantly greater than group 2. Specifically, this decrease is ten times greater than both smoker and nonsmoker in the control group. 
+
+
+## 2020-11-10
 Guilbeault, D., & Centola, D. (2020). Networked collective intelligence improves dissemination of scientific information regarding smoking risks. *Plos one, 15*(2), e0227813.
 
-Experimental Design: 1,600 people were assigned to three groups
-
-- Control groups consist of 40 smokers / 40 non-smokers. 
+PP. 1-6
 
 ## 2020-11-09
 
@@ -331,7 +351,7 @@ Main takeaways:
 - "Female collaborations are more domestically oriented than are the collaborations of males from the same country"  (p. 213)
 
 
-My issue: How did the authors assign gender to each author? It seems to me that it's a very difficult job, especially when the names are of a non-Western origin. 
+My issue: How did the authors assign gender to each author? It seems to me a very daunting task, especially when the names are of a non-Western origin. 
 
 ## 2020-10-17
 
