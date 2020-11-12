@@ -8,7 +8,7 @@ type : nolisting
 
 - Learning D3.js through Scott Murray's [*Interactive Data Visualization for the Web, 2nd Ed.*](https://alignedleft.com/work/d3-book-2e), during which I'm helping improve and update Professor YY's [COVID-19 Data Visualization](https://github.com/covid19-data/covid19-data) project;
 
-- Creating web-based visualizations for the [final project](/files/dviz_olympics.pdf/) I did together with [Chris Fang](https://www.linkedin.com/in/chriszihuifang) for Professor YY's [Data Visualization](http://yyahn.com/dviz-course/) course;
+- ~~Creating web-based visualizations for the [final project](/files/dviz_olympics.pdf/) I did together with [Chris Fang](https://www.linkedin.com/in/chriszihuifang) for Professor YY's [Data Visualization](http://yyahn.com/dviz-course/) course~~; Done! Check it out [here](https://olymvis.hongtaoh.com/).
 
 - Learning the online version of [Info-I606 *Network Science*](http://yongyeol.com/teaching/2020SP_netsci_syllabus.pdf) taught by Professor YY, for which I am trying to create a tutorial on network sciecne for beginners like me, using [Yihui](https://yihui.org/)'s amazing [Bookdown](https://bookdown.org/yihui/bookdown/) pacakage;
 
