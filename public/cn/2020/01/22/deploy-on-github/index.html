@@ -144,7 +144,7 @@ Table of Contents:
 </ul>
 <p>打开 Github, 新建一个仓库。仓库名称为 你的 Github 用户名.github.io。比如，我的 Github 用户名为 hhao1992, 我需要在 Repository name 这里输入：hhao1992.github.io。Description 这里写入自己以及别人可以理解的描述即可。然后选择 Public。随后的 Initialize this repository with a README ，暂时不要选。全部设置好之后，点击 Create repository 。设置如下图：</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a href="/media/gitpage/new-repo-setting.png"  itemprop="contentUrl"> 
+    <a target="_blank" href="/media/gitpage/new-repo-setting.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/gitpage/new-repo-setting.png"
             
@@ -159,7 +159,7 @@ Table of Contents:
 </figure>
 <p>然后，你需要点击如下页面中右侧的那个按钮，复制这个仓库的地址</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a href="/media/gitpage/copy-address.png"  itemprop="contentUrl"> 
+    <a target="_blank" href="/media/gitpage/copy-address.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/gitpage/copy-address.png"
             
@@ -184,7 +184,7 @@ git remote add origin https://github.com/hhao1992/hhao1992.github.io.git <span s
 git push -u origin master
 </code></pre></div><p>其实这也就是刚刚创建的这个仓库底下 Github 提供的代码：</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a href="/media/gitpage/first-code.png"  itemprop="contentUrl"> 
+    <a target="_blank" href="/media/gitpage/first-code.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/gitpage/first-code.png"
             
@@ -201,7 +201,7 @@ git push -u origin master
 <p>第二步，我们需要回到 Github, 建立一个 sources<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 分支。</p>
 <p>回到我们刚才创建的仓库，刷新一下页面。你会看到在 1 commit 底下有一个关于 Branch 的选择，如下图：</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a href="/media/gitpage/branch.png"  itemprop="contentUrl"> 
+    <a target="_blank" href="/media/gitpage/branch.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/gitpage/branch.png"
             
@@ -330,7 +330,7 @@ git subtree push --prefix<span style="color:#666">=</span>public <span style="co
 </span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master
 </code></pre></div><p>不出意外的话，回到我们刚才建的 Github 仓库，点击仓库下面那一行最右边的 Settings, 在出现的页面的底部，可以看到如下内容：</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a href="/media/gitpage/success.png"  itemprop="contentUrl"> 
+    <a target="_blank" href="/media/gitpage/success.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/gitpage/success.png"
             
@@ -369,7 +369,7 @@ git subtree push --prefix<span style="color:#666">=</span>public <span style="co
 <p>其中，185.199.108.153 这个 A Record 的 TTL 选 30 min，其他填 Automatic</p>
 <p>然后，加一个 CNAME Record, Host 填 www ， value 填 <code>&lt;username&gt;.github.io</code>，比如我的填 hhao1992.github.io, 随后 TTL 选 30 min。设置如下：</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a href="https://namecheap.simplekb.com//SiteContents/2-7C22D5236A4543EB827F3BD8936E153E/media/2018-06-20_1804.png"  itemprop="contentUrl"> 
+    <a target="_blank" href="https://namecheap.simplekb.com//SiteContents/2-7C22D5236A4543EB827F3BD8936E153E/media/2018-06-20_1804.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="https://namecheap.simplekb.com//SiteContents/2-7C22D5236A4543EB827F3BD8936E153E/media/2018-06-20_1804.png"
             
@@ -387,7 +387,7 @@ git subtree push --prefix<span style="color:#666">=</span>public <span style="co
 
  给出了方法。到 <code>&lt;username&gt;/&lt;username&gt;.github.io</code> 这个仓库，找到 Settings, 然后在 GitHub Pages 中的 Custom domain 这里填入我们自己的域名即可。</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a href="https://help.github.com/assets/images/help/pages/save-custom-domain.png"  itemprop="contentUrl"> 
+    <a target="_blank" href="https://help.github.com/assets/images/help/pages/save-custom-domain.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="https://help.github.com/assets/images/help/pages/save-custom-domain.png"
             

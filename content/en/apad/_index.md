@@ -2,20 +2,37 @@
 title: A Paper A Day
 type : apad
 ---
+## 2020-11-12
+Finished Guilbeault & Centola. (2020)
+
+>...allowing smokers and nonsmokers to exchange views while aware of each other's smoking status effectively reduced bias both in their evaluation of health risks, and in their beliefs about each other's capacity to accurately interpret scientific data about the health risks of tabaco use. 
+
+An interesting finding in this study is that interacting in social networks (which was limited to numeric estimates in the study), smokers and nonsmokers did not differ significantly in their perceptions of smokers' ability to understand health information associated with smoking.
+
 ## 2020-11-11
 Continue with Guilbeault & Centola. (2020)
 
-Design: 
+Study design: 
+
 1,600 people were recruited via Amazon’s Mechanical Turk. There are 10 independent trials in the experiment. Each trial involves 160 participants who were randomly assigned to the following three groups:
-   1. Control group: 40 smokers / 40 non-smokers, so 80 people in each trail. 
-   2. Anonymous network group: 40 people (20 smokers and 20 nonsmokers) were embedded into a random social network that is decentralized and anonymous.
-   3. Informative network group: 40 people (20 smokers and 20 nonsmokers) were put into a social network where they could see the usernames and the smoking status of their four network neighbors. 
+
+1. Control group: 40 smokers / 40 non-smokers, so 80 people in each trail. 
+
+2. Anonymous network group: 40 people (20 smokers and 20 nonsmokers) were embedded into a random social network that is decentralized and anonymous.
+
+3. Informative network group: 40 people (20 smokers and 20 nonsmokers) were put into a social network where they could see the usernames and the smoking status of their four network neighbors. 
 
 Procedure: 
-Participants were shown an [anti-smoking advertisment](https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0227813.g002) and were asked to estimate the health risk of smoking by answering this question: How many people (in millions) are predicted to die from tobacco use in developed countries, in 2030? Participants were incentivized by monetary reward awarded based on the accuracy of their final answer. Changes in answers' accuracy were measured by the difference between Round 1 and Round 3. 
+
+Participants were shown an [anti-smoking advertisment](https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0227813.g002) and were asked to estimate the health risk of smoking by answering this question: How many people (in millions) are predicted to die from tobacco use in developed countries, in 2030? 
+
+Participants were incentivized by monetary reward awarded based on the accuracy of their final answer. Changes in answers' accuracy were measured by the difference between Round 1 and Round 3. 
 
 - Round 1: Participants in all group provided the answer independently. 
+
 - Round 2: Group 1 revise their estimates with independent reflection. Group 2 were shown the average response of their contacts and then revise their estimates. Group 3 were also shown the average response by their four contacts. They were also shown the usernames and the smoking status of their contacts. 
+
+- Round 3: Same as in Round 2. 
 
 Results:
 
@@ -36,7 +53,9 @@ Centola (2020). Why Social Media Makes Us More Polarized and How to Fix It. Retr
 
 >The more equity in people's social networks, the less biased and more informed groups will become--even when those groups start off with highly partisan opinions. 
 
-- The study design was quite simple. We believed that if we are put in a group consists of likeminded people (so called "echo chambers"), we probably won't develop ideas that are in the opposite side of the spectrum. However, two social media experiments found the opposite results. In one study, Democrats and Rebublicans were put into "echo chambers", and discussed polarizing issues such as gun control and abortion (Well, the authors did not mention abortion. I made it up). In another study that ensued, smokers and nonsmokers were also put into "echo chambers" and estimated the risks of cigatrette smoking. The results were similar: members in echo chambers moved towards a more moderate opinion and a more accurate understanding of the topics. 
+- We believed that if we are put in a group consists of likeminded people (so called "echo chambers"), we probably won't develop ideas that are in the opposite side of the spectrum. However, two social media experiments found the opposite results. In a study, Democrats and Rebublicans were put into "echo chambers", and discussed polarizing issues such as gun control and abortion (Well, the authors did not mention abortion. I made it up). Both groups ended up moving toward a more moderate view of the topics. 
+
+- In another study, smokers and nonsmokers estimated the risks of cigatrette smoking. After the study, both groups had a more accurate understanding of the topic, and a higher opionion of the other group.
 
 - Social media of our time exacerbates rather than eradicates partisan bias, because it's centralized, rather than egalitarian. In a centralized network, influencers filter or even block information. For example, if an influencer spreads a piece of wrong information, it might end up becoming an entrenched false belief in the whole community. In contract, in an egalitarian network, each person has an equal say, and ideas are weighed by its own quality rather than the influence of the people behind them. 
 

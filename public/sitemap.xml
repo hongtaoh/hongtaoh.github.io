@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hongtaoh.github.io/en/2020/11/11/new-tab-in-shortcode/</loc>
+    <lastmod>2020-11-11T22:23:33-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hongtaoh.github.io/en/2020/11/03/shortcode-blogdown/</loc>
     <lastmod>2020-11-03T17:23:37-05:00</lastmod>
   </url>
@@ -219,7 +224,7 @@
   
   <url>
     <loc>https://hongtaoh.github.io/en/2020/06/05/get-started-with-hugo/</loc>
-    <lastmod>2020-11-03T17:31:52-05:00</lastmod>
+    <lastmod>2020-11-11T14:50:00-05:00</lastmod>
   </url>
   
   <url>
@@ -479,7 +484,7 @@
   
   <url>
     <loc>https://hongtaoh.github.io/en/apad/</loc>
-    <lastmod>2020-11-10T14:31:26-05:00</lastmod>
+    <lastmod>2020-11-11T14:50:00-05:00</lastmod>
   </url>
   
   <url>
@@ -505,6 +510,10 @@
   <url>
     <loc>https://hongtaoh.github.io/en-vitae/</loc>
     <lastmod>2020-05-13T17:12:56-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/projects/</loc>
   </url>
   
   <url>

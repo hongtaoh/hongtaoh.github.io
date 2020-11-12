@@ -1,5 +1,5 @@
 ---
-title: How to Open Link in New Tab in Hugo
+title: How to Open Links in New Tab in Hugo
 date: 2020-06-20T09:12:03-04:00
 author: Hongtao Hao
 slug: new-tab-in-hugo
