@@ -28,7 +28,7 @@ According to [this post](https://www.overleaf.com/learn/latex/XeLaTeX), instead 
 ```latex
 \setromanfont{first font choice}
 \setsansfont{second font choice}
-\setmonofont{thir font choice}
+\setmonofont{third font choice}
 ```
 
 The second choice can be activated by `\ssfamily`, and the third by `\begin{verbatim} ... \end{verbatim}`. Read [the post](https://www.overleaf.com/learn/latex/XeLaTeX) for more info. 
