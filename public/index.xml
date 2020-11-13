@@ -11,6 +11,29 @@
     
     
     <item>
+      <title>How to Contribute to a GitHub Project by Creating a New Branch</title>
+      <link>https://hongtaoh.github.io/en/2020/11/13/git-new-branch/</link>
+      <pubDate>Fri, 13 Nov 2020 10:34:27 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/11/13/git-new-branch/</guid>
+      <description>I was invited to an organization account on GitHub. To edit a repository, I thought I could just git clone it, make changes, and then simply git push it. No. I didn&amp;rsquo;t have the access.
+Then, how to contribute? I first thoguht about Fork. But Isabel Constantino and Professor YY recommended creating a new branch, making changes, and submitting a pull request.
+I then wondered: what&amp;rsquo;s the difference between forking and branch?</description>
+    </item>
+    
+    <item>
+      <title>How to Use Different Fonts in Overleaf</title>
+      <link>https://hongtaoh.github.io/en/2020/11/13/overleaf-latex-fonts/</link>
+      <pubDate>Fri, 13 Nov 2020 10:07:19 -0500</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/2020/11/13/overleaf-latex-fonts/</guid>
+      <description>Two steps Using different fonts is much easier than I thought. It involves two steps:
+  Change the Compiler from LaTex or pdfLatex to either XeLaTex or LuaLaTex. To make this change, click the Menu button on the upper-left corner of your Overleaf project. In Settings, you&amp;rsquo;ll see a drop list in Compiler.
+  Add these two lines:
+  \usepackage{fontspec} \setmainfont{Choose Your Own Font} Where to find the fonts that were supported via fontspec?</description>
+    </item>
+    
+    <item>
       <title>How to Open Shortcode Links in a New Tab in Hugo</title>
       <link>https://hongtaoh.github.io/en/2020/11/11/new-tab-in-shortcode/</link>
       <pubDate>Wed, 11 Nov 2020 22:23:33 -0500</pubDate>

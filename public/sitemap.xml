@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hongtaoh.github.io/en/2020/11/13/git-new-branch/</loc>
+    <lastmod>2020-11-13T10:34:27-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/11/13/overleaf-latex-fonts/</loc>
+    <lastmod>2020-11-13T10:07:19-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hongtaoh.github.io/en/2020/11/11/new-tab-in-shortcode/</loc>
-    <lastmod>2020-11-11T22:23:33-05:00</lastmod>
+    <lastmod>2020-11-12T15:06:24-05:00</lastmod>
   </url>
   
   <url>
@@ -204,7 +214,7 @@
   
   <url>
     <loc>https://hongtaoh.github.io/en/2020/06/20/new-tab-in-hugo/</loc>
-    <lastmod>2020-10-07T12:11:30-04:00</lastmod>
+    <lastmod>2020-11-12T15:06:24-05:00</lastmod>
   </url>
   
   <url>
@@ -474,7 +484,7 @@
   
   <url>
     <loc>https://hongtaoh.github.io/</loc>
-    <lastmod>2020-10-23T15:58:13-04:00</lastmod>
+    <lastmod>2020-11-12T15:06:24-05:00</lastmod>
   </url>
   
   <url>
@@ -484,7 +494,7 @@
   
   <url>
     <loc>https://hongtaoh.github.io/en/apad/</loc>
-    <lastmod>2020-11-11T14:50:00-05:00</lastmod>
+    <lastmod>2020-11-12T15:06:24-05:00</lastmod>
   </url>
   
   <url>
@@ -514,11 +524,12 @@
   
   <url>
     <loc>https://hongtaoh.github.io/en/projects/</loc>
+    <lastmod>2020-11-12T15:06:24-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://hongtaoh.github.io/en/now/</loc>
-    <lastmod>2020-10-22T17:42:30-04:00</lastmod>
+    <lastmod>2020-11-12T15:06:24-05:00</lastmod>
   </url>
   
   <url>

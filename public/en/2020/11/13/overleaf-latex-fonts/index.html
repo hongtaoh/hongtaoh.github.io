@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to Open Shortcode Links in a New Tab in Hugo - 郝鸿涛::Hongtao Hao</title>
+    <title>How to Use Different Fonts in Overleaf - 郝鸿涛::Hongtao Hao</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
@@ -76,10 +76,10 @@
 <main class = "content" role="main">
 <div style="text-align: center">
 
-<h1 class="article-title">How to Open Shortcode Links in a New Tab in Hugo</h1>
+<h1 class="article-title">How to Use Different Fonts in Overleaf</h1>
 
 <p>Hongtao Hao 
- / 2020-11-11 </p>
+ / 2020-11-13 </p>
 
 <hr/>
 </div>
@@ -92,7 +92,7 @@
   
   
   
-  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-11-11-new-tab-in-figure-shortcode.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-11-13-overleaf-fonts.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
   </a>
   
   
@@ -104,21 +104,40 @@
 
 
 <div class="body-text list-text">
-<p>I&rsquo;ve talked about how to open links in new tab in Hugo <a href="/en/2020/06/20/new-tab-in-hugo">here</a>
+<h2 id="two-steps">Two steps<a href="#two-steps" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>Using different fonts is much easier than I thought. It involves two steps:</p>
+<ol>
+<li>
+<p>Change the <strong>Compiler</strong> from <code>LaTex</code> or <code>pdfLatex</code> to either <code>XeLaTex</code> or <code>LuaLaTex</code>. To make this change, click the <strong>Menu</strong> button on the upper-left corner of your Overleaf project. In <code>Settings</code>, you&rsquo;ll see a drop list in <code>Compiler</code>.</p>
+</li>
+<li>
+<p>Add these two lines:</p>
+</li>
+</ol>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#008000;font-weight:bold">\usepackage</span><span style="color:#008000">{</span>fontspec<span style="color:#008000">}</span>
+<span style="color:#008000;font-weight:bold">\setmainfont</span><span style="color:#008000">{</span>Choose Your Own Font<span style="color:#008000">}</span>
+</code></pre></div><p>Where to find the fonts that were supported via <code>fontspec</code>? Read <a href="https://www.overleaf.com/learn/latex/Questions/Which%20OTF%20or%20TTF%20fonts%20are%20supported%20via%20fontspec%3F#Chinese" target="_blank" rel="noreferrer noopener">this list</a>
 
-. But how can we open links in new tab in a Hugo shortcode, for example, Hugo&rsquo;s <a href="https://gohugo.io/content-management/shortcodes/#figure" target="_blank" rel="noreferrer noopener">built-in shortcode for figure</a>
+, which I think is quite comprehensive. It contains many modern fonts, including those you can find in Google fonts.</p>
+<h2 id="several-fonts-in-a-document">Several fonts in a document<a href="#several-fonts-in-a-document" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>According to <a href="https://www.overleaf.com/learn/latex/XeLaTeX" target="_blank" rel="noreferrer noopener">this post</a>
 
-?</p>
-<p>I found the solution <a href="https://discourse.gohugo.io/t/how-to-open-shortcode-links-in-a-new-tab/22727/2" target="_blank" rel="noreferrer noopener">here</a>
+, instead of using <code>\setmainfont{Choose Your Own Font}</code>, you can do this:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#008000;font-weight:bold">\setromanfont</span><span style="color:#008000">{</span>first font choice<span style="color:#008000">}</span>
+<span style="color:#008000;font-weight:bold">\setsansfont</span><span style="color:#008000">{</span>second font choice<span style="color:#008000">}</span>
+<span style="color:#008000;font-weight:bold">\setmonofont</span><span style="color:#008000">{</span>thir font choice<span style="color:#008000">}</span>
+</code></pre></div><p>The second choice can be activated by <code>\ssfamily</code>, and the third by <code>\begin{verbatim} ... \end{verbatim}</code>. Read <a href="https://www.overleaf.com/learn/latex/XeLaTeX" target="_blank" rel="noreferrer noopener">the post</a>
 
-. Thanks to ju52&rsquo;s answer.</p>
-<p>First, copy the <a href="https://gohugo.io/templates/shortcode-templates/#single-named-example-image" target="_blank" rel="noreferrer noopener">original codes</a>
+ for more info.</p>
+<h2 id="your-own-fonts">Your own fonts<a href="#your-own-fonts" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>If your favorate font is not found <a href="https://www.overleaf.com/learn/latex/Questions/Which%20OTF%20or%20TTF%20fonts%20are%20supported%20via%20fontspec%3F#Chinese" target="_blank" rel="noreferrer noopener">the list</a>
 
- of the figure shortcode. Paste them in a new html file named <code>figure.html</code>. Place this file in <code>layouts/shortcodes</code>. Create a folder named <code>shortcodes</code> within the <code>layouts</code> folder if you don&rsquo;t have it yet.</p>
-<p>Then, change this line <code>{{ with .Get &quot;link&quot;}}&lt;a href=&quot;{{.}}&quot;&gt;{{ end }}</code> to <code>{{ with .Get &quot;link&quot;}}&lt;a href=&quot;{{.}}&quot; target=&quot;_blank&quot;&gt;{{ end }}</code>.</p>
+, you can refer to <a href="https://www.overleaf.com/learn/latex/XeLaTeX" target="_blank" rel="noreferrer noopener">this post</a>
+
+ to upload and your own fonts.</p>
 
 
-<p style="color:#777;">Last modified on 2020-11-12</p>
+<p style="color:#777;">Last modified on 2020-11-13</p>
 
 </div>
 <a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>

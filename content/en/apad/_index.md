@@ -5,9 +5,9 @@ type : apad
 ## 2020-11-12
 Finished Guilbeault & Centola. (2020)
 
->...allowing smokers and nonsmokers to exchange views while aware of each other's smoking status effectively reduced bias both in their evaluation of health risks, and in their beliefs about each other's capacity to accurately interpret scientific data about the health risks of tabaco use. 
+>... allowing smokers and nonsmokers to exchange views while aware of each other's smoking status effectively reduced bias both in their evaluation of health risks, and in their beliefs about each other's capacity to accurately interpret scientific data about the health risks of tabaco use. 
 
-An interesting finding in this study is that interacting in social networks (which was limited to numeric estimates in the study), smokers and nonsmokers did not differ significantly in their perceptions of smokers' ability to understand health information associated with smoking.
+An interesting finding in this study is that interacting in social networks (which was limited to numeric estimates in the study), smokers and nonsmokers did not differ significantly in their perceptions of smokers' ability to understand health information associated with smoking. This means that biases were reduced. 
 
 ## 2020-11-11
 Continue with Guilbeault & Centola. (2020)
@@ -30,7 +30,7 @@ Participants were incentivized by monetary reward awarded based on the accuracy 
 
 - Round 1: Participants in all group provided the answer independently. 
 
-- Round 2: Group 1 revise their estimates with independent reflection. Group 2 were shown the average response of their contacts and then revise their estimates. Group 3 were also shown the average response by their four contacts. They were also shown the usernames and the smoking status of their contacts. 
+- Round 2: Group 1 revised their estimates with independent reflection. Group 2 were shown the average response of their contacts and then revised their estimates. Group 3 were also shown the average response by their four contacts. They were also shown the usernames and the smoking status of their contacts. 
 
 - Round 3: Same as in Round 2. 
 
