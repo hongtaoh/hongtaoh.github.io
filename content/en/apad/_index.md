@@ -2,6 +2,15 @@
 title: A Paper A Day
 type : apad
 ---
+## 2020-11-13
+Popp, T. (2019). The Virality Paradox. *The Pennsylvania Gazette*. Retrieved from [https://ndg.asc.upenn.edu/wp-content/uploads/2019/05/Virality-Paradox.pdf](https://ndg.asc.upenn.edu/wp-content/uploads/2019/05/Virality-Paradox.pdf)
+
+- Even without digital tools to communicate with each other, rebel activities became more widespread in Syria. This is surprising because without telecommunication, Syrian rebels lost long ties that bridge groups far away from each other. That is, they had to rely on face-to-face communication to coordinate. How did it happen? When you get to understand that the way behaviors spread is different from that information diffuses, the answer will become clearer.
+
+- Information, messages, and ideas spread like epdemics whereas human behaviors don't. Contagions can be classified into two types: simple and complex. A single contact can start a simple contagion, but won't do the same for complex contagions, which involve efforts and costs, and require confirmation or reinforcement from multiple sources. 
+
+- Long ties are enough for simple contagions whereas complex contagions favor wide ties. How wide should a tie be for a behavior to spread varies. If reputation is at stake, the threshold will be higher. That's where complex contagions are very different from simple ones. In simple contagions, hubs get infected early and then it spreads the infections to many others. In a complex contagion, however, hubs usuallly have reputation at stake, so they are less, rather than more, likely to get infected. 
+
 ## 2020-11-12
 Finished Guilbeault & Centola. (2020)
 
@@ -49,7 +58,7 @@ PP. 1-6
 
 ## 2020-11-09
 
-Centola (2020). Why Social Media Makes Us More Polarized and How to Fix It. Retrieved from https://www.scientificamerican.com/article/why-social-media-makes-us-more-polarized-and-how-to-fix-it/.
+Centola (2020). Why Social Media Makes Us More Polarized and How to Fix It. Retrieved from [https://www.scientificamerican.com/article/why-social-media-makes-us-more-polarized-and-how-to-fix-it/](https://www.scientificamerican.com/article/why-social-media-makes-us-more-polarized-and-how-to-fix-it/).
 
 >The more equity in people's social networks, the less biased and more informed groups will become--even when those groups start off with highly partisan opinions. 
 
