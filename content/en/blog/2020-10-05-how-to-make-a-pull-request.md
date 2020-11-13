@@ -80,3 +80,7 @@ See details [here](https://docs.github.com/en/free-pro-team@latest/github/collab
 [Victorial Drake](https://github.com/victoriadrake) suggests opening an issue telling people what changes you are going to make before sending the pull request. This is because if others don't think your changes are necessary, then you don't need to send it in the first place. 
 
 [^1]: Please note that `$` and `>` are for demonstration only and you aren't supposed to type them in your Terminal. `$` is followed by what you want to type in Terminal, and `>` is followed by the results from Terminal.
+
+# Updating:
+
+When you are woking on your fork and find that it is several commits behind the original repo, please refer to [this post](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) to learn how to sync your fork with the original. When git asks you to explain how this merge is necessary, please follow [thise steps](https://stackoverflow.com/a/19085954). 
