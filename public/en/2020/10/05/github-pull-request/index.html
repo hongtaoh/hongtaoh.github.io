@@ -179,11 +179,21 @@ git push
 
  suggests opening an issue telling people what changes you are going to make before sending the pull request. This is because if others don&rsquo;t think your changes are necessary, then you don&rsquo;t need to send it in the first place.</p>
 <h1 id="updating">Updating:<a href="#updating" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
-<p>When you are woking on your fork and find that it is several commits behind the original repo, please refer to <a href="https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork" target="_blank" rel="noreferrer noopener">this post</a>
+<p>When you are woking on your fork and find that it is several commits behind the original repo, please refer to <a href="https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork" target="_blank" rel="noreferrer noopener">GitHub&rsquo;s offiical guide</a>
 
- to learn how to sync your fork with the original. When git asks you to explain how this merge is necessary, please follow <a href="https://stackoverflow.com/a/19085954" target="_blank" rel="noreferrer noopener">thise steps</a>
+ to sync your fork with the original. When git asks you to explain how this merge is necessary, please follow <a href="https://stackoverflow.com/a/19085954" target="_blank" rel="noreferrer noopener">thise steps</a>
 
 .</p>
+<p><div class="note">
+I tried <a href="https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork" target="_blank" rel="noreferrer noopener">GitHub&rsquo;s offiical guide</a>
+
+ but it seemed to complicate things. From <a href="https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/" target="_blank" rel="noreferrer noopener">this post</a>
+
+, I learned that maybe only two steps are enough:</p>
+<pre><code>git pull upstream master
+git push origin master
+</code></pre><p>However, I didn&rsquo;t try this so I am not 100% sure.
+</div></p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
