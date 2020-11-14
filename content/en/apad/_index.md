@@ -2,6 +2,21 @@
 title: A Paper A Day
 type : apad
 ---
+## 2020-11-14
+Continue with Popp, T. (2019)
+
+The experiment comparing the effects of two different network structures (clustered vs random) on the behavior spread was concluded in my [earlier post](/en/apad/#2020-09-12).
+
+Another experiment involves an 11-week fitness initiative among 800 graduate students at Penn. The experiment consits of four groups:
+  1. Group 1: Control group. Participants were allowed to sign up for fitness classes through an online portal. 
+  2. Group 2: Same as the control group, but participants were also divided into groups based on their similarities. On the online portal, class attendance of anonymized "health buddies" was displayed. Communication with each was not possible.
+  3. Group 3: Access to the online portal + groups based on similarities + communication between health buddies
+  4. Group 4: Conditions in Group 3 with scores of other groups displayed on the portal. 
+
+In Group 1 and 2, individuals completing the most classes were promised to get monetary rewards. In Group 3 and 4, health buddy groups completing the most classes got the monetary rewards. 
+
+Results: 1). Exercise rate in group 2 & 4 were much higher; 2). Group 3 did worse than the control group. 
+
 ## 2020-11-13
 Popp, T. (2019). The Virality Paradox. *The Pennsylvania Gazette*. Retrieved from [https://ndg.asc.upenn.edu/wp-content/uploads/2019/05/Virality-Paradox.pdf](https://ndg.asc.upenn.edu/wp-content/uploads/2019/05/Virality-Paradox.pdf)
 
