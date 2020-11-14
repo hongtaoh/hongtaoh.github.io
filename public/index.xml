@@ -206,7 +206,8 @@ cd ~/Downloads curl -O https://ftp.gnu.org/gnu/wget/wget2-1.99.2.tar.gz tar -zxv
       <pubDate>Mon, 05 Oct 2020 16:56:56 -0400</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/10/05/github-pull-request/</guid>
-      <description>I learned how to contribute via making a pull request from the contributing guidance by Victorial Drake Step1: Fork a repo Reference: Fork a repo from GitHub Docs Forking the original repository Simply fork the project you would like to work on. For example, I forked Professor YY&amp;rsquo;s covid19-data . Here is what the fork looks like.
+      <description>I learned how to contribute via making a pull request from the contributing guidance by Victorial Drake .
+Step1: Fork a repo Reference: Fork a repo from GitHub Docs Forking the original repository Simply fork the project you would like to work on. For example, I forked Professor YY&amp;rsquo;s covid19-data . Here is what the fork looks like.
 Making a local clone of your fork In Terminal, first navigate to the directory where you want to place this local clone.</description>
     </item>
     
