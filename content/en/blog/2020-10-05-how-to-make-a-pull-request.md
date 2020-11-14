@@ -7,7 +7,7 @@ draft: false
 toc: true
 ---
 
-I learned how to contribute via making a pull request from the [contributing guidance](https://github.com/victoriadrake/hugo-theme-sam/blob/master/CONTRIBUTING.md) by [Victorial Drake](https://github.com/victoriadrake)
+I learned how to contribute via making a pull request from the [contributing guidance](https://github.com/victoriadrake/hugo-theme-sam/blob/master/CONTRIBUTING.md) by [Victorial Drake](https://github.com/victoriadrake).
 
 # Step1: Fork a repo
 Reference: [Fork a repo](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) from [GitHub Docs](https://docs.github.com/en)
@@ -83,14 +83,19 @@ See details [here](https://docs.github.com/en/free-pro-team@latest/github/collab
 
 # Updating:
 
-When you are woking on your fork and find that it is several commits behind the original repo, please refer to [GitHub's offiical guide](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) to sync your fork with the original. When git asks you to explain how this merge is necessary, please follow [thise steps](https://stackoverflow.com/a/19085954). 
+When you are woking on your fork and find that it is several commits behind the original repo, please refer to [GitHub's offiical guide](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) to sync your fork with the original. Please note that it uses `main` but more often than not, it probably should be `origin`. Check your upstream to make sure. 
+
+When git asks you to explain how this merge is necessary, please follow [thise steps](https://stackoverflow.com/a/19085954). 
 
 {{<block class="note">}}
-I tried [GitHub's offiical guide](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) but it seemed to complicate things. From [this post](https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/), I learned that maybe only two steps are enough:
+I tried [GitHub's offiical guide](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) but it seemed to complicate things. From [this post](https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/), I learned that only two steps suffice:
 ```
 git pull upstream master
 git push origin master
 ```
+I tried and these two lines did do the job. 
 
-However, I didn't try this so I am not 100% sure. 
+`git pull upstream master` will automatically merge your **local** repo with the upstream. When git asks you to explain how this merge is necessary, please follow [thise steps](https://stackoverflow.com/a/19085954). 
+
+`git push origin master` will push the changes in your local repo to your remote repo. 
 {{<end>}}
