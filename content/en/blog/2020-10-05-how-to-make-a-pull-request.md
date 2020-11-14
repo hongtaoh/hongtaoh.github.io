@@ -83,4 +83,14 @@ See details [here](https://docs.github.com/en/free-pro-team@latest/github/collab
 
 # Updating:
 
-When you are woking on your fork and find that it is several commits behind the original repo, please refer to [this post](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) to learn how to sync your fork with the original. When git asks you to explain how this merge is necessary, please follow [thise steps](https://stackoverflow.com/a/19085954). 
+When you are woking on your fork and find that it is several commits behind the original repo, please refer to [GitHub's offiical guide](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) to sync your fork with the original. When git asks you to explain how this merge is necessary, please follow [thise steps](https://stackoverflow.com/a/19085954). 
+
+{{<block class="note">}}
+I tried [GitHub's offiical guide](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) but it seemed to complicate things. From [this post](https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/), I learned that maybe only two steps are enough:
+```
+git pull upstream master
+git push origin master
+```
+
+However, I didn't try this so I am not 100% sure. 
+{{<end>}}
