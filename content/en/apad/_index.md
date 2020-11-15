@@ -2,6 +2,23 @@
 title: A Paper A Day
 type : apad
 ---
+## 2020-11-15
+Becker, Porter, & Centola. (2019). The wisdom of partisan crowds. *Proceedings of the National Academy of Sciences, 116*(22), 10717-10722.
+
+Aim: to see whether there is "wisdom of crowds" in politically homogeneous networks. 
+
+Experiment design: 
+
+Participants were randomly assigned to two conditions: control condition vs social condition. They were asked to provide an answer to a question for three times (rounds):
+
+People in the control condition provided the answer independently for three times. 
+
+Participants in the social condition provided independent answers in Round 1. In Round 2, they were shown the averge answer of four other participants connected to them in a social network and then updated their answer. In Round 3, they were shown the average of the updated answers of four other participants connected to them (same in Round 2) and provided a final answer to the question. 
+
+A network consists of 35 participants who share the same political oriention (eitehr Democrats or Republicans). Participants in the network did not know that other people in the network have the same partisan preference as theirs. 
+
+The researchers tested four question. Each question was answered by 3 network groups and 1 control group for each political party. 
+
 ## 2020-11-14
 Continue with Popp, T. (2019)
 
