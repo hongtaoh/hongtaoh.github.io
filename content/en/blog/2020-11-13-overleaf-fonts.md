@@ -31,7 +31,13 @@ According to [this post](https://www.overleaf.com/learn/latex/XeLaTeX), instead 
 \setmonofont{third font choice}
 ```
 
-The second choice can be activated by `\ssfamily`, and the third by `\begin{verbatim} ... \end{verbatim}`. Read [the post](https://www.overleaf.com/learn/latex/XeLaTeX) for more info. 
+The second choice can be activated by `\ssfamily`, and the third by 
+```
+\begin{verbatim}
+...
+\end{verbatim}
+``` 
+Read [this post](https://www.overleaf.com/learn/latex/XeLaTeX) for more info. 
 
 ## Your own fonts
 If your favorate font is not found [the list](https://www.overleaf.com/learn/latex/Questions/Which%20OTF%20or%20TTF%20fonts%20are%20supported%20via%20fontspec%3F#Chinese), you can refer to [this post](https://www.overleaf.com/learn/latex/XeLaTeX) to upload and your own fonts. 
