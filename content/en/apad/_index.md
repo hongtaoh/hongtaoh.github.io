@@ -2,22 +2,39 @@
 title: A Paper A Day
 type : apad
 ---
+## 2020-11-16
+Results of Experiment 1: information exchange in homogeneous networks increased accuracy and decreased polarization. 
+
+**Replication study design** have some differences than Experiment 1:
+
+1. More controversial questions;
+2. Participants were required to confirm their political preference before participating in the study;
+3. The experiment interface included an image of an elephant and a donkey;
+4. The answer from four other connected partipants were accompanied by their political orientation;
+5. Subjects knew that they were participating in a study related to "Politics Challenge". 
+
+Items 2 - 5 were partian primes intended to "enhance the effects of partisan bias on social information processing" (p. 4).
+
+Results of the replication study: same as in Experiment 1, social learning increased participants answer accuracy for both Democrats and Republicans. Participants within each group became more similar over time. 
+
+But how about the difference between Democrats and Republicans? The above results showed "whinin group" changes but not between group changes. Results showed that between-group similarity also increased for participants in the social condition (37% for Experiment 1 and 46% for the replication study). 
+
 ## 2020-11-15
 Becker, Porter, & Centola. (2019). The wisdom of partisan crowds. *Proceedings of the National Academy of Sciences, 116*(22), 10717-10722.
 
-Aim: to see whether there is "wisdom of crowds" in politically homogeneous networks. 
+**Aim**: to see whether there is "wisdom of crowds" in politically homogeneous networks. 
 
-Experiment design: 
+**Experiment design**: 
 
 Participants were randomly assigned to two conditions: control condition vs social condition. They were asked to provide an answer to a question for three times (rounds):
 
-People in the control condition provided the answer independently for three times. 
+- Participants in the control condition provided the answer independently for three times. 
 
-Participants in the social condition provided independent answers in Round 1. In Round 2, they were shown the averge answer of four other participants connected to them in a social network and then updated their answer. In Round 3, they were shown the average of the updated answers of four other participants connected to them (same in Round 2) and provided a final answer to the question. 
+- Those in the social condition answered independently in Round 1. In Round 2, they were shown the averge answer of four other participants connected to them in a social network and then updated their answer. In Round 3, they were shown the average of the updated answers of four other participants connected to them (same in Round 2) and provided a final answer to the question. 
 
-A network consists of 35 participants who share the same political oriention (eitehr Democrats or Republicans). Participants in the network did not know that other people in the network have the same partisan preference as theirs. 
+- A network consists of 35 participants who share the same political oriention (eitehr Democrats or Republicans). Participants in the network did not know that other people in the network had the same partisan preference as theirs. 
 
-The researchers tested four question. Each question was answered by 3 network groups and 1 control group for each political party. 
+- The researchers tested four question. Each question was answered by 3 network groups and 1 control group for each political party. 
 
 ## 2020-11-14
 Continue with Popp, T. (2019)
