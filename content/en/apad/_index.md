@@ -2,10 +2,28 @@
 title: A Paper A Day
 type : apad
 ---
+## 2020-11-17
+1. Continue with Becker, Porter, & Centola. (2019)
+
+Conclusion: Homogeneous networks do not necessarily lead to polarization. In fact, plarization is decreased and accuracy increased. 
+
+Then why do we still have polarized public opinions? This is because popular social media are centralized networks, which make influencers able to exert disproportional effects on other people in the network. 
+
+Fututure directions: 
+- Any other reasons why "echo chambers" and polarization coexist? 
+- Is it possible to replicate this study in real-life networks? For example, in Facebook or Twitter, where information exchange is not limited to numeric estimates?
+- How could we eliminate, or at least reduce the effects of influencers in a network, if ever possible? 
+
+2. Guilbeault, Becker, & Centola. (2018). Complex contagions: A decade in review. In *Complex spreading phenomena in social systems* (pp. 3-25). Springer, Cham.
+
+PP. 1-7
+
 ## 2020-11-16
+Continue with Becker, Porter, & Centola. (2019)
+
 Results of Experiment 1: information exchange in homogeneous networks increased accuracy and decreased polarization. 
 
-**Replication study design** have some differences than Experiment 1:
+**Replication study design** has some differences than Experiment 1:
 
 1. More controversial questions;
 2. Participants were required to confirm their political preference before participating in the study;
