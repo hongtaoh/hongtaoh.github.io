@@ -52,7 +52,7 @@ type : nolisting
 
   - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
 
-- D3book Companion [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://hongtaoh.com/d3book), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/d3book)
+- D3book Companion [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://d3book.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/d3book)
 
 - Building Websites with Hugo [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://hugo-tutorial.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/hugo-tutorial)
 
