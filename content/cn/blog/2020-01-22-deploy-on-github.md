@@ -308,7 +308,7 @@ git commit -m "adding CNAME"
 git push
 ```
 
-[^1]: 当然，名字可以自己起，不一定非得叫 sources。这个分支用来储存本地文件夹的所有，内容，你起名为 `all`, `whole`, `together` `hugo` 等等都可以。
+[^1]: 当然，名字可以自己起，不一定非得叫 sources。这个分支用来储存本地文件夹的所有内容，你起名为 `all`, `whole`, `together` `hugo` 等等都可以。
 [^2]: 请根据自己的情况作修改。
 
 
