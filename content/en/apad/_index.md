@@ -2,6 +2,17 @@
 title: A Paper A Day
 type : apad
 ---
+## 2020-11-18
+Continue with Guilbeault, Becker, & Centola. (2018)
+- When social networks get smaller, it becomes easier to spread for simple contagions but harder for complex contagions. 
+- Research in complex contagions: health, innovation, social media, and politics
+- Peer characteristics, such as homophily and diversity, influenced how likely behavior changes. 
+- Diffusion of innovations is characterized by complex contagions. 
+  - Dynamics of adoption might be different from dynamics of termination. 
+- Which has more effects on the likelihood of spreading through social influence: the influence of the source person, or the quality of the contagion?
+
+PP. 7-14.
+
 ## 2020-11-17
 1. Continue with Becker, Porter, & Centola. (2019)
 
