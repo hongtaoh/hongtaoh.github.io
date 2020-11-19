@@ -2,13 +2,23 @@
 title: A Paper A Day
 type : apad
 ---
+## 2020-11-19
+Continue with Guilbeault, Becker, & Centola. (2018)
+
+- Complex contagions require a critical mass to start a large-scale cascade and critical mass is dependent on network topology, nodes degree distribution, and adoption thresholds. 
+
+New directions:
+
+1. Ecologies of complex contagions: how several contagions interact with each other within a network and across networks. 
+
+
 ## 2020-11-18
 Continue with Guilbeault, Becker, & Centola. (2018)
 - When social networks get smaller, it becomes easier to spread for simple contagions but harder for complex contagions. 
 - Research in complex contagions: health, innovation, social media, and politics
 - Peer characteristics, such as homophily and diversity, influenced how likely behavior changes. 
 - Diffusion of innovations is characterized by complex contagions. 
-  - Dynamics of adoption might be different from dynamics of termination. 
+  - Dynamics of adoption might be different from that of termination. 
 - Which has more effects on the likelihood of spreading through social influence: the influence of the source person, or the quality of the contagion?
 
 PP. 7-14.
