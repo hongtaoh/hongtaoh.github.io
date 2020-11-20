@@ -3,8 +3,12 @@ title: A Paper A Day
 type : apad
 ---
 ## 2020-11-20
-Central question: Does information exchange in bipartisan communication networks increase or decrease partisan bias?
+Guilbeault, D., Becker, J., & Centola, D. (2018). Social learning and partisan bias in the interpretation of climate trends. Proceedings of the National Academy of Sciences, 115(39), 9714-9719.
 
+### Central question
+Does information exchange in bipartisan communication networks increase or decrease partisan bias?
+
+### Literature
 What is the drawback of previous studies: people had conversations, so that researchers could not distinguish between the effect of partisan priming, and opposing views. 
 
 ### Design & Procedure
