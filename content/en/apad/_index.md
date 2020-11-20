@@ -3,7 +3,7 @@ title: A Paper A Day
 type : apad
 ---
 ## 2020-11-20
-Guilbeault, D., Becker, J., & Centola, D. (2018). Social learning and partisan bias in the interpretation of climate trends. **Proceedings of the National Academy of Sciences, 115**(39), 9714-9719.
+Guilbeault, D., Becker, J., & Centola, D. (2018). Social learning and partisan bias in the interpretation of climate trends. *Proceedings of the National Academy of Sciences, 115*(39), 9714-9719.
 
 ### Central question
 Does information exchange in bipartisan communication networks increase or decrease partisan bias?
