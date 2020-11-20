@@ -3,9 +3,11 @@ title: A Paper A Day
 type : apad
 ---
 ## 2020-11-20
-Does information exchange in bipartisan communication networks increase or decrease partisan bias?
+Central question: Does information exchange in bipartisan communication networks increase or decrease partisan bias?
 
 What is the drawback of previous studies: people had conversations, so that researchers could not distinguish between the effect of partisan priming, and opposing views. 
+
+### Design & Procedure
 
 Four groups:
 A control group in which participants have the same political ideology;
@@ -16,7 +18,7 @@ Each group provided estimate for three times. For the first round, each member e
 
 For Round 2 and Round 3, the control group revised their answers independently. Group 2 revised their answers while being exposed to their neighbors' average answer. Group 3 revised their answer while bing exposed to Republican and Democratic party logo below their neighbors' average estimate. Group 4 revised their response while bing were shown the usernames and political identification of each of their four neighbors, and the average of these four neighbors answers.
 
-Results:
+### Results
 Group 2: both liberals and conservatives improved their trend accuracy, with an elimination of partisan bias in interpreting climate change data. Even conservatives in this group predicted trend significant more accurately than liberals in the control condition. 
 
 Group 3: there was no effect of social learning, and belief polarization in Round 1 was maintained. 
@@ -29,11 +31,13 @@ Group 4: trend accuracy improved but moderate belief polarization remained.
 
 - Both conservatives and liberals improved their prediction accuracy thanks to information exchange in networks, even when exposed to their network neighbors' political identification. 
 
+### Robustness check
 Can social learning reduce polarization in homogeneous networks (i.e., networks that not bipartisan)? Robustness tests showed that the effect of social learning was reduced in politically homogeneous networks: by Round 3, trend accuracy of conservatives in these echo chamber did not differ significantly from conservatives in the control condition. 
 
 Another question is whether the effect of social learning remains if participants in Group 4 were shown individual answers rather than an average. Results showed that the effect of social learning was robust against exposure to individual responses. 
 
-Conclusion & suggestion: **have political discussion in biparsition networks without partisan cues**. 
+### Conclusion & suggestion
+It's better to have political discussions in biparsition networks without partisan cues.
 
 ## 2020-11-19
 Continue with Guilbeault, Becker, & Centola. (2018)
