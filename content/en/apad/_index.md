@@ -2,6 +2,39 @@
 title: A Paper A Day
 type : apad
 ---
+## 2020-11-20
+Does information exchange in bipartisan communication networks increase or decrease partisan bias?
+
+What is the drawback of previous studies: people had conversations, so that researchers could not distinguish between the effect of partisan priming, and opposing views. 
+
+Four groups:
+A control group in which participants have the same political ideology;
+
+Group 2, 3, and 4 are all structured social networks with an equal number of conservatives and liberals. Group 2 were only shown the average of their 4 network neighbors. Group 3 were shown the average of their neighbors plus the logos of political parties. Group 4 were shown the average as well, along with the neighbors political identity. 
+
+Each group provided estimate for three times. For the first round, each member estimated independently. 
+
+For Round 2 and Round 3, the control group revised their answers independently. Group 2 revised their answers while being exposed to their neighbors' average answer. Group 3 revised their answer while bing exposed to Republican and Democratic party logo below their neighbors' average estimate. Group 4 revised their response while bing were shown the usernames and political identification of each of their four neighbors, and the average of these four neighbors answers.
+
+Results:
+Group 2: both liberals and conservatives improved their trend accuracy, with an elimination of partisan bias in interpreting climate change data. Even conservatives in this group predicted trend significant more accurately than liberals in the control condition. 
+
+Group 3: there was no effect of social learning, and belief polarization in Round 1 was maintained. 
+
+Group 4: trend accuracy improved but moderate belief polarization remained. 
+
+(Belief polarization means that liberals significantly outperformed conservatives in predicting trend.) 
+
+- Exposure to logos of political parties had a stronger effect on decreasing the impact of social learning than exposure to neighbors' political identity. 
+
+- Both conservatives and liberals improved their prediction accuracy thanks to information exchange in networks, even when exposed to their network neighbors' political identification. 
+
+Can social learning reduce polarization in homogeneous networks (i.e., networks that not bipartisan)? Robustness tests showed that the effect of social learning was reduced in politically homogeneous networks: by Round 3, trend accuracy of conservatives in these echo chamber did not differ significantly from conservatives in the control condition. 
+
+Another question is whether the effect of social learning remains if participants in Group 4 were shown individual answers rather than an average. Results showed that the effect of social learning was robust against exposure to individual responses. 
+
+Conclusion & suggestion: **have political discussion in biparsition networks without partisan cues**. 
+
 ## 2020-11-19
 Continue with Guilbeault, Becker, & Centola. (2018)
 
@@ -26,11 +59,11 @@ PP. 7-14.
 ## 2020-11-17
 1. Continue with Becker, Porter, & Centola. (2019)
 
-Conclusion: Homogeneous networks do not necessarily lead to polarization. In fact, plarization is decreased and accuracy increased. 
+Conclusion: Homogeneous networks do not necessarily lead to polarization. In fact, polarization is decreased and accuracy increased. 
 
 Then why do we still have polarized public opinions? This is because popular social media are centralized networks, which make influencers able to exert disproportional effects on other people in the network. 
 
-Fututure directions: 
+Future directions: 
 - Any other reasons why "echo chambers" and polarization coexist? 
 - Is it possible to replicate this study in real-life networks? For example, in Facebook or Twitter, where information exchange is not limited to numeric estimates?
 - How could we eliminate, or at least reduce the effects of influencers in a network, if ever possible? 
@@ -39,24 +72,35 @@ Fututure directions:
 
 PP. 1-7
 
-## 2020-11-16
+## 2020-11-16 (Edited on 2020-11-19)
 Continue with Becker, Porter, & Centola. (2019)
 
-Results of Experiment 1: information exchange in homogeneous networks increased accuracy and decreased polarization. 
+Results of Experiment 1: Whereas responses in Round 1 showed clear partisan differences, information exchange in homogeneous networks increased accuracy. Individual learning (being able to edit their answers in Round 2 and 3) was not the reason for these changes because **the decrease in truth-centered mean (absolute distance from the mean) in the social group was significantly larger than that in the control group**. 
+
+Another possible reason behind these changes is that the increasing accuracy for groups as a whole masked the decreasing accuracy at an individual level, for example, when the standard deviation of truth-centered mean in a group increased. Results showed that for social groups, standard deviation of responses in Round 3 was significantly smaller than that in Round 1. This change did not occur in the control group, indicating that **similarity within social groups increased**. 
+
 
 **Replication study design** has some differences than Experiment 1:
 
 1. More controversial questions;
 2. Participants were required to confirm their political preference before participating in the study;
 3. The experiment interface included an image of an elephant and a donkey;
-4. The answer from four other connected partipants were accompanied by their political orientation;
+4. The answer from four other connected participants were accompanied by their political orientation;
 5. Subjects knew that they were participating in a study related to "Politics Challenge". 
 
-Items 2 - 5 were partian primes intended to "enhance the effects of partisan bias on social information processing" (p. 4).
+Items 2 - 5 were partisan primes intended to "enhance the effects of partisan bias on social information processing" (p. 4).
 
-Results of the replication study: same as in Experiment 1, social learning increased participants answer accuracy for both Democrats and Republicans. Participants within each group became more similar over time. 
+Results of the replication study: same as in Experiment 1, social learning increased participants' answer accuracy for both Democrats and Republicans. Participants within each group became more similar over time. 
 
-But how about the difference between Democrats and Republicans? The above results showed "whinin group" changes but not between group changes. Results showed that between-group similarity also increased for participants in the social condition (37% for Experiment 1 and 46% for the replication study). 
+So, 
+
+>... social learning is robust to partisan priming for both group-level improvement and individual improvement. 
+
+But how about the difference between Democrats and Republicans? The above results showed "within group" changes but not between group changes. Results showed that between-group similarity also increased for participants in the social condition (37% for Experiment 1 and 46% for the replication study). So polarization decreased. 
+
+**To recap**: social information exchange within homogeneous networks made people produce more accurate estimates. Similarity within and between groups increased, indicating that people within social groups got similar, and that polarization diminished. 
+
+My question: Will this result hold if information exchange is more complex than numeric estimates?
 
 ## 2020-11-15
 Becker, Porter, & Centola. (2019). The wisdom of partisan crowds. *Proceedings of the National Academy of Sciences, 116*(22), 10717-10722.
@@ -69,9 +113,9 @@ Participants were randomly assigned to two conditions: control condition vs soci
 
 - Participants in the control condition provided the answer independently for three times. 
 
-- Those in the social condition answered independently in Round 1. In Round 2, they were shown the averge answer of four other participants connected to them in a social network and then updated their answer. In Round 3, they were shown the average of the updated answers of four other participants connected to them (same in Round 2) and provided a final answer to the question. 
+- Those in the social condition answered independently in Round 1. In Round 2, they were shown the average answer of four other participants connected to them in a social network and then updated their answer. In Round 3, they were shown the average of the updated answers of four other participants connected to them (same in Round 2) and provided a final answer to the question. 
 
-- A network consists of 35 participants who share the same political oriention (eitehr Democrats or Republicans). Participants in the network did not know that other people in the network had the same partisan preference as theirs. 
+- A network consists of 35 participants who shared the same political orientation (either Democrats or Republicans). Participants in the network did not know that other people in the network had the same partisan preference as theirs. 
 
 - The researchers tested four question. Each question was answered by 3 network groups and 1 control group for each political party. 
 
@@ -80,7 +124,7 @@ Continue with Popp, T. (2019)
 
 The experiment comparing the effects of two different network structures (clustered vs random) on the behavior spread was concluded in my [earlier post](/en/apad/#2020-09-12).
 
-Another experiment involves an 11-week fitness initiative among 800 graduate students at Penn. The experiment consits of four groups:
+Another experiment involves an 11-week fitness initiative among 800 graduate students at Penn. The experiment consisted of four groups:
   1. Group 1: Control group. Participants were allowed to sign up for fitness classes through an online portal. 
   2. Group 2: Same as the control group, but participants were also divided into groups based on their similarities. On the online portal, class attendance of anonymized "health buddies" was displayed. Communication with each was not possible.
   3. Group 3: Access to the online portal + groups based on similarities + communication between health buddies
@@ -95,9 +139,9 @@ Popp, T. (2019). The Virality Paradox. *The Pennsylvania Gazette*. Retrieved fro
 
 - Even without digital tools to communicate with each other, rebel activities became more widespread in Syria. This is surprising because without telecommunication, Syrian rebels lost long ties that bridge groups far away from each other. That is, they had to rely on face-to-face communication to coordinate. How did it happen? When you get to understand that the way behaviors spread is different from that information diffuses, the answer will become clearer.
 
-- Information, messages, and ideas spread like epdemics whereas human behaviors don't. Contagions can be classified into two types: simple and complex. A single contact can start a simple contagion, but won't do the same for complex contagions, which involve efforts and costs, and require confirmation or reinforcement from multiple sources. 
+- Information, messages, and ideas spread like epidemic whereas human behaviors don't. Contagions can be classified into two types: simple and complex. A single contact can start a simple contagion, but won't do the same for complex contagions, which involve efforts and costs, and require confirmation or reinforcement from multiple sources. 
 
-- Long ties are enough for simple contagions whereas complex contagions favor wide ties. How wide should a tie be for a behavior to spread varies. If reputation is at stake, the threshold will be higher. That's where complex contagions are very different from simple ones. In simple contagions, hubs get infected early and then it spreads the infections to many others. In a complex contagion, however, hubs usuallly have reputation at stake, so they are less, rather than more, likely to get infected. 
+- Long ties are enough for simple contagions whereas complex contagions favor wide ties. How wide should a tie be for a behavior to spread varies. If reputation is at stake, the threshold will be higher. That's where complex contagions are very different from simple ones. In simple contagions, hubs get infected early and then it spreads the infections to many others. In a complex contagion, however, hubs usually have reputation at stake, so they are less, rather than more, likely to get infected. 
 
 ## 2020-11-12
 Finished Guilbeault & Centola. (2020)
@@ -121,7 +165,7 @@ Study design:
 
 Procedure: 
 
-Participants were shown an [anti-smoking advertisment](https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0227813.g002) and were asked to estimate the health risk of smoking by answering this question: How many people (in millions) are predicted to die from tobacco use in developed countries, in 2030? 
+Participants were shown an [anti-smoking advertisement](https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0227813.g002) and were asked to estimate the health risk of smoking by answering this question: How many people (in millions) are predicted to die from tobacco use in developed countries, in 2030? 
 
 Participants were incentivized by monetary reward awarded based on the accuracy of their final answer. Changes in answers' accuracy were measured by the difference between Round 1 and Round 3. 
 
@@ -150,9 +194,9 @@ Centola (2020). Why Social Media Makes Us More Polarized and How to Fix It. Retr
 
 >The more equity in people's social networks, the less biased and more informed groups will become--even when those groups start off with highly partisan opinions. 
 
-- We believed that if we are put in a group consists of likeminded people (so called "echo chambers"), we probably won't develop ideas that are in the opposite side of the spectrum. However, two social media experiments found the opposite results. In a study, Democrats and Rebublicans were put into "echo chambers", and discussed polarizing issues such as gun control and abortion (Well, the authors did not mention abortion. I made it up). Both groups ended up moving toward a more moderate view of the topics. 
+- We believed that if we are put in a group consists of like-minded people (so called "echo chambers"), we probably won't develop ideas that are in the opposite side of the spectrum. However, two social media experiments found the opposite results. In a study, Democrats and Republicans were put into "echo chambers", and discussed polarizing issues such as gun control, unemployment rate, and immigration. Both groups ended up moving toward a more moderate view of the topics. 
 
-- In another study, smokers and nonsmokers estimated the risks of cigatrette smoking. After the study, both groups had a more accurate understanding of the topic, and a higher opionion of the other group.
+- In another study, smokers and nonsmokers estimated the risks of cigarette smoking. After the study, both groups had a more accurate understanding of the topic, and a higher opinion of the other group.
 
 - Social media of our time exacerbates rather than eradicates partisan bias, because it's centralized, rather than egalitarian. In a centralized network, influencers filter or even block information. For example, if an influencer spreads a piece of wrong information, it might end up becoming an entrenched false belief in the whole community. In contract, in an egalitarian network, each person has an equal say, and ideas are weighed by its own quality rather than the influence of the people behind them. 
 
@@ -200,7 +244,7 @@ PP. 4-9
 Continue with Ahn et al. (2007)
 
 - Three network sampling methods: node sampling, link sampling, and snowball sampling. 
-  - Node sampling: select randomly several nodes, and links between these selected nodes are included in the smaple;
+  - Node sampling: select randomly several nodes, and links between these selected nodes are included in the sample;
   - Link sampling: similar to node sampling, select randomly a bunch of links, and nodes attached to these links are included in the sample;
   - Randomly select a seed node and do a breath-first-search until the number of selected nodes reaches expectation. Only links between selected nodes are included in the sample. 
 
@@ -225,13 +269,13 @@ The clustering coefficient of a network is the mean of all nodes' clustering coe
 
 This is so true. I have several thoughts about this point:
 
-First, it shows how arbitrary the choices in data processing and moldel picking are, and therefore, how arbitrary the statistical results might be. When I was doing research on selfie, I also had the same feeling. When I was doing the content analysis study comparing the differences in White women's selfies on Twitter and Chinese women's selfies on Weibo, I had to made so many arbitrary choices: whether to drop an item from a construct, whether to combine items, should I use a *t* test or nonparametric test, etc. 
+First, it shows how arbitrary the choices in data processing and model picking are, and therefore, how arbitrary the statistical results might be. When I was doing research on selfie, I also had the same feeling. When I was doing the content analysis study comparing the differences in White women's selfies on Twitter and Chinese women's selfies on Weibo, I had to made so many arbitrary choices: whether to drop an item from a construct, whether to combine items, should I use a *t* test or nonparametric test, etc. 
 
 Second, doing multiverse analysis reporting is very methodologically challenging. I cannot imagine a Master student after attending one statistics class doing a project involving more than 200 choice combinations. 
 
-Finally, scholars will find it more diffcult to cite others' studies. Right now, it's fairly easy to cite because almost all research papers generate a **certin** result. With multiverse analysis, almost all studies will involve many **uncertainties**. This complicates how people interprete the statistical results. 
+Finally, scholars will find it more difficult to cite others' studies. Right now, it's fairly easy to cite because almost all research papers generate a **certain** result. With multiverse analysis, almost all studies will involve many **uncertainties**. This complicates how people interpret the statistical results. 
 
-That said, statistics is about **uncertainties**. It's certainly good to show these **uncertainties**. I think the science communitey, and the public, should be accustomed to seeing **uncertainties** in statistical results in the coming years. 
+That said, statistics is about **uncertainties**. It's certainly good to show these **uncertainties**. I think the science community, and the public, should be accustomed to seeing **uncertainties** in statistical results in the coming years. 
 
 2. Ahn, Y. Y., Han, S., Kwak, H., Moon, S., & Jeong, H. (2007, May). Analysis of topological characteristics of huge online social networking services. In *Proceedings of the 16th international conference on World Wide Web* (pp. 835-844).
 
@@ -249,7 +293,7 @@ Continue with Steegen et al. (2016)
 
 >Increasing transparency in reporting through a multiverse analysis is valuable, regardless of the inferential framework (frequentist or Bayesian), and regardless of the specific way uncertainty is quantified: a *p* value, an effect size, a confidence (Cumming, 2013) or credibility (Kruschke, 2010) interval, or a Bayes Factor (Morey & Rouder, 2011).
 
-The authors aruged that "preregistration or blind analysis are not useful stretegies for deflating the multiverse" (p. 709). I totoally agree. I am not familiar with blind analysis, so I'll just talk about preregistration. As the authors noted, even the study is preregistered, the result is still just one of the many possible choice combinations, albeit preregistered made. Therefore, the results of a preregistered study are still arbitrary, if the research involves arbitrary, or "whimsical" choices in data construction. 
+The authors argued that "preregistration or blind analysis are not useful strategies for deflating the multiverse" (p. 709). I totally agree. I am not familiar with blind analysis, so I'll just talk about preregistration. As the authors noted, even the study is preregistered, the result is still just one of the many possible choice combinations, albeit preregistered made. Therefore, the results of a preregistered study are still arbitrary, if the research involves arbitrary, or "whimsical" choices in data construction. 
 
 The authors also talked about "model multiverse" at the end of the article. 
 
@@ -279,7 +323,7 @@ PP. 702-707
 
 ## 2020-10-31
 
-[Fig. 1](https://www.pnas.org/content/pnas/112/8/2389/F1.large.jpg?width=800&height=600&carousel=1) shows the happiness distribution of words in each language, but how each word varies in their happiness score between languages. Google Translate is uded. The result can be found in [Fig. 2](https://www.pnas.org/content/pnas/112/8/2389/F2.large.jpg?width=800&height=600&carousel=1). As can be seen, the order changed a little bit, but the overall patter remained. Spanish is the "happiest", and Chinese is the "saddest" (I highly doubt so, though).
+[Fig. 1](https://www.pnas.org/content/pnas/112/8/2389/F1.large.jpg?width=800&height=600&carousel=1) shows the happiness distribution of words in each language, but how each word varies in their happiness score between languages. Google Translate is used. The result can be found in [Fig. 2](https://www.pnas.org/content/pnas/112/8/2389/F2.large.jpg?width=800&height=600&carousel=1). As can be seen, the order changed a little bit, but the overall patter remained. Spanish is the "happiest", and Chinese is the "saddest" (I highly doubt so, though).
 
 Another interesting question to ask is whether a word's happiness score is associated with its frequency of use. As can be see in [Fig. 3](https://www.pnas.org/content/pnas/112/8/2389/F3.large.jpg?width=800&height=600&carousel=1). It turns out they are not associated. 
 
@@ -291,7 +335,7 @@ PP.1-2
 
 Purpose: To study the positivity of human language
 
-Material: 24 corpora of 10 languages, including Chinese (simplfied), Korean and Arabic
+Material: 24 corpora of 10 languages, including Chinese (simplified), Korean and Arabic
 
 Measure: a word's importance is measured by its frequency
 
@@ -320,9 +364,9 @@ As the *Editorial Expression of Concern and Correction* said, it is "a matter of
 Continue with Kramer et al. (2014)
 
 ### Measurements & Measures
-- To test the hypothese, how are negativity and positivity measured: The percentage of the words as either positive or negative produced by a person.
+- To test the hypotheses, how are negativity and positivity measured: The percentage of the words as either positive or negative produced by a person.
 - A check before running the experiment: all four groups did not differ in emotional expression in the week prior to the experiment. 
-- Why using a weighted linear regression:  It was described in the Study Design that the chance a post being omitted is not fixed. However, an effect was found that when people see fewer posts (i.e., more ommission), they in turn posted fewer words. Therefore, we need to account for this effect by assigning weights to people. Specifically, people having more ommission were given a higher weight in the regression. See details on p. 8789. 
+- Why using a weighted linear regression:  It was described in the Study Design that the chance a post being omitted is not fixed. However, an effect was found that when people see fewer posts (i.e., more omission), they in turn posted fewer words. Therefore, we need to account for this effect by assigning weights to people. Specifically, people having more omission were given a higher weight in the regression. See details on p. 8789. 
 
 ### Results
 Both H1 and H2 were supported. As can be seen in [the figure](https://www.pnas.org/content/pnas/111/24/8788/F1.large.jpg?width=800&height=600&carousel=1), when negativity is reduced, people generate more positive words and fewer negative words, compared to the control group. The opposite patter occurred when positivity is reduced. It shows that **emotions expressed by our friends through online social networks influenced our own mood status**.  
@@ -334,7 +378,7 @@ Some implications:
 Continue with Kramer et al. (2014)
 
 ### Study design
-- Why are two (separate) control condistions needed? Because the percentage (46.8%) of posts containing at least one positive word is much larger than that (22.4%) of posts containing at least one negative word. Suppose that for a person, 10% of his **positive** News Feed is omitted, and there is only **one** control group, what should be the corresponding percentage of a person's **random** News Feed being omitted in this control group? I don't know. Why? For example, if there are three people in experiment A (positivity reduction group), and their content reduction rate is 12%, 13%, and 14% respectively. Accordingly, we assume that the content reduction rate in the control group should be 12% times 46.8%, 13% times 46.8%, and 14% times 46.8%.  **No**. Why? Because there is also experiment B, whose content reduction rate might be different that that of experiment A. **Therefore, each experiment needs a separate control condition**.
+- Why are two (separate) control conditions needed? Because the percentage (46.8%) of posts containing at least one positive word is much larger than that (22.4%) of posts containing at least one negative word. Suppose that for a person, 10% of his **positive** News Feed is omitted, and there is only **one** control group, what should be the corresponding percentage of a person's **random** News Feed being omitted in this control group? I don't know. Why? For example, if there are three people in experiment A (positivity reduction group), and their content reduction rate is 12%, 13%, and 14% respectively. Accordingly, we assume that the content reduction rate in the control group should be 12% times 46.8%, 13% times 46.8%, and 14% times 46.8%.  **No**. Why? Because there is also experiment B, whose content reduction rate might be different that that of experiment A. **Therefore, each experiment needs a separate control condition**.
 
 ### Hypotheses
 - H1: If emotions are contagious via pure exposure to verbal expressions, then compared to their control group, Group A will be less positive, reflected by posting fewer positive content than before) and Group B will be less negative, reflected by posting fewer negative content than before).
@@ -350,13 +394,13 @@ Continue with Kramer et al. (2014)
 
 ### Why is this study needed?
 Correlational studies cannot answer this question since it cannot support causality. Controlled experiments can support causality, but they have these problems:
-  1. Exposure is not equal to interaction. In a controled experiment, mood change might come from interacting with a happy/sad person, rather than simply being exposed to that person's mood;
+  1. Exposure is not equal to interaction. In a controlled experiment, mood change might come from interacting with a happy/sad person, rather than simply being exposed to that person's mood;
   2. Nonverbal cues are unavoidable in a controlled experiment, thus making it impossible for us to disentangle the effect of verbal cues.
 
 Therefore, this study makes unique contributions to answering this question. 
 
 ### Study design
-- Two parallell experiments: In experiment A, people see less positive emotional content whereas in experiment B, people see less negative emotional content. Both had a control condition, in which posts had an equal chance (see below) of being omitted, randomly (i.e., without considering their emotional velence).
+- Two parallel experiments: In experiment A, people see less positive emotional content whereas in experiment B, people see less negative emotional content. Both had a control condition, in which posts had an equal chance (see below) of being omitted, randomly (i.e., without considering their emotional valence).
   - How much less? Good question! According to the authors, "each emotional post had between a 10% to 90% change (based on their User ID) of being omitted from their News Feed ..."
   - Well, how do you categorize a post as positive or negative? Awesome question. If a post contains at least one positive word as defined by LIWC2007, then it is a **positive** post. The same is for negative posts. 
 
@@ -376,9 +420,9 @@ Continue reading Lawrence (2007).
 - Authors might 1) complicate their methods section so that it's difficult for reviewers to fault it; 2) hide results that do not fit with their arguments; 3) split the findings into multiple papers even if one paper is enough to cover all the results; 4) compress the results to meet the requirements of top journals like *Nature* or *Science*; 5) hype their work.
 
   - I would add one: p-hacking.
-  - The point that authors might complicate their methods section resonate with me strongly. After reading papers each day for over 6 weeks, I felt that the methods section of some papers is so dense and complicated that, if I were the reviewer, I didn't have that much time and efforts and decode it! This, I think, is really a problem. As I mentioned multiple times, I feel the most ideal studies are those with **simple methodology** and yet **impactful results**. A perfet example is Professor Duncan Watts and Steven Strogatz's masterpiece of [*Collective dynamics of 'small world' networks*](http://materias.df.uba.ar/dnla2019c1/files/2019/03/watts-collective_dynamics-nature_1998.pdf).
+  - The point that authors might complicate their methods section resonate with me strongly. After reading papers each day for over 6 weeks, I felt that the methods section of some papers is so dense and complicated that, if I were the reviewer, I didn't have that much time and efforts and decode it! This, I think, is really a problem. As I mentioned multiple times, I feel the most ideal studies are those with **simple methodology** and yet **impactful results**. A perfect example is Professor Duncan Watts and Steven Strogatz's masterpiece of [*Collective dynamics of 'small world' networks*](http://materias.df.uba.ar/dnla2019c1/files/2019/03/watts-collective_dynamics-nature_1998.pdf).
 
-- Students have fewer opportunities to learn and fail. Since publiction is so important, group leaders may end up writing students' work. 
+- Students have fewer opportunities to learn and fail. Since publication is so important, group leaders may end up writing students' work. 
 
   - I don't think this is true in social sciences. 
 
@@ -398,7 +442,7 @@ Lawrence, P. A. (2007).
 
 - Impact factors (IFs): IFs reflect how many times, on average, each paper in a given journal gets cited in the two years following its publication. There are two problems with this measurement: 1) IF is about the journal, not about your paper. Even if your paper is flawed, or even wrong, it's still something you can boast, if it gets published in a top journal; 2) Important findings may receive very few citations within two years since its publication. 
 
-- Number of citations: 1) People may cite papers simply because of convenience or visibility, not because of the significant of the studies. Many people don't even need read the papers they cite. 2) Because citations are so important these days, there might be unethical behavior involved. For instance, gatecrashing names by providing a reagent or data without acutally participating in the study, or simply by power or authority. 
+- Number of citations: 1) People may cite papers simply because of convenience or visibility, not because of the significant of the studies. Many people don't even need read the papers they cite. 2) Because citations are so important these days, there might be unethical behavior involved. For instance, gatecrashing names by providing a reagent or data without actually participating in the study, or simply by power or authority. 
 
 ### What problems can these measures cause:
 
@@ -456,13 +500,13 @@ Larivière, Ni, Gingras, Cronin, & Sugimoto. (2013). Bibliometrics: Global gende
 
 Main takeaways:
 
-- In the most productive countries, papers with women in dominent author positions, i.e., sole author, first author, and last author, are cited less than those with men in the same positions;
+- In the most productive countries, papers with women in dominant author positions, i.e., sole author, first author, and last author, are cited less than those with men in the same positions;
 
 - South America and Eastern Europe had greater gender parity in terms of proportion of authorships. 
 
 - Disciplines dominated by women all have to do with "care", for example, nursing; speech, language, and hearing; education.
 
-- Natural sciences and humanities are dominated by men. Social sciences had a higher proportion of femail authors. 
+- Natural sciences and humanities are dominated by men. Social sciences had a higher proportion of female authors. 
 
 - "Female collaborations are more domestically oriented than are the collaborations of males from the same country"  (p. 213)
 
@@ -484,7 +528,7 @@ I started to think about my selfie studies. Specifically, I looked at 1) whether
 
 I also looked at 2) whether there are gender differences between men's selfies and women's selfies. For example, do women show more self-touching in selfies? 
 
-I used a small-data approach. Although I downloaded over 30,000 images from Twitter and 8,000 images from Weibo, I only selected 200 from each platfrom for analysis, simply because I didn't have that much man power to analyze them all. 
+I used a small-data approach. Although I downloaded over 30,000 images from Twitter and 8,000 images from Weibo, I only selected 200 from each platform for analysis, simply because I didn't have that much man power to analyze them all. 
 
 Talking about dig data and small data research, I think I can combine the two here. Human content analysis can offer some insights and then directions for bid data research. After all, there are so many things to detect in a selfie: the gender of the person, his or her mood, surroundings, posture, facial expressions, etc. Deep learning algorithms need some directions so that they can give us the analysis we need. 
 
@@ -507,7 +551,7 @@ What are most of the data in research papers used for? To test theories. But the
 
 Major take-aways:
 
-- "Weakly informed priors" are popular among scholars practicing Bayesian inferences. However, scholars might have differet interpretations of this concept and different strategies to implement it. 
+- "Weakly informed priors" are popular among scholars practicing Bayesian inferences. However, scholars might have different interpretations of this concept and different strategies to implement it. 
 
 - Innovative prior elicitation interfaces can assist novice Bayesian practitioners set priors. 
 
@@ -540,18 +584,18 @@ p. 702 - p.711
 ## 2020-10-08
 ### Centola, D. (2010).
 
-1. Within the unstructured conition, there are more non-obese adopters than obese adopter, both in terms of number and percentage;
+1. Within the unstructured condition, there are more non-obese adopters than obese adopter, both in terms of number and percentage;
 
 2. Across conditions: homophily boosted adoption among both the obese (*P* < 0.01) and the non-obese people (*P* < 0.05), using Mann-Whitney U test. 
 
-We can see that homophily had a significant effect on adoption of healthy behaviors. However, is it because obese people are more likely to be **exposed** to the behavior, or those who are exposed are morely likely to adopt these behaviors in a homophilous group?
+We can see that homophily had a significant effect on adoption of healthy behaviors. However, is it because obese people are more likely to be **exposed** to the behavior, or those who are exposed are more likely to adopt these behaviors in a homophilous group?
 
 3. It turns out that within both conditions, the relative percentage of the obese and the non-obese **did not** differ significantly. 
 
 4. Across conditions: homophily boosted both the number and the fraction of the obese who were exposed to the behavior (*P* < 0.05), using Mann-Whitney U test.. This happened despite that obese people initially had greater exposure in the unstructured networks. 
 
 
-5. Did homophily affect the adotion rate among those exposed? The effect was significant among the exposed obese people (*P* < 0.01), using Mann-Whitney U test, but not among the exposed non-obese individuals. 
+5. Did homophily affect the adoption rate among those exposed? The effect was significant among the exposed obese people (*P* < 0.01), using Mann-Whitney U test, but not among the exposed non-obese individuals. 
 
 I like this study: simple, and impactful. 
 
@@ -596,7 +640,7 @@ Finished Chambliss. (1989).
 
 ### Excellence requires qualitative differentiation. 
 
-Those who are more successful are doing **different** things, rather than **more of the same** things. Quantitative changes do bring success, but only **whithin** the world you are currently in. You cannot go to **another world** by doing more of what you have been doing. Those who are top performers are better to be seen as **different** rather than as **better**. 
+Those who are more successful are doing **different** things, rather than **more of the same** things. Quantitative changes do bring success, but only **within** the world you are currently in. You cannot go to **another world** by doing more of what you have been doing. Those who are top performers are better to be seen as **different** rather than as **better**. 
 
 ### Talent is not the reason for excellence. 
 
@@ -612,9 +656,9 @@ Those who are more successful are doing **different** things, rather than **more
 
 **Note** : Below are the notes on 2020-10-04 
 
-2. Motivation is also ordinary. Gold medalists did not think too far ahead. Instead, they focused on the most immediate goals, the so-called "small wins". For example, Steve Lundquist, who won two gold medals in swimming in the Los Angeles Olympics, set a goal that he would win every single siwm in every single practice. **Small wins added up to excellence and success**. 
+2. Motivation is also ordinary. Gold medalists did not think too far ahead. Instead, they focused on the most immediate goals, the so-called "small wins". For example, Steve Lundquist, who won two gold medals in swimming in the Los Angeles Olympics, set a goal that he would win every single swim in every single practice. **Small wins added up to excellence and success**. 
 
-3. Don't take what you do as too important. You should maintain mundanity. If you are going to deliever a commencement speech in front of an audience of thousands, you should know that almost nobody cares about nor remembers what you have to say. When you are writing your doctoral thesis, you should also be aware that few people will read what you write. 
+3. Don't take what you do as too important. You should maintain mundanity. If you are going to deliver a commencement speech in front of an audience of thousands, you should know that almost nobody cares about nor remembers what you have to say. When you are writing your doctoral thesis, you should also be aware that few people will read what you write. 
 
 
 ## 2020-10-02
@@ -701,7 +745,7 @@ Del Vicario et al. (2016).
 
 - Liberals had fewer friends who shared news from the other side;
 
-- Controlling for the position of the news feed, it seemed conservatives were more likely to click on cross-cutting content, i.e., news that came from the other side; This result suprised me. 
+- Controlling for the position of the news feed, it seemed conservatives were more likely to click on cross-cutting content, i.e., news that came from the other side; This result surprised me. 
 
 2. Del Vicario et al. (2016). The spreading of misinformation online. *Proceedings of the National Academy of Sciences, 113*(3), 554-559.
 
@@ -745,10 +789,10 @@ Not really. Those who spread false news had fewer followers, followed fewer peop
     - Yes, replies to false news showed greater surprise and disgust, whereas the truth inspired more sadness and joy. 
 
 - Was it because of selection bias? I mean, the tweets from the six organizations might not be representative of all tweets. 
-  - The authors verified a second sample of Tweets, which were labled by three undergraduates students as true, false, or mixed. Again, the results were the same. 
+  - The authors verified a second sample of Tweets, which were labeled by three undergraduates students as true, false, or mixed. Again, the results were the same. 
 
 - Did false news spread faster, deeper, farther, and more broadly because of bot activities? I mean, was it because bot crazily retweeted and replied to false news?
-  - Two bot-detection algorithms were applied independently to detect and remove bots before data analysis. Results were the same. This has significant implications: that false news travelled faster and farther not because of bots, but because of humans. 
+  - Two bot-detection algorithms were applied independently to detect and remove bots before data analysis. Results were the same. This has significant implications: that false news traveled faster and farther not because of bots, but because of humans. 
 
 ### I had several issues:
 1. Bad data visualization
@@ -792,30 +836,30 @@ p 1-3. Lazeret et al. (2018). The science of fake news. *Science, 359*(6380), 10
 
 - We don't know the exact ratio of fake news against real news, and we don't know the medium-to-long-run effect of exposure to fake news on people's attitudes. 
 
-- Bots on social media are hard to detect. Once a detecting technique is developed, bots will upgrate themselves. 
+- Bots on social media are hard to detect. Once a detecting technique is developed, bots will upgrade themselves. 
 
 - Possible interventions:
 
-  1. Encouraging people to use fact checking. However, we are not sure whether this is useful or not, partyly due to people's confirmation bias and desirability bias. 
-  2. Internet oligoplies should collaborate with academia to understand how pervasive fake news is. Also, these oligoplies' power should be contained by, for example, legal systems. 
+  1. Encouraging people to use fact checking. However, we are not sure whether this is useful or not, partly due to people's confirmation bias and desirability bias. 
+  2. Internet oligopolies should collaborate with academia to understand how pervasive fake news is. Also, these oligopolies' power should be contained by, for example, legal systems. 
 
 ## 2020-09-13
 Lazer et al. (2020)
 
 - Definition:
-  - Compuational social science: language, location, movement, networks, images, and video, using statistical models that capture multifarious dependencies.
+  - Computational social science: language, location, movement, networks, images, and video, using statistical models that capture multifarious dependencies.
 
 - Problems
-  1. Interdisplinary research not encouraged enough, especially that involve cooperation between social and computer scientists, due to unfavorable policies at universities;
+  1. Interdisciplinary research not encouraged enough, especially that involve cooperation between social and computer scientists, due to unfavorable policies at universities;
   2. Proprietary data unavailable to researchers.
   3. Available data is not intended for research and won't be shared with other researchers, which impedes reproducibility.
-  4. Lack of regulatory guidance from university IRBs about collectinga nd analyzing sensitive data. 
+  4. Lack of regulatory guidance from university IRBs about collecting nd analyzing sensitive data. 
 
 - Recommendations
   1. Collaborate and negotiate with private companies for data;
   2. Build infrastructures that provide data as well as preserve participants' privacy;
   3. Develop new ethical guidelines;
-  4. Reorganize universities so that 1) multi-displinary collaboration is professionally or fanancially rewarded, and 2) enforce ethical research
+  4. Reorganize universities so that 1) multi-disciplinary collaboration is professionally or financially rewarded, and 2) enforce ethical research
   5. Researchers make sure that they do public good.
 
 
@@ -839,8 +883,3 @@ Lazer et al. (2020)
 
 ## 2020-09-10
 - p1-p4. Cha et al. (2007, October). I tube, you tube, everybody tubes: analyzing the world's largest user generated content video system. In *Proceedings of the 7th ACM SIGCOMM conference on Internet measurement* (pp. 1-14).
-
-
-
-
-
