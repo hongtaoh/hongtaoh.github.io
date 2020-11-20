@@ -3,22 +3,22 @@ title: A Paper A Day
 type : apad
 ---
 ## 2020-11-20
-Guilbeault, D., Becker, J., & Centola, D. (2018). Social learning and partisan bias in the interpretation of climate trends. Proceedings of the National Academy of Sciences, 115(39), 9714-9719.
+Guilbeault, D., Becker, J., & Centola, D. (2018). Social learning and partisan bias in the interpretation of climate trends. **Proceedings of the National Academy of Sciences, 115**(39), 9714-9719.
 
 ### Central question
 Does information exchange in bipartisan communication networks increase or decrease partisan bias?
 
 ### Literature
-What is the drawback of previous studies: people had conversations, so that researchers could not distinguish between the effect of partisan priming, and opposing views. 
+What is the drawback of previous studies: people had conversations, so that researchers could not distinguish between the effect of partisan priming, and that of opposing views. 
 
 ### Design & Procedure
 
 Four groups:
 A control group in which participants have the same political ideology;
 
-Group 2, 3, and 4 are all structured social networks with an equal number of conservatives and liberals. Group 2 were only shown the average of their 4 network neighbors. Group 3 were shown the average of their neighbors plus the logos of political parties. Group 4 were shown the average as well, along with the neighbors political identity. 
+Group 2, 3, and 4 are all structured social networks with an equal number of conservatives and liberals. Group 2 were only shown the average of their 4 network neighbors, without any other information exhibited. Group 3 were shown the average of their neighbors plus the logos of political parties. Group 4 were shown the average as well, along with the neighbors political identity. 
 
-Each group provided estimate for three times. For the first round, each member estimated independently. 
+Each group provided estimates for three times. For the first round, each member estimated independently. 
 
 For Round 2 and Round 3, the control group revised their answers independently. Group 2 revised their answers while being exposed to their neighbors' average answer. Group 3 revised their answer while bing exposed to Republican and Democratic party logo below their neighbors' average estimate. Group 4 revised their response while bing were shown the usernames and political identification of each of their four neighbors, and the average of these four neighbors answers.
 
@@ -29,7 +29,7 @@ Group 3: there was no effect of social learning, and belief polarization in Roun
 
 Group 4: trend accuracy improved but moderate belief polarization remained. 
 
-(Belief polarization means that liberals significantly outperformed conservatives in predicting trend.) 
+(Belief polarization means that liberals significantly outperformed conservatives in predicting climate change trend.) 
 
 - Exposure to logos of political parties had a stronger effect on decreasing the impact of social learning than exposure to neighbors' political identity. 
 
@@ -38,7 +38,7 @@ Group 4: trend accuracy improved but moderate belief polarization remained.
 ### Robustness check
 Can social learning reduce polarization in homogeneous networks (i.e., networks that not bipartisan)? Robustness tests showed that **the effect of social learning was reduced in politically homogeneous networks**: by Round 3, trend accuracy of conservatives in these echo chamber did not differ significantly from conservatives in the control condition. 
 
-Another question is whether the effect of social learning remains if participants in Group 4 were shown individual answers rather than an average. Results showed that the effect of social learning was robust against exposure to individual responses. 
+Another question is whether the effect of social learning remains if participants in Group 4 were shown individual answers rather than an average. Results showed that the effect of social learning was robust to exposure to individual responses. 
 
 ### Conclusion & suggestion
 It's better to have political discussions in biparsition networks without partisan cues.
@@ -83,9 +83,11 @@ PP. 1-7
 ## 2020-11-16 (Edited on 2020-11-19)
 Continue with Becker, Porter, & Centola. (2019)
 
-Results of Experiment 1: Whereas responses in Round 1 showed clear partisan differences, information exchange in homogeneous networks increased accuracy. Individual learning (being able to edit their answers in Round 2 and 3) was not the reason for these changes because **the decrease in truth-centered mean (absolute distance from the mean) in the social group was significantly larger than that in the control group**. 
+Results of Experiment 1: Information exchange in homogeneous networks increased accuracy for both party memebers and decreased belief polarization. 
 
-Another possible reason behind these changes is that the increasing accuracy for groups as a whole masked the decreasing accuracy at an individual level, for example, when the standard deviation of truth-centered mean in a group increased. Results showed that for social groups, standard deviation of responses in Round 3 was significantly smaller than that in Round 1. This change did not occur in the control group, indicating that **similarity within social groups increased**. 
+Individual learning (being able to edit their answers in Round 2 and 3) was not the reason for increased accuracy because **the decrease in truth-centered mean (absolute distance from the mean) in the social group was significantly larger than that in the control group**. Therefore, the change should be attributed to information from others. 
+
+Another possible reason is that the increased accuracy for groups as a whole obscured the decreased accuracy at an individual level, for example, when the standard deviation of truth-centered mean in a group increased. Results showed that for social groups, the standard deviation of responses in Round 3 was significantly smaller than that in Round 1. This change did not occur in the control group, indicating that **similarity within social groups increased**. 
 
 
 **Replication study design** has some differences than Experiment 1:
@@ -104,11 +106,11 @@ So,
 
 >... social learning is robust to partisan priming for both group-level improvement and individual improvement. 
 
-But how about the difference between Democrats and Republicans? The above results showed "within group" changes but not between group changes. Results showed that between-group similarity also increased for participants in the social condition (37% for Experiment 1 and 46% for the replication study). So polarization decreased. 
+But how about the difference between Democrats and Republicans? The above results showed "within group" changes but not between group changes. Results showed that between-group similarity also increased for participants in the social condition (37% for Experiment 1 and 46% for the replication study), which means that polarization decreased. 
 
-**To recap**: social information exchange within homogeneous networks made people produce more accurate estimates. Similarity within and between groups increased, indicating that people within social groups got similar, and that polarization diminished. 
+**To recap**: social information exchange within homogeneous networks helped people make more accurate estimates. Similarity within and between groups increased, indicating that people within social groups got similar, and that polarization diminished. And this result withstood partisan priming. 
 
-My question: Will this result hold if information exchange is more complex than numeric estimates?
+My question: Will the result stays the same if information exchange is not confined to numeric estimates? Why don't we allow people to chat? Is it because of lack of technical support or that there is theoretical consideration against it?
 
 ## 2020-11-15
 Becker, Porter, & Centola. (2019). The wisdom of partisan crowds. *Proceedings of the National Academy of Sciences, 116*(22), 10717-10722.
@@ -123,7 +125,7 @@ Participants were randomly assigned to two conditions: control condition vs soci
 
 - Those in the social condition answered independently in Round 1. In Round 2, they were shown the average answer of four other participants connected to them in a social network and then updated their answer. In Round 3, they were shown the average of the updated answers of four other participants connected to them (same in Round 2) and provided a final answer to the question. 
 
-- A network consists of 35 participants who shared the same political orientation (either Democrats or Republicans). Participants in the network did not know that other people in the network had the same partisan preference as theirs. 
+- A network consists of 35 participants who shared the same political orientation (either Democrats or Republicans). Participants in the network **did not** know that other people in the network had the same partisan preference as theirs. 
 
 - The researchers tested four question. Each question was answered by 3 network groups and 1 control group for each political party. 
 
@@ -156,7 +158,7 @@ Finished Guilbeault & Centola. (2020)
 
 >... allowing smokers and nonsmokers to exchange views while aware of each other's smoking status effectively reduced bias both in their evaluation of health risks, and in their beliefs about each other's capacity to accurately interpret scientific data about the health risks of tabaco use. 
 
-An interesting finding in this study is that interacting in social networks (which was limited to numeric estimates in the study), smokers and nonsmokers did not differ significantly in their perceptions of smokers' ability to understand health information associated with smoking. This means that biases were reduced. 
+An interesting finding in this study is that after interacting with each other in social networks (which was limited to numeric estimates in the study), smokers and nonsmokers did not differ significantly in their perceptions of smokers' ability to understand health information associated with smoking. This means that biases were reduced. 
 
 ## 2020-11-11
 Continue with Guilbeault & Centola. (2020)
@@ -185,7 +187,7 @@ Participants were incentivized by monetary reward awarded based on the accuracy 
 
 Results:
 
-- Both smokers and nonsmokers were inaccurate at estimating the risk of smoking;
+- In Round 1, both smokers and nonsmokers were equaly inaccurate at estimating the health risk of smoking;
 - No significant improvement in estimate accuracy in the control group. 
 - The decrease in estimate error in group 2 was significantly greater than both smoker and nonsmokers in the control group;
 - The decrease in estimate error in group 3 was significantly greater than group 2. Specifically, this decrease is ten times greater than both smoker and nonsmoker in the control group. 
