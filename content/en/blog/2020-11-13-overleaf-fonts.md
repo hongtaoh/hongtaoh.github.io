@@ -19,7 +19,7 @@ Using different fonts is much easier than I thought. It involves two steps:
 \setmainfont{Choose Your Own Font}
 ```
 
-Where to find the fonts that were supported via `fontspec`? Read [this list](https://www.overleaf.com/learn/latex/Questions/Which%20OTF%20or%20TTF%20fonts%20are%20supported%20via%20fontspec%3F#Chinese), which I think is quite comprehensive. It contains many modern fonts, including those you can find in Google fonts. 
+Where to find the fonts that were supported via `fontspec`? Read [this list](https://www.overleaf.com/learn/latex/Questions/Which%20OTF%20or%20TTF%20fonts%20are%20supported%20via%20fontspec%3F), which I think is quite comprehensive. It contains many modern fonts, including those you can find in Google fonts. 
 
 ## Several fonts in a document
 
@@ -40,4 +40,4 @@ The second choice can be activated by `\ssfamily`, and the third by
 Read [this post](https://www.overleaf.com/learn/latex/XeLaTeX) for more info. 
 
 ## Your own fonts
-If your favorate font is not found [the list](https://www.overleaf.com/learn/latex/Questions/Which%20OTF%20or%20TTF%20fonts%20are%20supported%20via%20fontspec%3F#Chinese), you can refer to [this post](https://www.overleaf.com/learn/latex/XeLaTeX) to upload and your own fonts. 
+If your favorate font is not found [the list](https://www.overleaf.com/learn/latex/Questions/Which%20OTF%20or%20TTF%20fonts%20are%20supported%20via%20fontspec%3F), you can refer to [this post](https://www.overleaf.com/learn/latex/XeLaTeX) to upload and your own fonts. 

@@ -10,7 +10,7 @@ I thought creating custom blocks in Hugo would be difficult. But with Hugo's sho
 
 # Download images and edit stylesheet
 
-First of all, you'll need to download five images from [here](https://github.com/rstudio/bookdown/tree/master/inst/examples/images): `caution`, `important`, `note`, `tip`, and `warning.png`. Add these images to the `static` folder of your Hugo project. I suppose you are add them to the root directory of `static`. 
+First of all, you'll need to download five images from [here](https://github.com/rstudio/bookdown/tree/master/inst/examples/images): `caution`, `important`, `note`, `tip`, and `warning.png`. Add these images to the `static` folder of your Hugo project. I suppose you are adding them to the root directory of `static`. 
 
 Then, in your `CSS` stylesheet, add the following:
 
@@ -85,20 +85,20 @@ This is a tip. How much are you going to tip me?
 {{< end >}}
 
 {{< block class="caution" >}}
-Caution: Great food ahead! Don't go if you are on a diet.
+Caution: Great food ahead! Stop if you are on a diet.
 {{< end >}}
 
 {{< block class="warning" >}}
 Warning: Road blocked ahead!
 {{< end >}}
 
-I personally like use this quite often:
+I personally use this quite often:
 
 {{< block class="reminder" >}}
 You can use this whatever way you like. I usually use it to remind myself something in a post. 
 {{< end >}}
 
-If you like it too, you can download the image [here](http://gdut_yy.gitee.io/doc-csstdg4/ch1.html#_1-6-feature-queries), and then add the following to your stylesheet (edit as you need):
+If you like it too, you can download the image [here](http://gdut_yy.gitee.io/doc-csstdg4/ch1.html#_1-6-feature-queries), and then add the following codes to your stylesheet (edit as you need):
 
 ```css
 .reminder {
