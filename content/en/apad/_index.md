@@ -2,6 +2,11 @@
 title: A Paper A Day
 type : apad
 ---
+## 2020-11-21
+Centola, D. (2019). *Influential networks. Nature human behaviour, 3*(7), 664-665.
+
+Ordinary people, instead of influencers ("hubs), are more likely to propagate complex contagions because they offer more social reinforcement. 
+
 ## 2020-11-20
 Guilbeault, D., Becker, J., & Centola, D. (2018). Social learning and partisan bias in the interpretation of climate trends. *Proceedings of the National Academy of Sciences, 115*(39), 9714-9719.
 
@@ -37,7 +42,7 @@ Group 4: trend accuracy improved but moderate belief polarization remained.
 - Both conservatives and liberals improved their prediction accuracy thanks to information exchange in networks, even when exposed to their network neighbors' political identification. 
 
 ### Robustness check
-Can social learning reduce polarization in homogeneous networks (i.e., networks that not bipartisan)? Robustness tests showed that **the effect of social learning was reduced in politically homogeneous networks**: by Round 3, trend accuracy of conservatives in these echo chambers did not differ significantly from conservatives in the control condition. (
+Can social learning reduce polarization in homogeneous networks (i.e., networks that not bipartisan)? Robustness tests showed that **the effect of social learning was reduced in politically homogeneous networks**: by Round 3, trend accuracy of conservatives in these echo chambers did not differ significantly from conservatives in the control condition. 
 
 {{<block class="reminder">}}
 Considering this result, instead of saying the effec of social learning was **reduced**, I think it's more accurate to say it was **removed**.
@@ -46,7 +51,7 @@ Considering this result, instead of saying the effec of social learning was **re
 Another question is whether the effect of social learning remains if participants in Group 4 were shown individual answers rather than an average. Results showed that the effect of social learning was robust to exposure to individual responses.
 
 {{<block class="reminder">}}
-I am very puzzled by the result. It showed that the effect of social learning was eliminated in homogeneous networks, but the paper of **the wisdom of partisan crowds** showed exactly [the opposite result](/en/apad/#2020-11-16-edited-on-2020-11-19-and-2020-11-20). 
+I am very puzzled by the result. It showed that the effect of social learning was eliminated in homogeneous networks, but the paper of *the wisdom of partisan crowds* showed exactly [the opposite result](/en/apad/#2020-11-16-edited-on-2020-11-19-and-2020-11-20). 
 {{<end>}}
 
 ### Conclusion & suggestion
