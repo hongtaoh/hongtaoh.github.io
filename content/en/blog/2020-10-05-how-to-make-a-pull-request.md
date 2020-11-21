@@ -1,5 +1,5 @@
 ---
-title: "How to Make A Pull Request on GitHub"
+title: "How to Make a Pull Request on GitHub"
 date: 2020-10-05T16:56:56-04:00
 author: Hongtao Hao
 slug: github-pull-request

@@ -48,6 +48,8 @@ type : nolisting
 
 ### Tutorials:
 
+- Notes on *Network Science* [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://netsci.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/netsci-notes), [<i class="fa fa-file" style="color: grey; font-size: 16pt"></i>](https://netsci.hongtaoh.com/netsci.pdf)
+
 - MSCH-C101 with Hongtao [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://c101.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/c101)
 
   - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
@@ -63,11 +65,11 @@ type : nolisting
 
 - International Journalism Class at RUC [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://rucer.netlify.app/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/guoxinban)
 
-- BAS @ IU [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://iubsa.netlify.app/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/bsa)
+### Data visualizations
 
-### Software:
+- Visualizing 120 Years of Summer Olympic Games [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://olymvis.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/olymvis), [<i class="fa fa-file" style="color: grey; font-size: 16pt"></i>](https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/tex-pdf/fang_hao_olymvis.pdf)
 
-- tree-1.8.0 [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/tree-1.8.0)
+- Bar Chart Race of Coronavirus Confirmed Cases [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://yyahn.com/covid19-dashboard/barchart.html), [<i class="fa fa-database" style="color: grey; font-size: 16pt"></i>](https://observablehq.com/@hongtaoh/bar-chart-race-of-coronavirus-confirmed-cases)
 
 ## Working Experience
 - 2019 May, Journalist, *49<sup>th</sup> St.Gallen Symposium Magazine*, St. Gallen, Switzerland 

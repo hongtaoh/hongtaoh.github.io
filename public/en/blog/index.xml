@@ -22,7 +22,7 @@ I then wondered: what&amp;rsquo;s the difference between forking and branch?</de
     </item>
     
     <item>
-      <title>How to Use Different Fonts in Overleaf</title>
+      <title>How to Use Different Fonts on Overleaf</title>
       <link>https://hongtaoh.github.io/en/2020/11/13/overleaf-latex-fonts/</link>
       <pubDate>Fri, 13 Nov 2020 10:07:19 -0500</pubDate>
       
@@ -103,7 +103,7 @@ Add the following1 to your website stylesheet:
     </item>
     
     <item>
-      <title>How to Embed An Observable Notebook in A Hugo Blog</title>
+      <title>How to Embed an Observable Notebook in A Hugo Blog</title>
       <link>https://hongtaoh.github.io/en/2020/11/02/observable-hugo-embed/</link>
       <pubDate>Mon, 02 Nov 2020 11:38:49 -0500</pubDate>
       
@@ -159,7 +159,7 @@ cd ~/Downloads curl -O https://ftp.gnu.org/gnu/wget/wget2-1.99.2.tar.gz tar -zxv
     </item>
     
     <item>
-      <title>How to Make A Pull Request on GitHub</title>
+      <title>How to Make a Pull Request on GitHub</title>
       <link>https://hongtaoh.github.io/en/2020/10/05/github-pull-request/</link>
       <pubDate>Mon, 05 Oct 2020 16:56:56 -0400</pubDate>
       

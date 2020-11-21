@@ -22,21 +22,25 @@ en = "/en/:year/:month/:day/:slug/"
     url = "/en/en-vitae/"
     weight = 2
 [[menu.en]]
+    name = "Projects"
+    url = "/en/projects/"
+    weight = 3
+[[menu.en]]
     name = "Blog"
     url = "/en/blog/"
-    weight = 3
+    weight = 4
 [[menu.en]]
     name = "Now"
     url = "/en/now/"
-    weight = 4
+    weight = 5
 [[menu.en]]
     name = "APAD"
     url = "/en/apad/"
-    weight = 5
+    weight = 6
 [[menu.en]]
     name = "中文"
     url = "/cn/blog/"
-    weight = 6
+    weight = 7
 [[menu.cn]]
     name = "中文首页"
     url = "/cn/"

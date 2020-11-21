@@ -22,7 +22,7 @@ I then wondered: what&amp;rsquo;s the difference between forking and branch?</de
     </item>
     
     <item>
-      <title>How to Use Different Fonts in Overleaf</title>
+      <title>How to Use Different Fonts on Overleaf</title>
       <link>https://hongtaoh.github.io/en/2020/11/13/overleaf-latex-fonts/</link>
       <pubDate>Fri, 13 Nov 2020 10:07:19 -0500</pubDate>
       
@@ -103,7 +103,7 @@ Add the following1 to your website stylesheet:
     </item>
     
     <item>
-      <title>How to Embed An Observable Notebook in A Hugo Blog</title>
+      <title>How to Embed an Observable Notebook in A Hugo Blog</title>
       <link>https://hongtaoh.github.io/en/2020/11/02/observable-hugo-embed/</link>
       <pubDate>Mon, 02 Nov 2020 11:38:49 -0500</pubDate>
       
@@ -201,7 +201,7 @@ cd ~/Downloads curl -O https://ftp.gnu.org/gnu/wget/wget2-1.99.2.tar.gz tar -zxv
     </item>
     
     <item>
-      <title>How to Make A Pull Request on GitHub</title>
+      <title>How to Make a Pull Request on GitHub</title>
       <link>https://hongtaoh.github.io/en/2020/10/05/github-pull-request/</link>
       <pubDate>Mon, 05 Oct 2020 16:56:56 -0400</pubDate>
       
@@ -1237,6 +1237,15 @@ Education  2018 ~ 2020, M.A. in Media Arts and Sciences, Indiana Univeristy Bloo
       
       <guid>https://hongtaoh.github.io/en-vitae/</guid>
       <description>Education  2018 ~ 2020 (expected), M.A. in Media Arts and Sciences, Indiana Univeristy Bloomington 2016 ~ 2018, M.A. in Journalism, Renmin University of China 2012 ~ 2016, B.A. in English, Hebei Normal University  Conference Presentations  Hao, H. (Nov., 2019). Are Chinese selfies gender-stereotypical: a content analysis of selfies on Weibo. Paper presented at the 105th Annual Conference of the National Communication Association, Baltimore. Hao, H. (Nov., 2019). Digital divide: theoretical review and future research suggestions.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://hongtaoh.github.io/en/1/01/01/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/en/1/01/01/projects/</guid>
+      <description>](https://c101.hongtaoh.com/) Class website for my students enrolled in MSCH‑C100 at IU, 2020 Spring. **Highlights**: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)  Both total number of athletes and the rate of female participation have been increasing in the past 120 years.  &#34;He had a strong enthusiasm for teaching the course material and was always very kind.&#34;   ### C101 With Hongtao Class website for my students enrolled in [MSCH‑C100](https://hongtaoh.com) at IU, 2020 Spring.</description>
     </item>
     
   </channel>

@@ -1,5 +1,5 @@
 ---
-title: "How to Embed An Observable Notebook in A Hugo Blog"
+title: "How to Embed an Observable Notebook in A Hugo Blog"
 date: 2020-11-02T11:38:49-05:00
 author: Hongtao Hao
 slug: observable-hugo-embed

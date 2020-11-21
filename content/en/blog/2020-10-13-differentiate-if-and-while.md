@@ -34,7 +34,7 @@ I used a `for` loop that iterates over the list of `a`. For every number in the 
 
 The logic of the `if` statement within the `for` loop is just like this:
 
-![](https://www.tutorialspoint.com/python/images/decision_making.jpg) 
+{{<figure src="https://www.tutorialspoint.com/python/images/decision_making.jpg">}}
 
 Diagram credit: [Tutorialspoint](https://www.tutorialspoint.com/python/python_decision_making.htm)
 
@@ -70,7 +70,7 @@ For the first number, i.e., `$1$`, it will be assessed agains the condition firs
 
 Since `$12$` is greater than `$10$`, `$1$` will be added to `num_gl_10`. However, different than in a `if` statement, our computer will assess `$12$` against the *condition* again, and, of course, execuate the *conditional code* again. It will keeps doing this until our computer runs out of battery. Why? Because that's the logic of a `while` loop:
 
-![](https://www.tutorialspoint.com/python/images/python_while_loop.jpg) 
+{{<figure src="https://www.tutorialspoint.com/python/images/python_while_loop.jpg">}}
 
 Diagram credit: [Tutorialspoint](https://www.tutorialspoint.com/python/python_while_loop.htm)
 
