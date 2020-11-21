@@ -14,13 +14,14 @@ What is the drawback of previous studies: people had conversations, so that rese
 ### Design & Procedure
 
 Four groups:
-A control group in which participants have the same political ideology;
+
+A control group in which participants had **the same** political ideology;
 
 Group 2, 3, and 4 are all structured social networks with an equal number of conservatives and liberals. Group 2 were only shown the average of their 4 network neighbors, without any other information exhibited. Group 3 were shown the average of their neighbors plus the logos of political parties. Group 4 were shown the average as well, along with the neighbors political identity. 
 
 Each group provided estimates for three times. For the first round, each member estimated independently. 
 
-For Round 2 and Round 3, the control group revised their answers independently. Group 2 revised their answers while being exposed to their neighbors' average answer. Group 3 revised their answer while bing exposed to Republican and Democratic party logo below their neighbors' average estimate. Group 4 revised their response while bing were shown the usernames and political identification of each of their four neighbors, and the average of these four neighbors answers.
+In Round 2 and Round 3, the control group revised their answers independently. Group 2 revised their answers while being exposed to their neighbors' average answer. Group 3 revised their answer while bing exposed to Republican and Democratic party logo below their neighbors' average estimate. Group 4 revised their response while bing were shown the usernames, political identification, and the average of each of their four neighbors, and the average of these four neighbors' answers.
 
 ### Results
 Group 2: both liberals and conservatives improved their trend accuracy, with an elimination of partisan bias in interpreting climate change data. Even conservatives in this group predicted trend significant more accurately than liberals in the control condition. 
@@ -36,9 +37,17 @@ Group 4: trend accuracy improved but moderate belief polarization remained.
 - Both conservatives and liberals improved their prediction accuracy thanks to information exchange in networks, even when exposed to their network neighbors' political identification. 
 
 ### Robustness check
-Can social learning reduce polarization in homogeneous networks (i.e., networks that not bipartisan)? Robustness tests showed that **the effect of social learning was reduced in politically homogeneous networks**: by Round 3, trend accuracy of conservatives in these echo chambers did not differ significantly from conservatives in the control condition. (Considering this, instead of saying the effec of social learning was **reduced**, I think it's more accurate to say it was **removed**.)
+Can social learning reduce polarization in homogeneous networks (i.e., networks that not bipartisan)? Robustness tests showed that **the effect of social learning was reduced in politically homogeneous networks**: by Round 3, trend accuracy of conservatives in these echo chambers did not differ significantly from conservatives in the control condition. (
 
-Another question is whether the effect of social learning remains if participants in Group 4 were shown individual answers rather than an average. Results showed that the effect of social learning was robust to exposure to individual responses. 
+{{<block class="reminder">}}
+Considering this result, instead of saying the effec of social learning was **reduced**, I think it's more accurate to say it was **removed**.
+{{<end>}}
+
+Another question is whether the effect of social learning remains if participants in Group 4 were shown individual answers rather than an average. Results showed that the effect of social learning was robust to exposure to individual responses.
+
+{{<block class="reminder">}}
+I am very puzzled by the result. It showed that the effect of social learning was eliminated in homogeneous networks, but the paper of **the wisdom of partisan crowds** showed exactly [the opposite result](/en/apad/#2020-11-16-edited-on-2020-11-19-and-2020-11-20). 
+{{<end>}}
 
 ### Conclusion & suggestion
 It's better to have political discussions in biparsition networks without partisan cues.
