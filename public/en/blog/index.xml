@@ -64,7 +64,7 @@ Thanks, Yihui !</description>
       
       <guid>https://hongtaoh.github.io/en/2020/11/03/custom-blocks-hugo/</guid>
       <description>I thought creating custom blocks in Hugo would be difficult. But with Hugo&amp;rsquo;s shortcodes, and the CSS from Yihui Xie&amp;rsquo;s Bookdown project, it can be super easy.
-Download images and edit stylesheet First of all, you&amp;rsquo;ll need to download five images from here : caution, important, note, tip, and warning.png. Add these images to the static folder of your Hugo project. I suppose you are add them to the root directory of static.</description>
+Download images and edit stylesheet First of all, you&amp;rsquo;ll need to download five images from here : caution, important, note, tip, and warning.png. Add these images to the static folder of your Hugo project. I suppose you are adding them to the root directory of static.</description>
     </item>
     
     <item>
