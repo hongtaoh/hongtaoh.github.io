@@ -643,28 +643,28 @@ I like this study: simple, and impactful.
 Re-reading on 2020-11-22
 
 ### Literature
-Homophily is defined as "the tendency of social contacts to be similar to one another". Although research on diffusion, and that on social influence differ over the effects of homophily on behavior spreading at the dyadic level, both agree that homophily decreases adoption at the network level. This is because, obviously, the more homophilous one's network is, he is she is less likely to be exposed to individuals of a different characteristic. If you are a less healthy person, and you find yourself in a homophilous network, it's less likely to know the activities of a healthy person. 
+Homophily is defined as "the tendency of social contacts to be similar to one another". Although research on diffusion, and that on social influence differ over the effects of homophily on behavior spreading at the dyadic level, both agree that homophily decreases adoption at the network level. This is because, obviously, the more homophilous one's network is, he is she is less likely to be exposed to individuals of a different characteristic. If you are a less healthy person, and you find yourself in a homophilous network, it's less likely for you to be aware of what those healthy guys are doing. 
 
 ### Purpose
 To study the effect of homophily on the adoption of healthy behavior
 
 ### Design
-710 participants are randomly put into two conditions: homophilous population condition, and unconstructed population condition. Homophilous population condition consists people having similar individual characteristics (gender, age, and BMI) whereas people in the other condition are random. 
+710 participants are randomly put into two conditions: homophilous population condition, and unconstructed population condition. Homophilous population condition consists of people having similar individual characteristics (gender, age, and BMI) whereas people in the other condition are random and mixed. 
 
 All networks in the study have the same size (= 72), clustering coefficient (= 0.4), and degree distribution (= 6). The only differece is the level of homophily. 
 
-The study consists of five trials, each having two social networks. All these trails run at the same time, for seven weeks. The healthy behavior to be adopted is to write diet diary online. 
+The study consisted of five trials, each having two social networks. All these trials ran at the same time, for seven weeks. The healthy behavior to be adopted is to write diet diary online. 
 
-The seed of the behavior in all networks is a "healthy" individual. At the start of Week 1, the authors activated the seed nodes simultaneously. Once an individual signs up, their neighbors will be notified via email. 
+The seed of the behavior in all networks is a "healthy" individual. At the start of Week 1, the author activated the seed nodes simultaneously. Once an individual signs up, their neighbors will be notified via email. 
 
 ### Results
-Across all five trails, homophilous condition had a higher adoption rate than in unconstructed condition. 
+Across all five trials, people in homophilous condition had a higher adoption rate than those in unconstructed condition. 
 
 Comparing adoption among obese and nonobese individuals: Within homophilous condition, a greater percentage of obese individuals adopted the behavior than that of nonobese people. In unconstructed condition, both the number of and percentage of nonobese adopters were larger than obese adopters. In fact, there was **no** obese adopters in the unconstructed group at all. 
 
 Comparing the two conditions: homophily increased the adoption among both the obese and nonobese people. 
 
-However, from these results, we cannot say for certain that **homophily** is the reason. For example, it may be that in the homophilous condition, obese people have more neighbors who sign up and thus have more exposure. It may also because that homophily increases the likelihood for people to sign up once they are exposed. Therefore, we need to compare 1.) **exposure**, and 2.) **the likelihood to adopt once exposed** in the two conditions. 
+However, from these results, we cannot say for sure that **homophily** is the reason. For example, it may be that in the homophilous condition, obese people have more neighbors who sign up and thus have more exposure. It may also because that homophily increases the likelihood for people to sign up once they are exposed. Therefore, we need to compare 1.) **exposure**, and 2.) **the likelihood to adopt once exposed** in the two conditions. 
 
 It showed that, **within each of the two conditions**, the percentage of exposed obese people (num. of exposed obese / total num. of obese ppl) and that of exposed nonobese people (num. of exposed nonobese / total num. of nonobese ppl) do not differ significantly. **Across conditions**, homophily significantly increased the percentage of exposed obese people. See Fig. 2D.
 
