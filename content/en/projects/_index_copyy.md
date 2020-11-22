@@ -53,7 +53,7 @@ Class website for my students enrolled in [MSCH‑C100](https://hongtaoh.com) at
 ### 2. D3Book Companion
 
   <div class="left">
-  	{{<figure src="/media/projects/d3book.png" link="https://c101.hongtaoh.com/">}}
+  	{{<figure src="/media/projects/d3book.png" link="https://d3book.hongtaoh.com/">}}
   	<!-- background image credit: https://banner2.cleanpng.com/20180329/faq/kisspng-book-clip-art-open-book-5abd5bdd75f3c8.2387098515223592614831.jpg -->
   </div>
   <div class="right">
