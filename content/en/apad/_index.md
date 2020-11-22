@@ -6,6 +6,19 @@ type : apad
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. 
 {{<end>}}
 
+## 2020-11-22
+Weng, L., Karsai, M., Perra, N., Menczer, F., & Flammini, A. (2018). Attention on weak ties in social and communication networks. In *Complex Spreading Phenomena in Social Systems* (pp. 213-228). Springer, Cham.
+
+Many papers on the strength of weak ties do not answer the question of whether weak ties carry **important** or **novel** information.
+
+To answer this question, we can test whether users pay more attention to information travelled through a weak tie. But how can we measure "attention"? A reasonable proxy is the number of friends a user has in a social network. 
+
+Result:
+
+1. Strong tie carry more traffic, confirming that people communication more with close friends.
+
+PP. 1-12
+
 ## 2020-11-21
 Centola, D. (2019). *Influential networks. Nature human behaviour, 3*(7), 664-665.
 

@@ -10,7 +10,7 @@ type : nolisting
 
 {{< column >}}
 
-My notes while learning Professor [Yong-Yeol Ahn](http://yongyeol.com/)'s online course of [*INFO I606 Network Science*](https://github.com/yy/netsci-course)
+My notes while auditing Professor [Yong-Yeol Ahn](http://yongyeol.com/)'s online course of [*INFO I606 Network Science*](https://github.com/yy/netsci-course)
 
 [Website](https://netsci.hongtaoh.com/) | [Code](https://github.com/hongtaoh/netsci-notes) | [PDF](https://netsci.hongtaoh.com/netsci.pdf)
 
@@ -62,7 +62,9 @@ Tutorial posts on a variety of topics. Representatives:
 
 {{<figure src="/media/projects/d3book.png" link="https://c101.hongtaoh.com/" >}}
 
+<div style="color: gray">
 Image adapted from [here](https://banner2.cleanpng.com/20180329/faq/kisspng-book-clip-art-open-book-5abd5bdd75f3c8.2387098515223592614831.jpg)
+</div>
 
 {{< column >}}
 
