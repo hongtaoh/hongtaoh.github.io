@@ -28,7 +28,13 @@ div.splitbox {
 div.splitbox div.left {
                width:35%;
                float:left;
+               color: gray;
 }
+
+div.left a{
+  color: red;
+}
+
 div.splitbox div.right {
                width:64%;
                float:right;}

@@ -60,12 +60,11 @@ Tutorial posts on a variety of topics. Representatives:
 ### 4. D3Book Companion
 {{< columns >}}
 
-{{<figure src="/media/projects/d3book.png" link="https://c101.hongtaoh.com/" >}}
+{{<figure src="/media/projects/d3book-4.png" link="https://c101.hongtaoh.com/" >}}
 
-<div style="color: gray">
 
-Image adapted from [here](https://banner2.cleanpng.com/20180329/faq/kisspng-book-clip-art-open-book-5abd5bdd75f3c8.2387098515223592614831.jpg)
-</div>
+<!-- Image adapted from [here](https://banner2.cleanpng.com/20180329/faq/kisspng-book-clip-art-open-book-5abd5bdd75f3c8.2387098515223592614831.jpg)
+ -->
 
 {{< column >}}
 
