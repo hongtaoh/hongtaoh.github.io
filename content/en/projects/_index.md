@@ -10,7 +10,7 @@ type : nolisting
 
 {{< column >}}
 
-My notes while learning Profesor [Yong-Yeol Ahn](http://yongyeol.com/)'s online course of [*INFO I606 Network Science*](https://github.com/yy/netsci-course)
+My notes while learning Professor [Yong-Yeol Ahn](http://yongyeol.com/)'s online course of [*INFO I606 Network Science*](https://github.com/yy/netsci-course)
 
 [Website](https://netsci.hongtaoh.com/) | [Code](https://github.com/hongtaoh/netsci-notes) | [PDF](https://netsci.hongtaoh.com/netsci.pdf)
 
@@ -62,9 +62,11 @@ Tutorial posts on a variety of topics. Representatives:
 
 {{<figure src="/media/projects/d3book.png" link="https://c101.hongtaoh.com/" >}}
 
+Image adapted from [here](https://banner2.cleanpng.com/20180329/faq/kisspng-book-clip-art-open-book-5abd5bdd75f3c8.2387098515223592614831.jpg)
+
 {{< column >}}
 
-A simple tutorial to help beginners like me learn D3.js. It is a side product of my [40 Days of Learning D3](https://observablehq.com/collection/@hongtaoh/45-days-of-learning-d3) Challenge.
+A simple tutorial website to help beginners like me learn D3.js. It is a side product of my [40 Days of Learning D3](https://observablehq.com/collection/@hongtaoh/45-days-of-learning-d3) Challenge.
 
 [Website](https://d3book.hongtaoh.com/) | [Code](https://github.com/hongtaoh/d3book)
 
