@@ -6,6 +6,19 @@ type : apad
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. 
 {{<end>}}
 
+## 2020-11-23
+
+1. Finished Weng et al. (2018)
+
+Links between people can be categorized into two types based on reciprocity: social links and informational links. 
+
+Second result: Weak ties attracted attention as much as, or even more than strong ties. 
+
+>... people interact along strong ties due to their social relationships, while looking for novel information through weak ties. 
+
+2. Finished Lilian Weng's article of [*Attention? Attention!*](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html). Couldn't understand it. 
+
+
 ## 2020-11-22
 Weng, L., Karsai, M., Perra, N., Menczer, F., & Flammini, A. (2018). Attention on weak ties in social and communication networks. In *Complex Spreading Phenomena in Social Systems* (pp. 213-228). Springer, Cham.
 
@@ -95,7 +108,7 @@ Thresholds of contagions vary. Different people and different activities may hav
 
 Identity-based diversity means one's neighbors have different characteristics. Structural diversity means one's neighbors belong to different components of the network. The first kind of diversity **reduces** the spreading of complex contagions whereas the second one **amplifies** it.
 
-If one has too many friends, he or she might not be an ideal target of complex contagions. This is because complex contagions need multiple reinforcement. When you have too many friends, you receive fewer repeated exposure. Therefore, "clustered, homophilous networks" are condusive to complex contagions. 
+If one has too many friends, he or she might not be an ideal target of complex contagions. This is because complex contagions need multiple reinforcement. When you have too many friends, you receive fewer repeated exposure. Therefore, "clustered, homophilous networks" are conducive to complex contagions. 
 
   - How do people infer global structure from their local interactions?
   - How do future social media networks faciliate (or reduce?) these inferences by giving people more (or less?) information about their broader ego network?
@@ -159,7 +172,7 @@ But how about the difference between Democrats and Republicans? The above result
 
 **To recap**: social information exchange within homogeneous networks helped people make more accurate estimates. Similarity within and between groups increased, indicating that people within social groups got similar, and that polarization diminished. And this result withstood partisan priming. 
 
-My question: Will the result stays the same if information exchange is not confined to numeric estimates? Why don't we allow people to chat? Is it because of lack of technical support or that there is theoretical consideration against it?
+My question: Will the result stay the same if information exchange is not confined to numeric estimates? Why don't we allow people to chat? Is it because of lack of technical support or that there is theoretical consideration against it?
 
 ## 2020-11-15
 Becker, Porter, & Centola. (2019). The wisdom of partisan crowds. *Proceedings of the National Academy of Sciences, 116*(22), 10717-10722.
@@ -815,7 +828,7 @@ This piece is a little bit too technical for me, especially the second part that
 
 Major takeaways from this paper:
 
-  - Information on social media quickly reach in 2 hours around 20% of the people it can reach in the end, and reach in 5 hours around 40%. This is true for both science and rumors. 
+  - Information on social media quickly reaches in 2 hours around 20% of the people it can reach in the end, and reach in 5 hours around 40%. This is true for both science and rumors. 
 
   - Science news is usually quickly diffused. However, long-lasting interest doesn't correspond to the size of the interest. This means, even though people keep sharing it, not a lot of people will be interested in it. 
 
