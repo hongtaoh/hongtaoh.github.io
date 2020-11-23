@@ -97,8 +97,8 @@ Identity-based diversity means one's neighbors have different characteristics. S
 
 If one has too many friends, he or she might not be an ideal target of complex contagions. This is because complex contagions need multiple reinforcement. When you have too many friends, you receive fewer repeated exposure. Therefore, "clustered, homophilous networks" are condusive to complex contagions. 
 
-  - How do people infer global structure from their loal interactions?
-  - How do future social media networks faciliate (or reduce?) these inferences by giving people more information about their broader ego network?
+  - How do people infer global structure from their local interactions?
+  - How do future social media networks faciliate (or reduce?) these inferences by giving people more (or less?) information about their broader ego network?
 
 {{<end>}}
 
