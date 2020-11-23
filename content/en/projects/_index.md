@@ -6,7 +6,7 @@ type : nolisting
 ### 1. Notes on Network Science
 {{< columns >}}
 
-{{<figure src="/media/projects/bfsD3.png" link="https://netsci.hongtaoh.com/" >}}
+{{<figure src="/media/projects/bfsD2.png" link="https://netsci.hongtaoh.com/" >}}
 
 {{< column >}}
 
