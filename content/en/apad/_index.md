@@ -83,6 +83,24 @@ New directions:
 
 1. Ecologies of complex contagions: how several contagions interact with each other within a network and across networks. 
 
+{{<block class="note">}}
+
+The following were added on 2020-11-22
+
+2. Heterogeneity of thresholds
+
+Thresholds of contagions vary. Different people and different activities may have different thresholds. 
+
+3. Homophily and diversity in diffusion
+
+Identity-based diversity means one's neighbors have different characteristics. Structural diversity means one's neighbors belong to different components of the network. The first kind of diversity **reduces** the spreading of complex contagions whereas the second one **amplifies** it.
+
+If one has too many friends, he or she might not be an ideal target of complex contagions. This is because complex contagions need multiple reinforcement. When you have too many friends, you receive fewer repeated exposure. Therefore, "clustered, homophilous networks" are condusive to complex contagions. 
+
+  - How do people infer global structure from their loal interactions?
+  - How do future social media networks faciliate (or reduce?) these inferences by giving people more information about their broader ego network?
+
+{{<end>}}
 
 ## 2020-11-18
 Continue with Guilbeault, Becker, & Centola. (2018)
