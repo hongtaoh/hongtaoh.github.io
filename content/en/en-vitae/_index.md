@@ -21,8 +21,12 @@ type : nolisting
 
 ## Research Experience
 
-- Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn](http://yongyeol.com/)
-    - Responsible for updating and improving [COVID-19 visualizations](https://github.com/covid19-data/covid19-data)
+Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn](http://yongyeol.com/)
+- Responsible for updating and improving [COVID-19 visualizations](https://yyahn.com/covid19-dashboard/)
+  1. Updated the [data workflow](https://github.com/covid19-data/covid19-data);
+  2. Implemented delay parameter, play speed parameter, go back parameter, and date range slider;
+  3. Created the bar chart race of confirmed cases;
+  4. Improved the [website design](https://github.com/covid19-data/covid19-dashboard)
 
 ## Peer-Reviewed Conference Presentations
 1. Hao, H. (May, 2020). *Cross-cultural comparisons of 'selfie-presentation': A content analysis*. Poster presented at the 70th Annual Conference of the International Communication Association, Converted from Australia to virtual due to COVID-19. 
@@ -48,7 +52,7 @@ type : nolisting
 
 ### Tutorials:
 
-- Notes on *Network Science* [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://netsci.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/netsci-notes), [<i class="fa fa-file" style="color: grey; font-size: 16pt"></i>](https://netsci.hongtaoh.com/netsci.pdf)
+- Notes on *Network Science* [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://netsci.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/netsci-notes), [<i class="fa fa-file" style="color: grey; font-size: 15pt"></i>](https://netsci.hongtaoh.com/netsci.pdf)
 
 - MSCH-C101 with Hongtao [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://c101.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/c101)
 
@@ -67,7 +71,7 @@ type : nolisting
 
 ### Data visualizations
 
-- Visualizing 120 Years of Summer Olympic Games [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://olymvis.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/olymvis), [<i class="fa fa-file" style="color: grey; font-size: 16pt"></i>](https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/tex-pdf/fang_hao_olymvis.pdf)
+- Visualizing 120 Years of Summer Olympic Games [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://olymvis.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/olymvis), [<i class="fa fa-file" style="color: grey; font-size: 15pt"></i>](https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/tex-pdf/fang_hao_olymvis.pdf)
 
 - Bar Chart Race of Coronavirus Confirmed Cases [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://yyahn.com/covid19-dashboard/barchart.html), [<i class="fa fa-database" style="color: grey; font-size: 16pt"></i>](https://observablehq.com/@hongtaoh/bar-chart-race-of-coronavirus-confirmed-cases)
 
@@ -118,7 +122,8 @@ type : nolisting
 
 ### Tools
 - Final Cut Pro
-- Sketch
+- Sketchpad
+- Latex
 
 ## Slides
 
