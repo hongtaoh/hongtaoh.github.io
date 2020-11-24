@@ -6,6 +6,26 @@ type : apad
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. 
 {{<end>}}
 
+## 2020-11-24
+
+Gilbert, E., & Karahalios, K. (2009, April). Predicting tie strength with social media. In *Proceedings of the SIGCHI conference on human factors in computing systems* (pp. 211-220).
+
+### Key question: 
+
+1. Can dimensions of tie strength predict tie strength? How?
+2. Limitations of this model?
+
+### Methods
+Participants on Facebook answered five tie strength questions for as many friends as possible within half an hour, ending up 2184 Facebook friendships rated. 
+
+The five questions are: How strong is the relationship, how comfortable to ask for a loan, how helpful if looking for job, how upset if unfriended, and how important to bring friend to a new channel if need be. (See Table 2)
+
+Independent variables: The researchers then used 74 Facebook variables (such as Wall and words in the *inbox*) to predict intensity, intimacy, duration, reciprocal services, structure, emotional support, and social distance. (See Table 1) Participants also answered questions regarding demographic ans Facebook usage on them selfies and their friends.
+
+Dependent variables: answers from participants for the five questions mentioned above. 
+
+PP. 1-4
+
 ## 2020-11-23
 
 1. Finished Weng et al. (2018)
