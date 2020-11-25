@@ -1,10 +1,9 @@
 ---
 title: Curriculum Vitae
-type : nolisting
+type : apad
 ---
 # Hongtao Hao
-
-<i class="fa fa-envelope"></i> :: [hhao@iu.edu](mailto:hhao@iu.edu)
+<i class="fa fa-envelope"></i> :: [hhao@iu.edu](mailto:hhao@iu.edu) 
 
 <i class="fa fa-globe" style="font-size: 19pt"></i> :: [https://hongtaoh.com](https://hongtaoh.com/)
 

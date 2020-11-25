@@ -16,7 +16,7 @@ Gilbert, E., & Karahalios, K. (2009, April). Predicting tie strength with social
 2. Limitations of this model?
 
 ### Methods
-Participants on Facebook answered five tie strength questions for as many friends as possible within half an hour, ending up 2184 Facebook friendships rated. 
+Participants on Facebook answered five tie strength questions for as many friends as possible within half an hour, ending up with 2184 Facebook friendships rated. 
 
 The five questions are: How strong is the relationship, how comfortable to ask for a loan, how helpful if looking for job, how upset if unfriended, and how important to bring friend to a new channel if need be. (See Table 2)
 
