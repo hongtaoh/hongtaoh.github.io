@@ -47,7 +47,7 @@ Tutorial posts on a variety of topics. Representatives:
 - [How to Understand D3.js Continuous Scales](/en/2020/09/07/d3-scales/)
 - [How to Build a Website Using Hugo](/en/2020/06/05/get-started-with-hugo/)
 - [How to Use Legacy Jupyterbook](/en/2020/07/25/legacy-jupyterbook/)
-- [How to plot a Network's Degree Distribution](/en/2020/08/19/plot-degree-distribution-using-igraph/)
+- [How to Plot a Network's Degree Distribution](/en/2020/08/19/plot-degree-distribution-using-igraph/)
 - [How to Print Directory Trees on Mac](/en/2020/08/31/mac-directory-tree/)
 - [How to Make a Pull Request on GitHub](/en/2020/10/05/github-pull-request/)
 - [How to Embed an Observable Notebook](/en/2020/11/02/observable-hugo-embed/)
@@ -68,7 +68,7 @@ Tutorial posts on a variety of topics. Representatives:
 
 {{< column >}}
 
-A simple tutorial website to help beginners like me learn D3.js. It is a side product of my [40 Days of Learning D3](https://observablehq.com/collection/@hongtaoh/45-days-of-learning-d3) Challenge.
+A simple tutorial website to help beginners like me learn D3.js. It is a side product of my [40 Days of Learning D3 Challenge](https://observablehq.com/collection/@hongtaoh/45-days-of-learning-d3).
 
 [Website](https://d3book.hongtaoh.com/) | [Code](https://github.com/hongtaoh/d3book)
 
@@ -82,7 +82,7 @@ A simple tutorial website to help beginners like me learn D3.js. It is a side pr
 
 {{< column >}}
 
-Class website for *International Journalism* taught at Renmin University of China by Michael J. Jordan
+Class website for *International Journalism* taught at [Renmin University of China](https://en.wikipedia.org/wiki/Renmin_University_of_China) by Michael J. Jordan
 
 [Website](https://rucer.netlify.app/) | [Code](https://github.com/hongtaoh/guoxinban)
 
@@ -96,7 +96,7 @@ Class website for *International Journalism* taught at Renmin University of Chin
 
 {{< column >}}
 
-A team project together with [Chris Fang](https://www.linkedin.com/in/chriszihuifang) for Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s [*INFO I590 Data Visualization*class](https://yyahn.com/dviz-course/) in 2019 Fall
+A team project together with [Chris Fang](https://www.linkedin.com/in/chriszihuifang) for Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s [*INFO I590 Data Visualization*](https://yyahn.com/dviz-course/) in 2019 Fall
 
 [Website](https://olymvis.hongtaoh.com/) | [Code](https://github.com/hongtaoh/olymvis) | [Data](https://github.com/hongtaoh/olymvis-data) | [PDF](https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/tex-pdf/fang_hao_olymvis.pdf)
 
@@ -109,7 +109,7 @@ A team project together with [Chris Fang](https://www.linkedin.com/in/chriszihui
 
 {{< column >}}
 
-Worked as an research assistant for Professor [Yong-Yeol Ahn](http://yongyeol.com/) on his project of Coronavirus Trend Visualizations
+Worked as an research assistant for Professor [Yong-Yeol Ahn](http://yongyeol.com/) on his [Coronavirus Trend Visualizations](https://yyahn.com/covid19-dashboard/) project
 
 [Website](https://yyahn.com/covid19-dashboard/) | [Data](https://github.com/covid19-data/covid19-data)
 
