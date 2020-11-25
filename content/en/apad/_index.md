@@ -6,6 +6,9 @@ type : apad
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. 
 {{<end>}}
 
+## 2020-11-25
+Continued with Gilbert & Karahalios (2009)
+
 ## 2020-11-24
 
 Gilbert, E., & Karahalios, K. (2009, April). Predicting tie strength with social media. In *Proceedings of the SIGCHI conference on human factors in computing systems* (pp. 211-220).
@@ -154,7 +157,7 @@ Conclusion: Homogeneous networks do not necessarily lead to polarization. In fac
 Then why do we still have polarized public opinions? This is because popular social media are centralized networks, which make influencers able to exert disproportional effects on other people in the network. 
 
 Future directions: 
-- Any other reasons why "echo chambers" and polarization coexist? 
+- Any other reasons why "echo chambers" and polarization coexist in reality? 
 - Is it possible to replicate this study in real-life networks? For example, in Facebook or Twitter, where information exchange is not limited to numeric estimates?
 - How could we eliminate, or at least reduce the effects of influencers in a network, if ever possible? 
 
