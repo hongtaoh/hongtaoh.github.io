@@ -19,7 +19,7 @@ en = "/en/:year/:month/:day/:slug/"
     weight = 1
 [[menu.en]]
     name = "Vitae"
-    url = "/en/en-vitae/"
+    url = "/en/vitae/"
     weight = 2
 [[menu.en]]
     name = "Projects"
