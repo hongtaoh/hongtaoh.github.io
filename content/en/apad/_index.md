@@ -14,7 +14,7 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 
 Study design:
 
-Data about family and children were available only for waves 1-5 (from child birth to age 9) but not available yet for wave 6 (child age 15). Researcher tried to predict the results (child GPA, child grit, household eviction, household material hardship, caregive layoff, and caregiver participation in job training) of wave 6 based on whole data for waves 1-5 and half of the data for wave 6. 
+Data about family and children were available only for waves 1-5 (from child birth to age 9) but not available yet for wave 6 (child age 15). Researcher tried to predict the results (child GPA, child grit, household eviction, household material hardship, caregive layoff, and caregiver participation in job training) of wave 6 based on the whole data for waves 1-5 and half of the data for wave 6. 
 
 Result:
 
