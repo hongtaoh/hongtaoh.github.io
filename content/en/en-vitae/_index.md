@@ -72,7 +72,7 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
 
 - Visualizing 120 Years of Summer Olympic Games [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://olymvis.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/olymvis), [<i class="fa fa-file" style="color: grey; font-size: 15pt"></i>](https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/tex-pdf/fang_hao_olymvis.pdf)
 
-- Bar Chart Race of Coronavirus Confirmed Cases [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://yyahn.com/covid19-dashboard/barchart.html), [<i class="fa fa-database" style="color: grey; font-size: 16pt"></i>](https://observablehq.com/@hongtaoh/bar-chart-race-of-coronavirus-confirmed-cases)
+- Bar Chart Race of Coronavirus Confirmed Cases [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://yyahn.com/covid19-dashboard/racing.html), [<i class="fa fa-database" style="color: grey; font-size: 16pt"></i>](https://observablehq.com/@hongtaoh/bar-chart-race-of-coronavirus-confirmed-cases)
 
 ## Working Experience
 - 2019 May, Journalist, *49<sup>th</sup> St.Gallen Symposium Magazine*, St. Gallen, Switzerland 

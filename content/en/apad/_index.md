@@ -310,7 +310,7 @@ Centola (2020). Why Social Media Makes Us More Polarized and How to Fix It. Retr
 
 - In another study, smokers and nonsmokers estimated the risks of cigarette smoking. After the study, both groups had a more accurate understanding of the topic, and a higher opinion of the other group.
 
-- Social media of our time exacerbates rather than eradicates partisan bias, because it's centralized, rather than egalitarian. In a centralized network, influencers filter or even block information. For example, if an influencer spreads a piece of wrong information, it might end up becoming an entrenched false belief in the whole community. In contract, in an egalitarian network, each person has an equal say, and ideas are weighed by its own quality rather than the influence of the people behind them. 
+- Social media of our time exacerbates rather than eradicates partisan bias, because it's centralized, rather than egalitarian. In a centralized network, influencers filter or even block information. For example, if an influencer spreads a piece of wrong information, it might end up becoming an entrenched false belief in the whole community, whereas in an egalitarian network, each person has an equal say, and ideas are weighed by its own quality rather than the influence of the people behind them. 
 
 ## 2020-11-08
 1. Finished Salehi & Bernstein (2018)
