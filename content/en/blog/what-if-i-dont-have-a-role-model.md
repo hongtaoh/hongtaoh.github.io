@@ -11,6 +11,6 @@ I got even more frightened when I remembered a study done by Yale University in 
 
 From the first grade, our teachers and books told us that we must have a goal, to have a role model. If we have this role model, our life will be successful. But if we don’t, our life will be a failure. Is it really so?
 
-Last year, it was confirmed by Yale University that the 1953 study never occurred. It’s a total fabrication. In a TED talk-- “stop searching for your passion”, the speaker Terri said passion is not a job. She wants us to throw the idea away that our life can be successful only if we can find our passion. Throw it away. I believe the same goes for role models. When young we might have a yardstick of success and have a role model. But it’s natural that we change our role model over time and it’s also natural that we can’t find one at some point in our life. 
+Several years ago, it was confirmed by Yale University that the 1953 study never occurred. It’s a total fabrication. In a TED talk-- “stop searching for your passion”, the speaker Terri said passion is not a job. She wants us to throw the idea away that our life can be successful only if we can find our passion. Throw it away. I believe the same goes for role models. When young we might have a yardstick of success and have a role model. But it’s natural that we change our role model over time and it’s also natural that we can’t find one at some point in our life. 
 
 
