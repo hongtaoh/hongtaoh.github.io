@@ -95,7 +95,7 @@ git push origin master
 ```
 I tried and these two lines did do the job. 
 
-`git pull upstream master` will automatically merge your **local** repo with the upstream. When git asks you to explain how this merge is necessary, please follow [thise steps](https://stackoverflow.com/a/19085954). 
+`git pull upstream master` will automatically merge your **local** repo with the upstream. When git asks you to explain how this merge is necessary, please follow [these steps](https://stackoverflow.com/a/19085954). 
 
 `git push origin master` will push the changes in your local repo to your remote repo. 
 {{<end>}}
