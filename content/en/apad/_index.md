@@ -6,6 +6,23 @@ type : apad
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. 
 {{<end>}}
 
+## 2020-11-26
+1. Finished Gilbert & Karahalios (2009)
+
+
+2. Salganik et al (2020). Measuring the predictability of life outcomes with a scientific mass collaboration. *Proceedings of the National Academy of Sciences, 117*(15), 8398-8403.
+
+Study design:
+
+Data about family and children were available only for waves 1-5 (from child birth to age 9) but not available yet for wave 6 (child age 15). Researcher tried to predict the results (child GPA, child grit, household eviction, household material hardship, caregive layoff, and caregiver participation in job training) of wave 6 based on whole data for waves 1-5 and half of the data for wave 6. 
+
+Result:
+
+Scientists leveraging complicated machine learning algorithms could not predict those outcomes correctly. If a score of 1 means perfectly accurate, and 0 not accurate at all, the best preditions got a score of 0.2 for material hardship and child GPA, and only 0.05 for other four outcomes. Also note that a linear regression or logistic regression model with only four variables chosen by domain experts were only slightly worse than the best submission, and were much better than most of other submissions. 
+
+>... the submissions were much better than predicting each other than predicting the truth. 
+
+
 ## 2020-11-25
 Continued with Gilbert & Karahalios (2009)
 
