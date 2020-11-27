@@ -109,7 +109,7 @@ A team project together with [Chris Fang](https://www.linkedin.com/in/chriszihui
 
 {{< column >}}
 
-Worked as an research assistant for Professor [Yong-Yeol Ahn](http://yongyeol.com/) on his [Coronavirus Trend Visualizations](https://yyahn.com/covid19-dashboard/) project
+Worked as a research assistant for Professor [Yong-Yeol Ahn](http://yongyeol.com/) on his [Coronavirus Trend Visualizations](https://yyahn.com/covid19-dashboard/) project
 
 [Website](https://yyahn.com/covid19-dashboard/) | [Data](https://github.com/covid19-data/covid19-data)
 

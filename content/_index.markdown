@@ -7,7 +7,7 @@ type: nolisting
 
 I graduated with a Master's degree in Media Arts and Sciences from [the Media School of Indiana University](https://mediaschool.indiana.edu/index.html) in 2020, advised by [Dr. Nicole Martins](https://mediaschool.indiana.edu/people/profile.html?p=nicomart). I am currently working as a research assistant for [Professor Yong-Yeol Ahn](http://yongyeol.com/) at IU Department of Informatics, doing projects on data visualization and learning network science. I earned my first Master's degree in Journalism from Renmin University of China, Beijing. You can view my journalism pieces in [_St.Gallen Symposium Magazine_](https://www.symposium.org/content?a=75). 
 
-<!-- Quick links &nbsp;: &nbsp; [Vitae](/en/en-vitae/) &nbsp; &nbsp; [Projects](/en/projects) &nbsp; &nbsp;  [Blog](/en/blog/) -->
+Quick link &nbsp;: &nbsp; [My projects](/en/vitae/#projects)
 
 
 <!-- I am a fan of [_The Three-Body Problem_](https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)). The most memorable experience I had is attending the 47th [St.Gallen Symposium](https://en.wikipedia.org/wiki/St._Gallen_Symposium) in 2017. -->
