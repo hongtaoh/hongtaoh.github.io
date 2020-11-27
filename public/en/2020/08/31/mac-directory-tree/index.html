@@ -150,7 +150,7 @@ open Makefile -a TextEdit
 <li>Comment out the following lines:</li>
 </ol>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="/media/enblog/comment-linux.png"  itemprop="contentUrl"> 
+    <a href="/media/enblog/comment-linux.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/enblog/comment-linux.png"
             
@@ -163,6 +163,8 @@ open Makefile -a TextEdit
     </figcaption>
     
 </figure>
+
+
 <p>The result will be like this</p>
 <pre><code># Linux defaults:
 # CFLAGS=-ggdb -pedantic -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
@@ -172,7 +174,7 @@ open Makefile -a TextEdit
 <li>Uncomment these lines:</li>
 </ol>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="/media/enblog/uncomment-osx.png"  itemprop="contentUrl"> 
+    <a href="/media/enblog/uncomment-osx.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/enblog/uncomment-osx.png"
             
@@ -185,6 +187,8 @@ open Makefile -a TextEdit
     </figcaption>
     
 </figure>
+
+
 <p>The result will be like this</p>
 <pre><code># Uncomment for OS X:
 # It is not allowed to install to /usr/bin on OS X any longer (SIP):
@@ -201,7 +205,7 @@ sudo make install
 </code></pre></div><p>You&rsquo;ll be asked to input the passwords. Note that your input will be invisible.</p>
 <p>Installation is successful if you see</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="/media/enblog/tree-installation.png"  itemprop="contentUrl"> 
+    <a href="/media/enblog/tree-installation.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/enblog/tree-installation.png"
             
@@ -214,6 +218,8 @@ sudo make install
     </figcaption>
     
 </figure>
+
+
 <p>Also note that although it says that &ldquo;It is not allowed to install to /usr/bin on OS X any longer (SIP)&quot;, I can still install it. If it happens that you cannot install it, after <code>make</code>, you can try this</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv ~/Desktop/tree-1.8.0/tree /usr/local/bin/
 </code></pre></div><p>The above line will move <code>/tree-1.8.0/tree</code> to <code>usr/local/bin/</code>. <strong>Please not that you don&rsquo;t have to do this if <code>sudo make install</code> works for you!</strong></p>

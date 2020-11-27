@@ -135,7 +135,7 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
       main <span style="color:#666">=</span> <span style="color:#ba2121">&#34;Running Proportion of Heads&#34;</span>, cex.main<span style="color:#666">=</span><span style="color:#666">1.5</span>)
 <span style="color:#00f">abline</span>( h<span style="color:#666">=</span>pheads, lty<span style="color:#666">=</span><span style="color:#ba2121">&#34;dotted&#34;</span>)
 </code></pre></div><figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="/media/bayesian/flip.png"  itemprop="contentUrl"> 
+    <a href="/media/bayesian/flip.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/bayesian/flip.png"
             
@@ -148,6 +148,8 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
     </figcaption>
     
 </figure>
+
+
 <p>我们会看到，抛掷一万次，正面朝上的频率越来越接近0.8，那么我们在不知道 <code>$\theta = 0.8$</code> 的情况下，看到这个结果，自然也就会猜到 <code>$\theta = 0.8$</code>。</p>
 <p>第二种方法是数学公式推导。比如有一个六面的骰子🎲，画了一个点的有一个面，两个点的有两个面，三个点的有三个面，那么用数学公式我们可以得出，抛掷骰子后，从长远来看，得到一个点的相对频率是1/6，两个点1/3，三个点1/2.</p>
 <h1 id="概率分布">概率分布<a href="#概率分布" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
@@ -164,7 +166,7 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
 </ol>
 <p>所谓概率质量，是把所有可能的结果分成无数个互斥并穷尽 (mutually exlusive and exhaustive) 的区间 (intervals)，然后看结果落在某一区间的频率，即为概率，也就是这个结果的概率质量。</p>
 <p><figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-02a-9780124058880.jpg"  itemprop="contentUrl"> 
+    <a href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-02a-9780124058880.jpg"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-02a-9780124058880.jpg"
             
@@ -177,8 +179,10 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
     </figcaption>
     
 </figure>
+
+
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-02b-9780124058880.jpg"  itemprop="contentUrl"> 
+    <a href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-02b-9780124058880.jpg"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-02b-9780124058880.jpg"
             
@@ -190,14 +194,16 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
         
     </figcaption>
     
-</figure></p>
+</figure>
+
+</p>
 <p>上图中，k 教授举的<a href="https://www.sciencedirect.com/science/article/pii/B9780124058880000040#f0015" target="_blank" rel="noreferrer noopener">例子</a>
 
 是身高，不过单位是英尺。我就不解释了。图示很容易看懂。注意，这两个图看分子，即： prob.mass，先不要看分母，因为考虑分母的话，prob.mass / bin width 就是概率密度了。</p>
 <p>用概率质量有一个不足：区间的宽度很随意，可宽之窄。因此，为了更准确地讨论连续性变量的概率，我们可以考虑第二种方法，即：概率密度。我们把区间设成无限窄。然后，我们不去看这个无限窄区间的概率质量，而是看概率质量与区间宽度的比例。这个比例便是概率密度。</p>
 <p>回到图4.2。prob.mass / bin with 即为 概率质量 / 区间宽度，结果是概率密度。图4.2－1的区间宽度为2.0个单位，4.2－2的区间宽度为1.0个单位。我们当然可以将这区间宽度进一步减小，如：</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-03-9780124058880.jpg"  itemprop="contentUrl"> 
+    <a href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-03-9780124058880.jpg"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-03-9780124058880.jpg"
             
@@ -210,6 +216,8 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
     </figcaption>
     
 </figure>
+
+
 <p>这个例子中，区间宽度是0.25个单位。我们看到，虽然概率质量不可能大于1<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>，但概率密度是有可能大于1的，特别是当区间宽度非常小的时候。</p>
 <p>概率质量有一个特征是，所有概率质量加起来等于1。这个应该很好理解。因为概率质量的公式中，分母是样本总量，分子是落在这个区间的样本量，那么所有区间的概率质量相加的话，分母不变，分子是所有区间的样本总量相加，结果是：总共的样本量。分子分母相等，商自然等于1。用数学公式表达的话：</p>
 <p><code>$$\sum_i p([x_i,x_i + \Delta x]) = 1 \tag{4.1}\label{eq4.1}$$</code></p>
@@ -223,7 +231,7 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
 <p><code>$$\int d(x)p(x) = 1\tag{4.3}\label{eq4.3}$$</code></p>
 <p>这里值得指出的是，<code>$p(x)$</code>，也就是 <code>$x$</code> 的密度函数，在不同的情况下是有不同的具体公式的，比如，我们来看最著名的正态分布：</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-04-9780124058880.jpg"  itemprop="contentUrl"> 
+    <a href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-04-9780124058880.jpg"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-04-9780124058880.jpg"
             
@@ -236,6 +244,8 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
     </figcaption>
     
 </figure>
+
+
 <p>正态分布中，概率密度函数的数学公式为：</p>
 <p><code>$$p(x) = \frac{1}{\sigma \sqrt{2 \pi}} exp (-\frac{1}{2}[\frac{x-\mu}{\sigma}]^2)\tag{4.4}\label{eq4.4}$$</code></p>
 <p>这里有一个点需要特别注意：对于连续型变量，任何一个具体值的<strong>概率质量</strong>都无限接近于零，但是，任何一个具体值的<strong>概率密度</strong>则是有具体的值的。比如，在图 4.4 所示的正态分布中，<code>$p(-0.2) \approx 1.15$</code></p>
@@ -258,7 +268,7 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
 <li>HDI 不一定是连续的。</li>
 </ol>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-05-9780124058880.jpg"  itemprop="contentUrl"> 
+    <a href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-05-9780124058880.jpg"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000040-f04-05-9780124058880.jpg"
             
@@ -271,10 +281,12 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
     </figcaption>
     
 </figure>
+
+
 <p>HDI 越宽，说明我们越不确定；越窄说明越确定。</p>
 <h1 id="边缘分布和条件分布">边缘分布和条件分布<a href="#边缘分布和条件分布" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="/media/bayesian/table_4-1.png"  itemprop="contentUrl"> 
+    <a href="/media/bayesian/table_4-1.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/bayesian/table_4-1.png"
             
@@ -287,6 +299,8 @@ prob.heads <span style="color:#666">&lt;-</span> num.heads <span style="color:#6
     </figcaption>
     
 </figure>
+
+
 <p>这个表的数据来自 <code>R</code> 自带的 <code>HairEyeColor</code>。行代表“眼睛颜色”，列代表“头发颜色”。边缘概率分别在最右和最底。每一个单元格中的数据是 <strong>联合概率</strong> (joint probability)。比如，(black hair, brown eye) 这个单元格的概率是 0.11，也就是说一共有 11% 的人是黑头发、褐眼睛。同理，黑头发、蓝眼睛的概率只有 3% 。我们把这里的联合概率记为 <code>$p(e,h)$</code> 或者，<code>$p(h,e)$</code>，很明显 <code>$p(e,h) = p(h,e)$</code> 。</p>
 <p>有时候我们只对某一个眼睛颜色，或者头发颜色作为整体感兴趣。比如，我们想知道有多少人是蓝色眼睛，有多少人是红色头发，有多少人是金黄色头发，等等。这种即为 <strong>边缘概率</strong> 。只需要把每一行、每一列单独求和即可。比如，褐色 (brown) 眼睛这一行：</p>
 <p><code>$$.11 + .20 + .04 + .01 = .37$$</code></p>

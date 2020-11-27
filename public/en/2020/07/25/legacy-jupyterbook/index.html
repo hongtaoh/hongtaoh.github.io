@@ -136,7 +136,7 @@ jupyter-book create legacy-jupyterbook <span style="color:#408080;font-style:ita
 .</p>
 <p>Then, go to GitHub, and create a repository <strong>without</strong> checking &ldquo;Initialize this repository with a README&rdquo;. Take a look at this HTTPS address:</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="/media/enblog/legacy-jupyterbook-github-repo-https.png"  itemprop="contentUrl"> 
+    <a href="/media/enblog/legacy-jupyterbook-github-repo-https.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/enblog/legacy-jupyterbook-github-repo-https.png"
             
@@ -149,6 +149,8 @@ jupyter-book create legacy-jupyterbook <span style="color:#408080;font-style:ita
     </figcaption>
     
 </figure>
+
+
 <p>Then, go back to your Terminal:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> legacy-jupyterbook
 git init
@@ -161,7 +163,7 @@ git remote add origin https://github.com/hhao1992/second-try.git <span style="co
 git push -u origin master
 </code></pre></div><p>Then, you&rsquo;ll see some security alerts:</p>
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="/media/enblog/legacy-jupyterbook-alert01.png"  itemprop="contentUrl"> 
+    <a href="/media/enblog/legacy-jupyterbook-alert01.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/enblog/legacy-jupyterbook-alert01.png"
             
@@ -174,8 +176,10 @@ git push -u origin master
     </figcaption>
     
 </figure>
+
+
 <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a target="_blank" href="/media/enblog/legacy-jupyterbook-alert02.png"  itemprop="contentUrl"> 
+    <a href="/media/enblog/legacy-jupyterbook-alert02.png"  itemprop="contentUrl"> 
         <img itemprop="thumbnail"
             src="/media/enblog/legacy-jupyterbook-alert02.png"
             
@@ -188,6 +192,8 @@ git push -u origin master
     </figcaption>
     
 </figure>
+
+
 <p>Solve them this way:</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf Gemfile.lock
 make install 
