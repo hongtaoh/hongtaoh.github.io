@@ -5,6 +5,14 @@ type : apad
 {{<block class="note">}}
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. 
 {{<end>}}
+## 2020-11-27
+1. Blumenstock, J. E. (2008, April). Size matters: word count as a measure of quality on wikipedia. In *Proceedings of the 17th international conference on World Wide Web* (pp. 1095-1096).
+
+This study is really fun. 
+
+2. David Donoho (2015). [50 years of Data Science](http://courses.csail.mit.edu/18.337/2015/docs/50YearsDataScience.pdf).
+
+PP. 1-9
 
 ## 2020-11-26
 1. Finished Gilbert & Karahalios (2009)
