@@ -59,10 +59,10 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
    - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
 
 3. D3Book Companion:  &nbsp; &nbsp;  [Website](https://d3book.hongtaoh.com/) | [Code](https://github.com/hongtaoh/d3book)
-   - A simple tutorial website to help beginners like me learn D3.js. It is a side product of my [40 Days of Learning D3 Challenge](https://observablehq.com/collection/@hongtaoh/45-days-of-learning-d3).
+   - A simple tutorial website to help beginners like me learn `D3.js`. It is a side product of my [40 Days of Learning D3 Challenge](https://observablehq.com/collection/@hongtaoh/45-days-of-learning-d3).
 
 4. Blog Posts of "How to" Series. Representatives:
-   - [How to Understand D3.js Continuous Scales](/en/2020/09/07/d3-scales/)
+   - [How to Understand `D3.js` Continuous Scales](/en/2020/09/07/d3-scales/)
    - [How to Build a Website Using Hugo](/en/2020/06/05/get-started-with-hugo/)
    - [How to Use Legacy Jupyterbook](/en/2020/07/25/legacy-jupyterbook/)
    - [How to Plot a Network's Degree Distribution](/en/2020/08/19/plot-degree-distribution-using-igraph/)
