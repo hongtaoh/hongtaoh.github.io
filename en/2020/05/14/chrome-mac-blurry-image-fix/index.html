@@ -1,0 +1,184 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Fix Blurry Images in Mac Chrome - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hongtaoh.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/vitae/">Vitae</a></li>
+       
+       <li><a href="/en/projects/">Projects</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/en/apad/">APAD</a></li>
+       
+       <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How to Fix Blurry Images in Mac Chrome</h1>
+
+<p>Hongtao Hao 
+ / 2020-05-14 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/chrome-mac-blurry-image-fix.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+<div class="body-text list-text">
+<p>I never used Chrome before but after upgrading my MacOS, I started trying Chrome. I created my personal blog using Hugo. The thing is, when I viewed my site using Chrome on my Mac, all images are so blurry. I tried again on Safari, things were fine; I tried it in Chrome on a Windowns PC, things were also fine.</p>
+<p>While I was scratching my head, I came across <a href="https://stackoverflow.com/a/42216003" target="_blank" rel="noreferrer noopener">this</a>
+
+ answer by pastullo on Stackexchange.</p>
+<p>The fix was really simple: I only added this following single line of CSS in my style sheet, as pastullo suggested:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSS" data-lang="CSS"><span style="color:#008000;font-weight:bold">body</span> {
+	image-rendering: <span style="color:#008000">-webkit-</span>optimize-contrast;
+}
+</code></pre></div><p>This fix literally saved my day. Thanks Stackexchange.</p>
+<p>From below you can see the change.</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/blurry.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/blurry.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>Before</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/clear.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/clear.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>After</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+
+<p style="color:#777;">Last modified on 2020-08-09</p>
+
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="/media/blogdown.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> Content in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+          
+     </ul>
+</footer>
+
+
+
+
+

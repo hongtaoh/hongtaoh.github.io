@@ -1,0 +1,255 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Implement Edit This Page on Github for a Hugo Website - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hongtaoh.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/vitae/">Vitae</a></li>
+       
+       <li><a href="/en/projects/">Projects</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/en/apad/">APAD</a></li>
+       
+       <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How to Implement Edit This Page on Github for a Hugo Website</h1>
+
+<p>Hongtao Hao 
+ / 2020-06-18 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-06-18-edit-on-github-implementation.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+<div class="body-text list-text">
+<p>I saw this quesiton on <a href="https://discourse.gohugo.io/t/how-to-implement-edit-this-page-on-github/1166" target="_blank" rel="noreferrer noopener">this thread</a>
+
+ but the answer by <a href="https://discourse.gohugo.io/t/how-to-implement-edit-this-page-on-github/1166/2" target="_blank" rel="noreferrer noopener">bep</a>
+
+ did not solve the problem.</p>
+<p>The solution can be found in Yihui Xie&rsquo;s book of <a href="https://bookdown.org/yihui/blogdown/templates.html#how-to" target="_blank" rel="noreferrer noopener">Blogdown</a>
+
+.</p>
+<p>However, when I tried the block of codes recommended by Yihui, I still couldn&rsquo;t implement this function of editing on GitHub:</p>
+<pre><code>{{ with .File.Path }}
+&lt;a href=&quot;https://github.com/.../{{ . }}&quot;&gt;Edit this page&lt;/a&gt;
+{{ end }}
+</code></pre><p>I tried the second block of codes on Yihui&rsquo;s book, and it works.</p>
+<p>The key trick is that you need to add <code>{{ $.Scratch.Set &quot;FilePath&quot; .File.Path }}</code> to the codes above.</p>
+<p>I&rsquo;ll summarize the solution here.</p>
+<p>First of all, go to the GitHub repo of your website and open a post. For example, for me, I will go to <a href="https://github.com/hongtaoh/hongtaoh.github.io/tree/sources/content/en/blog" target="_blank" rel="noreferrer noopener">this page</a>
+
+ and open a post (it does not matter which post you choose to open). For example, I&rsquo;ll open <a href="https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/content/en/blog/2020-06-14-terminal-command-basics.md" target="_blank" rel="noreferrer noopener">this post</a>
+
+.</p>
+<p>Then, on top of this post, you can see this:</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/github-edit.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/github-edit.png"
+            
+            />
+    </a>
+    
+</figure>
+
+
+<p>Click the &ldquo;pen&rdquo; and now you are viewing the &ldquo;editing&rdquo; page. Look at the url in your browser and you can find it should be something like this: <code>https://github.com/USER/REPO/edit/BRANCH/PATH/TO/FILE</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. In the example I was showing above, the url shold be: <code>https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-06-14-terminal-command-basics.md</code>.</p>
+<p>Okay, now we will be implementing the &ldquo;edit on GitHub&rdquo; feature.</p>
+<ol>
+<li>If your website only contains <code>.md</code> files:</li>
+</ol>
+<p>First, in your <code>config.toml</code>, add this:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[params]
+GithubEdit = <span style="color:#ba2121">&#34;https://github.com/USER/REPO/edit/&#34;</span>
+</code></pre></div><p><strong>The above is just an example. You should use your own USER and REPO name.</strong></p>
+<p>Also, the code above might be dependent on your <code>permalinks</code> setting in your <code>config.toml</code>.</p>
+<p>Here, please note that there might be replication in urls. For example, in <a href="https://github.com/hongtaoh/guoxinban" target="_blank" rel="noreferrer noopener">this project</a>
+
+, I have this:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[permalinks]
+post = <span style="color:#ba2121">&#34;/:year/:month/:day/:filename/&#34;</span>
+</code></pre></div><p>Then the url of a post should be like <code>https://mydomain//2017/08/30/amid-rising-hiv/</code>. It does not contain <code>post</code>. When I open the &ldquo;pen&rdquo; mentioned above in GitHub, the url is like this: <code>https://github.com/hongtaoh/guoxinban/edit/master/content/post/amid-rising-hiv.md</code>. It contains <code>post</code>.</p>
+<p>Then, what should I put in the <code>GithubEdit</code>? I tried <code>https://github.com/hongtaoh/guoxinban/edit/master/content/post</code>, but then I cliked the &ldquo;Edit this page on GitHub&rdquo; button in my website, the url had two <code>post</code>s. So I changed the <code>GithubEdit</code> to this: <code>https://github.com/hongtaoh/guoxinban/edit/master/content/</code>, and then it worked.</p>
+<p>Then, depending on where you want to add &ldquo;edit this page on GitHub&rdquo;, add the following codes:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">span</span>&gt;
+        	{{ if .IsPage}} 
+            {{ if .File.Path}}
+            {{ $.Scratch.Set &#34;FilePath&#34; .File.Path }}
+            {{ end }}
+            {{ with .Site.Params.GithubEdit}}
+            &lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#7d9029">href</span><span style="color:#666">=</span><span style="color:#ba2121">&#39;{{ . }}{{ $.Scratch.Get &#34;FilePath&#34; }}&#39;</span>&gt;Edit this page on GitHub&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;
+            {{ end }}
+            {{ end }}
+&lt;/<span style="color:#008000;font-weight:bold">span</span>&gt;
+</code></pre></div><p>If you are not sure where to add this block of these codes, study these three websites and their GitHub repos closely by yourself: <a href="https://github.com/rbind/blogdown-demo" target="_blank" rel="noreferrer noopener">Blogdown-repo</a>
+
+, <a href="https://github.com/hongtaoh/hongtaoh.github.io" target="_blank" rel="noreferrer noopener">my personal website</a>
+
+, and <a href="https://github.com/hongtaoh/guoxinban" target="_blank" rel="noreferrer noopener">RUC International Journalism</a>
+
+.</p>
+<p>If you want to customize the style of the words of &ldquo;Edit this page on Github&rdquo;, you can use this in the above codes:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#7d9029">href</span><span style="color:#666">=</span><span style="color:#ba2121">&#39;{{ . }}{{ $.Scratch.Get &#34;FilePath&#34; }}&#39;</span> <span style="color:#7d9029">class</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;btn&#34;</span>&gt;Edit this page on GitHub&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;
+</code></pre></div><p>A good example is the style on <a href="https://blogdown-demo.rbind.io/" target="_blank" rel="noreferrer noopener">Blogdown-demo</a>
+
+. <a href="https://github.com/rbind/blogdown-demo/blob/master/static/css/custom.css" target="_blank" rel="noreferrer noopener">Here</a>
+
+ is the CSS of this style.</p>
+<p>If you want to use a icon rather than the words of &ldquo;Edit this page on Github&rdquo;, study <a href="https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/themes/hugo-xmin/layouts/_default/single.html" target="_blank" rel="noreferrer noopener">my setting</a>
+
+, or that on <a href="https://github.com/rbind/daijiang/blob/master/layouts/partials/article_meta.html" target="_blank" rel="noreferrer noopener">Daijiang Li&rsquo;s personal website</a>
+
+.</p>
+<ol start="2">
+<li>If your website also contains <code>.Rmd</code> file:</li>
+</ol>
+<p>The setting in <code>config.toml</code> is the same. However, codes that should be in your <code>layouts</code> are different:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">span</span>&gt;
+        	{{ if .IsPage}} 
+            {{ if .File.Path}}
+            {{ $Rmd := (print .File.BaseFileName &#34;.Rmd&#34;) }}
+            {{ if (where (readDir (print &#34;content/&#34; .File.Dir)) &#34;Name&#34; $Rmd) }}
+            {{ $.Scratch.Set &#34;FilePath&#34; (print .File.Dir $Rmd) }}
+            {{ else }}
+            {{ $.Scratch.Set &#34;FilePath&#34; .File.Path }}
+            {{ end }}
+            {{ with .Site.Params.GithubEdit}}
+            &lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#7d9029">href</span><span style="color:#666">=</span><span style="color:#ba2121">&#39;{{ . }}{{ $.Scratch.Get &#34;FilePath&#34; }}&#39;</span>&gt;Edit this page on GitHub&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;
+            {{ end }}
+            {{ end }}
+            {{ end }}
+&lt;/<span style="color:#008000;font-weight:bold">span</span>&gt;
+</code></pre></div><p>In fact, no matter whether your website contains <code>.Rmd</code> files or not, you can use the above codes anyway&hellip;</p>
+<p>You can also refer to <a href="https://github.com/hongtaoh/hugo-tutorial" target="_blank" rel="noreferrer noopener">this repo</a>
+
+.</p>
+<p>Many thanks to Yihui&rsquo;s contributions.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>This comes from Yihui&rsquo;s <a href="https://bookdown.org/yihui/blogdown/templates.html#how-to" target="_blank" rel="noreferrer noopener">Blogdown book</a>
+
+ <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+<p style="color:#777;">Last modified on 2020-07-11</p>
+
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="/media/blogdown.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> Content in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+          
+     </ul>
+</footer>
+
+
+
+
+

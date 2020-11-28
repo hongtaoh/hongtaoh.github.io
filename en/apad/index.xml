@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A Paper A Day on 郝鸿涛::Hongtao Hao</title>
+    <link>https://hongtaoh.github.io/en/apad/</link>
+    <description>Recent content in A Paper A Day on 郝鸿涛::Hongtao Hao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://hongtaoh.github.io/en/apad/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
