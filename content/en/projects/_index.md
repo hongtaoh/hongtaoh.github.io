@@ -6,7 +6,7 @@ type : nolisting
 ### 1. Notes on Network Science
 {{< columns >}}
 
-{{<figure src="/media/projects/bfsD2.png" link="https://netsci.hongtaoh.com/" >}}
+{{<figure-a src="/media/projects/bfsD2.png" link="https://netsci.hongtaoh.com/" >}}
 
 {{< column >}}
 
@@ -19,7 +19,7 @@ My notes while auditing Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s onli
 ### 2. C101 With Hongtao
 {{< columns >}}
 
-{{<figure src="/media/projects/c101.png" link="https://c101.hongtaoh.com/" >}}
+{{<figure-a src="/media/projects/c101.png" link="https://c101.hongtaoh.com/" >}}
 
 - [Students feedback](https://c101.hongtaoh.com/feedback/)
 - [Slides](https://c101.hongtaoh.com/slides/)
@@ -38,7 +38,7 @@ Class website for my students enrolled in *MSCH‑C100 Introduction to media* at
 ### 3. Blog Posts of "How to" Series
 {{< columns >}}
 
-{{<figure src="/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/input-output-mapping-1.png" link="/en/blog/" >}}
+{{<figure-a src="/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/input-output-mapping-1.png" link="/en/blog/" >}}
 
 {{< column >}}
 
@@ -60,7 +60,7 @@ Tutorial posts on a variety of topics. Representatives:
 ### 4. D3Book Companion
 {{< columns >}}
 
-{{<figure src="/media/projects/d3book-5.png" link="https://d3book.hongtaoh.com/" >}}
+{{<figure-a src="/media/projects/d3book-5.png" link="https://d3book.hongtaoh.com/" >}}
 
 
 <!-- Image adapted from [here](https://banner2.cleanpng.com/20180329/faq/kisspng-book-clip-art-open-book-5abd5bdd75f3c8.2387098515223592614831.jpg)
@@ -78,7 +78,7 @@ A simple tutorial website to help beginners like me learn D3.js. It is a side pr
 ### 5. International Journalism Class at RUC
 {{< columns >}}
 
-{{<figure src="/media/projects/ruc.png" link="https://rucer.netlify.app/" >}}
+{{<figure-a src="/media/projects/ruc.png" link="https://rucer.netlify.app/" >}}
 
 {{< column >}}
 
@@ -92,7 +92,7 @@ Class website for *International Journalism* taught at [Renmin University of Chi
 ### 6. Visualizing 120 Years of Summer Olympic Games
 {{< columns >}}
 
-{{<figure src="https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/pics/g-4-2.png" link="https://olymvis.hongtaoh.com/" >}}
+{{<figure-a src="https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/pics/g-4-2.png" link="https://olymvis.hongtaoh.com/" >}}
 
 {{< column >}}
 
@@ -105,7 +105,7 @@ A team project together with [Chris Fang](https://www.linkedin.com/in/chriszihui
 ### 7. Coronavirus Trend Visualizations
 {{< columns >}}
 
-{{<figure src="/media/projects/covid19-2.png" link="https://yyahn.com/covid19-dashboard/" >}}
+{{<figure-a src="/media/projects/covid19-2.png" link="https://yyahn.com/covid19-dashboard/" >}}
 
 {{< column >}}
 
