@@ -10,7 +10,7 @@ type : nolisting
 
 {{< column >}}
 
-My notes while auditing Professor [Yong-Yeol Ahn](http://yongyeol.com/)'s online course of [*INFO I606 Network Science*](https://github.com/yy/netsci-course)
+My notes while auditing Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s online course of [*INFO I606 Network Science*](https://github.com/yy/netsci-course)
 
 [Website](https://netsci.hongtaoh.com/) | [Code](https://github.com/hongtaoh/netsci-notes) | [PDF](https://netsci.hongtaoh.com/netsci.pdf)
 
@@ -44,14 +44,14 @@ Class website for my students enrolled in *MSCH‑C100 Introduction to media* at
 
 Tutorial posts on a variety of topics. Representatives:
 
-- [How to Understand D3.js Continuous Scales](/en/2020/09/07/d3-scales/)
+- [How to Understand `D3.js` Continuous Scales](/en/2020/09/07/d3-scales/)
 - [How to Build a Website Using Hugo](/en/2020/06/05/get-started-with-hugo/)
 - [How to Use Legacy Jupyterbook](/en/2020/07/25/legacy-jupyterbook/)
 - [How to Plot a Network's Degree Distribution](/en/2020/08/19/plot-degree-distribution-using-igraph/)
 - [How to Print Directory Trees on Mac](/en/2020/08/31/mac-directory-tree/)
 - [How to Make a Pull Request on GitHub](/en/2020/10/05/github-pull-request/)
 - [How to Embed an Observable Notebook](/en/2020/11/02/observable-hugo-embed/)
-- [How to Distinguish Between If and While](/en/2020/10/13/if-while/)
+- [How to Distinguish Between `If` and `While`](/en/2020/10/13/if-while/)
 - [How to Create Custom Blocks in Hugo](/en/2020/11/03/custom-blocks-hugo/)
 - [How to Use Different Fonts on Overleaf](/en/2020/11/13/overleaf-latex-fonts/)
 

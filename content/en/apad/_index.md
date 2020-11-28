@@ -200,7 +200,7 @@ Individual learning (being able to edit their answers in Round 2 and 3) was not 
 Another possible reason is that the increased accuracy for groups as a whole obscured the decreased accuracy at an individual level, for example, when the standard deviation of truth-centered mean in a group increased. Results showed that for social groups, the standard deviation of responses in Round 3 was significantly smaller than that in Round 1. This change did not occur in the control group, indicating that **similarity within social groups increased**. 
 
 
-**Replication study design** has some differences than Experiment 1:
+**Replication study design** has some differences from Experiment 1:
 
 1. More controversial questions;
 2. Participants were required to confirm their political preference before participating in the study;
