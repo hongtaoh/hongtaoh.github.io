@@ -1,9 +1,12 @@
 ---
 title: Hugo 如何部署到 GitHub Pages
 date: 2020-01-22T17:04:17-05:00
-slug: github-deploy
+slug: hugo-github-deploy
 author: 郝鸿涛
 toc: true
+aliases:
+    - /cn/blog/2020-01-22-deploy-on-github/
+    - /cn/code/2020-01-22-deploy-on-github/
 ---
 
 {{<notice>}}

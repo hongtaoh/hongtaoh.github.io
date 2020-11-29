@@ -2,9 +2,13 @@
 title: 如何将 Hugo 部署到 Netlify
 author: 郝鸿涛
 date: '2020-01-04'
-slug: hugo-netlify
+slug: hugo-netlify-deploy
 toc: true
+aliases:
+    - /cn/blog/2020-01-04-hugo-netlify-deployment/
+    - /cn/code/2020-01-04-hugo-netlify-deployment/
 ---
+
 首先，什么是部署？为什么要部署？
 
 其实，准确的说，我们要做的是先把我们在本地的 hugo 文件夹托管到 github，这是第一步。第二步将 hugo 文件夹中的 public 文件夹与 netlify 连接起来，这样 public 文件夹里的内容就变成了我们想要的网站。
