@@ -1166,6 +1166,22 @@ Kruschke 老师的教材中的图2.1 对这一过程进行了进一步阐释。�
     
     <item>
       <title>如何将 Hugo 部署到 Netlify</title>
+      <link>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify/</guid>
+      <description>首先，什么是部署？为什么要部署？
+其实，准确的说，我们要做的是先把我们在本地的 hugo 文件夹托管到 github，这是第一步。第二步将 hugo 文件夹中的 public 文件夹与 netlify 连接起来，这样 public 文件夹里的内容就变成了我们想要的网站。
+我们部署网站的目的就是让本地的内容可以送达互联网，这样别人才能看到我们创作的内容。
+hugo的官方文档 讲到了如何部署到 netlify，但是第一步，即，先将本地的hugo文件托管到 github，它没有讲。Allison Hill 写的 hugo建站教程 也提到了部署到netlify的方法，但是她漏了一项，即，写入 netlify.toml 这个文件。谢益辉大神写的 blogdown: Creating Websites with R Markdown 这本书对我帮助非常大，但是很奇怪的是，书中涉及到 netlify部署 只是非常简单地介绍了一下原理，对于具体流程则没有涉及。此外，Marvin&amp;rsquo;s Blog 以及 Sulinehk&amp;rsquo;s blog 也都专门讲过 hugo 的 netlify 部署，但是有些内容有些过时，比如自定义域名时的DNS设置。
+这篇帖子是针对像我一样的计算机小白的，我会详细把每一步解释清楚。以下主要以苹果电脑为例，使用windows系统的同学可以作为参考，但我不保证过程正确。
+一、创建本地 hugo 文件夹 这个文件夹是你一开始通过hugo new site xxx 建立的那个文件夹，比如如果你用的hugo new site quickstart，那么quickstart文件夹就是我们要托管到github的本地文件夹，当然，不一定非得用quickstart这个名字，你想用mysite, myblog, hugo-website, my-website&amp;hellip;都可以。如果你还不知道怎么开始用hugo，可以参考olOwOlo的那篇 《hugo从入门到会用》 。这里我们就用quickstart为例。
+二、Github 新建仓库 首先登陆github，如果你还没有注册github账号，请参考这篇帖子 。登陆成功之后，如下图所示，点击右上角的那个加号，然后点击&amp;rsquo;new repository&amp;rsquo;。这里的repository是仓库的意思。
+  新建 Github 仓库   点击之后，在 &amp;lsquo;repository name&amp;rsquo; 这一栏，填入任何你一个你喜欢的名字作为你的仓库名称。注意，github仓库的名称不一定非要和本地仓库名称一样，这里我用hugo-website，你可以用你喜欢的。在description中你可以对这个仓库进行描述，这样你自己以及别人可以一眼知道这个仓库是做什么的，我这里填入 &amp;ldquo;My personal website deployed on Netlify&amp;rdquo;，当然，你用中文也可以。然后，public or private 这里，我们选择默认的 public。在 &amp;ldquo;initialize this repository with a README&amp;rdquo; 这儿，我们不要加。我试过一开始加上，但是后面的步骤会很麻烦，老是出错，所以这里切记不要加</description>
+    </item>
+    
+    <item>
+      <title>如何将 Hugo 部署到 Netlify</title>
       <link>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
       
