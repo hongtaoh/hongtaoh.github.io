@@ -1,0 +1,222 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Create Custom Blocks in Hugo - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hongtaoh.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/vitae/">Vitae</a></li>
+       
+       <li><a href="/en/projects/">Projects</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/en/apad/">APAD</a></li>
+       
+       <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How to Create Custom Blocks in Hugo</h1>
+
+<p>Hongtao Hao 
+ / 2020-11-03 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-11-03-how-to-create-custom-blocks-in-hugo.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+<div class="body-text list-text">
+<p>I thought creating custom blocks in Hugo would be difficult. But with Hugo&rsquo;s shortcodes, and <a href="https://github.com/rstudio/bookdown/blob/master/inst/examples/css/style.css" target="_blank" rel="noreferrer noopener">the CSS</a>
+
+ from Yihui Xie&rsquo;s <a href="https://github.com/rstudio/bookdown" target="_blank" rel="noreferrer noopener">Bookdown</a>
+
+ project, it can be super easy.</p>
+<h1 id="download-images-and-edit-stylesheet">Download images and edit stylesheet<a href="#download-images-and-edit-stylesheet" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>First of all, you&rsquo;ll need to download five images from <a href="https://github.com/rstudio/bookdown/tree/master/inst/examples/images" target="_blank" rel="noreferrer noopener">here</a>
+
+: <code>caution</code>, <code>important</code>, <code>note</code>, <code>tip</code>, and <code>warning.png</code>. Add these images to the <code>static</code> folder of your Hugo project. I suppose you are adding them to the root directory of <code>static</code>.</p>
+<p>Then, in your <code>CSS</code> stylesheet, add the following:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#00f;font-weight:bold">note</span><span style="color:#666">,</span>
+.<span style="color:#00f;font-weight:bold">important</span><span style="color:#666">,</span>
+.<span style="color:#00f;font-weight:bold">tip</span><span style="color:#666">,</span>
+.<span style="color:#00f;font-weight:bold">caution</span><span style="color:#666">,</span>
+.<span style="color:#00f;font-weight:bold">warning</span> {
+  <span style="color:#008000;font-weight:bold">min-height</span>: <span style="color:#666">2.2</span><span style="color:#b00040">em</span>;
+  <span style="color:#008000;font-weight:bold">padding</span>: <span style="color:#666">1</span><span style="color:#b00040">em</span> <span style="color:#666">1</span><span style="color:#b00040">em</span> <span style="color:#666">0.1</span><span style="color:#b00040">em</span> <span style="color:#666">4</span><span style="color:#b00040">em</span>;
+  <span style="color:#008000;font-weight:bold">background</span>: <span style="color:#666">#f5f5f5</span> <span style="color:#666">2</span><span style="color:#b00040">px</span> <span style="color:#008000;font-weight:bold">top</span><span style="color:#666">/</span><span style="color:#666">3</span><span style="color:#b00040">em</span> <span style="color:#008000;font-weight:bold">no-repeat</span>;
+} 
+.<span style="color:#00f;font-weight:bold">note</span> {
+  <span style="color:#008000;font-weight:bold">background-image</span>: <span style="color:#008000">url</span>(<span style="color:#ba2121">&#34;../note.png&#34;</span>);
+}
+.<span style="color:#00f;font-weight:bold">important</span> {
+  <span style="color:#008000;font-weight:bold">background-image</span>: <span style="color:#008000">url</span>(<span style="color:#ba2121">&#34;../important.png&#34;</span>);
+}
+.<span style="color:#00f;font-weight:bold">tip</span> {
+  <span style="color:#008000;font-weight:bold">background-image</span>: <span style="color:#008000">url</span>(<span style="color:#ba2121">&#34;../tip.png&#34;</span>);
+}
+.<span style="color:#00f;font-weight:bold">caution</span> {
+  <span style="color:#008000;font-weight:bold">background-image</span>: <span style="color:#008000">url</span>(<span style="color:#ba2121">&#34;../caution.png&#34;</span>);
+}
+.<span style="color:#00f;font-weight:bold">warning</span> {
+  <span style="color:#008000;font-weight:bold">background-image</span>: <span style="color:#008000">url</span>(<span style="color:#ba2121">&#34;../warning.png&#34;</span>);
+}
+</code></pre></div><p>Edit the styles as you need. For example, you can use a different font or <code>font-size</code> for texts in your custom blocks. If you don&rsquo;t know how to do so, you probably need to <a href="https://www.w3schools.com/Css/" target="_blank" rel="noreferrer noopener">learn more about CSS</a>
+
+.</p>
+<p>Also, <code>background: #f5f5f5 2px top/3em no-repeat;</code> means that the image will appear on the top-left corner. If you want it to be at the left-center, change that line of code to <code>background: #f5f5f5 2px center/3em no-repeat;</code></p>
+<h1 id="create-shortcode">Create shortcode<a href="#create-shortcode" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>Then, we are going to create shortcodes for custome blocks.</p>
+<p>Create a shortcode named &ldquo;block&rdquo; (or any name you want) with the following code:</p>
+<pre><code>&lt;div {{ with .Get &quot;class&quot; }}class=&quot;{{.}}&quot;{{ end }}&gt;
+</code></pre><p>And another shortcode named &ldquo;end&rdquo; (or any other name you want) with the following code:</p>
+<pre><code>&lt;/div&gt;
+</code></pre><p>Super easy, right?</p>
+<h1 id="write-in-between-shortcodes">Write in between shortcodes<a href="#write-in-between-shortcodes" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p><div class="note">
+This is a note.
+</div></p>
+<p>is generated by:</p>
+<p>{{&lt;  block class=&quot;note&quot;  &gt;}} </br>
+This is a note. </br>
+{{&lt; end &gt;}}</p>
+<p>The same is for important, tip, caution and warning.</p>
+<p><div class="important">
+This is important!
+</div></p>
+<p><div class="tip">
+This is a tip. How much are you going to tip me?
+</div></p>
+<p><div class="caution">
+Caution: Great food ahead! Stop if you are on a diet.
+</div></p>
+<p><div class="warning">
+Warning: Road blocked ahead!
+</div></p>
+<p>I personally use this quite often:</p>
+<p><div class="reminder">
+You can use this whatever way you like. I usually use it to remind myself something in a post.
+</div></p>
+<p>If you like it too, you can download the image <a href="http://gdut_yy.gitee.io/doc-csstdg4/ch1.html#_1-6-feature-queries" target="_blank" rel="noreferrer noopener">here</a>
+
+, and then add the following codes to your stylesheet (edit as you need):</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#00f;font-weight:bold">reminder</span> {
+  <span style="color:#008000;font-weight:bold">min-height</span>: <span style="color:#666">3.2</span><span style="color:#b00040">em</span>;
+  <span style="color:#008000;font-weight:bold">padding</span>: <span style="color:#666">1</span><span style="color:#b00040">em</span> <span style="color:#666">1</span><span style="color:#b00040">em</span> <span style="color:#666">1</span><span style="color:#b00040">em</span> <span style="color:#666">4</span><span style="color:#b00040">em</span>;
+  <span style="color:#008000;font-weight:bold">background</span>: <span style="color:#666">#f5f5f5</span> <span style="color:#666">2</span><span style="color:#b00040">px</span> <span style="color:#008000;font-weight:bold">center</span><span style="color:#666">/</span><span style="color:#666">3</span><span style="color:#b00040">em</span> <span style="color:#008000;font-weight:bold">no-repeat</span>;
+  <span style="color:#008000;font-weight:bold">background-image</span>: <span style="color:#008000">url</span>(<span style="color:#ba2121">&#34;../reminder.png&#34;</span>);
+}
+</code></pre></div><p>You don&rsquo;t have to use the name of <code>reminder</code>. Use any name you want.</p>
+
+
+<p style="color:#777;">Last modified on 2020-11-28</p>
+
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="/media/blogdown.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> Content in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+          
+     </ul>
+</footer>
+
+
+
+
+

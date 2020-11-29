@@ -1,0 +1,181 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Delete and Ignore All .DS_Store Files in GitHub Repositories - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hongtaoh.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/vitae/">Vitae</a></li>
+       
+       <li><a href="/en/projects/">Projects</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/en/apad/">APAD</a></li>
+       
+       <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How to Delete and Ignore All .DS_Store Files in GitHub Repositories</h1>
+
+<p>Hongtao Hao 
+ / 2020-11-03 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-11-03-ignore-ds-store.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+<div class="body-text list-text">
+<p>If you are using a Mac, chances are that you have a lot of <code>.DS_Store</code> files in all kinds of folders. While they don&rsquo;t cause any problems, it might be ugly if these files appear in your GitHub repositories. How to delete and ignore all of them? <a href="https://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder" target="_blank" rel="noreferrer noopener">This thread</a>
+
+ on Stack Overflow helped me quite a bit.</p>
+<h1 id="first-delete-all-ds_store-files">First, delete all .DS_Store files<a href="#first-delete-all-ds_store-files" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>The following solution came from <a href="https://stackoverflow.com/a/38797342" target="_blank" rel="noreferrer noopener">here</a>
+
+.</p>
+<p>At the root of your local repository<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, run:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+git add .
+git commit -m <span style="color:#ba2121">&#34;Remove .DS_Store from everywhere&#34;</span>
+git push origin master
+</code></pre></div><h1 id="second-create-a-gitignore-file-and-ignore-ds_store">Second, create a .gitignore file and ignore .DS_Store<a href="#second-create-a-gitignore-file-and-ignore-ds_store" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>The following solution came from <a href="https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files#configuring-ignored-files-for-a-single-repository" target="_blank" rel="noreferrer noopener">here</a>
+
+ and <a href="https://stackoverflow.com/a/54715555" target="_blank" rel="noreferrer noopener">here</a>
+
+.</p>
+<p>If you don&rsquo;t have it in your repository yet, create one:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch .gitignore
+<span style="color:#008000">echo</span> <span style="color:#b62;font-weight:bold">\.</span>DS_Store &gt;&gt; .gitignore
+git add .
+git commit -m <span style="color:#ba2121">&#34;Creating .gitignore and ignore .DS_Store&#34;</span>
+git push origin master
+</code></pre></div><h1 id="third-exclude-all-ds_store-files-in-all-repositories-in-the-future">Third, exclude all .DS_Store files in all repositories in the future<a href="#third-exclude-all-ds_store-files-in-all-repositories-in-the-future" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>The following answer came from <a href="https://stackoverflow.com/a/19299889" target="_blank" rel="noreferrer noopener">here</a>
+
+</p>
+<p>If you want to exlude all .DS_Store files from your future repositories:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">echo</span> .DS_Store &gt;&gt; ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+</code></pre></div><section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>All the codes in this post are supposed to be run at the root directory of your local repo. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+<p style="color:#777;">Last modified on 2020-11-28</p>
+
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="/media/blogdown.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> Content in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+          
+     </ul>
+</footer>
+
+
+
+
+

@@ -3,213 +3,563 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hhao1992.github.io/en/2020/03/26/pagedown-error-solution/</loc>
-    <lastmod>2020-03-27T10:32:15-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/11/13/git-new-branch/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/en/2020/03/21/lab02/</loc>
-    <lastmod>2020-03-25T13:56:03-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/11/13/overleaf-latex-fonts/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/03/13/limit-using-this-character/</loc>
-    <lastmod>2020-03-15T16:44:26-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/11/11/new-tab-in-shortcode/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/03/11/influence-of-technology/</loc>
-    <lastmod>2020-03-15T16:44:26-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/11/03/shortcode-blogdown/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/03/06/r-aggregate-function-na/</loc>
-    <lastmod>2020-03-10T09:28:18-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/11/03/custom-blocks-hugo/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/03/01/northwestern-compus-visit/</loc>
-    <lastmod>2020-03-19T16:49:32-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/11/03/delete-ignore-ds-store/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/en/2020/02/25/b2b-communication/</loc>
-    <lastmod>2020-03-01T17:00:21-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/11/02/avoid-parsing-html/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/02/21/just-do-it/</loc>
-    <lastmod>2020-03-15T16:44:26-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/11/02/full-width-image-hugo/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/categories/</loc>
-    <lastmod>2020-03-15T16:44:26-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/11/02/observable-hugo-embed/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/tags/</loc>
-    <lastmod>2020-03-15T16:44:26-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/11/02/exporting-observable-notebook/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</loc>
-    <lastmod>2020-03-01T17:15:09-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/cn/2020/10/30/dd-china/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF/</loc>
-    <lastmod>2020-03-01T17:15:09-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/cn/2020/10/25/iq/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/02/02/bayesian-stats-chapter4/</loc>
-    <lastmod>2020-03-01T17:15:09-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/10/17/science-selfies/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/tags/%E4%BC%A0%E6%92%AD%E5%AD%A6/</loc>
-    <lastmod>2020-03-15T16:44:26-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/10/13/if-while/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/tags/%E7%94%B3%E8%AF%B7/</loc>
-    <lastmod>2020-03-15T16:44:26-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/10/07/wget/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/categories/%E7%95%99%E5%AD%A6%E7%94%B3%E8%AF%B7/</loc>
-    <lastmod>2020-03-15T16:44:26-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/10/05/github-pull-request/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/02/01/us-communication-phd-programs/</loc>
-    <lastmod>2020-03-15T16:44:26-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/10/05/hugo-heading-link/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/</loc>
-    <lastmod>2020-03-08T16:45:45-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/10/05/python-sys-argv/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/en/2020/01/28/using-markdown-in-hugo-post/</loc>
-    <lastmod>2020-01-31T10:40:35-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/09/19/hugo-sam/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/01/22/deploy-on-github/</loc>
-    <lastmod>2020-01-31T11:05:27-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/cn/2020/09/11/us-hospital/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</loc>
-    <lastmod>2020-01-31T10:40:35-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/09/07/d3-scales/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/categories/hugo/</loc>
-    <lastmod>2020-03-01T17:15:50-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/09/05/yy/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</loc>
-    <lastmod>2020-01-31T10:40:35-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/08/31/mac-directory-tree/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/01/18/underbrag-cn-and-usa/</loc>
-    <lastmod>2020-03-15T16:44:26-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/08/24/blogdown-continous-local-preview/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/01/18/bayesian-stats-chapter2/</loc>
-    <lastmod>2020-02-03T13:19:59-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/08/24/reading-online-and-local-files-in-rmarkdown/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/tags/tag1/</loc>
-    <lastmod>2020-01-31T10:40:35-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/cn/2020/08/23/zhang-and-jobs/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/tags/tag2/</loc>
-    <lastmod>2020-01-31T10:40:35-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/cn/2020/08/21/after-class-after-classes/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/categories/%E5%8F%82%E4%BC%9A%E7%BB%8F%E5%8E%86/</loc>
-    <lastmod>2020-01-31T10:40:35-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/cn/2020/08/21/after-class-after-classes/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/01/17/2017-st.gallen-memory/</loc>
-    <lastmod>2020-01-31T10:40:35-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/cn/2020/08/21/stage/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/01/06/fltrp-reading-contest/</loc>
-    <lastmod>2020-03-15T16:44:26-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/cn/2020/08/21/stage/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/2020/01/04/hugo-netlify-deployment/</loc>
-    <lastmod>2020-03-01T17:15:50-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/08/21/reading-gml-file-using-igraph/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/archive/</loc>
-    <lastmod>2020-01-31T10:40:35-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/08/21/including-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/en/en-vitae/</loc>
-    <lastmod>2020-03-25T11:24:32-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/08/19/plot-degree-distribution-using-igraph/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/en/blog/</loc>
-    <lastmod>2020-03-18T20:31:09-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/08/17/amazon-shipping-scam/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/en/</loc>
-    <lastmod>2020-01-31T10:40:35-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/cn/2020/08/11/confidence-hierarchy/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/</loc>
-    <lastmod>2020-02-23T13:31:30-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/08/10/netlify-subdomain-setup/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/en-vitae/</loc>
-    <lastmod>2020-03-18T20:31:09-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/08/09/updating-pandoc/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/</loc>
-    <lastmod>2020-03-13T11:53:35-04:00</lastmod>
+    <loc>https://hongtaoh.github.io/cn/2020/07/30/2019-sgs-magazine/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/about/</loc>
-    <lastmod>2020-01-31T10:48:11-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/07/25/legacy-jupyterbook/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/thoughts/</loc>
-    <lastmod>2020-02-22T09:59:48-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/07/18/good-themes/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/codes/</loc>
-    <lastmod>2020-01-31T10:40:35-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/cn/2020/07/10/hairui/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hhao1992.github.io/cn/stats/</loc>
-    <lastmod>2020-01-31T10:40:35-05:00</lastmod>
+    <loc>https://hongtaoh.github.io/en/2020/06/20/blocking-cutestat/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/06/20/new-tab-in-hugo/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/06/18/implement-edit-on-github/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/06/14/terminal-command-basics-on-mac/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/06/09/hugo-lastmod/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/06/05/get-started-with-hugo/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/06/04/youtube-download/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/05/27/wechat-contacts-extracting/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/05/26/bookdown-tips/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/05/26/bookdown-tips/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/05/25/remote-origin-already-exists-error-shooting/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/05/23/uninstall-homebrew-completely/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/05/14/chrome-mac-blurry-image-fix/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/04/30/love-from-everyone-conquers-neumoconiosis/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/04/30/help-one-after-another/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/04/30/what-do-i-think-about-ted-talks/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/04/30/when-to-write/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/04/19/if-senior-high-again/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/04/19/why-do-so-many-people-love-dr.-fauci/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/04/12/role-model/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/03/26/pagedown-error-shooting/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/03/13/limit-using-this-character/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/03/11/influence-of-technology/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/03/06/r-aggregate-function-na/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/03/06/r-aggregate-function-na/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/03/01/northwestern-compus-visit/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/02/25/b2b-communication/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/02/21/just-do-it/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/categories/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/tags/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/02/02/bayesian-stats-chapter4/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/tags/%E4%BC%A0%E6%92%AD%E5%AD%A6/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/tags/%E7%94%B3%E8%AF%B7/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/categories/%E7%95%99%E5%AD%A6%E7%94%B3%E8%AF%B7/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/02/01/us-communication-ma-programs/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/01/29/how-to-install-and-upgrade-hugo-on-mac/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/2020/01/28/using-markdown-in-hugo-post/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/categories/hugo/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/18/underbrag-cn-and-usa/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/18/bayesian-stats-chapter2/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/tags/tag1/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/tags/tag2/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/categories/%E5%8F%82%E4%BC%9A%E7%BB%8F%E5%8E%86/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/17/2017-st.gallen-memory/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/06/fltrp-reading-contest/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/apad/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/archive/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/vitae/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/blog/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en-vitae/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/projects/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/1/01/01/projects/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/en/now/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/about/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/english/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/blog/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/stats/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hongtaoh.github.io/cn/codes/</loc>
+    <lastmod>2020-11-28T22:17:33-05:00</lastmod>
   </url>
   
 </urlset>
