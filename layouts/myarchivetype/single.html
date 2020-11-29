@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+
+<main class = "content" role="main">
+
+<div class="body text list-text">
+{{ .Content}}
+
+<ul>
+	{{ range .Site.RegularPages }}
+	<li>
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+  </li>
+  {{ end }}
+</ul>
+</div>
+</main>
+{{ partial "footer.html" . }}
