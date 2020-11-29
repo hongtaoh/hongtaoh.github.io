@@ -1,3 +1,11 @@
+export LC_TIME=en_US.UTF-8
+
+# The commit message.
+MESSAGE="Site rebuild $(date)"
+
+msg() {
+    printf "\033[1;32m :: %s\n\033[0m" "$1"
+}
 
 #!/bin/sh
 
@@ -14,16 +22,13 @@ git worktree prune
 rm -rf .git/worktrees/public/
 
 echo "Checking out gh-pages branch into public"
-git worktree add -B gh-pages public origin/gh-pages
+git worktree add -B gh-pages public upstream/gh-pages
 
 echo "Removing existing files"
 rm -rf public/*
 
 echo "Generating site"
 hugo
-cd public # cd 到 public 文件夹
-echo "hongtaoh.com" > CNAME # ⚠! 请换成自己的网址！
-cd .. # 返回上一级
 
 echo "Updating gh-pages branch"
 cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
