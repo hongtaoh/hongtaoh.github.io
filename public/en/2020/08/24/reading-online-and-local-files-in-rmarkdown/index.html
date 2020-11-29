@@ -1,0 +1,205 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to read Local or Online Files in Rmarkdown, Bookdown, and Blogdown - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hongtaoh.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/vitae/">Vitae</a></li>
+       
+       <li><a href="/en/projects/">Projects</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/en/apad/">APAD</a></li>
+       
+       <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How to read Local or Online Files in Rmarkdown, Bookdown, and Blogdown</h1>
+
+<p>Hongtao Hao 
+ / 2020-08-24 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-08-24-reading-online-and-local-files-in-rmarkdown.Rmd'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+<div class="body-text list-text">
+
+
+<div id="TOC">
+<ul>
+<li><a href="#reading-online-files">Reading Online Files</a></li>
+<li><a href="#reading-local-files">Reading Local Files</a><ul>
+<li><a href="#files-in-a-different-directory">Files in a different directory</a></li>
+<li><a href="#files-in-a-the-same-directory">Files in a the same directory</a><ul>
+<li><a href="#relative-path-without-using-here">Relative path WITHOUT using <code>here</code></a></li>
+<li><a href="#relative-path-using-here">Relative path using <code>here</code></a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<hr />
+<p><a href="https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/">Here</a> is a tutorial on how to read local data files in Rmarkdown. I found it very helpful. Nonetheless, I decided to write on this topic again myself because that post is a bit more complicated than it should be.</p>
+<p>We can read data files from two sources: <strong>online</strong>, or <strong>local</strong>.</p>
+<div id="reading-online-files" class="section level1">
+<h1>Reading Online Files</h1>
+<p>Reading online files is easy:</p>
+<pre class="r"><code>library(readr)</code></pre>
+<pre class="r"><code>hello  &lt;- read_csv(&quot;https://hongtaoh.com/files/HGN.csv&quot;)</code></pre>
+</div>
+<div id="reading-local-files" class="section level1">
+<h1>Reading Local Files</h1>
+<p>To read local files in Rmarkdown, you can either specify the exact paths, or use the package of <code>here</code>. One thing worth noticing is that <code>R</code> can read any local files, either they are in the same root directory as your <code>Rmarkdown</code> file or not, as long as you correctly specify the exact paths. However, if you use the package of <code>here</code>, the data files to be read must be in the same directory as your <code>Rmarkdown</code> file.</p>
+<div id="files-in-a-different-directory" class="section level2">
+<h2>Files in a different directory</h2>
+<p>No matter where your <strong>local</strong> data file is located, you can simply specify its full path, and it should always work:</p>
+<pre class="r"><code>hello &lt;- read_csv(&quot;/full/path/to/your/file/filename.csv&quot;)</code></pre>
+<p>Note that the file does not have to be in a <code>csv</code> format. It can be an <code>Excel</code> or anything that <code>R</code> can read.</p>
+<p>How to find a file’s full path then?</p>
+<p>I assume you are using a Mac: Right click the data file, click on <code>Get Info</code>, and then you can find it in <code>Where</code>. Simply copy and past that path. Don’t forget to add the forename to the end. For example, if you have a data file called <code>filename.csv</code>, the path you can find in <code>Where</code> is only <code>/full/path/to/your/file/</code>, you should add <code>filename.csv</code> to the end by yourself.</p>
+</div>
+<div id="files-in-a-the-same-directory" class="section level2">
+<h2>Files in a the same directory</h2>
+<div id="relative-path-without-using-here" class="section level3">
+<h3>Relative path WITHOUT using <code>here</code></h3>
+<p>I tried the <code>../../</code> method mentioned in the <a href="https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/">blog post above</a> but it simply gave me an Error, at least on Blogdown.</p>
+<p>For example, suppose you have a folder named <code>Project</code> on your <code>Desktop</code>, and the location of your data file relative to your <code>Blogdown</code> project or <code>Rmd</code> is this:</p>
+<pre class="bash"><code>|____Folder_1
+|____Folder_2
+|____Static
+| |____Data
+| | |____YourData.csv
+|____YourBlogdownProj.RProj</code></pre>
+<p>Then using <code>AGoodName &lt;- read_csv( "../../Static/Data/YourData.csv")</code> won’t work the way <a href="https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/">the blog post</a> mentioned.</p>
+<p>Then how to solve this problem?</p>
+<ul>
+<li><p>Simply use the full path using the method I gave above: <code>/Users/YourMacUserName/Desktop/Project/Static/Data/YourData.csv</code></p></li>
+<li><p>Use the <code>here</code> package, if you are lazy.</p></li>
+</ul>
+</div>
+<div id="relative-path-using-here" class="section level3">
+<h3>Relative path using <code>here</code></h3>
+<p>Simply use this:</p>
+<pre class="r"><code>library(here)
+AGoodNmae &lt;- read_csv(here(&quot;Static&quot;, &quot;Data&quot;, &quot;YourData.csv&quot;))</code></pre>
+<p>You can find more information about the <code>here</code> package from the <a href="https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/">blog post</a> or <a href="https://community.rstudio.com/t/how-to-correctly-specify-relative-path/9612">this thread</a>.</p>
+</div>
+</div>
+</div>
+
+
+<p style="color:#777;">Last modified on 2020-11-03</p>
+
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="/media/blogdown.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> Content in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+          
+     </ul>
+</footer>
+
+
+
+
+
