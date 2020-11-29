@@ -5,6 +5,9 @@ slug: deploy-on-github
 author: 郝鸿涛
 toc: true
 ---
+{{<block class="note">}}
+这篇文章太老了，而且很复杂，不太建议大家在参考。我会在之后更新。如果你想部署你的 Hugo 网站，请优先参考我之前那篇 [Netlify 部署](/cn/2020/01/04/hugo-netlify-deployment/) 的帖子。如果你还是想把网站部署到 GitHub Pages, 我推荐你看[这里](cn/2020/01/04/hugo-netlify-deployment/)。
+{{<end>}}
 
 正好自己要重新做一遍，我便在这里把步骤记录下来。
 
