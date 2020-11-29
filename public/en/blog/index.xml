@@ -179,7 +179,8 @@ Making a local clone of your fork In Terminal, first navigate to the directory w
 I then go back to the solution suggested by frerich . It worked.
 I changed the &amp;amp;para; to #.
 According to frerich, what you need to do is to add add-header-anchors.html whose content is shown below to /layouts/partials.
-{{ . | replaceRE &amp;#34;(&amp;lt;h[1-9] id=\&amp;#34;([^\&amp;#34;]+)\&amp;#34;.+)(&amp;lt;/h[1-9]+&amp;gt;)&amp;#34; `${1}&amp;lt;a href=&amp;#34;#${2}&amp;#34; class=&amp;#34;header-anchor&amp;#34; ariaLabel=&amp;#34;Anchor&amp;#34;&amp;gt;&amp;amp;para;&amp;lt;/a&amp;gt;${3}` | safeHTML }} Then, in /layouts/_default/single.</description>
+{{ . | replaceRE &amp;quot;(&amp;lt;h[1-9] id=\&amp;quot;([^\&amp;quot;]+)\&amp;quot;.+)(&amp;lt;/h[1-9]+&amp;gt;)&amp;quot; ${1}¶${3} | safeHTML }}
+Then, in /layouts/_default/single.</description>
     </item>
     
     <item>

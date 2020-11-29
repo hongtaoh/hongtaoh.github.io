@@ -114,8 +114,8 @@
 . It worked.</p>
 <p>I changed the <code>&amp;para;</code> to <code>#</code>.</p>
 <p>According to frerich, what you need to do is to add <code>add-header-anchors.html</code> whose content is shown below to <code>/layouts/partials</code>.</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ . | replaceRE &#34;(&lt;<span style="color:#008000;font-weight:bold">h</span><span style="">[</span><span style="color:#7d9029">1-9</span><span style="">]</span> <span style="color:#7d9029">id</span><span style="color:#666">=</span><span style="color:#ba2121">\&#34;([^\&#34;]+)\&#34;.+)(&lt;/h[1-9]+</span>&gt;)&#34; `${1}&lt;<span style="color:#008000;font-weight:bold">a</span> <span style="color:#7d9029">href</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;#${2}&#34;</span> <span style="color:#7d9029">class</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;header-anchor&#34;</span> <span style="color:#7d9029">ariaLabel</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;Anchor&#34;</span>&gt;<span style="color:#999;font-weight:bold">&amp;para;</span>&lt;/<span style="color:#008000;font-weight:bold">a</span>&gt;${3}` | safeHTML }}
-</code></pre></div><p>Then, in <code>/layouts/_default/single.html</code>, replace  <code>{{ .Content }}</code> with <code>{{ .Content | partial &quot;add-header-anchors&quot; }}</code>.</p>
+<p><code>{{ . | replaceRE &quot;(&lt;h[1-9] id=\&quot;([^\&quot;]+)\&quot;.+)(&lt;/h[1-9]+&gt;)&quot; </code>${1}<a href="#${2}" class="header-anchor" ariaLabel="Anchor">¶</a>${3}<code> | safeHTML }}</code></p>
+<p>Then, in <code>/layouts/_default/single.html</code>, replace  <code>{{ .Content }}</code> with <code>{{ .Content | partial &quot;add-header-anchors&quot; }}</code>.</p>
 
 
 <p style="color:#777;">Last modified on 2020-11-28</p>
