@@ -7,7 +7,7 @@ toc: true
 ---
 
 {{<notice>}}
-这篇文章太老了，而且很复杂，不太建议大家在参考。我会在之后更新。如果你想部署你的 Hugo 网站，请优先参考我之前那篇 [Netlify 部署](/cn/2020/01/04/hugo-netlify-deployment/) 的帖子。如果你还是想把网站部署到 GitHub Pages, 我推荐你看[这里](cn/2020/01/04/hugo-netlify-deployment/)。
+这篇文章太老了，而且很复杂，不太建议大家在参考。我会在之后更新。如果你想部署你的 Hugo 网站，请优先参考我之前那篇 [Netlify 部署](/cn/2020/01/04/hugo-netlify/) 的帖子。如果你还是想把网站部署到 GitHub Pages, 我推荐你看[这里](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch)。
 {{<end>}}
   
 [Hugo官网上的那篇教程](https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages) 有个问题是，你需要两个 Github 仓库，一个是 `YOUR-PROJECT> (e.g. blog)`，另一个是 `<USERNAME>.github.io `。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 `public` 文件夹。
