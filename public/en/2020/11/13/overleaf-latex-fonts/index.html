@@ -1,0 +1,177 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Use Different Fonts on Overleaf - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/vitae/">Vitae</a></li>
+       
+       <li><a href="/en/projects/">Projects</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/en/apad/">APAD</a></li>
+       
+       <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How to Use Different Fonts on Overleaf</h1>
+
+<p>Hongtao Hao 
+ / 2020-11-13 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-11-13-overleaf-fonts.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+<div class="body-text list-text">
+<h2 id="two-steps">Two steps<a href="#two-steps" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>Using different fonts is much easier than I thought. It involves two steps:</p>
+<ol>
+<li>
+<p>Change the <strong>Compiler</strong> from <code>LaTex</code> or <code>pdfLatex</code> to either <code>XeLaTex</code> or <code>LuaLaTex</code>. To make this change, click the <strong>Menu</strong> button on the upper-left corner of your Overleaf project. In <code>Settings</code>, you&rsquo;ll see a drop list in <code>Compiler</code>.</p>
+</li>
+<li>
+<p>Add these two lines:</p>
+</li>
+</ol>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#008000;font-weight:bold">\usepackage</span><span style="color:#008000">{</span>fontspec<span style="color:#008000">}</span>
+<span style="color:#008000;font-weight:bold">\setmainfont</span><span style="color:#008000">{</span>Choose Your Own Font<span style="color:#008000">}</span>
+</code></pre></div><p>Where to find the fonts that were supported via <code>fontspec</code>? Read <a href="https://www.overleaf.com/learn/latex/Questions/Which%20OTF%20or%20TTF%20fonts%20are%20supported%20via%20fontspec%3F" target="_blank" rel="noreferrer noopener">this list</a>
+
+, which I think is quite comprehensive. It contains many modern fonts, including those you can find in Google fonts.</p>
+<h2 id="several-fonts-in-a-document">Several fonts in a document<a href="#several-fonts-in-a-document" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>According to <a href="https://www.overleaf.com/learn/latex/XeLaTeX" target="_blank" rel="noreferrer noopener">this post</a>
+
+, instead of using <code>\setmainfont{Choose Your Own Font}</code>, you can do this:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#008000;font-weight:bold">\setromanfont</span><span style="color:#008000">{</span>first font choice<span style="color:#008000">}</span>
+<span style="color:#008000;font-weight:bold">\setsansfont</span><span style="color:#008000">{</span>second font choice<span style="color:#008000">}</span>
+<span style="color:#008000;font-weight:bold">\setmonofont</span><span style="color:#008000">{</span>third font choice<span style="color:#008000">}</span>
+</code></pre></div><p>The second choice can be activated by <code>\ssfamily</code>, and the third by</p>
+<pre><code>\begin{verbatim}
+...
+\end{verbatim}
+</code></pre><p>Read <a href="https://www.overleaf.com/learn/latex/XeLaTeX" target="_blank" rel="noreferrer noopener">this post</a>
+
+ for more info.</p>
+<h2 id="your-own-fonts">Your own fonts<a href="#your-own-fonts" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>If your favorate font is not found <a href="https://www.overleaf.com/learn/latex/Questions/Which%20OTF%20or%20TTF%20fonts%20are%20supported%20via%20fontspec%3F" target="_blank" rel="noreferrer noopener">the list</a>
+
+, you can refer to <a href="https://www.overleaf.com/learn/latex/XeLaTeX" target="_blank" rel="noreferrer noopener">this post</a>
+
+ to upload and your own fonts.</p>
+
+
+<p style="color:#777;">Last modified on 2020-11-28</p>
+
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="/media/blogdown.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> Content in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+          
+     </ul>
+</footer>
+
+
+
+
+

@@ -1,0 +1,181 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Update Pandoc for Rmarkdown And Bookdown - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/vitae/">Vitae</a></li>
+       
+       <li><a href="/en/projects/">Projects</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/en/apad/">APAD</a></li>
+       
+       <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">How to Update Pandoc for Rmarkdown And Bookdown</h1>
+
+<p>Hongtao Hao 
+ / 2020-08-09 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-08-09-updating-pandoc-for-rmakrdown.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+<div class="body-text list-text">
+<p>Rmarkdown and Bookdown are highly reliant on Pandoc. Sometimes, issues may happen when Rstudio is using an older version of Pandoc even if you have downloaded the newest version, as was discussed <a href="https://community.rstudio.com/t/how-to-make-r-markdown-use-an-updated-version-of-pandoc-on-my-mac/19923" target="_blank" rel="noreferrer noopener">here</a>
+
+.</p>
+<h1 id="yihuis-solution">Yihui&rsquo;s Solution<a href="#yihuis-solution" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>Yihui provided <a href="https://community.rstudio.com/t/how-to-make-r-markdown-use-an-updated-version-of-pandoc-on-my-mac/19923/4" target="_blank" rel="noreferrer noopener">a solution</a>
+
+: to put the newest version of pandoc into <code>/usr/local/bin</code>. How to do it?</p>
+<p>First of all, you need to install the updated version of Pandoc you want. Remember the path where it is installed. If you installed in the past and have forgot where it was installed, there are two ways:</p>
+<ol>
+<li>Open a new <code>Terminal</code> (type <code>cmd+n</code> if you are currently using <code>Terminal</code>), first type <code>pandoc --version</code>. If the version is waht you want, then input <code>which pandoc</code>. The path of this version of Pandoc will be shown. How to open it?</li>
+</ol>
+<p>It&rsquo;s easy. If the path is <code>A/B/C/pandoc</code>, then input <code>open -a Finder A/B/C</code> and find the <code>pandoc</code> and <code>pandoc-citeproc</code> from there.</p>
+<ol start="2">
+<li>Search &ldquo;Pandoc&rdquo; in Spotlight Search.</li>
+</ol>
+<p>After knowing where the desired <code>Pandoc</code> is located, then you just need to copy <code>pandoc</code> and <code>pandoc-citeproc</code> and paste them into <code>/usr/local/bin</code>.</p>
+<p>But how to open <code>/usr/local/bin</code>?</p>
+<p>Go back to your <code>Terminal</code>, and type <code>open -a Finder /usr/local/bin</code>.</p>
+<p>I have to say that I didn&rsquo;t verify whether the way suggested by Yihui will work.</p>
+<h1 id="my-solution">My Solution<a href="#my-solution" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>My solution was inspired by <a href="https://community.rstudio.com/t/how-to-make-r-markdown-use-an-updated-version-of-pandoc-on-my-mac/19923" target="_blank" rel="noreferrer noopener">the post above</a>
+
+.</p>
+<p>First, you need to check the version of <code>Pandoc</code> that is used by Rstudio. Simply input <code>/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc -v</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> in your terminal, as suggested by <a href="https://community.rstudio.com/t/how-to-make-r-markdown-use-an-updated-version-of-pandoc-on-my-mac/19923" target="_blank" rel="noreferrer noopener">Andrea</a>
+
+. If the output shows that Rstudio is using an older version of <code>Pandoc</code> rather than the new version you just downloaded, then you can do the following to manually upgrade it.</p>
+<p>Simply use <code>open -a Finder /Applications/RStudio.app/Contents/MacOS/pandoc/</code> to open the folder where <code>Pandoc</code> used by Rstudio is stored. Copy the new <code>Pandoc</code> (by <code>open -a Finder A/B/C</code>, the code in the first step of Yihui&rsquo;s solution, as shown above.) and paste it to <code>/Applications/RStudio.app/Contents/MacOS/pandoc/</code>.</p>
+<p>It should work.</p>
+<p>However, as Yihui also noted <a href="https://community.rstudio.com/t/updated-pandoc-now-getting-an-error-when-i-knit-dyld-lazy-symbol-binding-failed/47692/4" target="_blank" rel="noreferrer noopener">here</a>
+
+. Pandoc 2.9. x or higher versions might not work for lower version of MacOS.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Of course, you can also use <code>rmarkdown::pandoc_version()</code> in Rstudio to see the pandoc version used by Rstudio. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+<p style="color:#777;">Last modified on 2020-11-28</p>
+
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="/media/blogdown.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> Content in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+          
+     </ul>
+</footer>
+
+
+
+
+
