@@ -253,7 +253,7 @@ Basically, you only need to Serve Site once. In the drop list of Addins, choose 
       <pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/08/24/reading-online-and-local-files-in-rmarkdown/</guid>
-      <description>Reading Online Files Reading Local Files Files in a different directory Files in a the same directory Relative path WITHOUT using here Relative path using here     Here is a tutorial on how to read local data files in Rmarkdown. I found it very helpful. Nonetheless, I decided to write on this topic again myself because that post is a bit more complicated than it should be.</description>
+      <description>Reading Online Files Reading Local Files  Files in a different directory Files in a the same directory  Relative path WITHOUT using here Relative path using here     Here is a tutorial on how to read local data files in Rmarkdown. I found it very helpful. Nonetheless, I decided to write on this topic again myself because that post is a bit more complicated than it should be.</description>
     </item>
     
     <item>
@@ -275,8 +275,7 @@ library(igraph) read_graph(&amp;quot;lesmiss.gml&amp;quot;, format = &amp;quot;g
       <description>Yihui documented figure referencing very well. There is only one thing I need to add: do remember to add a figure caption if you want to reference it.
 For example, if we have a chunk label without a figure caption:
 plot(pressure) We cannot reference it: Figure ??.
-This is because without a figure caption, the figure won’t be numbered. Without a number, the figure cannot be referenced.
-Simply adding a figure caption solves the problem:</description>
+This is because without a figure caption, the figure won’t be numbered. Without a number, the figure cannot be referenced.</description>
     </item>
     
     <item>
@@ -285,7 +284,7 @@ Simply adding a figure caption solves the problem:</description>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/08/19/plot-degree-distribution-using-igraph/</guid>
-      <description>Getting a deeper understanding of degree() and degree_distribution() Plotting the distribution Going back to histogram Deciding on X-axis scale Adjusting a histogram’s breaks Adjusting a histogram’s Y-axis  Conclusion How to draw a bar chart to display a network’s degree distribution How to draw a histogram to display a network’s nodes degrees  Another option   The R package igraph is very useful. However, its degree() and degree_distribution() function is not so straightforward.</description>
+      <description>Getting a deeper understanding of degree() and degree_distribution() Plotting the distribution Going back to histogram  Deciding on X-axis scale Adjusting a histogram’s breaks Adjusting a histogram’s Y-axis  Conclusion  How to draw a bar chart to display a network’s degree distribution How to draw a histogram to display a network’s nodes degrees  Another option   The R package igraph is very useful. However, its degree() and degree_distribution() function is not so straightforward.</description>
     </item>
     
     <item>

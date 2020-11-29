@@ -322,7 +322,7 @@ Basically, you only need to Serve Site once. In the drop list of Addins, choose 
       <pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/08/24/reading-online-and-local-files-in-rmarkdown/</guid>
-      <description>Reading Online Files Reading Local Files Files in a different directory Files in a the same directory Relative path WITHOUT using here Relative path using here     Here is a tutorial on how to read local data files in Rmarkdown. I found it very helpful. Nonetheless, I decided to write on this topic again myself because that post is a bit more complicated than it should be.</description>
+      <description>Reading Online Files Reading Local Files  Files in a different directory Files in a the same directory  Relative path WITHOUT using here Relative path using here     Here is a tutorial on how to read local data files in Rmarkdown. I found it very helpful. Nonetheless, I decided to write on this topic again myself because that post is a bit more complicated than it should be.</description>
     </item>
     
     <item>
@@ -406,8 +406,7 @@ library(igraph) read_graph(&amp;quot;lesmiss.gml&amp;quot;, format = &amp;quot;g
       <description>Yihui documented figure referencing very well. There is only one thing I need to add: do remember to add a figure caption if you want to reference it.
 For example, if we have a chunk label without a figure caption:
 plot(pressure) We cannot reference it: Figure ??.
-This is because without a figure caption, the figure won’t be numbered. Without a number, the figure cannot be referenced.
-Simply adding a figure caption solves the problem:</description>
+This is because without a figure caption, the figure won’t be numbered. Without a number, the figure cannot be referenced.</description>
     </item>
     
     <item>
@@ -416,7 +415,7 @@ Simply adding a figure caption solves the problem:</description>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://hongtaoh.github.io/en/2020/08/19/plot-degree-distribution-using-igraph/</guid>
-      <description>Getting a deeper understanding of degree() and degree_distribution() Plotting the distribution Going back to histogram Deciding on X-axis scale Adjusting a histogram’s breaks Adjusting a histogram’s Y-axis  Conclusion How to draw a bar chart to display a network’s degree distribution How to draw a histogram to display a network’s nodes degrees  Another option   The R package igraph is very useful. However, its degree() and degree_distribution() function is not so straightforward.</description>
+      <description>Getting a deeper understanding of degree() and degree_distribution() Plotting the distribution Going back to histogram  Deciding on X-axis scale Adjusting a histogram’s breaks Adjusting a histogram’s Y-axis  Conclusion  How to draw a bar chart to display a network’s degree distribution How to draw a histogram to display a network’s nodes degrees  Another option   The R package igraph is very useful. However, its degree() and degree_distribution() function is not so straightforward.</description>
     </item>
     
     <item>
@@ -884,7 +883,7 @@ Error when downloading Pagedown When downloading pagedown, I tried the method re
       
       <guid>https://hongtaoh.github.io/cn/2020/03/06/r-aggregate-function-na/</guid>
       <description>今天碰到的一个问题是，用 aggregate 求不同组平均数的时候，缺失值不好处理。下面通过用 iris 这个经典数据说一下如果处理缺失值。
-iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepal.Length Sepal.Width Petal.Length Petal.Width Species ## 68 5.8 2.7 4.1 1.0 versicolor ## 24 5.1 3.3 1.7 0.5 setosa ## 4 4.6 3.1 1.5 0.2 setosa ## 54 5.5 2.3 4.0 1.3 versicolor ## 34 5.5 4.2 1.4 0.2 setosa iris[c(1,5,15,30,45,90,145),4] &amp;lt;- NA #制造缺失值 aggregate(x=iris$Petal.Width, by=list(iris$Species), FUN=mean) ## Group.1 x ## 1 setosa NA ## 2 versicolor NA ## 3 virginica NA aggregate(x=iris$Petal.</description>
+iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepal.Length Sepal.Width Petal.Length Petal.Width Species ## 13 4.8 3.0 1.4 0.1 setosa ## 116 6.4 3.2 5.3 2.3 virginica ## 77 6.8 2.8 4.8 1.4 versicolor ## 47 5.1 3.8 1.6 0.2 setosa ## 117 6.5 3.0 5.5 1.8 virginica iris[c(1,5,15,30,45,90,145),4] &amp;lt;- NA #制造缺失值 aggregate(x=iris$Petal.Width, by=list(iris$Species), FUN=mean) ## Group.1 x ## 1 setosa NA ## 2 versicolor NA ## 3 virginica NA aggregate(x=iris$Petal.</description>
     </item>
     
     <item>
@@ -894,7 +893,7 @@ iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepa
       
       <guid>https://hongtaoh.github.io/cn/2020/03/06/r-aggregate-function-na/</guid>
       <description>今天碰到的一个问题是，用 aggregate 求不同组平均数的时候，缺失值不好处理。下面通过用 iris 这个经典数据说一下如果处理缺失值。
-iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepal.Length Sepal.Width Petal.Length Petal.Width Species ## 68 5.8 2.7 4.1 1.0 versicolor ## 24 5.1 3.3 1.7 0.5 setosa ## 4 4.6 3.1 1.5 0.2 setosa ## 54 5.5 2.3 4.0 1.3 versicolor ## 34 5.5 4.2 1.4 0.2 setosa iris[c(1,5,15,30,45,90,145),4] &amp;lt;- NA #制造缺失值 aggregate(x=iris$Petal.Width, by=list(iris$Species), FUN=mean) ## Group.1 x ## 1 setosa NA ## 2 versicolor NA ## 3 virginica NA aggregate(x=iris$Petal.</description>
+iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepal.Length Sepal.Width Petal.Length Petal.Width Species ## 6 5.4 3.9 1.7 0.4 setosa ## 142 6.9 3.1 5.1 2.3 virginica ## 67 5.6 3.0 4.5 1.5 versicolor ## 14 4.3 3.0 1.1 0.1 setosa ## 148 6.5 3.0 5.2 2.0 virginica iris[c(1,5,15,30,45,90,145),4] &amp;lt;- NA #制造缺失值 aggregate(x=iris$Petal.Width, by=list(iris$Species), FUN=mean) ## Group.1 x ## 1 setosa NA ## 2 versicolor NA ## 3 virginica NA aggregate(x=iris$Petal.</description>
     </item>
     
     <item>
@@ -994,19 +993,6 @@ I chose the second method, which is called &amp;ldquo;Tarball&amp;rdquo; in Hugo
       
       <guid>https://hongtaoh.github.io/en/2020/01/28/using-markdown-in-hugo-post/</guid>
       <description>Exercise 4.1 df &amp;lt;- HairEyeColor # Changing the name of HairEyecolor show (df) # displaying the dataframe ## , , Sex = Male ## ## Eye ## Hair Brown Blue Hazel Green ## Black 32 11 10 3 ## Brown 53 50 25 15 ## Red 10 10 7 7 ## Blond 3 30 5 8 ## ## , , Sex = Female ## ## Eye ## Hair Brown Blue Hazel Green ## Black 36 9 5 2 ## Brown 66 34 29 14 ## Red 16 7 7 7 ## Blond 4 64 5 8 e.</description>
-    </item>
-    
-    <item>
-      <title>Hugo 如何部署到 GitHub Pages</title>
-      <link>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</link>
-      <pubDate>Wed, 22 Jan 2020 17:04:17 -0500</pubDate>
-      
-      <guid>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</guid>
-      <description>这篇文章太老了，而且很复杂，不太建议大家在参考。我会在之后更新。如果你想部署你的 Hugo 网站，请优先参考我之前那篇 Netlify 部署 的帖子。如果你还是想把网站部署到 GitHub Pages, 我推荐你看这里 。
- 正好自己要重新做一遍，我便在这里把步骤记录下来。
-Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，一个是 YOUR-PROJECT&amp;gt; (e.g. blog)，另一个是 &amp;lt;USERNAME&amp;gt;.github.io 。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 public 文件夹。
-这种设置的问题在于，你的博客更新的可能不仅仅是内容，掌管着网页格式的 layout 文件以及 css 文件也可能会更新。如果你需要让别人看到你的网页格式源代码，即，你的 layout 文件以及 css 文件，那么你每次更新的时候，不仅需要更新 &amp;lt;USERNAME&amp;gt;.github.io ，还需要更新 YOUR-PROJECT&amp;gt; (e.g. blog)。这一点，那篇教程 也提到了：
- You can then run ./deploy.sh &amp;ldquo;Your optional commit message&amp;rdquo; to send changes to .github.io. Note that you likely will want to commit changes to your  repository as well.</description>
     </item>
     
     <item>
@@ -1176,22 +1162,6 @@ Kruschke 老师的教材中的图2.1 对这一过程进行了进一步阐释。�
   外研社比赛我从大一就开始关注，每年都会参加，算来我总共参加了六次，演讲三次，写作两次，阅读一次，虽然演讲和写作由于各种原因（其实就是因为自己渣&amp;hellip;) 没进入国赛。 &amp;#x21a9;&amp;#xfe0e;
  请注意，这篇文章是我在2015年写的，外研社的阅读大赛都已经经过了4、5年的变化了，以此我不敢保证我的经验对于目前的比赛还有用。 &amp;#x21a9;&amp;#xfe0e;
    </description>
-    </item>
-    
-    <item>
-      <title>如何将 Hugo 部署到 Netlify</title>
-      <link>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</link>
-      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</guid>
-      <description>首先，什么是部署？为什么要部署？
-其实，准确的说，我们要做的是先把我们在本地的 hugo 文件夹托管到 github，这是第一步。第二步将 hugo 文件夹中的 public 文件夹与 netlify 连接起来，这样 public 文件夹里的内容就变成了我们想要的网站。
-我们部署网站的目的就是让本地的内容可以送达互联网，这样别人才能看到我们创作的内容。
-hugo的官方文档 讲到了如何部署到 netlify，但是第一步，即，先将本地的hugo文件托管到 github，它没有讲。Allison Hill 写的 hugo建站教程 也提到了部署到netlify的方法，但是她漏了一项，即，写入 netlify.toml 这个文件。谢益辉大神写的 blogdown: Creating Websites with R Markdown 这本书对我帮助非常大，但是很奇怪的是，书中涉及到 netlify部署 只是非常简单地介绍了一下原理，对于具体流程则没有涉及。此外，Marvin&amp;rsquo;s Blog 以及 Sulinehk&amp;rsquo;s blog 也都专门讲过 hugo 的 netlify 部署，但是有些内容有些过时，比如自定义域名时的DNS设置。
-这篇帖子是针对像我一样的计算机小白的，我会详细把每一步解释清楚。以下主要以苹果电脑为例，使用windows系统的同学可以作为参考，但我不保证过程正确。
-一、创建本地 hugo 文件夹 这个文件夹是你一开始通过hugo new site xxx 建立的那个文件夹，比如如果你用的hugo new site quickstart，那么quickstart文件夹就是我们要托管到github的本地文件夹，当然，不一定非得用quickstart这个名字，你想用mysite, myblog, hugo-website, my-website&amp;hellip;都可以。如果你还不知道怎么开始用hugo，可以参考olOwOlo的那篇 《hugo从入门到会用》 。这里我们就用quickstart为例。
-二、Github 新建仓库 首先登陆github，如果你还没有注册github账号，请参考这篇帖子 。登陆成功之后，如下图所示，点击右上角的那个加号，然后点击&amp;rsquo;new repository&amp;rsquo;。这里的repository是仓库的意思。
-  新建 Github 仓库   点击之后，在 &amp;lsquo;repository name&amp;rsquo; 这一栏，填入任何你一个你喜欢的名字作为你的仓库名称。注意，github仓库的名称不一定非要和本地仓库名称一样，这里我用hugo-website，你可以用你喜欢的。在description中你可以对这个仓库进行描述，这样你自己以及别人可以一眼知道这个仓库是做什么的，我这里填入 &amp;ldquo;My personal website deployed on Netlify&amp;rdquo;，当然，你用中文也可以。然后，public or private 这里，我们选择默认的 public。在 &amp;ldquo;initialize this repository with a README&amp;rdquo; 这儿，我们不要加。我试过一开始加上，但是后面的步骤会很麻烦，老是出错，所以这里切记不要加</description>
     </item>
     
     <item>
