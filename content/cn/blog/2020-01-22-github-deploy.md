@@ -5,8 +5,7 @@ slug: hugo-github-deploy
 author: 郝鸿涛
 toc: true
 aliases:
-    - /cn/blog/2020-01-22-deploy-on-github/
-    - /cn/code/2020-01-22-deploy-on-github/
+    - /cn/2020-01-22-deploy-on-github/
 ---
 
 {{<notice>}}
