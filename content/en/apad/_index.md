@@ -5,6 +5,23 @@ type : apad
 {{<block class="note">}}
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. 
 {{<end>}}
+
+## 2020-11-29
+1. Finished Donoho (2015)
+
+In the future science, a scientific paper is not the scholarship itself, but the "advertising" of the work. The scholarship will be data and codes, which, of course, are "universally citable and programmatically retrievable".
+
+2. Huberman, B. A., Romero, D. M., & Wu, F. (2008). Social networks that matter: Twitter under the microscope. *arXiv preprint arXiv:0812.1045*.
+
+Hypothesis: the number of contacts (followers and friends) is positively related to the intensity of Twitter activity. 
+
+PP. 1-5
+
+## 2020-11-28 (Completed on 2020-11-29)
+Continue Donoho (2015).
+
+PP. 10-18
+
 ## 2020-11-27
 1. Blumenstock, J. E. (2008, April). Size matters: word count as a measure of quality on wikipedia. In *Proceedings of the 17th international conference on World Wide Web* (pp. 1095-1096).
 
