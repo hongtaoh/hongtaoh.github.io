@@ -1,12 +1,15 @@
-export LC_TIME=en_US.UTF-8
-
-# The commit message.
-MESSAGE="Updating site $(date)"
+#!/bin/sh
+MESSAGE="Rebuilding site $(date)"
 SOURCE=sources
-
 git add .
 git commit -m "$MESSAGE"
-git push origin sources
+git push origin "$SOURCE"
+
+if [ "`git status -s`" ]
+then
+    echo "The working directory is dirty. Please commit any pending changes."
+    exit 1;
+fi
 
 echo "Deleting old publication"
 rm -rf public
@@ -27,4 +30,4 @@ echo "Updating gh-pages branch"
 cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
 
 echo "Pushing to github"
-git push origin gh-pages
+git push --all
