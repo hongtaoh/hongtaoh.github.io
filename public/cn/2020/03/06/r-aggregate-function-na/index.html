@@ -86,7 +86,7 @@
   
   
   
-  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/stats/2020-03-06-r-aggregate.markdown'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="编辑本页"></i>
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2020-03-06-r-aggregate.markdown'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="编辑本页"></i>
   </a>
   
   
@@ -101,11 +101,11 @@
 <p>今天碰到的一个问题是，用 <code>aggregate</code> 求不同组平均数的时候，缺失值不好处理。下面通过用 <code>iris</code> 这个经典数据说一下如果处理缺失值。</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">iris<span style="color:#00f">[sample</span>(<span style="color:#00f">nrow</span>(iris),<span style="color:#666">5</span>),] <span style="color:#408080;font-style:italic"># 随即抽几行，大致浏览数据格式</span>
 </code></pre></div><pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-## 6            5.4         3.9          1.7         0.4     setosa
-## 142          6.9         3.1          5.1         2.3  virginica
-## 67           5.6         3.0          4.5         1.5 versicolor
-## 14           4.3         3.0          1.1         0.1     setosa
-## 148          6.5         3.0          5.2         2.0  virginica
+## 13           4.8         3.0          1.4         0.1     setosa
+## 116          6.4         3.2          5.3         2.3  virginica
+## 77           6.8         2.8          4.8         1.4 versicolor
+## 47           5.1         3.8          1.6         0.2     setosa
+## 117          6.5         3.0          5.5         1.8  virginica
 </code></pre><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">iris<span style="color:#00f">[c</span>(<span style="color:#666">1</span>,<span style="color:#666">5</span>,<span style="color:#666">15</span>,<span style="color:#666">30</span>,<span style="color:#666">45</span>,<span style="color:#666">90</span>,<span style="color:#666">145</span>),<span style="color:#666">4</span>] <span style="color:#666">&lt;-</span> <span style="color:#008000;font-weight:bold">NA</span> <span style="color:#408080;font-style:italic">#制造缺失值</span>
 <span style="color:#00f">aggregate</span>(x<span style="color:#666">=</span>iris<span style="color:#666">$</span>Petal.Width, by<span style="color:#666">=</span><span style="color:#00f">list</span>(iris<span style="color:#666">$</span>Species), FUN<span style="color:#666">=</span>mean)
 </code></pre></div><pre><code>##      Group.1  x

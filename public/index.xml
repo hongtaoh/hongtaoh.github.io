@@ -351,31 +351,6 @@ After class 是说某一节课结束，而 after classes 则是说一整天的�
     </item>
     
     <item>
-      <title>区分 After Class 和 After Classes</title>
-      <link>https://hongtaoh.github.io/cn/2020/08/21/after-class-after-classes/</link>
-      <pubDate>Fri, 21 Aug 2020 16:10:58 -0400</pubDate>
-      
-      <guid>https://hongtaoh.github.io/cn/2020/08/21/after-class-after-classes/</guid>
-      <description>我在这里 和 这里 看到的解答。
-After class 是说某一节课结束，而 after classes 则是说一整天的课都结束，也就是放学了。
-例句   Xiao Ming, please go to the teacher&amp;rsquo;s office after class. 小明，下课后去老师办公室一趟。
-  Xiao Ming, let&amp;rsquo;s go partying after classes. 小明，放学后咱一起去开趴吧。
-  参考  https://english.stackexchange.com/questions/406771/after-class-vs-after-classes  https://hinative.com/en-US/questions/438363   </description>
-    </item>
-    
-    <item>
-      <title>区分 on stage, on stages, onstage, 和 on the stage</title>
-      <link>https://hongtaoh.github.io/cn/2020/08/21/stage/</link>
-      <pubDate>Fri, 21 Aug 2020 16:10:58 -0400</pubDate>
-      
-      <guid>https://hongtaoh.github.io/cn/2020/08/21/stage/</guid>
-      <description>On stage 是一个副词。它说的是一个人作为演员在舞台上表演这个状态。这里的 stage 不指某一个具体的舞台，而是取其抽象意。与其将 on stage 翻译成“在舞台上”，不如翻译成“表演、当演员1”。比如，Apart from a quick costtume change, Xiao Hong was on stage every minute of the two-hour play2. 除了快速的换了换衣服，整个两个小时的话剧，小红一直都在台上表演。
-On stages 指的是在很多个舞台上表演，这里的舞台依然是抽象意。比如，He wants to be on stages throughout Europe3
-Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可以作为形容词的用法。比如 His onstage behavior was so insane today. Onstage 作为副词更为常见，其指的是“一个人在台上”的这个状态，比如：
- She needs to be onstage throughout the show. She walked onstage and all the audiences applauded4. Onstage, all the actors and actresses were so energetic5.</description>
-    </item>
-    
-    <item>
       <title>区分 on stage, on stages, onstage, 和 on the stage</title>
       <link>https://hongtaoh.github.io/cn/2020/08/21/stage/</link>
       <pubDate>Fri, 21 Aug 2020 16:10:58 -0400</pubDate>
@@ -596,23 +571,6 @@ In this age of informaiton, it&amp;rsquo;s important to have your online presenc
 直接在手机端查看自然可以，但是我试过几次后，发现实在不行，每次都是没看几个就坚持不下去了，而且看的时候无法做标记，第二次看还是两眼一抹黑。我想把通讯录导出来，打印出来，我可以在纸上一点点勾勾画画，做备注。
 找了很多方法，有很多程序员提倡用爬虫的方法，但是我的微信网页端无法登录，因此放弃了。最后看到一篇帖子后，我就想，也许可以把这800人截图下来。
 说干就干。我打开电脑端微信，然后把视图缩小。紧接着把通讯录一个个截图，并从01开始标号。每一个截图里大概有10位好友左右。然后把这些截图一个个拼接到 PPT 上，再打印出来。大概12页就可以把800个好友都包括进来了，而且好处是截图里包含了头像，比只导出文字要好。</description>
-    </item>
-    
-    <item>
-      <title>Bookdown 和 ElegantBookdown 使用心得</title>
-      <link>https://hongtaoh.github.io/cn/2020/05/26/bookdown-tips/</link>
-      <pubDate>Tue, 26 May 2020 16:00:21 -0400</pubDate>
-      
-      <guid>https://hongtaoh.github.io/cn/2020/05/26/bookdown-tips/</guid>
-      <description>最近的一周一直在调试 Bookdown 。其实，Bookdown 本身并不难，益辉大神 在他的那本 bookdown: Authoring Books and Technical Documents with R Markdown 已经介绍的非常清楚。我一直在调试的、也是我一直不会的主要集中在 PDF 的样式上，比如：
- PDF 中的 &amp;ldquo;Chapter 1&amp;rdquo; 如何改成「第一章」？  HTML 上改的话比较容易。如果你也是用的 bookdown-demo 来开始的话，那么在根目录下找到 _bookdown.yml 这个文档，然后把 chapter_name: &amp;quot;Chapter &amp;quot; 改成 chapter_name: [&amp;quot;第 &amp;quot;, &amp;quot; 章&amp;quot;]1 就好了。
-注意，这里标点是英文的。汉字和第二个英文引号之间有一个英文空格，是为了让版面更漂亮一些。不加空格的话，就是 「第N章」，加上空格就是「第 N 章」，所以还是加上吧。
-但是，PDF 中还是显示 「Chapter N」。我知道肯定能改，但我感觉比较困难，所以就放弃了。虽然可能只是在 preamble.tex 里加一行代码的事，但我可能要花几天的时间才能知道那行代码是啥。果断放弃。
- PDF 的空白页如何删除？
-  PDF 如何上每一页的文本对齐，而非 bookdown 预设的那样一左一右？
-  PDF 中如何更改中文引语的字体？
-  等等。
-我知道是我要求太苛刻了。Bookdown 原本主要是为网页版书籍准备的，而非 PDF 版。因此，Bookdown 官网 上摆出的那些书籍中，有一些根本就没有把 PDF 版放上去。</description>
     </item>
     
     <item>
@@ -887,16 +845,6 @@ iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepa
     </item>
     
     <item>
-      <title>R aggregate 求不同组平均数，如何处理缺失值</title>
-      <link>https://hongtaoh.github.io/cn/2020/03/06/r-aggregate-function-na/</link>
-      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hongtaoh.github.io/cn/2020/03/06/r-aggregate-function-na/</guid>
-      <description>今天碰到的一个问题是，用 aggregate 求不同组平均数的时候，缺失值不好处理。下面通过用 iris 这个经典数据说一下如果处理缺失值。
-iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepal.Length Sepal.Width Petal.Length Petal.Width Species ## 6 5.4 3.9 1.7 0.4 setosa ## 142 6.9 3.1 5.1 2.3 virginica ## 67 5.6 3.0 4.5 1.5 versicolor ## 14 4.3 3.0 1.1 0.1 setosa ## 148 6.5 3.0 5.2 2.0 virginica iris[c(1,5,15,30,45,90,145),4] &amp;lt;- NA #制造缺失值 aggregate(x=iris$Petal.Width, by=list(iris$Species), FUN=mean) ## Group.1 x ## 1 setosa NA ## 2 versicolor NA ## 3 virginica NA aggregate(x=iris$Petal.</description>
-    </item>
-    
-    <item>
       <title>2020年西北大学 MTS 博士项目校园面试 － 经历和体会</title>
       <link>https://hongtaoh.github.io/cn/2020/03/01/northwestern-compus-visit/</link>
       <pubDate>Sun, 01 Mar 2020 11:05:47 -0500</pubDate>
@@ -1009,19 +957,6 @@ Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，�
     </item>
     
     <item>
-      <title>Hugo 如何部署到 Github Pages</title>
-      <link>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</link>
-      <pubDate>Wed, 22 Jan 2020 17:04:17 -0500</pubDate>
-      
-      <guid>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</guid>
-      <description>正好自己要重新做一遍，我便在这里把步骤记录下来。
-Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，一个是 YOUR-PROJECT&amp;gt; (e.g. blog)，另一个是 &amp;lt;USERNAME&amp;gt;.github.io 。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 public 文件夹。
-这种设置的问题在于，你的博客更新的可能不仅仅是内容，掌管着网页格式的 layout 文件以及 css 文件也可能会更新。如果你需要让别人看到你的网页格式源代码，即，你的 layout 文件以及 css 文件，那么你每次更新的时候，不仅需要更新 &amp;lt;USERNAME&amp;gt;.github.io ，还需要更新 YOUR-PROJECT&amp;gt; (e.g. blog)。这一点，那篇教程 也提到了：
- You can then run ./deploy.sh &amp;ldquo;Your optional commit message&amp;rdquo; to send changes to .github.io. Note that you likely will want to commit changes to your  repository as well.
- 我在 Amber Thomas 的 这篇帖子 找到了解决办法：在 &amp;lt;USERNAME&amp;gt;.github.io  仓库中建两个分支 (brance): sources 和 master。其中 sources 放 Hugo 文件夹所有内容，master 只放 public 文件夹内容。</description>
-    </item>
-    
-    <item>
       <title>Hugo 如何实现脚注</title>
       <link>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</link>
       <pubDate>Tue, 21 Jan 2020 12:22:37 -0500</pubDate>
@@ -1035,32 +970,6 @@ blackfriday 支持 自动计数 形式的脚注。所谓自动计数，就是说
 [^1]: 看到了吗？ 这一点，有人在 Github 上提过 ，想在 goldmark 中实现 免计数 脚注，但是目前貌似依然不支持。
   应该是一个日本人，他的 Github 网页在这里 &amp;#x21a9;&amp;#xfe0e;
    </description>
-    </item>
-    
-    <item>
-      <title>Hugo 如何实现脚注</title>
-      <link>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</link>
-      <pubDate>Tue, 21 Jan 2020 12:22:37 -0500</pubDate>
-      
-      <guid>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</guid>
-      <description>Hugo 从 v0.60.0 开始，Markdown 解析器不再使用 Blackfriday , 改用由 yuin 1 编写的 goldmark 。
-这次变动我目前感觉比较明显的是：
-blackfriday 支持 免计数 形式的脚注。所谓免计数，就是说，你可以在文本后直接跟脚注的具体内容，比如
-比如[^看到了吗？] 这种形式在 blackfriday 是支持的，但是 goldmark 不支持，你必须这样：
-比如[^1] 然后在文末，加上以下内容才可以：
-[^1]: 看到了吗？ 这一点，有人在 Github 上提过 ，想在 goldmark 中实现 免计数 脚注，但是目前貌似依然不支持。
-  应该是一个日本人，他的 Github 网页在这里 &amp;#x21a9;&amp;#xfe0e;
-   </description>
-    </item>
-    
-    <item>
-      <title>Hugo 如何使用思源宋体</title>
-      <link>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</link>
-      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</guid>
-      <description>先给自己填一个坑。 主要参考：
- Indev. Journal  Reuixiy  Another random blog   </description>
     </item>
     
     <item>
@@ -1190,22 +1099,6 @@ hugo的官方文档 讲到了如何部署到 netlify，但是第一步，即，�
 这篇帖子是针对像我一样的计算机小白的，我会详细把每一步解释清楚。以下主要以苹果电脑为例，使用windows系统的同学可以作为参考，但我不保证过程正确。
 一、创建本地 hugo 文件夹 这个文件夹是你一开始通过hugo new site xxx 建立的那个文件夹，比如如果你用的hugo new site quickstart，那么quickstart文件夹就是我们要托管到github的本地文件夹，当然，不一定非得用quickstart这个名字，你想用mysite, myblog, hugo-website, my-website&amp;hellip;都可以。如果你还不知道怎么开始用hugo，可以参考olOwOlo的那篇 《hugo从入门到会用》 。这里我们就用quickstart为例。
 二、Github 新建仓库 首先登陆github，如果你还没有注册github账号，请参考这篇帖子 。登陆成功之后，如下图所示，点击右上角的那个加号，然后点击&amp;rsquo;new repository&amp;rsquo;。这里的repository是仓库的意思。
-  新建 Github 仓库   点击之后，在 &amp;lsquo;repository name&amp;rsquo; 这一栏，填入任何你一个你喜欢的名字作为你的仓库名称。注意，github仓库的名称不一定非要和本地仓库名称一样，这里我用hugo-website，你可以用你喜欢的。在description中你可以对这个仓库进行描述，这样你自己以及别人可以一眼知道这个仓库是做什么的，我这里填入 &amp;ldquo;My personal website deployed on Netlify&amp;rdquo;，当然，你用中文也可以。然后，public or private 这里，我们选择默认的 public。在 &amp;ldquo;initialize this repository with a README&amp;rdquo; 这儿，我们不要加。我试过一开始加上，但是后面的步骤会很麻烦，老是出错，所以这里切记不要加</description>
-    </item>
-    
-    <item>
-      <title>如何将 Hugo 部署到 Netlify</title>
-      <link>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</link>
-      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</guid>
-      <description>首先，什么是部署？为什么要部署？
-其实，准确的说，我们要做的是先把我们在本地的 hugo 文件夹托管到 github，这是第一步。第二步将 hugo 文件夹中的 public 文件夹与 netlify 连接起来，这样 public 文件夹里的内容就变成了我们想要的网站。
-我们部署网站的目的就是让本地的内容可以送达互联网，这样别人才能看到我们创作的内容。
-hugo的官方文档 讲到了如何部署到 netlify，但是第一步，即，先将本地的hugo文件托管到 github，它没有讲。Allison Hill 写的 hugo建站教程 也提到了部署到netlify的方法，但是她漏了一项，即，写入 netlify.toml 这个文件。谢益辉大神写的 blogdown: Creating Websites with R Markdown 这本书对我帮助非常大，但是很奇怪的是，书中涉及到 netlify部署 只是非常简单地介绍了一下原理，对于具体流程则没有涉及。此外，Marvin&amp;rsquo;s Blog 以及 Sulinehk&amp;rsquo;s blog 也都专门讲过 hugo 的 netlify 部署，但是有些内容有些过时，比如自定义域名时的DNS设置。
-这篇帖子是针对像我一样的计算机小白的，我会详细把每一步解释清楚。以下主要以苹果电脑为例，使用windows系统的同学可以作为参考，但我不保证过程正确。
-一、创建本地 hugo 文件夹 这个文件夹是你一开始通过hugo new site xxx 建立的那个文件夹，比如如果你用的hugo new site quickstart，那么quickstart文件夹就是我们要托管到github的本地文件夹，当然，不一定非得用quickstart这个名字，你想用mysite, myblog, hugo-website, my-website&amp;hellip;都可以。如果你还不知道怎么开始用hugo，可以参考olOwOlo的那篇 《hugo从入门到会用》 。这里我们就用quickstart为例。
-二、Github 新建仓库 首先登陆github，如果你还没有注册github账号，请参考大漠穷秋的 这篇帖子 。登陆成功之后，如下图所示，点击右上角的那个加号，然后点击&amp;rsquo;new repository&amp;rsquo;。这里的repository是仓库的意思。
   新建 Github 仓库   点击之后，在 &amp;lsquo;repository name&amp;rsquo; 这一栏，填入任何你一个你喜欢的名字作为你的仓库名称。注意，github仓库的名称不一定非要和本地仓库名称一样，这里我用hugo-website，你可以用你喜欢的。在description中你可以对这个仓库进行描述，这样你自己以及别人可以一眼知道这个仓库是做什么的，我这里填入 &amp;ldquo;My personal website deployed on Netlify&amp;rdquo;，当然，你用中文也可以。然后，public or private 这里，我们选择默认的 public。在 &amp;ldquo;initialize this repository with a README&amp;rdquo; 这儿，我们不要加。我试过一开始加上，但是后面的步骤会很麻烦，老是出错，所以这里切记不要加</description>
     </item>
     
