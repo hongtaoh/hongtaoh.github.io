@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on 郝鸿涛::Hongtao Hao</title>
-    <link>/categories/hugo/</link>
+    <link>https://hongtaoh.github.io/categories/hugo/</link>
     <description>Recent content in Hugo on 郝鸿涛::Hongtao Hao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hongtaoh.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo 如何使用思源宋体</title>
-      <link>/cn/2020/01/19/hugo-google-noto-serif-sc/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</link>
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/cn/2020/01/19/hugo-google-noto-serif-sc/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</guid>
       <description>先给自己填一个坑。 主要参考：
  Indev. Journal  Reuixiy  Another random blog   </description>
     </item>
     
     <item>
       <title>Hugo 如何使用思源宋体</title>
-      <link>/cn/2020/01/19/hugo-google-noto-serif-sc/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</link>
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/cn/2020/01/19/hugo-google-noto-serif-sc/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</guid>
       <description>先给自己填一个坑。 主要参考：
  Indev. Journal  Reuixiy  Another random blog   </description>
     </item>
     
     <item>
       <title>如何将 Hugo 部署到 Netlify</title>
-      <link>/cn/2020/01/04/hugo-netlify-deployment/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/cn/2020/01/04/hugo-netlify-deployment/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deployment/</guid>
       <description>首先，什么是部署？为什么要部署？
 其实，准确的说，我们要做的是先把我们在本地的 hugo 文件夹托管到 github，这是第一步。第二步将 hugo 文件夹中的 public 文件夹与 netlify 连接起来，这样 public 文件夹里的内容就变成了我们想要的网站。
 我们部署网站的目的就是让本地的内容可以送达互联网，这样别人才能看到我们创作的内容。

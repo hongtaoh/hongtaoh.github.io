@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>日志 on 郝鸿涛::Hongtao Hao</title>
-    <link>/cn/blog/</link>
+    <link>https://hongtaoh.github.io/cn/blog/</link>
     <description>Recent content in 日志 on 郝鸿涛::Hongtao Hao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/cn/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hongtaoh.github.io/cn/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>数字鸿沟对中国城乡教育公平的影响</title>
-      <link>/cn/2020/10/30/dd-china/</link>
+      <link>https://hongtaoh.github.io/cn/2020/10/30/dd-china/</link>
       <pubDate>Fri, 30 Oct 2020 18:07:02 -0400</pubDate>
       
-      <guid>/cn/2020/10/30/dd-china/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/10/30/dd-china/</guid>
       <description>这篇文章一开始写于 2016 年底，是我在人大求学时，《新闻传播史论精要》这门课的期末作业。刘海龙老师很好心地给了我 92 分，嘿嘿。2017 年初，我对原文进行了大程度的修改和增补，之后，这篇文章命途多舛，先后投给《国际新闻界》、《现代远程教育》和《东南传播》，都被拒稿。我觉得可惜，于是前几天把这篇文章稍微修改了一下，现在挂在网上，也许有人能看到呢。 
 想看 PDF 的话，在这里 。
 摘要 信息通信技术在现代生活的方方面面发挥越来越大的作用。“信息富有者”和“信息贫穷者”之间的差距因此得到广泛关注。本研究意在实证研究中国城乡数字鸿沟的现状及其对我国基础教育公平的影响。在分析中国和世界的数据的基础上，本研究发现中国城乡之间“物理接入”层面的数字鸿沟并未消失，而且有逐步扩大的趋势。本研究还发现城乡间其他各维度的数字鸿沟对教育公平也有很大影响，其中包括接入沟、设备沟、学校教育沟、网速沟、使用技能沟、使用内容沟和受益沟七个维度。这意味着中国大部分乡村学生无法享受与城市学生一样的由信息通信技术带来的教育改变。如果政府不采取必要措施，这一鸿沟仍将扩大。
@@ -25,10 +25,10 @@ Digital Divide and Its Implications for Rural-Urban Educational Equity in China 
     
     <item>
       <title>谈谈智商</title>
-      <link>/cn/2020/10/25/iq/</link>
+      <link>https://hongtaoh.github.io/cn/2020/10/25/iq/</link>
       <pubDate>Sun, 25 Oct 2020 16:01:40 -0400</pubDate>
       
-      <guid>/cn/2020/10/25/iq/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/10/25/iq/</guid>
       <description>我是一个很笨的人，智商中等。高中阶段的学习生涯更让我对这一点深信不疑。最挑战我智商的莫过于数学。我自认为是一个很刻苦的人，也很自律，但是我从初中开始，一直到高四复读结束，数学一直都很令我头疼，不管我怎么努力，都觉得很多东西不会。不要说奥数了，正常的数学考试我都发怵。每次回想起来高中的数学，我都觉得像是一个阴影一样。这甚至让我对一切（我认为）需要高智商的知识望而却步：微积分、统计学、编程。在人大研二期间，申请美国的学校时，看很多美国老师发表的论文，基本上都是涉及到统计的，我看不懂，研二下学期就开始学。自然是很难，我也学不会，不过我觉得也正常，像我这么笨的人能学会才怪。
 来美国后慢慢有些变化。在印第安纳大学期间，我一共修了三门统计，其中两门我拿了 A+ ，一门拿了 A 。不是因为课程水：拿 A+ 的那两门课，每门课都是10个人左右，最后每门课都只有两个人拿 A+ 。是因为课上的知识水吗？我觉得不是。每门课都很正常，不说非常难，但即使放到国内也是正常的研究生统计难度。John Kruschke 老师的课，我看到微积分符号不再害怕了，甚至自己还写了几个 。安用烈老师的 Network Science 课程进一步减弱了我对数学的恐惧 。而且，我也开始学编程，安老师的 Python 数据可视化课让我对 Python 有了入门程度的熟练度，之后靠自学就可以。Dong-Chul Seo 和 John Kruschke 老师的统计课让我对 R 的使用进一步熟练。跟着安用烈老师做可视化项目，让我自学了 D3.js, 也在加深我对 HTML 和 CSS 的熟练程度。
 这些在国内高智商的大神面前肯定一文不值。我如果用两年学会这些东西，他们可能只需要1个月就可以。但对我自己而言，我慢慢对自己有了自信，看到数学公式不再头疼，遇到问题我也始终相信我能解决。相比高中时期的我，这其实是一个挺大的进步。
@@ -54,10 +54,10 @@ Digital Divide and Its Implications for Rural-Urban Educational Equity in China 
     
     <item>
       <title>美国看病记</title>
-      <link>/cn/2020/09/11/us-hospital/</link>
+      <link>https://hongtaoh.github.io/cn/2020/09/11/us-hospital/</link>
       <pubDate>Fri, 11 Sep 2020 14:20:25 -0400</pubDate>
       
-      <guid>/cn/2020/09/11/us-hospital/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/09/11/us-hospital/</guid>
       <description>2020年4月开始感觉耳鸣，也许是我来美国后的两年基本上都是戴耳塞睡觉造成的。4月份之后耳鸣越来越明显，而且听力明显下降，我就预约了校医院。去校医院是一位70多岁的全科医生帮我检查。他之前都在海军陆战队当军医，娶了一位泰国太太，去过100多个国家和地区。他人很好，先和我聊了会儿天。他说，他要先让他的患者感受到受欢迎。
 帮我检查后，说我一只耳朵（耳鸣现象严重的那只）耳垢很多，然后安排一位护士帮我清洗耳道。那位护士长得很高。她把热水注射进我的耳道。水会在耳道内走一遍，然后流出来，这样就清理了耳道。我倒不觉得疼。清洗完之后，又回到医生那里，他又帮我检查了一下，说耳道有一些受感染，给我开了药，让我每天滴药水。还给我开了抗过敏的药，因为他说我耳朵感染可能是过敏造成的，不过我心里觉得和过敏肯定没有关系。可能是因为在美国，过敏很普遍，他才这么觉得。临走的时候，告诉我说，以后洗澡时可以让水冲进耳朵，这样可以把耳垢清洗出来。
 回去后，我觉得真的好很多了。但是没过多久，症状又开始出现，我就又预约了上次那位医生。他看了后，说耳膜后面有积水，之后给我开了抗过敏的药和消炎药（抗生素）。我吃了两周后，觉得没有好转，我就又给校医院打电话，护士问过医生后，医生决定把我转到校外的医院。
@@ -81,10 +81,10 @@ Digital Divide and Its Implications for Rural-Urban Educational Equity in China 
     
     <item>
       <title>乔布斯和张一鸣</title>
-      <link>/cn/2020/08/23/zhang-and-jobs/</link>
+      <link>https://hongtaoh.github.io/cn/2020/08/23/zhang-and-jobs/</link>
       <pubDate>Sun, 23 Aug 2020 09:15:37 -0400</pubDate>
       
-      <guid>/cn/2020/08/23/zhang-and-jobs/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/08/23/zhang-and-jobs/</guid>
       <description>毫无疑问，两者都极其成功，至少在世俗意义上如此。除此之外，他们还有一个共同点：都没有做到「己所不欲，勿施于人」。
 乔布斯让无数人用上了 iPad，却唯独不想让他自己的孩子用 ；张一鸣自己推崇“延迟满足”和自律 ，却用抖音吞噬国人无数的时间来盈利。
 都是为了利益，我也不想做太多的评判。
@@ -93,10 +93,10 @@ Digital Divide and Its Implications for Rural-Urban Educational Equity in China 
     
     <item>
       <title>区分 After Class 和 After Classes</title>
-      <link>/cn/2020/08/21/after-class-after-classes/</link>
+      <link>https://hongtaoh.github.io/cn/2020/08/21/after-class-after-classes/</link>
       <pubDate>Fri, 21 Aug 2020 16:10:58 -0400</pubDate>
       
-      <guid>/cn/2020/08/21/after-class-after-classes/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/08/21/after-class-after-classes/</guid>
       <description>我在这里 和 这里 看到的解答。
 After class 是说某一节课结束，而 after classes 则是说一整天的课都结束，也就是放学了。
 例句   Xiao Ming, please go to the teacher&amp;rsquo;s office after class. 小明，下课后去老师办公室一趟。
@@ -106,10 +106,10 @@ After class 是说某一节课结束，而 after classes 则是说一整天的�
     
     <item>
       <title>区分 on stage, on stages, onstage, 和 on the stage</title>
-      <link>/cn/2020/08/21/stage/</link>
+      <link>https://hongtaoh.github.io/cn/2020/08/21/stage/</link>
       <pubDate>Fri, 21 Aug 2020 16:10:58 -0400</pubDate>
       
-      <guid>/cn/2020/08/21/stage/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/08/21/stage/</guid>
       <description>On stage 是一个副词。它说的是一个人作为演员在舞台上表演这个状态。这里的 stage 不指某一个具体的舞台，而是取其抽象意。与其将 on stage 翻译成“在舞台上”，不如翻译成“表演、当演员1”。比如，Apart from a quick costtume change, Xiao Hong was on stage every minute of the two-hour play2. 除了快速的换了换衣服，整个两个小时的话剧，小红一直都在台上表演。
 On stages 指的是在很多个舞台上表演，这里的舞台依然是抽象意。比如，He wants to be on stages throughout Europe3
 Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可以作为形容词的用法。比如 His onstage behavior was so insane today. Onstage 作为副词更为常见，其指的是“一个人在台上”的这个状态，比如：
@@ -118,10 +118,10 @@ Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可�
     
     <item>
       <title>自信的三个层次</title>
-      <link>/cn/2020/08/11/confidence-hierarchy/</link>
+      <link>https://hongtaoh.github.io/cn/2020/08/11/confidence-hierarchy/</link>
       <pubDate>Tue, 11 Aug 2020 16:48:11 -0400</pubDate>
       
-      <guid>/cn/2020/08/11/confidence-hierarchy/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/08/11/confidence-hierarchy/</guid>
       <description>第一种层次：条件自信 大多数人在这一层次。所谓「条件自信」是指一个人的自信是有条件的。条件达成则自信，条件缺少则不自信。处在这种层次的人对于好坏、高低、贫富等等有着强烈的好恶。今天可能因为找到好工作、理了新发型、穿了新衣服、突然变得有钱、买了新车、考上名校、孩子有出息等等而自信，明天就可能会因为这些条件崩坏而自卑。
 说白了，条件自信的基础是自己比别人强、优秀、有钱、有地位、帅、美、高。但这世界上没有任何一个人在每一点都比别人强。因此，处于这一层次的人会在自信和自卑之间无限循环，所以才叫「条件自信」。
 第二种层次：无条件自信、少条件自信 处于这一层次的人，对于二元的好恶之心没有那么强了，也不再热衷于拿自己和别人比较。这种自信来自内心深处，来自对自己深深的肯定。不管受到什么打击、不管处在什么境地，都始终相信自己最终一定能做出一番成绩。
@@ -132,20 +132,20 @@ Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可�
     
     <item>
       <title>2019 年在瑞士圣加仑论坛杂志做记者的体验</title>
-      <link>/cn/2020/07/30/2019-sgs-magazine/</link>
+      <link>https://hongtaoh.github.io/cn/2020/07/30/2019-sgs-magazine/</link>
       <pubDate>Thu, 30 Jul 2020 16:39:00 -0400</pubDate>
       
-      <guid>/cn/2020/07/30/2019-sgs-magazine/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/07/30/2019-sgs-magazine/</guid>
       <description>2019 年我申请了圣加仑论坛杂志的记者职位，被录取。现在没时间写体验，先给自己填一个坑。我先把一些照片分享一下。这些照片不是我拍的，我只是觉得有纪念意义。
   圣加仑大学的一个非常有名的景点：幸福很贵     杂志的历史     每次结束后都会摆拍一次，我不知道这张是第几期的     工作环境     从远处看圣加仑   </description>
     </item>
     
     <item>
       <title>海瑞和张居正谁的贡献更大？</title>
-      <link>/cn/2020/07/10/hairui/</link>
+      <link>https://hongtaoh.github.io/cn/2020/07/10/hairui/</link>
       <pubDate>Fri, 10 Jul 2020 05:40:41 -0400</pubDate>
       
-      <guid>/cn/2020/07/10/hairui/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/07/10/hairui/</guid>
       <description>蔡礼旭老师在《幸福人生讲座：如何做一个如法的好人》第二集讲到海瑞。我就想到一个问题：海瑞和同时代的张居正谁的贡献大？
 我之前看到的一种说法是，张居正的贡献大。虽然张居正不如海瑞清廉，但他办实事儿。像海瑞这样的官，往往办不成什么事儿。我当时深以为然，但是现在想，则不是非常认同。
 首先，我肯定的一点是，张居正做的实事儿确实会比海瑞多。毕竟，水至清则无鱼。海瑞这种的官往往没办法做到很大，因此也难以从很大程度上改变社会。从这个角度讲，海瑞是不如张居正的。
@@ -156,19 +156,19 @@ Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可�
     
     <item>
       <title>如何下载 YouTube 视频</title>
-      <link>/cn/2020/06/04/youtube-download/</link>
+      <link>https://hongtaoh.github.io/cn/2020/06/04/youtube-download/</link>
       <pubDate>Thu, 04 Jun 2020 08:45:57 -0400</pubDate>
       
-      <guid>/cn/2020/06/04/youtube-download/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/06/04/youtube-download/</guid>
       <description>很多介绍下载 YouTube 视频的方法都涉及下载软件或者浏览器插件，但其实没有必要。这里 介绍到了一个非常简单的方法：找到你想下载的 YouTube 视频网址，然后在 &amp;ldquo;youtube&amp;rdquo; 前加上 &amp;ldquo;add&amp;rdquo; 就可以了。具体有不懂的，打开上面给出的链接，就明白了。</description>
     </item>
     
     <item>
       <title>非常规方法导出微信通讯录</title>
-      <link>/cn/2020/05/27/wechat-contacts-extracting/</link>
+      <link>https://hongtaoh.github.io/cn/2020/05/27/wechat-contacts-extracting/</link>
       <pubDate>Wed, 27 May 2020 16:41:49 -0400</pubDate>
       
-      <guid>/cn/2020/05/27/wechat-contacts-extracting/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/05/27/wechat-contacts-extracting/</guid>
       <description>我微信上有将近800个好友。我在为之后彻底不用微信做准备，因此需要把这800个好友认真浏览一遍，看哪些需要我进一步联系，好问一下他们微信外的联系方式，哪些则不用管。
 直接在手机端查看自然可以，但是我试过几次后，发现实在不行，每次都是没看几个就坚持不下去了，而且看的时候无法做标记，第二次看还是两眼一抹黑。我想把通讯录导出来，打印出来，我可以在纸上一点点勾勾画画，做备注。
 找了很多方法，有很多程序员提倡用爬虫的方法，但是我的微信网页端无法登录，因此放弃了。最后看到一篇帖子后，我就想，也许可以把这800人截图下来。
@@ -177,10 +177,10 @@ Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可�
     
     <item>
       <title>Bookdown 和 ElegantBookdown 使用心得</title>
-      <link>/cn/2020/05/26/bookdown-tips/</link>
+      <link>https://hongtaoh.github.io/cn/2020/05/26/bookdown-tips/</link>
       <pubDate>Tue, 26 May 2020 16:00:21 -0400</pubDate>
       
-      <guid>/cn/2020/05/26/bookdown-tips/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/05/26/bookdown-tips/</guid>
       <description>最近的一周一直在调试 Bookdown 。其实，Bookdown 本身并不难，益辉大神 在他的那本 bookdown: Authoring Books and Technical Documents with R Markdown 已经介绍的非常清楚。我一直在调试的、也是我一直不会的主要集中在 PDF 的样式上，比如：
  PDF 中的 &amp;ldquo;Chapter 1&amp;rdquo; 如何改成「第一章」？  HTML 上改的话比较容易。如果你也是用的 bookdown-demo 来开始的话，那么在根目录下找到 _bookdown.yml 这个文档，然后把 chapter_name: &amp;quot;Chapter &amp;quot; 改成 chapter_name: [&amp;quot;第 &amp;quot;, &amp;quot; 章&amp;quot;]1 就好了。
 注意，这里标点是英文的。汉字和第二个英文引号之间有一个英文空格，是为了让版面更漂亮一些。不加空格的话，就是 「第N章」，加上空格就是「第 N 章」，所以还是加上吧。
@@ -194,10 +194,10 @@ Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可�
     
     <item>
       <title>人人献出一点爱，让尘肺病不在</title>
-      <link>/cn/2020/04/30/love-from-everyone-conquers-neumoconiosis/</link>
+      <link>https://hongtaoh.github.io/cn/2020/04/30/love-from-everyone-conquers-neumoconiosis/</link>
       <pubDate>Thu, 30 Apr 2020 11:28:02 -0400</pubDate>
       
-      <guid>/cn/2020/04/30/love-from-everyone-conquers-neumoconiosis/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/04/30/love-from-everyone-conquers-neumoconiosis/</guid>
       <description>注：原文写于 2016 年 12 月
  这几天，北京的雾霾再次成为刷屏的热词。
 大爱清尘发起人王克勤曾说： “人们每天都为城市的PM2.5忧心忡忡，可PM2.5在尘肺病面前根本不值一提”。
@@ -261,10 +261,10 @@ Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可�
     
     <item>
       <title>大爱清尘，能救一个是一个 （深度报道）</title>
-      <link>/cn/2020/04/30/help-one-after-another/</link>
+      <link>https://hongtaoh.github.io/cn/2020/04/30/help-one-after-another/</link>
       <pubDate>Thu, 30 Apr 2020 11:04:49 -0400</pubDate>
       
-      <guid>/cn/2020/04/30/help-one-after-another/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/04/30/help-one-after-another/</guid>
       <description>注：原文写于 2016 年 12 月
    大爱清尘办公室入口   在北京中关村附近的地下一层，有一个60平米左右的办公室，十几个穿着绿色制服的工作人员在紧张忙碌着。
 这里是大爱清尘全国中心的办公室。
@@ -303,10 +303,10 @@ Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可�
     
     <item>
       <title>想法何时写</title>
-      <link>/cn/2020/04/30/when-to-write/</link>
+      <link>https://hongtaoh.github.io/cn/2020/04/30/when-to-write/</link>
       <pubDate>Thu, 30 Apr 2020 06:04:52 -0400</pubDate>
       
-      <guid>/cn/2020/04/30/when-to-write/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/04/30/when-to-write/</guid>
       <description>最近的一个感受是，平常有很多想法，但是老是因为自己平常太忙，还有很多别的事情要做，这些想法就永远无法变成文字和更深入的思考。还有一个原因是自己会产生一个疑问：我的这些文字和想法对别人有用吗？我总是觉得没什么用，也就没有很强的动力去把自己的想法写出来。
 其实啊，自己的想法不见得非要对别人有用。许多我觉得对别人有用的文章，最后可能别人都不会看。比如我写的那两篇如何将 Hugo 部署到 Netlify 或者 GitHub, 虽然我写了很久，也觉得填补了网上许多教程的空白，但是也不见得很多人看1。
 另外就是，想法其实是需要我坐下来，静下心来去写，一边写，一边才能把想法深入，不然就永远无法把想法具体化。我还想到的一点是，也就是在 How to Write A Lot 这本书里提到的，你要给自己第一个时间，专门用来干某事。
@@ -318,10 +318,10 @@ Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可�
     
     <item>
       <title>如果我的高中能再来一遍</title>
-      <link>/cn/2020/04/19/if-senior-high-again/</link>
+      <link>https://hongtaoh.github.io/cn/2020/04/19/if-senior-high-again/</link>
       <pubDate>Sun, 19 Apr 2020 10:57:52 -0400</pubDate>
       
-      <guid>/cn/2020/04/19/if-senior-high-again/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/04/19/if-senior-high-again/</guid>
       <description>  来源：河北新闻网   很久之前就想过这个问题。高中对我来说是一个遗憾，由于一些原因，我的高中支离破碎，后半部分是在家里度过的。甚至高四复读，我也是在学校旁边的出租房里度过。一段不堪回首的艰苦岁月。
 对高中有一种情怀一是因为自己两次高考都是失败，最后去了一所双非大学，虽然我现在觉得她其实给我了很多，但难免不会幻想如果我的高中正常，我会有什么样的一个结果。另一个我对高中有情怀的原因是，现在我每天拼命学习，而且也意识到高中那些知识的重要性，比如古文，比如数学，比如物理化学1等。
 文科？ 理科？ 如果我能回到高中，我不会选文科。不管是从实用主义的角度考虑还是从对我的契合度考虑，我都觉得文科不是一个好的选择。对我来说，地理还好点，政治和历史的随机性和主观性太强。或者说我一直找不到考高分的原理。我在复读的时候，班上有一个人，平常考试文综总是240多甚至250多，高考的时候好像也是240多，我一直搞不懂他咋做到的。
@@ -343,19 +343,19 @@ Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可�
     
     <item>
       <title>少用的这个字</title>
-      <link>/cn/2020/03/13/limit-using-this-character/</link>
+      <link>https://hongtaoh.github.io/cn/2020/03/13/limit-using-this-character/</link>
       <pubDate>Fri, 13 Mar 2020 11:40:57 -0400</pubDate>
       
-      <guid>/cn/2020/03/13/limit-using-this-character/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/03/13/limit-using-this-character/</guid>
       <description>昨天看谢益辉博客中《变态中文》 一文时，浏览到一个留言 提到，能不用“的”这个字就不要用。我深以为然，并开始意识到自己平常对“的”这个字很滥用。故而，在改进自己那篇《你会被科技淘汰吗？》 时，每一个“的”字我都很留意，看看是否可以去掉，结论是70%情况下，都可以去掉。即使原句不可以去掉，改一下句式就好了。</description>
     </item>
     
     <item>
       <title>你会被科技淘汰掉吗？</title>
-      <link>/cn/2020/03/11/influence-of-technology/</link>
+      <link>https://hongtaoh.github.io/cn/2020/03/11/influence-of-technology/</link>
       <pubDate>Wed, 11 Mar 2020 09:53:37 -0400</pubDate>
       
-      <guid>/cn/2020/03/11/influence-of-technology/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/03/11/influence-of-technology/</guid>
       <description>关于科技进步，有一种观点是虽然每次新科技出现，那个时代很多人害怕这种科技有不好影响，但随着时间推移，人们会发现其实这些科技的不好影响并没有那么严重。从电报、录音机、照相机、广播、到电视、个人计算机、互联网，再到现在智能手机、社交媒体、短视频、人工智能，一开始总会有很多人担心这些科技给人们，特别是青少年带来不良影响，但往往随后会看到其实并没有那么可怕。
 我的看法是，对人类整体而言，这些科技的不良影响确实不太可怕。但，这只是对人类整体而言。因为，不管发生什么，至少总会有人可以不被这些科技以不好的方式影响到，那么这批人便可不受影响，继续进步、繁衍。但是，对个人而言，这些科技可能会毁掉一个人，甚至一个家庭。类似物种进化，经过这一劫的人便可存活，而被这些科技淘汰的人，很可能一生碌碌无为。
 不管承认与否，科技对人类的影响不管是从广度还是从深度上讲都越来越大。从广度上来讲，每个人生活都被科技包裹。以中国来说，70、80年代，只有少数人有电视，90年代，有移动电话、个人电脑是少数人。20世纪初，有智能手机也是少数人。但是，现在呢？即使你家庭条件普通，这些科技也都成了必需品。现在小孩子都可以接触到所有这些科技。
@@ -368,20 +368,20 @@ Onstage 一般是作为副词来用的，不过这里 有人提到 onstage 可�
     
     <item>
       <title>R aggregate 求不同组平均数，如何处理缺失值</title>
-      <link>/cn/2020/03/06/r-aggregate-function-na/</link>
+      <link>https://hongtaoh.github.io/cn/2020/03/06/r-aggregate-function-na/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/cn/2020/03/06/r-aggregate-function-na/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/03/06/r-aggregate-function-na/</guid>
       <description>今天碰到的一个问题是，用 aggregate 求不同组平均数的时候，缺失值不好处理。下面通过用 iris 这个经典数据说一下如果处理缺失值。
 iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepal.Length Sepal.Width Petal.Length Petal.Width Species ## 13 4.8 3.0 1.4 0.1 setosa ## 116 6.4 3.2 5.3 2.3 virginica ## 77 6.8 2.8 4.8 1.4 versicolor ## 47 5.1 3.8 1.6 0.2 setosa ## 117 6.5 3.0 5.5 1.8 virginica iris[c(1,5,15,30,45,90,145),4] &amp;lt;- NA #制造缺失值 aggregate(x=iris$Petal.Width, by=list(iris$Species), FUN=mean) ## Group.1 x ## 1 setosa NA ## 2 versicolor NA ## 3 virginica NA aggregate(x=iris$Petal.</description>
     </item>
     
     <item>
       <title>2020年西北大学 MTS 博士项目校园面试 － 经历和体会</title>
-      <link>/cn/2020/03/01/northwestern-compus-visit/</link>
+      <link>https://hongtaoh.github.io/cn/2020/03/01/northwestern-compus-visit/</link>
       <pubDate>Sun, 01 Mar 2020 11:05:47 -0500</pubDate>
       
-      <guid>/cn/2020/03/01/northwestern-compus-visit/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/03/01/northwestern-compus-visit/</guid>
       <description>面试大约三周后，我收到西北的拒信，以下内容我不会修改，但请谨慎阅读。
  收到面试通知 2019年年末申请的西北大学传播学院 (Northwestern School of Communication)的 MTS (Media, Technology, &amp;amp; Society) 项目。2020年1月27日收到了 Aaron Shaw 教授发来的面试通知邮件。之后收到 Madeleine Agaton 发来的具体校园参观和面试的相关信息。
 面试被安排在2月27日到29日。所以，MTS 项目大概在面试之前的一个月发通知。这里需要注意的是，很多学校都是先发录取和候补名单，或者校园参访、面试的邮件，拒信一般要等校园参访结束，或者录取邮件发完后的一两周内才会发。我申请的项目中，密歇根大学 (Information School) 是这样，南加大 (Annenberg School for Communication) 也是这样。因为我在 Gradcafe 上早就看到申请这两个学校的人报录取，但是我等到两周后才收到拒信。我挺理解这些学校的做法，这么做也是为了把学校的损失降到最小。万一被录取的人中，有人在收到录取后立马告诉学校说不会去，那么如果学校是录取、拒信一起发的话，就没办法把发出的拒信再收回来。故而很多学校选择先发录取和候补名单，过一两周之后再发拒信。当然，这是我个人的猜测。
@@ -395,10 +395,10 @@ iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepa
     
     <item>
       <title>只问耕耘，不问收获</title>
-      <link>/cn/2020/02/21/just-do-it/</link>
+      <link>https://hongtaoh.github.io/cn/2020/02/21/just-do-it/</link>
       <pubDate>Fri, 21 Feb 2020 13:38:01 -0500</pubDate>
       
-      <guid>/cn/2020/02/21/just-do-it/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/02/21/just-do-it/</guid>
       <description>最近陆续收到了斯坦福、康奈尔、宾西法尼亚的拒信。自己很受打击。回想起两年前自己的决定，我没有任何的后悔，但是有不甘和伤心。
 两年前，自己还在人大读书的时候，申请了十几个博士项目，最后运气很好，拿到了威斯康星麦迪逊（Comm Arts)、德州奥斯汀 (RTF)、雪城、印第安纳大学的博士录取。出乎所有人预料的是，我最终决定拒掉所有的博士录取。我本来想在家里自学一年，当年 12 月份再重新申请。后来仔细思考后认识到学术研究还是需要一些资源，加上我当时统计连门都没入，闭门造车不太可能写出来会议论文。而且没有国外的硕士学位想申请到美国名校的博士项目，也是难上加难。自己靠运气拿到了这四个博士录取，再申请也许就没有这么好的运气了。
 联系了印第安纳大学，他们说我去读硕士他们也会给我全额助教奖学金，我便答应了。前往前不着村、后不着店的布卢明顿读我的第二个硕士。
@@ -413,10 +413,10 @@ iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式 ## Sepa
     
     <item>
       <title>贝叶斯统计思想入门（二)：概率</title>
-      <link>/cn/2020/02/02/bayesian-stats-chapter4/</link>
+      <link>https://hongtaoh.github.io/cn/2020/02/02/bayesian-stats-chapter4/</link>
       <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/cn/2020/02/02/bayesian-stats-chapter4/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/02/02/bayesian-stats-chapter4/</guid>
       <description>上篇，也就是第二章，k老师主要是简单介绍了一下贝叶斯的方法。第三章是介绍了 r 语言的基本操作，这里不再介绍。从第四章开始，整本书渐渐进入主体，开始涉及贝叶斯的核心。
 第四章开始讲概率 (probability)。概率是用来描述不确定性 (uncertainty) 的。假如我现在抛一枚硬币，掉下来之后有可能是正面朝上，也可能是背面朝上。每当我们讨论一种结果的可能性的时候，我们其实在头脑里想到了所有可能的结果，这些所有可能的结果叫做样本空间 (sample space)。
 如果这个硬币质地良好，那么正面朝上的概率是 50%。如果质地粗糙，那么正面朝上的概率有可能大于50%，也可能小于50%。我们用希腊字母 θ 来表示正面朝上的概率。如果 $\theta = 50\%$ ，那说明硬币质地良好。
@@ -432,10 +432,10 @@ n &amp;lt;- 10000 pheads &amp;lt;- 0.8 flips&amp;lt;-sample (x=c(0,1),prob=c(1-p
     
     <item>
       <title>美国提供全奖的新闻传播硕士项目</title>
-      <link>/cn/2020/02/01/us-communication-ma-programs/</link>
+      <link>https://hongtaoh.github.io/cn/2020/02/01/us-communication-ma-programs/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/cn/2020/02/01/us-communication-ma-programs/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/02/01/us-communication-ma-programs/</guid>
       <description>在美国，新闻传播相关的博士项目一般都是提供全奖的，所以这里不再介绍。每年都有从国内读硕士，然后去美国读博士的，比如现任浙江大学传媒与国际文化学院院长的韦路，人大的潘文静老师。我也认识朋友从国内高校硕士毕业然后收到德州奥斯汀、印第安纳、威斯康星麦迪逊、雪城、天普、科罗拉多波德尔、密歇根州立、加州大学戴维斯分校等学校传播学博士项目全额奖学金的。不过貌似现在越来越难，许多学校会倾向于录取有美国硕士学历的学生，因为国内的传播学和美国的传播学基本不是一个学科。
 注意：以下内容主要是针对以后想读博士、做研究、当教授的朋友，对于想从事新闻、传媒、公共关系、广播电视编导等偏实践项目的朋友，以下内容并不太适合。
 对于家里多金，10万美金不算什么的土豪朋友，也没必要接着往下看了。。
@@ -449,10 +449,10 @@ n &amp;lt;- 10000 pheads &amp;lt;- 0.8 flips&amp;lt;-sample (x=c(0,1),prob=c(1-p
     
     <item>
       <title>Hugo 如何部署到 GitHub Pages</title>
-      <link>/cn/2020/01/22/github-deploy/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/22/github-deploy/</link>
       <pubDate>Wed, 22 Jan 2020 17:04:17 -0500</pubDate>
       
-      <guid>/cn/2020/01/22/github-deploy/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/22/github-deploy/</guid>
       <description>这篇文章太老了，而且很复杂，不太建议大家在参考。我会在之后更新。如果你想部署你的 Hugo 网站，请优先参考我之前那篇 Netlify 部署 的帖子。如果你还是想把网站部署到 GitHub Pages, 我推荐你看这里 。 
 Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，一个是 YOUR-PROJECT&amp;gt; (e.g. blog)，另一个是 &amp;lt;USERNAME&amp;gt;.github.io 。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 public 文件夹。
 这种设置的问题在于，你的博客更新的可能不仅仅是内容，掌管着网页格式的 layout 文件以及 css 文件也可能会更新。如果你需要让别人看到你的网页格式源代码，即，你的 layout 文件以及 css 文件，那么你每次更新的时候，不仅需要更新 &amp;lt;USERNAME&amp;gt;.github.io ，还需要更新 YOUR-PROJECT&amp;gt; (e.g. blog)。这一点，那篇教程 也提到了：
@@ -461,24 +461,11 @@ Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，�
     </item>
     
     <item>
-      <title>Hugo 如何代码高亮</title>
-      <link>/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/</link>
-      <pubDate>Tue, 21 Jan 2020 12:22:37 -0500</pubDate>
-      
-      <guid>/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/</guid>
-      <description>Hugo 目前自带代码高亮功能，官网的说明 列出如下的设置选项 （以 toml 格式为例）：
-[markup] [markup.highlight] codeFences = true guessSyntax = false hl_Lines = &amp;#34;&amp;#34; lineNoStart = 1 lineNos = false lineNumbersInTable = true noClasses = true style = &amp;#34;monokai&amp;#34; tabWidth = 4 大家可以试一下具体每个设置的功能，我这里主要讲一下 style 的设置，因为这个不是一个布尔值，而是需要输入具体内容。
-Hugo 的代码高亮功能是由 chroma 提供的。
-上面的代码是设置的 &amp;ldquo;monokai&amp;rdquo;，你当然可以用别的样式，可以在这里 选。
-如果你需要高亮代码块的某一行或者某几行，可以参考这里 或者这里 。</description>
-    </item>
-    
-    <item>
       <title>Hugo 如何实现脚注</title>
-      <link>/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</link>
       <pubDate>Tue, 21 Jan 2020 12:22:37 -0500</pubDate>
       
-      <guid>/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</guid>
       <description>Hugo 从 v0.60.0 开始，Markdown 解析器不再使用 Blackfriday , 改用由 yuin 1 编写的 goldmark 。
 这次变动我目前感觉比较明显的是：
 blackfriday 支持 自动计数 形式的脚注。所谓自动计数，就是说，你可以在文本后直接跟脚注的具体内容，比如
@@ -491,20 +478,20 @@ blackfriday 支持 自动计数 形式的脚注。所谓自动计数，就是说
     
     <item>
       <title>Hugo 如何使用思源宋体</title>
-      <link>/cn/2020/01/19/hugo-google-noto-serif-sc/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</link>
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/cn/2020/01/19/hugo-google-noto-serif-sc/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/19/hugo-google-noto-serif-sc/</guid>
       <description>先给自己填一个坑。 主要参考：
  Indev. Journal  Reuixiy  Another random blog   </description>
     </item>
     
     <item>
       <title>中美自黑文化的差异</title>
-      <link>/cn/2020/01/18/underbrag-cn-and-usa/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/18/underbrag-cn-and-usa/</link>
       <pubDate>Sat, 18 Jan 2020 11:19:33 -0500</pubDate>
       
-      <guid>/cn/2020/01/18/underbrag-cn-and-usa/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/18/underbrag-cn-and-usa/</guid>
       <description>前几天，在 John Kruschke 老师的 一门统计课 上，他讲到他去德国参观哥廷根的高斯故居。他说他到达故居时是晚上，周围一个人都没有，但是他又想去进去看看。他便推开门走了进去。
 他对我们说，如果里面有人，他就会跟那个人说 “Hey, I am just a stupid American having a look here^[原话记不清，大意是这个意思]”。 大意就是“嘿，我就是个傻不愣登的美国人，进来看看”。当然，整个班都笑了。
 我笑过之后，就想，一个中国老师敢这么自黑吗？试想一下，一个中国老师，课上说道，去高斯故居，然后打算在里面有人的时候，说，“Hey, I am just a stupid Chinese having a look here” （嘿，我就是个傻不愣登的中国人，想进来看看) 。我估计底下的中国学生不仅不会笑，而且会认为这个老师看不起自己的中国人身份。
@@ -517,10 +504,10 @@ blackfriday 支持 自动计数 形式的脚注。所谓自动计数，就是说
     
     <item>
       <title>贝叶斯统计思想入门（一)：概述</title>
-      <link>/cn/2020/01/18/bayesian-stats-chapter2/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/18/bayesian-stats-chapter2/</link>
       <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/cn/2020/01/18/bayesian-stats-chapter2/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/18/bayesian-stats-chapter2/</guid>
       <description>前言：这篇文章是我上约翰.克鲁斯克老师 (John Kruschke ) 的《贝叶斯数据分析》 (P533: Bayesian Data Analysis ) 这门课时，在课下看他的教材 Doing Bayesian Data Analysis (Second Edition)  所做的笔记。
 贝叶斯的本质是对于可能性1(credibility) 的重置 (reallocation)。比如，早上刚出家门，你看到门前地面是湿的。这个有很多种可能的原因：下雨了、小孩子撒尿了、环卫工人刚打扫了、物业洒水车刚洒了水、有人不小心把水杯里的水洒出来了、外星人来过自己的家然后离开的时候不小心留下的痕迹&amp;hellip;这些所有的可能，在我们获得进一步数据之前，都有着自己的先验概率 (prior probability)。这些先验概率，是我们主观上认为的可能性，比如根据我们往常的生活经验，下雨的可能性要比外星人到访高的多。虽然高得多，我们获得的信息毕竟是有限的，因为我们只是观察了门前的一小块地。因此，这些可能性都是存在的。
 然后，我们接着在路上走，发现不仅整条路都是湿的，而且房屋顶都是湿的，那么我们对概率进行重置：下雨的可能性进步一提升，而之前有可能的洒水车洒过水的可能性下降，因为洒水车不可能把水洒到房顶上。
@@ -533,10 +520,10 @@ Kruschke 老师的教材中的图2.1 对这一过程进行了进一步阐释。�
     
     <item>
       <title>最令我难忘的三天, 记 2017年瑞士圣加仑论坛参会</title>
-      <link>/cn/2020/01/17/2017-st.gallen-memory/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/17/2017-st.gallen-memory/</link>
       <pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/cn/2020/01/17/2017-st.gallen-memory/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/17/2017-st.gallen-memory/</guid>
       <description>参会结束之后，在茵特拉肯的一个青年旅舍阳台上   我从来没想到，我会有机会到瑞士！而且去了两次！
 时间猛然回到2017年．．．
 缘起 我和圣加仑论坛的缘分源于2016年底在人大研究生院官网上看到的一则通知。原文链接已经找不到了，不过我在人大财政金融学院找到了一份差不多的，在这里 。
@@ -567,10 +554,10 @@ Kruschke 老师的教材中的图2.1 对这一过程进行了进一步阐释。�
     
     <item>
       <title>第一届“外研社杯”英语阅读大赛获奖感悟及备赛经历</title>
-      <link>/cn/2020/01/06/fltrp-reading-contest/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/06/fltrp-reading-contest/</link>
       <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/cn/2020/01/06/fltrp-reading-contest/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/06/fltrp-reading-contest/</guid>
       <description>  获奖时刻   激动的一刻 在说备赛经验之前，请容我先分享一下至今难忘的一段经历：
 比赛结果出来前一天，我总有预感自己会得到季军。晚上还梦到了。
 第二天，我正在观看演讲比赛，一个电话打过来。
@@ -605,10 +592,10 @@ Kruschke 老师的教材中的图2.1 对这一过程进行了进一步阐释。�
     
     <item>
       <title>如何将 Hugo 部署到 Netlify</title>
-      <link>/cn/2020/01/04/hugo-netlify/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/cn/2020/01/04/hugo-netlify/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify/</guid>
       <description>首先，什么是部署？为什么要部署？
 其实，准确的说，我们要做的是先把我们在本地的 hugo 文件夹托管到 github，这是第一步。第二步将 hugo 文件夹中的 public 文件夹与 netlify 连接起来，这样 public 文件夹里的内容就变成了我们想要的网站。
 我们部署网站的目的就是让本地的内容可以送达互联网，这样别人才能看到我们创作的内容。
