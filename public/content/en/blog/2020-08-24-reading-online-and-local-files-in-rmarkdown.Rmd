@@ -1,0 +1,81 @@
+---
+title: How to read Local or Online Files in Rmarkdown, Bookdown, and Blogdown
+author: Hongtao Hao
+date: '2020-08-24'
+slug: reading-online-and-local-files-in-rmarkdown
+categories: []
+tags: []
+output:
+  blogdown::html_page:
+    toc: yes
+---
+******
+[Here](https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/) is a tutorial on how to read local data files in Rmarkdown. I found it very helpful. Nonetheless, I decided to write on this topic again myself because that post is a bit more complicated than it should be. 
+
+We can read data files from two sources: **online**, or **local**. 
+
+# Reading Online Files
+
+Reading online files is easy:
+
+```{r warning=FALSE, message=FALSE}
+library(readr)
+```
+
+```{r warning=FALSE, message=FALSE, eval=FALSE}
+hello  <- read_csv("https://hongtaoh.com/files/HGN.csv")
+```
+
+# Reading Local Files
+
+To read local files in Rmarkdown, you can either specify the exact paths, or use the package of `here`. One thing worth noticing is that `R` can read any local files, either they are in the same root directory as your `Rmarkdown` file or not, as long as you correctly specify the exact paths. However, if you use the package of `here`, the data files to be read must be in the same directory as your `Rmarkdown` file. 
+
+## Files in a different directory
+
+No matter where your **local** data file is located, you can simply specify its full path, and it should always work:
+
+```{r eval=FALSE}
+hello <- read_csv("/full/path/to/your/file/filename.csv")
+```
+
+Note that the file does not have to be in a `csv` format. It can be an `Excel` or anything that `R` can read. 
+
+How to find a file's full path then?
+
+I assume you are using a Mac: Right click the data file, click on `Get Info`, and then you can find it in `Where`. Simply copy and past that path. Don't forget to add the forename to the end. For example, if you have a data file called `filename.csv`, the path you can find in `Where` is only `/full/path/to/your/file/`, you should add `filename.csv` to the end by yourself. 
+
+## Files in a the same directory
+
+### Relative path WITHOUT using `here`
+
+I tried the `../../` method mentioned in the [blog post above](https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/) but it simply gave me an Error, at least on Blogdown. 
+
+For example, suppose you have a folder named `Project` on your `Desktop`, and the location of your data file relative to your `Blogdown` project or `Rmd` is this:
+
+```{bash eval=FALSE}
+|____Folder_1
+|____Folder_2
+|____Static
+| |____Data
+| | |____YourData.csv
+|____YourBlogdownProj.RProj
+```
+
+Then using `AGoodName <- read_csv( "../../Static/Data/YourData.csv")` won't work the way [the blog post](https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/) mentioned.
+
+Then how to solve this problem?
+
+- Simply use the full path using the method I gave above: `/Users/YourMacUserName/Desktop/Project/Static/Data/YourData.csv`
+
+- Use the `here` package, if you are lazy. 
+
+### Relative path using `here`
+
+Simply use this:
+
+```{r eval=FALSE}
+library(here)
+AGoodNmae <- read_csv(here("Static", "Data", "YourData.csv"))
+```
+
+You can find more information about the `here` package from the [blog post](https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/) or [this thread](https://community.rstudio.com/t/how-to-correctly-specify-relative-path/9612).
