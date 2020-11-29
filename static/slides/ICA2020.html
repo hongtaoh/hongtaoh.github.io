@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>ICA 2020</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Hongtao Hao" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/shinobi.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# ICA 2020
+## Information Systems
+### Hongtao Hao
+### Indiana University
+### Scheduled: 2020/05/24
+
+---
+
+background-image: url(https://media.giphy.com/media/99ELNpJwUPzEs/giphy.gif)
+background-size: 40%
+background-position: 50% 60%
+
+# Cross-Cultural Comparisons of "Selfie"-Presentation: A Content Analysis
+
+---
+# Do women's selfies differ between cultures?
+
+Selfies are popular worldwide&lt;sup&gt;1&lt;/sup&gt; but few studies have analyzed selfies from a cross-cultural perspective. 
+
+This study compares Caucasian/White women’s selfies on Twitter, and Chinese
+women’s selfies on Weibo.
+
+.pull-left[
+&lt;img src="https://media.giphy.com/media/SMKiEh9WDO6ze/giphy.gif" width=50%&gt;
+]
+
+.pull-right[
+&lt;img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Sina_Weibo.svg/150px-Sina_Weibo.svg.png"&gt;
+]
+
+.footnote[
+
+[1] Tifentale, 2015 
+]
+---
+# Data
+
+## Twitter
+1. Sample size: 250 selfies 
+
+2. Sampling frame: 26,733 images from Twitter hashtaged with #selfie or #selfies, posted between Dec 31, 2017 to Jan. 1, 2019
+
+3. Data collection: [OSoMe’s Enhanced Access API](https://iuni.iu.edu/resources/datasets/osome/enhanced-data-twitter) 
+
+
+.pull-right[
+## Weibo
+1. Sample size: 250 selfies 
+
+2. Sampling frame: 8,866 images from Weibo hashtaged with #自拍, posted between Dec 31, 2017 to Jan. 1, 2019
+
+3. Data collection: [Advanced Search on Weibo.com](https://s.weibo.com/)
+]
+---
+# Measurements
+
+1. Shot size: head shot, body shot
+
+2. Mirror selfie: Yes, No
+
+3. Body exposure 
+ 
+   - Cleavage: visible, not visible but with contour, not visible and no contour
+   
+   - Midriff: completely visible, slighly visible, not visiable
+   
+   - Buttock: same as above
+   
+   - Thigh: same as above
+   
+4. Sexual suggestiveness
+
+   - Hair display: extremely suggestive, slightly suggestive, not suggestive
+   
+   - Self-touching: same as above
+   
+   - Pose: sexually suggestive, not suggestive
+
+5. Cuteness: seven levels (for details, see the [paper](https://hongtaoh.com/files/cross_cultural.pdf))
+
+---
+# Coders
+
+- Two coders (Chinese male)
+
+- 20 hours of training before Intercoder reliability (ICR) calculation
+ 
+- Initial ICR and final ICR for all previously mentioned variables are above .75
+
+---
+background-image: url(/media/ica2020/11.png)
+background-size: 100%
+background-position: 50% 50%
+# Results
+
+---
+background-image: url(/media/ica2020/22.png)
+background-size: 100%
+background-position: 50% 50%
+# Results
+
+---
+background-image: url(/media/ica2020/33.png)
+background-size: 100%
+background-position: 50% 50%
+# Results
+
+---
+background-image: url(/media/ica2020/44.png)
+background-size: 100%
+background-position: 50% 50%
+# Results
+
+---
+# Discussions
+
+1. White women post more body-shot selfies than Chinese women.
+
+2. White women **did not** post more mirror selfies than Chinese women. 
+
+3. For White women alone, they post significantly more **headshot** selfies than body-shot selfies.
+
+4. White women on Twitter exhibited a higher level of body exposure only in terms of **cleavage**.
+
+5. White women exhibited a significantly higher level of sexual suggestiveness through hair display and posing. Chinese women showed a significantly higher degree of sexual suggestiveness through self-touching.
+
+6. In selfies, Chinese women **did not** score higher on cuteness than White women.
+
+---
+class: inverse, center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+Slides source codes can be found  [**here**](https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/slides/ICA2020.Rmd).
+
+.pull-left[
+To access the slides, scan the QR code below:
+
+&lt;img src="/media/ica2020/ICA2020_QR.svg" width=50%&gt;
+]
+
+.pull-right[
+To access the paper, scan the QR code below:
+
+&lt;img src="/media/ica2020/cross-cultural-pdf.svg" width=50%&gt;
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

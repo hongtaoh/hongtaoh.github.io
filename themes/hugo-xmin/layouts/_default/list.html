@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+{{ $name := .Data.Plural -}}
+{{ if eq $name "tags" -}}
+<h1>{{ .Title | markdownify }}</h1>
+{{ end }}
+
+<main class = "content" role="main">
+
+<div class="list-page">
+{{ .Content }}
+
+
+{{if not .IsHome}}
+<ul>
+  {{ $pages := .Pages }}
+  <!--{{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}-->
+  {{ range (where $pages "Section" "!=" "") }}
+  <p>
+  <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+  </p>
+  {{ end }}
+</ul>
+{{ end }}
+</div>
+</main>
+
+{{ partial "footer.html" . }} 
