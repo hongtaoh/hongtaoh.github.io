@@ -226,7 +226,6 @@ width:100%;
   background-color: gray;
 }
 
-
 .title {
   font-size: 1.1em; }
 
@@ -238,20 +237,19 @@ width:100%;
   color: #222;
 }
 
-/*defining the style of the horizontal rule above footer text */
+/*defining the style of the horizontal rule above footer text 
 .footer-hr {
   border-top: 0.1em solid;
-  color: #000;/*#ddd*/
+  color: #000;
   max-width: 1024px;
 }
 
-/* to list the footer text */
+/* to list the footer text 
 .footer-text {
   text-align: center;
-  margin-top: -1.2em;
   font-size: 19px;
 }
-
+*/
 
 pre {
   border: 1px solid #cccccc; 

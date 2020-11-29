@@ -5,8 +5,7 @@ date: '2020-01-04'
 slug: hugo-netlify-deploy
 toc: true
 aliases:
-    - /cn/blog/2020-01-04-hugo-netlify-deployment/
-    - /cn/code/2020-01-04-hugo-netlify-deployment/
+    - /cn/2020-01-04-hugo-netlify-deployment/
 ---
 
 首先，什么是部署？为什么要部署？

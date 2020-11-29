@@ -945,10 +945,10 @@ I chose the second method, which is called &amp;ldquo;Tarball&amp;rdquo; in Hugo
     
     <item>
       <title>Hugo 如何部署到 GitHub Pages</title>
-      <link>https://hongtaoh.github.io/cn/2020/01/22/github-deploy/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/22/hugo-github-deploy/</link>
       <pubDate>Wed, 22 Jan 2020 17:04:17 -0500</pubDate>
       
-      <guid>https://hongtaoh.github.io/cn/2020/01/22/github-deploy/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/22/hugo-github-deploy/</guid>
       <description>这篇文章太老了，而且很复杂，不太建议大家在参考。我会在之后更新。如果你想部署你的 Hugo 网站，请优先参考我之前那篇 Netlify 部署 的帖子。如果你还是想把网站部署到 GitHub Pages, 我推荐你看这里 。 
 Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，一个是 YOUR-PROJECT&amp;gt; (e.g. blog)，另一个是 &amp;lt;USERNAME&amp;gt;.github.io 。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 public 文件夹。
 这种设置的问题在于，你的博客更新的可能不仅仅是内容，掌管着网页格式的 layout 文件以及 css 文件也可能会更新。如果你需要让别人看到你的网页格式源代码，即，你的 layout 文件以及 css 文件，那么你每次更新的时候，不仅需要更新 &amp;lt;USERNAME&amp;gt;.github.io ，还需要更新 YOUR-PROJECT&amp;gt; (e.g. blog)。这一点，那篇教程 也提到了：
@@ -1088,10 +1088,10 @@ Kruschke 老师的教材中的图2.1 对这一过程进行了进一步阐释。�
     
     <item>
       <title>如何将 Hugo 部署到 Netlify</title>
-      <link>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify/</link>
+      <link>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deploy/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify/</guid>
+      <guid>https://hongtaoh.github.io/cn/2020/01/04/hugo-netlify-deploy/</guid>
       <description>首先，什么是部署？为什么要部署？
 其实，准确的说，我们要做的是先把我们在本地的 hugo 文件夹托管到 github，这是第一步。第二步将 hugo 文件夹中的 public 文件夹与 netlify 连接起来，这样 public 文件夹里的内容就变成了我们想要的网站。
 我们部署网站的目的就是让本地的内容可以送达互联网，这样别人才能看到我们创作的内容。
