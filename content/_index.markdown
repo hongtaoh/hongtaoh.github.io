@@ -9,7 +9,6 @@ I graduated with a Master's degree in Media Arts and Sciences from [the Media Sc
 
 <!-- Quick link &nbsp;: &nbsp; [My projects](/en/vitae/#projects) -->
 
-
 <!-- I am a fan of [_The Three-Body Problem_](https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)). The most memorable experience I had is attending the 47th [St.Gallen Symposium](https://en.wikipedia.org/wiki/St._Gallen_Symposium) in 2017. -->
 
 <!--
