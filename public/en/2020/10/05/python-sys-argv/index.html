@@ -1,0 +1,188 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What is sys.argv in Python and How to Use It - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hongtaoh.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/vitae/">Vitae</a></li>
+       
+       <li><a href="/en/projects/">Projects</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/en/apad/">APAD</a></li>
+       
+       <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">What is sys.argv in Python and How to Use It</h1>
+
+<p>Hongtao Hao 
+ / 2020-10-05 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-10-05-python-sys-argv.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+
+
+<div class="body-text list-text">
+<p>While I was updating the data for <a href="https://github.com/yy/" target="_blank" rel="noreferrer noopener">Professor YY</a>
+
+&lsquo;s <a href="https://github.com/covid19-data/covid19-data" target="_blank" rel="noreferrer noopener">COVID19-data project</a>
+
+, I noticed some lines of codes containing <code>sys.argv</code>. I didn&rsquo;t understand it in the begining, nor was I sure how to use it. I understood it later. This post is to explain what <code>sys.argv</code> is and how to use it.</p>
+<p>Python <code>sys.argv</code> is essentially a variable from the <a href="%28https://docs.python.org/3/library/sys.html%29"><code>sys</code></a>
+
+ module. This variable contains arguments that are to be passed to the python script you are calling in the command line<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>I&rsquo;ll explain by example.</p>
+<p>First, take a look at <a href="https://github.com/hongtaoh/covid19-data/blob/master/scripts/nyt_state_data.py" target="_blank" rel="noreferrer noopener"><code>nyt_state_data.py</code></a>
+
+. It has three <code>sys.argv</code> variables:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">NYT_STATE_DATA <span style="color:#666">=</span> sys<span style="color:#666">.</span>argv[<span style="color:#666">1</span>]
+USA_STATE_CODE_DATA <span style="color:#666">=</span> sys<span style="color:#666">.</span>argv[<span style="color:#666">2</span>]
+OUT_FNAME <span style="color:#666">=</span> sys<span style="color:#666">.</span>argv[<span style="color:#666">3</span>]
+</code></pre></div><p>By default, <code>sys.argv[0]</code> is the script name.</p>
+<p>Take a closer look at <a href="https://github.com/hongtaoh/covid19-data/blob/master/scripts/nyt_state_data.py" target="_blank" rel="noreferrer noopener"><code>nyt_state_data.py</code></a>
+
+, and you&rsquo;ll find that the first two <code>sys.argv</code> variables are <code>CSV</code> files to be read by <code>pandas</code> and the last one is a string or file location for the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html" target="_blank" rel="noreferrer noopener"><code>pandas.DataFrame.to_csv</code></a>
+
+ function.</p>
+<p>Let&rsquo;s say I have this <a href="https://github.com/hongtaoh/covid19-data/blob/master/scripts/nyt_state_data.py" target="_blank" rel="noreferrer noopener">nyt_state_data.py</a>
+
+ locally. The location is <code>Desktop/Covid19-data/scripts/nyt_state_data.py</code>.</p>
+<p>In terminal, I&rsquo;ll call this script first, followed by three arguments passed to this script:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python Desktop/covid19-data/scripts/nyt_state_data.py https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv https://raw.githubusercontent.com/hongtaoh/covid19-data/master/data_sources/wikipedia/ISO3166/usa_state_code.csv Desktop/covid19-data/output/cases/cases_us_states_nyt_UP_TO_<span style="color:#008000;font-weight:bold">$(</span>date -v -1d <span style="color:#ba2121">&#39;+%d_%B_%Y&#39;</span><span style="color:#008000;font-weight:bold">)</span>.csv
+</code></pre></div><p>The date setting is based on These two sources: <a href="https://www.howtogeek.com/410442/how-to-display-the-date-and-time-in-the-linux-terminal-and-use-it-in-bash-scripts/" target="_blank" rel="noreferrer noopener">1</a>
+
+, <a href="https://apple.stackexchange.com/a/115836" target="_blank" rel="noreferrer noopener">2</a>
+
+</p>
+<p>I know above code is very messay since the URLs of the two CSV files are pretty long. I&rsquo;ll demystify it this way:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python YourScript.py Arg1 Arg2 Arg3
+</code></pre></div><p>Arguments for <code>sys</code> are separated by space.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>My explanation is based on <a href="https://kerneldev.com/command-line-arguments-using-python-sys-argv-part-1/" target="_blank" rel="noreferrer noopener">sys.argv - Command Line Arguments in Python [Part 1]</a>
+
+ by <a href="https://github.com/SapneshNaik" target="_blank" rel="noreferrer noopener">Sapnesh Naik</a>
+
+. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+<p style="color:#777;">Last modified on 2020-10-06</p>
+
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="/media/blogdown.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> Content in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+          
+     </ul>
+</footer>
+
+
+
+
+

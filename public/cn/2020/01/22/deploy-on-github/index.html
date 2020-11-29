@@ -1,0 +1,500 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hugo 如何部署到 Github Pages - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hongtaoh.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/cn/">中文首页</a></li>
+       
+       <li><a href="/cn/blog/">日志</a></li>
+       
+       <li><a href="/">English</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">Hugo 如何部署到 Github Pages</h1>
+
+<p>郝鸿涛 
+ / 2020-01-22 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/codes/2020-01-22-deploy-on-github.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="编辑本页"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+<aside class="toc">
+Table of Contents:
+<nav id="TableOfContents">
+  <ol>
+    <li><a href="#新建-usernamegithubio--仓库并将本地仓库上传">新建 <code>&lt;USERNAME&gt;.github.io </code> 仓库并将本地仓库上传</a></li>
+    <li><a href="#建立-sources-分支">建立 sources 分支</a></li>
+    <li><a href="#将-public-文件夹放到-master-分支">将 <code>public</code> 文件夹放到 master 分支</a></li>
+    <li><a href="#日常更新">日常更新</a></li>
+    <li><a href="#自定义域名">自定义域名</a></li>
+    <li><a href="#注意事项">注意事项</a></li>
+  </ol>
+</nav>
+</aside>
+
+
+
+
+<div class="body-text list-text">
+<p>正好自己要重新做一遍，我便在这里把步骤记录下来。</p>
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages" target="_blank" rel="noreferrer noopener">Hugo官网上的那篇教程</a>
+
+ 有个问题是，你需要两个 Github 仓库，一个是 <code>YOUR-PROJECT&gt; (e.g. blog)</code>，另一个是 <code>&lt;USERNAME&gt;.github.io </code>。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 <code>public</code> 文件夹。</p>
+<p>这种设置的问题在于，你的博客更新的可能不仅仅是内容，掌管着网页格式的 <code>layout</code> 文件以及 <code>css</code> 文件也可能会更新。如果你需要让别人看到你的网页格式源代码，即，你的 <code>layout</code> 文件以及 <code>css</code> 文件，那么你每次更新的时候，不仅需要更新 <code>&lt;USERNAME&gt;.github.io </code>，还需要更新 <code>YOUR-PROJECT&gt; (e.g. blog)</code>。这一点，<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages" target="_blank" rel="noreferrer noopener">那篇教程</a>
+
+ 也提到了：</p>
+<blockquote>
+<p>You can then run ./deploy.sh &ldquo;Your optional commit message&rdquo; to send changes to <USERNAME>.github.io. Note that you likely will want to commit changes to your <YOUR-PROJECT> repository as well.</p>
+</blockquote>
+<p>我在 <a href="https://amber.rbind.io/" target="_blank" rel="noreferrer noopener">Amber Thomas</a>
+
+ 的 <a href="https://amber.rbind.io/2016/12/19/website/" target="_blank" rel="noreferrer noopener">这篇帖子</a>
+
+ 找到了解决办法：在 <code>&lt;USERNAME&gt;.github.io </code> 仓库中建两个分支 (brance): sources 和 master。其中 sources 放 Hugo 文件夹所有内容，master 只放 <code>public</code> 文件夹内容。</p>
+<p>Amber 帖子中提到的方法是由 <a href="https://www.hjdskes.nl/blog/deploying-hugo-on-personal-gh-pages/index.html" target="_blank" rel="noreferrer noopener">Jente Hidskes</a>
+
+ 首次提出来的，Jente 之后对他原本的方法作出了<a href="https://www.hjdskes.nl/blog/update-deploying-hugo-on-personal-gh-pages/index.html" target="_blank" rel="noreferrer noopener">更新</a>
+
+。以下的教程参考全程参考这三篇帖子，也参考 Hugo 那篇教程。</p>
+<p>⚠ 以下内容以苹果电脑为例子，使用 Windows 的朋友可以作为参考，但我不保证结果正确。</p>
+<h1 id="新建-usernamegithubio--仓库并将本地仓库上传">新建 <code>&lt;USERNAME&gt;.github.io </code> 仓库并将本地仓库上传<a href="#新建-usernamegithubio--仓库并将本地仓库上传" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>首先，我假设你已经用了一个本地 Hugo 文件夹，网站建设已经基本完成，运行 <code>hugo server -D</code>，打开 <a href="http://localhost:1313" target="_blank" rel="noreferrer noopener">http://localhost:1313</a>
+
+ 后网页显示一切正常。如果这些还没弄好，请先把网站在本地建设好之后再考虑部署到网上。</p>
+<p>注意⚠：</p>
+<ul>
+<li>在进行下面的步骤之前，你最好先把 hugo 文件夹中的 <code>public</code> 和 <code>resources</code>这两个文件夹删除。如果你里面有 README.md 的话，请先拿出来。</li>
+<li>从现在开始，不要手动往 hugo 本地文件夹里添加任何东西，不然以下的代码会出错。</li>
+</ul>
+<p>打开 Github, 新建一个仓库。仓库名称为 你的 Github 用户名.github.io。比如，我的 Github 用户名为 hhao1992, 我需要在 Repository name 这里输入：hhao1992.github.io。Description 这里写入自己以及别人可以理解的描述即可。然后选择 Public。随后的 Initialize this repository with a README ，暂时不要选。全部设置好之后，点击 Create repository 。设置如下图：</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/gitpage/new-repo-setting.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/gitpage/new-repo-setting.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>新建仓库设置</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>然后，你需要点击如下页面中右侧的那个按钮，复制这个仓库的地址</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/gitpage/copy-address.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/gitpage/copy-address.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>复制仓库地址</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>然后，我们需要将本地的 Hugo 文件夹上传到 Github，这样，本地文件夹和 Github 上的远程文件夹便建立了连接。随后我们只需要在本地文件夹进行修改，然后把变动上传到 Github 这个远程文件夹，网站内容也会随之更新。</p>
+<p>如何将本地文件夹上传到 Github 呢？首先，你需要<strong>在Terminal 中 cd 到你的 Hugo 本地文件夹</strong>，比如我的：<code>cd Desktop/hugo</code>，然后我们用到如下代码：</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">echo</span> <span style="color:#ba2121">&#34;# hhao1992.github.io&#34;</span> &gt;&gt; README.md  
+<span style="color:#408080;font-style:italic"># 请注意，hhao1992.github.io 中，hhao1992请换成自己的 Github 用户名</span>
+git init
+git add README.md
+git add .
+git commit -m <span style="color:#ba2121">&#34;first commit&#34;</span>
+git remote add origin https://github.com/hhao1992/hhao1992.github.io.git <span style="color:#408080;font-style:italic"># 同样，请换成自己的仓库地址</span>
+git push -u origin master
+</code></pre></div><p>其实这也就是刚刚创建的这个仓库底下 Github 提供的代码：</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/gitpage/first-code.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/gitpage/first-code.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>本地仓库上传到 Github</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<h1 id="建立-sources-分支">建立 sources 分支<a href="#建立-sources-分支" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>第二步，我们需要回到 Github, 建立一个 sources<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 分支。</p>
+<p>回到我们刚才创建的仓库，刷新一下页面。你会看到在 1 commit 底下有一个关于 Branch 的选择，如下图：</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/gitpage/branch.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/gitpage/branch.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>仓库分支</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>点击 Branch: master ，然后在出现的文本框中输入 <code>sources</code>，或者别的你自己喜欢的名字，并点击随后出现的 &ldquo;Create branch:sources from &lsquo;master&rsquo;&quot;。</p>
+<p>现在，在 1 commit 右边，应该是显示 &ldquo;2 branches&rdquo;，点击这个 &ldquo;2 branches&rdquo;。在 &ldquo;Default branch&rdquo; 这里，点击 &ldquo;Change defualt branch&rdquo;。在随后出现的页面中，点击 master 那里的下拉框，然后选择 sources，然后点击右边的 Update。如果你顺着这篇教程走，刚才没有在 master 分支新加入任何文件的话，点击 &ldquo;I understand, update the default branch&rdquo;。</p>
+<p>然后，输入：</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch
+git checkout sources
+</code></pre></div><p>输入完之后，记得点一下回车键，这样最后一行才会被执行，以下的代码也一样。</p>
+<h1 id="将-public-文件夹放到-master-分支">将 <code>public</code> 文件夹放到 master 分支<a href="#将-public-文件夹放到-master-分支" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>紧接着，在 Terminal 中输入以下代码。输入完之后，先稍等一会儿，让程序运行一下，停止之后，再点击一下回车键，以运行最后一行代码：</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#408080;font-style:italic"># 注意⚠：此部分的代码块只可运行一次！</span>
+<span style="color:#408080;font-style:italic">#!/usr/bin/env bash</span>
+<span style="color:#408080;font-style:italic"># This script does the required work to set up your personal GitHub Pages</span>
+<span style="color:#408080;font-style:italic"># repository for deployment using Hugo. Run this script only once -- when the</span>
+<span style="color:#408080;font-style:italic"># setup has been done, run the `deploy.sh` script to deploy changes and update</span>
+<span style="color:#408080;font-style:italic"># your website. See</span>
+<span style="color:#408080;font-style:italic"># https://hjdskes.github.io/blog/deploying-hugo-on-personal-github-pages/index.html</span>
+<span style="color:#408080;font-style:italic"># for more information.</span>
+<span style="color:#19177c">USERNAME</span><span style="color:#666">=</span>hhao1992 <span style="color:#408080;font-style:italic"># ⚠：请换成自己的 Github 用户名</span>
+<span style="color:#19177c">SOURCE</span><span style="color:#666">=</span>sources <span style="color:#408080;font-style:italic"># ⚠：如果你在上面的一步用的 不是 ‘sources’ 这个名字，记得换成你自己的，其他的不用变</span>
+msg<span style="color:#666">()</span> <span style="color:#666">{</span>
+    <span style="color:#008000">printf</span> <span style="color:#ba2121">&#34;\033[1;32m :: %s\n\033[0m&#34;</span> <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$1</span><span style="color:#ba2121">&#34;</span>
+<span style="color:#666">}</span>
+msg <span style="color:#ba2121">&#34;Adding a README.md file to \&#39;</span><span style="color:#19177c">$SOURCE</span><span style="color:#ba2121">\&#39; branch&#34;</span>
+touch README.md
+msg <span style="color:#ba2121">&#34;Deleting the \`master\` branch&#34;</span>
+git branch -D master
+git push origin --delete master
+msg <span style="color:#ba2121">&#34;Creating an empty, orphaned \`master\` branch&#34;</span>
+git checkout --orphan master
+git rm --cached <span style="color:#008000;font-weight:bold">$(</span>git ls-files<span style="color:#008000;font-weight:bold">)</span>
+msg <span style="color:#ba2121">&#34;Grabbing one file from the \`</span><span style="color:#19177c">$SOURCE</span><span style="color:#ba2121">\` branch so that a commit can be made&#34;</span>
+git checkout <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$SOURCE</span><span style="color:#ba2121">&#34;</span> README.md
+git commit -m <span style="color:#ba2121">&#34;Initial commit on master branch&#34;</span>
+git push origin master
+msg <span style="color:#ba2121">&#34;Returning to the \`</span><span style="color:#19177c">$SOURCE</span><span style="color:#ba2121">\` branch&#34;</span>
+git checkout -f <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$SOURCE</span><span style="color:#ba2121">&#34;</span>
+msg <span style="color:#ba2121">&#34;Removing the \`public\` folder to make room for the \`master\` subtree&#34;</span>
+rm -rf public
+git add -u
+git commit -m <span style="color:#ba2121">&#34;Remove stale public folder&#34;</span>
+msg <span style="color:#ba2121">&#34;Adding the new \`master\` branch as a subtree&#34;</span>
+git subtree add --prefix<span style="color:#666">=</span>public <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master --squash
+msg <span style="color:#ba2121">&#34;Pulling down the just committed file to help avoid merge conflicts&#34;</span>
+git subtree pull --prefix<span style="color:#666">=</span>public <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master
+</code></pre></div><p>如果 Terminal 中出现 <code>fatal: refusing to merge unrelated histories</code> 这样的错误，请接着在 Terminal 中输入：</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git subtree pull --prefix<span style="color:#666">=</span>public <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master --squash
+</code></pre></div><p>这个方法是在 <a href="https://hisoka0917.github.io/git/2018/04/23/add-exist-repo-as-subtree/" target="_blank" rel="noreferrer noopener">Hisoka Blog</a>
+
+ 看到的。感谢原作者。</p>
+<p>随后，在 Terminal 中输入</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+</code></pre></div><p>我输入完之后 Terminal 出现如下内容：</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#666">(</span>base<span style="color:#666">)</span> 149-160-181-57:hugo Tal$ git status
+On branch sources
+Your branch is up to date with <span style="color:#ba2121">&#39;origin/sources&#39;</span>.
+
+Changes not staged <span style="color:#008000;font-weight:bold">for</span> commit:
+  <span style="color:#666">(</span>use <span style="color:#ba2121">&#34;git add/rm &lt;file&gt;...&#34;</span> to update what will be committed<span style="color:#666">)</span>
+  <span style="color:#666">(</span>use <span style="color:#ba2121">&#34;git restore &lt;file&gt;...&#34;</span> to discard changes in working directory<span style="color:#666">)</span>
+	deleted:    public/404.html
+	. <span style="color:#408080;font-style:italic"># 为了节省空间，中间的内容有删除</span>
+	deleted:    public/tags/贝叶斯/index.xml
+
+Untracked files:
+  <span style="color:#666">(</span>use <span style="color:#ba2121">&#34;git add &lt;file&gt;...&#34;</span> to include in what will be committed<span style="color:#666">)</span>
+	.gitignore
+
+no changes added to commit <span style="color:#666">(</span>use <span style="color:#ba2121">&#34;git add&#34;</span> and/or <span style="color:#ba2121">&#34;git commit -a&#34;</span><span style="color:#666">)</span>
+<span style="color:#666">(</span>base<span style="color:#666">)</span> 149-160-181-57:hugo Tal$ 
+</code></pre></div><p>当然，每个人出现的内容可能不一样，如果你按照上面建议的，在开始之前已经把 public 和 resources 这两个文件夹删除了，那也许只会出现 <code>Untract files:</code> 这一行。</p>
+<p>接下来，我们需要使用 <code>git add</code> 这个代码将上面显示的文件加入 Github 远程仓库。例如，我在 Terminal 中输入了如下代码<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>：</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add .gitignore
+git commit -m <span style="color:#ba2121">&#34;adding file(s).&#34;</span>
+git push
+</code></pre></div><p>注意，如果你在上面的 Terminal 结果中的 <code>Untract files:</code> 这一块，除了有 <code>.gitignore</code> 之外还有别的，那么你在代码中 <code>git add .gitignore</code> 这一行下面，也用 <code>git add</code> 来上传这个或这些文件。</p>
+<p>比如，在 Termial 结果中，<code>Untract files:</code> 这一行， <code>.gitignore</code> 之下还有，<code>layouts/</code>，那么，你就需要在<code>git add .gitignore</code> 这一行下面，<code>git commit -m &quot;adding files.&quot;</code> 这一行上面，输入 <code>git add layouts/</code>。</p>
+<p>如果一切正常，并没有显示说有什么 <code>Untract files:</code>，只是显示</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Your branch is ahead of <span style="color:#ba2121">&#39;origin/sources&#39;</span> by <span style="color:#666">2</span> commits.
+  <span style="color:#666">(</span>use <span style="color:#ba2121">&#34;git push&#34;</span> to publish your <span style="color:#008000">local</span> commits<span style="color:#666">)</span>
+</code></pre></div><p>那么你只需要输入你下代码：</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add .
+git commit -m <span style="color:#ba2121">&#34;adding files&#34;</span>
+git push
+</code></pre></div><p>随后，我们需要在 Terminal 中输入以下代码：</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#bc7a00">#!/usr/bin/env bash
+</span><span style="color:#bc7a00"></span><span style="color:#408080;font-style:italic"># This script allows you to easily and quickly generate and deploy your website</span>
+<span style="color:#408080;font-style:italic"># using Hugo to your personal GitHub Pages repository. This script requires a</span>
+<span style="color:#408080;font-style:italic"># certain configuration, run the `setup.sh` script to configure this. See</span>
+<span style="color:#408080;font-style:italic"># https://hjdskes.github.io/blog/deploying-hugo-on-personal-github-pages/index.html</span>
+<span style="color:#408080;font-style:italic"># for more information.</span>
+<span style="color:#408080;font-style:italic"># Set the English locale for the `date` command.</span>
+<span style="color:#008000">export</span> <span style="color:#19177c">LC_TIME</span><span style="color:#666">=</span>en_US.UTF-8
+<span style="color:#19177c">USERNAME</span><span style="color:#666">=</span>hhao1992 <span style="color:#408080;font-style:italic"># 请换成自己的 Github 用户名</span>
+<span style="color:#19177c">SOURCE</span><span style="color:#666">=</span>sources <span style="color:#408080;font-style:italic"># 如果你不是用的 sources 这个名字，请改成你用的</span>
+<span style="color:#408080;font-style:italic"># The commit message.</span>
+<span style="color:#19177c">MESSAGE</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;Rebuilding site </span><span style="color:#008000;font-weight:bold">$(</span>date<span style="color:#008000;font-weight:bold">)</span><span style="color:#ba2121">&#34;</span>
+msg<span style="color:#666">()</span> <span style="color:#666">{</span>
+    <span style="color:#008000">printf</span> <span style="color:#ba2121">&#34;\033[1;32m :: %s\n\033[0m&#34;</span> <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$1</span><span style="color:#ba2121">&#34;</span>
+<span style="color:#666">}</span>
+msg <span style="color:#ba2121">&#34;Pulling down the \`master\` branch into \`public\` to help avoid merge conflicts&#34;</span>
+git subtree pull --prefix<span style="color:#666">=</span>public <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master -m <span style="color:#ba2121">&#34;Merge origin master&#34;</span>
+msg <span style="color:#ba2121">&#34;Building the website&#34;</span>
+rm -rf public
+hugo
+msg <span style="color:#ba2121">&#34;Pushing the updated \`public\` folder to the \`</span><span style="color:#19177c">$SOURCE</span><span style="color:#ba2121">\` branch&#34;</span>
+git add .
+git commit -m <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$MESSAGE</span><span style="color:#ba2121">&#34;</span>
+git push origin <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$SOURCE</span><span style="color:#ba2121">&#34;</span>
+msg <span style="color:#ba2121">&#34;Pushing the updated \`public\` folder to the \`master\` branch&#34;</span>
+git subtree push --prefix<span style="color:#666">=</span>public <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master
+</code></pre></div><p>不出意外的话，回到我们刚才建的 Github 仓库，点击仓库下面那一行最右边的 Settings, 在出现的页面的底部，可以看到如下内容：</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/gitpage/success.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/gitpage/success.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>部署成功</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>点开链接，就能看到自己的网站了。</p>
+<h1 id="日常更新">日常更新<a href="#日常更新" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>打开一个文本编辑器，比如 <a href="https://www.typora.io/" target="_blank" rel="noreferrer noopener">Typora</a>
+
+，<a href="https://www.cnblogs.com/wind128/p/4409422.html" target="_blank" rel="noreferrer noopener">Sublime Text</a>
+
+ 等。新建一个名为 deploy.sh 的文档，把上面刚刚运行的复制进去。</p>
+<p>每次更新的时候，只需要在 Terminal 中输入以下代码即可：</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bash deploy.sh
+</code></pre></div><h1 id="自定义域名">自定义域名<a href="#自定义域名" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>这部分其实很容易。我的域名是在 <a href="https://www.namecheap.com/" target="_blank" rel="noreferrer noopener">Namecheap</a>
+
+ 买的。其他地方在设置上应该差不多。这里我就以 Namecheap 举例。</p>
+<p>其实，Namecheap 自己已经给出了 <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages" target="_blank" rel="noreferrer noopener">解决方法</a>
+
+。</p>
+<p>按照上面的方法，你在买完域名后，到 Manage 页面里的 Advanced DNS。首先把网站自动加的那两个 Record 删除，在 Namecheap, 网站自动加了 CNAME Record 和 URL Redirect Record, 把这两个先删除。随后，点击 &ldquo;Add New Record&rdquo;，新加四个 A Record, 这四个 Record 的 Host 填 @ , value 分别填下面四个：</p>
+<ul>
+<li>185.199.108.153</li>
+<li>185.199.109.153</li>
+<li>185.199.110.153</li>
+<li>185.199.111.153</li>
+</ul>
+<p>其中，185.199.108.153 这个 A Record 的 TTL 选 30 min，其他填 Automatic</p>
+<p>然后，加一个 CNAME Record, Host 填 www ， value 填 <code>&lt;username&gt;.github.io</code>，比如我的填 hhao1992.github.io, 随后 TTL 选 30 min。设置如下：</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="https://namecheap.simplekb.com//SiteContents/2-7C22D5236A4543EB827F3BD8936E153E/media/2018-06-20_1804.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="https://namecheap.simplekb.com//SiteContents/2-7C22D5236A4543EB827F3BD8936E153E/media/2018-06-20_1804.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>图片来源：Namecheap</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>这些设置好之后，我们需要让 Github 知道我们想把 <code>https://&lt;username&gt;.github.io</code> 这个网址转到 我们自己买的域名。怎么告诉呢？</p>
+<p>Github 的 <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site" target="_blank" rel="noreferrer noopener">官方指南</a>
+
+ 给出了方法。到 <code>&lt;username&gt;/&lt;username&gt;.github.io</code> 这个仓库，找到 Settings, 然后在 GitHub Pages 中的 Custom domain 这里填入我们自己的域名即可。</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="https://help.github.com/assets/images/help/pages/save-custom-domain.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="https://help.github.com/assets/images/help/pages/save-custom-domain.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>图片来源：GitHub</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>这个是可以的。但这会带来一个问题。</p>
+<p>当我们在 custom domain 输入我们的自定义域名后，master 这个 branch 会自动加一个 CNAME 文件。由于 master branch 其实就是我们本地 Hugo 文件夹里的 public 文件夹，而 Hugo 每次自动生成 public 文件夹并不会自动加 CNAME 文件，这就造成了本地仓库和远程仓库的不一致，会导致我们无法将本地仓库上传，因此 Hugo 网站也就无法更新。解决的办法很简单，只需要在我们之前提到的 deploy.sh 文件中加三行代码即可。这三行代码要加在 <code>hugo</code> 之后，<code>msg &quot;Pushing the updated ...</code> 之前。加哪三行代码呢？</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> public <span style="color:#408080;font-style:italic"># cd 到 public 文件夹</span>
+<span style="color:#008000">echo</span> <span style="color:#ba2121">&#34;hongtaohao.com&#34;</span> &gt; CNAME <span style="color:#408080;font-style:italic"># ⚠! 请换成自己的网址！</span>
+<span style="color:#008000">cd</span> .. <span style="color:#408080;font-style:italic"># 返回上一级</span>
+</code></pre></div><p>怕大家弄错，我把完整的 <code>deploy.sh</code> 文件放在下面。但是请记得，如果你没有用自定义域名的打算，请用上面最原始的那个 <code>deploy.sh</code>，而不是下面这个。</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">export</span> <span style="color:#19177c">LC_TIME</span><span style="color:#666">=</span>en_US.UTF-8
+<span style="color:#19177c">USERNAME</span><span style="color:#666">=</span>hhao1992 <span style="color:#408080;font-style:italic"># 请换成自己的 Github 用户名</span>
+<span style="color:#19177c">SOURCE</span><span style="color:#666">=</span>sources <span style="color:#408080;font-style:italic"># 如果你不是用的 sources 这个名字，请改成你用的</span>
+<span style="color:#408080;font-style:italic"># The commit message.</span>
+<span style="color:#19177c">MESSAGE</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;Rebuilding site </span><span style="color:#008000;font-weight:bold">$(</span>date<span style="color:#008000;font-weight:bold">)</span><span style="color:#ba2121">&#34;</span>
+msg<span style="color:#666">()</span> <span style="color:#666">{</span>
+    <span style="color:#008000">printf</span> <span style="color:#ba2121">&#34;\033[1;32m :: %s\n\033[0m&#34;</span> <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$1</span><span style="color:#ba2121">&#34;</span>
+<span style="color:#666">}</span>
+msg <span style="color:#ba2121">&#34;Pulling down the \`master\` branch into \`public\` to help avoid merge conflicts&#34;</span>
+git subtree pull --prefix<span style="color:#666">=</span>public <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master -m <span style="color:#ba2121">&#34;Merge origin master&#34;</span>
+msg <span style="color:#ba2121">&#34;Building the website&#34;</span>
+rm -rf public
+hugo
+<span style="color:#008000">cd</span> public
+<span style="color:#008000">echo</span> <span style="color:#ba2121">&#34;hongtaohao.com&#34;</span> &gt; CNAME
+<span style="color:#008000">cd</span> ..
+msg <span style="color:#ba2121">&#34;Pushing the updated \`public\` folder to the \`</span><span style="color:#19177c">$SOURCE</span><span style="color:#ba2121">\` branch&#34;</span>
+git add .
+git commit -m <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$MESSAGE</span><span style="color:#ba2121">&#34;</span>
+git push origin <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$SOURCE</span><span style="color:#ba2121">&#34;</span>
+msg <span style="color:#ba2121">&#34;Pushing the updated \`public\` folder to the \`master\` branch&#34;</span>
+git subtree push --prefix<span style="color:#666">=</span>public <span style="color:#b62;font-weight:bold">\
+</span><span style="color:#b62;font-weight:bold"></span>    https://github.com/<span style="color:#19177c">$USERNAME</span>/<span style="color:#19177c">$USERNAME</span>.github.io.git master
+</code></pre></div><h1 id="注意事项">注意事项<a href="#注意事项" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<ul>
+<li>如果你往根目录，也就是和 <code>content</code> 平行的这个目录新加文件，比如自定义域名时需要的 <code>CNAME</code>， 在运行 <code>bash deploy.sh</code> 命令之前，一定要先把这个新加的文件上传。</li>
+</ul>
+<p>以新加入 <code>CNAME</code> 为例，运行如下代码</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add CNAME
+git commit -m <span style="color:#ba2121">&#34;adding CNAME&#34;</span>
+git push
+</code></pre></div><section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>当然，名字可以自己起，不一定非得叫 sources。这个分支用来储存本地文件夹的所有，内容，你起名为 <code>all</code>, <code>whole</code>, <code>together</code> <code>hugo</code> 等等都可以。 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>请根据自己的情况作修改 <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+<p style="color:#777;">最后一次修改于 2020-08-23</p>
+
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">由 <img src="/media/hugo-logo.png" width="22" height="22"></a>和<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="/media/blogdown.png" width="20" height="20"> &nbsp; 强力驱动 </a> 
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> 内容存于 <i class="fa fa-github" style="font-size: 18pt"></i></a></li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+            
+     </ul>
+</footer>
+
+
+
+
+

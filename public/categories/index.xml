@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 郝鸿涛::Hongtao Hao</title>
+    <link>https://hongtaoh.github.io/categories/</link>
+    <description>Recent content in Categories on 郝鸿涛::Hongtao Hao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hongtaoh.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>统计学</title>
+      <link>https://hongtaoh.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>留学申请</title>
+      <link>https://hongtaoh.github.io/categories/%E7%95%99%E5%AD%A6%E7%94%B3%E8%AF%B7/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/categories/%E7%95%99%E5%AD%A6%E7%94%B3%E8%AF%B7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://hongtaoh.github.io/categories/hugo/</link>
+      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>参会经历</title>
+      <link>https://hongtaoh.github.io/categories/%E5%8F%82%E4%BC%9A%E7%BB%8F%E5%8E%86/</link>
+      <pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hongtaoh.github.io/categories/%E5%8F%82%E4%BC%9A%E7%BB%8F%E5%8E%86/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
