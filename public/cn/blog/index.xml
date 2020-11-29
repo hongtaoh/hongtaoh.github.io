@@ -448,19 +448,6 @@ n &amp;lt;- 10000 pheads &amp;lt;- 0.8 flips&amp;lt;-sample (x=c(0,1),prob=c(1-p
     </item>
     
     <item>
-      <title>Hugo 如何部署到 GitHub Pages</title>
-      <link>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</link>
-      <pubDate>Wed, 22 Jan 2020 17:04:17 -0500</pubDate>
-      
-      <guid>https://hongtaoh.github.io/cn/2020/01/22/deploy-on-github/</guid>
-      <description>这篇文章太老了，而且很复杂，不太建议大家在参考。我会在之后更新。如果你想部署你的 Hugo 网站，请优先参考我之前那篇 Netlify 部署 的帖子。如果你还是想把网站部署到 GitHub Pages, 我推荐你看这里 。 
-Hugo官网上的那篇教程 有个问题是，你需要两个 Github 仓库，一个是 YOUR-PROJECT&amp;gt; (e.g. blog)，另一个是 &amp;lt;USERNAME&amp;gt;.github.io 。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 public 文件夹。
-这种设置的问题在于，你的博客更新的可能不仅仅是内容，掌管着网页格式的 layout 文件以及 css 文件也可能会更新。如果你需要让别人看到你的网页格式源代码，即，你的 layout 文件以及 css 文件，那么你每次更新的时候，不仅需要更新 &amp;lt;USERNAME&amp;gt;.github.io ，还需要更新 YOUR-PROJECT&amp;gt; (e.g. blog)。这一点，那篇教程 也提到了：
- You can then run ./deploy.sh &amp;ldquo;Your optional commit message&amp;rdquo; to send changes to .github.io. Note that you likely will want to commit changes to your  repository as well.
- 我在 Amber Thomas 的 这篇帖子 找到了解决办法：在 &amp;lt;USERNAME&amp;gt;.</description>
-    </item>
-    
-    <item>
       <title>Hugo 如何实现脚注</title>
       <link>https://hongtaoh.github.io/cn/2020/01/21/hugo-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%B3%A8/</link>
       <pubDate>Tue, 21 Jan 2020 12:22:37 -0500</pubDate>
