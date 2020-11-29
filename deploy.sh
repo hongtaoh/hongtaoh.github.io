@@ -1,36 +1,25 @@
-#!/bin/sh
-MESSAGE="Rebuilding site $(date)"
-SOURCE=sources
-git add .
-git commit -m "$MESSAGE"
-git push origin "$SOURCE"
+#!/bin/bash
+directory=public
+branch=gh-pages
+build_command() {
+  hugo
+}
 
-if [ "`git status -s`" ]
-then
-    echo "The working directory is dirty. Please commit any pending changes."
-    exit 1;
-fi
+echo -e "\033[0;32mDeleting old content...\033[0m"
+rm -rf $directory
 
-echo "Deleting old publication"
-rm -rf public
-mkdir public
-git worktree prune
-rm -rf .git/worktrees/public/
+echo -e "\033[0;32mChecking out $branch....\033[0m"
+git worktree add $directory $branch
 
-echo "Checking out gh-pages branch into public"
-git worktree add -B gh-pages public origin/gh-pages
+echo -e "\033[0;32mGenerating site...\033[0m"
+build_command
 
-echo "Removing existing files"
-rm -rf public/*
+echo -e "\033[0;32mDeploying $branch branch...\033[0m"
+cd $directory &&
+  echo "hongtaoh.com" > CNAME &&
+  git add --all &&
+  git commit -m "Deploy updates" &&
+  git push origin $branch
 
-echo "Generating site"
-hugo
-
-cd public
-echo "hongtaoh.com" > CNAME
-
-echo "Updating gh-pages branch"
-git add . && git commit -m "Publishing to gh-pages (publish.sh)"
-
-echo "Pushing to github"
-git push --all origin
+echo -e "\033[0;32mCleaning up...\033[0m"
+git worktree remove $directory
