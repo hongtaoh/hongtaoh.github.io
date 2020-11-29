@@ -1,0 +1,246 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Troubleshooting for Using the Hugo Sam Theme - 郝鸿涛::Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+            <link rel="icon" href="https://hongtaoh.github.io/ht10.ico">
+
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+       
+       
+       <li><a href="/">Home</a></li>
+       
+       <li><a href="/en/vitae/">Vitae</a></li>
+       
+       <li><a href="/en/projects/">Projects</a></li>
+       
+       <li><a href="/en/blog/">Blog</a></li>
+       
+       <li><a href="/en/apad/">APAD</a></li>
+       
+       <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1 class="article-title">Troubleshooting for Using the Hugo Sam Theme</h1>
+
+<p>Hongtao Hao 
+ / 2020-09-19 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-09-19-hugo-sam.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+<aside class="toc">
+Table of Contents:
+<nav id="TableOfContents">
+  <ol>
+    <li><a href="#install-nodejs-npm-postcss-cli-and-autoprefixer">Install Node.js, npm, postcss-cli, and autoprefixer</a></li>
+    <li><a href="#locally-preview-the-project">Locally preview the project</a></li>
+    <li><a href="#deploy-through-netlify">Deploy through Netlify</a></li>
+    <li><a href="#example">Example</a></li>
+  </ol>
+</nav>
+</aside>
+
+
+
+
+<div class="body-text list-text">
+<p>There are several things you need to prepare to preview locally and deploy a Hugo site which uses the <a href="https://github.com/victoriadrake/hugo-theme-sam" target="_blank" rel="noreferrer noopener">Sam theme</a>
+
+.</p>
+<h1 id="install-nodejs-npm-postcss-cli-and-autoprefixer">Install Node.js, npm, postcss-cli, and autoprefixer<a href="#install-nodejs-npm-postcss-cli-and-autoprefixer" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>Victoria recommends installing Node.js and npm <a href="https://www.npmjs.com/get-npm" target="_blank" rel="noreferrer noopener">this way</a>
+
+. <strong>However</strong>, after the installation, when running <code>npm install -g postcss-cli</code> and <code>npm install -g autoprefixer</code> to install <code>postcss-cli</code> and <code>autoprefixer</code>, a permission error might occur:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Error: EACCES: permission denied, access <span style="color:#ba2121">&#39;/usr/local/lib/node_modules&#39;</span>
+</code></pre></div><p><a href="https://stackoverflow.com/questions/48910876/error-eacces-permission-denied-access-usr-local-lib-node-modules" target="_blank" rel="noreferrer noopener">This thread</a>
+
+ documented this problem. To solve it, simply follow <a href="https://stackoverflow.com/a/59575266" target="_blank" rel="noreferrer noopener">this answer</a>
+
+.</p>
+<p>The idea is, instead of installing <code>npm</code> through a Node installer, you can install it using <code>nvm</code>.</p>
+<ol>
+<li>Install <code>nvm</code>.</li>
+</ol>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+</code></pre></div><p>You can run the above line of code no matter what directory you are at.</p>
+<ol start="2">
+<li>Install <code>Node.js</code> and <code>npm</code> via <code>nvm</code>.</li>
+</ol>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nvm install stable
+</code></pre></div><p>Then, you can install <code>postcss-cli</code> and <code>autoprefixer</code>.</p>
+<p>The following codes come from <a href="https://github.com/victoriadrake/hugo-theme-introduction/issues/210#issuecomment-645661326" target="_blank" rel="noreferrer noopener">this answer</a>
+
+ on <a href="https://github.com/victoriadrake/hugo-theme-introduction/issues/210" target="_blank" rel="noreferrer noopener">this thread</a>
+
+:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo npm i -g postcss-cli
+</code></pre></div><p>and</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo npm i -g autoprefixer 
+</code></pre></div><p>You will be asked to input your passwords. If you are using a Mac, your input will be invisible. However, it will be processed anyway. So don&rsquo;t worry. Just input your passwords and press <code>Enter</code>.</p>
+<h1 id="locally-preview-the-project">Locally preview the project<a href="#locally-preview-the-project" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>When previewing the website, Hugo might give this error:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">TOCSS: failed to transform <span style="color:#ba2121">&#34;css/main.tmp.css&#34;</span> <span style="color:#666">(</span>text/x-sass<span style="color:#666">)</span>: resource <span style="color:#ba2121">&#34;sass/sass/style.sass_7642ba43b3212fd7d7ba324df3b88b0c&#34;</span> not found in file cache
+</code></pre></div><p>To solve this problem, simply copy the <code>/exampleSite/resources</code> and paste it into the root directory of your hugo project.</p>
+<h1 id="deploy-through-netlify">Deploy through Netlify<a href="#deploy-through-netlify" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>If you are deploying your project via Netlify:</p>
+<p>First, don&rsquo;t use the <code>netlify.toml</code> within <code>hugo-theme-sam</code>. Instead, use the <code>netlify.toml</code> <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" target="_blank" rel="noreferrer noopener">here</a>
+
+. Be sure to edit the <code>HUGO_VERSION</code> accordingly. Put this <code>netlify.toml</code> file at the root directory of your Hugo project.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"> [build]
+ publish = <span style="color:#ba2121">&#34;public&#34;</span>
+ command = <span style="color:#ba2121">&#34;hugo --gc --minify&#34;</span>
+
+ [context.production.environment]
+ HUGO_VERSION = <span style="color:#ba2121">&#34;0.75.1&#34;</span>
+ HUGO_ENV = <span style="color:#ba2121">&#34;production&#34;</span>
+ HUGO_ENABLEGITINFO = <span style="color:#ba2121">&#34;true&#34;</span>
+
+ [context.split1]
+ command = <span style="color:#ba2121">&#34;hugo --gc --minify --enableGitInfo&#34;</span>
+
+ [context.split1.environment]
+ HUGO_VERSION = <span style="color:#ba2121">&#34;0.75.1&#34;</span>
+ HUGO_ENV = <span style="color:#ba2121">&#34;production&#34;</span>
+
+ [context.deploy<span style="">-</span>preview]
+ command = <span style="color:#ba2121">&#34;hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL&#34;</span>
+
+ [context.deploy<span style="">-</span>preview.environment]
+ HUGO_VERSION = <span style="color:#ba2121">&#34;0.75.1&#34;</span>
+
+ [context.branch<span style="">-</span>deploy]
+ command = <span style="color:#ba2121">&#34;hugo --gc --minify -b $DEPLOY_PRIME_URL&#34;</span>
+
+ [context.branch<span style="">-</span>deploy.environment]
+ HUGO_VERSION = <span style="color:#ba2121">&#34;0.75.1&#34;</span>
+
+ [context.next.environment]
+ HUGO_ENABLEGITINFO = <span style="color:#ba2121">&#34;true&#34;</span>
+</code></pre></div><p>The deployment might fail and give you this error:</p>
+<pre><code>Building sites … ERROR 2020/09/16 20:06:07 Transformation failed: POSTCSS: failed to transform &quot;css/main.css&quot; (text/css): PostCSS not found; install with &quot;npm install postcss-cli&quot;. See https://gohugo.io/hugo-pipes/postcss/
+</code></pre><p>This problem can be solved by <a href="https://github.com/victoriadrake/hugo-theme-introduction/issues/210#issuecomment-651869483" target="_blank" rel="noreferrer noopener">this answer</a>
+
+. Simply add a <code>package.json</code> file at the root directory of your Hugo project. The <code>package.json</code> is to tell Netlify what packages are needed to deploy our Hugo projects: <code>postcss-cli</code> and <code>autoprefixer</code>. Although you have installed the two packages locally, Netlify doesn&rsquo;t know you will need them until you let it know.</p>
+<p>The <code>package.json</code> should be like this, as <a href="https://github.com/victoriadrake/hugo-theme-introduction/issues/210#issuecomment-651869483" target="_blank" rel="noreferrer noopener">mike-foucault</a>
+
+ suggested:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#008000;font-weight:bold">&#34;name&#34;</span>: <span style="color:#ba2121">&#34;netlify-deps&#34;</span>,
+  <span style="color:#008000;font-weight:bold">&#34;version&#34;</span>: <span style="color:#ba2121">&#34;0.1.0&#34;</span>,
+  <span style="color:#008000;font-weight:bold">&#34;dependencies&#34;</span>: {
+    <span style="color:#008000;font-weight:bold">&#34;postcss-cli&#34;</span>: <span style="color:#ba2121">&#34;7.1.1&#34;</span>,
+    <span style="color:#008000;font-weight:bold">&#34;autoprefixer&#34;</span>: <span style="color:#ba2121">&#34;9.8.4&#34;</span>
+  }
+}
+</code></pre></div><h1 id="example">Example<a href="#example" class="header-anchor" ariaLabel="Anchor"> # </a></h1>
+<p>If you have trouble understanding the above parts, you can refer to <a href="https://github.com/hongtaoh/bsa" target="_blank" rel="noreferrer noopener">this example</a>
+
+.</p>
+
+
+<p style="color:#777;">Last modified on 2020-09-24</p>
+
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+          
+          <li>
+            
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>and<a href="https://github.com/rstudio/blogdown" class="footer-links-kudos"><img src="/media/blogdown.png" width="20" height="20"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> Content in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+          
+     </ul>
+</footer>
+
+
+
+
+
