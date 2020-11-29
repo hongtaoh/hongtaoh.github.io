@@ -4,15 +4,9 @@ export LC_TIME=en_US.UTF-8
 MESSAGE="Updating site $(date)"
 SOURCE=sources
 
-msg() {
-    printf "\033[1;32m :: %s\n\033[0m" "$1"
-}
-
 git add .
 git commit -m "$MESSAGE"
-git push origin "$SOURCE"
-
-#!/bin/sh
+git push origin sources
 
 echo "Deleting old publication"
 rm -rf public
