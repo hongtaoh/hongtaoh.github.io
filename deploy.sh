@@ -28,11 +28,9 @@ hugo
 
 cd public
 echo "hongtaoh.com" > CNAME
-cd ..
 
 echo "Updating gh-pages branch"
-cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
+git add . && git commit -m "Publishing to gh-pages (publish.sh)"
 
 echo "Pushing to github"
-git push origin gh-pages
-git push origin "$SOURCE"
+git push --all origin
