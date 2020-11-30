@@ -6,6 +6,17 @@ type : apad
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. 
 {{<end>}}
 
+## 2020-11-30
+1. Finished Huberman et al. (2008)
+
+- The number of friends, rather than that of followers, more accurately reflects someone's Twitter activity. 
+
+- A link between two users on social media like Twitter does not imply there is interaction in them. 
+
+2. Forbush, E., & Foucault-Welles, B. (2016). Social media use and adaptation among Chinese students beginning to study in the United States. *International Journal of Intercultural Relations, 50*, 1-12.
+
+I skimmed through it. 
+
 ## 2020-11-29
 1. Finished Donoho (2015)
 
