@@ -1,6 +1,8 @@
 ---
 title: Curriculum Vitae
 type : apad
+aliases:
+    - /en/en-vitae/
 ---
 # Hongtao Hao
 <i class="fa fa-envelope"></i> :: [hhao@iu.edu](mailto:hhao@iu.edu) 
