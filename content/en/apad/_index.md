@@ -3,7 +3,7 @@ title: A Paper A Day
 type : apad
 ---
 {{<block class="reminder">}}
-I am applying for PhD positions for 2021 Fall. To be fair for other applicants, I am considering temporarily suspeding updating this page until my application results are out. I will doing it offline, though. 
+I am applying for PhD positions for 2021 Fall. To be fair for other applicants, I am considering temporarily suspeding updating this page until my application results are out.
 {{<end>}}
 
 {{<block class="note">}}
