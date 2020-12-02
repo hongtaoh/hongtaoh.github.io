@@ -113,4 +113,6 @@ Worked as a research assistant for Professor [Yong-Yeol Ahn](http://yongyeol.com
 
 [Website](https://yyahn.com/covid19-dashboard/) | [Data](https://github.com/covid19-data/covid19-data)
 
+Disclaimer: this is ongoing work since it's part of my job as a research assistant. 
+
 {{< endcolumn >}}
