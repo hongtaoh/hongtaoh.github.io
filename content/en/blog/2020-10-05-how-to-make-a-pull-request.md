@@ -9,13 +9,13 @@ toc: true
 
 I learned how to contribute via making a pull request from the [contributing guidance](https://github.com/victoriadrake/hugo-theme-sam/blob/master/CONTRIBUTING.md) by [Victorial Drake](https://github.com/victoriadrake).
 
-# Step1: Fork a repo
+## Step1: Fork a repo
 Reference: [Fork a repo](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) from [GitHub Docs](https://docs.github.com/en)
 
-## Forking the original repository
+### Forking the original repository
 Simply fork the project you would like to work on. For example, I forked Professor YY's [covid19-data](https://github.com/covid19-data/covid19-data). [Here](https://github.com/hongtaoh/covid19-data) is what the fork looks like.
 
-## Making a local clone of your fork
+### Making a local clone of your fork
 
 In Terminal, first navigate to the directory where you want to place this local clone. In my example, I'll put it on my Desktop. Then, `git clone` your fork. 
 
@@ -24,7 +24,7 @@ cd Desktop
 git clone https://github.com/hongtaoh/covid19-data
 ```
 
-## Syncing your fork with the original repository
+### Syncing your fork with the original repository
 
 The original repository is also called the **upstream** repository. 
 
@@ -59,7 +59,7 @@ $ git remote -v
 > upstream	https://github.com/covid19-data/covid19-data.git (push)
 ```
 
-# Step2: Make changes to your fork
+## Step2: Make changes to your fork
 After making changes to the local clone, you can push the changes to your fork. 
 
 ```
@@ -71,17 +71,17 @@ git push
 
 Then, I can see changes in [my fork](https://github.com/hongtaoh/covid19-data).
 
-# Step3: Creating a pull request from your fork
+## Step3: Creating a pull request from your fork
 
 See details [here](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork).
 
-# What to do before sending your pull request
+## What to do before sending your pull request
 
 [Victorial Drake](https://github.com/victoriadrake) suggests opening an issue telling people what changes you are going to make before sending the pull request. This is because if others don't think your changes are necessary, then you don't need to send it in the first place. 
 
 [^1]: Please note that `$` and `>` are for demonstration only and you aren't supposed to type them in your Terminal. `$` is followed by what you want to type in Terminal, and `>` is followed by the results from Terminal.
 
-# Updating:
+## Updating:
 
 When you are woking on your fork and find that it is several commits behind the original repo, please refer to [GitHub's offiical guide](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) to sync your fork with the original. Please note that it uses `main` but more often than not, it probably should be `origin`. Check your upstream to make sure. 
 

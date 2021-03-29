@@ -4,7 +4,7 @@ date: 2020-06-14T10:04:34-04:00
 author: Hongtao Hao
 slug: terminal-command-basics-on-mac
 draft: false
-toc: false
+toc: true
 ---
 
 ## Changing Folder/File Name

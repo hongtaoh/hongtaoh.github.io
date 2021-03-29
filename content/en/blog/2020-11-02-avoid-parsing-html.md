@@ -7,13 +7,13 @@ draft: false
 toc: false
 ---
 
-I found the solution [here](https://stackoverflow.com/a/42528669) by [Hissatsu](https://stackoverflow.com/users/7592858/hissatsu). You can use [encode](http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii) convert `XML` to `US-ASCII`.
+I found the solution [here](https://stackoverflow.com/a/42528669) by [Hissatsu](https://stackoverflow.com/users/7592858/hissatsu). You can use [encode](http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii) to convert `XML` to `US-ASCII`.
 
 For example:
 
 &lt;p&gt;I do not want to show this content.&lt;/p&gt;
 
-If you encode multiple lines of code, you'll find that the output will become only one line. You solve the problem by adding `</br>` at the end of each line except the last line.
+However, if you encode multiple lines, you'll find that the output will be only one line. You can solve this problem by adding `</br>` at the end of each line except the last line.
 
 For example, if I want the output to be this:
 

@@ -1,5 +1,5 @@
 ---
-title: How to Fix Blurry Images in Mac Chrome
+title: How to Fix Blurry Images on Mac Chrome
 date: 2020-05-14T16:35:13-04:00
 author: Hongtao Hao
 slug: chrome-mac-blurry-image-fix

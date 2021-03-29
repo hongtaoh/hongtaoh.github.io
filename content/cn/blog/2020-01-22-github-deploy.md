@@ -6,10 +6,11 @@ author: 郝鸿涛
 toc: true
 aliases:
     - /cn/2020-01-22-deploy-on-github/
+    - /cn/2020-01-22-github-deploy/
 ---
 
-{{<notice>}}
-这篇文章太老了，而且很复杂，不太建议大家在参考。我会在之后更新。如果你想部署你的 Hugo 网站，请优先参考我之前那篇 [Netlify 部署](/cn/2020/01/04/hugo-netlify/) 的帖子。如果你还是想把网站部署到 GitHub Pages, 我推荐你看[这里](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch)。
+{{<block class="note">}}
+这篇文章太老了，而且很复杂，不太建议大家再参考。我会在之后更新。如果你想部署你的 Hugo 网站，请优先参考我之前那篇 [Netlify 部署](/cn/2020/01/04/hugo-netlify-deploy/) 的帖子。如果你还是想把网站部署到 GitHub Pages, 我推荐你看[这里](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch)。
 {{<end>}}
   
 [Hugo官网上的那篇教程](https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages) 有个问题是，你需要两个 Github 仓库，一个是 `YOUR-PROJECT> (e.g. blog)`，另一个是 `<USERNAME>.github.io `。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 `public` 文件夹。
@@ -24,7 +25,7 @@ Amber 帖子中提到的方法是由 [Jente Hidskes](https://www.hjdskes.nl/blog
 
 ⚠ 以下内容以苹果电脑为例子，使用 Windows 的朋友可以作为参考，但我不保证结果正确。
 
-# 新建 `<USERNAME>.github.io` 仓库并将本地仓库上传
+## 新建 `<USERNAME>.github.io` 仓库并将本地仓库上传
 首先，我假设你已经用了一个本地 Hugo 文件夹，网站建设已经基本完成，运行 `hugo server -D`，打开 [http://localhost:1313](http://localhost:1313) 后网页显示一切正常。如果这些还没弄好，请先把网站在本地建设好之后再考虑部署到网上。
 
 注意⚠：
@@ -59,7 +60,7 @@ git push -u origin master
 
 {{<figure src="/media/gitpage/first-code.png" title="本地仓库上传到 Github">}}
 
-# 建立 sources 分支
+## 建立 sources 分支
 第二步，我们需要回到 Github, 建立一个 sources[^1] 分支。
 
 回到我们刚才创建的仓库，刷新一下页面。你会看到在 1 commit 底下有一个关于 Branch 的选择，如下图：
@@ -79,7 +80,7 @@ git checkout sources
 
 输入完之后，记得点一下回车键，这样最后一行才会被执行，以下的代码也一样。
 
-# 将 `public` 文件夹放到 master 分支
+## 将 `public` 文件夹放到 master 分支
 
 紧接着，在 Terminal 中输入以下代码。输入完之后，先稍等一会儿，让程序运行一下，停止之后，再点击一下回车键，以运行最后一行代码：
 
@@ -226,7 +227,7 @@ git subtree push --prefix=public \
 
 点开链接，就能看到自己的网站了。
 
-# 日常更新
+## 日常更新
 
 打开一个文本编辑器，比如 [Typora](https://www.typora.io/)，[Sublime Text](https://www.cnblogs.com/wind128/p/4409422.html) 等。新建一个名为 deploy.sh 的文档，把上面刚刚运行的复制进去。
 
@@ -236,7 +237,7 @@ git subtree push --prefix=public \
 bash deploy.sh
 ```
 
-# 自定义域名
+## 自定义域名
 
 这部分其实很容易。我的域名是在 [Namecheap](https://www.namecheap.com/) 买的。其他地方在设置上应该差不多。这里我就以 Namecheap 举例。
 
@@ -300,7 +301,7 @@ git subtree push --prefix=public \
     https://github.com/$USERNAME/$USERNAME.github.io.git master
 ```
 
-# 注意事项
+## 注意事项
 
 - 如果你往根目录，也就是和 `content` 平行的这个目录新加文件，比如自定义域名时需要的 `CNAME`， 在运行 `bash deploy.sh` 命令之前，一定要先把这个新加的文件上传。
 

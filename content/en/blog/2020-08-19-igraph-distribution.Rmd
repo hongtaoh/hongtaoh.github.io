@@ -1,16 +1,17 @@
 ---
-title: How to plot a Network's Degree Distribution Using igraph in R
+title: How to Plot a Network's Degree Distribution Using igraph in R
 author: Hongtao Hao
 date: '2020-08-19'
 slug: plot-degree-distribution-using-igraph
 output:
   blogdown::html_page:
     toc: yes
+    toc_depth: 2
 ---
 ******
 The R package `igraph` is very useful. However, its `degree()` and `degree_distribution()` function is not so straightforward. Also, it might be challenging to plot degree distribution. 
 
-# Getting a deeper understanding of degree() and degree_distribution()
+## Getting a deeper understanding of degree() and degree_distribution()
 
 To explore these two function, let's first draw a simple network. 
 
@@ -66,7 +67,7 @@ degree_distribution(g2)
 
 As we can see above, yes, **it will**. It displays relative frequencies for all possible degrees from $0$ to $9$. 
 
-# Plotting the distribution
+## Plotting the distribution
 Let's plot it. 
 
 First, you might be thinking of histogram:
@@ -168,7 +169,7 @@ barplot(relafreq_2, xlab="k", ylab = "Relative frequencies",
 
 Some of you may wonder, why couldn't we just use `range(pretty(relafreq_2))`. Well, **we could**. The thing is, if all degrees appeare at least once, then using `range(pretty(relafreq_2))` rather than `range(pretty(c(0,relafreq_2)))` means that the start of `ylim` won't be $0$, I guess. So it's safer to use `range(pretty(c(0,relafreq_2)))`.
 
-# Going back to histogram
+## Going back to histogram
 In the [igraph tutorial](https://kateto.net/networks-r-igraph) by [Dr. Katya Ognyanova](https://kateto.net/), I saw that she showed the node degrees using histograms. 
 
 On second thought, I realized it's not necessarily a bad idea to show node degrees via a histogram. After all, when the size of the network is huge and the node degrees vary greatly, a histogram isn't that much different from a bar plot. 
@@ -210,7 +211,7 @@ barplot(relafreq_random, xlab = "k",
 
 They are not that different, right? Except for the fact that the histogram captures the absolute frequencies whereas the bar chart displays relative ones. 
 
-## Deciding on X-axis scale
+### Deciding on X-axis scale
 
 When deciding on the X-axis scale of the histogram, [Dr. Katya Ognyanova](https://kateto.net/) in [one of her posts](https://kateto.net/networks-r-igraph) used `vcount()-1`. This worked in the example she provided but I don't think it is the best option. For example, in the above random graph we have, there are $1,000$ vertices, but the maximum degree is only $5$. Therefore, we cannot use `vcount()-1`, which is $999$ in our case, to denote the maximum on the `X-axis`:
 
@@ -237,7 +238,7 @@ hist(deg_random, breaks = 0:(max(deg_random)+1),
      )
 ```
 
-## Adjusting a histogram's breaks
+### Adjusting a histogram's breaks
 As we can see above, the range of [0,1] shows the frequencies of $k=0$ and $k=1$ combined:
 
 ```{r}
@@ -270,7 +271,7 @@ hist(deg_random, breaks = seq(-1,(max(deg_random)+1), by=0.5),
 
 Now, it's much clearer. 
 
-## Adjusting a histogram's Y-axis
+### Adjusting a histogram's Y-axis
 In the above figures, the Y-axis scale is too short. How to solve this problem?
 
 We can simply use the trick of `range(pretty())` again here:
@@ -284,13 +285,13 @@ hist(deg_random, breaks = seq(-1,(max(deg_random)+1), by=0.5),
      )
 ```
 
-# Conclusion
+## Conclusion
 
-## How to draw a bar chart to display a network's degree distribution
+### How to draw a bar chart to display a network's degree distribution
 
 For bar chart, the only problem we faced lies in the `ylim`. We simply need to use `ylim = range(pretty())`
 
-## How to draw a histogram to display a network's nodes degrees
+### How to draw a histogram to display a network's nodes degrees
 
 When drawing a histogram, we had three issues: 
 
@@ -304,5 +305,5 @@ The second problem is how to set the breaks. We first used `breaks = 0:(max(G)+1
 
 The third issue is the short Y-axis scale. We solved the problem using `range(pretty())`. 
 
-# Another option
+## Another option
 [Chengjun Wang](https://chengjunwang.com/) [defined](https://chengjunwang.com/web_data_analysis/demo2_simulate_networks/) the function `plot_degree_distribution()` and `fit_power_law()`, which I found to be very useful. 

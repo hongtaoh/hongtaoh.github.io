@@ -7,13 +7,13 @@ draft: false
 toc: true
 ---
 
-# About Jupyterbook
+## About Jupyterbook
 
 Jupyterbook totally changed the way a book is built in April 2020. The final legacy version is [v0.6.5](https://github.com/executablebooks/jupyter-book/releases/tag/v0.6.5). You can compare the [legacy demo](https://legacy.jupyterbook.org/intro.html) with the [newest version demo](https://jupyterbook.org/intro.html).
 
 You can install the legacy version [here](https://pypi.org/project/jupyter-book/0.6.5/).
 
-# Using Jupyterbook
+## Using Jupyterbook
 
 In this article, I'll briefly talk about how to use this legacy version of jupyterbook together with GitHub and Netlify. 
 
@@ -79,11 +79,11 @@ git push origin master
 
 You can store this file as `deploy.sh`, save it to the root directory of YourProject. Every time after you've make all the changes you want, at the root directory of YourProject, simply run `bash deploy.sh` and Github and Netlify will deploy by themseles. 
 
-# Example
+## Example
 
 Finally, you can view the final product of the example I provided above [here](https://legacy-jupyterbook.netlify.app/). And [here](https://github.com/hongtaoh/legacy-jupyterbook) is its GitHub repository. 
 
-# Changing content
+## Changing content
 I am not detailing how to customize the content here. You simply need to change it in the `content` folder at the root directory, and then make corressponding changes to `toc.yml` under the `_data` folder. You can find more information in the [official guide](https://legacy.jupyterbook.org/intro.html)
 
 

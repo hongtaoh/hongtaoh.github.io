@@ -1,9 +1,7 @@
-baseURL = "https://hongtaoh.github.io/"
+baseURL = "https://hongtaoh.com/"
 languageCode = "en-us"
-title = "郝鸿涛::Hongtao Hao"
-theme = "hugo-xmin"
-googleAnalytics = ""
-disqusShortname = ""
+title = "郝鸿涛:Hongtao Hao"
+theme = "hugo-ht"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
 enableGitInfo = true
@@ -38,27 +36,32 @@ en = "/en/:year/:month/:day/:slug/"
     url = "/cn/blog/"
     weight = 6
 [[menu.cn]]
-    name = "中文首页"
+    name = "关于"
     url = "/cn/"
     weight = 1
 [[menu.cn]]
     name = "日志"
-    url = "cn/blog/"
-    weight = 4
+    url = "/cn/blog/"
+    weight = 2
 [[menu.cn]]
     name = "English"
     url = "/"
-    weight = 6
+    weight = 3
 
-    
 [params]
     description = "Peronal website of Hongtao Hao"
-    homeText = "You just need a Hugo blog from scratch"
+    homeText = "Hongtao Hao's Personal Website"
+    blogDirName = "blog"
+    singleLang = false
+    defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
-    GithubEdit = "https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/"
     favicon = "/ht10.ico"
-    footer = "&copy; Hongtao Hao 2019 -- 2020"
+    copyright = "&copy;"
+    copyrightYear = "2020-2021"
+    GithubEdit = "https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/"
+    GithubRepo = "https://github.com/hongtaoh/hongtaoh.github.io"
+    ContentSource = "https://raw.githubusercontent.com/hongtaoh/hongtaoh.github.io/sources/content/"
 
 [params.logo]
   url = "ht10.png"
@@ -66,15 +69,39 @@ en = "/en/:year/:month/:day/:slug/"
   height = 50.0
   alt = "Hongtao Hao"
 
-  [params.author]
-  en = "Hongtao Hao"
-  cn = "郝鸿涛"
+[params.lang]
 
-  [params.lang]
+    [params.lang.author]
+      en = "Hongtao Hao"
+      cn = "郝鸿涛"
+
+    [params.lang.poweredBy]
+      en = "Made with"
+      cn = "本站驱动"
 
     [params.lang.edit]
-    en = "Suggest an edit of this page"
-    cn = "编辑本页"
+      en = "Suggest an edit of this page"
+      cn = "编辑本页"
+
+    [params.lang.lastupdate]
+      en = "Last modified on"
+      cn = "最后一次修改于"
+
+    [params.lang.Sitelastupdate]
+      en = "Site last updated on"
+      cn = "最近一次更新于"
+
+    [params.lang.subscribe]
+      en = "Subscribe"
+      cn = "订阅"
+
+    [params.lang.sourceCode]
+      en = "Content in"
+      cn = "内容存于"
+
+    [params.lang.license]
+      en = "License"
+      cn = "版权"
 
 [markup]
  defaultMarkdownHandler = "goldmark"
@@ -111,9 +138,9 @@ en = "/en/:year/:month/:day/:slug/"
     tabWidth = 4
 
   [markup.tableOfContents]
-  endLevel = 2
+  endLevel = 3
   ordered = true
-  startLevel = 1
+  startLevel = 2
 
 [imaging]
 quality = 100

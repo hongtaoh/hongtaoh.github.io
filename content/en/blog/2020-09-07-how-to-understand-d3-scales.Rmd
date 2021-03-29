@@ -38,7 +38,7 @@ That is to say, $30$ in the input domain becomes $10$ in the output range, and $
 
 The situation here is depicted in the figure below:
 
-![](/media/enblog/d3_scale_01.png)
+`r blogdown::shortcode("figure", src="/media/enblog/d3_scale_01.png", caption="The situation: from input domain to output range", width="800")`
 
 The question is, what are the corresponding values of $34$, $59$, $109$, and $544$?
 
@@ -118,7 +118,7 @@ barplot(output.range, ylim = c(0, 80),
         main = "Bar heights in output range")
 ```
 
-The first impression would be that it's relatively Okay, since the two seem to be comparable. However, if you look closer, you'll find that on the original scale, the input domain, the third bar is around 3 times taller than the first bar. However, on the transformed scale, the output range, the third bar is only twice as tall as the first. The relative height is not maintained, and therefore, the two results are not comparable. 
+The first impression would be that it's relatively Okay, since the two seem to be comparable. However, if you look closer, you'll find that on the original scale, the input domain, the third bar is around 3 times taller than the first bar. However, on the transformed scale, the output range, the third bar is less than twice as tall as the first one. The relative height is not maintained, and therefore, the two results are not comparable. 
 
 "D3 scales suck", you might say. "What was Mike Bostock thinking? D3 scales did not preserve comparability between the two results and they are misleading!".
 
@@ -130,15 +130,15 @@ Well, it's actually our fault rather than D3 scales'. Before I explain how come 
 
 Suppose the following is the input domain. The starting point is labeled as S and the end E. There are three data points, i.e., A, B, C. The distance between S and A is a, that between A and B is b, that between B and C is c, and that between C and E is d. Then, how will `d3.scaleLinear()` compute the corresponding value for data point A, B and C in the output range?
 
-![](/media/enblog/d3_scale_five_points.png)
+`r blogdown::shortcode("figure", src="/media/enblog/d3_scale_five_points.png", caption="Some data points", width="800")`
 
 Let's say Data point A will become Data point $A'$ in the output range. `d3.scaleLinear()` will get the value of $A'$ this way: First, it computes the proportion of the distance between A and the starting point, to the length, or range, of the entire input domain. This proportion will be $\frac{a}{a+b+c+d}$. Let's denote the starting point in the output range as S', and the length of the output range as $L'$, then $A'$ is $L' * \frac{a}{a+b+c+d}$ away from S`. 
 
 ## What Does d3.scaleLinear() Preserve?
 
-Now that we know how `d3.scaleLinear()` transform data from the input domain to the output range, let's think about what does this transformation preserve. 
+Now that we know how `d3.scaleLinear()` transforms data from the input domain to the output range, let's think about what does this transformation preserve. 
 
-Let's normalize both the input domain and the output range. That is, we imagine that the length of the input domain and the output range is both $1$ unit. Then, let's divide both intervals into 100 parts. If point $A$ in input domain sits right on the dividing line of the 2nd and the 3rd part, then, in the output range, $A'$ will also sit on the dividing line of the 2nd and the 3rd part. Right? That's why we say that D3 scales preserves **relative positions** of data points. 
+Let's normalize both the input domain and the output range. That is, we imagine that the length of the input domain and the output range is both $1$ unit. Then, let's divide both intervals into 100 parts. If point $A$ in input domain sits right on the dividing line of the 2nd and the 3rd part, then, in the output range, $A'$ will also sit on the dividing line of the 2nd and the 3rd part. Right? (If you do not understand why, please refer to [/#how-does-d3.scalelinear-work](How does d3.scaleLinear() work?)) That's why we say that D3 scales preserves **relative positions** of data points. 
 
 This property will be super useful in coordinates, for example, when we are plotting scatter plots. 
 
@@ -160,7 +160,7 @@ In the output range:
 
 $$x_(a') = \frac{1}{3} X', y_(a') = \frac{1}{4} Y'$$
 
-I won't list these for $B, B', C, and C'$ here. 
+I won't list these for $B, B', C, C'$ here. 
 
 You see, for each data point, the relative coordinate **values** change but its relative **position** to both axes remains the same. 
 

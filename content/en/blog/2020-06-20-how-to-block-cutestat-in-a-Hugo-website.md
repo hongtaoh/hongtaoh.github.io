@@ -22,7 +22,7 @@ Disallow: /
 
 The problem is how and where to put this file in Hugo?
 
-# Settting `config.toml` And Creating `robots.txt`
+## Settting `config.toml` And Creating `robots.txt`
 
 Hugo has [an answer](https://gohugo.io/templates/robots/):
 
@@ -41,12 +41,10 @@ Disallow: /
 
 When it's done, put it as `/layouts/robots.txt` or `/themes/<THEME>/layouts/robots.txt`, as Hugo's [official guideline](https://gohugo.io/templates/robots/#robotstxt-template-lookup-order) suggests. 
 
-# Removing Data on CuteStat
+## Removing Data on CuteStat
 
 Then, go back to CuteStat's [Update or Remove](https://www.cutestat.com/remove), input your domain name and chose "Remove Information". CuteStats now won't be able to crawl your website anymore. 
 
-Hope it works. 
-
-
+Hope it works for you. 
 
 [^1]: I assumed that your config file is a `toml` file. 

@@ -18,6 +18,6 @@ After class 是说某一节课结束，而 after classes 则是说一整天的�
 2. Xiao Ming, let's go partying after classes. 
 小明，**放学后**咱一起去开趴吧。
 
-# 参考
+## 参考
 1. [https://english.stackexchange.com/questions/406771/after-class-vs-after-classes](https://english.stackexchange.com/questions/406771/after-class-vs-after-classes)
 2. [https://hinative.com/en-US/questions/438363](https://hinative.com/en-US/questions/438363)

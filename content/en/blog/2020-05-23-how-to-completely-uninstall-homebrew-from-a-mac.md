@@ -7,11 +7,11 @@ draft: false
 toc: false
 ---
 
-My Macbook Air is pretty old[^1], so I cannot put up with any useless files that take up a lot of space on my laptop. 
+My Macbook Air is pretty old[^1], so I cannot put up with any useless files that take up a lot of space. 
 
 When installed, Homebrew takes up over 400MB. That's a lot of space, at least for me. 
 
-I installed Homebrew and then I wanted to delete it. So I went to `/usr/local/bin/`. I was lost. I couldn't know which files to delete. Since `/usr/local/bin/` is a hidden folder in Mac, I don't want to mess up with it. However, my urge to delete files I don't need to use was so strong that I ended up delete a lot of files except for `bin` in this folder[^2]. 
+I installed Homebrew and then I wanted to delete it. So I went to `/usr/local/bin/`. I was lost. I couldn't know which files to delete. Since `/usr/local/bin/` is a hidden folder on Mac, I don't want to mess up with it. However, my urge to delete files I don't need to use was so strong that I ended up deleting all files except for `bin` in this folder[^2]. 
 
 Out of idol curiosity, and a desire to make sure I didn't delete any important files, I want to check what files will be created when I install Homebrew. 
 

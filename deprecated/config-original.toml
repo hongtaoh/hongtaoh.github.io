@@ -1,0 +1,117 @@
+baseURL = "https://hongtaoh.github.io/"
+languageCode = "en-us"
+title = "郝鸿涛::Hongtao Hao"
+theme = "hugo-xmin"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+footnotereturnlinkcontents = "↩"
+enableGitInfo = true
+enableRobotsTXT = true
+
+[permalinks]
+cn = "/cn/:year/:month/:day/:slug/"
+en = "/en/:year/:month/:day/:slug/"
+
+[[menu.en]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.en]]
+    name = "Vitae"
+    url = "/en/vitae/"
+    weight = 2
+[[menu.en]]
+    name = "Projects"
+    url = "/en/projects/"
+    weight = 3
+[[menu.en]]
+    name = "Blog"
+    url = "/en/blog/"
+    weight = 4
+[[menu.en]]
+    name = "APAD"
+    url = "/en/apad/"
+    weight = 5
+[[menu.en]]
+    name = "中文"
+    url = "/cn/blog/"
+    weight = 6
+[[menu.cn]]
+    name = "中文首页"
+    url = "/cn/"
+    weight = 1
+[[menu.cn]]
+    name = "日志"
+    url = "/cn/blog/"
+    weight = 4
+[[menu.cn]]
+    name = "English"
+    url = "/"
+    weight = 6
+    
+[params]
+    description = "Peronal website of Hongtao Hao"
+    homeText = "You just need a Hugo blog from scratch"
+    MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
+    MathJaxVersion = "2.7.5"
+    GithubEdit = "https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/"
+    favicon = "/ht10.ico"
+    footer = "&copy; Hongtao Hao 2019 -- 2020"
+
+[params.logo]
+  url = "ht10.png"
+  width = 50.0
+  height = 50.0
+  alt = "Hongtao Hao"
+
+  [params.author]
+  en = "Hongtao Hao"
+  cn = "郝鸿涛"
+
+  [params.lang]
+
+    [params.lang.edit]
+    en = "Suggest an edit of this page"
+    cn = "编辑本页"
+
+[markup]
+ defaultMarkdownHandler = "goldmark"
+
+  [markup.goldmark]
+
+    [markup.goldmark.extensions]
+    definitionList = true
+    footnote = true
+    linkify = false
+    strikethrough = true
+    table = true
+    taskList = true
+    typographer = true
+
+    [markup.goldmark.parser]
+    attribute = true
+    autoHeadingID = true
+
+    [markup.goldmark.renderer]
+    hardWraps = false
+    unsafe = true
+    xHTML = false
+  
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "pygments"
+    tabWidth = 4
+
+  [markup.tableOfContents]
+  endLevel = 3
+  ordered = true
+  startLevel = 2
+
+[imaging]
+quality = 100
+      

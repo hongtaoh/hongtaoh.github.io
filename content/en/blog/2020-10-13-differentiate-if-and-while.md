@@ -6,7 +6,7 @@ slug: if-while
 draft: false
 toc: false
 ---
-For beginners, whichever programming language you are learning, it might be difficult to differentiate the difference between `if` statements and `while` loop. In this blog post, I'll take Python and Javascript as examples to illustrate the differences between the two. 
+For beginners, whichever programming language you are learning, it might be difficult to distinguish between an `if` statement and a `while` loop. In this blog post, I'll take Python and Javascript as examples to illustrate the differences between the two. 
 
 Both statements are made up of two parts:
 
@@ -15,7 +15,7 @@ Both statements are made up of two parts:
 
 Conditional code will be execuated only if the condition statements are true. 
 
-Okay, those are the similaries. What about the differences? The major difference is that in an `if` statement, the conditional code will be execuated only once and then computers move on to the next, just like life does. However, in a `while` loop, after the conditional code is execuated, computers will go back to the **original** statement and assess it. This means that **in a `while` loop, if the conditional code does not change validity of the condition statement, the loop will keep going forever**, well, at least until your computer runs out of battery. 
+Okay, those are the similaries. What about the differences? The major difference is that in an `if` statement, the conditional code will be execuated only once and then computers move on to the next, just like life does. However, in a `while` loop, after the conditional code is execuated, computers will go back to the **original** statement and assess it. This means that **in a `while` loop, if the conditional code does not change the validity of the condition statement, the loop will keep going forever**, well, at least until your computer runs out of battery. 
 
 Let's say we have this dataset: `a = [1, 2, 3, 4, 5, 9, 10, 12, 13, 15]` and we want to know how many number are there that are greater than `$10$`. 
 
