@@ -1,6 +1,6 @@
 ---
 title: A Paper A Day
-type : apad
+type: apad
 ---
 {{<block class="reminder">}}
 I am applying for PhD positions for 2021 Fall. To be fair for other applicants, I am considering temporarily suspeding updating this page until my application results are out.
@@ -9,6 +9,1044 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 {{<block class="note">}}
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. 
 {{<end>}}
+
+## 2021-02-26
+
+Kim, Y. S., Hofman, J. M., & Goldstein, D. G. (2020). Effectively Communicating Effect Sizes. In *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI’20). Association for Computing Machinery, New York, NY, USA.*
+
+- Outcome uncertainty is more useful for individuals than inferential uncertainty. The former is predicting what an individual outcome is likely to be, whereas the latter one shows the average for a large group. It might well be that the group with a larger mean has more variability, whereas the other group (with a smaller mean) is more reliable. Wise people will choose the second rather than the first.
+
+   - Cohen's *d*, expressed as `$d = \frac{\mu_1 - \mu_2}{\sigma}$`, conveys information about both the treatment effect and the variability in individual outcomes. 
+
+- Probability of superiority: how often a randomly chosen individual in one group scores higher (or slower) than a randomly chosen individual in another group. 
+
+PP. 1-3
+
+## 2021-02-25
+
+Finished Hofman et al. (2020)
+
+- People tend to overestimate the effect size and understated the variability in outcomes when presented 95% confidence intervals that show *inferential* uncertainty, compared to when presented 95% prediction intervals that show *outcome* uncertainty. 
+
+  For example, suppose we are comparing heights of men with those of women: 
+
+    - *Inferential* uncertaity is how confident we are about our estimation of **each group's average height**, based on **our measurement**. So error bars will extend 1.96 (sometimes 1.0) *standard error* above and below the mean. 
+
+    - *Outcome* uncertainty is the variability of **each individual's height around their group's mean**. Therefore, error bars will extend 1.96 (sometimes 1.0) *standard deviation* above and below the mean. 
+
+  See Fig. 1 for illustration. 
+
+- People have the largest misperceptions when the effect size is small. Unfortunately, small effect sizes are the norm in scientific studies, which use 95% CI more often than 95% PI. This indicates that readers are likely to exaggerate the scientific results they encounter. 
+
+{{<block class="note">}}
+I like this study pretty much. It's a little long but worth the reading. 
+{{<end>}}
+
+## 2021-02-24
+
+Contined with Hofman et al. (2020)
+
+PP. 4-7
+
+## 2021-02-23
+
+Hofman, J. M., Goldstein, D. G., & Hullman, J. (2020, April). [How visualizing inferential uncertainty can mislead readers about treatment effects in scientific results](http://jakehofman.com/pdfs/visualizing-inferential-uncertainty.pdf). In *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems* (pp. 1-12).
+
+PP. 1-4
+
+## 2021-02-22
+
+Hao, K. (2019). [We analyzed 16,625 papers to figure out where AI is headed next](https://www.technologyreview.com/2019/01/25/1436/we-analyzed-16625-papers-to-figure-out-where-ai-is-headed-next/). *MIT Technology Review*. 
+
+Artificial intelligence is powered by deep learning, which are algorithms that use statistics to identify patterns in data. This capability enables computers to mimick human skills, and to provide recommendations to users (for example, in Google, Facebook, and Netflix).
+
+Papers in arXiv's artificial intelligence section focused on machine learning in around 1995-2005, on neural networks in around 2010-2015, and on reinforcement learning in around 2015-2019. 
+
+Before around 2005, papers in arXiv's AI section focused on "knowledge-based reasoning", trying to recreate human seasoning using man-made rules. After around 2005, the attention changed to machine learning, which is a parent term that includes deep learning. Rather than writing rules, machine learning trains computer programs to extract rules from a sea of data.
+
+Besides neural networks, there are other machine learning methods, for example, "bayesian networks", "markov methods", and "support vector machines", but nueral networks dominated the playground since around 2016. 
+
+Three types of machine learning: supervised, unsupervised, and reinforcement learning. Reinforcement learning wasn't a new idea, but it didn't gain much momentum until AlphaGo's groundbreaking success.
+
+## 2021-02-21
+
+Continued with Kim et al. (2020)
+
+## 2021-02-20
+
+Continued with Kim et al. (2020)
+
+People overestimated both error and variance of effect size when only told the mean differences. 95% confidence intervals with visualizations led to the largested overestimation, as shown in Figure 2. Presending the mean differences in absolute or percentage terms, or simply telling people difference exists, made people overestimate the effect size as well, but to a lesser degree.
+
+Informing people the variability helped alleviate this issue, with directly telling people the probablity of superiority performing the best (although the difference did not reach statistical significance).
+
+{{<block class="reminder">}}
+I do not really understand this paper. Will come back later. 
+{{<end>}}
+
+
+## 2021-02-19 (completed on 2021-02-20)
+
+Kim, Y. S., Hofman, J. M., & Goldstein, D. G. (2020). [Effectively Communicating Effect Sizes](https://cj2021.northeastern.edu/files/2020/02/CJ_2020_paper_7.pdf). In *[Computation + Journalism Symposium 2021](https://cj2021.northeastern.edu/)*. 
+
+PP 1-4
+
+
+## 2021-02-18
+
+Completed Sekara et al. (2018)
+
+- As Fig. 1(B) shows, the percentage of publications in both *Nature* and *Physical Review D* by new PIs have been deceasing in the past two decades. The figure also shows that different types of journals have different patterns regarding the share of papers by different categories of PIs. 
+
+- Chaperone effect `$C$` is measured as
+
+   `$$ c / c_random $$`
+
+   where `$c$` is the ratio of **the number of authors who became last authors from nonlast authors** to **the number of those who never made this transition**. `$c_random$` is the same ratio but in a system where the order of authors is randomly permuted. This randomnization is necessary if we want to compare the chaperone effect of different scientific fields. If we measure chaperone effect by `$c$` rather than `$C$`, we fail to consider the fact that `$c$` might be influenced by individual productivity, team size, or simply random factors. 
+
+   If `$C$` is larger one 1, then the chaperone effect exists. 
+
+- Fig. 2 shows that the chaperone effect is strongest in interdisciplinary fields, biology, and medicine, and weakest in Mathematics. 
+
+- An interesting question to ask is whose papers have more impacts, those by new PIs, or those by chaperoned and established PIs. The authors assumed that those by new PIs have more impact because it is difficult to publish in a journal, say, in *Nature*, if you didn't have a pubication record there. However, results show that papers by established and chaperoned PIs receive more citations. 
+
+- The chaperone effect is stronger in prestigious, interdisciplinary journals with a general audience than in field-specific journals. 
+
+## 2021-02-17 (completed on 2021-02-18)
+
+Sekara, V., Deville, P., Ahnert, S. E., Barabási, A. L., Sinatra, R., & Lehmann, S. (2018). The chaperone effect in scientific publishing. *PNAS, 115*(50), 12603-12607.
+
+- Three kinds of principle investigators (PIs, last author in a paper):
+  
+  1. New PIs have never published in a specific journal.
+  2. Chaperoned PIs have published in a journal previously as nonlast authors.
+  3. Established PIs have published in a journal before as last authors. 
+
+## 2021-02-16 (completed on 2021-02-17)
+
+Continued with Strother et al. (2021)
+
+Understanding the methodology:
+
+- Whether students' political ideology changed significantly: compare the ideology score in [Table 1](https://www.pnas.org/content/118/2/e2015514117#T1) using a two-tailed *t* test. 
+
+- Whether roommoates' ideology predicted students' ideology changes: using OLS regressions with roommates' ideology at wave 1 as the independent variable, students' ideology at wave 2 as the dependent variable, and students ideology at wave 1 as the control variable. The authors also included other control variables in different models, as can be seen in [Table 3](https://www.pnas.org/content/118/2/e2015514117#T3). The range of *p* values was (0.012, 0.069). The association is significant, was its effect size is small. 
+
+{{<block class="reminder">}}
+I did not understand the method which focuses on "students assigned to roommates who had different baseline political views" (P. 4)
+
+Will come back to review later. 
+{{<end>}}
+
+## 2021-02-15 (completed on 2021-02-16)
+
+Strother, L., Piston, S., Golberstein, E., Gollust, S. E., & Eisenberg, D. (2021). College roommates have a modest but significant influence on each other’s political ideology. *PNAS, 118*(2).
+
+- Table 1 shows that first-year college students tend to be liberal (compared to conservative), which is consistent with common understanding. However, contrary to popular claims, after the first year, these stendents became a little bit more **conservative**, rather than libral. 
+
+- Living with a roommate of different ideology has statistically influence on students' ideology change (moved closer to their roommnates).
+
+PP. 1-4
+
+## 2021-02-14
+
+Finished Kubin et al. (2021)
+
+- Perceptions of rationality mediated the relationship between stance based on personal experiences and increased respect. 
+
+- When someone disagrees with you on topics related to morality or politics, he or she has more doubts about your argument if it is based on facts (compared to personal experiences).
+
+## 2021-02-13
+
+Kubin, E., Puryear, C., Schein, C., & Gray, K. (2021). [Personal experiences bridge moral and political divides better than facts](https://www.pnas.org/content/118/6/e2008389118.full). *PNAS, 118*(6).
+
+- People who base their viewpoints on personal experiences (rather than on facts) are considered more rational and are respected more by the opponents. Opponents are also more willing to interact with them. 
+
+- To increase perceived rationality, personal experiences are better to be relevant, and harm-based. 
+
+- To foster respect, personal experiences are better to be "personal". 
+
+PP. 1-4
+
+## 2021-02-12
+
+Gates, A., Gysi, D., Kellis, M., & Barabási, A. L. (2021). [A wealth of discovery built on the Human Genome Project — by the numbers](https://www.nature.com/articles/d41586-021-00314-6). *Nature*.
+
+   - 22% of publications on genes referenced only 1% of all genes. This might be due to **preferential attachment** ("rich-gets-richer"). Risk-averse researchers and funders might have been afraid of exploring uncharted territories. 
+
+   - Complexity laies in the interactions of individual components. Understanding components is necessary, but not sufficient, to know a system. 
+
+## 2021-02-11
+
+Schulz, L., Rollwage, M., Dolan, R. J., & Fleming, S. M. (2020). [Dogmatism manifests in lowered information search under uncertainty](https://www.pnas.org/content/117/49/31527.full). *PNAS, 117*(49), 31527-31534.
+
+I did not really understand the details of this paper. That said, the conclusion is clear:
+
+Dogmatic individuals are less likely to seek out additional information, especially when their initial decisions are uncertain. This is worrisome because after dogmatic people encounter fake news, they are less likely to seek out correcting pieces. 
+
+## 2021-02-10
+
+Choi, S. H., Rao, V. D., Gernat, T., Hamilton, A. R., Robinson, G. E., & Goldenfeld, N. (2020). [Individual variations lead to universal and cross-species patterns of social behavior](https://www.pnas.org/content/117/50/31754). *PNAS, 117*(50), 31754-31759.
+
+I could not understand the details in this paper. 
+
+## 2021-02-09
+
+Finished Killingsworth (2020)
+
+- As can be seen in [Fig. 1](https://www.pnas.org/content/pnas/118/4/e2016976118/F1.large.jpg), both current happiness (experienced well-being) and remembered happiness (evaluative well-being) grow linearly with **log(income)**, **without a plateau**. 
+
+- Larger household income below $80,000 had a stronger correlation with decreased negative feelings compared to people having household income above $80,000. Positive feelings grow evenly aross the income range. 
+
+- Sense of control of one's life explained 74% of the relationship between income and experienced well-being. 
+
+- People having smaller household income were happier if they attributed less importance to money; Those who earn a lot were happier if they attributed more importance to moeny. 
+
+- Across the income range, the more people equated money and success, the less happier they felt. 
+
+- The main difference of this study is that 1) respondents responded in real time when they saw the prompts from the app; 2) happiness was measured using a continuous rather than dichotomous scale. 
+
+I like this study. 
+
+{{<block class="note">}}
+See [this](https://lindeloev.net/new-pnas-paper-income-is-a-poor-way-to-improve-well-being/) criticism.
+{{<end>}}
+
+## 2021-02-08
+
+1. Finished Stockard et al. (2021)
+
+- Non-URM (underrepresented minorities) men reported the greatest professional support from peers and postdocs, followed by non-URM women. 
+
+- URM students were twice as likely to report that they did not receive enough financial support for living. 
+
+- Men were more likely than women to express greater commitment to completing the PhD and continuing research in the chemistry field. **Amazingly, within each gender group, URM students were more likely to do so.**
+
+- When we do not consider other factors, students having a supportive advisor were more likely to finish the PhD, find a postdoc, and have an academic career at a research institute. However, this positive effect on women is not found in bigger and more renowned chemistry departments. 
+
+2. Killingsworth, M. A. (2021). Experienced well-being rises with income, even above $75,000 per year. *PNAS, 118*(4).
+
+PP. 1-2
+
+## 2021-02-07
+
+1. Finished Chen at el. (2020)
+
+I skimmed through the rest of this paper. 
+
+2. Stockard, J., Rohlfing, C. M., & Richmond, G. L. (2021). Equity for women and underrepresented minorities in STEM: Graduate experiences and career plans in chemistry. *PNAS, 118*(4).
+
+- Women who are underrepresented minorities (URM) were the least satisfied with their advisor-student relationship. Other women were the next least satisfied. URM men were were the most satisfied with the relationship. 
+
+PP. 1-3
+
+## 2021-02-06
+
+Chen, Y., Jiang, M., & Kesten, O. (2020). [An empirical evaluation of Chinese college admissions reforms through a natural experiment](https://www.pnas.org/content/117/50/31696.full). *PNAS, 117*(50), 31696-31705.
+
+PP. 1-5
+
+## 2021-02-05
+
+Finished Sterling et al. (2020)
+
+### Results
+
+- Prior to graduation, the level of self-efficacy of women is lower than that of men.
+
+- Without considering any other factors, self-efficacy is positively related to salary in initial jobs. 
+
+- For engineering and CS undergraduates, in their first jobs after they graduate, women's salaries are lower than men's. 
+
+- Gender does not predict how important salary is important to a person. 
+
+- Women do emphasize workplace culture more, but this emphasis is associated with higher rather than lower compensation. 
+
+- Self-efficacy is a significant mediator for the relationship between being female and the salary. (See [Figure S5](https://www.pnas.org/content/pnas/suppl/2020/11/11/2010269117.DCSupplemental/pnas.2010269117.sapp.pdf))
+
+- Self-efficacy influences whether a person intends to enter jobs related to engineering and computer science. 
+
+
+## 2021-02-04
+
+Sterling, A. D., Thompson, M. E., Wang, S., Kusimo, A., Gilmartin, S., & Sheppard, S. (2020). The confidence gap predicts the gender pay gap among STEM graduates. *PNAS, 117*(48), 30303-30308.
+
+This paper investigates why there is a gender pay gap among STEM graduates. They hypothesized that engineering self-efficacy (ESE) is the reason. To test this hypothesis, they surveyed 559 college students majoring in engineering and computer science in 2015 (when students are still enrolled in the program), 2016, and later in 2017 when students just graduated and entered the workforce. 
+
+### Theories 
+
+Two possible reasons why women earn less: 1) women are socialized to believe money is not as important as family; 2) women prefer inclusive environments to competitive ones, with the latter more favorable to higher salaries. 
+
+
+## 2021-02-03
+
+Andrasfay, T., & Goldman, N. (2021). Reductions in 2020 US life expectancy due to COVID-19 and the disproportionate impact on the Black and Latino populations. *PNAS, 118*(5).
+
+- The COVID-19 pandemic is projected to cause a decline in 2021 US life expectancy by 1.13 y. This decline is larger than that in other developed countries, which already had higher life expectancy than the US before the pandemic. 
+
+- The reduction in life expectancy in the US is not the same for each racial group. The reduction for Black (2.10 y) and Latino (3.05 y) is much larger than that for Whites (0.68 y). 
+
+- For Black and Latino populations, younger people face higher burden of mortality related to the COVID-19. This might be because their jobs are less compatible with remote working and therefore they have to expose themselves to virus to earn money during the pandemic. 
+
+- These racial differences in reduction in life expectancy will result in 39% increase in the life expectancy gap between the Black population and Whites (from 3.6 y in 2017 to 5.06 y in 2020). The life expectancy advantage that Latino population has relative to Whites will decrease from 3.3 y in 2017 to 0.93 y in 2020, a 70% plunge.  
+
+## 2021-02-02
+
+Finished Luhrmann et al. (2021)
+
+This study tries to answer **why some people are more likely than others to experience the presence of gods and spirits**. In four studies, the authors, possibly among others, interviewed and surveyed local residents having faith (in charismatic evangelical Christianity or the local religion) and urban undergraduate students in four places: US, Ghana, Thailand and China. 
+
+The study found that **porosity** and **absorption** played distinct roles in people's spiritual experiences across different cultures and religions. 
+
+**Porosity** is a cultural attribution that defines the boundary between "mind" and the "world". People living in cultures of different levels of porosity might different viewpoints on whether their mental experiences come from and have influences on, the outside world. 
+
+**Absorption** is a personal tendency to be immersed in their own minds. 
+
+## 2021-02-01
+
+Luhrmann, T. M., Weisman, K., Aulino, F., Brahinsky, J. D., Dulin, J. C., Dzokoto, V. A., ... & Smith, R. E. (2021). Sensing the presence of gods and spirits across cultures and faiths. *PNAS, 118*(5).
+
+PP. 1-4
+
+## 2021-01-31
+
+McDermott, A. (2021). [Science and Culture: At the nexus of music and medicine, some see treatments for disease](https://www.pnas.org/content/118/4/e2025750118.short). *PNAS, 118*(4).
+
+Music seems to have medical benefits. Musical treatment might alleviate pain, and help delirium patients and those suffering from Parkinson's. 
+
+Early studies of music therapy were not necessarily "scientific" in the sense that many of them were not properly blind trials. Right now, there are some ongoing studies funded by NIH.
+ 
+
+## 2021-01-30
+
+1. Skimmed through the rest of [Fienberg (2006)](https://projecteuclid.org/download/pdf_1/euclid.ba/1340371071). Too difficult for me to grasp now. 
+
+2. [Should You Go To Grad School?](https://www.buzzfeed.com/duncanwatts/should-you-go-to-grad-school) by Duncan Watts
+
+1/4 on 2021-01-30 (completed on 2021-01-31, but not at the APAD time period)
+
+## 2021-01-29
+
+1. Finished West et al. (2013)
+
+Representation of women increased in general: in published academic papers from 1665-1989, 15.1% of the authors were women. This number increased to 27.2% for papers from 1990-2012. 
+
+Figure 3 shows that the percentage of women as first authors increased but they are much less likely than men to be the last authors.
+
+2. Fienberg, S. E. (2006). [When did Bayesian inference become" Bayesian"?](https://projecteuclid.org/download/pdf_1/euclid.ba/1340371071). *Bayesian analysis, 1*(1), 1-40.
+
+PP. 1-2
+
+## 2021-01-28
+
+1. Zhao, Z. D., Yang, Z., Zhang, Z., Zhou, T., Huang, Z. G., & Lai, Y. C. (2013). [Emergence of scaling in human-interest dynamics](https://www.nature.com/articles/srep03472). *Scientific reports, 3*(1), 1-7.
+
+I skimmed through it. 
+
+2. West, J. D., Jacquet, J., King, M. M., Correll, S. J., & Bergstrom, C. T. (2013). [The role of gender in scholarly authorship](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066212). *PloS one, 8*(7), e66212.
+
+PP. 1-3
+
+
+## 2021-01-27
+
+Dodds, P. S., Muhamad, R., & Watts, D. J. (2003). An experimental study of search in global social networks. *Science, 301*(5634), 827-829.
+
+- 98,847 people registered to participate in a "global search" task. They were to reach the person assigned to them via email. To do so, they were asked to relay the message to people they think are "closer" to their target. Receivers of the relayed message were asked to do the same thing. 18 targets were from the US, Estonia, Indian, Australia and Norway. 
+
+- 61,168 people from 166 countries relayed the message, generating 24,163 message chains. More than half of these people were middle class and college educated North Americans. (Background information: the study was published in 2003.)
+
+- Two reasons stood out when people were asked why they sent a message to specific receipients: geographical proximity, and similar occupation. 
+
+- Hubs were not important for success of searches.
+
+- Weak ties are important. 
+
+- It is important that people have incentives to proceed or confidence in the search; otherwise, it's difficult to reach the target.  
+
+## 2021-01-26 (Completed on 2021-01-27)
+
+Finished Zhang et al. (2006)
+
+E-learning with non-interactive videos did not allow students to score higher or to experience more satisfaction than that without video at all. This means that to make the best of e-learning, interactivity in videos is necessary. 
+
+Examples of interactivity: the ability to see slides alongside instructional videos; to control the scroll bar of videos; to take notes while watching the video; keyword search of the slides; etc. 
+
+## 2021-01-25
+
+1. Finished Mei (2014)
+
+2. Ross, J., Irani, L., Silberman, M. S., Zaldivar, A., & Tomlinson, B. (2010). [Who are the crowdworkers? Shifting demographics in Mechanical Turk](https://d1wqtxts1xzle7.cloudfront.net/43592369/Who_are_the_crowdworkers_shifting_demogr20160310-18708-cv9zu3.pdf?1457633224=&response-content-disposition=inline%3B+filename%3DWho_are_the_crowdworkers.pdf&Expires=1611618299&Signature=GSdKfyzUVPe0B17iNsnrzPJSegBUu4xxMLTWCebwK2IzBgCWTgwUO~TG415-PM7UNMbUuWdjc3Ng8ISS7~h1PQL~OvtsqaF23PWqV0gSxa63N-RejLrj48LeF5n3aQ3T3BZTS-SGLgzxMzKvqB0rT9m-zRA~7ozd-~sVegU2LWwoeEWMBvYZLAtk2-zy3516J1vyhZl5GvRqZjOsSIvtd4H~GXL-fKkr2e5n0dEnwllPfF2OgIKYcLns68lKxWa7yMCHXeAvPzvTdyPlB5nbbXN-sZ2oANxLr6GzkjvxAzMbYeQR4E~2MGpgutPrsUs3chQ5fgDSE-f7BdH8S4TGVw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA). In *CHI'10 extended abstracts on Human factors in computing systems* (pp. 2863-2872).
+
+3. Zhang, D., Zhou, L., Briggs, R. O., & Nunamaker Jr, J. F. (2006). [Instructional video in e-learning: Assessing the impact of interactive video on learning effectiveness](https://www.sciencedirect.com/science/article/pii/S0378720605000170?casa_token=SDbKo_-6K_oAAAAA:XFgAlkvzC-fZ5Ti1pwaVhashhqrTH0O44B7XfZEitDUEipSGtkHGT5Hsacqu4ifbQ6FJpj6TZg). *Information & management, 43*(1), 15-27.
+
+PP. 1-4
+
+## 2021-01-24
+
+1. Finished Miao et al. (draft)
+
+2. Mei, H. (2014). [Women's property within the structure of marriage in the Neo-Babylonian Period](https://search.proquest.com/openview/6654abfcb1812c734d3f96ff87d0ac88/1?pq-origsite=gscholar&cbl=237823). *Journal of Sino-Western Communications, 6*(2), 153.
+
+PP. 1-8
+
+## 2021-01-23
+
+Miao, L., Murray, D., Jung, W-S., Lariviere, V., Sugimoto, C., & Ahn, Y-Y. (draft). The Universal structure of national scientific development
+
+- Compared to 1973-1977, countries in the world during 2013-2017 are more specialized in one of three research clusters (Natural, Physical, and Societal). This means that most countries' scientific research is becoming less diversified. 
+
+- The scientific diversity of a country highly correlates with its GDP. 
+
+- Scientific diversity is very predictive of future economic growth of a country; more so than Economic Complexity Index (ECI). 
+
+PP. 1-18. 
+
+## 2021-01-22
+
+Finished Alessandretti et al. (2020)
+
+The authors proposed a model: "container model". This model, if given the trajectories of an individual, can infer the hierarchical levels of the mobility traces, and the size of each level. Based on the mobility traces of more than 700K people, the authors found that the mobility of these people has four hierarchical levels. This means that day-to-day human mobilty is not scale-free. However, when we aggregate displacements across containers (I do not fully understand what this means, though), human mobility is scale-free. 
+
+Fig. 2 shows that container models does a much better job than other models in predicting mobility traces. 
+
+{{<block class="reminder">}}
+I do have a question, and this is partly because this article is too technical for me: if we can infer the results in Fig. 2 from **real** data, what is the use of this container model, which has to feed on **real** data?
+{{<end>}}
+
+## 2021-01-21
+
+1. Zhang, R. (2017). [The stress-buffering effect of self-disclosure on Facebook: An examination of stressful life events, social support, and mental health among college students](https://www.sciencedirect.com/science/article/pii/S0747563217303643?casa_token=JdvXJVVAWoUAAAAA:NJuSV64wLomjzXcTS7oXdpvdx8GTaGVmOJE6s9iSGzzeEbZRtV2EKer9KRR1-lgschogVYckpQ). *Computers in Human Behavior, 75*, 527-537.
+
+560 surveyed undergraduate students in Hong Kong tend to open up when in stress and their self-disclosure on Facebook moderates the relationship between stress and mental health. Facebook disclosure seems to be positively related to decreased depression. 
+
+2. Alessandretti, L., Aslak, U., & Lehmann, S. (2020). [The scales of human mobility](https://sci-hub.st/10.1038/s41586-020-2909-1). *Nature, 587*(7834), 402-407.
+
+PP. 1-2
+
+## 2021-01-20
+
+Piwowar, H., Priem, J., Larivière, V., Alperin, J. P., Matthias, L., Norlander, B., ... & Haustein, S. (2018). [The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles](https://peerj.com/articles/4375/?utm_source=TrendMD&utm_campaign=PeerJ_TrendMD_0&utm_medium=TrendMD). *PeerJ, 6*, e4375.
+
+- What is the share of open access journal articles
+
+   Around 27.9% of all articles with a DOI. Recent articles are more likely to be open access (See [Fig. 2B](https://peerj.com/articles/4375/#fig-2)). 
+
+- Open access articles received 18% more citation than if it were not open access. This is only correlation, not causation. It might well be that authors only made their most impactful work open access. 
+
+## 2021-01-19
+
+1. Skimmed through the rest of Ogden et al. (2014)
+
+Key findings: Obesity has been prevelent among American youths and adults from 2003 to 2012. No significant changes in the prevelence were found. This means that obesity is still a problem for the United States. 
+
+2. Blumenstock, J., Cadamuro, G., & On, R. (2015). Predicting poverty and wealth from mobile phone metadata. *Science, 350*(6264), 1073-1076.
+
+The authors got access to detailed cell records data of 1.5 million subscribers in Rwanda. They did a phone survey involving 856 individuals, who were among the 1.5 million subscribers. The authors built a model that can predict an individual's wealth based on these 856 individuals' answers and their cell records. The authors used this model to predict the wealth of Rwanda by district and found that it very well matched the actual wealth index as computed from a national survey of over 10k households in Rwanda. 
+
+The authors argued that administering a national survey is very slow and costly. Predicting wealth from cell phone data is fast and relatively cheap. This method is accessible because a considerable number of people in developing countries are using cell phones now. 
+
+## 2021-01-18
+
+1. Finished Bail et al. (2018)
+
+2. Ogden, C. L., Carroll, M. D., Kit, B. K., & Flegal, K. M. (2014). [Prevalence of childhood and adult obesity in the United States, 2011-2012](https://jamanetwork.com/journals/jama/articlepdf/1832542/joi140013.pdf). *Jama, 311*(8), 806-814.
+
+PP. 1-4
+
+## 2021-01-17
+
+Bail, C. A., Argyle, L. P., Brown, T. W., Bumpus, J. P., Chen, H., Hunzaker, M. F., ... & Volfovsky, A. (2018). Exposure to opposing views on social media can increase political polarization. *PNAS, 115*(37), 9216-9221.
+
+Does exposure to social media increase or decrease belief polarization? This study tries to answer this question via a field experiment lasting for one and a half months on Twitter. The authors hired a company to recruit Twitter users who identify themselves as Republicans and Democrats. 1652 people participated in the study (901 Democrats and 751 Republicans). 
+
+Later, participants were invited to follow a Twitter bot that would retweet 24 messages/day for a month. The bot were designed to retweet counterattitudinal messages to the participants, i.e., Democrats would be assigned to a conservative bot and Republicans to a liberal bot. Participants did not know what types of bots they were going to be assigned to. Among those invited to follow a bot, 64.9% of Democrats and 57.2% of Republicans accepted the invitation. 
+
+[Fig. 1](https://www.pnas.org/content/pnas/115/37/9216/F1.large.jpg) provides an excellent summary of the experiment procedure. 
+
+Results: Treated Democrats became slightly more liberal but the effects were not statistically significant. Republicans became significantly more conservative posttreatment. 
+
+PP. 1-5
+
+## 2021-01-16 (completed on 2021-01-17)
+
+Finished Park et al. (2021)
+
+- Social networks of those following pages of Places of Worship, Community Amenities, Bars and Pubs, Indoor Recreation, and Performing Arts had two types of members: core members who are closely connected with each other, and other members who are loosely-connected. This is called a "core-periphery structure". A network with this structure indicates that there are "regulars" who visit the place often. Non-regulars tend to be friends of a "regular". 
+
+- The fact that people do similar things in two places does not mean that the two social networks have more similarities. For example, the friendship network of Bars and Pubs is closer to that of Community Amenities than to that of Restaurants. 
+
+## 2021-01-15 (completed on 2021-01-16)
+
+1. Finished Fire, M., & Guestrin, C. (2019).
+
+2. Park, J., State, B., Bhole, M., Bailey, M., & Ahn, Y-Y. (2021). [People, Places, and Ties: Landscape of social places and their social network structures](https://arxiv.org/abs/2101.04737). arXiv.
+
+The authors treated Facebook Pages as physical "third places" and studied the network structure of these Pages' followers. They found networks of those following pages of Outdoor Recreation, Indoor Recreation, Restaurant, Parks and Monuments had many independent dyads and triads. This indicates that people visit these places in small groups and they tend to be existing friends. 
+
+
+## 2021-01-14 (completed on 2021-01-15)
+
+Continued with Fire, M., & Guestrin, C. (2019).
+
+### Publication trends
+
+- The use of question or exclamation marks in paper titles is increasing (< 1% in 1950 to >3% in 2013).
+
+- The percentage of papers with authors listed in an alphabetical order more than halved, from 21.0% in 1950 to 43.5% in 2014.
+
+- Paper abstracts are getting longer, from a mean of 116.3 words in 1970 to 179.8 words in 2014.
+
+- Self-citation: both the number of self-citations and the percentage of papers containing self-citations increased. 
+
+- The mean and median length of academic papers decreased: 14.4 pages in 1950, 10.1 in 1990, and 8.4 in 2014. 
+
+### Author trends
+
+- Early-career scientists now are publishing more papers but are less likely to be the first authors, compared to those decades ago. 
+
+### Journal trends
+
+- Both the number of journals and the number of papers published per journal each year increased. 
+
+- For papers in top journals, the mean career age of first and last authors and the percentage of returning authors increased. 
+
+### Discussions
+
+- The majority of the observed changes mentioned above are correlated with more academic citations. 
+
+{{<block class="reminder">}}
+Here, the two authors said that "These results support our hypothesis that the citation number has become a target." 
+
+I am a little bit doubtful of this conclusion. Although it seems true instinctively, it does call for casual data. I do not think they can reach this conclusion only by observing a correlation between the discussed trends and the number of citations. 
+{{<end>}}
+
+## 2021-01-13
+
+Continued with Fire, M., & Guestrin, C. (2019).
+
+- Changes in scientific publication:
+   3. Author lists are getting longer, i.e., "hyperauthorship", from a mean of 1.41 authors in 1900 to a mean fo 4.51 authors in 2014. 
+   4. Paper titles lengths are increasing.
+   5. Reference lists are getting longer. Few papers had over 20 references back in 1960 but now it is common to have papers with more than 40 references. 
+
+### Material
+
+As mentioned before, MAG (Microsoft Academic Graph) was used. The MAG dataset contains 120.7 million papers but many of them are news papers, comments, and responses. The two authors filtered these out, analyzing only around 22 million papers that have a DOI and at least five references. Only authors of these 22 million papers were analyzed. 
+
+The authors of this paper also used the AMiner open academic graph dataset, which is relatively new.
+
+### Results
+
+- Table 1 clearly shows that papers' median citations after 5 years of publication vary considerably across different fields and subfields. 
+
+- Fig.1 shows how the number of papers has been increasing.
+
+PP. 2-6
+
+## 2021-01-12
+
+Fire, M., & Guestrin, C. (2019). [Over-optimization of academic publishing metrics: observing Goodhart’s Law in action](https://academic.oup.com/gigascience/article/8/6/giz053/5506490). *GigaScience, 8*(6), giz053.
+
+- What have been increasing: 
+  - number of published papers yearly (from fewer than 1 million in 1980 to more than 7 million in 2014)
+  - speed of sharing papers (researchers can share their studies via non-traditional channels such as preprint servers)
+  - number of peer-reviewed journals
+  - number of published researchers
+
+- What haven't been changed for decades: measures of scientific success (number of publications, impact factor, h-index)
+
+- Goodhart's Law: 
+
+> When a measure becomes a target, it ceases to be a good measure
+
+- **Study Material**: The two authors of this paper analyzed over 120 million published papers with 528 million references and 35 million authors, since the early 1800s. The data came from the Microsoft Academic Graph (MAG) dataset. 
+
+- **Study Purpose**: Are researchers focusing on attaining success metrics rather than the quality of research?
+
+- Changes in scientific publication:
+  1. Popularity of preprint servers such as arXiv, bioRxiv, SSRN, and RePEc
+  2. Mega-journals that value scientific trustworthiness rather than novelty. Prime examples are *PloS One* and *Scientific Reports*.
+
+PP. 1-2.
+
+## 2021-01-11
+
+Finished Yin et al. (2021)
+
+- Scientific papers that appeared in policy documents received on average 40 times more citations from other scientific papers than those not found in policy documents. This indicates that papers referenced in government policy documents were also well received and respected in the scientific community. 
+
+- Although preprint servers (medRxiv, bioRxiv, and SSRN) released much more papers on the COVID-19, papers published in peer-reviewed journals appeared more frequently in policy documents. See Fig. 2.3. 
+
+- Policy documents grounded in rigorous scientific findings received more citations from other policy documents. 
+
+- National governments produced more policy documents than think tanks and intergovernmental organizations (IGOs), but they cited science the least. IGOs, especially WHO, used science the most. 
+
+I like this paper. Short and practical. It uses inferential statistics sparingly, so its findings seem more robust to me. 
+
+
+## 2021-01-10
+
+1. Finished Myers et al. (2020)
+
+2. Yin, Y., Gao, J., Jones, B., & Wang, D. (2021). [Coevolution of policy and science during the pandemic](https://science.sciencemag.org/content/371/6525/128/). *Science*
+
+- The growth of the share of COVID-19 policy documents mirrored that of total confirmed cases of COVID-19.
+
+- In the beginning, COVID-19 policy documents were mostly about science & health. Later, the share of topics related to science & health fell whereas that of those regarding the societal and economical impacts of the pandemic grew. This pattern remained for other types of policy documents. 
+
+- 20% of all the scientific papers cited in COVID-19 policy documents were those uploaded or published in 2020. 
+
+- COVID-19 policy documents cited biomedical literature in the beginning of the pandemic. Later, the share of papers in the fields of economy, society and others grew. 
+
+PP. 1-2
+
+## 2021-01-09
+
+1. Continued with Frank et al. (2019)
+
+To better predict the impact of AI on the labor market, we need better data collection which is detailed, reflects real-time changes in the market, and contains regional differences. 
+
+2. Myers, K. R., Tham, W. Y., Yin, Y., Cohodes, N., Thursby, J. G., Thursby, M. C., ... & Wang, D. (2020). Unequal effects of the COVID-19 pandemic on scientists. *Nature human behaviour, 4*(9), 880-883.
+
+- On average, working hours of scientists dropped from 61h/w pre-pandemic to 54h post-pandemic (April 2020)
+
+- Bench scientists, such as those working on biochemistry, biology, chemistry, and chemical engineering, saw the biggest declines (around 30% - 40%) in research time. By contrast, mathematicians, statisticians, computer scientists, and economists, had the lowest decline in research time. 
+
+- Female scientists with young children have much less time for research during the pandemic. 
+
+PP. 1-3
+
+## 2020-01-08
+
+Frank, M. R., Autor, D., Bessen, J. E., Brynjolfsson, E., Cebrian, M., Deming, D. J., ... & Rahwan, I. (2019). Toward understanding the impact of artificial intelligence on labor. *PNAS, 116*(14), 6531-6539.
+
+People have always had concerns over the negative effects of automation and machines, from Plato worrying about writing displacing memory, to Wassily Leontief, winner of the Nobel Prize in Economics of 1973 had the concern that machines will displace human labor. 
+
+PP. 1-3
+
+## 2021-01-07
+
+### Aim of the study
+To explain why success in cultural market is different from average performance and yet very difficult to anticipate even for experts. 
+
+### Study design:
+
+- 14,341 participants were recruited from a teen-interest website. They were randomly assigned to two conditions (independent vs. social influence) and rated 48 songs by different bands. 
+  - In the independent condition, participants were only shown the name of the bands and the songs. After listening to a song, they were asked to rate it; the rating ranged from 1 to 5. After rating, they were given the choice to download the song, although they were not required to do so. 
+
+  - In the social influence condition, participants also saw how many times a song has been downloaded by previous participants. 
+
+  - There were eight "worlds" to which participants in the social influence condition were assigned to. Each world is parallel to each other, meaning that the number of downloads in one world does not affect other worlds. 
+
+- The authors of this paper conducted two experiments. 
+
+  - In experiment 1, 48 songs were presented in a `$16 \times 3$` grid where the order of the songs was random. In experiment 1, participants in the social condition saw the number of downloads along with the name of the band whereas participants in the independent condition did not see this information. 
+
+  - In experiment 2, songs were presented in a single column. For participants in the social condition in experiment 2, the songs were shown in descending order of current downloaded counts, whereas the order was random for participants in the independent condition in experiment 2. 
+
+  - Why did the authors conducted two experiments? Through this design, in each experiment, the authors can see the effects of social influence on the success of each song. Furthermore, they can see the effect of increased "strength" of related information signal (i.e., downloaded numbers) by comparing the results of two experiments (for the social influence condition). 
+
+### Results
+
+Social influence, i.e., information about the choice of others, contributed to both **inequality** and **unpredictability** of the songs. 
+
+  - Fig. 1 shows that there is more inequality when social influence is present. This is because, as we can see, the dark bars are consistently taller than the light bars. It also show sthat increased level of social influence leads to increased level of inequality. 
+
+{{<figure src="https://science.sciencemag.org/content/sci/311/5762/854/F1.large.jpg" caption="Salganik et al(2006)">}}
+
+
+## 2021-01-06
+
+1. Finished Gelman, A., & Loken, E. (2013).
+
+2. Salganik, M. J., Dodds, P. S., & Watts, D. J. (2006). Experimental study of inequality and unpredictability in an artificial cultural market. science, 311(5762), 854-856.
+
+Finished reading but need to re-read it to recap the main steps & findings. 
+
+## 2021-01-05
+
+Continued with Gelman, A., & Loken, E. (2013).
+
+>The researchers are not trying multiple tests to see which has the best p-value; rather, they are using their scientific common sense to formulate their hypotheses in reasonable way, given the data they have. The mistake is in thinking that, if the particular path that was chosen yields statistical significance, that this is strong evidence in favor of the hypothesis. 
+
+>... The result remains, as we have written elsewhere, a sort of machine for producing and publicizing random patterns. 
+
+PP. 5-13
+
+## 2021-01-04
+
+1. Finished Lu et al. (2016)
+
+- In individualism-oriented countries, expressing happiness is encouraged whereas experssing sadness is not. 
+
+> It would be interesting to explore whether emojis can be leveraged to predict public opinions and sentiment of a country. 
+
+- Brazilian users have similar emoji usage patterns to those in South America, whereas they differ from users in Portugal even if the two nations speak the same language. 
+
+> ...whether emojis are really consistent with sentiments presented in texts. 
+
+2. Gelman, A., & Loken, E. (2013). [The garden of forking paths: Why multiple comparisons can be a problem, even when there is no “fishing expedition” or “p-hacking” and the research hypothesis was posited ahead of time](https://osf.io/n3axs/download). Department of Statistics, Columbia University.
+
+PP. 1-5
+
+## 2021-01-03
+
+Continued with Lu et al. (2016)
+
+- Top 20 emojis are related to face, heart and hand, which implies that facial expressions and body signals are the most important when people express themselves through emojis.
+
+- The frequency of emoji usage has a power-law distribution. 😂 is by far the most popular emoji, accounting for 15.4% of the total emoji usage.
+
+- France stands out because 1) 19.8 of all messages sent using Kika keyboard by French users contained at least on emoji; and 2) the most commonly used emoji is ❤️‍. How romantic!
+
+PP. 2-9
+
+## 2021-01-02
+
+1. Finished Palchykov et al. (2012). 
+
+I really like this study. The methodology is clear, visualizations informative, and conclusions easy to understand. 
+
+2. Lu, X., Ai, W., Liu, X., Li, Q., Wang, N., Huang, G., & Mei, Q. (2016, September). Learning from the ubiquitous language: an empirical analysis of emoji usage of smartphone users. In *Proceedings of the 2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing* (pp. 770-780).
+
+PP. 1-2
+
+## 2021-01-01
+
+Palchykov, V., Kaski, K., Kertész, J., Barabási, A. L., & Dunbar, R. I. (2012). [Sex differences in intimate relationships](https://www.nature.com/articles/srep00370?message-global=remove&viewType=Print&viewClass=Print). *Scientific reports, 2*(1), 1-5.
+
+PP. 1-3
+
+## 2020-12-31
+
+Shneiderman, B. (2018). Twin-Win Model: A human-centered approach to research success. *PNAS, 115*(50), 12590-12594.
+
+- Some research questions are more useful than others. Research that solves a real-world problem has more impacts and should be encouraged. Good research should lead to both new knowledge and solutions to societal problems. 
+
+>... researchers need to work with professionals who have authentic problems. 
+
+
+## 2020-12-30
+
+Finished 汪小帆. (2020)
+
+## 2020-12-29
+1. Continued with Kraemer et al. (2020)
+
+- Is it possible that the above mentioned epidemiological patterns were due to increasing testing capacity rather than travel restrictions?
+
+The authors of the paper introduced a binary variable of testing capacity, whose value was "low" before 2020-01-20, the date when COVID-19 was categorized as a class B notifiable disease, and "high" after 2020-01-20. Compared to the naive model (see the end of p.1 of the paper for detail regarding this model), inclusion of human mobility data from Wuhan alone led to improvements in the model's prediction for 12 provinces (among 27 provinces that reported cases through 2020-02-06). In 10 other provinces, both testing capacity and human mobility from Wuhan improved prediction. Only for Hunan did testing along contributed the most to model's prediction. Therefore, the authors concluded that although testing capacity is important, in the early stage of the epidemic, Wuhan lockdown was the most important "driver of spread" (p. 3).
+
+I admire this work. 
+
+2. 汪小帆. (2020). [无标度网络研究纷争: 回顾与评述](http://www.juestc.uestc.edu.cn/article/doi/10.12178/1001-0548.2020274). 电子科技大学学报, 49(4), 499-510.
+
+PP. 1-3
+
+## 2020-12-28
+
+Continued with Kraemer et al. (2020)
+
+- The volume and frequency of human movement from Wuhan to other places in China predicted the size of the early epidemic in other provinces.
+
+- After 2020-02-01, daily case counts became less correlated with human movement from Wuhan. This indicates that variability among different places in daily case counts was more likely due to factors other than human mobility from Wuhan before the Wuhan lockdown. This also indicates that travel restrictions are important in the early phase of epidemic control, but later, the importance of other local mitigation methods increased. 
+
+- From 2020-01-09 to 2020-01-22, variation in the epidemic's growth rate in provinces outside of Hubei was almost entirely explained by human mobility from Wuhan. After drastic control measures were taken across China, growth rates became negatively correlated with human movement from Wuhan; that is to say, provinces with more human mobility from Wuhan before the lockdown saw smaller growth rates.
+
+- Is it possible that the above mentioned epidemiological patterns were due to increasing testing capacity rather than travel restrictions?
+
+## 2020-12-27
+
+1. Finished Fried et al. (2020)
+
+People now are able to rotate their face, add makeups, turn closed eyes or mouth open, change hair style or wardrobe, change age, and produce synthetic videos. These methods allow people to experiment changing appearances, but might have negative effects such as increasing body dissatisfaction or making falsified content more prevalent on the Internet. 
+
+2. Kraemer et al. (2020). The effect of human mobility and control measures on the COVID-19 epidemic in China. *Science, 368*(6490), 493-497.
+
+P. 1
+
+## 2020-12-26
+
+Fried, O., Jacobs, J., Finkelstein, A., & Agrawala, M. (2020). Editing self-image. *Communications of the ACM, 63*(3), 70-79.
+
+PP. 1-6
+
+## 2020-12-25
+1. Finished Sinatra et al. (2016)
+
+2. Wang, D., Song, C., & Barabási, A. L. (2013). Quantifying long-term scientific impact. *Science, 342*(6154), 127-132.
+
+I skimmed through it. 
+
+## 2020-12-24
+Continued with Sinatra et al. (2016)
+
+The *Q*-model corrected the two shortcomings of the *R*-model. 
+
+According to the Q-model:
+
+- A paper's potential impact `$p_\alpha$` is independent of a scientist's productivity `$N_i$` and parameter `$Q_i$`, which means that there is luck behind impact. 
+
+- High *Q* is only slightly correlated with higher *N*. 
+
+Then the question is, what the hidden parameter of *Q* is, and what it indicates? According to the authors, *Q* is a constant ability to turn a project with randomly picked impact into high-impact. For each scientist, this ability is **a constant** (for 76% of all scientists); it does not grow with the development of career stage. 
+
+PP. 5-7
+
+## 2020-12-23
+Continued with Sinatra et al. (2016)
+
+So, what is the role of a scientist's ability in impact generation?
+
+The authors first created a **Random-impact model (R-model)**. This model assumes that no matter for whom, the impact of each scientific paper is randomly chosen from the same impact distribution `$P(c_{10})$`. Then, the only difference scientists is **productivity `$N$`**: how many papers she gets published in her career. This model accurately predicts the cumulative function of `$P(\ge N^*/N)$` (Fig. 2E). However, this model has two problems:
+
+1. If each paper's impact is randomly selected from a universal distribution of `$P(c_{10})$`, then a scientist with a higher `$N$` will be more likely to have a higher `$c^*_{10}$`, i.e., the citation of the highest impact paper. However, R-model fails to predict this. See Fig. 3C. 
+
+2. Scientists with a higher average impact without `$c^*_{10}$` will also score higher on `$c^*_{10}$`. That is to say, high impact papers are more likely to be produced by a scientist with a constently high impact. Again, the R-model fails to predict this. See Fig. 3D. 
+
+The authors then proposed an alternative model, **Q-model**. This model assumes that (1) as in the R-model, each paper's impact is randomly selected from a universal distribution of `$P(c_{10})$`, and (2) each scientist `$i$` has a unique value `$Q_i$` that modulates impact. `$Q_i$` is a constant throughout a scientist's career. The impact of a paper published by a scientist `$i$` is the product of `$Q_i$`, and `$p_\alpha$` randomly drawn from the distribution `$P(p)$` which is the same for all scientists .
+
+PP. 3-4
+
+## 2020-12-22
+Continued with Sinatra et al. (2016)
+
+- Fig. 2E: The random impact rule is futher confirmed by Fig. 2E. This figure captures the cumulative distribution of `$P(\ge N^*/N)$`, where `$N^*/N$` denotes when the highest-impact paper of a scientist occurs. The fact that it is a straight line indicates that the highest-impact factor can appear anytime within a scientist's career. 
+
+- Fig. 2A: We can clearly see the differences in impacts across three levels impact scientists. What's the reason behind it: increasing productivity or increasing creativity? The authors again randomized the papers' impact while keeping scientists' productivity unchanged. The results for both high- and low- impact scientists remained unchanged. Therefore, differences in scientists can be better explained by productivity (see Fig. 1E)
+
+P. 3
+
+## 2020-12-21
+Continued with Sinatra et al. (2016)
+
+- A first look at Fig. 2D might tell us that the chance to publish the highest-impact paper drops with age. However, when the impact of papers was randomized, while keeping a scientist's productivity each year unchanged, the distribution of the timing of `$t^*$` remains almost the same. This is a very important finding, as it means that a scientist can produce her highest impact paper **anytime** in her career. 
+
+P.3 
+
+{{<block class="note">}}
+I am not sure of whether it's only the order of a scientist's papers was randomized or that the order remains unchanged but papers' `$c_{10}$` was randomized. The authors did not make this point crystal clear. 
+{{<end>}}
+
+## 2020-12-20
+
+Sinatra, R., Wang, D., Deville, P., Song, C., & Barabási, A. L. (2016). Quantifying the evolution of individual scientific impact. *Science, 354*(6312).
+
+- Productivity and impact are metrics to gauge a scientist's performance. 
+
+- Fig. 1B: Only 5% of all the scientists analyzed have at least one paper that received 200 or more citations after its publication. 
+
+- Fig. 1C and 1E: High impact scientists are also much more productive. Medium impact scientists started with more publications than the other two groups (high and low impact). In the first three years following the first publication, medium impact scientists have more publications than the other two groups, but high impact scientists quickly catch up: it took ten more years for the medium impact scientists to have the same number of publications as high impact scientists, and the figure for low impact scientists is 40 more years. 
+
+- For a scientist, the timing of the highest-impact paper is truely uniform within the career, meaning that he or she can do ground-breaking work anytime within his or her academic career. 
+
+P. 2
+
+## 2020-12-19
+
+Zha, Y., Zhou, T., & Zhou, C. (2016). Unfolding large-scale online collaborative human dynamics. *PNAS, 113*(51), 14627-14632.
+
+This study introduces a model that precisely fits the update history of hundreds of Wikipedia articles, which follows a double-power-law distribution. The model is based on Wikipedia but it might depict other forms of huamn collaborative ativities that involve initiations and responses, such as communications via short messages and emails. 
+
+So What? With this model, we can better detect abnormal activities in online collaborative systems. 
+
+## 2020-12-18
+
+1. Spiegelhalter, D. J. (2014). [The future lies in uncertainty](http://pages.stat.wisc.edu/~wahba/stat860public/pdf3/spiegelhalter.science2014.pdf). *Science, 345*(6194), 264-265.
+
+2. McNutt, M. (2014). [Reproducibility](https://science.sciencemag.org/content/343/6168/229.summary). *Science*.
+
+## 2020-12-17
+
+Finished Singh et al. (2020)
+
+One point worth noticing is that the negative effect of suceptibility to believing in false rumors on vaccine acceptance is stronger than the possitive effect of exposure to fact-checked vaccination-related information.
+
+## 2020-12-16
+
+Continued with Singh et al. (2020)
+
+### Research question
+
+Whether (1) exposure to false rumors, (2) exposure to these false rumors' fact-checks, and (3) the perceived believability of each rumor ("believability") are related to the willingness to get vaccinated ("vaccine acceptance"). 
+
+### Methods 
+
+From 2020-06-18 to 2020-07-13, the study survey was promoted in five languages (English, Spanish, French, Portuguese, and Arabic) on Facebook Advertisement Platform. More than 44k Facebook users from 152 countries did the survey. The authors discarded (1) incomplete and duplicated responses, and (2) responses from countries with fewer than 30 respondents. The final dataset is over 805k responses from over 18k people in 40 countries. 
+
+The survey was quite simple, as it only comprised of three questions:
+
+>1. Have you seen or heard this information in the past month? 
+>2. Have you ever seen an official source confirming or denying this claim?
+>3. How believable does this information seem to you?
+
+At the end of the survey, the respondents were also asked to provide demographic information, and to indicate the extent they saw the coronavirus as a threat ("perceived threat").
+
+### Results
+
+1. Exposure to misinformation, and perceived threat are positively related to believability. 
+
+2. Exposure to misinformation alone is not strongly correlated with vaccine acceptance. However, the believability of false information is **negatively** correlated with vaccine acceptance. 
+
+3. Exposure to **vaccine-related misinformation** is positively correlated with vaccination hesitancy, and the believability of false **vaccine-related rumors**. Exposure to fact-checked vaccination-related information is positively correlated with vaccine acceptance. 
+
+4. Exposure, believability, and fact-checking of other types of false rumors are not correlated with vaccine acceptance. 
+
+5. Perceived threat is positively correlated with vaccine acceptance. 
+
+P. 4
+
+## 2020-12-15
+
+1. Finished Peterson et al. (2011)
+
+Key takeaway: If you want to have a successful career that is long, for example, being able to publish in top journals for many times rather than just once, it's important that you make progress in the beginning of your career. 
+
+2. Singh et al. (2020). COVID-19 Misinformation, Believability, and Vaccine Acceptance Over 40 Countries. Preprint. 
+
+PP. 1-3
+
+## 2020-12-14
+
+Continued with Peterson et al. (2011)
+
+PP. 2-4
+
+## 2020-12-13
+
+1. Finished Evans (2008)
+
+Major findings: 1) Even though more journal articles published long ago became available online, scientists tend to cite more recent papers; 2) Even though more articles are becoming online, fewer journals and articles are being cited, and citation become concentrated on fewer journals and articles.
+
+Evans (2008) explains that this might be because scholars find it easier to locate prevailing opinions if they search online. Journals and articles that scholars might skim in the print age now are overlooked, pushing the citation to newer and fewer articles. This is alarming because it indicates that as online journals become more available, scientific studies are building upon fewer, rather than more, ideas. 
+
+2. Petersen, A. M., Jung, W. S., Yang, J. S., & Stanley, H. E. (2011). Quantitative and empirical demonstration of the Matthew effect in a study of career longevity. *PNAS, 108*(1), 18-23.
+
+PP. 1-2
+
+## 2020-12-12
+
+1. Finished Wu et al. (2019)
+
+The title of this paper well explains the main finding. One point worth noticing is that, as the authors mentioned at the end of the paper, fundings from government for individuals or small teams do not enable smaller teams to produce disruptive results. This is because small teams funded by government don't want to take the risk of entering uncharted areas. 
+
+This paper well explains my intuition: more and more scientists, and more and more money invested in research, do not necessarily mean more ground-breaking results. Also, I don't believe large teams should always dominate the sciecne community. I also don't think it's a good idea to always promote publications with a massive number of individuals. Team work is great, but does not always produce distruptive work. 
+
+2. Evans, J. A. (2008). Electronic publication and the narrowing of science and scholarship. *Science, 321*(5887), 395-399.
+
+PP. 1-5
+
+## 2020-12-11
+
+1. Finished Simmons et al. (2011)
+
+2. Wu, L., Wang, D., & Evans, J. A. (2019). Large teams develop and small teams disrupt science and technology. *Nature, 566*(7744), 378-382.
+
+PP. 1-4
+
+## 2020-12-10
+
+Somers, J. (2018). [The scientific paper is obsolete](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/). *The Atlantic, 4.*
+
+
+## 2020-12-09
+
+1. Ioannidis, J. P. (2005). Why most published research findings are false. *PLoS medicine, 2*(8), e124.
+
+I skimmed through it. Couldn't understand it. 
+
+2. Simmons, J. P., Nelson, L. D., & Simonsohn, U. (2011). False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant. *Psychological science, 22*(11), 1359-1366.
+
+PP. 1-6
+
+## 2020-12-08
+Bohannon, J. (2016). Who's downloading pirated papers? Everyone. *Science*. Retrieved from [https://www.sciencemag.org/news/2016/04/whos-downloading-pirated-papers-everyone](https://www.sciencemag.org/news/2016/04/whos-downloading-pirated-papers-everyone)
+
+## 2020-12-07
+
+1. Finihsed Fernandes et al. (2018)
+
+Key points: the title explains everything. I love the title. 
+
+2. Grabowicz, P. A., Ramasco, J. J., Moro, E., Pujol, J. M., & Eguiluz, V. M. (2012). Social features of online networks: The strength of intermediary ties in online social media. *PloS one, 7*(1), e29358.
+
+## 2020-12-06
+
+Fernandes, M., Walls, L., Munson, S., Hullman, J., & Kay, M. (2018, April). Uncertainty displays using quantile dotplots or CDFs improve transit decision-making. In *Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems* (pp. 1-12).
+
+PP. 1-6
+
+## 2020-12-05
+
+Ai, W., Chen, R., Chen, Y., Mei, Q., & Phillips, W. (2016). Recommending teams promotes prosocial lending in online microfinance. *PNAS, 113*(52), 14944-14948.
+
+Key questions: 
+
+1. Which recommendations increase people to join online teams on a crowdlending platform?
+
+2. After people join a team, will they lend more money?
+
+Key findings:
+
+1. Recommendation emails did increase the probability of one person to join a team;
+
+2. People receiving an recommendation email containing location similarity explanation are more likely to join a team;
+
+3. People are more likely to join teams that have similar location and higher status;
+
+4. After joining a team, members lend more money in the subsequent week. 
+
+## 2020-12-04
+1. Meier, A., Gilbert, A., Börner, S., & Possler, D. (2020). Instagram Inspiration: How Upward Comparison on Social Network Sites Can Contribute to Well-Being. *Journal of Communication, 70*(5), 721-743.
+
+Skimmed through it. Didn't like it. 
+
+2. Hilbert, M., & Darmon, D. (2020). Large-Scale Communication is More Complex and Unpredictable with Automated Bots. *Journal of Communication, 70*(5), 670-692.
+
+Skimmed through it. 
+
+3. Danescu-Niculescu-Mizil, C., Cheng, J., Kleinberg, J., & Lee, L. (2012, July). You had me at hello: How phrasing affects memorability. In *Proceedings of the ACL.*
+
+>... memorable quotes consist of unusual word sequences built on common syntactic scaffolding. 
+
+PP. 1-8
+
+{{<block class="note">}}
+Forgot about this paper (*You had me at hello*) on 2020-12-05. Finished it on 2020-12-19. 
+{{<end>}}
+
+## 2020-12-03
+ 
+Finished Hosseinmardi et al. (2020)
+
+Main findings:
+
+1. Consumption of radical political news content on YouTube is smaller but more engaging than other contents, and its popularity has been rising. 
+
+2. This consumption reflects the broader social trend, and perheps is not due to the recommendation algorithms by YouTube. 
+
+## 2020-12-02
+
+1. Service, R. ‘The game has changed.’ AI triumphs at solving protein structures. From [Sciencemag](https://www.sciencemag.org/news/2020/11/game-has-changed-ai-triumphs-solving-protein-structures).
+
+2. Hosseinmardi, H., Ghasemian, A., Clauset, A., Rothschild, D. M., Mobius, M., & Watts, D. J. (2020). Evaluating the scale, growth, and origins of right-wing echo chambers on YouTube. *arXiv preprint arXiv:2011.12843.*
+
+PP. 1-2
+
+## 2020-12-01 (completed on 2020-12-02)
+
+Yang, T., Majo-Vazquez, S., Nielsen, R. K., & González-Bailón, S. (2020). Exposure to news grows less fragmented with an increase in mobile access. From [https://www.pnas.org/content/117/46/28678](https://www.pnas.org/content/117/46/28678).
+
+Key question: technologies give people more choices regarding consuming news. How does this affect the overall news consumption pattern? Do audiences become more fragmented (i.e., "audiences disperse among the higher number of choices")?
+
+Conclusions:
+
+1. Selective exposure exists but it does not grow in magnitude amongst increasing choices of news content.
+
+2. The pattern and effect of consuming news on desktop are different than that of consuming news on mutiplatform, with the later reaching increasingly larger audiences, attracting more time spent on news consumption, and making audiences less fragmented. 
+
+3. More than half of the US population access little to no news. These people might also be susceptible to misinformation. 
 
 ## 2020-11-30
 1. Finished Huberman et al. (2008)
@@ -451,13 +1489,13 @@ The authors also talked about "model multiverse" at the end of the article.
 
 Something I don't understand yet in this paper:
 
-{{< reminder >}}
+{{<block class="reminder">}}
 When participants are excluded based on reported or computed cycle length, we do not consider next menstrual onset based on computed or reported cycle length, respectively.
-{{< end >}}
+{{<end>}}
 
-{{< reminder >}}
+{{<block class="reminder">}}
 When only one choice is clearly and unambiguously the most appropriate one, variation across this choice is uninformative. 
-{{< end >}}
+{{<end>}}
 
 ## 2020-11-01
 Steegen, S., Tuerlinckx, F., Gelman, A., & Vanpaemel, W. (2016). Increasing transparency through a multiverse analysis. *Perspectives on Psychological Science, 11*(5), 702-712.
@@ -1048,8 +2086,6 @@ Lazer et al. (2020)
   3. Develop new ethical guidelines;
   4. Reorganize universities so that 1) multi-disciplinary collaboration is professionally or financially rewarded, and 2) enforce ethical research
   5. Researchers make sure that they do public good.
-
-
 
 ## 2020-09-12
 

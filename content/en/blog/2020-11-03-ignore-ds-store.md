@@ -8,7 +8,7 @@ toc: false
 ---
 If you are using a Mac, chances are that you have a lot of `.DS_Store` files in all kinds of folders. While they don't cause any problems, it might be ugly if these files appear in your GitHub repositories. How to delete and ignore all of them? [This thread](https://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder) on Stack Overflow helped me quite a bit. 
 
-# First, delete all .DS_Store files
+## First, delete all .DS_Store files
 
 The following solution came from [here](https://stackoverflow.com/a/38797342).
 
@@ -20,7 +20,7 @@ git add .
 git commit -m "Remove .DS_Store from everywhere"
 git push origin master
 ```
-# Second, create a .gitignore file and ignore .DS_Store
+## Second, create a .gitignore file and ignore .DS_Store
 
 The following solution came from [here](https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files#configuring-ignored-files-for-a-single-repository) and [here](https://stackoverflow.com/a/54715555).
 
@@ -33,7 +33,7 @@ git add .
 git commit -m "Creating .gitignore and ignore .DS_Store"
 git push origin master
 ```
-# Third, exclude all .DS_Store files in all repositories in the future
+## Third, exclude all .DS_Store files in all repositories in the future
 
 The following answer came from [here](https://stackoverflow.com/a/19299889)
 

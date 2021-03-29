@@ -13,7 +13,7 @@ In this age of informaiton, it's important to have your online presence. It not 
 
 Note: All instructions below assume that you are using a Mac. If you are a Windows or Linux user, you can still read this post but I can't guarantee it will help you. 
 
-# WordPress or Hugo
+## WordPress or Hugo
 
 Before getting started, a key question you should have is which tool you want to use to build your website. 
 
@@ -28,7 +28,7 @@ You can also check out themes by [Hugo](https://themes.gohugo.io/) and [WordPres
 If you choose WordPress, you can stop here, as this tutorial will be about using Hugo. Sorry. 
 
 
-# Try simple themes in the begining
+## Try simple themes in the begining
 
 In Hugo, you'll need Markdown to write your posts. Whenever you forget how to use Markdown, please refer to [this cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
@@ -40,9 +40,9 @@ Hugo provides a lot of themes. As the popularity of Hugo increases, there are mo
 
 For this tutorial, I'll use this [hugo-lithium-theme](https://github.com/yihui/hugo-lithium), created by [Jonathan Rutheiser](https://themes.gohugo.io/hugo-lithium-theme/) and later modified by [Yihui Xie](https://yihui.org/). I'll use the [modified version](https://github.com/yihui/hugo-lithium). 
 
-# First meeting with Git and Hugo
+## First meeting with Git and Hugo
 
-## Installing Hugo
+### Installing Hugo
 
 Let's get started. I'll show you how I use this theme to build a simple website. 
 
@@ -50,7 +50,7 @@ First of all, you need to install Hugo. To do that, please read [my earlier post
 
 If you don't know how to open `Terminal` on your Mac: on the upper-right corner of the screen, you'll see a search icon. Click it and then type `Terminal`, then press Enter key on your keyboard. 
 
-## Cloning the theme
+### Cloning the theme
 
 After opening your Terminal, first check whether you have correctly installed Hugo. All the following codes, if not specified otherwises, should run in your Terminal. 
 
@@ -109,7 +109,7 @@ If everything is going well, we will change the site for a little bit.
 
 Before we make changes, go to Terminal, and then press Ctrl+C to stop the Web Server. 
 
-# Customizing the theme a little bit
+## Customizing the theme a little bit
 
 Go to the `config.toml` file in the root of `lithium` folder, You can find these:
 
@@ -208,9 +208,9 @@ Save the changes and then refresh the browser, now the posts in the homepage sho
 
 Now, we have the homepage, About, and Post section. This should be enough for a simple website. 
 
-Please note that this post is not intended to be an extensive guide to website building with Hugo. If you want much more personal touch on websites than what I have covered above, you need more knowledge and Hugo structure, CSS, and HTML. 
+Please note that this post is not intended to be an extensive guide to website building with Hugo. If you want much more personal touch on websites than what I have covered above, you need more knowledge about the [Hugo framework](https://github.com/gohugoio/hugo), [CSS](https://www.w3schools.com/css/default.asp), and [HTML](https://www.w3schools.com/html/default.asp). 
 
-If you want to make a lot of changes, or that you want to use a fancier, and more complex theme, I highly recommend you to read Yihui Xie's book: [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/). Although this book is about how to build website using the R pacakge of `blogdown`, you'll get a deeper understanding about Hugo by reading this book. 
+If you want to make a lot of changes, or that you want to use a fancier, and more complex theme, I highly recommend you to read Yihui Xie's book: [*blogdown: Creating Websites with R Markdown*](https://bookdown.org/yihui/blogdown/). Although this book is about how to build website using the R pacakge of `blogdown`, you'll get a deeper understanding about Hugo by reading this book. 
 
 In this book, you'll want to read in more detail the section of [2.5 Templates](https://bookdown.org/yihui/blogdown/templates.html#how-to), and [2.6 Custom layouts](https://bookdown.org/yihui/blogdown/custom-layouts.html).
 
@@ -220,7 +220,7 @@ Now, I assume that you have your local website read (you are satisfied with what
 
 Go to `Terminal`, press Ctrl+C to kill the web server. We'll learn how to put this site online. 
 
-# GitHub
+## GitHub
 First of all, you need to create a GitHub account. When this is done, click "new repository":
 
 {{<figure src="/media/netlify/deploy-1.png" title="Create a new GitHub Repo">}}
@@ -261,7 +261,7 @@ git push -u origin master
 
 Refresh your GitHub page, you should be able to see the changes. 
 
-# Netlify
+## Netlify
 Now, we need to set up a Netlify account. 
 
 Open the website of [Netlify](https://www.netlify.com/). If you don't have a Netlify accout yet, you need to Sign Up. 
@@ -355,9 +355,9 @@ Then you can input a name you like, as long as it is still available:
 
 Then the website url is changed to [https://hugo-tutorial.netlify.app/](https://hugo-tutorial.netlify.app/).
 
-# More Knowledge about Hugo
+## More Knowledge about Hugo
 
-## How to add a new post
+### How to add a new post
 
 Using codes like this:
 
@@ -365,7 +365,7 @@ Using codes like this:
 hugo new post/2020-06-05-another-markdown.md
 ```
 
-# Keep Deploying
+## Keep Deploying
 
 Every time you update you contents, you need to upload them. You'll need to copy and paste the following codes in Terminal every time:
 
@@ -392,13 +392,13 @@ git push
 
 Every time you want to upload new content, you can run `bash deploy.sh` at the root directory of your `lithium` folder. This will automate deployment. Wait for around 20 seconds, you'll be able to see the changes in your website. Yes, Hugo+GitHub+Netlify is this fast!
 
-# Final Repo
+## Final Repo
 
 If you encounter problems in the above steps, don't feel discouraged. You can check out the final `lithium` file here: [https://github.com/hongtaoh/hugo-tutorial](https://github.com/hongtaoh/hugo-tutorial).
 
 Of course you can `git clone` this repository. However, be sure to use `git remote remove origin` before you use `git init`, which was discussed at the end of [the section about Github](https://hongtaoh.com/en/2020/06/05/get-started-with-hugo/#github) in this post.
 
-# What's Next
+## What's Next
 
 As I said, this post is not intended to be a comprehensive guide to creating a complicated website using Hugo. To do that, you are expected to spend some, if not a lot of, time on studying Hugo, CSS, and HTML. If you have a lot of personal preferences, do expect a lot of frustrucation, especially if you are a programming newbie like me. 
 

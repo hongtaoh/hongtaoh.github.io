@@ -9,7 +9,7 @@ toc: false
 
 Rmarkdown and Bookdown are highly reliant on Pandoc. Sometimes, issues may happen when Rstudio is using an older version of Pandoc even if you have downloaded the newest version, as was discussed [here](https://community.rstudio.com/t/how-to-make-r-markdown-use-an-updated-version-of-pandoc-on-my-mac/19923).
 
-# Yihui's Solution
+## Yihui's Solution
 
 Yihui provided [a solution](https://community.rstudio.com/t/how-to-make-r-markdown-use-an-updated-version-of-pandoc-on-my-mac/19923/4): to put the newest version of pandoc into `/usr/local/bin`. How to do it?
 
@@ -29,7 +29,7 @@ It's easy. If the path is `A/B/C/pandoc`, then input `open -a Finder A/B/C` and 
 
 I have to say that I didn't verify whether the way suggested by Yihui will work. 
 
-# My Solution
+## My Solution
 
 My solution was inspired by [the post above](https://community.rstudio.com/t/how-to-make-r-markdown-use-an-updated-version-of-pandoc-on-my-mac/19923).
 

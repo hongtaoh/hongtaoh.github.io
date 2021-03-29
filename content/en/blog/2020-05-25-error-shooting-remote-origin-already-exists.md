@@ -29,7 +29,7 @@ git remote set-url origin https://github.com/new.url.here
 However, if you just want to remove the remote (and add a new one later), you can use the following line of code to remove remote:
 
 ```bash
-git remote remove origin 
+git remote rm origin 
 ``` 
 
 2. Creating a new folder

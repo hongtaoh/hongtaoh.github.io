@@ -4,7 +4,7 @@ date: 2020-08-11T16:48:11-04:00
 author: 郝鸿涛
 slug: confidence-hierarchy
 draft: false
-toc: false
+toc: true
 ---
 
 ## 第一种层次：条件自信

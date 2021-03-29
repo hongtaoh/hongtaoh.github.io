@@ -38,7 +38,7 @@ Class website for my students enrolled in *MSCH‑C100 Introduction to media* at
 ### 3. Blog Posts of "How to" Series
 {{< columns >}}
 
-{{<figure-a src="/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/input-output-mapping-1.png" link="/en/blog/" >}}
+{{<figure-a src="https://hongtaoh.com/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/input-output-mapping-1.png" link="/en/blog/" >}}
 
 {{< column >}}
 
@@ -70,7 +70,7 @@ Tutorial posts on a variety of topics. Representatives:
 
 A simple tutorial website to help beginners like me learn D3.js. It is a side product of my [40 Days of Learning D3 Challenge](https://observablehq.com/collection/@hongtaoh/45-days-of-learning-d3).
 
-[Website](https://d3book.hongtaoh.com/) | [Code](https://github.com/hongtaoh/d3book)
+[Website](https://d3book.hongtaoh.com/) | [Code](https://github.com/hongtaoh/d3book) | [PDF](https://d3book.hongtaoh.com/d3book.pdf)
 
 {{< endcolumn >}}
 

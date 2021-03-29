@@ -130,7 +130,7 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
    - 2018 Fall, MSCH C200 Videogame Industry: System and Management, Teaching Assistant, 60 students <!--for for Nathan Mishler-->
 
 -  New Oriental Education and Technology Inc., Beijing, China
-   - 2016 June-July, English Writing Instructor (Worked intensively for two months with over 200 hours of practice after three-month training in pedagogy)
+   - 2016 & 2018 June-July, English Writing Instructor (Worked intensively for two months with over 200 hours of practice after two-month training in pedagogy)
 
 ## Service
 - 2019, Reviewer for International Communication Association
@@ -157,7 +157,7 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
 ### Tools
 - Final Cut Pro
 - Sketchpad
-- Latex
+- LaTeX
 
 ## Slides
 

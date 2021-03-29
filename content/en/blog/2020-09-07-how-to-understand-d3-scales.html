@@ -9,6 +9,9 @@ output:
     toc_depth: 2
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 <div id="TOC">
 <ul>
@@ -47,7 +50,7 @@ output:
 <p>What we are certain now is that the minimum (the starting point) in the input domain should also be the minimum (the starting point) of the output range. The same is for the maximum (the finishing point).</p>
 <p>That is to say, <span class="math inline">\(30\)</span> in the input domain becomes <span class="math inline">\(10\)</span> in the output range, and <span class="math inline">\(1300\)</span> in the input domain becomes <span class="math inline">\(75\)</span> in the output range.</p>
 <p>The situation here is depicted in the figure below:</p>
-<p><img src="/media/enblog/d3_scale_01.png" /></p>
+{{% figure src="/media/enblog/d3_scale_01.png" caption="The situation: from input domain to output range" width="800" %}}
 <p>The question is, what are the corresponding values of <span class="math inline">\(34\)</span>, <span class="math inline">\(59\)</span>, <span class="math inline">\(109\)</span>, and <span class="math inline">\(544\)</span>?</p>
 <p>We can solve this problem by drawing a coordinate, with the X-axis representing the input domain and the Y-axis representing the output range. Why? Because as we can see from the transformations from input domain to output range, the relationship can be expressed as</p>
 <p><span class="math display">\[y = function (x)\]</span></p>
@@ -103,7 +106,7 @@ barplot(output.range, ylim = c(0, 80),
 Figure 2: D3 scales do not cpature relative length
 </p>
 </div>
-<p>The first impression would be that it’s relatively Okay, since the two seem to be comparable. However, if you look closer, you’ll find that on the original scale, the input domain, the third bar is around 3 times taller than the first bar. However, on the transformed scale, the output range, the third bar is only twice as tall as the first. The relative height is not maintained, and therefore, the two results are not comparable.</p>
+<p>The first impression would be that it’s relatively Okay, since the two seem to be comparable. However, if you look closer, you’ll find that on the original scale, the input domain, the third bar is around 3 times taller than the first bar. However, on the transformed scale, the output range, the third bar is less than twice as tall as the first one. The relative height is not maintained, and therefore, the two results are not comparable.</p>
 <p>“D3 scales suck”, you might say. “What was Mike Bostock thinking? D3 scales did not preserve comparability between the two results and they are misleading!”.</p>
 <p>Well, it’s actually our fault rather than D3 scales’. Before I explain how come that the two results are not comparable and how to avoid that, let me talk about how D3’s <code>scaleLinear()</code> works.</p>
 </div>
@@ -111,12 +114,12 @@ Figure 2: D3 scales do not cpature relative length
 <h2>How does d3.scaleLinear() work?</h2>
 <p><a href="https://www.dashingd3js.com/d3js-scales">This tutorial</a> very well explains how <code>d3.scaleLinear()</code> works. I’ll recap it here.</p>
 <p>Suppose the following is the input domain. The starting point is labeled as S and the end E. There are three data points, i.e., A, B, C. The distance between S and A is a, that between A and B is b, that between B and C is c, and that between C and E is d. Then, how will <code>d3.scaleLinear()</code> compute the corresponding value for data point A, B and C in the output range?</p>
-<p><img src="/media/enblog/d3_scale_five_points.png" /></p>
+{{% figure src="/media/enblog/d3_scale_five_points.png" caption="Some data points" width="800" %}}
 <p>Let’s say Data point A will become Data point <span class="math inline">\(A&#39;\)</span> in the output range. <code>d3.scaleLinear()</code> will get the value of <span class="math inline">\(A&#39;\)</span> this way: First, it computes the proportion of the distance between A and the starting point, to the length, or range, of the entire input domain. This proportion will be <span class="math inline">\(\frac{a}{a+b+c+d}\)</span>. Let’s denote the starting point in the output range as S’, and the length of the output range as <span class="math inline">\(L&#39;\)</span>, then <span class="math inline">\(A&#39;\)</span> is <span class="math inline">\(L&#39; * \frac{a}{a+b+c+d}\)</span> away from S`.</p>
 </div>
 <div id="what-does-d3.scalelinear-preserve" class="section level2">
 <h2>What Does d3.scaleLinear() Preserve?</h2>
-<p>Now that we know how <code>d3.scaleLinear()</code> transform data from the input domain to the output range, let’s think about what does this transformation preserve.</p>
+<p>Now that we know how <code>d3.scaleLinear()</code> transforms data from the input domain to the output range, let’s think about what does this transformation preserve.</p>
 <p>Let’s normalize both the input domain and the output range. That is, we imagine that the length of the input domain and the output range is both <span class="math inline">\(1\)</span> unit. Then, let’s divide both intervals into 100 parts. If point <span class="math inline">\(A\)</span> in input domain sits right on the dividing line of the 2nd and the 3rd part, then, in the output range, <span class="math inline">\(A&#39;\)</span> will also sit on the dividing line of the 2nd and the 3rd part. Right? That’s why we say that D3 scales preserves <strong>relative positions</strong> of data points.</p>
 <p>This property will be super useful in coordinates, for example, when we are plotting scatter plots.</p>
 <p><img src="/media/enblog/d3_scale_relative_position.png" /></p>

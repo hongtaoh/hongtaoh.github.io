@@ -360,19 +360,14 @@ img[src$='#center']
 
 /* figure caption styling */
 figcaption {
-  font-size: 11px;
-  font-weight: 400;
-  position: relative;
-  left: 0;
-  width: 100%;
   margin-top: 8px;
   text-align: center;
-  color: grey;
+  color: gray;
 } 
 
 figcaption a {
   font-size: 14px;
-}
+} 
 
 /* The following codes came from: https://github.com/xiangming/typo/blob/master/css/typo.css */
 
@@ -405,24 +400,22 @@ h1 {
 article-title {margin-top: 0px;}
 
 h2 {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: normal;
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: normal;
 }
 
 h4,
 h5,
 h6 {
-  font-size: 19px;
+  font-size: 20px;
   color: grey;
 }
-h6 {
-  font-weight: 500;
-}
+
 
 ul,
 ol {

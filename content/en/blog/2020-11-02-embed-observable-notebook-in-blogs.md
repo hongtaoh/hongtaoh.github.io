@@ -8,9 +8,9 @@ toc: true
 ---
 Embedding an Observable notebook in a Hugo blog post is no different than [embedding it in a stand alone webpage](/en/2020/11/02/exporting-observable-notebook/). Also, you can read [this tutorial](https://visionscarto.net/observable-jekyll/) on [Observable Jekyll](https://visionscarto.net/observable-jekyll/). Although it used Jekyll as an example, it's exactly the same for Hugo. 
 
-# Direct embedding through `iframe`
+## Direct embedding through `iframe`
 
-You can embed a visualization on ObservableHQ directly through an `iframe`. I talked it about how to do it [here](en/2020/11/02/exporting-observable-notebook/#embed-directly-via-iframe).
+You can embed a visualization on ObservableHQ directly through an `iframe`. I talked about how to do it [here](en/2020/11/02/exporting-observable-notebook/#embed-directly-via-iframe).
 
 This is the result:
 
@@ -23,7 +23,7 @@ This is the result:
 
 If you don't want the logo at the bottom, or that you think the loading is too slow, you have to embed it manually, which is what I am going to talk about in this post. 
 
-# Manual embedding
+## Manual embedding
 
 This part is almost exactly the same as [embedding in a stand-alone webpage](en/2020/11/02/exporting-observable-notebook/#embed-manually). However, since in a Hugo blog post, the `head` and `body` are already defined, you don't need to define the `head` and don't need to manually write `<p>...</p>`, for which you can simply use Markdown (which is why Hugo is invented...).
 
@@ -31,7 +31,7 @@ You should know that **within** a Hugo blog post, you can still (and herhaps nee
 
 The below is what it looks like to manually embed this [Observable notebook](https://observablehq.com/@hongtaoh/explrable-data) of mine. 
 
-## 1. Dropdown menu: Select your favorite season!
+### 1. Dropdown menu: Select your favorite season!
 
 <div>
       <div id="viewof-season"></div>
@@ -55,7 +55,7 @@ The below is what it looks like to manually embed this [Observable notebook](htt
       <button type="button" onclick="window.location.href='https://observablehq.com/@hongtaoh/explrable-data#D_chart';">See the source code.</button>
 </div>
 
-# Full width
+## Full width
 
 If you want the visualization to be full width, it's very easy to do so. Follow the instructions in [this tutorial](https://visionscarto.net/observable-jekyll/). Wrap the target visuzliation within a `div` that is classed (What? It's not a verb?) `fullwidth` (or any name you prefer), and define `fullwidth` this way[^1]:
 

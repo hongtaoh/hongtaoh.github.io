@@ -27,11 +27,11 @@ HTML 上改的话比较容易。如果你也是用的 [bookdown-demo](https://gi
 
 我知道是我要求太苛刻了。Bookdown 原本主要是为网页版书籍准备的，而非 PDF 版。因此，[Bookdown 官网](https://bookdown.org/) 上摆出的那些书籍中，有一些根本就没有把 PDF 版放上去。
 
-不过，随后找到了 由黄湘云、叶飞两位在 [ElegantBook](https://github.com/ElegantLaTeX/ElegantBook) 基础上制作的 [ElegantBookdown](https://github.com/XiangyunHuang/ElegantBookdown)。实在是帮到我好多。
+不过，随后找到了 由黄湘云、叶飞两位在 [ElegantBook](https://github.com/ElegantLaTeX/ElegantBook) 基础上制作的 [ElegantBookdown](https://github.com/XiangyunHuang/ElegantBookdown)，实在是帮到我好多。
 
 有了 ElegantBookdown 的模版，事情就轻松多了。不过我还是为一些小问题伤透了脑筋，下面主要是介绍一下我使用 ElegantBookdown 的心得。
 
-# `index.Rmd` 哪些能改哪些不能改？
+## `index.Rmd` 哪些能改哪些不能改？
 
 ElegantBookdown 中，`index.Rmd` 最不好修改。其他几个都只有内容，但 `index.Rmd` 中有很多参数设置。
 
@@ -49,7 +49,7 @@ Execution halted
 Exited with status 1.
 ```
 
-那时说我们所有东西都不能删吗？肯定不是，不然 ElegantBookdown 谁也没法用了。
+那是说我们所有东西都不能删吗？肯定不是，不然 ElegantBookdown 谁也没法用了。
 
 我一个个试过之后，发现，只有下面这几行代码不能删除[^2]：
 
@@ -66,11 +66,11 @@ $$\varphi _{X_1}(t)=\varphi _{X_2}(t)$$
 
 有一个办法是，到 `_bookdown.yml` 这个文件，把 `lem: "引理 "` 中的「引理」改成你想改的名字。也就是说，肯定要有个内容，你可以改成你需要的标题，比如 「提示」、「注意」、「备注」等等，根据自己的需要改就好。
 
-但是，有个问题是，这个修改只能在 HTML 结果中显示出来，PDF 还是显示 「引理 0.1」。可咋办？
+但有个问题：这个修改只能在 HTML 结果中显示出来，PDF 还是显示 「引理 0.1」。咋办？
 
 我的解决办法是直接把上面 `lemma` 改成了 `remark`，这样结果中是「注」，而且也没有标数字，我很满意了。
 
-如果你不满意这个解决方案，可能就要自己找一下如何在 PDF 版中修改诸如 `lemma`, `remark`  等预设好的中文对应词了。或者，你得自己想一下，如果可何直接删除掉。我暂时没有解决方案。
+如果你不满意这个解决方案，可能就要自己找一下如何在 PDF 版中修改诸如 `lemma`, `remark`  等预设好的中文对应词了。我暂时没有解决方案。
 
 其次，我是直接把下面这几行删除了：
 
@@ -86,13 +86,13 @@ bibliography:
 
 根据谢益辉的 [说明](https://bookdown.org/yihui/bookdown/publishers.html), 这里 lot 表示 List of Tables, lof 表示 List of Figures. 
 
-其他内容根据自己的情况修改就好，至少在 HTML 和 PDF 版中没有太大影响。最末尾的 epub 内容，如果你会体会 epub 格式的文档，最好还是修改一下。
+其他内容根据自己的情况修改就好，至少在 HTML 和 PDF 版中没有太大影响。最末尾的 epub 内容，如果你要提供 epub 格式的文档，最好还是修改一下。
 
 `index.Rmd` 修改这部分我就讲到这里。
 
-# PDF 的中文字体怎么改？
+## PDF 的中文字体怎么改？
 
-在不修改 `ElegantBookdown` [愿文档](https://github.com/XiangyunHuang/ElegantBookdown) 中的 `preamble.tex` 的情况下，我直接点 Rstudio 中的 `Build Book`，结果显示错误，大意是说找不到 Adobe Song Std 和其他 Adobe 字体。
+在不修改 `ElegantBookdown` [原文档](https://github.com/XiangyunHuang/ElegantBookdown) 中的 `preamble.tex` 的情况下，我直接点 Rstudio 中的 `Build Book`，结果显示错误，大意是说找不到 Adobe Song Std 和其他 Adobe 字体。
 
 我用的是 Macbook Air。如果你也是，那么解决方法很简单，只需要把 Adobe 字体替换成相应的苹果电脑自带字体就好，
 
@@ -120,9 +120,9 @@ bibliography:
 你当然也可以去 [Adobe Fonts 的Github 官网](https://github.com/adobe-fonts) 下载[思源宋体](https://github.com/adobe-fonts/source-han-serif/tree/release) 和 [思源黑体](https://github.com/adobe-fonts/source-han-sans/tree/release)。然后按上面的方法替换。不过没有太大的区别。
 
 
-# PDF 中，中文引语的字体怎么改成和不一样的字体？
+## PDF 中，中文引语的字体怎么改成和正文不一样的字体？
 
-很简单，如果上面的关于字体的代码你都没有删除的话，只需要加两行代码：
+很简单，如果上面关于字体的代码你都没有删除的话，只需要加两行代码：
 
 ```tex
 \usepackage{csquotes}
@@ -135,7 +135,7 @@ bibliography:
 
 这个解决方法是我在 Stackoverflow 的 [这个回答](https://tex.stackexchange.com/a/288556) 中看到的。谢谢回答者 [Torbjørn T](https://tex.stackexchange.com/users/586/torbj%c3%b8rn-t).
 
-# PDF 中正文字体的字号怎么改？
+## PDF 中正文字体的字号怎么改？
 
 也很简单：
 
@@ -145,7 +145,7 @@ bibliography:
 
 这个解决方法是我在 Stackoverflow 的 [这个回答](https://tex.stackexchange.com/questions/258434/changing-chinese-font-size) 中看到的。谢谢回答者 [Zelphir Kaltstahl](https://tex.stackexchange.com/users/92107/zelphir-kaltstahl).
 
-## 有个问题是，那引用部分的字号怎么改？
+### 有个问题是，那引用部分的字号怎么改？
 
 用上面的方法似乎不管用了。不过，可以用这个方法：
 
@@ -155,7 +155,7 @@ bibliography:
 
 Latex 的十种字体大小使用方法请看[这里](https://www.sascha-frank.com/latex-font-size.html)。
 
-# PDF 中的行间距怎么调整？
+## PDF 中的行间距怎么调整？
 
 一开始，试着用 [texblog](https://texblog.org/2011/09/30/quick-note-on-line-spacing/) 上一篇 [Quick note on line spacing](https://texblog.org/2011/09/30/quick-note-on-line-spacing/) 提到的方法，但是不行。
 
@@ -167,7 +167,7 @@ Latex 的十种字体大小使用方法请看[这里](https://www.sascha-frank.c
 \renewcommand{\baselinestretch}{1.5} % 行间距
 ```
 
-# PDF 中的字间距怎么调整？
+## PDF 中的字间距怎么调整？
 
 上面 [那篇](http://blog.sina.com.cn/s/blog_5e16f1770100ns4r.html) 帖子提到的 `\renewcommand{\CJKglue}{\hskip 1pt plus 0.08\baselineskip}` 这个办法我试了不管用。
 
@@ -178,7 +178,7 @@ Latex 的十种字体大小使用方法请看[这里](https://www.sascha-frank.c
 ```
 其实，这个答案在 [这里](http://m.newsmth.net/article/TeX/321611) 已经有了，但是那位答主并没有说清楚 `\ziju` 这个命令具体怎么用，所以我错过了。
 
-# 如何修改 HTML Output 中正文的字号？
+## 如何修改 HTML Output 中正文的字号？
 
 [这里](https://stackoverflow.com/questions/40215141/bookdown-how-can-i-change-the-size-of-the-chapter-titles) 提到了如何修改标题的字号，但是并没有提到如何修改正文的字号。
 
@@ -209,9 +209,9 @@ body{
 
 揭晓答案：和 `.book{}` 一样的效果，改变的是左侧栏的字号。
 
-# LateX 资料
+## LateX 资料
 
-有几个非常哈的 Latex 资料。其实，处理中文，主要用到 `CTeX` 和 `xeCJK` 这两个包。
+有几个非常好的 Latex 资料。其实，处理中文，主要用到 `CTeX` 和 `xeCJK` 这两个包。
 
 1. [CTeX 宏集手册 2020年版](http://mirrors.ibiblio.org/CTAN/language/chinese/ctex/ctex.pdf)；
 
@@ -220,9 +220,6 @@ body{
 如果你是想快速学一下 LaTeX, 可以看看 [《简单粗暴 LaTeX》](http://static.latexstudio.net/wp-content/uploads/2017/08/Note-by-LaTeX-cn.pdf)。最新版请关注该项目的 [GigHub Repo](https://github.com/wklchris/Note-by-LaTeX)。
 
 如果你需要用到很多 LaTeX, 可以考虑在线版的 [Overleaf](https://www.overleaf.com/)，可以省却很多自己下载超大的 TeX 的麻烦。如果你只是在 R 中偶尔用，那么谢益辉的 [TinyTex](https://yihui.org/tinytex/) 就够用了。
-
-
-
 
 [^1]: 这行代码来自 [ElegantBookdown](https://github.com/XiangyunHuang/ElegantBookdown)。在此表示感谢黄湘云、叶飞两位作者。
 [^2]: 也有可能是 「已有 Block {#theorem-block}」这个板块中必须要留一个，只是因为我的删除顺序，才出现只有第一段代码必须保留的情况。这个我就不去重新试验了，读者有空可以自己试试。

@@ -1,15 +1,21 @@
 ---
 title: '关于'
-date: ''
-slug: cn/about
+type : nolisting
 ---
 
-检测
+欢迎光临！
 
-<i class="fa fa-car"></i>
-<i class="fa fa-car" style="font-size:48px;"></i>
-<i class="fa fa-car" style="font-size:60px;color:red;"></i>
+郝鸿涛的联系方式：hhao@iu.edu (2021年7月1号之前都会用，之后变更我再更新)
 
-### For testing. 
+---
+我不再上的网站：
+
+- 知乎
+- 豆瓣 
+- 百度
+- 抖音
+- 快手
+- 微博
+- Facebook
 
 

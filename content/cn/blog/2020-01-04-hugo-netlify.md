@@ -18,10 +18,10 @@ aliases:
 
 这篇帖子是针对像我一样的计算机小白的，我会详细把每一步解释清楚。以下主要以苹果电脑为例，使用windows系统的同学可以作为参考，但我不保证过程正确。
 
-# 一、创建本地 hugo 文件夹
+## 一、创建本地 hugo 文件夹
 这个文件夹是你一开始通过hugo new site xxx 建立的那个文件夹，比如如果你用的hugo new site quickstart，那么quickstart文件夹就是我们要托管到github的本地文件夹，当然，不一定非得用quickstart这个名字，你想用mysite, myblog, hugo-website, my-website...都可以。如果你还不知道怎么开始用hugo，可以参考olOwOlo的那篇 [《hugo从入门到会用》](https://blog.olowolo.com/post/hugo-quick-start/)。这里我们就用quickstart为例。
 
-# 二、Github 新建仓库
+## 二、Github 新建仓库
 首先登陆github，如果你还没有注册github账号，请参考[这篇帖子](https://blog.csdn.net/qq_41782425/article/details/85179912)。登陆成功之后，如下图所示，点击右上角的那个加号，然后点击'new repository'。这里的repository是仓库的意思。
 
 {{<figure src="/media/netlify/deploy-1.png" title="新建 Github 仓库">}}
@@ -40,7 +40,7 @@ README.md 这个文件主要是放在你的仓库里，这样别人来到你的�
 
 好了，现在 github 部分我们就暂时操作完了，接下来来我们要做的是将本地的 quickstart 文件夹与 github 仓库连接起来。
 
-# 三、Terminal 及 Git 知识预备
+## 三、Terminal 及 Git 知识预备
 对 terminal 以及 git 的操作很熟悉的童鞋，这一部分的步骤可以忽略。
 
 ------
@@ -71,7 +71,7 @@ git 安装完之后，可能需要一些设置，在终端输入`git config --gl
 
 ------
 
-# 四、将本地 quickstart 文件夹与 github repository 进行关联
+## 四、将本地 quickstart 文件夹与 github repository 进行关联
 这一步我参考的是 [不谇](https://codepool.top/) 的 [hugo 教程系列（十一）](https://codepool.top/posts/hugo-tutorial-11/)。在这里真诚地表示感谢。不谇老师的 hugo 教程是我见过的中文世界中最好、最负责、最全面的、对我帮助最大的。
 
 我们现在需要做的第一步是：将 quickstart 初始化为本地仓库。
@@ -100,7 +100,7 @@ git push -u origin master
 
 现在你刷新一下你的 Github 页面，如果不出意外的话，这个仓库里应该有东西了。很好，最重要的任务已经完成了，现在需要做的就是将 Github 仓库与 Netlify 进行关联。
 
-# 五、将 Github 仓库部署于Netlify
+## 五、将 Github 仓库部署于Netlify
 
 {{<figure src="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/blogdown-signpost-5.png" title="图片作者：Allison Hill ">}}
 
@@ -138,7 +138,7 @@ git push -u origin master
 
 {{<figure src="/media/netlify/netlify-deploy-settings.png" title="页面生成参数设置">}}
 
-## 稍等片刻...
+### 稍等片刻...
 到了这一步，在我们点击 “部署网站” 之前，还有一个非常关键的步骤，那便是在我们的本地 hugo 文件，以及与之相关联的 Github 远程 hugo 文件中，添加 netlify.toml 这个文件。这一步在 Hugo 官方的 [*Host on Netlify*](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/) 也讲到了。
 
 加入这个文件，是为了让 Netlify 在部署的时候，知道该怎么处理 Hugo 所生成的网页。
@@ -190,7 +190,7 @@ git push
 
 好，不出意外的话，你刷新一下 Github ，应该就能看到新上传的文件了。
 
-## 继续！
+### 继续！
 
 然后点击 "Deploy site"。不出意外的话，等一分钟左右，部署就成功了：
 
@@ -213,7 +213,7 @@ git push
 
 好了，网站已经建好了，下面我们讲一下如何进行日常网站更新，因为我们不可能一辈子都不写一篇新文章（虽然有可能...) 。
 
-# 六、网站如何日常更新？（被粉丝催更了咋办？）
+## 六、网站如何日常更新？（被粉丝催更了咋办？）
 
 本地的 Hugo 文件好更新，但是 Netlify 是根据 Github 仓库里的内容来建网站的，所以，这里的更新，更重要的是更新 Github 仓库。
 
@@ -258,7 +258,7 @@ bash deploy.sh
 {{<end>}}
 
 
-# 七、如果你跟着这篇教程走，还是碰到了错误...
+## 七、如果你跟着这篇教程走，还是碰到了错误...
 
 1. 再认真看一下，看看是不是漏了代码；
 2. 看看 terminal 的错误提示是什么？我之前碰到过的一个错误提示大意是：**没有找到 submoduel 代码**。如果是这样的话，那么，你需要用 `git submodule` 来把 hugo 主题克隆下来，而不能用 `git clone`。这一点的原理我还没彻底搞清楚，不过你用 `git submodule` 试一下，应该可以。

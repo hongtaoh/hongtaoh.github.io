@@ -4,7 +4,7 @@ date: 2020-08-31T10:55:40-04:00
 author: Hongtao Hao
 slug: mac-directory-tree
 draft: false
-toc: false
+toc: true
 ---
 I tried to simply the process as the original solution is still a little bit cumbersom. 
 
@@ -45,7 +45,7 @@ I shared my answer [here](https://superuser.com/a/1582072/1214665).
 
 I found a much better solution than [what I previously wrote](/en/2020/08/31/mac-directory-tree/#my-previous-solution). Many thanks to [Michael Page's post](https://techion.com.au/blog/2018/5/24/printing-hierarchical-directory-structures), [Shaun Chapman's post](https://web.archive.org/web/20130527203022/http://shaunchapman.me/post/329270449/how-to-install-the-tree-command-on-mac-os-x), [slhck's answer](https://superuser.com/a/359727), and [apouche's answer](https://superuser.com/a/448969).
 
-# Install tree
+## Install tree
 
 Open a new `Terminal`, copy and paste the following codes, wait for a few seconds for the first several lines to run, and press `Enter` (otherwise the last line won't run). When you copy and past multiple lines into your `Terminal`, you should always press `Enter` to run the last line of code. 
 
@@ -121,7 +121,7 @@ rm -rf tree-1.8.0
 rm -rf tree-1.8.0.tgz
 ```
 
-# Use tree
+## Use tree
 
 Under the directory you are in, simply use `tree`. For exmaple, if you followed every of my steps above, you are in the directory of `tree-1.8.0`, then input `tree` in your `Terminal`, you'll see the directory tree of `tree-1.8.0`. 
 
@@ -144,7 +144,7 @@ I prefer the output of this method than that produced using the follwoing method
 └── YourBlogdownProject.RProj
 ```
 
-# My Previous Solution
+## My Previous Solution
 
 How can I print a directory tree like this on Mac:
 
@@ -174,6 +174,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 Save the change. Open a new `Terminal` using `Command + N`, nagivate to the folder of which you want to print a directory tree using `cd`, and simply type `tree` in your `Terminal`. A directory tree should unfold itself. 
 
 ## Reference
+
 1. [http://mama.indstate.edu/users/ice/tree/](http://mama.indstate.edu/users/ice/tree/)
 2. [https://web.archive.org/web/20130527203022/http://shaunchapman.me/post/329270449/how-to-install-the-tree-command-on-mac-os-x](https://web.archive.org/web/20130527203022/http://shaunchapman.me/post/329270449/how-to-install-the-tree-command-on-mac-os-x)
 3. [https://techion.com.au/blog/2018/5/24/printing-hierarchical-directory-structures](https://techion.com.au/blog/2018/5/24/printing-hierarchical-directory-structures)
