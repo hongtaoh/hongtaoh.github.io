@@ -144,6 +144,13 @@ background-position: 50% 50%
 ## That's when you need D3!
 
 ---
+background-image: url(/media/slides/d3/better-code.png)
+background-size: 800px
+background-position: 50% 50%
+
+## [A better way to code](https://medium.com/@mbostock/a-better-way-to-code-2b1d2876a3a0)
+
+---
 class: inverse
 background-image: url(/media/slides/d3/observable.png)
 background-size: 800px
@@ -171,8 +178,12 @@ background-position: 50% 90%
 - A website I built to practice the examples mentioned in the book: https://d3book.hongtaoh.com/
 
 ---
-class: inverse, middle, center
-background-image: url(http://www.supercoloring.com/sites/default/files/styles/drawing_full/public/fif/2017/12/thanks-gift-tag-paper-craft.png)
-background-size: 500px
-background-position: 50% 50%
+class: inverse, center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+Slides source codes can be found  [**here**](https://raw.githubusercontent.com/hongtaoh/hongtaoh.github.io/sources/static/slides/d3.Rmd).
+  
 
