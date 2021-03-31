@@ -145,10 +145,8 @@ background-position: 50% 50%
 
 ---
 background-image: url(/media/slides/d3/better-code.png)
-background-size: 800px
-background-position: 50% 50%
-
-## [A better way to code](https://medium.com/@mbostock/a-better-way-to-code-2b1d2876a3a0)
+background-size: 600px
+background-position: 50% 60%
 
 ---
 class: inverse
