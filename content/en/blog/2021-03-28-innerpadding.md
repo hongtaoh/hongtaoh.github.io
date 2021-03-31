@@ -3,7 +3,7 @@ title: "How to Understand D3.js scaleBand paddingInner"
 date: 2021-03-28T11:04:55-04:00
 author: "Hongtao Hao"
 slug: d3-innerpadding
-draft: false
+draft: true
 toc: false
 ---
 

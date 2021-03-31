@@ -161,6 +161,10 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
 
 ## Slides
 
-- ICA 2020 Presentation: [HTML](/slides/ICA2020.html)
+- [ICA 2020 Presentation](/slides/ICA2020.html)
+
+- [How to create online books](https://onlinebook.hongtaoh.com/slides/onlinebook.html#1)
+
+- [Introduction to D3.js and Observable notebooks](/slides/d3.html)
 
 

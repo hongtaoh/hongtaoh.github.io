@@ -3,7 +3,7 @@ title: "如何用 Hugo 搭建个人网站"
 date: 2021-03-02T12:03:38-05:00
 author: "郝鸿涛"
 slug: hugo
-draft: false
+draft: draft
 toc: true
 ---
 
