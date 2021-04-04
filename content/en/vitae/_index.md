@@ -40,9 +40,9 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
 ## Honors & Fellowships
 
 - 2015, China's National Champion of the 1st ‘FLTRP Cup’ English Reading Contest, Beijing, China
-   - Ranked 1<sup>st</sup> among 200,000 undergraduate and graduate participants nationwide （<!--[Results](https://heep.unipus.cn/news/xwnr.php?NewsID=3012), -->[School Report](http://www.hebtu.edu.cn/a/2015/12/14/20151214142833.html))
+<!--    - Ranked 1<sup>st</sup> among 200,000 undergraduate and graduate participants nationwide （[Results](https://heep.unipus.cn/news/xwnr.php?NewsID=3012), [School Report](http://www.hebtu.edu.cn/a/2015/12/14/20151214142833.html)) -->
 - 2017, St. Gallen Wings of Excellence Award, the 47<sup>th</sup> [St. Gallen Symposium](https://www.symposium.org/), Switzerland
-  - One of 100 winners selected from nearly 1,000 contestants, representing 350 universities and 109 nationalities
+<!--   - One of 100 winners selected from nearly 1,000 contestants, representing 350 universities and 109 nationalities -->
 - 2019, Second top student paper award, Public Diplomacy Interest Group, International Communication Association, Washington, D.C. 
 - 2019, Annette & Lars Willnat Travel Fellowship, Indiana University, USA
 - 2019, College or Arts and Sciences Travel Grant, Indiana University, USA
@@ -54,17 +54,21 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
 ### Tutorials:
 
 1. Notes on *Network Science*: &nbsp; &nbsp; [Website](https://netsci.hongtaoh.com/) | [Code](https://github.com/hongtaoh/netsci-notes) | [PDF](https://netsci.hongtaoh.com/netsci.pdf)
-   - My notes while auditing Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s online course of [*INFO I606 Network Science*](https://github.com/yy/netsci-course)
+<!--    - My notes while auditing Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s online course of [*INFO I606 Network Science*](https://github.com/yy/netsci-course) -->
 
-2. MSCH-C101 with Hongtao: &nbsp; &nbsp; [Website](https://c101.hongtaoh.com/) | [Code](https://github.com/hongtaoh/c101)
-   - Class website for my students enrolled in *MSCH‑C100 Introduction to media* at IU, 2020 Spring.
+2. How to Create Online Books: &nbsp; &nbsp; [Website](https://onlinebook.hongtaoh.com/) | [Code](https://github.com/hongtaoh/onlinebook)
+
+3. MSCH-C101 with Hongtao: &nbsp; &nbsp; [Website](https://c101.hongtaoh.com/) | [Code](https://github.com/hongtaoh/c101)
+   <!-- - Class website for my students enrolled in *MSCH‑C100 Introduction to media* at IU, 2020 Spring. -->
    - Highlights: [Students feedback](https://c101.hongtaoh.com/feedback/), [Slides](https://c101.hongtaoh.com/slides/), [Lecture videos](https://c101.hongtaoh.com/videos/)
 
-3. D3Book Companion:  &nbsp; &nbsp;  [Website](https://d3book.hongtaoh.com/) | [Code](https://github.com/hongtaoh/d3book)
-   - A simple tutorial website to help beginners like me learn `D3.js`. It is a side product of my [40 Days of Learning D3 Challenge](https://observablehq.com/collection/@hongtaoh/45-days-of-learning-d3).
+4. D3Book Companion:  &nbsp; &nbsp;  [Website](https://d3book.hongtaoh.com/) | [Code](https://github.com/hongtaoh/d3book)
+   <!-- - A simple tutorial website to help beginners like me learn `D3.js`. It is a side product of my [40 Days of Learning D3 Challenge](https://observablehq.com/collection/@hongtaoh/45-days-of-learning-d3). -->
 
-4. Blog Posts of "How to" Series. Representatives:
-   - [How to Understand `D3.js` Continuous Scales](/en/2020/09/07/d3-scales/)
+5. Blog Posts of "How to" Series. 
+
+<!--   Representatives: -->
+<!--    - [How to Understand `D3.js` Continuous Scales](/en/2020/09/07/d3-scales/)
    - [How to Build a Website Using Hugo](/en/2020/06/05/get-started-with-hugo/)
    - [How to Use Legacy Jupyterbook](/en/2020/07/25/legacy-jupyterbook/)
    - [How to Plot a Network's Degree Distribution](/en/2020/08/19/plot-degree-distribution-using-igraph/)
@@ -73,7 +77,7 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
    - [How to Embed an Observable Notebook](/en/2020/11/02/observable-hugo-embed/)
    - [How to Distinguish Between an `If` statement and a `While` loop](/en/2020/10/13/if-while/)
    - [How to Create Custom Blocks in Hugo](/en/2020/11/03/custom-blocks-hugo/)
-   - [How to Use Different Fonts on Overleaf](/en/2020/11/13/overleaf-latex-fonts/)
+   - [How to Use Different Fonts on Overleaf](/en/2020/11/13/overleaf-latex-fonts/) -->
 
 <!-- 1. Notes on *Network Science*: &nbsp; &nbsp;[<i class="fa fa-globe" style="color: grey; font-size: 18pt"></i>](https://netsci.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 18pt"></i>](https://github.com/hongtaoh/netsci-notes), [<i class="fa fa-file" style="color: gray; font-size: 14pt"></i>](https://netsci.hongtaoh.com/netsci.pdf)
 
@@ -87,8 +91,8 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
 5. Using Legacy Jupyterbook [<i class="fa fa-home" style="color: grey; font-size: 19pt"></i>](https://legacy-jupyterbook.hongtaoh.com/), [<i class="fa fa-github" style="color: grey; font-size: 19pt"></i>](https://github.com/hongtaoh/legacy-jupyterbook) -->
 
 ### Website
-5. International Journalism Class at RUC:  &nbsp; &nbsp;  [Website](https://rucer.netlify.app/) | [Code](https://github.com/hongtaoh/guoxinban)
-   - Class website for *International Journalism* taught at [Renmin University of China](https://en.wikipedia.org/wiki/Renmin_University_of_China) by Michael J. Jordan
+1. International Journalism Class at RUC:  &nbsp; &nbsp;  [Website](https://rucer.netlify.app/) | [Code](https://github.com/hongtaoh/guoxinban)
+   <!-- - Class website for *International Journalism* taught at [Renmin University of China](https://en.wikipedia.org/wiki/Renmin_University_of_China) by Michael J. Jordan -->
 
 <!-- ### Website
 
@@ -96,10 +100,10 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
  -->
 
 ### Data visualizations
-6. Visualizing 120 Years of Summer Olympic Games: &nbsp; &nbsp; [Website](https://olymvis.hongtaoh.com/) | [Code](https://github.com/hongtaoh/olymvis) | [Data](https://github.com/hongtaoh/olymvis-data) | [PDF](https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/tex-pdf/fang_hao_olymvis.pdf)
-   - A team project together with [Chris Fang](https://www.linkedin.com/in/chriszihuifang) for Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s [*INFO I590 Data Visualization*](https://yyahn.com/dviz-course/) in 2019 Fall
+1. Visualizing 120 Years of Summer Olympic Games: &nbsp; &nbsp; [Website](https://olymvis.hongtaoh.com/) | [Code](https://github.com/hongtaoh/olymvis) | [Data](https://github.com/hongtaoh/olymvis-data) | [PDF](https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/tex-pdf/fang_hao_olymvis.pdf)
+  <!--  - A team project together with [Chris Fang](https://www.linkedin.com/in/chriszihuifang) for Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s [*INFO I590 Data Visualization*](https://yyahn.com/dviz-course/) in 2019 Fall -->
 
-7. Coronavirus Trend Visualizations: &nbsp; &nbsp; [Website](https://yyahn.com/covid19-dashboard/) | [Data](https://github.com/covid19-data/covid19-data)
+2. Coronavirus Trend Visualizations: &nbsp; &nbsp; [Website](https://yyahn.com/covid19-dashboard/) | [Data](https://github.com/covid19-data/covid19-data)
    - Worked as a research assistant for Professor [Yong-Yeol Ahn](http://yongyeol.com/) on his [Coronavirus Trend Visualizations](https://yyahn.com/covid19-dashboard/) project
 
 
@@ -161,10 +165,10 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
 
 ## Slides
 
-- [ICA 2020 Presentation](/slides/ICA2020.html)
+- [ICA 2020 Presentation](/slides/ICA2020.html), May 2020
 
-- [How to create online books](https://onlinebook.hongtaoh.com/slides/onlinebook.html#1)
+- [How to create online books](https://onlinebook.hongtaoh.com/slides/onlinebook.html#1), January 27, 2021
 
-- [Introduction to D3.js and Observable notebooks](/slides/d3.html)
+- [Introduction to D3.js and Observable notebooks](/slides/d3.html), March 31, 2021
 
 
