@@ -15,9 +15,9 @@ I changed the `&para;` to `#`.
 
 According to frerich, what you need to do is to add `add-header-anchors.html` whose content is shown below to `/layouts/partials`.
 
-```html
+<!-- ```html
 {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="header-anchor" ariaLabel="Anchor">&para;</a>${3}` | safeHTML }}
-```
+``` -->
 
 Then, in `/layouts/_default/single.html`, replace  `{{ .Content }}` with `{{ .Content | partial "add-header-anchors" }}`.
 
