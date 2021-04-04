@@ -3,7 +3,7 @@ title: "How to Add Links to Headings in A Hugo Post"
 date: 2020-10-05T15:07:06-04:00
 author: Hongtao Hao
 slug: hugo-heading-link
-draft: false
+draft: true
 toc: false
 ---
 
