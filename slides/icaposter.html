@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Cross-cultural Comparisons of ‘Selfie’-presentation—A content analysis</title>
+
+<script src="icaposter_files/kePrint-0.0.1/kePrint.js"></script>
+
+
+
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Yanone Kaffeesatz' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 33.2in 48in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 33.2in;
+height: 48in;
+text-align: justify;
+font-size: 40px;
+line-height: 1.05;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r, pre.sourceCode.python {
+background-color: #ffffff20;
+border: solid #C13584 1mm;
+border-radius: 0.5em;
+padding: 4mm;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+div.sourceCode {
+background-color: transparent;
+width: 85%;
+margin-left: auto;
+margin-right: auto;
+}
+code.sourceCode.r, code.sourceCode.python {
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #C1358424;
+color: #C13584;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #C1358420;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 20px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 33.2in;
+height: calc(48in *  (1 - 0.144 - 0.1 - 0.01) );
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+column-gap: 0;
+padding-left: 0cm;
+padding-right: 0cm;
+/* -webkit-column-rule-width: 50%;
+-moz-column-rule-width: 50%;
+column-rule-width: 50%; */
+-webkit-column-rule-style: none;
+-moz-column-rule-style: none;
+column-rule-style: none;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+background-color: #ffffff;
+font-family: Cairo;
+margin-top: calc(48in *  0.144 );
+padding-top: 1em;
+padding-bottom: 1em;
+}
+span.citation {
+  color: #C13584;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: #C13584;
+}
+#title {
+font-size: 128px;
+text-align: left;
+margin: 0;
+line-height: 98%;
+border-bottom: 0;
+font-weight: normal;
+background: 0;
+}
+#author {
+color:#FCAF45;
+margin: 0;
+line-height: 85%;
+font-size: 2em;
+}
+#affiliation {
+padding-top: 0.1em;
+color: ;
+font-style: italic;
+font-size: 40px;
+margin: 0;
+}
+sup {
+color: #cc0000;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author {
+text-align: left;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: #C13584;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+text-align: left;
+}
+.outer h1, h2, h3, h4, h5, h6 {
+text-align: center;
+margin: 0;
+font-weight: bold;
+}
+.section h1 {
+  text-align:center;
+  padding-bottom:5px;
+  background:
+    linear-gradient(
+      to left,
+      #ffffff 1%,
+      #ffffff 20%,
+      #FCAF4575 33%,
+      #FCAF45 50%,
+      #FCAF4575 66%,
+      #ffffff 80%,
+      #ffffff 99%
+    )
+    left
+    bottom
+    #ffffff
+    no-repeat;
+  background-size:100% 5px ;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p, .level2 {
+color: #000000;
+}
+.outer ol {
+padding-left: 8%;
+padding-right: 8%;
+text-align: left;
+}
+.main {
+width: 33.2in;
+height: calc(48in * 0.144);
+position: absolute;
+background-color: #FCAF45;
+color: #8134AF90;
+font-family: Yanone Kaffeesatz;
+background-image: linear-gradient(#FCAF45 50%,#C13584);
+}
+.main strong {
+color: #8134AF;
+}
+.main strong > sup {
+color: #8134AF;
+}
+.main sup {
+color: #8134AF90;
+}
+#main-img-left {
+width: 10%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+#main-img-center {
+width: 10%;
+left: calc(33.2in * 0.45);
+bottom: 0.5in;
+position: absolute;
+}
+#main-img-right {
+width: 10%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+font-size: 122px;
+font-family: Yanone Kaffeesatz;
+text-align: center;
+margin: 0;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+margin-left: 1em;
+}
+.fab {
+color: #00000060;
+font-size: 25px;
+}
+.twitter, i {
+color: #00000060;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #00000060;
+font-size: 35px;
+}
+.envelope {
+color: #00000060;
+font-size: 5px;
+text-decoration: none;
+}
+.globe {
+color: #00000060;
+font-size: 5px;
+text-decoration: none;
+}
+.globetext {
+color: #00000060;
+font-size: 35px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 33.2in;
+height: 48in;
+padding: 0cm;
+}
+.main_bottom {
+width: 33.2in;
+height: calc(48in * 0.1);
+margin-top: calc(48in * (1 - 0.1));
+position: absolute;
+background-color: #FCAF45;
+background-image: linear-gradient(#C13584 10%, #FCAF45);
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.orcid img {
+  width: 3%;
+}
+.emphasis {
+  background-color: #008080;
+  color: #ffffff;
+  border: solid #0b2045 3mm;
+  margin: 1em;
+  padding-left: 0;
+  padding-right: 0;
+}
+.emphasis h1 {
+  font-weight: bold;
+  background: none;
+  background-color: #0b2045;
+  padding-bottom: 5mm;
+  padding-top: 1mm;
+  margin-top: -1mm;
+  margin-right: -1mm;
+  margin-left: -1mm;
+}
+.emphasis blockquote {
+  border: 0;
+}
+.emphasis ol {
+  padding: 0;
+  padding-left: 8%;
+  font-size: 100%;
+  font-weight: bold;
+}
+.emphasis p {
+  color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+
+<div class="column outer">
+<div class="section">
+<h1 id="title">Cross-cultural Comparisons of ‘Selfie’-presentation—A content analysis</h1><br>
+<h3 id="author" class="author">
+
+<strong>Hongtao Hao</strong><sup> 1</sup><br>
+
+<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:hhao@iu.edu" class="email">hhao@iu.edu</a> <br>
+</h3>
+
+<h5 id="author_extra", class="author_extra">
+</h5>
+
+
+<p id="affiliation" class="affiliation">
+<sup>1</sup> The Media School, Indiana University Bloomington
+</p>
+</div>
+
+<div id="key-question" class="section level1">
+<h1>1.Key Question</h1>
+<p>Do Chinese women’s selfies on Weibo <svg style="height:0.8em;top:.04em;position:relative;fill:red;" viewBox="0 0 512 512"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg> and White women’s selfies on Twitter <svg style="height:0.8em;top:.04em;position:relative;fill:steelblue;" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> differ?</p>
+</div>
+<div id="background" class="section level1">
+<h1>2. Background</h1>
+<ul>
+<li><p>Beauty of women in the US was constructed in terms of the <strong>body</strong>, whereas East Asian women care more about their <strong>facial features</strong> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p></li>
+<li><p>“Sexual/sex kitten” appeared significantly more frequently in American ads than in East Asian ads.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p></li>
+<li><p>Studies on cuteness in Asian context focused on adults, whereas those in Western context focused on infants.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p></li>
+</ul>
+<p><img src="/media/ica2020/4.png" width="880" /></p>
+<p>Note: Click <a href="https://github.com/hongtaoh/ICA2020Poster/blob/master/icon_photo_attri.md">here</a> to see a full list of icon/photo attibutions.</p>
+</div>
+<div id="methods" class="section level1">
+<h1>3. Methods</h1>
+<div id="data-collection" class="section level2">
+<h2>Data collection</h2>
+</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><svg style="height:0.8em;top:.04em;position:relative;fill:steelblue;" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></th>
+<th align="right"><svg style="height:0.8em;top:.04em;position:relative;fill:red;" viewBox="0 0 512 512"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>N</em></td>
+<td align="center">250</td>
+<td align="right">250</td>
+</tr>
+<tr class="even">
+<td>Sampling frame</td>
+<td align="center">26,733 images</td>
+<td align="right">8,866 images</td>
+</tr>
+<tr class="odd">
+<td>Time period</td>
+<td align="center">Dec 31, 2017 to Jan. 1, 2019 (CUT<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>)</td>
+<td align="right">Same</td>
+</tr>
+<tr class="even">
+<td>Source</td>
+<td align="center"><a href="https://iuni.iu.edu/resources/datasets/osome/enhanced-data-twitter">OSoMe’s Enhanced Access API</a></td>
+<td align="right"><a href="https://s.weibo.com/">Weibo Advanced Search</a></td>
+</tr>
+</tbody>
+</table>
+</p>
+</div>
+<div id="measurements" class="section level2">
+<h2>Measurements</h2>
+</p>
+<table class="table table-striped" style="font-size: 100px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variables
+</th>
+<th style="text-align:left;">
+Detail
+</th>
+<th style="text-align:right;">
+Initial.ICR
+</th>
+<th style="text-align:right;">
+Final.ICR
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Shot size
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0.90
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mirror selfies
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:right;">
+0.91
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Body exposure
+</td>
+<td style="text-align:left;">
+Cleavage
+</td>
+<td style="text-align:right;">
+0.76
+</td>
+<td style="text-align:right;">
+0.85
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Midriff
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0.93
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Buttock
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0.90
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Thigh
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0.94
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sexual suggestiveness
+</td>
+<td style="text-align:left;">
+Hair
+</td>
+<td style="text-align:right;">
+0.82
+</td>
+<td style="text-align:right;">
+0.79
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Pose
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0.78
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Self-touching
+</td>
+<td style="text-align:right;">
+0.91
+</td>
+<td style="text-align:right;">
+0.83
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cuteness
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:right;">
+0.75
+</td>
+<td style="text-align:right;">
+0.77
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="results" class="section level1">
+<h1>4. Results</h1>
+<div id="descriptive-statistics" class="section level2">
+<h2>4.1 Descriptive Statistics <svg style="height:0.8em;top:.04em;position:relative;fill:skyblue;" viewBox="0 0 496 512"><path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm82.29 357.6c-3.9 3.88-7.99 7.95-11.31 11.28-2.99 3-5.1 6.7-6.17 10.71-1.51 5.66-2.73 11.38-4.77 16.87l-17.39 46.85c-13.76 3-28 4.69-42.65 4.69v-27.38c1.69-12.62-7.64-36.26-22.63-51.25-6-6-9.37-14.14-9.37-22.63v-32.01c0-11.64-6.27-22.34-16.46-27.97-14.37-7.95-34.81-19.06-48.81-26.11-11.48-5.78-22.1-13.14-31.65-21.75l-.8-.72a114.792 114.792 0 0 1-18.06-20.74c-9.38-13.77-24.66-36.42-34.59-51.14 20.47-45.5 57.36-82.04 103.2-101.89l24.01 12.01C203.48 89.74 216 82.01 216 70.11v-11.3c7.99-1.29 16.12-2.11 24.39-2.42l28.3 28.3c6.25 6.25 6.25 16.38 0 22.63L264 112l-10.34 10.34c-3.12 3.12-3.12 8.19 0 11.31l4.69 4.69c3.12 3.12 3.12 8.19 0 11.31l-8 8a8.008 8.008 0 0 1-5.66 2.34h-8.99c-2.08 0-4.08.81-5.58 2.27l-9.92 9.65a8.008 8.008 0 0 0-1.58 9.31l15.59 31.19c2.66 5.32-1.21 11.58-7.15 11.58h-5.64c-1.93 0-3.79-.7-5.24-1.96l-9.28-8.06a16.017 16.017 0 0 0-15.55-3.1l-31.17 10.39a11.95 11.95 0 0 0-8.17 11.34c0 4.53 2.56 8.66 6.61 10.69l11.08 5.54c9.41 4.71 19.79 7.16 30.31 7.16s22.59 27.29 32 32h66.75c8.49 0 16.62 3.37 22.63 9.37l13.69 13.69a30.503 30.503 0 0 1 8.93 21.57 46.536 46.536 0 0 1-13.72 32.98zM417 274.25c-5.79-1.45-10.84-5-14.15-9.97l-17.98-26.97a23.97 23.97 0 0 1 0-26.62l19.59-29.38c2.32-3.47 5.5-6.29 9.24-8.15l12.98-6.49C440.2 193.59 448 223.87 448 256c0 8.67-.74 17.16-1.82 25.54L417 274.25z"/></svg></h2>
+<p><img src="icaposter_files/figure-html/unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="results-1" class="section level2">
+<h2>4.2 Results</h2>
+<div id="h1-shot-size-5" class="section level3">
+<h3>H1, Shot size <img src="/media/ica2020/camera.png" style="width:8.0%" /> <a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></h3>
+<p><code>Chi Square(1, N = 500) = 4.20, p = .040</code>: White women post more body shots than Chinese women.</p>
+</div>
+<div id="h2-mirror-selfie-6" class="section level3">
+<h3>H2, Mirror selfie <img src="/media/ica2020/mirror.png" style="width:8.0%" /> <a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></h3>
+<p><code>Chi Square(1, N = 500) = .62, p = .430</code>: White women did not take more mirror selfies than Chinese women<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>.</p>
+</div>
+<div id="h4a-cleavage-8" class="section level3">
+<h3>H4(a), Cleavage <img src="/media/ica2020/bra.png" style="width:8.0%" /> <a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></h3>
+<p><code>Chi Square(2, N = 500) = 43.41, p &lt; .001</code>: White women displayed a significantly higher level of cleavage/breasts exposure than Chinese women.</p>
+</div>
+<div id="h4b-midriff-9" class="section level3">
+<h3>H4(b), Midriff <img src="/media/ica2020/midriff.png" style="width:8.0%" /> <a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></h3>
+<p><code>t (282.28) = 3.02, p = .003, d = .27</code>: White women exhibited a higher degree of midriff exposure than Chinese women.</p>
+</div>
+<div id="h4c-buttock-10" class="section level3">
+<h3>H4(c), Buttock <img src="/media/ica2020/buttock_results.png" style="width:8.0%" /> <a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></h3>
+<p><code>t (498) = .43, p = .669, d = .04</code>: White women did not show a higher degree of buttock exposure than Chinese women.</p>
+</div>
+<div id="h4d-thigh11-12" class="section level3">
+<h3>H4(d), Thigh<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a> <img src="/media/ica2020/thigh-leg.png" style="width:8.0%" /> <a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></h3>
+<p><code>Chi Square(1, N = 500) = .22, p = .640</code>: White women did not show a higher degree of thigh exposure than Chinese women.</p>
+</div>
+<div id="h5-a-hair-display" class="section level3">
+<h3>H5 (a), Hair display <img src="/media/ica2020/hair_display.png" style="width:8.0%" /></h3>
+<p><code>Chi Square(2, N = 500) = 32.17, p &lt; .001</code>: White women displayed a significantly higher level sexual suggestiveness through hair display than Chinese women.</p>
+</div>
+<div id="h5-b-pose-13" class="section level3">
+<h3>H5 (b), Pose <img src="/media/ica2020/pose.png" style="width:8.0%" /> <a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></h3>
+<p><code>Chi Square(1, N = 500) = 8.51, p = .004</code>: White women showed a higher level sexual suggestiveness via pose than Chinese women.</p>
+</div>
+<div id="h5c-self-tourching14" class="section level3">
+<h3>H5(c), Self-tourching<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a> <img src="/media/ica2020/touching.png" style="width:8.0%" /></h3>
+<p><code>Chi Square(1, N = 500) = 6.85, p = .009</code>. However, the direction was the opposite: Chinese women exhibited more sexual suggestiveness through self-touching than White women.</p>
+</div>
+<div id="rq1-cuteness" class="section level3">
+<h3>RQ1, Cuteness <img src="/media/ica2020/kawaii.jpeg" style="width:8.0%" /></h3>
+<p><code>t (479.69) = -1.56, p = .119, d = .14</code>, Chinese women did not show a higher level of cuteness than White women.</p>
+</div>
+</div>
+</div>
+<div id="references-footnotes" class="section level1">
+<h1>References &amp; Footnotes</h1>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Frith, Shaw &amp; Cheng, 2005; Staley &amp; Zhan, 2011; Wu &amp; Lang, 2018<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Frith et al., 2005<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>Little, 2012; Sprengelmeyer et al., 2009<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>Coordinated Universal Time. This is to control for the effects of weather and seasons on selfie taking and sharing.<a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p>Icon made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com">www.flaticon.com</a><a href="#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p>Icon made by <a href="https://www.flaticon.com/authors/good-ware">Good Ware</a> from <a href="https://www.flaticon.com">www.flaticon.com</a><a href="#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p>Chinese women took more mirror selfies but the difference was not significant.<a href="#fnref7" class="footnote-back">↩</a></p></li>
+<li id="fn8"><p>Icon made by <a href="https://www.flaticon.com/authors/pixel-perfect">Pixel perfect</a> from <a href="https://www.flaticon.com">www.flaticon.com</a><a href="#fnref8" class="footnote-back">↩</a></p></li>
+<li id="fn9"><p>Icon made by <a href="https://www.flaticon.com/authors/monkik">monkik</a> from <a href="https://www.flaticon.com">www.flaticon.com</a><a href="#fnref9" class="footnote-back">↩</a></p></li>
+<li id="fn10"><p>Icon made by <a href="https://www.flaticon.com/authors/flat-icons">Flat icons</a> from <a href="https://www.flaticon.com">www.flaticon.com</a><a href="#fnref10" class="footnote-back">↩</a></p></li>
+<li id="fn11"><p>“Slightly visible” and “completely visible” were collapsed into “visible”.<a href="#fnref11" class="footnote-back">↩</a></p></li>
+<li id="fn12"><p>Icon made by <a href="https://www.flaticon.com/authors/pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.com">www.flaticon.com</a><a href="#fnref12" class="footnote-back">↩</a></p></li>
+<li id="fn13"><p>Icon made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com">www.flaticon.com</a><a href="#fnref13" class="footnote-back">↩</a></p></li>
+<li id="fn14"><p>“Slightly suggestive” and “extremely suggestive” were combined into “sexually suggestive”.<a href="#fnref14" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+
+</div>
+<div class="main">
+<p>You’ll find more <strong>body shots</strong>, more <strong>cleavage</strong>, more <strong>sexual suggestiveness</strong> via hair display and posing, but as much <strong>cuteness</strong>, in White women’s selfies on <strong>Twitter</strong>, compared to what you may find in Chinese women’s selfies on <strong>Weibo</strong>.</p>
+</div>
+<div class="main_bottom">
+<img id="main-img-left" src=https://raw.githubusercontent.com/hongtaoh/ICA2020Poster/master/images/poster.png>
+<img id="main-img-center" src=https://raw.githubusercontent.com/hongtaoh/ICA2020Poster/master/images/full_paper.png>
+<img id="main-img-right" src=https://raw.githubusercontent.com/hongtaoh/ICA2020Poster/master/images/pre_video.png>
+</div>
+</div>
+
+
+
+</body>
+</html>

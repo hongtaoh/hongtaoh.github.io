@@ -1,0 +1,27 @@
+h2 {
+  color: gold;
+}
+
+pre {
+  border: 1px solid #cccccc; 
+  font-size: 12px;
+  /*#757575*/
+}
+
+pre code {
+  background-color: transparent;
+  border: none;
+}
+
+code {
+  padding: 2px 0.25rem;
+  border-radius: 2px;
+  border: 1px solid #757575;
+  font-family: 'Courier';
+  font-size: 16px;
+}
+
+body {
+	font-family: Charter, sans-serif;
+	font-weight: 400;
+}

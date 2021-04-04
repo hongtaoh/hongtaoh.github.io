@@ -1,0 +1,178 @@
+---
+main_topsize: 0.144 #percent coverage of the poster
+main_bottomsize: 0.1
+main_fontfamily: Yanone Kaffeesatz
+main_textcol: "#8134AF"
+main_textsize: 122px
+primary_colour: "#FCAF45" 
+secondary_colour: "#C13584"
+#ESSENTIALS
+title: Cross-cultural Comparisons of 'Selfie'-presentation—A content analysis
+title_textsize: 128px
+author_textsize: 2em
+affiliation_textsize: 40px
+author:
+  - name: '**Hongtao Hao**'
+    affil: 1
+    main: true
+    email: hhao@iu.edu
+affiliation:
+  - num: 1
+    address: The Media School, Indiana University Bloomington
+poster_height: 48in
+poster_width: 33.2in
+font_family: Cairo
+main_findings:
+  - "You'll find more **body shots**, more **cleavage**, more **sexual suggestiveness** via hair display and posing, but as much **cuteness**, in White women’s selfies on **Twitter**, compared to what you may find in Chinese women’s selfies on **Weibo**."
+logoleft_name: https&#58;//raw.githubusercontent.com/hongtaoh/ICA2020Poster/master/images/poster.png
+logoright_name: https&#58;//raw.githubusercontent.com/hongtaoh/ICA2020Poster/master/images/pre_video.png
+logocenter_name: https&#58;//raw.githubusercontent.com/hongtaoh/ICA2020Poster/master/images/full_paper.png
+output: 
+  posterdown::posterdown_betterport:
+    self_contained: false
+    pandoc_args: --mathjax
+    number_sections: false
+bibliography: 
+link-citations: true
+body_textsize: 40px
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      tidy = FALSE,
+                      message = FALSE,
+                      fig.align = 'center',
+                      out.width = "100%")
+options(knitr.table.format = "html") 
+```
+
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library("fontawesome")
+library("kableExtra")
+library("ggplot2")
+library("treemapify")
+```
+
+# 1.Key Question
+
+Do Chinese women’s selfies on Weibo `r fa("weibo", fill="red")` and White women’s selfies on Twitter `r fa("twitter", fill="steelblue")` differ?
+
+# 2. Background
+
+- Beauty of women in the US was constructed in terms of the **body**, whereas East Asian women care more about their **facial features** [^1].
+
+- “Sexual/sex kitten” appeared significantly more frequently in American ads than in East Asian ads.[^2]
+
+- Studies on cuteness in Asian context focused on adults, whereas those in Western context focused on infants.[^3]
+
+![](/media/ica2020/4.png){width=880px}
+
+Note: Click [here](https://github.com/hongtaoh/ICA2020Poster/blob/master/icon_photo_attri.md) to see a full list of icon/photo attibutions. 
+
+# 3. Methods
+## Data collection
+</p>
+
+|      | `r fa("twitter", fill = "steelblue")` | `r fa("weibo", fill = "red")`  |
+| ------------- |:-------------:| -----:|
+| *N*      | 250 | 250 |
+| Sampling frame     | 26,733 images      |  8,866 images |
+| Time period | Dec 31, 2017 to Jan. 1, 2019 (CUT[^4])    |    Same |
+| Source |  [OSoMe’s Enhanced Access API](https://iuni.iu.edu/resources/datasets/osome/enhanced-data-twitter)    | [Weibo Advanced Search](https://s.weibo.com/) |
+
+</p>
+
+## Measurements
+</p>
+
+```{r}
+dt = read.csv(file='/Users/Tal/Desktop/hugo/static/files/variables.csv')
+kable(dt) %>%
+  kable_styling(bootstrap_options = "striped", font_size = 100)
+```
+
+# 4. Results
+## 4.1 Descriptive Statistics `r fa("globe-americas", fill="skyblue")` 
+
+```{r}
+pct <- c(90,55,18,12,2,2,1,70)
+cat <- c('USA','UK','Canada', 'Australia', 'Ireland', 'New Zealand', 'South Africa', 'Did not identify location')
+country_data <- data.frame(cat, pct)
+g <- ggplot(country_data, 
+       aes(fill = cat, 
+           area = pct, 
+           label = cat)) +
+  geom_treemap() + 
+  geom_treemap_text(colour = "white", 
+                    place = "centre") +
+  labs(title = "Sources of the 250 Twitter selfies") +
+  theme(legend.position = "none")
+g + theme(
+plot.title = element_text(color="red", size=20, face="bold.italic")
+)
+```
+
+## 4.2 Results
+
+### H1, Shot size ![](/media/ica2020/camera.png){width=8%} [^5]
+
+`Chi Square(1, N = 500) = 4.20, p = .040`: White women post more body shots than Chinese women.
+
+### H2, Mirror selfie ![](/media/ica2020/mirror.png){width=8%} [^6]
+
+`Chi Square(1, N = 500) = .62, p = .430`: White women did not take more mirror selfies than Chinese women[^7].
+
+### H4(a), Cleavage ![](/media/ica2020/bra.png){width=8%} [^8]
+
+`Chi Square(2, N = 500) = 43.41, p < .001`: White women displayed a significantly higher level of cleavage/breasts exposure than Chinese women.
+
+### H4(b), Midriff ![](/media/ica2020/midriff.png){width=8%} [^9]
+
+`t (282.28) = 3.02, p = .003, d = .27`: White women exhibited a higher degree of midriff exposure than Chinese women. 
+
+### H4(c), Buttock ![](/media/ica2020/buttock_results.png){width=8%} [^10]
+
+`t (498) = .43, p = .669, d = .04`: White women did not show a higher degree of buttock exposure than Chinese women. 
+
+### H4(d), Thigh[^11] ![](/media/ica2020/thigh-leg.png){width=8%} [^12]
+
+`Chi Square(1, N = 500) = .22, p = .640`: White women did not show a higher degree of thigh exposure than Chinese women.
+
+### H5 (a), Hair display ![](/media/ica2020/hair_display.png){width=8%}
+
+`Chi Square(2, N = 500) = 32.17, p < .001`: White women displayed a significantly higher level sexual suggestiveness through hair display than Chinese women. 
+
+### H5 (b), Pose ![](/media/ica2020/pose.png){width=8%} [^13]
+
+`Chi Square(1, N = 500) = 8.51, p = .004`: White women showed a higher level sexual suggestiveness via pose than Chinese women.
+
+### H5(c), Self-tourching[^14] ![](/media/ica2020/touching.png){width=8%}
+
+`Chi Square(1, N = 500) = 6.85, p = .009`. However, the direction was the opposite: Chinese women exhibited more sexual suggestiveness through self-touching than White women. 
+
+### RQ1, Cuteness ![](/media/ica2020/kawaii.jpeg){width=8%}
+
+`t (479.69) = -1.56, p = .119, d = .14`, Chinese women did not show a higher level of cuteness than White women. 
+
+# References & Footnotes
+[^1]: Frith, Shaw & Cheng, 2005; Staley & Zhan, 2011; Wu & Lang, 2018
+[^2]: Frith et al., 2005
+[^3]: Little, 2012; Sprengelmeyer et al., 2009
+[^4]: Coordinated Universal Time. This is to control for the effects of weather and seasons on selfie taking and sharing.
+[^5]: Icon made by [Vitaly Gorbachev](https://www.flaticon.com/authors/vitaly-gorbachev) from [www.flaticon.com](https://www.flaticon.com)
+[^6]: Icon made by [Good Ware](https://www.flaticon.com/authors/good-ware) from [www.flaticon.com](https://www.flaticon.com)
+[^7]: Chinese women took more mirror selfies but the difference was not significant.
+[^8]: Icon made by [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) from [www.flaticon.com](https://www.flaticon.com)
+[^9]: Icon made by [monkik](https://www.flaticon.com/authors/monkik) from [www.flaticon.com](https://www.flaticon.com)
+[^10]: Icon made by [Flat icons](https://www.flaticon.com/authors/flat-icons) from [www.flaticon.com](https://www.flaticon.com)
+[^11]: “Slightly visible” and “completely visible” were collapsed into “visible”.
+[^12]: Icon made by [Pixelmeetup](https://www.flaticon.com/authors/pixelmeetup) from [www.flaticon.com](https://www.flaticon.com)
+[^13]: Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com)
+[^14]: “Slightly suggestive” and “extremely suggestive” were combined into “sexually suggestive”.
+
+
+
+
+
