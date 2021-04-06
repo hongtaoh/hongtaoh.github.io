@@ -8,9 +8,20 @@ aliases:
     - /cn/2020-01-22-deploy-on-github/
     - /cn/2020-01-22-github-deploy/
 ---
+{{<block class="tip">}}
+2021-04-06: Hugo 的[官方建议](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch)里目前只剩 GitHub Action 了，这也是我比较推荐的方法。具体 GitHub Action 怎么用，请参考：
+
+- [如何零基础免费搭建个人网站](/cn/2021/03/02/personal-webiste-tutorial/) 之 密钥设置、设置 Personal Token、添加 workflow 以及 上传到 GitHub；
+
+如果你不介意看英文，可以参考：
+
+- [How to Deploy A Hugo Website Using GitHub Pages Action](/en/2021/04/05/hugo-gh-pages-action/)
+
+- [Official documentation](https://github.com/marketplace/actions/github-pages-action) of GitHub Pages action
+{{<end>}}
 
 {{<block class="note">}}
-这篇文章太老了，而且很复杂，不太建议大家再参考。我会在之后更新。如果你想部署你的 Hugo 网站，请优先参考我之前那篇 [Netlify 部署](/cn/2020/01/04/hugo-netlify-deploy/) 的帖子。如果你还是想把网站部署到 GitHub Pages, 我推荐你看[这里](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch)。
+2020-11-29: 这篇文章太老了，而且很复杂，不太建议大家再参考。我会在之后更新。如果你想部署你的 Hugo 网站，请优先参考我之前那篇 [Netlify 部署](/cn/2020/01/04/hugo-netlify-deploy/) 的帖子。如果你还是想把网站部署到 GitHub Pages, 我推荐你看[这里](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch)。
 {{<end>}}
   
 [Hugo官网上的那篇教程](https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages) 有个问题是，你需要两个 Github 仓库，一个是 `YOUR-PROJECT> (e.g. blog)`，另一个是 `<USERNAME>.github.io `。其中第一个是 Hugo 文件夹的所有内容，第二个是第一个的子仓库，只包括其中的 `public` 文件夹。
@@ -260,7 +271,7 @@ bash deploy.sh
 
 Github 的 [官方指南](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site) 给出了方法。到 `<username>/<username>.github.io` 这个仓库，找到 Settings, 然后在 GitHub Pages 中的 Custom domain 这里填入我们自己的域名即可。
 
-{{<figure src="https://help.github.com/assets/images/help/pages/save-custom-domain.png" title="图片来源：GitHub">}}
+{{<figure src="https://docs.github.com/assets/images/help/pages/save-custom-subdomain.png" title="图片来源：GitHub">}}
 
 这个是可以的。但这会带来一个问题。
 
