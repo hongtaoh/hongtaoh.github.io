@@ -6,4 +6,4 @@ public
 .DS_Store
 gh-pages
 gh-pages.pub
-.github
+.github/workflows
