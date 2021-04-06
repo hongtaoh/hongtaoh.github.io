@@ -1,21 +1,32 @@
 ---
-title: "如何用 Hugo 搭建个人网站"
+title: "如何零基础免费搭建个人网站"
 date: 2021-03-02T12:03:38-05:00
 author: "郝鸿涛"
-slug: hugo
+slug: personal-webiste-tutorial
 draft: draft
 toc: true
 ---
+{{<block class="note">}}
+四、五年前我非常希望有一篇真正有用的教编程小白免费建个人网站的教程。我看到的基本上都是非常笼统的文章，没有非常细节的。我也理解，因为要写得很细，就要花很多时间，也很麻烦。我很想帮助别人建博客，就不嫌麻烦地写下了这篇教程。
 
-本教程旨在手把手帮你搭建你的个人网站。建站工具是[Hugo](https://gohugo.io/) + [GitHub](https://github.com/) + ([Netlify](https://www.netlify.com/))，其中，Netlify 非必须。
+如果你在这篇帖子中看到了错误，请点击本文目录上的按钮，fork 我的个人网站之后就可以提交你的修改建议了。十分感谢！
+{{<end>}}
+
+本教程旨在手把手帮你搭建属于你的个人网站。建站工具是[Hugo](https://gohugo.io/) + [GitHub](https://github.com/)。两个都是免费的。完成后，你的个人网站网址是：`https://github用户名.github.io`。
 
 ## 前期准备
 
-如果你是彻彻底底的零基础：没有 GitHub 账号、不知道 HTML 和 CSS 为何物、没用过 Git，甚至连 Markdown 都不知道是什么，强烈建议你先把[这份教程](https://intro2code.netlify.app/)认真读一下。读完后，你需要：
+如果你是彻彻底底的零基础：没有 GitHub 账号、不知道 HTML 和 CSS 为何物、没用过 Git，甚至连 Markdown 都不知道是什么，强烈建议你先把[这份教程](https://intro2code.hongtaoh.com/)的前三章认真读一下。读完后，你需要：
 
-- 注册了 GitHub 账号、下载了文本编辑器、安装了 Git 和（如果你用的是 Windows 系统）终端
+- 注册了 GitHub 账号
 
-- 掌握了 Markdown、HTML 和 CSS 的基础语法
+- 下载了[文本编辑器](https://intro2code.hongtaoh.com/prep.html#text-editor)
+
+- [安装 Git](https://intro2code.hongtaoh.com/html-basics.html#windows-%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85-git)
+
+- 掌握了 Markdown 的基础语法
+
+以下提到「终端」，可以理解为苹果电脑上的 Terminal / 微软系统上的 Git Bash。
 
 ## 安装 Hugo
 
@@ -77,7 +88,7 @@ Hugo 博客就是一个文件夹。首先你要确定把这个文件夹放在哪
 cd Desktop
 ```
 
-如果你用的是 Windows，在你所选用的[终端](https://intro2code.netlify.app/prep.html#terminal)中输入：
+如果你用的是 Windows，打开你所选用的[终端](https://intro2code.hongtaoh.com/prep.html#terminal)，比如 git bash, 输入：
 
 ```bash
 cd 你刚才复制的路径
@@ -120,7 +131,182 @@ hugo server -D # 这里的 D 是 draft 的意思
 
 打开终端显示的 [http://localhost:1313/](http://localhost:1313/)，不出意外的话你能看到和 [https://hugo-ht.hongtaoh.com/](https://hugo-ht.hongtaoh.com/) 一模一样的个人网站。
 
-## 个人定制
+如果没有什么问题，苹果电脑在终端输入 Ctrl+C 停止预览。微软系统我不知道该按哪个键，不过你可以看终端的提示。苹果系统的提示是：Press Ctrl+C to stop。
+
+清闲确保你已经把预览关闭，之后再往下继续。
+
+## 新建 GitHub 仓库
+
+登陆 GitHub, 点击头像左侧的加号，再点击'new repository'。
+
+{{<figure src="/media/netlify/deploy-1.png" title="新建 Github 仓库">}}
+
+在 Repository name 这里输入 `你的 GitHub 用户名.github.io`。Description 这里你写啥都可以。其他都不要动，点击 Create repository。
+
+{{<figure src="/media/cnblog/username.github.io.png" title="新建仓库设置">}}
+
+## 密钥设置
+
+### 创建 .github/workflows/gh-pages.yml
+
+回到终端。确保你现在在 quickstart 文件夹的根目录。苹果电脑请在终端中输入 `pwd`， 微软系统请输入 `chdir`，如果所出现的结果中 `quickstart` 后面还有东西，那就不是根目录。
+
+如果你还在根目录，请输入
+
+```bash
+mkdir .github
+mkdir .github/workflows
+touch .github/workflows/gh-pages.yml
+```
+
+### 设置 SSH Deploy Key
+
+把鼠标放在目前的终端页面。然后：
+
+- 苹果电脑：Cmd+N
+
+- 微软系统：alt+F2
+
+你会看到一个新的终端页面。
+
+苹果电脑输入：
+
+```bash
+cd ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
+open -a Finder ~/.ssh
+```
+
+微软系统输入：
+
+```bash
+cd C:\Users\admin\.ssh
+ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
+start C:\Users\admin\.ssh
+```
+
+此时，你回看到两个新增的文件：gh-pages 和 gh-pages.pub
+
+紧接着
+
+苹果电脑输入：`pbcopy < ~/.ssh/gh-pages.pub`
+
+微软系统输入：`clip < ~/.ssh/gh-pages.pub`
+
+现在，请回到 GitHub 你新建的仓库。把屏幕拉宽，点击 Settings -> 点击 Deploy keys -> 点击 Add deploy key。把鼠标放在 key 下面的文本框，苹果电脑按 Command+V，微软系统按 Control+V。在 Allow write access 那里打勾，在 Title 随便写点东西，比如“个人网站部署”，然后点击 Add key。
+
+现在，回到刚才新建的终端。
+
+苹果电脑输入：`pbcopy < ~/.ssh/gh-pages`
+
+微软系统输入：`clip < ~/.ssh/gh-pages`
+
+请再回到 GitHub 你新建的仓库。把屏幕拉宽，点击 Settings -> 点击 Secrets -> 点击 New repository secret。把鼠标放在 Value 下面的文本框，苹果电脑按 Command+V，微软系统按 Control+V。在 Name 那里填 ACTIONS_DEPLOY_KEY，然后点击 Add secret。
+
+现在可以把这个终端窗口关闭了。
+
+## 设置 Personal Token
+
+首先，打开[这个链接](https://github.com/settings/tokens)。进去后，点击 Generate new token, 在随后出现的页面中，在 Select scopes 这里算中 workflow，在 Note 那里随便写点东西，然后将页面往下拖，点击 Generate token。
+
+生成之后，点击那一串字母后边的复制板，将 token 复制下来。
+
+{{<figure src="/media/cnblog/personal_token.png" title="复制 personal token">}}
+
+现在请回到 GitHub 你新建的仓库。把屏幕拉宽，点击 Settings -> 点击 Secrets -> 点击 New repository secret。把鼠标放在 Value 下面的文本框，苹果电脑按 Command+V，微软系统按 Control+V。在 Name 那里填 PERSONAL_TOKEN，然后点击 Add secret。
+
+## 添加 workflow
+
+回到最开始的那个终端。（如果你把之前的终端关了，也不要紧，cd 到你的 hugo 项目就好）。
+
+苹果系统输入：
+
+```bash
+open .github/workflows/gh-pages.yml -a TextEdit 
+```
+
+微软系统输入：
+
+```bash
+notepad .github\workflows\gh-pages.yml
+```
+
+然后复制以下内容，粘贴到刚才弹出的 gh-pages.yml:
+
+```YAML
+name: github pages
+
+on:
+  push:
+    branches:
+      - master  # Set a branch name to trigger deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.79.1'
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
+```
+
+然后保存（Mac: Cmd+S; Windows: Control+S)。
+
+终端不要关闭。
+
+## 上传到 GitHub
+
+如果你是第一次使用 git, 你可能需要设置一些内容。在终端输入 `git config --global user.name "你的git用户名"`, 以及 `git config --global user.email "你的邮箱"`。用你的 GitHub 用户名和与 GitHub 绑定的邮箱就可以。不懂的话，请参考[这里](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE)。
+
+回到刚才的终端，输入：
+
+{{<block class="important">}}
+下面的代码中，请不要忘记把 USERNAME 换成你自己的 GitHub 用户名!
+{{<end>}}
+
+```bash
+git init
+git add .
+git commit -m "first commit."
+git remote add origin https://github.com/USERNAME/USERNAME.github.io.git
+git push -u origin master
+```
+
+{{<block class="note">}}
+使用 Windows 系统的同学，如果你是第一次使用 Git，按完回车后，因为最后一步是往 GitHub 上传内容，你会被要求登陆 (Sign in) GitHub, 点击 Sign in with your browser 就可以，然后你会被要求 Authorize Git Credential Manager，点击绿色的 Authorize Git Credential Manager，在随后的页面中输入你的 GitHub 密码 (password)。随后，可能还会出现 OpenSSH 的页面，让你输入 GitHub 用户名 (Username for `https://github.com`)，按要求输入然后点击 OK 就好。Show input 可点可不点，点开的话你就可以看到你输的内容。
+{{<end>}}
+
+现在请再回到 GitHub 你新建的仓库。把屏幕拉宽，点击 Settings，一直往下拖，到你看到 GitHub Pages 为止。在 Source 那里，Branch 选择 gh-pages, 右侧的框框选择 root，然后点 Save。等一两分钟，当出现 
+
+>Your site is published at https://USERNAME.github.io/ 
+
+点开那个链接，你的网站应该就出现了。
+
+## 后续
+
+### 修改 config.toml
+
+你 Hugo 文件夹根目录下的 config.toml 有几个地方需要你自己改：
+
+- baseURL: 替换成 https://USERNAME.github.io/
+
+- GithubEdit: 把所有的 USERNAME 换成你的 GitHub 用户名，把所有的 REPONAME 换成 github用户名.github.io
 
 ### 只要中文部分
 
@@ -128,7 +314,7 @@ hugo server -D # 这里的 D 是 draft 的意思
 
 1. 移动文件夹
 
-打开终端，输入：
+打开终端，首先 cd 你的 Hugo 文件夹，然后
 
 ```bash
 cp -r content/cn/about content
@@ -137,7 +323,7 @@ cp -r content/cn/posts content
 
 2. 修改 config.toml
 
-打开 `config.toml`, 把 `[[menu.en]]`, `[[menu.cn]]` 那部分删除，然后在那个位置加上：
+打开 `config.toml`, 把 `[[menu.en]]` 和 `[[menu.cn]]` 两部分删除，然后加上：
 
 ```toml
 [[menu.main]]
@@ -168,6 +354,64 @@ singleLang = true
 defaultLang = "cn"
 ```
 
+### 新添加内容
+
+#### 新加一篇博客
+
+先在终端 cd 到你的 Hugo 文件夹，然后在终端输入：
+
+```bash
+hugo new cn/posts/2021-04-06-a-new-post.md
+```
+
+2021-04-06 只是一个例子，你换成你当天的日期就好。a-new-post 也只是一个例子，换成你想用的名称就好。
+
+#### 新加一个像 [关于](https://hugo-ht.hongtaoh.com/cn/about/) 这样的单独页面
+
+苹果电脑：先在终端 cd 到你的 Hugo 文件夹，然后在终端输入
+
+```bash
+mkdir content/cn/hobby # hobby 可以换成别的名字
+cp content/cn/about/_index.md content/cn/hobby # hobby 可以换成别的名字
+open content/cn/hobby/_index.md -a TextEdit 
+```
+
+更改这个 `_index.md` 的 Title 和内容即可。
+
+
+微软系统：
+
+打开 content 文件夹，进入 cn 或者 en 文件夹 （看你是想加一个中文页面，还是英文页面）。新建一个文件夹，起名随意，比如 hobby，然后把 about 文件夹里的 `_index.md` 复制粘贴到 hobby 文件夹里。打开 hobby文件夹里的 `_index.md`，更改 Title 和内容即可。如果不想要开头的目录，将 `toc: true` 改成 `toc: false`。
+
+### 自定义域名
+{{<block class="tip">}}
+如果你对 USERNAME.github.io 这个免费域名很满意，就没必要自己再去买域名。
+{{<end>}}
+  
+这部分其实很容易。我的域名是在 [Namecheap](https://www.namecheap.com/) 买的。其他地方在设置上应该差不多。这里我就以 Namecheap 举例。
+
+其实，Namecheap 自己已经给出了 [解决方法](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages)。
+
+按照上面的方法，你在买完域名后，到 Manage 页面里的 Advanced DNS。首先把网站自动加的那两个 Record 删除，在 Namecheap, 网站自动加了 CNAME Record 和 URL Redirect Record, 把这两个先删除。随后，点击 "Add New Record"，新加四个 A Record, 这四个 Record 的 Host 填 @ , value 分别填下面四个：
+
+- 185.199.108.153
+- 185.199.109.153
+- 185.199.110.153
+- 185.199.111.153
+
+其中，185.199.108.153 这个 A Record 的 TTL 选 30 min，其他填 Automatic
+
+然后，加一个 CNAME Record, Host 填 www ， value 填 `<username>.github.io`，比如我的填 hhao1992.github.io, 随后 TTL 选 30 min。设置如下：
+
+{{<figure src="https://namecheap.simplekb.com//SiteContents/2-7C22D5236A4543EB827F3BD8936E153E/media/2018-06-20_1804.png" title="图片来源：Namecheap">}}
+
+这些设置好之后，我们需要让 Github 知道我们想把 `https://<username>.github.io` 这个网址转到 我们自己买的域名。怎么告诉呢？
+
+Github 的 [官方指南](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site) 给出了方法。到 `<username>/<username>.github.io` 这个仓库，找到 Settings, 然后在 GitHub Pages 中的 Custom domain 这里填入我们自己的域名即可。
+
+{{<figure src="https://docs.github.com/assets/images/help/pages/save-custom-subdomain.png" title="图片来源：GitHub">}}
+
+比如，你买的域名是 example.com，在 Custome domain 这里输入 example.com 就行。
 
 
 
