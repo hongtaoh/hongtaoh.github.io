@@ -413,5 +413,17 @@ Github 的 [官方指南](https://help.github.com/en/github/working-with-github-
 
 比如，你买的域名是 example.com，在 Custome domain 这里输入 example.com 就行。
 
+之后，你需要在 github/workflows/gh-pages.yml 最后那里加上 `cname: example.com`:
+
+```YAML
+- name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
+          cname: example.com
+```
+
 
 
