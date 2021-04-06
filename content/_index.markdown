@@ -1,6 +1,5 @@
 ---
 title:
-type: nolisting
 ---
 
 {{<figure src="/media/great_wall_samll.png" caption="On the Great Wall in 2017, photo by Jude Wang (王秀全)" width="450">}}
