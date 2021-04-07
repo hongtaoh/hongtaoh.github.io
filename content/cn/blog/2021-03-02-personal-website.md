@@ -169,7 +169,7 @@ touch .github/workflows/gh-pages.yml
 
 - 微软系统：鼠标放在 git bash 最上端（白色标题位置），右键，选择 New
 
-{{<figure src="/media/cnblog/windows_git_bash_new" title="Windows 系统 git bash 新窗口如何打开">}}
+{{<figure src="/media/cnblog/windows_git_bash_new.jpg" title="Windows 系统 git bash 新窗口如何打开">}}
 
 你会看到一个新的终端页面。
 
