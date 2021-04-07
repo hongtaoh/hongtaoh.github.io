@@ -9,7 +9,7 @@ toc: true
 {{<block class="note">}}
 四、五年前我非常希望有一篇真正有用的教编程小白免费建个人网站的教程。我看到的基本上都是非常笼统的文章，没有非常细节的。我也理解，因为要写得很细，就要花很多时间，也很麻烦。我很想帮助别人建博客，就不嫌麻烦地写下了这篇教程。
 
-如果你在这篇帖子中看到了错误，请点击本文目录上的按钮，fork 我的个人网站之后就可以提交你的修改建议了。十分感谢！
+如果你在这篇帖子中看到了错误，请点击本文目录上的按钮，复克 (fork) 我的个人网站之后就可以提交你的修改建议了。十分感谢！
 {{<end>}}
 
 本教程旨在手把手帮你搭建属于你的个人网站。建站工具是[Hugo](https://gohugo.io/) + [GitHub](https://github.com/)。两个都是免费的。完成后，你的个人网站网址是：`https://github用户名.github.io`。
@@ -27,6 +27,8 @@ toc: true
 - 掌握了 Markdown 的基础语法
 
 以下提到「终端」，可以理解为苹果电脑上的 Terminal / 微软系统上的 Git Bash。
+
+如果你是第一次使用 git, 你可能需要设置一些内容。在终端输入 `git config --global user.name "你的git用户名"`, 以及 `git config --global user.email "你的邮箱"`。用你的 GitHub 用户名和与 GitHub 绑定的邮箱就可以。不懂的话，请参考[这里](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE)。
 
 ## 安装 Hugo
 
@@ -165,7 +167,9 @@ touch .github/workflows/gh-pages.yml
 
 - 苹果电脑：Cmd+N
 
-- 微软系统：alt+F2
+- 微软系统：鼠标放在 git bash 最上端（白色标题位置），右键，选择 New
+
+{{<figure src="/media/cnblog/windows_git_bash_new" title="Windows 系统 git bash 新窗口如何打开">}}
 
 你会看到一个新的终端页面。
 
@@ -177,15 +181,23 @@ ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 open -a Finder ~/.ssh
 ```
 
-微软系统输入：
+微软系统：
+
+首先试着输入
 
 ```bash
-cd C:\Users\admin\.ssh
-ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
-start C:\Users\admin\.ssh
+start ~/.ssh
 ```
 
-此时，你回看到两个新增的文件：gh-pages 和 gh-pages.pub
+如果显示说找不到这个文件，则接着在 Git bash 中输入：
+
+```bash
+mkdir ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
+start ~/.ssh
+```
+
+此时，你会看到两个新增的文件：gh-pages 和 gh-pages.pub
 
 紧接着
 
@@ -271,8 +283,6 @@ jobs:
 终端不要关闭。
 
 ## 上传到 GitHub
-
-如果你是第一次使用 git, 你可能需要设置一些内容。在终端输入 `git config --global user.name "你的git用户名"`, 以及 `git config --global user.email "你的邮箱"`。用你的 GitHub 用户名和与 GitHub 绑定的邮箱就可以。不懂的话，请参考[这里](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE)。
 
 回到刚才的终端，输入：
 
