@@ -24,7 +24,7 @@ Those who set their desktop browser homepage to Huffington Post visited the Huff
 
 ## 2021-04-04
 
-1. Jang (2021). [*A South Korean Chatbot Shows Just How Sloppy Tech Companies Can Be With User Data*](https://slate.com/technology/2021/04/scatterlab-lee-luda-chatbot-kakaotalk-ai-privacy.html)
+1. Jang, H. (2021). [*A South Korean Chatbot Shows Just How Sloppy Tech Companies Can Be With User Data*](https://slate.com/technology/2021/04/scatterlab-lee-luda-chatbot-kakaotalk-ai-privacy.html)
 
 >... [B]igger tech companies are usually much better at hiding what they actually do with user data, while restricting users from having control and oversight over their own data. **Once you give, there is no taking back.** (Emphasis by Hongtao, not the original author).
 

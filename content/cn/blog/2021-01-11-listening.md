@@ -1,5 +1,5 @@
 ---
-title: 英语听力能力如何提高
+title: 如何提高英语听力
 date: 2021-01-11T16:19:21-05:00
 author: 郝鸿涛
 slug: english-listening
