@@ -5,15 +5,7 @@
 when installed. I don&rsquo;t think it&rsquo;s worth it to download Xcode simply for Wget.</p><ol start=2><li>Official website of Gun</li></ol><p>I tried to download <a href=https://ftp.gnu.org/gnu/wget/wget2-1.99.2.tar.gz target=_blank rel="noreferrer noopener">wget2-1.99.2.tar.gz</a>
 from <a href=https://ftp.gnu.org/gnu/wget/ target=_blank rel="noreferrer noopener">https://ftp.gnu.org/gnu/wget/</a>
 which I got from <a href=https://www.gnu.org/software/wget/ target=_blank rel="noreferrer noopener">https://www.gnu.org/software/wget/</a>
-.</p><div class=highlight><div style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:green>cd</span> ~/Downloads
+.</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:green>cd</span> ~/Downloads
 curl -O https://ftp.gnu.org/gnu/wget/wget2-1.99.2.tar.gz
 tar -zxvf wget2-1.99.2.tar.gz
 <span style=color:green>cd</span> wget2-1.99.2/
@@ -21,7 +13,7 @@ tar -zxvf wget2-1.99.2.tar.gz
 make
 make install
 wget http://ftp.gnu.org/gnu/wget/wget-1.19.5.tar.gz
-</code></pre></td></tr></table></div></div><p>However, errors occured. According to <a href=https://www.fossmint.com/install-and-use-wget-on-mac/ target=_blank rel="noreferrer noopener">this article</a>
+</code></pre></div><p>However, errors occured. According to <a href=https://www.fossmint.com/install-and-use-wget-on-mac/ target=_blank rel="noreferrer noopener">this article</a>
 , it seems I have to install Xcode first; otherwise running <code>./configure</code> won&rsquo;t be successful.</p><ol start=3><li><a href=https://stackoverflow.com/a/33902055 target=_blank rel="noreferrer noopener">Brew</a></li></ol><p>A more detailed answer is <a href=https://stackoverflow.com/a/33902055 target=_blank rel="noreferrer noopener">here</a>
 by <a href=https://stackoverflow.com/users/895659/farsheed target=_blank rel="noreferrer noopener">Farsheed</a>
 and edited by <a href=https://stackoverflow.com/users/382177/gagarine target=_blank rel="noreferrer noopener">gagarine</a>

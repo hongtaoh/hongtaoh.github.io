@@ -2,31 +2,7 @@
 / 2020-11-03</p><hr></div><span class=article-toolbar><a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-11-03custom-blocks.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i></a></span><div class="body-text list-text"><p>I thought creating custom blocks in Hugo would be difficult. But with Hugo&rsquo;s shortcodes, and <a href=https://github.com/rstudio/bookdown/blob/master/inst/examples/css/style.css target=_blank rel="noreferrer noopener">the CSS</a>
 from Yihui Xie&rsquo;s <a href=https://github.com/rstudio/bookdown target=_blank rel="noreferrer noopener">Bookdown</a>
 project, it can be super easy.</p><h2 id=download-images-and-edit-stylesheet>Download images and edit stylesheet<a href=#download-images-and-edit-stylesheet class=header-anchor arialabel=Anchor> #</a></h2><p>First of all, you&rsquo;ll need to download five images from <a href=https://github.com/rstudio/bookdown/tree/master/inst/examples/images target=_blank rel="noreferrer noopener">here</a>
-: <code>caution</code>, <code>important</code>, <code>note</code>, <code>tip</code>, and <code>warning.png</code>. Add these images to the <code>static</code> folder of your Hugo project. I suppose you are adding them to the root directory of <code>static</code>.</p><p>Then, in your <code>CSS</code> stylesheet, add the following:</p><div class=highlight><div style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#00f;font-weight:700>note</span><span style=color:#666>,</span>
+: <code>caution</code>, <code>important</code>, <code>note</code>, <code>tip</code>, and <code>warning.png</code>. Add these images to the <code>static</code> folder of your Hugo project. I suppose you are adding them to the root directory of <code>static</code>.</p><p>Then, in your <code>CSS</code> stylesheet, add the following:</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#00f;font-weight:700>note</span><span style=color:#666>,</span>
 .<span style=color:#00f;font-weight:700>important</span><span style=color:#666>,</span>
 .<span style=color:#00f;font-weight:700>tip</span><span style=color:#666>,</span>
 .<span style=color:#00f;font-weight:700>caution</span><span style=color:#666>,</span>
@@ -50,23 +26,17 @@ project, it can be super easy.</p><h2 id=download-images-and-edit-stylesheet>Dow
 .<span style=color:#00f;font-weight:700>warning</span> {
   <span style=color:green;font-weight:700>background-image</span>: <span style=color:green>url</span>(<span style=color:#ba2121>&#34;../warning.png&#34;</span>);
 }
-</code></pre></td></tr></table></div></div><p>Edit the styles as you need. For example, you can use a different font or <code>font-size</code> for texts in your custom blocks. If you don&rsquo;t know how to do so, you probably need to <a href=https://www.w3schools.com/Css/ target=_blank rel="noreferrer noopener">learn more about CSS</a>
+</code></pre></div><p>Edit the styles as you need. For example, you can use a different font or <code>font-size</code> for texts in your custom blocks. If you don&rsquo;t know how to do so, you probably need to <a href=https://www.w3schools.com/Css/ target=_blank rel="noreferrer noopener">learn more about CSS</a>
 .</p><p>Also, <code>background: #f5f5f5 2px top/3em no-repeat;</code> means that the image will appear on the top-left corner. If you want it to be at the left-center, change that line of code to <code>background: #f5f5f5 2px center/3em no-repeat;</code></p><h2 id=create-shortcode>Create shortcode<a href=#create-shortcode class=header-anchor arialabel=Anchor> #</a></h2><p>Then, we are going to create shortcodes for custome blocks.</p><p>Create a shortcode named &ldquo;block&rdquo; (or any name you want) with the following code:</p><pre><code>&lt;div {{ with .Get &quot;class&quot; }}class=&quot;{{.}}&quot;{{ end }}&gt;
 </code></pre><p>And another shortcode named &ldquo;end&rdquo; (or any other name you want) with the following code:</p><pre><code>&lt;/div&gt;
 </code></pre><p>Super easy, right?</p><h2 id=write-in-between-shortcodes>Write in between shortcodes<a href=#write-in-between-shortcodes class=header-anchor arialabel=Anchor> #</a></h2><p><div class=note>This is a note.</div></p><p>is generated by:</p><p>{{&lt; block class="note" >}}</br>This is a note.</br>{{&lt; end >}}</p><p>The same is for important, tip, caution and warning.</p><p><div class=important>This is important!</div></p><p><div class=tip>This is a tip. How much are you going to tip me?</div></p><p><div class=caution>Caution: Great food ahead! Stop if you are on a diet.</div></p><p><div class=warning>Warning: Road blocked ahead!</div></p><p>I personally use this quite often:</p><p><div class=reminder>You can use this whatever way you like. I usually use it to remind myself of something in a post.</div></p><p>If you like it too, you can download the image <a href=http://gdut_yy.gitee.io/doc-csstdg4/ch1.html#_1-6-feature-queries target=_blank rel="noreferrer noopener">here</a>
-, and then add the following codes to your stylesheet (edit as you need):</p><div class=highlight><div style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#00f;font-weight:700>reminder</span> {
+, and then add the following codes to your stylesheet (edit as you need):</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#00f;font-weight:700>reminder</span> {
   <span style=color:green;font-weight:700>min-height</span>: <span style=color:#666>3.2</span><span style=color:#b00040>em</span>;
   <span style=color:green;font-weight:700>padding</span>: <span style=color:#666>1</span><span style=color:#b00040>em</span> <span style=color:#666>1</span><span style=color:#b00040>em</span> <span style=color:#666>1</span><span style=color:#b00040>em</span> <span style=color:#666>4</span><span style=color:#b00040>em</span>;
   <span style=color:green;font-weight:700>background</span>: <span style=color:#666>#f5f5f5</span> <span style=color:#666>2</span><span style=color:#b00040>px</span> <span style=color:green;font-weight:700>center</span><span style=color:#666>/</span><span style=color:#666>3</span><span style=color:#b00040>em</span> <span style=color:green;font-weight:700>no-repeat</span>;
   <span style=color:green;font-weight:700>background-image</span>: <span style=color:green>url</span>(<span style=color:#ba2121>&#34;../reminder.png&#34;</span>);
 }
-</code></pre></td></tr></table></div></div><p>You don&rsquo;t have to use the name of <code>reminder</code>. Use any name you want.</p><p style=color:#777>Last modified on 2021-03-29</p></div><a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a></main><footer class=footer><script type=text/javascript src=/js/math-code.js></script><script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type=text/javascript src=/js/center-img.js></script><ul class=footer-links><li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">Subscribe</a></li><li><a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>License
+</code></pre></div><p>You don&rsquo;t have to use the name of <code>reminder</code>. Use any name you want.</p><p style=color:#777>Last modified on 2021-03-29</p></div><a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a></main><footer class=footer><script type=text/javascript src=/js/math-code.js></script><script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type=text/javascript src=/js/center-img.js></script><ul class=footer-links><li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">Subscribe</a></li><li><a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>License
 <i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i></a></li></ul><div class=copyright-text>©
 Hongtao Hao
 2020-2021</div></footer>

@@ -8,7 +8,7 @@
 有两种方法来获取这个从长远来看的相对频率：
 模拟； 数学公式推导 第一种方法，模拟。我们用 R 语言来模拟。假设计算机预算 $\theta = 0.8$，也就是正面朝上的概率是 80％，但是我们不知道。我们只能通过观察计算机的掷币结果来推测。
 下面我们在计算机上模拟抛掷一枚 $\theta = 0.8$ 的硬币一万次。代码1如下：
-1 2 3 4 5 6 7 8 9 10 11 n &amp;lt;- 10000 pheads &amp;lt;- 0.</description></item><item><title>贝叶斯统计思想入门（一)：概述</title><link>https://hongtaoh.com/cn/2020/01/18/bayesian-stats-chapter2/</link><pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2020/01/18/bayesian-stats-chapter2/</guid><description>前言：这篇文章是我上约翰.克鲁斯克老师 (John Kruschke ) 的《贝叶斯数据分析》 (P533: Bayesian Data Analysis ) 这门课时，在课下看他的教材 Doing Bayesian Data Analysis (Second Edition) 所做的笔记。
+n &amp;lt;- 10000 pheads &amp;lt;- 0.8 flips&amp;lt;-sample (x=c(0,1),prob=c(1-pheads, pheads),size=n, replace=TRUE) num.heads &amp;lt;- cumsum(flips) total.toss &amp;lt;- c(1:n) prob.</description></item><item><title>贝叶斯统计思想入门（一)：概述</title><link>https://hongtaoh.com/cn/2020/01/18/bayesian-stats-chapter2/</link><pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2020/01/18/bayesian-stats-chapter2/</guid><description>前言：这篇文章是我上约翰.克鲁斯克老师 (John Kruschke ) 的《贝叶斯数据分析》 (P533: Bayesian Data Analysis ) 这门课时，在课下看他的教材 Doing Bayesian Data Analysis (Second Edition) 所做的笔记。
 贝叶斯的本质是对于可能性1(credibility) 的重置 (reallocation)。比如，早上刚出家门，你看到门前地面是湿的。这个有很多种可能的原因：下雨了、小孩子撒尿了、环卫工人刚打扫了、物业洒水车刚洒了水、有人不小心把水杯里的水洒出来了、外星人来过自己的家然后离开的时候不小心留下的痕迹&amp;hellip;这些所有的可能，在我们获得进一步数据之前，都有着自己的先验概率 (prior probability)。这些先验概率，是我们主观上认为的可能性，比如根据我们往常的生活经验，下雨的可能性要比外星人到访高的多。虽然高得多，我们获得的信息毕竟是有限的，因为我们只是观察了门前的一小块地。因此，这些可能性都是存在的。
 然后，我们接着在路上走，发现不仅整条路都是湿的，而且房屋顶都是湿的，那么我们对概率进行重置：下雨的可能性进步一提升，而之前有可能的洒水车洒过水的可能性下降，因为洒水车不可能把水洒到房顶上。
 Kruschke 老师的教材中的图2.1 对这一过程进行了进一步阐释。这张图展示了从一开始认为 A, B, C, D 都有可能是罪犯，而且可能性相同，然后一步一步找到新的线索，最后认定 D 是罪犯的过程。
