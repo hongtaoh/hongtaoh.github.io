@@ -88,9 +88,9 @@ git push -u origin master
 git commit -m <span style=color:#ba2121>&#34;请给自己留言&#34;</span>
 git push origin master
 </code></pre></div><p>如果你连这都觉得麻烦，可以在 Hugo 文件夹根目录下用文本编辑器新建一个文件，命名为 <code>deploy.sh</code>，把以下内容复制粘贴到里面：</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git add .
-<span style=color:#19177c>msg</span><span style=color:#666>=</span><span style=color:#ba2121>&#34;updating data on </span><span style=color:green;font-weight:700>$(</span>date<span style=color:green;font-weight:700>)</span><span style=color:#ba2121>&#34;</span> 
+<span style=color:#19177c>msg</span><span style=color:#666>=</span><span style=color:#ba2121>&#34;updating site on </span><span style=color:green;font-weight:700>$(</span>date<span style=color:green;font-weight:700>)</span><span style=color:#ba2121>&#34;</span> 
 git commit -m <span style=color:#ba2121>&#34;</span><span style=color:#19177c>$msg</span><span style=color:#ba2121>&#34;</span>
-git push
+git push origin master
 </code></pre></div><p>这样，每次上传更新时，你只需要在 <code>cd</code> 了你的 Hugo 文件夹后运行</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>bash deploy.sh
 </code></pre></div><h3 id=只要中文部分>只要中文部分<a href=#只要中文部分 class=header-anchor arialabel=Anchor> #</a></h3><p>如果你不喜欢现在的双语博客，只想留下中文，请参照以下步骤：</p><ol><li>移动文件夹</li></ol><p>打开终端，首先 cd 你的 Hugo 文件夹，然后</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cp -r content/cn/about content
 cp -r content/cn/posts content
