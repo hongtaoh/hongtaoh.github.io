@@ -76,7 +76,7 @@ hugo version
 
 Hugo 博客就是一个文件夹。首先你要确定把这个文件夹放在哪里。我会以放在桌面为例。
 
-如果你用的是 Windows 系统，同时按下 `Win` + `E`，选中右侧导航栏中的「桌面」，右键，选择「属性」，然后选择位置，将此路径复制下来。
+如果你用的是 Windows 系统，同时按下 `Win` + `E`，选中右侧导航栏中的「桌面」，右键，选择「属性」，然后选择上方的位置栏，将此路径复制下来。
 
 {{<block class="note">}}
 以上找到桌面路径的方法参考[win10桌面文件夹位置在哪？](http://www.xitonghe.com/jiaocheng/Windows10-10408.html)，在此表示感谢。
@@ -125,7 +125,7 @@ cd ..
 cp -r themes/hugo-ht/exampleSite/* .
 ```
 
-紧接着，运行
+记得回车。然后运行
 
 ```bash
 hugo server -D # 这里的 D 是 draft 的意思
@@ -133,7 +133,7 @@ hugo server -D # 这里的 D 是 draft 的意思
 
 打开终端显示的 [http://localhost:1313/](http://localhost:1313/)，不出意外的话你能看到和 [https://hugo-ht.hongtaoh.com/](https://hugo-ht.hongtaoh.com/) 一模一样的个人网站。
 
-如果没有什么问题，苹果电脑在终端输入 Ctrl+C 停止预览。微软系统我不知道该按哪个键，不过你可以看终端的提示。苹果系统的提示是：Press Ctrl+C to stop。
+如果没有什么问题，在终端输入 Ctrl+C 停止预览。
 
 清闲确保你已经把预览关闭，之后再往下继续。
 
@@ -151,7 +151,7 @@ hugo server -D # 这里的 D 是 draft 的意思
 
 ### 创建 .github/workflows/gh-pages.yml
 
-回到终端。确保你现在在 quickstart 文件夹的根目录。苹果电脑请在终端中输入 `pwd`， 微软系统请输入 `chdir`，如果所出现的结果中 `quickstart` 后面还有东西，那就不是根目录。
+回到终端。确保你现在在 quickstart 文件夹的根目录。请在终端中输入 `pwd`，如果所出现的结果中 `quickstart` 后面还有东西，那就不是根目录。
 
 如果你还在根目录，请输入
 
@@ -160,6 +160,7 @@ mkdir .github
 mkdir .github/workflows
 touch .github/workflows/gh-pages.yml
 ```
+输入完之后回车。
 
 ### 设置 SSH Deploy Key
 
@@ -178,26 +179,33 @@ touch .github/workflows/gh-pages.yml
 ```bash
 cd ~/.ssh
 ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
-open -a Finder ~/.ssh
+open -a Finder ~/.ssh 
 ```
+回车。 
 
 微软系统：
 
 首先试着输入
 
+{{<block class="note">}}
+以下的 Admin 请替换为你自己的电脑用户名！
+{{<end>}}
+
 ```bash
-start ~/.ssh
+start /C/Users/Admin/.ssh
 ```
 
 如果显示说找不到这个文件，则接着在 Git bash 中输入：
 
 ```bash
-mkdir ~/.ssh
+cd /C/Users/Admin
+start ~/.ssh
+mkdir ~/.ssh/ && cd ~/.ssh
 ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 start ~/.ssh
 ```
 
-此时，你会看到两个新增的文件：gh-pages 和 gh-pages.pub
+回车。此时，你会看到两个新增的文件：gh-pages 和 gh-pages.pub
 
 紧接着
 
@@ -219,7 +227,7 @@ start ~/.ssh
 
 ## 设置 Personal Token
 
-首先，打开[这个链接](https://github.com/settings/tokens)。进去后，点击 Generate new token, 在随后出现的页面中，在 Select scopes 这里算中 workflow，在 Note 那里随便写点东西，然后将页面往下拖，点击 Generate token。
+首先，打开[这个链接](https://github.com/settings/tokens)。进去后，点击 Generate new token 按钮, 在随后出现的页面中，在 Select scopes 这里选中 workflow，在 Note 那里随便写点东西，然后将页面往下拖，点击 Generate token。
 
 生成之后，点击那一串字母后边的复制板，将 token 复制下来。
 
@@ -240,7 +248,7 @@ open .github/workflows/gh-pages.yml -a TextEdit
 微软系统输入：
 
 ```bash
-notepad .github\workflows\gh-pages.yml
+notepad .github/workflows/gh-pages.yml
 ```
 
 然后复制以下内容，粘贴到刚才弹出的 gh-pages.yml:
@@ -286,8 +294,8 @@ jobs:
 
 回到刚才的终端，输入：
 
-{{<block class="important">}}
-下面的代码中，请不要忘记把 USERNAME 换成你自己的 GitHub 用户名!
+{{<block class="warning">}}
+下面的代码中，请不要忘记把 USERNAME 换成你自己的 GitHub 用户名!!!!!!!!
 {{<end>}}
 
 ```bash
@@ -297,6 +305,7 @@ git commit -m "first commit."
 git remote add origin https://github.com/USERNAME/USERNAME.github.io.git
 git push -u origin master
 ```
+回车。
 
 {{<block class="note">}}
 使用 Windows 系统的同学，如果你是第一次使用 Git，按完回车后，因为最后一步是往 GitHub 上传内容，你会被要求登陆 (Sign in) GitHub, 点击 Sign in with your browser 就可以，然后你会被要求 Authorize Git Credential Manager，点击绿色的 Authorize Git Credential Manager，在随后的页面中输入你的 GitHub 密码 (password)。随后，可能还会出现 OpenSSH 的页面，让你输入 GitHub 用户名 (Username for `https://github.com`)，按要求输入然后点击 OK 就好。Show input 可点可不点，点开的话你就可以看到你输的内容。
@@ -317,6 +326,41 @@ git push -u origin master
 - baseURL: 替换成 https://USERNAME.github.io/
 
 - GithubEdit: 把所有的 USERNAME 换成你的 GitHub 用户名，把所有的 REPONAME 换成 github用户名.github.io
+
+### 更新网站
+
+每次修改或添加新内容后，如果更新网站呢？
+
+更新的话是这样一个流程：
+
+我们用 `git add` 来让 git 知道我们这次要更新什么。如果你更新的是 README.md, 那就用 `git add README`。如果你更新的是中文的博客，那就用 `git add cn/posts`。如果你修改了很多内容，不想一个一个地加，可以用 `git add .`，意思是把全部的修改、新增内容上传。
+
+然后，要用到 `git commit -m "Message"`，比如：`git commit -m "新增一篇博客"`。
+
+最后是上传，用 `git push origin master`。
+
+总结一下，每次更新网站时，首先 `cd` 到你的 Hugo 文件夹，然后运行：
+
+```bash
+git add . # 或者如 git add README.md
+git commit -m "请给自己留言"
+git push origin master
+```
+
+如果你连这都觉得麻烦，可以在 Hugo 文件夹根目录下用文本编辑器新建一个文件，命名为 `deploy.sh`，把以下内容复制粘贴到里面：
+
+```bash
+git add .
+msg="updating data on $(date)" 
+git commit -m "$msg"
+git push
+```
+
+这样，每次上传更新时，你只需要在 `cd` 了你的 Hugo 文件夹后运行
+
+```bash
+bash deploy.sh
+```
 
 ### 只要中文部分
 
@@ -392,6 +436,15 @@ open content/cn/hobby/_index.md -a TextEdit
 微软系统：
 
 打开 content 文件夹，进入 cn 或者 en 文件夹 （看你是想加一个中文页面，还是英文页面）。新建一个文件夹，起名随意，比如 hobby，然后把 about 文件夹里的 `_index.md` 复制粘贴到 hobby 文件夹里。打开 hobby文件夹里的 `_index.md`，更改 Title 和内容即可。如果不想要开头的目录，将 `toc: true` 改成 `toc: false`。
+
+不管是苹果还是微软，新加了 hobby 文件夹之后，要想让它出现在网站上，你需要把它加在 config.toml，比如
+
+```toml
+[[menu.main]]
+    name = "兴趣"
+    url = "/hobby/"
+    weight = 4
+```
 
 ### 自定义域名
 {{<block class="tip">}}

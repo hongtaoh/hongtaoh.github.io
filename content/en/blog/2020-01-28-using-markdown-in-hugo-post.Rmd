@@ -1,9 +1,10 @@
 ---
-title: Using Rmarkdown in Hugo post
+title: Using Rmarkdown in Hugo
 author: Hongtao Hao
 date: '2020-01-28'
 slug: using-markdown-in-hugo-post
 categories: []
+draft: true
 tags: []
 ---
 ```{r setup, include=FALSE}
