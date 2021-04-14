@@ -7,7 +7,7 @@ draft: false
 toc: false
 ---
 
-I didn't find a tutorial in details I deem necessary, so I decided to craft one myself. These two sources helped me a lot:
+I didn't find a tutorial in details I deemed necessary, so I decided to craft one myself. These two sources helped me a lot:
 
 - [GitHub Pages Action](https://github.com/marketplace/actions/github-pages-action)
 

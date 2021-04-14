@@ -16,11 +16,11 @@ iris[sample(nrow(iris),5),] # 随即抽几行，大致浏览数据格式
 
 ```
 ##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-## 70           5.6         2.5          3.9         1.1 versicolor
-## 133          6.4         2.8          5.6         2.2  virginica
-## 140          6.9         3.1          5.4         2.1  virginica
-## 138          6.4         3.1          5.5         1.8  virginica
-## 148          6.5         3.0          5.2         2.0  virginica
+## 136          7.7         3.0          6.1         2.3  virginica
+## 85           5.4         3.0          4.5         1.5 versicolor
+## 33           5.2         4.1          1.5         0.1     setosa
+## 50           5.0         3.3          1.4         0.2     setosa
+## 48           4.6         3.2          1.4         0.2     setosa
 ```
 
 ```r
