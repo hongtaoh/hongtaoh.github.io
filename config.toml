@@ -131,7 +131,7 @@ en = "/en/:year/:month/:day/:slug/"
     guessSyntax = false
     hl_Lines = ""
     lineNoStart = 1
-    lineNos = true
+    lineNos = false
     lineNumbersInTable = true
     noClasses = true
     style = "pygments"
@@ -139,7 +139,7 @@ en = "/en/:year/:month/:day/:slug/"
 
   [markup.tableOfContents]
   endLevel = 3
-  ordered = true
+  ordered = false
   startLevel = 2
 
 [imaging]
