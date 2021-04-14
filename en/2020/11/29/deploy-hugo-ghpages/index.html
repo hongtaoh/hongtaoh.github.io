@@ -10,30 +10,84 @@ for the deployment were very complicated, I wasn&rsquo;t able to fix it myself. 
 detailed three ways to host a Hugo website though GitHub Pages. <a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages target=_blank rel="noreferrer noopener">The first method</a>
 is to set up two repositories with one being the submodule. I don&rsquo;t like the idea of managing two repositories for my website, so I didn&rsquo;t choose it. <a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-project-pages target=_blank rel="noreferrer noopener">The second option</a>
 , perhaps the easiest one, is to change the publish directory from <code>public</code> to <code>docs</code>, so that GitHub Pages can automatically recognize that the site to deploy is located in the folder of <code>/docs</code>. However, I didn&rsquo;t like the idea of changing the default publish directory either (Yeah, call me picky if you want).</p><p>I chose the <a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch target=_blank rel="noreferrer noopener">third option</a>
-, which is to set up a new branch called <code>gh-pages</code> which is essentially the <code>public</code> folder. I will document the steps I took to restore my site&rsquo;s deployment, in case I need to redo it. It may also help others.</p><h2 id=restore-the-content>Restore the content<a href=#restore-the-content class=header-anchor arialabel=Anchor> #</a></h2><p>Since I messed it up, I decided to delete all the content. After having deleted everything manually in the root directory, I ran these:</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git add .
+, which is to set up a new branch called <code>gh-pages</code> which is essentially the <code>public</code> folder. I will document the steps I took to restore my site&rsquo;s deployment, in case I need to redo it. It may also help others.</p><h2 id=restore-the-content>Restore the content<a href=#restore-the-content class=header-anchor arialabel=Anchor> #</a></h2><p>Since I messed it up, I decided to delete all the content. After having deleted everything manually in the root directory, I ran these:</p><div class=highlight><div style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git add .
 git commit -m <span style=color:#ba2121>&#34;Deleting everything.&#34;</span>
 git push origin &lt;master-branch&gt;
-</code></pre></div><p>The name of my <code>&lt;master-branch></code> is <code>sources</code>, so I&rsquo;ll use sources in the following parts.</p><p>Then, find out the <code>&lt;commit ID></code> I want to restore. That should be the one before I messed up everything. Run</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git checkout &lt;commit ID&gt; .
-</code></pre></div><p>As <a href=https://medium.com/swlh/using-git-how-to-go-back-to-a-previous-commit-8579ccc8180f target=_blank rel="noreferrer noopener">this tutorial</a>
-said, do not forget the dot after <code>&lt;commit ID></code>. Also, there is space before the dot.</p><p>After that, delete <code>public</code> before pushing everything to <code>sources</code>: <code>rm -rf public</code>. This is because I don&rsquo;t need <code>public</code> now and if I include it, it will take more time when <code>pushing</code>.</p><p>Then, push the restored content to <code>&lt;master branch></code> branch:</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git add .
+</code></pre></td></tr></table></div></div><p>The name of my <code>&lt;master-branch></code> is <code>sources</code>, so I&rsquo;ll use sources in the following parts.</p><p>Then, find out the <code>&lt;commit ID></code> I want to restore. That should be the one before I messed up everything. Run</p><div class=highlight><div style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git checkout &lt;commit ID&gt; .
+</code></pre></td></tr></table></div></div><p>As <a href=https://medium.com/swlh/using-git-how-to-go-back-to-a-previous-commit-8579ccc8180f target=_blank rel="noreferrer noopener">this tutorial</a>
+said, do not forget the dot after <code>&lt;commit ID></code>. Also, there is space before the dot.</p><p>After that, delete <code>public</code> before pushing everything to <code>sources</code>: <code>rm -rf public</code>. This is because I don&rsquo;t need <code>public</code> now and if I include it, it will take more time when <code>pushing</code>.</p><p>Then, push the restored content to <code>&lt;master branch></code> branch:</p><div class=highlight><div style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git add .
 git commit -m <span style=color:#ba2121>&#34;Restoring.&#34;</span>
 git push origin sources
-</code></pre></div><h2 id=set-up-gh-pages>Set up gh-pages<a href=#set-up-gh-pages class=header-anchor arialabel=Anchor> #</a></h2><p>First, delete all the <code>.DS_Store</code> files:</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+</code></pre></td></tr></table></div></div><h2 id=set-up-gh-pages>Set up gh-pages<a href=#set-up-gh-pages class=header-anchor arialabel=Anchor> #</a></h2><p>First, delete all the <code>.DS_Store</code> files:</p><div class=highlight><div style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
 git add .
 git commit -m <span style=color:#ba2121>&#34;Remove .DS_Store from everywhere&#34;</span>
 git push origin sources
-</code></pre></div><p>The following steps are based on the <a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch target=_blank rel="noreferrer noopener">official tutorial</a>
-. I modified it a little bit.</p><p>Then, edit <code>.gitignore</code>:</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:green>echo</span> <span style=color:#ba2121>&#34;public&#34;</span> &gt;&gt; .gitignore
+</code></pre></td></tr></table></div></div><p>The following steps are based on the <a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch target=_blank rel="noreferrer noopener">official tutorial</a>
+. I modified it a little bit.</p><p>Then, edit <code>.gitignore</code>:</p><div class=highlight><div style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:green>echo</span> <span style=color:#ba2121>&#34;public&#34;</span> &gt;&gt; .gitignore
 <span style=color:green>echo</span> <span style=color:#ba2121>&#34;.DS_Store&#34;</span> &gt;&gt; .gitignore
-</code></pre></div><p>If you want to edit <code>.gitignore</code> manually, you can use <code>open .gitignore -a TextEdit</code> or <code>open .gitignore -a "Sublime Text"</code>.</p><p>Then, build and deploy:</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>rm -rf public
+</code></pre></td></tr></table></div></div><p>If you want to edit <code>.gitignore</code> manually, you can use <code>open .gitignore -a TextEdit</code> or <code>open .gitignore -a "Sublime Text"</code>.</p><p>Then, build and deploy:</p><div class=highlight><div style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>rm -rf public
 git worktree add -B gh-pages public origin/gh-pages
-</code></pre></div><p>Regenerate the site and commit the <code>public</code> folder to <code>gh-pages</code>:</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo
+</code></pre></td></tr></table></div></div><p>Regenerate the site and commit the <code>public</code> folder to <code>gh-pages</code>:</p><div class=highlight><div style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo
 <span style=color:green>cd</span> public <span style=color:#666>&amp;&amp;</span> git add --all <span style=color:#666>&amp;&amp;</span> git commit -m <span style=color:#ba2121>&#34;Publishing to gh-pages&#34;</span> <span style=color:#666>&amp;&amp;</span> <span style=color:green>cd</span> ..
 git push origin gh-pages
-</code></pre></div><p>On GitHub, go to Settings → GitHub Pages, then choose &ldquo;gh-pages&rdquo;. The site should be running.</p><h2 id=automatic-deployment>Automatic deployment<a href=#automatic-deployment class=header-anchor arialabel=Anchor> #</a></h2><p><a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script-1 target=_blank rel="noreferrer noopener">The script file</a>
+</code></pre></td></tr></table></div></div><p>On GitHub, go to Settings → GitHub Pages, then choose &ldquo;gh-pages&rdquo;. The site should be running.</p><h2 id=automatic-deployment>Automatic deployment<a href=#automatic-deployment class=header-anchor arialabel=Anchor> #</a></h2><p><a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script-1 target=_blank rel="noreferrer noopener">The script file</a>
 provided is a little bit weird, especially the <code>if statement</code>. If it is there, and I added some content to the root directory, then I cannot deploy.</p><p>Also, the guidance of <a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/#use-a-custom-domain target=_blank rel="noreferrer noopener">Use a Custom Domain</a>
 provided is a little bit confusing. If I add the CNAME file to the <code>static</code> folder, something will go wrong.</p><p>The following script is what I came up with, based on the <a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script-1 target=_blank rel="noreferrer noopener">original one</a>
-:</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#bc7a00>#!/bin/sh
+:</p><div class=highlight><div style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#bc7a00>#!/bin/sh
 </span><span style=color:#bc7a00></span><span style=color:#19177c>MESSAGE</span><span style=color:#666>=</span><span style=color:#ba2121>&#34;Rebuilding site </span><span style=color:green;font-weight:700>$(</span>date<span style=color:green;font-weight:700>)</span><span style=color:#ba2121>&#34;</span>
 <span style=color:#19177c>SOURCE</span><span style=color:#666>=</span>sources
 git add .
@@ -69,7 +123,7 @@ git add . <span style=color:#666>&amp;&amp;</span> git commit -m <span style=col
 
 <span style=color:green>echo</span> <span style=color:#ba2121>&#34;Pushing to github&#34;</span>
 git push --all origin
-</code></pre></div><p style=color:#777>Last modified on 2021-04-06</p></div><a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a></main><footer class=footer><script type=text/javascript src=/js/math-code.js></script><script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type=text/javascript src=/js/center-img.js></script><ul class=footer-links><li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">Subscribe</a></li><li><a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>License
+</code></pre></td></tr></table></div></div><p style=color:#777>Last modified on 2021-04-06</p></div><a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a></main><footer class=footer><script type=text/javascript src=/js/math-code.js></script><script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type=text/javascript src=/js/center-img.js></script><ul class=footer-links><li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">Subscribe</a></li><li><a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>License
 <i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i></a></li></ul><div class=copyright-text>©
 Hongtao Hao
 2020-2021</div></footer>
