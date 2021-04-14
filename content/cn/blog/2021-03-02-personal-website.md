@@ -5,8 +5,7 @@ author: "郝鸿涛"
 slug: personal-website-tutorial
 draft: draft
 toc: true
-aliases:
-    - /personal-webiste-tutorial/
+aliases: "/personal-webiste-tutorial/"
 ---
 {{<block class="note">}}
 四、五年前我非常希望有一篇真正有用的教编程小白免费建个人网站的教程。我看到的基本上都是非常笼统的文章，没有非常细节的。我也理解，因为要写得很细，就要花很多时间，也很麻烦。我很想帮助别人建博客，就不嫌麻烦地写下了这篇教程。
@@ -353,9 +352,9 @@ git push origin master
 
 ```bash
 git add .
-msg="updating data on $(date)" 
+msg="updating site on $(date)" 
 git commit -m "$msg"
-git push
+git push origin master
 ```
 
 这样，每次上传更新时，你只需要在 `cd` 了你的 Hugo 文件夹后运行
