@@ -256,17 +256,23 @@ This paper is very different from many papers I read, possibly because the autho
 
 Finished Pennycook et al. (2021)
 
-As Fig. 3 a-c shows, there exists a positive correlation between the perceived accuracy (rated categorically as 1-7, with 7 indicating the most accurate) and the treatment effect in Study 3, 4, & 5. For each headline, the treatment effect is measured as the $`Sharing intention_{treatment condition} - Sharing intention_{control condition}`$.
+### Study 1
 
-This positive correlation means that the least accurate news headlines are the ones that the "accuracy salience treatment" discouraged people from sharing the most. 
+- Purpose: To see whether mistaken belief is sufficient to explain the sharing of misinformation. 
 
-Study 7: I do not understand it. It seems that this part is written by a different person. But I know the conclusion of Study 7: the accuracy message led Twitter users who frequently share misinformation to increase the quality of the content they share. 
+- Procedure: 1015 participants recruited through Amazon Mechanical Turk. Participants are presented headline, lead sentence, and images for 36 news stories obtained from social media. Half of these stories were entirely false and the other half are true. Half of the headlines are favorable to Democrats and the other half favorable to Republicans. Participants were randomly assigned to decide either the veracity of the headline they see (accuracy condition) or their intention to share the story (sharing condition).
 
-Overall, this article supports the idea that shifting people's attention to accuracy discourages them from sharing misinformation. 
+- Results: 
 
-## 2021-03-21
+  - In the accuracy condition, true headlines are rated as accurate significantly more often than false headlines. Whereas politically concordant headlines are rated as accurate more than than politically discordant headlines, this difference stemming from political alignment is significantly smaller than the veracity-driven difference. 
 
-Continued with Pennycook et al. (2021)
+  - In the sharing condition, difference in sharing intention based on political alignment is significantly larger than the veracity-driven difference. 
+
+  - Across conditions: the effect of headline veracity is significantly larger in the accuracy condition than in the sharing condition; the effect of political alignment is significantly larger in the sharing condition than in the accuracy condition. 
+
+To understand the disconnect between accuracy rating and sharing intention: even though very few Republicans rated a headline as accurate in the accuracy condition, many Republicans in the sharing condition intend to share it. This disconnection disputes the confusion theory (which states that people share misinformation because they do not know the information is false): People can detect the falsehood, but decide to share it nonetheless.
+
+But people do care about veracity when deciding whether to share or not, according to a study (Coppock & McClellan, 2019). Then, why do people knowingly share misinformation? The authors of the current study formulate the idea that the context of social media primed people to please followers or signal their membership.
 
 ### Study 3 & Study 4
 
@@ -282,11 +288,21 @@ In both studies, participants in both conditions when asked after the experiment
 
 ### Study 5
 
-Continued with Pennycook et al. (2021)
-
 A more representative group of participants are recruited through Lucid. 
 
 Besides the two conditions in Study 3 & 4, there are also an active condition (in which participants are asked to rate the humorousness rather than the veracity of a single news headline before the experiment) and an importance treatment condition (in which participants before the experiment are asked about the importance they attached to only sharing true content). The results replicated those in Study 3 and 4. See Fig. 2-c. 
+
+As Fig. 3 a-c shows, there exists a positive correlation between the perceived accuracy (rated categorically as 1-7, with 7 indicating the most accurate) and the treatment effect in Study 3, 4, & 5. For each headline, the treatment effect is measured as the `$Sharing intention_{treatment condition} - Sharing intention_{control condition}$`.
+
+This positive correlation means that the least accurate news headlines are the ones that the "accuracy salience treatment" discouraged people from sharing the most. 
+
+Study 7: I do not understand it. It seems that this part is written by a different person. But I know the conclusion of Study 7: the accuracy message led Twitter users who frequently share misinformation to increase the quality of the content they share. 
+
+Overall, this article supports the idea that shifting people's attention to accuracy discourages them from sharing misinformation. 
+
+## 2021-03-21
+
+Continued with Pennycook et al. (2021)
 
 PP. 3
 
@@ -294,29 +310,11 @@ PP. 3
 
 Continued with Pennycook et al. (2021)
 
-To understand the disconnect between accuracy rating and sharing intention: even though very few Republicans rated a headline as accurate in the accuracy condition, many Republicans in the sharing condition intend to share it. This disconnection disputes the confusion theory (which states that people share misinformation because they do not know the information is false): People can detect the falsehood, but decide to share it nonetheless.
-
-But people do care about veracity when deciding whether to share or not, according to a study (Coppock & McClellan, 2019). Then, why do people knowingly share misinformation? The authors of the current study formulate the idea that the context of social media primed people to please followers or signal their membership.
-
 PP. 2-3
 
 ## 2021-03-19
 
 Pennycook, G., Epstein, Z., Mosleh, M., Arechar, A. A., Eckles, D., & Rand, D. G. (2021). [Shifting attention to accuracy can reduce misinformation online](https://www.nature.com/articles/s41586-021-03344-2). *Nature*. https://doi.org/10.1038/s41586-021-03344-2
-
-Study 1
-
-- Purpose: To see whether mistaken belief is sufficient to explain the sharing of misinformation. 
-
-- Procedure: 1015 participants recruited through Amazon Mechanical Turk. Participants are presented headline, lead sentence, and images for 36 news stories obtained from social media. Half of these stories were entirely false and the other half are true. Half of the headlines are favorable to Democrats and the other half favorable to Republicans. Participants were randomly assigned to decide either the veracity of the headline they see (accuracy condition) or their intention to share the story (sharing condition).
-
-- Results: 
-
-  - In the accuracy condition, true headlines are rated as accurate significantly more often than false headlines. Whereas politically concordant headlines are rated as accurate more than than politically discordant headlines, this difference stemming from political alignment is significantly smaller than the veracity-driven difference. 
-
-  - In the sharing condition, difference in sharing intention based on political alignment is significantly larger than the veracity-driven difference. 
-
-  - Across conditions: the effect of headline veracity is significantly larger in the accuracy condition than in the sharing condition; the effect of political alignment is significantly larger in the sharing condition than in the accuracy condition. 
 
 PP. 1-2
 
@@ -1673,7 +1671,7 @@ Centola, D. (2019). *Influential networks. Nature human behaviour, 3*(7), 664-66
 Ordinary people, instead of influencers ("hubs), are more likely to propagate complex contagions because they offer more social reinforcement. 
 
 ## 2020-11-20
-Guilbeault, D., Becker, J., & Centola, D. (2018). Social learning and partisan bias in the interpretation of climate trends. *Proceedings of the National Academy of Sciences, 115*(39), 9714-9719.
+Guilbeault, D., Becker, J., & Centola, D. (2018). [Social learning and partisan bias in the interpretation of climate trends](https://www.pnas.org/content/pnas/115/39/9714.full.pdf). *Proceedings of the National Academy of Sciences, 115*(39), 9714-9719.
 
 ### Central question
 Does information exchange in bipartisan communication networks increase or decrease partisan bias?
@@ -1762,30 +1760,27 @@ Continue with Guilbeault, Becker, & Centola. (2018)
 PP. 7-14.
 
 ## 2020-11-17
-1. Continue with Becker, Porter, & Centola. (2019)
+1. Finished Becker, Porter, & Centola. (2019). [The wisdom of partisan crowds](https://www.pnas.org/content/pnas/116/22/10717.full.pdf). *Proceedings of the National Academy of Sciences, 116*(22), 10717-10722.
 
-Conclusion: Homogeneous networks do not necessarily lead to polarization. In fact, polarization is decreased and accuracy increased. 
+**Aim**: to see whether there is "wisdom of crowds" in politically homogeneous networks. 
 
-Then why do we still have polarized public opinions? This is because popular social media are centralized networks, which make influencers able to exert disproportionate effects on other people in the network. 
+**Experiment design**: 
 
-Future directions: 
-- Any other reasons why "echo chambers" and polarization coexist in reality? 
-- Is it possible to replicate this study in real-life networks? For example, in Facebook or Twitter, where information exchange is not limited to numeric estimates?
-- How could we eliminate, or at least reduce the effects of influencers in a network, if ever possible? 
+Participants were randomly assigned to two conditions: control condition vs social condition. They were asked to provide an answer to a question for three times (rounds):
 
-2. Guilbeault, Becker, & Centola. (2018). Complex contagions: A decade in review. In *Complex spreading phenomena in social systems* (pp. 3-25). Springer, Cham.
+- Participants in the control condition provided the answer independently for three times. 
 
-PP. 1-7
+- Those in the social condition answered independently in Round 1. In Round 2, they were shown the average answer of four other participants connected to them in a social network and then updated their answer. In Round 3, they were shown the average of the updated answers of four other participants connected to them (same in Round 2) and provided a final answer to the question. 
 
-## 2020-11-16 (Edited on 2020-11-19 and 2020-11-20)
-Continue with Becker, Porter, & Centola. (2019)
+- A network consists of 35 participants who shared the same political orientation (either Democrats or Republicans). Participants in the network **did not** know that other people in the network had the same partisan preference as theirs. 
+
+- The researchers tested four questions. Each question was answered by 3 network groups and 1 control group for each political party. 
 
 Results of Experiment 1: Information exchange in homogeneous networks increased accuracy for both party members and decreased belief polarization. 
 
 Individual learning (being able to edit their answers in Round 2 and 3) was not the reason for increased accuracy because **the decrease in truth-centered mean (absolute distance from the mean) in the social group was significantly larger than that in the control group**. Therefore, the change should be attributed to information from others. 
 
 Another possible reason is that the increased accuracy for groups as a whole obscured the decreased accuracy at an individual level, for example, when the standard deviation of truth-centered mean in a group increased. Results showed that for social groups, the standard deviation of responses in Round 3 was significantly smaller than that in Round 1. This change did not occur in the control group, indicating that **similarity within social groups increased**. 
-
 
 **Replication study design** has some differences from Experiment 1:
 
@@ -1809,22 +1804,24 @@ But how about the difference between Democrats and Republicans? The above result
 
 My question: Will the result stay the same if information exchange is not confined to numeric estimates? Why don't we allow people to chat? Is it because of lack of technical support or that there is theoretical consideration against it?
 
+Conclusion: Homogeneous networks do not necessarily lead to polarization. In fact, polarization is decreased and accuracy increased. 
+
+Then why do we still have polarized public opinions? This is because popular social media are centralized networks, which make influencers able to exert disproportionate effects on other people in the network. 
+
+Future directions: 
+- Any other reasons why "echo chambers" and polarization coexist in reality? 
+- Is it possible to replicate this study in real-life networks? For example, in Facebook or Twitter, where information exchange is not limited to numeric estimates?
+- How could we eliminate, or at least reduce the effects of influencers in a network, if ever possible? 
+
+2. Guilbeault, Becker, & Centola. (2018). Complex contagions: A decade in review. In *Complex spreading phenomena in social systems* (pp. 3-25). Springer, Cham.
+
+PP. 1-7
+
+## 2020-11-16 (Edited on 2020-11-19 and 2020-11-20)
+Continue with Becker, Porter, & Centola. (2019)
+
 ## 2020-11-15
 Becker, Porter, & Centola. (2019). The wisdom of partisan crowds. *Proceedings of the National Academy of Sciences, 116*(22), 10717-10722.
-
-**Aim**: to see whether there is "wisdom of crowds" in politically homogeneous networks. 
-
-**Experiment design**: 
-
-Participants were randomly assigned to two conditions: control condition vs social condition. They were asked to provide an answer to a question for three times (rounds):
-
-- Participants in the control condition provided the answer independently for three times. 
-
-- Those in the social condition answered independently in Round 1. In Round 2, they were shown the average answer of four other participants connected to them in a social network and then updated their answer. In Round 3, they were shown the average of the updated answers of four other participants connected to them (same in Round 2) and provided a final answer to the question. 
-
-- A network consists of 35 participants who shared the same political orientation (either Democrats or Republicans). Participants in the network **did not** know that other people in the network had the same partisan preference as theirs. 
-
-- The researchers tested four questions. Each question was answered by 3 network groups and 1 control group for each political party. 
 
 ## 2020-11-14
 Continue with Popp, T. (2019)
