@@ -10,6 +10,104 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. 
 {{<end>}}
 
+## 2021-04-18
+
+Finished [Pandey et al. (2014)](https://www.researchgate.net/profile/Anshul-Pandey/publication/273392386_The_Persuasive_Power_of_Data_Visualization/links/55142fc20cf2eda0df305f00/The-Persuasive-Power-of-Data-Visualization.pdf)
+
+This study finds that when participants hold a neutral opinion on a topic or are weakly polarized, charts lead more people to change their views compared to tables (that communicate the same data as in charts). This pattern also exists among positively polarized participants.
+
+A reverse pattern is observed among negatively polarized participants: more people change their opinion when presented tables. It should be pointed out that this difference is statistically significant for only one among the three topics, although when aggregating the data from all the three topics, the difference is statistically significant. 
+
+## 2021-04-17
+
+Pandey, A. V., Manivannan, A., Nov, O., Satterthwaite, M., & Bertini, E. (2014). [The persuasive power of data visualization](https://www.researchgate.net/profile/Anshul-Pandey/publication/273392386_The_Persuasive_Power_of_Data_Visualization/links/55142fc20cf2eda0df305f00/The-Persuasive-Power-of-Data-Visualization.pdf). *IEEE transactions on visualization and computer graphics, 20*(12), 2211-2220.
+
+PP. 1-5
+
+## 2021-04-16
+
+Finished Watts et al. (2021)
+
+Lots of publications on misinformation are based on data of social media or websites. However, a nationally representative survey finds that (1) news is a small fraction of media consumption; (2) online news is a small fraction of news consumption; and (3) fake news is only a tiny portion of the information Americans receive. 
+
+The authors proposed a comprehensive research agenda that aims to achieve four objectives:
+
+1. To build a large-scale data infrastructure to study the **production** (an updated catalog of relevant information), **consumption and distribution** (to measure people's news consumption continuously across all platforms: social media, desktop, email, instant messaging, etc.), **absorption and understanding** (whether news consumption changes people's beliefs), **action and engagement** (to see whether information people receive translates into action. For example, to protest, to volunteer, or simply to follow/retweet/like/comment on social media).
+
+2. To build a "Mass Collaboration'' Model where people can replicate and accumulate knowledge. 
+
+3. To communicate insights obtained from research to nonacademic people. One possible approach is to create data visualizations that constantly update new data. 
+
+4. To build an academic-industry collaboration. 
+
+## 2021-04-15
+
+Continued Watts et al. (2021)
+
+PP. 2-6
+
+## 2021-04-14
+
+1. I skimmed through the rest of Smith et al. (2020).
+
+2. Watts, D. J., Rothschild, D. M., & Mobius, M. (2021). [Measuring the news and its impact on democracy](https://www.pnas.org/content/pnas/118/15/e1912443118.full.pdf). *PNAS, 118*(15).
+
+PP. 1-2
+
+## 2021-04-13
+
+1. Finished Olgado et al. (2021)
+
+This paper, utilizing document theory, reveals how dating apps make money. The authors conclude:
+
+>...(D)ating profiles are not people but rather documents with a "casting mold" designed for profit extraction, perpetuating structural inequalities beyond intimate discrimination which incremental design changes inadequately addresses. 
+
+2. Smith, C. E., Yu, B., Srivastava, A., Halfaker, A., Terveen, L., & Zhu, H. (2020, April). [Keeping Community in the Loop: Understanding Wikipedia Stakeholder Values for Machine Learning-Based Systems. In *2020 CHI* (pp. 1-14).
+
+PP. 1-4
+
+## 2021-04-12 (Completed on 2021-04-13)
+
+Olgado, B. S., Pei, L., & Crooks, R. (2020, April). [Determining the Extractive Casting Mold of Intimate Platforms through Document Theory](https://dl.acm.org/doi/pdf/10.1145/3313831.3376850). In *2020 CHI* (pp. 1-10).
+
+PP. 1-5
+
+## 2021-04-11
+
+Finished Jacobs et al. (2014)
+
+One thing I can remember after reading this paper is that technology literacy sometimes may inhibit, rather than help, the adoption of a digital gadget. For people who work in front of a screen all day long, they probably won't like to face another screen at home.
+
+## 2021-04-10
+
+Jacobs, M. L., Clawson, J., & Mynatt, E. D. (2014, April). [My journey compass: a preliminary investigation of a mobile tool for cancer patients](https://www.researchgate.net/profile/James-Clawson-4/publication/266655649_My_journey_compass_A_preliminary_investigation_of_a_mobile_tool_for_cancer_patients/links/59f36e7aa6fdcc075ec345cf/My-journey-compass-A-preliminary-investigation-of-a-mobile-tool-for-cancer-patients.pdf). In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (pp. 663-672).
+
+PP. 1-6
+
+## 2021-04-09
+
+Finished Weng et al. (2012)
+
+I didn't totally understand the details of this paper but I got the idea. To account for the pattern of meme popularity, meme lifetime, and user activity, The combination of (i) social media structure and (ii) the limited user attention is sufficient. The authors did not prove that the values of memes are not a factor in their popularity. However, they showed that it's possible to predict the pattern of memes on Twitter without considering the intrinsic values of memes. 
+
+Fig. 2 shows that a user's "breadth of attention" is constant despite the growing number of posts/memes in social media. 
+
+Fig. 3 shows that people are more likely to retweet something related to what they posted in the past. This means that memory is an important factor in meme competition. 
+
+## 2021-04-08
+
+1. Finished Park et al. (2019)
+
+2. Weng, L., Flammini, A., Vespignani, A., & Menczer, F. (2012). Competition among memes in a world with limited attention. *Scientific reports, 2(*1), 1-9.
+
+PP. 1-5
+
+## 2021-04-07
+
+Park, J., Wood, I. B., Jing, E., Nematzadeh, A., Ghosh, S., Conover, M. D., & Ahn, Y. Y. (2019). [*Global labor flow network reveals the hierarchical organization and dynamics of geo-industrial clusters*](https://www.nature.com/articles/s41467-019-11380-w.pdf?origin=ppub). Nature communications, 10(1), 1-10.
+
+PP. 1-7
+
 ## 2021-04-06
 
 Bjerre-Nielsen, A., Kassarnig, V., Lassen, D. D., & Lehmann, S. (2021). [Task-specific information outperforms surveillance-style big data in predictive analytics](https://www.pnas.org/content/pnas/118/14/e2020258118.full.pdf). *PNAS*, 118(14).
