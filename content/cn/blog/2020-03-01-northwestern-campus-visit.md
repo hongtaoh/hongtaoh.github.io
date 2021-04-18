@@ -5,8 +5,10 @@ slug: northwestern-compus-visit
 author: 郝鸿涛
 toc: true
 ---
-> <i class="fa fa-exclamation-triangle"></i>面试大约三周后，我收到西北的拒信，以下内容我不会修改，但请谨慎阅读。
-
+{{<block class="note">}}
+面试大约三周后，我收到西北的拒信，以下内容我不会修改，但请谨慎阅读。
+{{<end>}}
+	
 ## 收到面试通知
 
 2019年年末申请的西北大学传播学院 (Northwestern School of Communication)的 MTS (Media, Technology, & Society) 项目。2020年1月27日收到了 [Aaron Shaw](https://communication.northwestern.edu/faculty/AaronShaw) 教授发来的面试通知邮件。之后收到 Madeleine Agaton 发来的具体校园参观和面试的相关信息。
@@ -53,7 +55,7 @@ toc: true
 
 ## MTS 和 TSB 区别
 
-我之前也一直有一个疑问，西北大学传播学院下的 MTS (Media, Technology, and Society) 和 [TSB](https://tsb.northwestern.edu/) (Technology and Social Behavior) 这两个博士项目有什么区别。很多老师在两个项目中都是博士生导师。这个问题我问了[雨桐](http://sonic.northwestern.edu/people/graduate-student-researchers/jasmine-wu/)和 Aaron Shaw 老师。得到的的答案是，其中一个很重要的区别是博士期间资助（工资）的来源。MTS 是[西北大学研究生院](https://www.tgs.northwestern.edu/)给钱，而 TSB 是采用 computer science 以及理工科的方式，由博士生导师给钱。
+我之前也一直有一个疑问，西北大学传播学院下的 MTS (Media, Technology, and Society) 和 [TSB](https://tsb.northwestern.edu/) (Technology and Social Behavior) 这两个博士项目有什么区别。很多老师在两个项目中都是博士生导师。这个问题我问了[雨桐](https://sonic.northwestern.edu/home/people/graduate-student-researchers/jasmine-wu/)和 Aaron Shaw 老师。得到的的答案是，其中一个很重要的区别是博士期间资助（工资）的来源。MTS 是[西北大学研究生院](https://www.tgs.northwestern.edu/)给钱，而 TSB 是采用 computer science 以及理工科的方式，由博士生导师给钱。
 
 我个人更倾向于 MTS 这样，由学校给钱。为什么呢？因为这意味着你和导师的关系是平等的。你的工资不是老师给的，你也就没必要对老师的要求唯命是从。TSB 这样的话，导师就是你的老板，这种关系本质上是不平等的。在实验室工作都要小心翼翼。我感觉这种环境下我无法放开自己的手脚，自由地做研究。当然，这只是我个人的喜好。而且我没在西北带过，这个区别也只是我道听途说，不敢说自己说的是真实的。
 
