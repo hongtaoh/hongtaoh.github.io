@@ -16,7 +16,7 @@ Finished [Pandey et al. (2014)](https://www.researchgate.net/profile/Anshul-Pand
 
 This study finds that when participants hold a neutral opinion on a topic or are weakly polarized, charts lead more people to change their views compared to tables (that communicate the same data as in charts). This pattern also exists among positively polarized participants.
 
-A reverse pattern is observed among negatively polarized participants: more people change their opinion when presented tables. It should be pointed out that this difference is statistically significant for only one among the three topics, although when aggregating the data from all the three topics, the difference is statistically significant. 
+A reverse pattern is observed among negatively polarized participants: more people change their opinion when presented with tables. It should be pointed out that this difference is statistically significant for only one of the three topics, although when aggregating the data from all the three topics, the difference is statistically significant. 
 
 ## 2021-04-17
 
@@ -195,9 +195,71 @@ That said, good papers always have higher chances of acceptance and winning awar
 
 1. Reviewed [Guo (2013)](https://pg.ucsd.edu/guo-faculty-job-search.pdf)
 
-Pay attention to and be aware of why they brought you there in the first place. Is it because your research fits into the department's future agenda? Play up these parts in your talk and individual meetings. 
+### 1. Research statment
+Research statement: 4 pages, single-spaced, 12-point, 1.25-inch margin; The first 1.5 pages to describe your previous work, the next 1.5 pages to show your future research ideas, and the last page for a bibliography. 
 
-### Job talk
+### 2. Scheduling interviews
+
+- Don't let your top choice be your first interview, as you'll most likely screw up the first one. 
+
+- Never schedule more than one interview per week. You need time to relax. 
+
+- To avoid delays, book direct flights. 
+
+- When travelling on the plane, you can dress your shoes and coat for the interview, in case your luggage gets lost. 
+
+### 3. Preparing for interviews
+
+- For your job talk, practice, practice, practice. You need to practice a lot! You can practice in front of your colleagues and friends, who can then give you suggestions for improvement. 
+
+- For one-on-one interviews, prepare a document of *talking points*. See Section 4.2 for more details. Whenever a professor asks you questions not in this document, add this question to it. 
+
+### 4. Interviewing
+
+- Pay attention to and be aware of why they brought you there in the first place. Is it because your research fits into the department's future agenda? Play up these parts in your talk and individual meetings. 
+
+- Try to *Engage*, not to *impress*. Professor interviewing you have much more research experience and publications than you do. There is no need to impress others. 
+
+#### 4.1 Job talk
+- If you cannot *hook* the audience in the first 10 minutes, chances are your talk will just be mediocre. 
+
+- **NEVER** say anything impromptu, i.e., only say what you have practiced! And **NEVER** exceed the time limit. Professors are busy and no one wants to spend more time than necessary on your talk. You should be mindful of the time limit of your talk even when you are answering questions from the audience. 
+
+- What your job talk is supposed to show:
+
+  1. "Solid past research". Start with the overarching motivation before diving into two specific projects you are most proud of. 
+  2. "Compelling future research". Dedicate the final 10 minutes to this part. Be bold. 
+  3. Capability + Personality. Through your talk, the audience should know that you are the person who will be successful academically and you will be a chill colleague. 
+
+- You don't need to constantly tweak your talk. 
+
+#### 4.2 One-on-one meetings with faculty
+
+- You are supposed to chat casually with 10-20 faculty members in the department. Each chat is around 30 minutes. 
+
+- *Be a good listener* and *Let the other person lead*. Try to listen to and talk about **their** research, not yours. 
+
+#### 4.3 Department chair (or Department head) meeting
+
+This is the most important meeting you'll have. Again, **be a good listener and let the other person lead the meeting**. Try to listen to and talk about the department's future vision. You can mention how that vision connects to your future research agenda. 
+
+#### 4.4 Dean meeting
+
+The dean is probably not involved in the hiring decisions. So just be chill. 
+
+#### 4.5 Graduate students meeting
+
+**Be nice** to students. Engate, inspire, and help them!
+
+#### 4.6 Mealtime conversations
+
+- It's still part of the interview! 
+
+- Never gossip about anybody. 
+
+- Ask some questions about living in this area, like the housing price. This shows your genuine interest in working there. 
+
+### 5. Job talk revisited
 
 - Again, never say anything impromptu. 
 
@@ -207,7 +269,7 @@ Pay attention to and be aware of why they brought you there in the first place. 
 
 - Minimize the use of a laser pointer. 
 
-### One-on-one meeting with faculty
+### 6. One-on-one meeting with faculty revisited
 
 - You can take notes while talking, but only write down key words that help you write follow-up emails later. 
 
@@ -229,7 +291,7 @@ Pay attention to and be aware of why they brought you there in the first place. 
 
 - Follow-up emails to people you talk to are VERY important. 
 
-### Other suggestions
+### 7. Other suggestions
 
 - Be nice to the department admin. They'll let everybody know if they really hate you. 
 
@@ -245,72 +307,9 @@ PP. 1-2
 
 Reviewed [Guo (2013)](https://pg.ucsd.edu/guo-faculty-job-search.pdf)
 
-### Interviewing
-
-- Try to *Engage*, not to *impress*. Professor interviewing you have much more research experience and publications than you do. There is no need to impress others. 
-
-#### Job talk
-- If you cannot *hook* the audience in the first 10 minutes, chances are your talk will just be mediocre. 
-
-- **NEVER** say anything impromptu, i.e., only say what you have practiced! And **NEVER** exceed the time limit. Professors are busy and no one wants to spend more time than necessary on your talk. You should be mindful of the time limit of your talk even when you are answering questions from the audience. 
-
-- What your job talk is supposed to show:
-
-  1. "Solid past research". Start with the overarching motivation before diving into two specific projects you are most proud of. 
-  2. "Compelling future research". Dedicate the final 10 minutes to this part. Be bold. 
-  3. Capability + Personality. Through your talk, the audience should know that you are the person who will be successful academically and you will be a chill colleague. 
-
-- You don't need to constantly tweak your talk. 
-
-#### One-on-one meetings with faculty
-
-- You are supposed to chat casually with 10-20 faculty members in the department. Each chat is around 30 minutes. 
-
-- *Be a good listener* and *Let the other person lead*. Try to listen to and talk about **their** research, not yours. 
-
-#### Department chair (or Department head) meeting
-
-This is the most important meeting you'll have. Again, **be a good listener and let the other person lead the meeting**. Try to listen to and talk about the department's future vision. You can mention how that vision connects to your future research agenda. 
-
-#### Dean meeting
-
-The dean is probably not involved in the hiring decisions. So just be chill. 
-
-#### Graduate students meeting
-
-**Be nice** to students. Engate, inspire, and help them!
-
-#### Mealtime conversations
-
-- It's still part of the interview! 
-
-- Never gossip about anybody. 
-
-- Ask some questions about living in this area, like the housing price. This shows your genuine interest in working there. 
-
 ## 2021-03-28
 
 Finished [Guo (2013)](https://pg.ucsd.edu/guo-faculty-job-search.pdf)
-
-### Research statment
-Research statement: 4 pages, single-spaced, 12-point, 1.25-inch margin; The first 1.5 pages to describe your previous work, the next 1.5 pages to show your future research ideas, and the last page for a bibliography. 
-
-### Scheduling interviews
-
-- Don't let your top choice be your first interview, as you'll most likely screw up the first one. 
-
-- Never schedule more than one interview per week. You need time to relax. 
-
-- To avoid delays, book direct flights. 
-
-- When travelling on the plane, you can dress your shoes and coat for the interview, in case your luggage gets lost. 
-
-### Preparing for interviews
-
-- For your job talk, practice, practice, practice. You need to practice a lot! You can practice in front of your colleagues and friends, who can then give you suggestions for improvement. 
-
-- For one-on-one interviews, prepare a document of *talking points*. See Section 4.2 for more details. Whenever a professor asks you questions not in this document, add this question to it. 
-
 
 ## 2021-03-27
 
