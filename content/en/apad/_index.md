@@ -351,7 +351,7 @@ This paper is very different from many papers I read, possibly because the autho
 
 ## 2021-03-22
 
-Finished Pennycook et al. (2021)
+Finished Pennycook, G., Epstein, Z., Mosleh, M., Arechar, A. A., Eckles, D., & Rand, D. G. (2021). [Shifting attention to accuracy can reduce misinformation online](https://www.nature.com/articles/s41586-021-03344-2). *Nature*. https://doi.org/10.1038/s41586-021-03344-2
 
 ### Study 1
 
@@ -367,9 +367,9 @@ Finished Pennycook et al. (2021)
 
   - Across conditions: the effect of headline veracity is significantly larger in the accuracy condition than in the sharing condition; the effect of political alignment is significantly larger in the sharing condition than in the accuracy condition. 
 
-To understand the disconnect between accuracy rating and sharing intention: even though very few Republicans rated a headline as accurate in the accuracy condition, many Republicans in the sharing condition intend to share it. This disconnection disputes the confusion theory (which states that people share misinformation because they do not know the information is false): People can detect the falsehood, but decide to share it nonetheless.
+There is a disconnect between accuracy rating and sharing intention: even though very few Republicans rated a headline as accurate in the accuracy condition, many Republicans in the sharing condition intend to share it. This disconnection disputes the confusion theory (which states that people share misinformation because they do not know the information is false): People can detect the falsehood, but decide to share it nonetheless.
 
-But people do care about veracity when deciding whether to share or not, according to a study (Coppock & McClellan, 2019). Then, why do people knowingly share misinformation? The authors of the current study formulate the idea that the context of social media primed people to please followers or signal their membership.
+People do care about veracity when deciding whether to share or not, according to a study (Coppock & McClellan, 2019). Then, why do people knowingly share misinformation? The authors of the current study formulate the idea that the context of social media primed people to please followers or signal their membership.
 
 ### Study 3 & Study 4
 
