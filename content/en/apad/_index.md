@@ -10,6 +10,157 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. 
 {{<end>}}
 
+## 2021-05-01
+
+Finished [Hoffman et al. (2016)](https://www.pnas.org/content/113/16/4296)
+
+- Americans without medical training on average endorse 22.43% of the false beliefs of biological differences between White and Black people. 73% of the participants endorse at least one false belief. For Americans with medical training, these two figures are 11.55% and 50%, respectively. This is surprisingly high, given that they have received formal medical training. 
+
+- Participants in Study 2 (i.e., those who received medical training) who endorse more false beliefs report that a Black person feels less pain. These participants are also less accurate in their treatment recommendations for black targets. 
+
+- Participants in Study 2 who do not endorse, or endorse fewer, false beliefs, report that a White person feels less pain. However, these participants are not biased in their treatment recommendations for White people. 
+
+## 2021-04-30
+
+1. Hoffman, K. M., Trawalter, S., Axt, J. R., & Oliver, M. N. (2016). [Racial bias in pain assessment and treatment recommendations, and false beliefs about biological differences between blacks and whites](https://www.pnas.org/content/113/16/4296). *PNAS, 113*(16), 4296-4301.
+
+PP. 1-2
+
+2. Finished Edwards et al. (2019)
+
+- Fig. 1 shows that African American men are much more likely to be killed by police than men of other ethnicities. Women are much less likely (20 times lower, to be exact) to be killed by police use of force than men are. 
+
+- Fig. 2 shows that Black men are 2.5 times more likely to be killed by police than are white men. This number is 1.2-1.7 for American Indian/Alaska Native men, 1.3-1.4 for Latino men, and 0.5 for Asian/Pacific Islander men. 
+
+- 1 in 1000 black men and boys will be killed by police over their lifetime. This is a nontrivial death risk. 
+
+- 1.6% of deaths involving black men between 20 and 24 years old are caused by police use of force. 
+
+## 2021-04-29 (Completed on 2021-04-30)
+
+1. Tessum, C. W., Apte, J. S., Goodkind, A. L., Muller, N. Z., Mullins, K. A., Paolella, D. A., ... & Hill, J. D. (2019). [Inequity in consumption of goods and services adds to racial–ethnic disparities in air pollution exposure](https://www.pnas.org/content/pnas/116/13/6001.full.pdf). *PNAS, 116*(13), 6001-6006.
+
+I skimmed through this paper but did not go into details. The conclusion is that non-Hispanic white people caused more PM2.5 than they experienced. 
+
+2. Edwards, F., Lee, H., & Esposito, M. (2019). [Risk of being killed by police use of force in the United States by age, race–ethnicity, and sex](https://www.pnas.org/content/pnas/116/34/16793.full.pdf?fbclid=IwAR3x5zDPNumwvdwHRe32NT3fh6FAAuFecVEpjRgTkZxojP4NftTXaSGNsz8). *PNAS, 116*(34), 16793-16798.
+
+PP. 1-3
+
+## 2021-04-28
+
+Kowal, M., Groyecka-Bernard, A., Kochan-Wójcik, M., & Sorokowski, P. (2021). [When and how does the number of children affect marital satisfaction? An international survey](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0249516). *Plos one, 16*(4), e0249516.
+
+- Survey takers (7178 married individuals from 33 countries/regions)  expressed significantly a lower level of marital satisfaction with more children they have. This negative association is significantly only among women. Figure 3 showed that men are more satisfied in the marriage than women.
+
+- Fig. 2 showed that when the number of children is fewer than two, then the more education people receive, the more satisfied they are with their marriage. The results are the opposite when the number of children exceeds two. **Caution**: I do not know whether these differences are significant. 
+
+- Wealth is not a significant moderator: rich or poor, you'll be less satisfied with the marriage if you have more children. 
+
+## 2021-04-27
+
+Finished Wu et al. (2017)
+
+I did not get the main points in this paper. 
+
+## 2021-04-26
+
+1. Wu, Y., Xu, L., Chang, R., & Wu, E. (2017). [Towards a bayesian model of data visualization cognition](https://www.cs.tufts.edu/~remco/publications/2017/DECISIVE2017-Bayesian.pdf). In *IEEE Visualization Workshop on Dealing with Cognitive Biases in Visualisations (DECISIVe)*.
+
+PP. 1
+
+2. Finished [West & Bergstrom (2021)](https://www.pnas.org/content/pnas/118/15/e1912444117.full.pdf).
+
+{{<block class="tips">}}
+I believe this work is a summary of this [book/course](https://www.callingbullshit.org/index.html) by the same authors. 
+{{<end>}}
+
+- Replication crisis, especially in social and biomedical sciences
+- Preregistration may not be a panacea as it discourages exploratory analyses. 
+- Quotation errors: 1/5 to 1/10 scientists interpreted others' work inaccurately when citing the work
+- Many retracted papers are still cited after retraction. 
+- Predatory publishers are a real problem. Chances are authors are aware that the publishers are not legitimate but they go ahead anyway due to pressure to publish a lot. Also, if malicious people publish misleading work intentionally, the public will be misinformed and gradually have a lower trust in science overall. 
+- arXiv papers that later published in prestigious venues attracted more citations than those found their places in less well-known journals. This indicates journals are a good gatekeeper. However, there is another side of the story: highly cited arXiv papers are less likely to be accepted for publication somewhere else at all!
+- There might be "Google Scholar buble": less diversity in searching results; Matthew Effect
+- Data, when processed, analyzed, or presented in a wrong way, can misinform. 
+
+## 2021-04-25
+
+Continued with West & Bergstrom (2021).
+
+PP. 3-6
+
+## 2021-04-24
+
+West, J. D., & Bergstrom, C. T. (2021). [Misinformation in and about science](https://www.pnas.org/content/pnas/118/15/e1912444117.full.pdf). *PNAS, 118*(15).
+
+PP. 1-3
+
+## 2021-04-23 (Completed on 2021-04-24)
+
+Tilghman, S., Alberts, B., Colón-Ramos, D., Dzirasa, K., Kimble, J., & Varmus, H. (2021). [Concrete steps to diversify the scientific workforce](https://science.sciencemag.org/content/372/6538/133.summary). *Science, 372*(6538), 133-135.
+
+- By 2045, no single ethnic group will be a majority in the US. 
+
+- How can programs encourage minority groups to be engaged in science: Create communities using cohorts; offer personalized mentoring; provide financial support. 
+
+- How to diversify the scientific workforce: a major federal initiative; educational institutions form a culture that welcome minorities into scientific research; more inclusive funding policies for minority scientists. 
+
+## 2021-04-22
+
+### Finished [Kim et al. (2017)](https://homes.cs.washington.edu/~reinecke/Publications_files/Kim_InfoVis2017.pdf)
+
+Aim: To investigate how other people's expectations of the data influence people's reactions to a visualization: ability to recall, and the trust in, the data.
+
+Hypotheses:
+
+- H1: Social information leads to better recall of the data shown.
+
+- H2: Congruence in social signal leads to higher trust, and higher likelihood of updating their beliefs. 
+
+- H3a: Congruent-HighConsensus leads to higher trust and higher likelihood to update beliefs; Incongruent-HighCnsensus leads to the opposite results. 
+
+- H3b: HighConsensus leads to better recall of the data. 
+
+Results:
+
+- H1 ❌: The presence of social information has no impacts on data recall capability. 
+
+- H2 ✔️: Congruence improves trust, and the likelihood to update beliefs. 
+
+- H3a ❌: The level of Consensus has no impacts on trust and likelihood of belief update in both Congruent and Incongruent groups. 
+
+- H3b ✔️: HighConsensus leads to improved recall. 
+
+Other findings (which do not seem preregistered):
+
+1. Social information leads to improved recall when there is high consensus in the social signal. 
+
+2. When participants had lower trust in the data even before seeing it, they are more likely to be swayed by the social information they see: lower trust in the data when others disagree with the data, and higher trust when others agree. 
+
+### Surprise, surprise
+
+Munnich, E., Ranney, M. A., & Song, M. (2007). [Surprise, surprise: The role of surprising numerical feedback in belief change](https://escholarship.org/content/qt8p6597x6/qt8p6597x6.pdf). In *Proceedings of the Annual Meeting of the Cognitive Science Society*(Vol. 29, No. 29). 
+
+The more surprised you are by a numerical feedback, the more accuracy you'll have in recalling this number later. 
+
+## 2021-04-21
+
+Continued with Kim et al. (2017)
+
+PP. 7-8
+
+## 2021-04-20 (Completed on 2021-04-21)
+
+Continued with Kim et al. (2017)
+
+PP. 4-7
+
+## 2021-04-19
+
+Kim, Y. S., Reinecke, K., & Hullman, J. (2017). [Data through others' eyes: The impact of visualizing others' expectations on visualization interpretation](https://homes.cs.washington.edu/~reinecke/Publications_files/Kim_InfoVis2017.pdf). *IEEE vis, 24*(1), 760-769.
+
+PP. 1-4
+
 ## 2021-04-18
 
 Finished [Pandey et al. (2014)](https://www.researchgate.net/profile/Anshul-Pandey/publication/273392386_The_Persuasive_Power_of_Data_Visualization/links/55142fc20cf2eda0df305f00/The-Persuasive-Power-of-Data-Visualization.pdf)
