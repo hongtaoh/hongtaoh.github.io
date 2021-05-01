@@ -1,6 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日志 on 郝鸿涛:Hongtao Hao</title><link>https://hongtaoh.com/cn/blog/</link><description>Recent content in 日志 on 郝鸿涛:Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>如何设置域名邮箱，以 Migadu 为例</title><link>https://hongtaoh.com/cn/2021/04/19/domain-email-address/</link><pubDate>Mon, 19 Apr 2021 11:51:07 -0400</pubDate><guid>https://hongtaoh.com/cn/2021/04/19/domain-email-address/</guid><description>如果你在考虑域名邮箱，免费的有 网易 、腾讯 、Yandex。收费的服务我只推荐两个：Migadu 、Mailbox.org 。如果你的域名是在 Namecheap 上买的，它的邮箱服务 你也可以考虑。下面我以 Migadu 为例讲解如何设置域名邮箱。
-完成 migadu 注册后，点击 Set up my first email domain, 在 domain name 那一栏输入你的网址。我输入的是 hongtaoh.com。点击 &amp;ldquo;Add Email Domain&amp;rdquo;。
-Add email domain 接下来是 DNS Setup，这是最关键的一步。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日志 on 郝鸿涛:Hongtao Hao</title><link>https://hongtaoh.com/cn/blog/</link><description>Recent content in 日志 on 郝鸿涛:Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>《未来世界的幸存者》读书笔记</title><link>https://hongtaoh.com/cn/2021/04/30/survivor/</link><pubDate>Fri, 30 Apr 2021 16:38:08 -0400</pubDate><guid>https://hongtaoh.com/cn/2021/04/30/survivor/</guid><description>最近我读完了阮一峰的《未来世界的幸存者》 。该书的内容是开源的。
+这本书有几个核心的观点：
+雇佣制度不利于员工的身心健康、长远发展。不要老想着得到一个铁饭碗。在这个技术飞速发展的时代，铁饭碗一点都不铁。
+技术造成的贫富差距将越来越大，大多数人越来越难以通过自身努力获得财富的增长，每天为了温饱已经筋疲力竭，根本没有精力，没有时间去自我提升。与此同时，富人巩固他们的经济地位则变得越来越容易。
+你可以有自己的事业，不一定非要给别人打工。即使你决定一辈子做一名员工，也要不断提升自己。
+技术改变历史。但是技术的飞速发展不一定会把人类引向光明的未来。可怕的是，即使前方是悬崖，技术一旦开始发展，没有人能让它停下来。
+现实篇 白领岗位的消亡 白领正在消亡，因为他们的功能被计算机所取代。在未来，技术造成的贫困会越来越严重。
+计算机无法取代的能力：1. 人格魅力，人性关怀，我觉得比如心理咨询师；2. 创新能力；3. 领导力
+为什么世界上没有安全的工作？ 技术换代的频率越来越快，Flash、塞班系统从鼎盛到没落也就十几年的时间。你花大力气掌握一门技术，可能几年后整个行业都没了。你从零开始去学习，如何与二十多岁的年轻人竞争？学一门技术，进入一个大企业，然后高枕无忧，这是十分危险的想法。
+公务员比较安全，因为受技术换代影响比较小。医生和律师也安全，因为他们的经验计算机无法取代，但技术也会渐渐把成本拉低。
+那些无用的人 技术的进步让越来越多的人沦为「无用之人」。未来，被替代的已经不仅仅是体力劳动，连智力劳动者也可能被替代。
+终身学习确实是一个方法。但「终身学习」的强度和你重新读一个大学学历差不多。业余时间听个一小时的网络讲座、看看自学教材，远远达不到让你找到工作的要求。「高技能的工作要求多年的学习和艰苦的投入」。
+穷忙的人生 没有学历、没有技能的人，从事高强度的体力或者智力劳动，根本没时间去自我进步，也越来越不可能改变自己的人生。这就是「穷忙族」面对的现状。
+在将来，在高级写字楼工作的白领也会成为「穷忙一族」。
+穷人越来越难改变现状，而富人则越来越容易维持现状。
+我的看法：再同意不过
+为什么你可以不读大学 大学让人浪费时间去学那些没用的东西，让人效率很低。四年的时间你完全可以成为一个领域的专家，但现在的大学毕业生大部分能力非常弱，和「专家」这两个字差的十万八千里。
+大学传授的东西是为了那些将来走学术路线的人准备的，但是绝大多数人是走职业路线的。
+我的看法：对大学的批判我都同意，但是我不同意让人不读大学的这条建议。几个理由：
+绝大多数人没有那种自制力。在互联网上学习，90%的人不可能坐下来静心看书。在大学好歹有考试、毕业的压力，有一种外在的紧迫感，如果都改为自学，绝大多数人的效率会下降而不是上升。如若不信，问一问经历过新冠期间上了一年多 Zoom 大学的美国学生就知道了。
+大学重要的不是知识，而是获取知识的能力。
+最重要的，大学是让人交往的平台，通过和同学、舍友、老师接触，你能学到非常多的东西。人之所以为人是因为社会性。坐在电脑前学东西，根本无法掌握社交技能。从别人身上学到的东西，比如人格、习惯等是你无法通过自学得来的。
+职业篇 为什么雇佣制度对工人不利 不要默认去公司上班是人类的常态，不是的。
+雇佣制度下，大公司为了减少职员跳槽对其不利影响，就把每个职员的工作弄得很细节、很单调。你走无所谓，任何一个人可以随时进来代替你。这样造成的一个结果是你日复一日都在做无聊的任务，无法发挥自己的创造性。
+并不是说你不能进大公司。但进去后，一定要知道只有自己业余时间的钻研，才能让自己有突破。
+母鸡与前端工程师 要选择你真正感兴趣的行业，能发挥你创造力的行业。
+你的命运不是一头骡子 不要让「赚钱」成为你思想懒惰的借口。不要让自己成为实现别人想法的工具。你是人，要有自己的想法，有自己的规划，要实现自己的价值。
+从日本70岁退休谈起 没必要只是为了挣钱、拿到退休金而工作。可以尝试自由安排时间，自由职业。社会老龄化导致年轻人要支付老年人的费用，同时退休年龄延后，等老了你依然在打工。
+我的看法：我觉得让大部分人成为自由职业者非常不现实。中国人大部分喜欢稳定的工作，这也决定了大部分人都想要一个铁饭碗，旱涝保收。但是比较有启发意义的是，你要思考你喜欢干什么，如果你的工作恰好是你的热情，多好啊。
+45岁以后的人生 互联网企业很可能清理一批34岁的员工，让一批45岁的员工提前退休。
+互联网行业吃的是青春饭。大公司想要开除的就是年龄大的员工。
+我的看法：我觉得这些是真的。这让我思考，我博士毕业之后要怎么做？我毕业的时候就34岁了，我要进企业，还是去高校？
+你的 B 计划在哪里 我的收获：我要思考如果我现在的工作/学业无法进行下去，我该如何生活下去？我除了目前的技能，还有什么别的技能可以让我维生？或者，如果现在的生活无法继续下去，我如何重新选择人生道路？</description></item><item><title>如何设置域名邮箱，以 Migadu 为例</title><link>https://hongtaoh.com/cn/2021/04/19/domain-email-address/</link><pubDate>Mon, 19 Apr 2021 11:51:07 -0400</pubDate><guid>https://hongtaoh.com/cn/2021/04/19/domain-email-address/</guid><description>如果你在考虑域名邮箱，免费的有 网易 、腾讯 、Yandex。收费的服务，知名博主 Drew DaVault 只推荐了两个：Migadu 、Mailbox.org 。如果你的域名是在 Namecheap 上买的，它的邮箱服务 你也可以考虑。下面我以 Migadu 为例讲解如何设置域名邮箱。
+完成 migadu 注册后，点击 Set up my first email domain, 在 domain name 那一栏输入你的网址。我输入的是 hongtaoh.com。别的不用动，然后点击 &amp;ldquo;Add Email Domain&amp;rdquo;。
+Add email domain -- 接下来是 DNS Setup，这是最关键的一步。
 DNS Setup Instructions 如果你用的是 Namecheap, 那么新加一个 TXT Record, 然后在 Host 那里填 @。TTL 选择 Automatic。MX Record 的 Host 也是 @。
 Namecheap 上操作 Verification TXT Record Namecheap 上操作 MX Record DKIM+ARC Key Records 这一项，在Namecheap 上新建一个新建 CNAME 后，其项目中的 Host 和 Target 分别是 Migadu 上面写的 Name 和 Value (Destination)。灰色的部分是不需要填的。</description></item><item><title>iPhone 无法下载和更新 APP</title><link>https://hongtaoh.com/cn/2021/04/10/iphone-app/</link><pubDate>Sat, 10 Apr 2021 14:33:47 -0400</pubDate><guid>https://hongtaoh.com/cn/2021/04/10/iphone-app/</guid><description>昨天开始我的 iPhone 没法更新和下载应用。我一开始以为是系统没更新的缘故，我点击了更新，但是没法更新。后来我又以为是容量不够，删除了几个应用后，容量够了，但还是没法下载其他应用。
 正准备摔手机的时候（开个玩笑，我摔不起。），查到了 iphone无法更新和下载APP 这个帖子。Xu_Bon 版主的第 7 个方法对我起了作用：设置 &amp;gt; 通用 &amp;gt; 还原 &amp;gt; 还原网络设置。然后手机自动关机。开机后就可以下载和更新了。
