@@ -70,7 +70,7 @@ PP. 1
 
 2. Finished [West & Bergstrom (2021)](https://www.pnas.org/content/pnas/118/15/e1912444117.full.pdf).
 
-{{<block class="tips">}}
+{{<block class="tip">}}
 I believe this work is a summary of this [book/course](https://www.callingbullshit.org/index.html) by the same authors. 
 {{<end>}}
 
