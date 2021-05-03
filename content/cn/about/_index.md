@@ -1,6 +1,6 @@
 ---
 title: '关于'
-type : nolisting
+type : list-single
 ---
 
 欢迎光临！
