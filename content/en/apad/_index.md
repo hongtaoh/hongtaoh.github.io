@@ -10,6 +10,156 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+## 2021-05-10
+
+Chun, R. (2017). Redundant Encoding in Data Visualizations: Assessing Perceptual Accuracy and Speed. *Visual Communication Quarterly, 24*(3), 135-148.
+
+PP. 1-11. 
+
+## 2021-05-09
+
+1. [*How to send and reply to email*](http://matt.might.net/articles/how-to-email/)
+
+- Keep your emails short. 
+
+- Keep the Subject as informative and actionable as possible.
+
+- Don't use very long paragraphs. Try to break them into points. 
+
+- When replying to an email, reply to its points rather than the whole of it. 
+
+- Place "action items" on top of your reply. 
+
+2. [*What every computer science major should know*](http://matt.might.net/articles/what-cs-majors-should-know/) by Matt Might
+
+{{<block class="warning">}}
+I don't think the tips in this post are "realistic". For undergraduate students, it's good if you want to learn every subfield within computer science. But for PhD students, this might not be good. 
+{{<end>}}
+
+- Have your portfolio
+
+- Learn statistics, linear algebra, and calculus. 
+
+- Try Linux. 
+
+- Take a compilers class. 
+
+- Learn to program in C and JavaScript. 
+
+## 2021-05-08
+
+1. [*3 qualities of successful Ph.D. students: Perseverance, tenacity and cogency*](http://matt.might.net/articles/successful-phd-students/) by Matt Might
+
+>You will also need to actively, even aggressively, forge relationships with scholars in your field. Researchers in your field need to know who you are and what you're doing. They need to be interested in what you're doing too. 
+
+>[Y]ou have to spoon-feed the experts. As you write, you have to consciously minimize the amount of time and cognitive pain it takes for them to realize you've made a discovery. 
+
+>[T]he only way to get better at writing is to do a lot of it.
+
+>That's why I recommend that new students start a blog. Even if no one else reads it, start one. You don't even have to write about your research. Practicing the art of writing is all that matters. 
+
+2. [*6 blog tips for busy academics*](http://matt.might.net/articles/how-to-blog-as-an-academic/) By Matt Might
+
+3. [*Productivity tips, tricks and hacks for academics (2015 edition)*](http://matt.might.net/articles/productivity-tips-hints-hacks-tricks-for-grad-students-academics/) by Matt Might
+
+## 2021-05-07
+
+1. [*How to get a great letter of recommendation*](http://matt.might.net/articles/how-to-recommendation-letter/) by Matt Might
+
+2. [*Tips for work-life balance*](http://matt.might.net/articles/work-life-balance/) by Matt Might
+
+3. Finished Guilbert. (2020)
+
+- For talks: plan and practice
+
+- It's Okay to (1) repeat the questioner's question and ask whether it's what they asked; and (2) wait for a second or two before you answer that question. 
+
+>Please take care of yourself, in whatever way you need ... For example, I need to sleep, exercise, and spend time with my family. I prioritize those things every day.
+
+> Setting everyday boundaries can be very difficult in academia, but I think it has really helped me over the long term. 
+
+## 2021-05-06
+
+Continued with Guilbert. (2020)
+
+>[T]he process of discovering what makes a great paper *great* is itself an invaluable learning experience. 
+
+>For a 1st or 2nd year student, that plan might be delivering individual sections on a schedule for in-depth feedback, followed by rewrites by the students, followed by extensive editing and rewriting by me. 
+
+>[E]everything needs to be essentially done by 7 days before the deadline: the studies have to be completed, the data analyzed, the findings solidified, the message of the paper needs to exist, etc. 
+
+>The paper doesn't have to be perfect: the bar I use is that I would submit this paper and I wouldn't be embarrassed. 
+
+>If the paper isn't ready, we won't submit it to that conference or journal deadline; we'll submit it somewhere later. 
+
+PP. 9-18
+
+### About classes
+>Many students, having excelled in classes their entire academic lives, have trouble letting go of this, and need to excel in every class they take while in the PhD program. In my opinion, this is a common reason for burnout in grad school. When you go on the job market, almost no one will care what classes you took during grad school and how well you performed in them. Everyone will care about your research and what contributions you made. 
+
+>[Classes] should come second to your research, your data, your questions. 
+
+>The PhD program is all about learning new things, but as your research problems lead you there. 
+
+>You might seek out a class to help you master something you know you need in research. But let the research drive that exploration and those decisions. 
+
+PP. 9-18
+
+## 2021-05-05
+1. Gilbert, E. (2020). [Syllabus for Eric's PhD students](https://docs.google.com/document/d/11D3kHElzS2HQxTwPqcaTnU5HCJ8WGE5brTXI4KLf4dM/edit#)
+
+PP. 1-9
+
+2. Finished Jabr (2019)
+
+>It's easy to lose sight of the fact that even something that seems minor, like a filling, involves removal of a human body part. It just adds to the whole idea that you go to a physician feeling bad and you walk out feeling better, but you go to a dentist feeling good and you walk out feeling bad.
+
+>It's not about intellect. It's about betrayal of trust. 
+
+I totally feel the physical and psychological pain of those who underwent Lund's procedure. I had trouble with no more than two teeth and I felt it was unbearable. What Lund did was truly disgusting!
+
+## 2021-05-04
+
+Jabr, F. (2019). [The Truth About Dentistry](https://www.theatlantic.com/magazine/archive/2019/05/the-trouble-with-dentistry/586039/). *The Atlantic*. 
+
+PP. 1-14
+
+## 2021-05-03
+
+Daniel Engber (2016). [*Is “Grit” Really the Key to Success?*](http://www.slate.com/articles/health_and_science/cover_story/2016/05/angela_duckworth_says_grit_is_the_key_to_success_in_work_and_life_is_this.html)
+
+Key points in this essay:
+
+- Duckworth promises in her book more than what "grit" can deliver. 
+
+- Grit is nothing more than other personality traits, such as industriousness. 
+
+- Grit matters but only in certain situations in life, not all of them. There is a "restriction of range". Some papers concluded that grit does not predict academic success, in New England or in Austria. 
+
+- Grit makes some differences in life, but certainly not "all the difference in the world".
+
+- Grit is perhaps just a rebranding, rather than producing something new. 
+
+- It might be impossible to change your personality. 
+
+- Being high in grit might be harmful. For example, you might hurt yourself physically if you are too focused on a goal. 
+
+Some quotes in this essay:
+
+>And like other self-help authors, she pulls a sleight of hand by which even widely held assumptions end up looking like discoveries. It's as important to work hard, the book contents, as it is to be a natural talent. Who would disagree with that?
+
+>For most people, life may be less like a marathon than a series of sprints, interspersed with periods of rest and hours upon hours spent browsing the internet. 
+
+>It's one thing to argue that grit matters more than talent or——more accurately——that your personality helps determine your success. Duckworth goes much further, asserting that you can change your personality and learn to "grow your grit."
+
+>It could be that having too much strength of purpose is worse than having not enough. 
+
+## 2021-05-02 (completed on 2021-05-03)
+
+Jonah Lehrer (2011). [*Which Traits Predict Success? (The Importance of Grit)*](https://www.wired.com/2011/03/what-is-success-true-grit/)
+
+> Taken together, these studies suggest that our most important talent is having a talent for working hard, for practicing even when practice isn't fun. 
+
 ## 2021-05-01
 
 Finished [Hoffman et al. (2016)](https://www.pnas.org/content/113/16/4296)

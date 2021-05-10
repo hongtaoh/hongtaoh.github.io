@@ -7,7 +7,7 @@ draft: false
 toc: false
 ---
 
-I didn't find a tutorial in details I deemed necessary, so I decided to craft one myself. These two sources helped me a lot:
+I didn't find a tutorial in details I deemed necessary, so I decided to craft one by myself. These two sources helped me a lot:
 
 - [GitHub Pages Action](https://github.com/marketplace/actions/github-pages-action)
 
@@ -44,7 +44,7 @@ cd C:\Users\admin\.ssh
 ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 start C:\Users\admin\.ssh
 ```
-Then you can see two files were generated in the `.ssh` folder: 
+Then you can see two files are generated in the `.ssh` folder: 
 
 - gh-pages 
 
@@ -64,7 +64,7 @@ Windows:
 clip < ~/.ssh/gh-pages.pub
 ```
 
-Go to your `username.github.io` repository on GitHub -> Settings -> Deploy keys -> Add deploy key 
+Go to your `username.github.io` repository on GitHub -> Settings -> Deploy keys -> Add deploy key. 
 
 Press Cmd+V (Windows: Control+V) in the "Key" section. Check "Allow write access". Leave a note to yourself in the "Title" section. Press "Add key".
 
