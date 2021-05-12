@@ -49,6 +49,8 @@ aliases:
 
 - 普渡大学(Purdue, Brian Lamb School of Communication[^3]）
 
+- 阿拉斯加大学 (University of Alaska Fairbanks, [Department of Communication and Journalism](https://www.uaf.edu/cojo/), [这里](https://www.uaf.edu/cojo/students/comm-masters-ta-positions/)说可以给硕士生助教全奖)
+
 以上项目是我几乎肯定会给全奖的，就是说只要录取你就会给你钱，一般不会说给你录取，但是不给钱。
 
 <hr/>
