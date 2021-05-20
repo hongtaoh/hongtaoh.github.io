@@ -7,6 +7,10 @@ draft: false
 toc: true
 ---
 
+{{<block class="note">}}
+不接受咨询，只接受对这篇帖子的改进意见。要改进此页，如果你有 GitHub，直接点击上方带笔的按钮，复刻 (Fork) 我的个人网站仓库，即可提供修改意见。
+{{<end>}}
+
 我最近准备搬到威斯康星麦迪逊去上学，要租房子。我没去过那里，突然感觉一手消息真的很重要。所以我就想把我对布卢明顿的了解写下来，也许能帮到一些人。
 
 ## 概况
@@ -23,7 +27,7 @@ toc: true
 
 先说一下价格。一个人住的话，大概要$600-$1000。两个人合租的话每个人在$400-$700左右。当然，一般情况下，离学校越近，价格越高。
 
-- 如何找室友： 用微信群找中国室友，或者在 IU Classifieds （登陆 one.iu.edu，搜索 Classifieds）上登广告找国际室友。 
+- 如何找室友： 用微信群找中国室友，或者在 IU Classifieds （登陆 one.iu.edu[^1]，搜索 Classifieds）上登广告找国际室友。 
 
 - [IU 官方的校外住宿指南](https://studentaffairs.indiana.edu/student-support/legal-services/housing-leases/living-off-campus.html)
 
@@ -35,7 +39,7 @@ toc: true
 
 - [Campus View](https://housing.indiana.edu/housing/locations/northeast/Campus_View/index.html), 简称 CV。只有 2B1B （2 Bed, 1 bath） 的。每个人每月 $610,。我没住过，但是我认识挺多人在这里住，应该不错。坐学校的公交去学校和 Kroger 超市很方便。
 
-- [Tulip Tree](https://housing.indiana.edu/housing/locations/northeast/Tulip_Tree/index.html)，简称 TT。房型有 3B1B, 3B2B, 和 2B1B。我在这里住了一年，2B1B的房型，2021年的价格是每个人每月 $580, 住得很舒服，十分的话我打九分，但很大部分的原因是我的室友很好，很安静，不吵。TT 应该是这几个公寓里装修最好的。风景非常好，离学校很近，我基本上都是走路图书馆去图书馆，大概15分钟。有门禁，所以很安全。楼下有电脑室，有练琴房。有两个不好的点是：1. 卧室关门声音比较大，不过如果室友注意就没事；2. 马桶冲水声音很大，因为用的是节水马桶。睡觉轻的话，你也许会被马桶的声音吵醒。
+- [Tulip Tree](https://housing.indiana.edu/housing/locations/northeast/Tulip_Tree/index.html)，简称 TT。房型有 3B1B, 3B2B, 和 2B1B。我在这里住了一年，2B1B的房型，2021年的价格是每个人每月 $580, 住得很舒服，十分的话我打九分，但很大部分的原因是我的室友很好，彼此尊重、安静不吵。TT 应该是这几个公寓里装修最好的。景色非常好（我打十分！）我当时住在 8 楼，视野开阔。离学校很近，我基本上都是走路图书馆去图书馆，大概15分钟。我个人比较推荐正面朝向，也就是入口那面的房子，下午的时候有阳光照进来，很舒服。反面的房子是早上的时候有太阳直射，下午没有。当然，这个看个人喜好。这里有门禁，所以很安全。楼下有电脑室，有练琴房。有两个不好的点是：1. 卧室关门声音比较大，不过如果室友注意就没事；2. 马桶冲水声音很大，因为用的是节水马桶。睡觉轻的话，你也许会被马桶的声音吵醒。
 
 - [Redbud Hill](https://housing.indiana.edu/housing/locations/northeast/Redbud/index.html)，只有 2B1B 的。如果你想省钱，这里是最好的选择，每个月只要不到 $350。这个公寓离学校比 CV 和 TT 稍远一些，走路到图书馆大概 15-20 分钟。不过有[学校的公交](https://iubus.indiana.edu/schedules/index.html)，所有算是挺方便的。有个缺点是这里偶尔会有虫子。另外，个别地方靠近公路，所以会吵。
 
@@ -73,7 +77,7 @@ toc: true
 
 - [Reserve on Third](https://reserveonthird.com/)，不太了解，只供参考。在图书馆门前倒是经常看见他们的班车。
 
-- [Poolside Apartments](https://www.tempopropertiesinc.com/vacancies?search=poolside). 有 Studio[^1] 和 One Bedroom, 我没住过，只去看过一次，感觉还可以，离学校很近。
+- [Poolside Apartments](https://www.tempopropertiesinc.com/vacancies?search=poolside). 有 Studio[^2] 和 One Bedroom, 我没住过，只去看过一次，感觉还可以，离学校很近。
 
 ## 行
 
@@ -87,7 +91,7 @@ toc: true
 
 ## 日常购物
 
-买菜和别的食物去 Kroger 超市比较多，位置在 "1175 S College Mall Rd, Bloomington, IN 47401"。买日用品去位于 College Mall 的 Target 比较方便。沃尔玛位置比较远，没车的话就算了。
+买菜和别的食物去 Kroger 超市比较多，位置在 "1175 S College Mall Rd, Bloomington, IN 47401"。买日用品去位于 College Mall 的 Target 比较方便。沃尔玛位置比较远，没车的话就算了。2019年的时候新开了一家 Aldi (著名德国廉价超市品牌)，在 College Mall 附近，感兴趣可以去看看。
 
 中国超市有两个。比较大的是 Kroger 旁边的那个 B-Town International Market，老板是一位来自中国山东，后来去台湾、韩国上学的韩国华裔开的。比较小的是 Tulip Tree 和 Scholar's Squad 之间的榕城超市。
 
@@ -122,10 +126,11 @@ toc: true
 
 - 银行：Chase 比较方便
 
-- 搬家：[Uhual](https://www.uhaul.com/)
+- 搬家：[Uhaul](https://www.uhaul.com/)
 
 - 驾照：官网在这里：[Bureau of Motor Vehicles](https://www.in.gov/bmv/licenses-permits-ids/learners-permits-and-drivers-licenses-overview/drivers-license/)。如果你在国内没有驾照，那么你需要看 [这个手册](https://www.in.gov/bmv/licenses-permits-ids/files/drivers-manual.pdf) (中文版在[这里](https://www.in.gov/bmv/licenses-permits-ids/files/drivers-manual-chinese.pdf))，然后考 [Knowledge Exam](https://www.in.gov/bmv/licenses-permits-ids/learners-permits-and-drivers-licenses-overview/learners-permit/knowledge-exam/)。考过笔试之后，过六个月，你才能去参加[路考](https://www.in.gov/bmv/licenses-permits-ids/learners-permits-and-drivers-licenses-overview/drivers-license/driving-skill-examination/)。如果你在国内有驾照，你仍然需要参加笔试。过了笔试之后，可以很快参加路考，不用等六个月。我不知道是否之后会直接承认中国驾照。是的话就比较简单了。
 
 
-[^1]: Studio 和 One-bedroom 的区别：前者厨房和卧室是连在一起的，后者是分开的，也就是说，卧室是有门的。
+[^1]: 如果你是新生，要等你能登陆 IU 的邮箱之后，才能登陆 one.iu.edu。
+[^2]: Studio 和 One-bedroom 的区别：前者厨房和卧室是连在一起的，后者是分开的，也就是说，One-bedroom 的卧室是有门的。
 
