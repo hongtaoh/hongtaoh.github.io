@@ -9,6 +9,7 @@ enableRobotsTXT = true
 [permalinks]
 cn = "/cn/:year/:month/:day/:slug/"
 en = "/en/:year/:month/:day/:slug/"
+posts = "/posts/:year/:month/:day/:slug/"
 
 [[menu.en]]
     name = "Home"

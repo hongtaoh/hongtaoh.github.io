@@ -18,7 +18,7 @@ PP. 1-11.
 
 ## 2021-05-09
 
-1. [*How to send and reply to email*](http://matt.might.net/articles/how-to-email/)
+1. [*How to send and reply to email*](http://matt.might.net/articles/how-to-email/) by Matt Might
 
 - Keep your emails short. 
 
