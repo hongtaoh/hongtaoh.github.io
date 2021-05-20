@@ -329,6 +329,8 @@ git push -u origin master
 
 - GithubEdit: 把所有的 USERNAME 换成你的 GitHub 用户名，把所有的 REPONAME 换成 github用户名.github.io
 
+- Params.lang 部分 `Your Nam` 和「你的名字」换成你的大名。
+
 ### 更新网站
 
 每次修改或添加新内容后，如果更新网站呢？
@@ -364,7 +366,7 @@ git push origin master
 bash deploy.sh
 ```
 
-### 只要中文部分
+### 只用一种语言
 
 如果你不喜欢现在的双语博客，只想留下中文，请参照以下步骤：
 
@@ -373,11 +375,26 @@ bash deploy.sh
 打开终端，首先 cd 你的 Hugo 文件夹，然后
 
 ```bash
-cp -r content/cn/about content
+cp -r content/cn/about content 
+#如果你只要英文，则用 cp -r content/en/about content。
 cp -r content/cn/posts content
 ```
 
-2. 修改 config.toml
+2. 修改 layouts/partials/nav.html
+
+将 <ul class = "nav-links"> 和 </ul> 之间的部分改为：
+
+```html
+{{ $currentPage := . }}
+{{ $section := replaceRE "^/([^/]+)/.*" "$1" .Permalink }}
+{{ range (default .Site.Menus.main (index .Site.Menus $section)) }}
+<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+{{ end }}
+```
+
+以上代码参考 [李代江](https://daijiang.name/) 的[博客设置](https://github.com/rbind/daijiang/blob/master/layouts/partials/nav.html)，在此表示感谢。
+
+3. 修改 config.toml
 
 打开 `config.toml`, 把 `[[menu.en]]` 和 `[[menu.cn]]` 两部分删除，然后加上：
 
@@ -396,6 +413,8 @@ cp -r content/cn/posts content
     weight = 3
 ```
 
+或者你可以参考[谢益辉](https://yihui.org/) 个人网站上的[菜单设置](https://github.com/rbind/yihui/blob/master/config.yaml) 来重新制作双语菜单。上面对于 `nav.html` 的修改让你可以同时有 `[[menu.main]]`、`[[menu.en]]` 和`[[menu.cn]]`。
+
 另外，在 `params` 部分，把
 
 ```toml
@@ -407,7 +426,7 @@ defaultLang = "en"
 
 ```toml
 singleLang = true
-defaultLang = "cn"
+defaultLang = "cn" #如果你只用英文，则用 "en"
 ```
 
 ### 新添加内容
