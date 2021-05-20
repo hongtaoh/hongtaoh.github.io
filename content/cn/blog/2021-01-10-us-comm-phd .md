@@ -3,13 +3,13 @@ title: 美国传播学博士项目一览
 date: 2021-01-10
 author: 郝鸿涛
 slug: us-comm-phd
-draft: true
+draft: false
 toc: true
 ---
 
 <!-- {{<figure src="/media/us-map.gif" caption="美国国家地图" class="fullwidth">}} -->
 
-{{<figure src="https://wallpapercave.com/wp/MbXUy9y.jpg" caption="图片来源: wallpapercave.com">}}
+{{<figure src="/media/cnblog/us-map.jpg" caption="图片来源: wallpapercave.com" >}}
 
 <!-- ![US Map](/media/us-map.gif) -->
 
@@ -327,7 +327,7 @@ PhD in Public Communication & Technology
 
 - [Graduate program overview](https://commarts.wisc.edu/graduate/)
 
-- [Grduate handbook](https://commarts.wisc.edu/graduate/graduate-handbook/)
+- [Graduate handbook](https://commarts.wisc.edu/graduate/graduate-handbook/)
 
 - [Faculty](https://commarts.wisc.edu/people/)
 
@@ -839,13 +839,13 @@ UC Davis 的传播学院很年轻，但是发展势头强劲。学院貌似把�
 
 ## Texas
 
-### 86. [The University of Texas at Austin, Moddy College of Communication](https://moody.utexas.edu/)
+### 86. [The University of Texas at Austin, Moody College of Communication](https://moody.utexas.edu/)
 
 有四个系，Communication Studies, RTF, Journalism and Media, Advertising & Public Relations，每个系都有自己的博士项目。
 
 请自己了解详情。
 
-### 87. [Texas Tech Univesity, College of Media & Communication](https://www.depts.ttu.edu/comc/)
+### 87. [Texas Tech University, College of Media & Communication](https://www.depts.ttu.edu/comc/)
 
 有硕士有博士。硕士也许会给全奖。不过每学期五千刀的工资真不高。详情请自己了解。
 
@@ -919,7 +919,7 @@ UC Davis 的传播学院很年轻，但是发展势头强劲。学院貌似把�
 
 - [Admissions](https://www.usf.edu/arts-sciences/departments/communication/graduate/admissions.aspx)
 
-- [Grduate handbook](https://www.usf.edu/arts-sciences/departments/communication/documents/handbook2020-21-oct-update.pdf)
+- [Graduate handbook](https://www.usf.edu/arts-sciences/departments/communication/documents/handbook2020-21-oct-update.pdf)
 
 - [Faculty](https://www.usf.edu/arts-sciences/departments/communication/people/index.aspx)
 
