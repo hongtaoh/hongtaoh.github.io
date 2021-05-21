@@ -10,9 +10,274 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+## 2021-05-21
+
+Nanayakkara, P., & Hullman, J. (2020). [Toward Better Communication of Uncertainty in Science Journalism](https://cj2021.northeastern.edu/files/2020/02/CJ_2020_paper_46.pdf). Computation + Journalism, March 2020, Boston, MA, USA
+
+Stray, J., & Hao, K. [Interactive Visualization of Fairness Tradeoffs](https://cpb-us-w2.wpmucdn.com/sites.northeastern.edu/dist/0/367/files/2019/11/CJ_2020_paper_70.pdf). Computation + Journalism, March 2020, Boston, MA, USA
+
+## 2021-05-20
+
+Finished Borkin et al. (2015)
+
+The authors web scripped close to 5,700 visualizations, among which there are 2,070 single visualizations. Then then annotated these visualizations based on their taxonomy for static visualizations (See 3 Visualization Taxonomy). They also tagged the source of each visualization, i.e., infographics, scientific publication, news, and government/world organizations. 
+
+They selected a subset of 410 visualizations and presented them to participants on Amazon MTurk. Each visualization **is treated as an image** and is presented for only 1 second. Participants press the key if they see a visualization for the second time. Therefore, this study looks at which types of visualizations as images are more memorable. 
+
+### Results
+
+- If a visualization is more memorable. It is more memorable for most people. That is to say, "[T]he memorability of a visualization is a consistent measure across participants."
+
+- The following attributes in visualizations contribute to memorability: having pictograms, colorful, chart junk, high visual densities. 
+
+- Unique types of visualizations, such as diagrams, networks, and trees are more memorable than common types such as bar, line, and pie charts. 
+
+- Infographic visualizations are the most memorable, followed by visualizations from scientific publications, news, and government. Scientific visualizations are memorable possibly because they contain more diagrams. 
+
+### Further thoughts
+
+1. How about interactive visualizations? What characteristics make interactive visualizations more memorable?
+
+2. How about testing memorability a week after the experiment as well?
+
+
+## 2021-05-19
+
+Borkin et al. (2013)
+
+PP. 1-7
+
+## 2021-05-18
+
+1. Finished [Borkin et al. (2015)](https://ieeexplore.ieee.org/iel7/2945/7307919/07192646.pdf?casa_token=UPVJtGnO1REAAAAA:AcW5z1s9aukc0eFLLCzMs_tL19fEJPShbRHdhacJm1rp6hQo5V1rC_iBisF25fpA-Gv1M5EPi)
+
+This work is exciting. 
+
+The authors used the same dataset as in *What makes a visualization memorable?*. 393 single visualizations are selected, among which 100 are randomly chosen to be shown to participants in the **Encoding Phase**. Participants spent 10s on each visualization in this Phase. Then, in **Recognition Phase**participants are shown 200 visualizations (100 are shown before, the other 100 are filler visualizations). The duration of each visualization is 2 seconds. Participants press keys to indicate whether they have seen each visualization in the previous Phase. Lastly, in the **Recall Phase**, each participant is shown the visualizations they managed to recognize in the Recognition Phase. These visualizations are artificially blurred by the authors. Participants are asked to input any information they remember of each visualization in an empty box right next to the visualization. 
+
+Here are what the authors find:
+
+- If a visualization is memorable "at a glance" (where people see it for only 1 second), it is also more likely to be memorable if people see it for 10 seconds. 
+
+- "Human recognizable objects" help make visualizations recognizable. 
+
+- Visualizations that are the most recognizable after 1 second exposure are likely to get descriptions of the highest quality after 10-second exposure. 
+
+- A good title helps people recall the visualization. 
+
+- Pictograms do not hinder recall. 
+
+- Data and message redundancy help people recognize and recall the visualization.
+
+2. Borkin, M. A., Vo, A. A., Bylinskii, Z., Isola, P., Sunkavalli, S., Oliva, A., & Pfister, H. (2013). What makes a visualization memorable?. *IEEE transactions on visualization and computer graphics, 19*(12), 2306-2315.
+
+PP. 1
+
+## 2021-05-17
+
+Borkin et al. (2015)
+
+PP. 2-7
+
+## 2021-05-16
+
+1. Finished [*Five rules for evidence communication*](https://www.nature.com/articles/d41586-020-03189-1)
+
+This piece argues that as scientists, we should **inform** rather than **persuade** the audience. Science is not about shaping the public's "emotions and beliefs". 
+
+- Key to trustworthiness: expertise, honesty, and good intentions. 
+
+- Show uncertainties. Let the audience know if you are unsure of your results. 
+
+- Preemptively debunk possible misunderstandings (i.e., "prebunking")
+
+>Always aiming to 'sell the science' doesn't help the scientific process or the scientific community in the long run, just as it doesn't help people (patients, the public or policymakers) to make informed decisions in the short term. 
+
+2. Borkin, M. A., Bylinskii, Z., Kim, N. W., Bainbridge, C. M., Yeh, C. S., Borkin, D., ... & Oliva, A. (2015). [Beyond memorability: Visualization recognition and recall](https://ieeexplore.ieee.org/iel7/2945/7307919/07192646.pdf?casa_token=UPVJtGnO1REAAAAA:AcW5z1s9aukc0eFLLCzMs_tL19fEJPShbRHdhacJm1rp6hQo5V1rC_iBisF25fpA-Gv1M5EPig). *IEEE, 22*(1), 519-528.
+
+PP. 1-2
+
+## 2021-05-15
+
+1. [*Five rules for evidence communication*](https://www.nature.com/articles/d41586-020-03189-1)
+
+PP. 1-2
+
+2. Finished *How to Be a Successful PhD Student* by Mark Dredze and Hanna M. Wallach (2012). 
+
+### How to interact with your advisor
+
+- The fact that you like a professor's research doesn't necessarily mean that you will be comfortable working together. 
+
+- Your advisor is your boss. When you want you to do something, do it. 
+
+- It's better to meet your advisor regularly, for example, weekly. Remember to make an agenda for each meeting. Bring your results to the meeting. Start each meeting with the summary of points in the last meeting.
+
+### Be productive
+
+- To be productive, creative, and independent. 
+
+>[T]he purpose of graduate school is research, not taking classes. Although taking classes is part of graduate school, when it comes to success, it's all about research. Do well enough in your classes but focus on publishing high quality research papers. 
+
+- "Talk to other students". 
+
+- Communicate with your advisor regarding your preferences of working. 
+
+- It's better to work in the lab for at least 20 hours each week. If you cannot focus on your studies/research in the lab, talk to your advisor and find a solution. 
+
+- Prioritize.
+
+- If you aren't healthy or happy, you won't be productive in research. 
+
+### Research
+
+#### Reading papers
+
+- Read, read, read. "Read multiple papers a week". If you are unsure of what to read, consult your advisor. 
+
+- Take notes of every paper you read. Some need detailed notes, whereas others need simple notes. 
+
+- When it comes to important papers in your field, read deeply. Understand them thoroughly. 
+
+#### Research ideas
+
+- When choosing a research topic, you need to know the literature, and the "online dialogue" within your field. 
+
+>Try to focus on big problems rather than making incremental improvements to previous work. 
+
+>You will be judged on what you publish, not how long it took you to come up with the idea. 
+
+- Only work on solutions to problems that **do** exist. 
+
+#### Results
+
+Know why your method does not get 100% accuracy on your data. This will help you improve upon your work. 
+
+#### Publishing
+
+- Organize your folders, codes, texts, etc. IMMEDIATELY after a paper submission. If you don't do it then, you won't do it later either. 
+
+- Release your codes and data after your submission/publication. 
+
+### Talks
+
+- Practice. Practice a lot for a talk. 
+
+- Seek feedback/suggestions from friends/colleagues. 
+
+- Focus on content, not form. 
+
+- Pay attention to Timing. 
+
+### Professional development
+
+1. Do internships, either early one or later when you have special skill sets. It doesn't hurt to have more than one internship. 
+
+2. Start reviewing papers in your field early on. 
+
+3. Give talks so that others know about you and your work. Being well-known will help you find a job later. 
+
+### Progressing in PhD
+
+- Year 1 - Year 2/3: Take classes, find an advisor, read tons of papers, observe how others do research, finish a project with results (not necessarily a publication).
+
+- Year 3 - Year 4/5: Choose a research area, and publish papers in that area. 
+
+- Year 5/6: Write your thesis
+
+### Networking
+
+Making tutorials will help people know your name. Attend conferences frequently and introduce yourself. 
+
+### Jobs
+
+Know what makes you happy (industry, government, starting a company, teaching, research, eetc) and do it after your PhD. 
+
+## 2021-05-14
+
+*How to Be a Successful PhD Student* by Mark Dredze and Hanna M. Wallach (2012). 
+
+PP. 3-11
+
+## 2021-05-13
+
+1. Finished [*Academic job search advice*](http://matt.might.net/articles/advice-for-academic-job-hunt/) by Matt Might
+
+### Timing
+
+In the Summer a year before you graduate, complete your CV, research statement, and teaching statement. Start sending your applications to schools in the Fall a year before you graduate. You can apply through February. You probably will get interview invitations from February to early May. You'll need 3-6 recommenders, so let them know in advance. 
+
+### Readings that might help
+
+- *Even a Geek Can Speak*
+- *Tomorrow's Professor*
+- *A PhD Is Not Enough: A Guide To Survival In Science*
+
+### Application materials
+
+- Have a homepage. Attach a profile photo on it. Put your job materials in HTML on your site in addition to PDF. 
+
+- Take time to tailor your cover letter to specific schools. 
+
+- In cover letter, **bold face** faculty members. Keep the cover letter brief, around 1-2 pages. 
+
+### Who's hiring
+
+- Go to a conference in your field a year before you graduate and ask people whether they are hiring. 
+
+- Mention in your homepage that you are graduating and looking for a job. 
+
+### Job talk
+
+- Practice 10 times before your first job talk. Practice twice for subsequent talks. 
+
+### Miscellaneous
+
+- Email a personalized message to everybody you talked to the next day. 
+
+2. *How to Be a Successful PhD Student* by Mark Dredze and Hanna M. Wallach (2012). 
+
+PP. 1-3
+
+## 2021-05-12
+
+1. [*A thesis proposal is a contract*](http://matt.might.net/articles/advice-for-phd-thesis-proposals/) by Matt Might
+
+- Make the thesis statement as short as possible. It asks the question of "What will humans learn as a result of this dissertation?"
+
+- A thesis proposal is a contract. Try to make the contract as specific as possible. Remember to put in your proposal some milestones (e.g., completing literature review, complete surveys, submit for publication, etc.), dates and the completion criteria of these milestones. "The proposal needs to create the impression that failure is *unlikely*". 
+
+>Good proposals give the impression that between one-third and two-thirds of the work remains to be completed. 
+
+- A proposal should be around 15 pages, not longer. Limit the presentation time to 30-45 minutes. 
+
+2. [*Academic job search advice*](http://matt.might.net/articles/advice-for-academic-job-hunt/) by Matt Might
+
+PP. 1-5
+
+## 2021-05-11
+
+Finished [Chun (2017)](https://www.tandfonline.com/doi/abs/10.1080/15551393.2017.1343153)
+
+Overview: The study finds that a redundant encoding (here, value represented with shades of gray) has no benefits nor harm for (1) accuracy and (2) speed of judgement of graphs encoded with single primary encodings (position, angle, area, length).
+
+### Study aims
+The study examines whether a redundant encoding, in this case, values represented by shades of gray, will boost or harm **accuracy** and **speed** of understanding graphs encoded with various primary encodings (position, length, angle, and area). 
+
+The study also examines whether the additive benefit of value, if any, to accurate encodings (e.g., position) will be greater than to less accurate encodings (e.g., area).
+
+### Results
+1. Position is the most accurate encoding, followed by angle, area, and length. 
+2. The redundant encodings do not have any effects on the understanding of graphs encoded with the four primary encodings. The hierarchy of accuracy with redundant encodings is the same as that with single primary encodings. 
+3. Participants completed tasks on graphs with redundant encodings in the same amount of time as participants completing tasks on graphs with single primary encodings. 
+
+### Discussions
+1. Readers might have filtered out the redundant encoding, i.e., values represented with shades of gray, and focused on primary encodings of the graph. 
+2. An open question: If we pair visual variables that have similar accuracy properties, for example, angle & area, will we see a boost or drop in accuracy of understanding & completing time?
+
 ## 2021-05-10
 
-Chun, R. (2017). Redundant Encoding in Data Visualizations: Assessing Perceptual Accuracy and Speed. *Visual Communication Quarterly, 24*(3), 135-148.
+Chun, R. (2017). [Redundant Encoding in Data Visualizations: Assessing Perceptual Accuracy and Speed](https://www.tandfonline.com/doi/abs/10.1080/15551393.2017.1343153). *Visual Communication Quarterly, 24*(3), 135-148.
 
 PP. 1-11. 
 
