@@ -1,5 +1,5 @@
 ---
-title: 区分 After Class 和 After Classes
+title: 如何区分 after class 与 after classes
 date: 2020-08-21T16:10:58-04:00
 author: 郝鸿涛
 slug: after-class-after-classes

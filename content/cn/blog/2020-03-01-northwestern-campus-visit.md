@@ -1,5 +1,5 @@
 ---
-title: 2020年西北大学 MTS 博士项目校园面试 － 经历和体会
+title: 2020年西北大学 MTS 博士项目校园面试的经历与体会
 date: 2020-03-01T11:05:47-05:00
 slug: northwestern-compus-visit
 author: 郝鸿涛
