@@ -20,13 +20,13 @@ aliases:
 
 我建议你把每一所学校上官网的信息一字一句读完，看看硕士生给不给钱。如果网站没提到，就发邮件询问招生负责人：
 
->I am international student interested in your Master's program in XXX. I am wondering whether your program offers Master's students Teaching or Research Assistantships that provide a full tuition waiver and a monthly stipend.
+>I am an international student interested in your Master's program in XXX. I am wondering whether this program offers Master's students Teaching or Research Assistantships that provide a full tuition waiver and a stipend.
 
 一般有博士点的学校都有硕士点。有些学校虽然看起来不起眼，比如 Sen Diego State University、North Dakota State University，但如果被录取，他们很可能会给你助教全奖。这是非常好的机会。
 
 ## 美国学校的奖学金简介
 
-一提到奖学金，很多人想到的第一个词（也许也是唯一一个）是 Scholarship。但我们想要的全奖可不是 scholarship。一般而言，美国的研究生、博士项目提供的资助有以下几种：
+一提到奖学金，很多人想到的第一个词（也许也是唯一一个）是 Scholarship。但我们想要的全奖可不是它。一般而言，美国的研究生、博士项目提供的资助分为以下几种：
 
 - Scholarship。这是一次性的奖励，比如，一下子给你五千美元，但是你依然要交学费，自己支付生活费。
 
@@ -96,7 +96,7 @@ aliases:
 
 - 北卡州立大学 (North Carolina State University, [Department of Communication](https://communication.chass.ncsu.edu/), 有一个 [Master of Science in Communication](https://communication.chass.ncsu.edu/academics/graduate/) 的项目，根据[这里](https://communication.chass.ncsu.edu/academics/graduate/prospective/gssp.php)的说法，一部分被录取的学生会给助教全奖。)
 
-- 休斯顿大学 (University of Houston, [Jack J. Valenti School of Communication[^4]](https://www.uh.edu/class/communication/graduate/frequently-asked-questions/)，*Do you offer assistanships* 提到 "We do offer graduate assisantships (GA), which involve either teaching or research. There are a limited number of these, so please send in a letter of interest and a CV (to dreyes20@central.uh.edu) by February 1 for consideration.")
+- 休斯顿大学 (University of Houston, [Jack J. Valenti School of Communication](https://www.uh.edu/class/communication/graduate/frequently-asked-questions/)，*Do you offer assistanships* 提到 "We do offer graduate assisantships (GA), which involve either teaching or research. There are a limited number of these, so please send in a letter of interest and a CV (to dreyes20@central.uh.edu) by February 1 for consideration.")
 
 以上项目是我几乎肯定会给全奖的，就是说只要录取你就会给你钱。不能给你全奖也不大可能会录取你。
 
