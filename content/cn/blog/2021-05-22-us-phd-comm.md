@@ -4,7 +4,7 @@ date: 2021-05-22T08:29:52-04:00
 author: "郝鸿涛"
 slug: us-phd-comm
 draft: false
-toc: false
+toc: true
 ---
 ## 1. 本科毕业直接申请美国的博士
 
