@@ -1,5 +1,5 @@
 ---
-title: 贝叶斯统计思想入门（二)：概率
+title: 贝叶斯统计之概率
 author: 郝鸿涛
 date: '2020-02-02'
 slug: bayesian-stats-chapter4
