@@ -112,9 +112,9 @@ cp -r content/cn/posts content
     weight = <span style=color:#666>2</span>
 [[menu.main]]
     name = <span style=color:#ba2121>&#34;博客&#34;</span>
-    url = <span style=color:#ba2121>&#34;/posts/&#34;</span>
+    url = <span style=color:#ba2121>&#34;/posts/&#34;</span> 
     weight = <span style=color:#666>3</span>
-</code></pre></div><p>或者你可以参考<a href=https://yihui.org/ target=_blank rel="noreferrer noopener">谢益辉</a>
+</code></pre></div><p>需要注意的是， /posts/ 这个名字如果你要改的话，比如改成 /blog/，那么 <code>config.toml</code> 中 [params] 下的 <code>blogDirName = "posts"</code> 也要跟着改成 <code>blogDirName = "blog"</code>。</p><p>或者你可以参考<a href=https://yihui.org/ target=_blank rel="noreferrer noopener">谢益辉</a>
 个人网站上的<a href=https://github.com/rbind/yihui/blob/master/config.yaml target=_blank rel="noreferrer noopener">菜单设置</a>
 来重新制作双语菜单。上面对于 <code>nav.html</code> 的修改让你可以同时有 <code>[[menu.main]]</code>、<code>[[menu.en]]</code> 和<code>[[menu.cn]]</code>。</p><p>另外，在 <code>params</code> 部分，把</p><div class=highlight><pre style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#408080;font-style:italic># singleLang = true</span>
 defaultLang = <span style=color:#ba2121>&#34;en&#34;</span>
@@ -139,7 +139,7 @@ open content/cn/hobby/_index.md -a TextEdit
 </span><span style=color:#bbb>          </span><span style=color:green;font-weight:700>publish_branch</span>:<span style=color:#bbb> </span>gh-pages<span style=color:#bbb>
 </span><span style=color:#bbb>          </span><span style=color:green;font-weight:700>publish_dir</span>:<span style=color:#bbb> </span>./public<span style=color:#bbb>
 </span><span style=color:#bbb>          </span><span style=color:green;font-weight:700>cname</span>:<span style=color:#bbb> </span>example.com<span style=color:#bbb>
-</span></code></pre></div><p style=color:#777>最后一次修改于 2021-05-20</p></div><a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a></main><footer class=footer><script type=text/javascript src=/js/math-code.js></script><script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type=text/javascript src=/js/center-img.js></script><ul class=footer-links><li><a href=/cn/blog/index.xml type=application/rss+xml title="RSS feed">订阅</a></li><li><a href=http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank>版权
+</span></code></pre></div><p style=color:#777>最后一次修改于 2021-05-25</p></div><a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a></main><footer class=footer><script type=text/javascript src=/js/math-code.js></script><script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type=text/javascript src=/js/center-img.js></script><ul class=footer-links><li><a href=/cn/blog/index.xml type=application/rss+xml title="RSS feed">订阅</a></li><li><a href=http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank>版权
 <i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i></a></li></ul><div class=copyright-text>©
 郝鸿涛
 2020-2021</div></footer>
