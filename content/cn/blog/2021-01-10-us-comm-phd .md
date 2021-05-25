@@ -6,8 +6,12 @@ slug: us-comm-phd
 draft: false
 toc: true
 ---
+{{<block class="note">}}
 
-<!-- {{<figure src="/media/us-map.gif" caption="美国国家地图" class="fullwidth">}} -->
+为便于大家修改，此文的最新版在 GitHub 上： [hongtaoh/us-comm-phd](https://github.com/hongtaoh/us-comm-phd)。以下内容不再更新。
+
+{{<end>}}
+
 
 {{<figure src="/media/cnblog/us-map.jpg" caption="图片来源: wallpapercave.com" >}}
 
