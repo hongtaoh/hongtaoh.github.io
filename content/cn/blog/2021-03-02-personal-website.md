@@ -409,9 +409,11 @@ cp -r content/cn/posts content
     weight = 2
 [[menu.main]]
     name = "博客"
-    url = "/posts/"
+    url = "/posts/" 
     weight = 3
 ```
+
+需要注意的是， /posts/ 这个名字如果你要改的话，比如改成 /blog/，那么 `config.toml` 中 [params] 下的 `blogDirName = "posts"` 也要跟着改成 `blogDirName = "blog"`。
 
 或者你可以参考[谢益辉](https://yihui.org/) 个人网站上的[菜单设置](https://github.com/rbind/yihui/blob/master/config.yaml) 来重新制作双语菜单。上面对于 `nav.html` 的修改让你可以同时有 `[[menu.main]]`、`[[menu.en]]` 和`[[menu.cn]]`。
 

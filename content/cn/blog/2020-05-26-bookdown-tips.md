@@ -36,7 +36,7 @@ HTML 上改的话比较容易。如果你也是用的 [bookdown-demo](https://gi
 {{<block class="note">}}
 [perlatex](https://github.com/perlatex) [通过 GitHub issue 提出了这个问题](https://github.com/XiangyunHuang/ElegantBookdown/issues/18)，叶飞老师给出了[解决方法](https://github.com/XiangyunHuang/ElegantBookdown/issues/18#issuecomment-804270165)。
 
-此外，感谢叶飞老师还专门到我的博客[通知了一声](https://github.com/fyemath): [删除 elegantbookdown 里的定理定义环境](https://github.com/hongtaoh/hongtaoh.github.io/issues/1)。
+此外，感谢[叶飞老师](https://github.com/fyemath)还专门到我的博客通知了一声: [删除 elegantbookdown 里的定理定义环境](https://github.com/hongtaoh/hongtaoh.github.io/issues/1)。
 {{<end>}}
 
 ElegantBookdown 中，`index.Rmd` 最不好修改。其他几个都只有内容，但 `index.Rmd` 中有很多参数设置。
