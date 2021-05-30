@@ -10,6 +10,131 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+## 2021-05-29
+
+Peyton-Jones, S. (2014). [How to write a great research paper](https://www.cis.upenn.edu/~sweirich/icfp-plmw15/slides/peyton-jones.pdf). [Video of this presentation](https://www.microsoft.com/en-us/research/video/how-to-write-a-great-research-paper-3/). 
+
+1. When you have an idea, start writing the paper now! Don't wait until your research is finished. No! "Writing papers is a primary mechanism for **doing** research, not just for **reporting** it".
+
+2. The primary goal of your research is to communicate a "useful and re-usable idea". This idea should be "clear" and "sharp". After reading your paper, the readers should be 100% sure what THIS idea is. Distill your paper into one single sentence which conveys the main idea, and make this idea explicit: "The main idea of this paper is ...", "In this section we present the main contributions of this paper." Many papers have great ideas but they didn't "distill what they are".
+
+  - Of course, you need to convey a single idea but don't have the pressure to only present a fantastic idea. Rather, you should "write a paper, and give a talk, about any idea, no matter how insignificant it may seem to you".
+
+{{<block class="tip">}}
+Your readers should be able to sum up your paper with one single sentence: This paper finds that... 
+{{<end>}}
+
+3. The narrative flow: Here is a problem -> It's an interesting but unsolved problem -> Here is my idea (to solve it) -> My idea works (with details and data) -> Here is how my idea compares to others' approaches.
+
+4. The introduction does two things in one page only: (1) "Describe the problem", and (2) "State your contributions". When describing the problem, use an example! When stating your contributions, try using bullet points to make the structure clearer. 
+
+  - Do not write this in your introduction: "The rest of this paper is structured as follows. Section 2....."
+
+PP. 1-27
+
+## 2021-05-28 (Completed on 2021-05-29)
+
+👍👍 Eisner, J. (2010). [Write the Paper First](http://www.cs.jhu.edu/~jason/advice/write-the-paper-first.html).
+
+This article is very encouraging and eye-opening for me!
+
+The key idea of this post is that if you are planning to submit a paper to a conference, you need to write your paper right now! It's totally Okay, and even expected, if you haven't run the experiment and don't have any tangible results. You can put empty tables and figures in the Results section. **The main goal of the experiments is to allow you to put numbers in those empty tables/figures**. Remember, you should never postpone writing until your experiment is finished.
+
+### Why?
+
+1. Clear writing triumphs over your experimental results in terms of (1) odds of acceptance and (2) likelihood of being cited. 
+
+2. If you complete the writing before you do the experiment, you can send it to your advisor or colleagues who can give you suggestions. If they think the idea you want to convey sucks, you don't need to waste your time actually doing the experiment. And your writing isn't a waste of time since you may find the idea applicable elsewhere. 
+
+### What should you do?
+
+Write the *Introduction*, where you need to present a big picture and sell your idea. Then, the *lit review*. Don't do a lit review before writing your own ideas. This is because after writing your own ideas, you can see them from a different perspective when writing the lit review. Then write the *methods*/*experimental* and even the *results* section. (The author didn't mention the *results* section. I think it is possible, though.)
+
+Every paper needs a beautiful picture at least. But don't spend time refining it now. Simply put your sketch first. 
+
+Remember to document your codes early on. Don't wait until your project is finished. Don't fool yourself. 
+
+
+## 2021-05-27
+
+1. Finished Li et al. (2021)
+
+2. Tsai, J. L. (2021). [Why does passion matter more in individualistic cultures?](https://www.pnas.org/content/pnas/118/14/e2102055118.full.pdf). *PNAS, 118*(14).
+
+People in Western individualistic societies value passion and excitement whereas East Asian collectivistic societies value calm and balance. This is why you see so many faces with big toothy smiles in Western societies but less frequently see them in East Asian countries and regions. 
+
+## 2021-05-26
+
+Li, X., Han, M., Cohen, G. L., & Markus, H. R. (2021). [Passion matters but not equally everywhere: Predicting achievement from interest, enjoyment, and efficacy in 59 societies.](https://www.pnas.org/content/118/11/e2016964118) *PNAS, 118*(11).
+
+The study finds that among over 1 million 15-year old students around the globe, passion predicts academic achievement, i.e., scores in science (2015), math (2012), and reading (2009), more strongly in individualistic societies than in collectivistic ones. The result remains the same after controlling for GDP per capita. Other cultural differences than individualism-collectivism are not robust predictors of the relationship between passion and academic achievement. Note that it doesn't mean passion is unimportant in collectivistic societies; Passion is still a significant predictor of academic achievement in these societies. 
+
+Support from parents predicted academic achievements more strongly in collectivistic societies than in individualistic ones. 
+
+PP. 1-8
+
+## 2021-05-25
+
+Potter, L., Kalubi, D., & Schönenberger, K. (2021). [Opinion: Academic-humanitarian technology partnerships: an unhappy marriage?](https://www.pnas.org/content/pnas/118/11/e2102713118.full.pdf). *PNAS, 118*(11).
+
+The authors of this opinion piece argue that partnerships between humanitarian and development organizations (HDOs) such as ICRC, UNICEF, and WHO, and academics may fail. 
+
+1. Funding and human resources may be limited. 
+  - HDOs think that universities may have their own funding for experimental studies. However, truly experimental work is not sufficient to produce products that satisfy HDOs' needs as many products are expected to be working in very harsh conditions. 
+  - Researchers in universities may see HDOs as an external funding source. However, HDO funds need detailed reporting to donors. Since research needs lots of money and may not produce any tangible results at all, it's very difficult for HDO to spend many financial resources on R&D. 
+  - HDO may face a lack of human resources committed to the partnerships. There is lots of paperwork to do and HDO staff already have their tasks. They may not have time to write project plans and funding reports. 
+
+2. Deployment and sustainability
+  - Products, for example, medical equipment, need training, maintenance, and upgrade services. However, the company that is tasked with producing the equipment has little interest in these. Training and maintenance needs money which normally comes from selling loads of these products. However, HDO only needs a limited number of them. This won't create profits for the company. 
+
+  - Once the partnership produces a publication, researchers are no longer interested in it. They have to move on to other projects that produce papers. 
+
+3. Roles, responsibilities and expectations
+  - When HDOs find an interesting publication, they may invest thousands of dollars to implement it. However, there might exist a huge gap between academic publication to implementation. HDOs may waste lots of money. 
+
+  - HDOs have a longstanding distrust in commercial sectors and believe academia is neutral. This is wrong. Universities nowadays are very commercialized. HDOs should update their view on companies and universities.
+
+## 2021-05-24
+
+1. Finished Nielse & Andersen (2021)
+
+2. Nichols, J. D., Oli, M. K., Kendall, W. L., & Boomer, G. S. (2021). [Opinion: A better approach for dealing with reproducibility and replicability in science](https://www.pnas.org/content/pnas/118/7/e2100769118.full.pdf). *PNAS, 118*(7).
+
+The authors of this opinion argued that a better solution to the replicability crisis in science is to shift the focus from replicating single studies to designing and conducting progressive sequences of studies that accumulate evidence on a certain topic. Researchers should be encouraged to participate in these progressive sequences of studies. Administrations of universities should shift the reward system from emphasizing single studies to these sequences of studies. Funding agencies such as NSF should do the same. 
+
+## 2021-05-23
+
+Nielsen, M. W., & Andersen, J. P. (2021). [Global citation inequality is on the rise](https://www.pnas.org/content/118/7/e2012208118). *PNAS, 118*(7).
+
+- In the fields of health sciences, agricultural sciences, and natural sciences, the citation share by the top 1% scientists increased from 14.7% in 2000 to 19.6% in 2015. The publication share by the top 1% elite increased from 5 to 12% (fractionalized output) during the same period. 
+
+- The citation elite increased its share of publications (in fractionalized output) and citations but its productivity in fractional counts and impact per paper decreased.
+
+- The citation share of the top 1% scientists decreased by 7% in the field of computer and information sciences. That's the largest decrease in all fields. 
+
+- Citation elite is increasingly found in Western Europe and Australasia. Citation shares by the top 1% scientists decreased in the US, China, and Japan. Citation share by the top 1% scientists decreased in renowned universities in the US but increased in renowned institutions in Western Europe and UK. 
+
+PP. 1-6
+
+## 2021-05-22
+
+1. Scheufele, D. A., Hoffman, A. J., Neeley, L., & Reid, C. M. (2021). [Misinformation about science in the public sphere](https://www.pnas.org/content/pnas/118/15/e2104068118.full.pdf). *PNAS, 118*(15).
+
+Five themes in the colloquium issue:
+
+  1. What we do not know about misinformation. For example, how frequent are they? How successful are the coping strategies? 
+
+  2. What's wrong with the science community itself? Why are we producing misinformation even as scientists? 
+
+  3. How to intervene? And how effective are these interventions? For example, are short-term corrections working in the long run? Why or why not?
+
+  4. Think of the issue of misinformation and possible solutions in a new light. For example, storytelling in science publications? 
+
+  5. What does it mean to be scientifically literate?
+
+2. Clauset, A. (2021). [*Prediction and it limits for scientific discovery*](https://aaronclauset.github.io/slides/Clauset_2021_PredictionAndItsLimitsForScientificDiscovery_GoldLabSymp.pdf). 
+
+
 ## 2021-05-21
 
 Nanayakkara, P., & Hullman, J. (2020). [Toward Better Communication of Uncertainty in Science Journalism](https://cj2021.northeastern.edu/files/2020/02/CJ_2020_paper_46.pdf). Computation + Journalism, March 2020, Boston, MA, USA
