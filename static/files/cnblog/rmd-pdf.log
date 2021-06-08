@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.3.31)  8 JUN 2021 15:36
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.3.31)  8 JUN 2021 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**PDF-基本设置.tex
-(./PDF-基本设置.tex
+**rmd-pdf.tex
+(./rmd-pdf.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/Users/Tal/Library/TinyTeX/texmf-dist/tex/la
 tex/base/article.cls
@@ -507,8 +507,8 @@ Package fontspec Info: Font family 'SongtiSC(0)' created for font 'Songti SC'
 (fontspec)             SC/BI/OT:language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-(./PDF-基本设置.aux)
-\openout1 = `PDF-基本设置.aux'.
+(./rmd-pdf.aux)
+\openout1 = `rmd-pdf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
 LaTeX Font Info:    ... okay on input line 121.
@@ -887,12 +887,12 @@ LaTeX Font Info:    Font shape `TU/SongtiSC(0)/m/n' will be
 (Font)              scaled to size 14.4pt on input line 123.
 LaTeX Font Info:    Font shape `TU/SongtiSC(0)/b/n' will be
 (Font)              scaled to size 17.28pt on input line 127.
-(./PDF-基本设置.toc
+(./rmd-pdf.toc
 LaTeX Font Info:    Font shape `TU/SongtiSC(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 1.
 )
 \tf@toc=\write4
-\openout4 = `PDF-基本设置.toc'.
+\openout4 = `rmd-pdf.toc'.
 
 LaTeX Font Info:    Font shape `TU/SongtiSC(0)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 130.
@@ -903,14 +903,14 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 
 [1
 
-] [2] [3] [4] (./PDF-基本设置.aux) ) 
+] [2] [3] [4] (./rmd-pdf.aux) ) 
 Here is how much of TeX's memory you used:
  18910 strings out of 478992
- 357764 string characters out of 5868754
- 875057 words of memory out of 5000000
+ 357751 string characters out of 5868754
+ 875053 words of memory out of 5000000
  38457 multiletter control sequences out of 15000+600000
  405863 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,6n,122p,302b,879s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,6n,122p,301b,879s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on PDF-基本设置.pdf (4 pages).
+Output written on rmd-pdf.pdf (4 pages).
