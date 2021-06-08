@@ -14,7 +14,7 @@ toc: true
 
 考完托福后，去湖北鄂城参加毕业实习，在钢厂给一群印尼人做翻译。干了一个月，挣了五千多块钱，用这个钱让杨光从日本给我带了了一台 Macbook Air, 一直用到了现在。暑假开始准备保送，参加了北大的燕京学堂的面试，被刷无果。也参加了人大国际新闻传播的考试，排在候补名单的第 10 位。
 
-2015 年 10 月的时候，在开往北外的公交上收到了张怡老师的电话，说我被人大录取了，激动的不行，但还是很淡然地参加了北外笔译方形的考试，也被录取了。去人大读国际新闻传播，给我的留学开辟了新道路，因为我知道我可以申请什么方向了：新闻传播。之前我只有英语方向的背景，觉得出国的意义不大，可选的方向也很小。确认了新方向之后，我记得 2015 年就开始搜索美国新闻传播方向的博士项目，还清楚地 2015 年冬天的一天，宿舍熄灯前，我还在看西北大学的网页。
+2015 年 10 月的时候，在开往北外的公交上收到了张怡老师的电话，说我被人大录取了，激动得不行，但还是很淡然地参加了北外笔译专业的考试，也被录取了。去人大读国际新闻传播，给我的留学开辟了新道路，因为我知道我可以申请什么方向了：新闻传播。之前我只有英语方向的背景，觉得出国的意义不大，可选的方向也很小。确认了新方向之后，我记得 2015 年就开始搜索美国新闻传播方向的博士项目，还清楚地 2015 年冬天的一天，宿舍熄灯前，我还在看西北大学的网页。
 
 2015 年在外研社获奖后于 2016 年和一同获奖的选手在外研社的组织下免费去新加坡玩了 4 天。那趟游程让我激动不已。坐在从北京起飞的飞机上，飞机盘旋上升时，从窗户看几千米之下的北京，感觉自己像是在科幻小说。那是我第一次坐飞机，也是我第一次出国，所以印象很深刻。从北京到新加坡的六个小时，我全程盯着窗外，很享受。下了飞机，新加坡的高楼耸立以及国际化的环境让我激动不已。
 
@@ -42,7 +42,9 @@ toc: true
 
 12 月 1 号的时候提交了 USC、UT Austin、OSU、UConn、Cornell、Umich、Indiana、Syracuse, 12 月15 号递交了 Wisconsin-Madison、Florida State University（FSU, 硕士）, 1 月 1号递交了 UC Davis、UCSB，之后递交了 Buffalo （硕士）。UT Austin 我本来是打算申请 Comm Studies 的项目，但突然看到 [Wenhong Chen 老师](https://journalism.utexas.edu/faculty/wenhong-chen) 的信息，就临时决定改申 [RTF](https://rtf.utexas.edu/)。Chen 老师当时是在 RTF，不过后来转到了 [Journalism](https://journalism.utexas.edu/)，不过这是我申请完之后的事情了。Upenn 和 Stanford 的是把申请信息写完了，但是觉得申请也是白费钱，就没有提交申请。
 
-1 月份的时候，我非常想申请[亚利桑那大学的硕士项目](https://comm.arizona.edu/masters-program)，那里有很多人际传播方向的老师，我想着去那里再读一个硕士，努力做研究，两年后再拼一把斯坦福。但是最后觉得不想再花时间写 SOP，也不想花钱了，就没申请。我当时通过 Gradcafe 认识了[鹏菲](https://communication.cals.cornell.edu/people/pengfei-zhao/)，她和我的研究方向非常像，我就把 Arizona 推荐了给她。鹏菲最后真的去了那里读第二个硕士，在那里写了硕士[毕业论文](https://repository.arizona.edu/bitstream/handle/10150/641680/azu_etd_17966_sip1_m.pdf?sequence=1)，跟老师一起有[三篇期刊发表](https://scholar.google.com/citations?user=zxEwlMIAAAAJ&hl=en&oi=ao#)，最后去了康奈尔读博士。当然，这是后话了。
+1 月份的时候，我非常想申请[亚利桑那大学的硕士项目](https://comm.arizona.edu/masters-program)，那里有很多人际传播方向的老师，我想着去那里再读一个硕士，努力做研究，两年后再拼一把斯坦福。但是最后觉得不想再花时间写 SOP，也不想花钱了，就没申请。
+
+<!-- 我当时通过 Gradcafe 认识了[鹏菲](https://communication.cals.cornell.edu/people/pengfei-zhao/)，她和我的研究方向非常像，我就把 Arizona 推荐了给她。鹏菲最后真的去了那里读第二个硕士，在那里写了硕士[毕业论文](https://repository.arizona.edu/bitstream/handle/10150/641680/azu_etd_17966_sip1_m.pdf?sequence=1)，跟老师一起有[三篇期刊发表](https://scholar.google.com/citations?user=zxEwlMIAAAAJ&hl=en&oi=ao#)，最后去了康奈尔读博士。当然，这是后话了。 -->
 
 1 月份的时候收到威斯康星的面试邀请。记得很清楚，夜里 11 点多坐在明德楼忘了几楼的楼梯上心惊胆战的完成了面试。2 月 1 号收到了博士录取。当时真的不敢相信。好运气来了挡都挡不住：
 
@@ -146,15 +148,29 @@ toc: true
 
 我的想法是，SOP 其实很好写，但我的简历如果不充实，SOP 会非常单薄。比如，我的研究方向里有网络科学 (Network Science) 或者数据可视化 (Data Visualization)，我总得有项目来说明我有相关的学科背景吧？所以我觉得我之前在那三个项目 ([Netsci](https://netsci.hongtaoh.com/)、[D3book](https://d3book.hongtaoh.com/)、[Olymvis](https://netsci.hongtaoh.com/)) 上花的时间是值得的。另外，安老师的项目我也可以提到。不过说实话，我现在都有点心虚，因为安老师那个项目里我的贡献不到 10%，甚至都不到 5%。
 
+这中间我有断断续续套瓷。比如，9 月 3 号 我给西北大学的 Jessica Hullman 老师发了套瓷信，9 月 7 号收了回信：
+
+>Hi Hongtao, I think the TSB program sounds like a better fit. Your interests and background sound unique, though there's a strong chance I will be looking mostly for CS background students next year, if I take students at all (my lab grew significantly last year - 5 new phds at once - and many didn't have a formal background in CS, so I'm trying to round things out). But you might reach out to Matt Kay, or even Nick Diakopolous who has background in visualization and journalism. Best, Jessica. 
+
 从 10 月中旬开始，我决定像第一次申请那样，老老实实地做准备。这次我准备申请信息科学和传播学，我就把我感兴趣的传播学院又看了一遍，信息学院我了解的不太多，甚至哪些学校有信息学院哪些学校没有我都不知道。我就比照着[上海交大 2020 Library & Information Science 学科排名](http://shanghairanking.com/Shanghairanking-Subject-Rankings/library-information-science.html) 挨个查。碰到感兴趣的学院，就把老师的简介认真看一遍，再看看她谷歌学术上的发表。这次，我在 word 文档上，对感兴趣的每一位老师，我把她谷歌学术页面、学院上的介绍和个人网站链接都记了下来，还和第一次一样在看过论文后，用我自己的话把她的研究方向总结一下。
 
 这份文档里链接很多。我为了减少中英文输入法切换的麻烦，就主要用的英文。一共 27 页，5600 个单词。对所有列出的项目、老师，感兴趣的我就用绿色标出来，也许会申请的，就标为蓝色，不想申请的标为红色。
 
-正式开始写 SOP 是在 11 月 10 号之后。我当时是打算申请两个方向，一个是计算传播学+网络科学，这个方向我申请的是传播学院和信息学院。另一个方向是统计+数据可视化。这个方向我申请的是西北的 TSB 项目和威斯康星麦迪逊的计算机学院。这里顺便提一句，10 月份的时候，我在看西北大学 [Jessica Hullman 老师](http://users.eecs.northwestern.edu/~jhullman/index.html)的[工作组网站](https://mucollective.northwestern.edu/)时看到她的一位博士生 (Yea-Seul Kim，金老师) 刚毕业去了威斯康星大学计算机系当助理教授。我在跟 Jessica 老师发了邮件后，收到的回复是她前几年招的学生有点多，2021 不想招人了，如果招的话也只招计算机专业出身的学生。我就跟金老师发了邮件。金老师后来跟我 Zoom 视频，说我的方向跟她听合的，但是她没有能力直接招学生，要招生组委会做决定。但是她说我一定能拿到好几所学校的博士录取。虽然我不知道她为什么对我有信息，但她的话还是让我有了一些自信。
+正式开始写 SOP 是在 11 月 10 号之后。我当时是打算申请两个方向，一个是计算传播学+网络科学，这个方向我申请的是传播学院和信息学院。另一个方向是统计+数据可视化。这个方向我申请的是西北的 TSB 项目和威斯康星麦迪逊的计算机学院。
+
+这里顺便提一句，10 月份的时候，我在看西北大学 [Jessica Hullman 老师](http://users.eecs.northwestern.edu/~jhullman/index.html)的[工作组网站](https://mucollective.northwestern.edu/)时看到她的一位博士生 (Yea-Seul Kim，金老师) 刚毕业去了威斯康星大学计算机系当助理教授。我在跟 Jessica 老师发了邮件后，收到的回复是她前几年招的学生有点多，2021 不想招人了，如果招的话也只招计算机专业出身的学生。
+
+我就跟金老师发了邮件。金老师后来跟我 Zoom 视频，说我的方向跟她听合的，但是她没有能力直接招学生，要招生组委会做决定。但是她说我一定能拿到好几所学校的博士录取。虽然我不知道她为什么对我有信息，但她的话还是让我有了一些自信。
 
 值得一提的是，第二次申请结束后的寒假，我花了将近一个月的时间，学用 [Hugo](https://gohugo.io/) 做个人网站。一开始很困难，但一个月后总算有了个雏形。之后一直不断地修改，到 10 月份的时候已经和现在的模样差不多了。我觉得金老师也许是看了我的网站后才对我有信心。她给我的建议是，做一个单独的项目 (Projects) 页面，招生委员会肯定会浏览。我听从了这条建议。
 
-计算传播学+网络科学方向的 SOP 写完后，我让 [Larry](https://cns-nrt.indiana.edu/students/trainees/2020/Larry-Zhang.html) 帮我改了改。Larry 很够意思，给我提出了很多很好的意见，有一半的内容我重新写了一下，改动挺大。[统计+数据可视化方向的 SOP](/files/wisconsin-cs.pdf/) 写完后，我让在读研期间的同学 [George](https://gcroberson.com/) 帮我看了看，这次的改动比较小，只改了几个词。
+计算传播学+网络科学方向的 SOP 写完后，我让 [Larry](https://cns-nrt.indiana.edu/students/trainees/2020/Larry-Zhang.html) 帮我改了改。Larry 很够意思，给我提出了很多很好的意见，有一半的内容我重新写了一下，改动挺大。
+
+[统计+数据可视化方向的 SOP](/files/wisconsin-cs.pdf) 写完后，我让在读研期间的同学 [George](https://gcroberson.com/) 帮我看了看，这次的改动比较小，只改了几个词。他当时给我的回信是：
+
+>Hongtao, I've made some suggested edits. Overall it's strong! You have very specific goals and very specific ideas on how to achieve them. That's great. I hope they admit you.
+
+2021 年 1 月 26 号下午 3 点收到加州戴维斯传播学院张竞文老师的面试邀请邮件，我选择在 1 月 29 号上午面试。面试时也就是简单问问了研究兴趣和为什么申请戴维斯。我感觉这个面试主要是看看英语能力，以及看看申请者是否是一个「正常人」。
 
 2021 年 2 月 2 号下午三点收到威斯康星麦迪逊计算机系的博士录取。当时我刚从外面散步回来，看到邮件的那一刻感觉自己像是在做梦，根本不敢相信这是真的。经历过上一次博士申请的全军覆没，我的自信已经低到没法再低，那一整年感觉自己做什么都做不好。当时盯着这封录取信看了好久。后来我给我爹发了信息，那时候国内早晨5点多。我爹知道后也很开心。
 
@@ -162,11 +178,21 @@ toc: true
 
 威斯康星的录取信中说第一年给我我三千刀的奖学金，被录取的学生中只有一部分拿到了这个钱。看来他们对我比较满意。
 
-其实，这封录取之前，罗格斯也给我发了录取，但没给我钱。这个结果反而让我很担心，因为罗格斯是我的保底校，连她都不要我，我这次申请会很悬。没想到过了几天就收到来自我最想去的项目的录取。
+在这封录取之前，罗格斯在 1 月底就给我发了录取，但是说不给我钱。这个结果反而让我很担心，因为罗格斯是我的保底校，连她都不要我，我这次申请会很悬。没想到过了几天就收到来自我最想去的项目的录取。
 
-之后，戴维斯给我发了录取，一年给的钱和威斯康星一样，两万二。罗格斯之后也给我发了录取，因为有一个人拒掉了 offer。罗格斯给的钱很多，一年三万刀。
+当天下午 6：57， 戴维斯也给我发了（非官方的）录取，之后在官方的录取中我知道这里一年给的钱和威斯康星一样，两万二。
+
+第二天，也就是 2 月 3 号，西北大学的 Matthew Kay 老师给我发了面试邀请，2 月 4 号中午的时候参加的面试。面试中 Kay 老师透露说今年 TSB 项目招得人特别少。不过几周后收到了 Nick Diakopoulos 老师发来的拒信。应该是我面试的表现没有好到让 Kay 老师愿意录取我。
+
+罗格斯在 3 月 2 号 我发了录取，因为有一个人拒掉了 offer。我猜我应该在奖学金候补名单的第一个。罗格斯给的钱很多，一年三万刀。
 
 我 2 月 17 号就接了威斯康星的录取，但研究生院让我寄成绩单过去，直到 4 月 9 号才跟我发了最终的录取。我在这之前先把罗格斯拒掉了，因为万一威斯康星不要我，我也会选择戴维斯，所以提前拒掉罗格斯给别人机会。4 月 9 号威斯康星最终录取下来后，我马上把戴维斯也拒掉了。博士申请正式结束。
+
+{{<block class="tip">}}
+
+拿到录取后，我思考他们为什么要我。我感觉我的个人网站起了很大的作用，特别是我做过的项目那一页。我十分建议大家建一个个人网站！有兴趣可以参考我的这篇：[零基础免费搭建个人网站教程](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/)。
+
+{{<end>}}
 
 ## 回顾
 

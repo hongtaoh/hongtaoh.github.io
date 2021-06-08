@@ -24,11 +24,19 @@ It's relatively easy to embed a visualization directly . For [this example](http
 
 To get the above lines of code, on your Observable Notebook, just click the `...` menu on the left side of a cell, then choose "Embed". You will be directed to select cells to embed. Do as instructed. If you encounter problems with embedding, refer to [Handy Embed Code Generator](https://observablehq.com/@jashkenas/handy-embed-code-generator), or [Troubleshooting Embedding](https://observablehq.com/@observablehq/troubleshooting-embedding).
 
-However, as can be seen, you don't have much freedom[^1] to edit the style of the elements, like the font, the positions of the buttons, and the like. And it's very slow to load. 
+{{<block class="tip">}}
+
+You might need to go to the top of your notebook. Next to "(Re)publish" and "Like", you can see the `...` menu. Click it and choose "Switch to classic". Then follow the above instructions and you'll be able to see the "Embed" option in the cell you choose. 
+
+{{<end>}}
+
+As you can see, you don't have much freedom to edit the style of the elements, such as the font, and the positions of the buttons. And the loading may be slow.  
 
 ## Embed manually
 
 It's not very difficult to embed your visualizations manually in a stand-alone webpage. I am providing a minimal example [here](https://hongtaoh.com/d3/explorable-data/), whose source codes can be seen [here](https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/d3/explorable-data/index.html). Go to the buttom of this source codes file, and pay attention to the codes between `<script type="module">` and `</script>`. 
+
+Except for the part of "HTML within the `<body>` ", all other codes should be found between `<script type="module">` and `</script>`, which can be either placed within `<head>` or `<body>`.
 
 ### Import `Runtime` and  `Inspector`
 
@@ -88,9 +96,9 @@ The above codes are from [covid19-data/covid19-dashboard](https://github.com/cov
 
 The `D3ExplorableNotebook` in the second line should the name your imported notebook. In the third line, `rendersExplorable` should be the name you assign `id`s to cells. 
 
-### The `body` 
+### HTML within the `<body>` 
 
-You can study the [source code](https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/d3/explorable-data/index.html) in detail. I'll explain the basic ideas here. With `<div id="viewof-season"></div>`, we'll put the relevant visualization there. If needed, you can edit the style within the CSS stylesheet with `#viewof-season {}`. I barely used any CSS in my example, so I simply place the CSS code within `style` tags of the webpage. If you want more complicated styling, of course you can reference an external CSS stylesheet. 
+You can study the [source code](https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/d3/explorable-data/index.html) in detail. I'll explain the basic ideas here. With `<div id="viewof-season"></div>`, we'll put the relevant visualization there. If needed, you can edit the style within the CSS stylesheet with `#viewof-season {}`. I barely used any CSS in my example, so I simply place the CSS code within `style` tags of the webpage. If you want more complicated styling, of course you can (and probably should) reference an external CSS stylesheet. 
 
 ### What if I have more than one notebook in one webpage
 
@@ -119,5 +127,3 @@ If you don't understand it, study [my example](https://hongtaoh.com/d3/explorabl
 ### More examples
 
 You can have a look at more examples of importing an Observable notebook in [observablehq/examples](https://github.com/observablehq/examples/blob/main/breakout/index.html). 
-
-[^1]: I guess you can, but it takes some learning. I don't know how right now. 

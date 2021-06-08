@@ -7,6 +7,12 @@ draft: false
 toc: false
 ---
 
+{{<block class="warning">}}
+
+I am not sure whether the methods mentioned below will actually work. Ping me if you have a better solution. 
+
+{{<end>}}
+
 I saw [this question](https://stackoverflow.com/questions/3860112/multiple-github-accounts-on-the-same-computer) on Stack Overflow. I also saw the [highest rated answer](https://stackoverflow.com/a/3860139/13716814) and [Jeffrey Way's blog post](https://code.tutsplus.com/tutorials/quick-tip-how-to-work-with-github-and-multiple-accounts--net-22574) mentioned in this answer. However, I didn't manage to follow their steps. 
 
 I later found [*A Practical Guide to Managing Multiple GitHub Accounts*](https://medium.com/the-andela-way/a-practical-guide-to-managing-multiple-github-accounts-8e7970c8fd46) by Fredrick. It successfully helped me set up the SSH keys. The post is already clear enough, but I would like to go over the steps in my own words, and clarify some points I found most confusing. 

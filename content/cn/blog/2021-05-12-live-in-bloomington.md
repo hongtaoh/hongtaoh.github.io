@@ -35,7 +35,11 @@ toc: true
 
 我第一次来的时候，根本没考虑过学校宿舍，因为印象中美国大学的学生宿舍条件差、费用高，很不划算。但来了之后才发现并不是这样，至少 IU 的学校公寓我觉得很好。
 
-[这里](https://housing.indiana.edu/housing/locations/index.html)列出了 IU 全部的学生公寓。我只说一下我了解和推荐的。全部公寓的价格在[这里](https://housing.indiana.edu/housing/costs/21-22costs/index.html) 可以看到。下面我提到的公寓都是水、电、网、暖气全包，你不需要额外支付任何其他费用（可能有几十块钱的管理费，这里忽略不计）。
+[这里](https://housing.indiana.edu/housing/locations/index.html)列出了 IU 全部的学生公寓。我只说一下我了解和推荐的。全部公寓的价格在[这里](https://housing.indiana.edu/housing/costs/21-22costs/index.html) 可以看到。
+
+学校公寓的一个好处是提供暑假行李存放，当然，前提是你暑假前在学校住，暑假之后仍然住学校。如果房间不变肯定是可以的，但是如果变了，请自己咨询是否可以，我不清楚。一个暑假大概要 $500。至少 University East 是可以这么操作的，其他的我不确定，请自己问公寓管理员。
+
+下面我提到的公寓都是水、电、网、暖气全包，你不需要额外支付任何其他费用（可能有几十块钱的管理费，这里忽略不计）。
 
 - [Campus View](https://housing.indiana.edu/housing/locations/northeast/Campus_View/index.html), 简称 CV。只有 2B1B （2 Bed, 1 bath） 的。每个人每月 $610,。我没住过，但是我认识挺多人在这里住，应该不错。坐学校的公交去学校和 Kroger 超市很方便。
 
@@ -55,7 +59,7 @@ toc: true
 
 - [Fountain Park](https://www.fountainpark-apts.com/)。房型很全，具体请自己看。我住过 2B2B，当时每个人每月 $550，不包含网络、电费。这里的电费比较坑，因为冬天取暖靠空调。冬天的电费两个人平分的话，每个人每月要 70-80刀。这里有很多国际学生住，研究生、博士比较多，中国人很多。住得还算可以，但没有我在 Tulip Tree 住得舒服。十分的话我打七分。这里的 2B1B (The Spruce) 比较实惠，每个人一个月将近 $400，算是很低的了。
 
-- [Woodbridge](https://www.woodbridgeapt.com/)。跟 Fountain Park 挨着。这里公寓很多，价格和 Fountain Park 差不多。我没住过，但认识挺多人在这里住，应该还不错。这里冬天是用燃气 (gas) 取暖。需要注意的是做饭也是用燃气，安全性肯定比电炉差一些。你可以自己付燃气费、电费，也可以买公寓提供的“套餐” (Bundle)。我打电话问了下，2B1B 的房型，电+燃气的套餐是每个人每月 $55-$65。 
+- [Woodbridge](https://www.woodbridgeapt.com/)。跟 Fountain Park 挨着。这里公寓很多，价格和 Fountain Park 差不多。我没住过，但认识挺多人在这里住，应该还不错。这里冬天是用燃气 (gas) 取暖。需要注意的是，这里所有房型做饭用的炉子都是用燃气的。你如果喜欢用燃气炉做饭就无所谓了，但我感觉安全性肯定比电炉差一些。你可以自己付燃气费、电费，也可以买公寓提供的“套餐” (Bundle)。我打电话问了下，2B1B 的房型，电+燃气的套餐是每个人每月 $55-$65。 
 
 - [The Monroe](https://themonroeliving.com/floor-plans/)，价格也还好。最便宜的我看有个 4B2B，一个月 $495，我印象中是水、电、网全包的，具体请自己咨询。这里的好处是自带家具。另外，这里离 Kroger 超市非常近，走路大概 5 分钟。我没住过，不便评价。
 
