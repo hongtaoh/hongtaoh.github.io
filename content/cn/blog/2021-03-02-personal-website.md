@@ -1,5 +1,5 @@
 ---
-title: "如何零基础免费搭建个人网站"
+title: "零基础免费搭建个人网站教程"
 date: 2021-03-02T12:03:38-05:00
 author: "郝鸿涛"
 slug: personal-website-tutorial

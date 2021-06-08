@@ -10,9 +10,9 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
-## 2021-05-29
+## 2021-05-30
 
-Peyton-Jones, S. (2014). [How to write a great research paper](https://www.cis.upenn.edu/~sweirich/icfp-plmw15/slides/peyton-jones.pdf). [Video of this presentation](https://www.microsoft.com/en-us/research/video/how-to-write-a-great-research-paper-3/). 
+Finished Peyton-Jones, S. (2014). [How to write a great research paper](https://www.cis.upenn.edu/~sweirich/icfp-plmw15/slides/peyton-jones.pdf). 
 
 1. When you have an idea, start writing the paper now! Don't wait until your research is finished. No! "Writing papers is a primary mechanism for **doing** research, not just for **reporting** it".
 
@@ -26,9 +26,40 @@ Your readers should be able to sum up your paper with one single sentence: This 
 
 3. The narrative flow: Here is a problem -> It's an interesting but unsolved problem -> Here is my idea (to solve it) -> My idea works (with details and data) -> Here is how my idea compares to others' approaches.
 
-4. The introduction does two things in one page only: (1) "Describe the problem", and (2) "State your contributions". When describing the problem, use an example! When stating your contributions, try using bullet points to make the structure clearer. 
+  - Abstract (4 sentences)
+  - Introduction (1 page)
+  - The problem (1 page)
+  - My idea (2 pages)
+  - The details (5 pages)
+  - Related work (1-2 pages)
+  - Conclusions and future work (0.5 page)
 
-  - Do not write this in your introduction: "The rest of this paper is structured as follows. Section 2....."
+4. The introduction does two things in one page only: (1) "Describe the problem", and (2) "State your contributions". When introducing the problem, use an example! When stating your contributions, try using bullet points to make the structure clearer. 
+
+  - Do not write this in your introduction: "The rest of this paper is structured as follows. Section 2...." Instead, your introduction is supposed to survey the whole paper. 
+
+5. Between *Introduction* and *The problem*, don't insert *Related work (Literature review)*. Instead, put it between *The deatils* and *Conclusions and future work*. 
+
+6. When presenting your idea, use simple examples that even a novice can understand. 
+
+7. Readers & Reviewers
+
+  - When your draft is done, you can send it to the author of the paper on which your research is based. Ask them "could you help me ensure that I describe your work fairly?". Since they are interested in this, they most often will reply. 
+
+  - Be grateful for every single word your reviewers put in the review. Treat criticism as positive suggestions that can help make your work clearer. Even if the criticism is wrong and it turns out the reviewer did not spend time and effort on understanding your (completed) work, try simplifying it!
+
+### General advice
+
+- Submit by the deadline
+- Follow instructions by the organizer closely
+- Spell check
+- Use strong visual structure in your paper: sections and subsections, bullet points
+- Use nice pictures/diagrams
+- Use simple words and phrases
+
+## 2021-05-29
+
+Peyton-Jones, S. (2014). [How to write a great research paper](https://www.cis.upenn.edu/~sweirich/icfp-plmw15/slides/peyton-jones.pdf). [Video of this presentation](https://www.microsoft.com/en-us/research/video/how-to-write-a-great-research-paper-3/). 
 
 PP. 1-27
 
@@ -53,7 +84,6 @@ Write the *Introduction*, where you need to present a big picture and sell your 
 Every paper needs a beautiful picture at least. But don't spend time refining it now. Simply put your sketch first. 
 
 Remember to document your codes early on. Don't wait until your project is finished. Don't fool yourself. 
-
 
 ## 2021-05-27
 
