@@ -1,0 +1,148 @@
+---
+documentclass: article
+title: "Rmarkdown 输出中文 PDF 的基本设置"
+author: "郝鸿涛"
+date: "2021年06月08日"
+header-includes:
+  - \usepackage{fontspec} # 使用 fontspec 包
+  - \usepackage{xeCJK}    # 使用 xeCJK 包
+  - \setCJKmainfont[Scale=1]{Songti SC}  # 设置中文字体
+  - \renewcommand{\contentsname}{目录}
+output: 
+  pdf_document: 
+    latex_engine: xelatex # 使用 xelatex 引擎
+    toc: true
+    number_sections: true
+classoption: 12pt # 字体。只能在 10pt, 11pt, 和 12pt 选
+geometry: margin=1in # 页边距，上下左右 1 英尺，大概 2.54 厘米。
+linestretch: 1.2 # 行间距
+toccolor: 'orange'
+---
+
+此 PDF 源自[同名博客文章](https://hongtaoh.com/cn/2021/06/08/rmd-pdf/)。内容以网页博客为准，PDF 或许不再更新。
+
+# 最简设置
+
+```rmd
+---
+documentclass: article
+title: "此处是标题"
+author: "你的大名"
+date: "2021年06月08日"
+header-includes:
+  - \usepackage{fontspec} # 使用 fontspec 包
+  - \usepackage{xeCJK}    # 使用 xeCJK 包
+  - \setCJKmainfont[Scale=1]{Songti SC}  # 设置中文字体
+output: 
+  pdf_document: 
+    latex_engine: xelatex # 使用 xelatex 引擎
+classoption: 12pt # 字体。只能在 10pt, 11pt, 和 12pt 选
+geometry: margin=1in # 页边距，上下左右 1 英尺，大概 2.54 厘米。
+linestretch: 1.2 # 行间距。数值越大，行间距越大。
+---
+```
+
+然后写文章就好。
+
+需要说明的是：
+
+1. `\setCJKmainfont[Scale=1]{你的字体}` 你所用的字体是你电脑字体簿中的字体。苹果电脑中，宋体是 STSong 或者 Songti SC, 黑体是 STHeiti 或 Heiti Sc, 楷体是 STKaiti 或 Kaiti SC。
+
+2. 如果 `classoption: 12pt` 你都觉得小，那么请修改 `\setCJKmainfont[Scale=1]{你的字体}` 中的 `Scale`，数值越大，字体越大。
+
+这是最简配置，参考 [ChenChingChih 的帖子](https://github.com/yihui/tinytex/issues/223#issue-649511395)。
+
+以下是稍微复杂一些的内容。
+
+# 首行缩进
+
+在 `header-includes` 部分加入：
+
+```rmd
+  - \usepackage{indentfirst}
+  - \setlength{\parindent}{2em}
+```
+
+# 引用语换字体
+
+在 `header-includes` 部分加入：
+
+```rmd
+  - \setCJKfamilyfont{zhkai}{Kaiti SC}
+  - \AtBeginEnvironment{quote}{\CJKfamily{zhkai}}
+```
+
+# 目录
+
+```rmd
+header-includes:
+  - \renewcommand{\contentsname}{目录}
+output:
+  pdf_document:
+    toc: true
+toccolor: 'orange' # 颜色可以自己换
+```
+
+其中，`\renewcommand{\contentsname}{目录}` 这行代码来自于 [ccpaging](https://www.cnblogs.com/ccpaging/) 的博文：[在LaTeX 与 LyX 中设置“Contents”为“目录”](https://www.cnblogs.com/ccpaging/p/4089528.html)。根据这篇博客，如果你有插图的话，需要用到 `\renewcommand{\figurename}{图}`。
+
+`toccolor: 'orange'` 参考的是 pollytatouin 在 [Stackoverflow 上的答复](https://stackoverflow.com/a/57190730)。
+
+
+# 章节自动编号
+
+```rmd
+output: 
+  pdf_document:
+    number_sections: true
+```
+
+这就和你的章节有关系了。如果你的内容是：
+
+```md
+# 第一章
+## 第一节
+## 第二节
+
+# 第二章
+## 第一节
+## 第二节
+```
+
+那么自动编号为：
+
+```rmd
+1 第一章
+  1.1 第一节
+  1.2 第二节
+
+2 第二章
+  2.1 第一节
+  2.2 第二节
+```
+
+# 更多其他设置
+
+总而言之，`header-includes` 里面的是 LaTex 代码。与 `header-includes`、`output` 平行的部分，比如 `classoption`、`geometry` 等是 [Pandoc 转 PDF 时对 LaTex 的设置](https://pandoc.org/MANUAL.html#variables-for-latex)。
+
+此外，可以参考 [*R Markdown: The Definitive Guide*](https://bookdown.org/yihui/rmarkdown/) 有关 [PDF 转换的介绍](https://bookdown.org/yihui/rmarkdown/pdf-document.html)。
+
+# 如果你是 LaTex 重度用户
+
+如果你有更多、更复杂的 LaTex 设置，可以新建一个 `preamble.tex`，把它放到和你的 Rmarkdown 平行的位置，然后：
+
+```rmd
+output:
+  pdf_document:
+    includes:
+      in_header: preamble.tex
+```
+
+再把 
+
+```rmd
+  - \usepackage{fontspec} # 使用 fontspec 包
+  - \usepackage{xeCJK}    # 使用 xeCJK 包
+  - \setCJKmainfont[Scale=1]{Songti SC}  # 设置中文字体
+```
+
+这类的代码放到 `preamble.tex` 中。需要注意的是，`-` 是不需要的。
