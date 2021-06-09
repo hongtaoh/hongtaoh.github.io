@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.3.31)  8 JUN 2021 15:37
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.3.31)  8 JUN 2021 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -924,7 +924,7 @@ File: ../../media/cnblog/so-good-en.png Graphic file (type bmp)
 <../../media/cnblog/so-good-en.png>
 [2]
 LaTeX Font Info:    Font shape `TU/SourceHanSerifSC(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 125.
+(Font)              scaled to size 14.4pt on input line 124.
 
 Package fontspec Warning: Font "Kaiti SC" does not contain requested Script
 (fontspec)                "CJK".
@@ -959,11 +959,11 @@ Package fontspec Info: Font family 'KaitiSC(0)' created for font 'Kaiti SC'
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/KaitiSC(0)/m/n' will be
-(Font)              scaled to size 11.59644pt on input line 137.
+(Font)              scaled to size 11.59644pt on input line 135.
 [3] [4] [5] [6] [7] [8] [9] [10] (./so-good.aux) ) 
 Here is how much of TeX's memory you used:
  19798 strings out of 478992
- 393842 string characters out of 5868754
+ 393840 string characters out of 5868754
  901677 words of memory out of 5000000
  39311 multiletter control sequences out of 15000+600000
  407501 words of font info for 80 fonts, out of 8000000 for 9000
