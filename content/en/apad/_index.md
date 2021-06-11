@@ -10,6 +10,115 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+## 2021-06-11
+
+👍 Finished Kwak et al. (2020)
+
+The FrameAxis is an unsupervised method to characterize the *framing intensity* and *framing bias* for a given text. See Figure 2 to understand these two constructs. 
+
+## 2021-06-10
+
+1. Finished Kim et al. (2012)
+
+Eye-tracker cannot capture scans of peripheral vision. 
+
+2. Kwak, H., An, J., Jing, E., & Ahn, Y. Y. (2020). [FrameAxis: Characterizing Framing Bias and Intensity with Word Embedding](https://arxiv.org/pdf/2002.08608.pdf). *arXiv preprint arXiv:2002.08608.*
+
+PP. 1-2
+
+## 2021-06-09
+
+Kim, S. H., Dong, Z., Xian, H., Upatising, B., & Yi, J. S. (2012). [Does an eye tracker tell the truth about visualizations?: Findings while investigating visualizations for decision making](http://web.cse.ohio-state.edu/~machiraju.1/teaching/CSE5544/Visweek2012/infovis/papers/kim.pdf). *IEEE Transactions on Visualization and Computer Graphics, 18*(12), 2421-2430.
+
+PP. 1-5
+
+## 2021-06-08
+
+1. [*Practicing privacy: Encryption*](https://matt.might.net/articles/practicing-privacy-encryption/) by Matt Might
+
+- Recommended password manager: [pwSafe](https://pwsafe.org/)
+
+- Use Long passwords, [even your 'complicated' password is easy to crack](https://www.wired.co.uk/article/password-cracking)
+
+- Surveillance Self-Defense: https://ssd.eff.org/en
+
+- [*Applied Cryptography*](https://www.amazon.com/gp/product/0471117099/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0471117099&linkCode=as2&tag=ucmbread-20) by Bruce Schneier
+
+2. [*Why peer reviewers should use The Onion Router (TOR)*](https://matt.might.net/articles/why-peer-reviewers-should-use-tor/) by Matt Might
+
+- Tor Browser: https://www.torproject.org/
+
+3. [*Tips and software for Mac users*](https://matt.might.net/articles/switching-to-apple-macintosh-from-linux-or-windows/) by Matt Might
+
+- [TextMate for macOS](https://macromates.com/)
+
+
+## 2021-06-07
+
+Finished [Seraj et al. (2021)](https://www.pnas.org/content/118/7/e2017154118)
+
+The authors analyzed posts in r/BreakUps subreddit, and found that a month before, during, and three months after the breakup, people's analytical thinking drops (meaning their thoughts are less structured and logical) whereas cognitive processing increases (meaning that they are trying to understand the situation). Sample markers of cognitive processing (a.k.a, working through) include "because", "understand", "should'', etc. Also evident is that people are using more I-words and We-words. 
+
+The authors did not stop here and asked additional two questions: 1. Does writing a lot about the breakup help people recover? 2. How to compare these changes with language changes among people going through other kinds of emotional upheavals?
+
+Most people (84%) spend 1-4 days talking about their breakups, whereas 16% of people spend 5 or more days. Both the short-term and long-term users have similar language patterns (analytical thinking, cognitive processing, I-words, and We-words) during the months leading up to the breakup. However, it takes long-term users twice as much time as short-term users to return to the baseline value of their language patterns. However, it's impossible to establish a causal relationship. It might be that those who spend more time writing about their breakups experience a more difficult time and thus find it hard to adjust. 
+
+The changes in language patterns among people who experience divorce in r/Divorce mimic those of r/BreakUps users. But r/offmychest users have somewhat different patterns since they post various kinds of emotional upheavals.
+
+## 2021-06-06
+
+Seraj, S., Blackburn, K. G., & Pennebaker, J. W. (2021). [Language left behind on social media exposes the emotional and cognitive costs of a romantic breakup](https://www.pnas.org/content/118/7/e2017154118). *PNAS, 118*(7).
+
+PP. 1-5
+
+## 2021-06-05
+
+Finished Mirowski (2018).
+
+❌ I personally don't recommend this paper. It is unnecessarily long and contains so many complicated words which could have been replaced by simpler ones. The central theme, that open science does not make sense, does not have enough convincing arguments to persuade me. 
+
+## 2021-06-04
+
+Continued with Mirowski (2018).
+
+PP. 13-21
+
+## 2021-06-03
+
+Continued with Mirowski (2018).
+
+- The assertion is wrong that science needs to be more democratic by engaging the public in the scientific process. Real science is hard. When you include the general public, what they can do is only simple tasks on the assembly line. It's just meaningless. Furthermore, few ordinary people have the need to access and read scientific papers. Rather than serving the public's interests, this movement is only doing good to corporations. 
+
+- Open science won't accelerate the speed and quantity of scientific output. 
+
+PP. 6-13
+
+## 2021-06-02
+
+Mirowski, P. (2018). [The future (s) of open science](https://journals.sagepub.com/doi/pdf/10.1177/0306312718772086). *Social studies of science, 48*(2), 171-203.
+
+- Open science, in the sense of including the public in the scientific process, does not increase the authority of science among the general public. Also, it seems that more education makes the conservatives and the liberal have more differing opinions towards science's role in the public. 
+
+PP. 1-6
+
+## 2021-06-01
+
+👍 Barres, B. A. (2013). [How to pick a graduate advisor](https://www.sciencedirect.com/science/article/pii/S0896627313009070). *Neuron, 80*(2), 275-279.
+
+See my summary in Chinese [here](https://hongtaoh.com/cn/2021/06/01/advisor/).
+
+## 2021-05-31
+
+Newport, C. (2020). [When technology goes awry](https://www.csd.uoc.gr/~hy108/downloads/whentech.pdf). *Communications of the ACM, 63*(5), 49-52.
+
+In this Viewpoint, Cal Newport argues that it's better to see the impact of technologies from a determinist viewpoint, that new technologies drive human behaviors into unplanned directions. He takes emails invented by IBM and the "Like" button by a Facebook engineer as examples. Emails were meant to facilitate internal communication within IBM. However, people began sending much more messages the moment they started emailing. The "Like" button, designed to replace some approving comments such as "nice!" and "great!", made people check their Facebook account constantly for rewards. 
+
+The author later coins the term *complex side effects*, negative impacts that new technologies may have which are not expected when the technologies were invented. Cal Newport argues that engineers should include the evaluation of complex side effects in their "iterative engineering process". 
+
+{{<block class="tip">}}
+  Cal Newport mentions the website of [Center for Humane Technology](https://www.humanetech.com/) initiated by [Tristan Harris](https://www.tristanharris.com/).
+{{<end>}}
+
 ## 2021-05-30
 
 Finished Peyton-Jones, S. (2014). [How to write a great research paper](https://www.cis.upenn.edu/~sweirich/icfp-plmw15/slides/peyton-jones.pdf). 
