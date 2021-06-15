@@ -1,5 +1,5 @@
 ---
-title: 两个不可少的时间项目
+title: 锻炼与读书：两个不可少的时间项目
 date: 2021-02-26T15:55:46-05:00
 author: 郝鸿涛
 slug: read-and-exercise
