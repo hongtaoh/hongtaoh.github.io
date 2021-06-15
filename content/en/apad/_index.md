@@ -36,21 +36,21 @@ PP. 1-5
 
 1. [*Practicing privacy: Encryption*](https://matt.might.net/articles/practicing-privacy-encryption/) by Matt Might
 
-- Recommended password manager: [pwSafe](https://pwsafe.org/)
+  - Recommended password manager: [pwSafe](https://pwsafe.org/)
 
-- Use Long passwords, [even your 'complicated' password is easy to crack](https://www.wired.co.uk/article/password-cracking)
+  - Use Long passwords, [even your 'complicated' password is easy to crack](https://www.wired.co.uk/article/password-cracking)
 
-- Surveillance Self-Defense: https://ssd.eff.org/en
+  - Surveillance Self-Defense: https://ssd.eff.org/en
 
-- [*Applied Cryptography*](https://www.amazon.com/gp/product/0471117099/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0471117099&linkCode=as2&tag=ucmbread-20) by Bruce Schneier
+  - [*Applied Cryptography*](https://www.amazon.com/gp/product/0471117099/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0471117099&linkCode=as2&tag=ucmbread-20) by Bruce Schneier
 
 2. [*Why peer reviewers should use The Onion Router (TOR)*](https://matt.might.net/articles/why-peer-reviewers-should-use-tor/) by Matt Might
 
-- Tor Browser: https://www.torproject.org/
+  - Tor Browser: https://www.torproject.org/
 
 3. [*Tips and software for Mac users*](https://matt.might.net/articles/switching-to-apple-macintosh-from-linux-or-windows/) by Matt Might
 
-- [TextMate for macOS](https://macromates.com/)
+  - [TextMate for macOS](https://macromates.com/)
 
 
 ## 2021-06-07
@@ -113,7 +113,7 @@ Newport, C. (2020). [When technology goes awry](https://www.csd.uoc.gr/~hy108/do
 
 In this Viewpoint, Cal Newport argues that it's better to see the impact of technologies from a determinist viewpoint, that new technologies drive human behaviors into unplanned directions. He takes emails invented by IBM and the "Like" button by a Facebook engineer as examples. Emails were meant to facilitate internal communication within IBM. However, people began sending much more messages the moment they started emailing. The "Like" button, designed to replace some approving comments such as "nice!" and "great!", made people check their Facebook account constantly for rewards. 
 
-The author later coins the term *complex side effects*, negative impacts that new technologies may have which are not expected when the technologies were invented. Cal Newport argues that engineers should include the evaluation of complex side effects in their "iterative engineering process". 
+The author later coins the term *complex side effects*, negative impacts that new technologies may have that are not expected when the technologies were invented. Cal Newport argues that engineers should include the evaluation of complex side effects in their "iterative engineering process". 
 
 {{<block class="tip">}}
   Cal Newport mentions the website of [Center for Humane Technology](https://www.humanetech.com/) initiated by [Tristan Harris](https://www.tristanharris.com/).
