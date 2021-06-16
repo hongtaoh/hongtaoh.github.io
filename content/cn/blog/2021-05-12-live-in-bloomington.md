@@ -33,7 +33,7 @@ toc: true
 
 ### 学校公寓
 
-我第一次来的时候，根本没考虑过学校宿舍，因为印象中美国大学的学生宿舍条件差、费用高，很不划算。但来了之后才发现并不是这样，至少 IU 的学校公寓我觉得很好。
+我第一次来的时候，根本没考虑过学校宿舍，因为印象中美国大学的学生宿舍条件差、费用高，很不划算。但来了之后才发现并不是这样，至少 [IU 的学校公寓](https://housing.indiana.edu/housing/index.html)我觉得很好。
 
 [这里](https://housing.indiana.edu/housing/locations/index.html)列出了 IU 全部的学生公寓。我只说一下我了解和推荐的。全部公寓的价格在[这里](https://housing.indiana.edu/housing/costs/21-22costs/index.html) 可以看到。
 
@@ -75,11 +75,13 @@ toc: true
 
 - [College Mall Apartment](https://deerparkmgmt.com/college-mall/)。离 Target 很近，离学校也不远。这里价格比较实惠，1B1B $650 多一点。我没住过，不过参观过，整体还可以。
 
-- [City Flats](https://homeiscityflats.com/)，比较贵，不了解，列出来只供参考。
+- [City Flats on 10th](https://homeiscityflats.com/)，比较贵，不了解，列出来只供参考。
 
 - [The Dillon](https://liveatthedillon.com/)，不太了解，只供参考。
 
 - [Reserve on Third](https://reserveonthird.com/)，不太了解，只供参考。在图书馆门前倒是经常看见他们的班车。
+
+- [The Stratum apartment](https://thestratumatindiana.com/)，不太了解，只供参考。我只知道它在 Kroger 周边。
 
 - [Poolside Apartments](https://www.tempopropertiesinc.com/vacancies?search=poolside). 有 Studio[^2] 和 One Bedroom, 我没住过，只去看过一次，感觉还可以，离学校很近。
 
