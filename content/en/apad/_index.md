@@ -10,6 +10,38 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+## 2021-06-17
+
+Kizilcec, R. F., Makridis, C. A., & Sadowski, K. C. (2021). [Pandemic response policies’ democratizing effects on online learning](https://www.pnas.org/content/pnas/118/11/e2026725118.full.pdf). *PNAS, 118*(11).
+
+During the pandemic, DataCamp saw a 38% increase in the number of new users, and a 6% increase in exercise time by existing users. 
+
+Figure 2A shows that a slightly higher proportion of new registration comes from high-income and high-college neighborhoods. Figure 2B shows that people in low-income and low-college communities experience a larger increase in their time spent on DataCamp. 
+
+This study indicates that when people have more free time, they can use that time for upskilling, and this change is relatively consistent across regions with varying income, racial and educational compositions. This means that to alleviate the skill gaps in the US workforce, it's a good idea to give employees more free time so that people can upskill.
+
+## 2021-06-16 (Completed on 2021-06-17)
+
+Finished Nielsen, M. (2004). [*Principles of Effective Research*](https://michaelnielsen.org/blog/principles-of-effective-research/). Read my notes [here](/en/2021/06/17/effective-research/).
+
+## 2021-06-15
+
+PP. 7-8
+
+## 2021-06-14
+
+PP. 4-7
+
+## 2021-06-13
+
+PP. 3-4
+
+## 2021-06-12
+
+Nielsen, M. (2004). [*Principles of Effective Research*](https://michaelnielsen.org/blog/principles-of-effective-research/)
+
+PP. 1-3
+
 ## 2021-06-11
 
 👍 Finished Kwak et al. (2020)
