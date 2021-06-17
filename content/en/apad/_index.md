@@ -26,13 +26,19 @@ Finished Nielsen, M. (2004). [*Principles of Effective Research*](https://michae
 
 ## 2021-06-15
 
+Continued with Nielsen, M. (2004).
+
 PP. 7-8
 
 ## 2021-06-14
 
+Continued with Nielsen, M. (2004).
+
 PP. 4-7
 
 ## 2021-06-13
+
+Continued with Nielsen, M. (2004).
 
 PP. 3-4
 
