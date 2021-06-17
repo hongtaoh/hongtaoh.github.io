@@ -19,10 +19,10 @@ toc: false
 
 我查了一下，原话是 [Michael Nielson](https://michaelnielsen.org/blog/principles-of-effective-research/) 说的：
 
->The heart of personal effectiveness is not necessarily any special knowledge or secret: it is doing the basics consistently well. 高效的核心不一定是某方面的知识或某个秘密，而是把最基础的事情持续不断地做好。
+>The heart of personal effectiveness is not necessarily any special knowledge or secret: it is doing the basics consistently well. 高效率的核心不一定是某方面的知识或某个秘密，而是把最基础的事情持续不断地做好。
 
 ## 书单
 
-我给朋友分享了我的书单，也推荐了 [幸福人生讲座-如何做一个真正如法的好人](https://www.bilibili.com/video/BV15s411g7Rd) 。
+我给朋友分享了我的书单，也推荐了[幸福人生讲座-如何做一个真正如法的好人](https://www.bilibili.com/video/BV15s411g7Rd) 。
 
-{{<figure src="/media/cnblog/reading-list.png">}}
+{{<figure src="/media/cnblog/reading-list.png" caption="2021 年我想看的书">}}
