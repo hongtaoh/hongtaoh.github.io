@@ -1,6 +1,6 @@
 baseURL = "https://hongtaoh.com/"
 languageCode = "en-us"
-title = 'Hongtao Hao: 郝鸿涛'
+title = '郝鸿涛：Hongtao Hao'
 theme = "hugo-ht"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"

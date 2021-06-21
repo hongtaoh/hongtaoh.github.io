@@ -38,6 +38,8 @@ toc: true
 
 除了对老师的研究方向进行总结，我还把每个项目的截止日期、对语言成绩和申请材料的要求记了下来。老师的网页链接我也加了上去，在对他们的研究进行总结是，有的我还写上了是否和我的方向一致。我把几乎所有我能找到的传播学项目都翻了个底朝天，现在回过头看，这应该是我在没发表也没有国际教育背景的前提下拿到四个博士录取的原因。这个文档最后有五十多页，一万三千多字，给我的申请立下了汗马功劳。
 
+这中间我还给老师套瓷，比如 10 月 24 号 给 Catalina Toma 老师发了套瓷信，第二天收到了回复。
+
 确定了要申请的项目和具体的科研方向，我就开始写 PS/SOP。当然，一边写，一边也在接着看、修改我整理的 word 文档。我是根据申请方向来写文书的。之前说过我大体上是两个申请方向，但印象中我写了有四份不同的文书。我最后申请了 13 个项目，用的就是这四份文书，只不过说明自己和哪位教授匹配、为什么匹配，以及文书最后说明为什么申这个项目的理由要根据每个项目的具体情况来改。文书草稿写完后，我还找了我在瑞士认识的外国朋友帮我看了看，一个荷兰人，一个德国人，一个印度人。
 
 12 月 1 号的时候提交了 USC、UT Austin、OSU、UConn、Cornell、Umich、Indiana、Syracuse, 12 月15 号递交了 Wisconsin-Madison、Florida State University（FSU, 硕士）, 1 月 1号递交了 UC Davis、UCSB，之后递交了 Buffalo （硕士）。UT Austin 我本来是打算申请 Comm Studies 的项目，但突然看到 [Wenhong Chen 老师](https://journalism.utexas.edu/faculty/wenhong-chen) 的信息，就临时决定改申 [RTF](https://rtf.utexas.edu/)。Chen 老师当时是在 RTF，不过后来转到了 [Journalism](https://journalism.utexas.edu/)，不过这是我申请完之后的事情了。Upenn 和 Stanford 的是把申请信息写完了，但是觉得申请也是白费钱，就没有提交申请。
@@ -59,6 +61,8 @@ toc: true
   - 春节前后收到了 UT Austin 的面试邀请，[Shanti Kumar 老师](https://rtf.utexas.edu/faculty/shanti-kumar)面试的我，之后收到了 offer，一年两万一。之后额外追加了奖学金，第一年多给一万五千刀。
 
   - 3 月 1 号收到了 FSU 的硕士录取但是没有提钱的事儿。4 月 28 号才跟我说学院考虑过之后，决定不给我钱。
+
+  - 3 月 6 号收到印第安纳大学的邮件，提到我在候补名单上。
 
   - 3 月 24 号 威斯康星决定给第一年给我 Fellowship, $25,500。没有教课任务。
 
