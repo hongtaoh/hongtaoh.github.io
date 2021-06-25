@@ -6,6 +6,25 @@ slug: my-phd-app
 draft: false
 toc: true
 ---
+{{<block class="tip">}}
+相关博文：
+
+- [美国提供全奖的新闻传播学硕士项目（不完全统计)](/cn/2020/02/01/us-comm-ma/)
+
+- [美国传播学博士项目一览](/cn/2021/01/10/us-comm-phd/)
+
+- [去读美国的传播学博士几条路](/cn/2021/05/22/us-phd-comm/)
+
+- [美国的信息学院(不完全统计)](/cn/2021/05/20/us-ischool/)
+
+- [2020年西北大学 MTS 博士项目校园面试的经历与体会](/cn/2020/03/01/northwestern-compus-visit/)
+
+- [Computational Social Science: Graduate Programs and Researchers](https://github.com/hongtaoh/CompSocSci)
+
+- [Academic CVs that you can emulate](https://github.com/hongtaoh/cv_emulate)
+
+{{<end>}}
+
 ## 序幕
 
 上高二的时候，在家里自学，有一天晚上不知道怎么冒出的想法，想去美国留学。现在想想很可笑。我家里没钱，在国内上大学都算是一个不小的负担了，怎么可能去美国上大学呢。不过，这可以算是我第一次动起去美国留学的念头。

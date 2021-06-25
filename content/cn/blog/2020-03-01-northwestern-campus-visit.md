@@ -5,6 +5,25 @@ slug: northwestern-compus-visit
 author: 郝鸿涛
 toc: true
 ---
+{{<block class="tip">}}
+相关博文：
+
+- [美国提供全奖的新闻传播学硕士项目（不完全统计)](/cn/2020/02/01/us-comm-ma/)
+
+- [美国传播学博士项目一览](/cn/2021/01/10/us-comm-phd/)
+
+- [去读美国的传播学博士几条路](/cn/2021/05/22/us-phd-comm/)
+
+- [我的美国博士申请之路](/cn/2021/05/22/my-phd-app/)
+
+- [美国的信息学院(不完全统计)](/cn/2021/05/20/us-ischool/)
+
+- [Computational Social Science: Graduate Programs and Researchers](https://github.com/hongtaoh/CompSocSci)
+
+- [Academic CVs that you can emulate](https://github.com/hongtaoh/cv_emulate)
+
+{{<end>}}
+
 {{<block class="note">}}
 面试大约三周后，我收到西北的拒信，以下内容我不会修改，但请谨慎阅读。
 {{<end>}}

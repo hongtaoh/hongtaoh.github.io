@@ -6,6 +6,27 @@ slug: us-phd-comm
 draft: false
 toc: true
 ---
+{{<block class="tip">}}
+相关博文：
+
+- [美国提供全奖的新闻传播学硕士项目（不完全统计)](/cn/2020/02/01/us-comm-ma/)
+
+- [美国传播学博士项目一览](/cn/2021/01/10/us-comm-phd/)
+
+<!-- - [去读美国的传播学博士几条路](/cn/2021/05/22/us-phd-comm/) -->
+
+- [我的美国博士申请之路](/cn/2021/05/22/my-phd-app/)
+
+- [美国的信息学院(不完全统计)](/cn/2021/05/20/us-ischool/)
+
+- [2020年西北大学 MTS 博士项目校园面试的经历与体会](/cn/2020/03/01/northwestern-compus-visit/)
+
+- [Computational Social Science: Graduate Programs and Researchers](https://github.com/hongtaoh/CompSocSci)
+
+- [Academic CVs that you can emulate](https://github.com/hongtaoh/cv_emulate)
+
+{{<end>}}
+
 ## 1. 本科毕业直接申请美国的博士
 
 这条路并非不可行。很多传播学博士项目是接受，甚至鼓励本科生直接申请的，比如加州戴维斯 ([PhD in Communication](https://communication.ucdavis.edu/graduate/program/doctoral-program/grad-phd-prog-intro))、西雅图华盛顿 ([MA/PhD in Communication](https://com.uw.edu/graduate/ma-phd/ma-phd-overview/))、明尼苏达大学 ([PhD in Communication Studies](https://cla.umn.edu/comm-studies/phd-communication-studies))、马里兰大学 ([Communication Ph.D.](https://communication.umd.edu/academics/graduate/PHD))。我也认识一位朋友，只有国内一所 211 大学的本科学历，被上面列出的其中一个博士项目录取。
@@ -36,7 +57,7 @@ toc: true
 关于第二点：其实归根结底在于发表和推荐信。即使你没有美国硕士学历，如果你有一篇甚至几篇一作的会议甚至期刊，那么你直接申博士就好。
 {{<end>}}
 
-如果想冲刺美国名校博士，可以考虑申请第二个硕士作为跳板。提供全奖的硕士名单请参考拙文《[美国提供全奖的新闻传播学硕士项目 (不完全统计)]((https://hongtaoh.com/cn/2020/02/01/us-comm-ma/))》。
+如果想冲刺美国名校博士，可以考虑申请第二个硕士作为跳板。提供全奖的硕士名单请参考拙文 《[美国提供全奖的新闻传播学硕士项目 (不完全统计)](/cn/2020/02/01/us-comm-ma/)》。
 
 ## 5. 读一个名校镀金硕士
 
