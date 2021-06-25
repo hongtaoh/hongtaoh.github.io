@@ -10,6 +10,139 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+## 2021-06-25
+
+Finished Cinelli et al. (2021)
+
+- The aggregation of homophilic groups of users determine interaction patterns in social media. 
+
+- In terms of news consumption, Facebook shows higher segregation.
+
+- Whether the feed algorithm is able to be changed by users makes lots of difference. The algorithm is tweakable by users on Reddit but not on Facebook nor Twitter. 
+
+## 2021-06-24 (completed on 2021-06-25)
+
+1. Cinelli, M., Morales, G. D. F., Galeazzi, A., Quattrociocchi, W., & Starnini, M. (2021). [The echo chamber effect on social media](https://www.pnas.org/content/pnas/118/9/e2023301118.full.pdf). *PNAS, 118*(9).
+
+PP. 1-1
+
+2. Finished Stieger et al. (2021)
+
+### Research questions:
+
+1. Do personality traits change interventions work compared to the control group?
+
+2. Do personality traits change in the desired direction?
+
+3. Do other people detect these changes?
+
+4. Can the changes be maintained?
+
+### Results
+
+1. Participants in the intervention group show significantly greater changes compared to the control group. 
+
+2. In the intervention group, participants who want to increase or decrease a trait see their desired changes. These changes are on the traits they want to change. 
+
+3. Observers only see increases for participants who want to increase a trait, but do not see decreases for those who want to decrease a trait. Further analysis shows that observers only see significant increase in conscientiousness.
+
+4. When traits are measured by self-reports, they do not change 3 months after the end of the intervention among participants who want an increase on a trait whereas they witness another decrease among participants who want a decrease on a trait. Further analysis shows that participants who want a decrease in neuroticism showed another significant decrease after then end of the intervention wherease participants who want a decrease in openness showed a significant increase in openness. 
+
+   When traits are gauged by observers, they increase 3 months after the end of the intervention among participants who want an increase on a trait. Traits maintain for participants who want a decrease. Further analysis shows that only participants who want an increase in openness show a significant increase in openness after then end of the intervention. All other participants do not show significant changes. 
+
+### Discussions
+
+People in the control group also have motives to change their personality traits. They do not show significant changes because they do not receive treatment. This means that only having motives to change personalities do not necessarily lead to changes. 
+
+
+## 2021-06-23
+
+Stieger, M., Flückiger, C., Rüegger, D., Kowatsch, T., Roberts, B. W., & Allemand, M. (2021). [Changing personality traits with the help of a digital personality change intervention](https://www.pnas.org/content/118/8/e2017548118). *PNAS, 118*(8).
+
+PP. 1-5
+
+## 2021-06-22
+
+1. Finished Skipper, C. (2018). [*Why Being Less Busy is the Key to Getting More Done*](https://www.gq.com/story/how-to-be-less-distracted-and-get-more-done)
+
+>The most vital things in our work are rarely the most pleasurable, threatening, or noval. And that's the problem with our attention. 
+
+>The fascinating thing about email is: it takes up little of our time —— we maybe spend an hour or two on email a day —— but it takes up a disproportionate amount of our attention. 
+
+>We can't seamlessly switch from doing one thing to doing another thing. Out mind isn't capable of that. 
+
+>Notice what you pay attention to when you're low on energy. So when you're kind of burnt out a little bit, what apps do you fire up? What websites do you visit mindlessly, out of habit, that just stimulate you and prevent you from really resting? [Knowing those is] a way by which we can shut off autopilot. 
+
+>When we say we don't have time for someting, we're really just saying that something's not important to us. You hear people say, "I don't have time to read this book." But then they have time to check email, or read the news, or go on social media for a few hours. What we really mean when we say we don't have time for something is that we don't have the attention or patience for it. You have time for everything. It's jst that you choose to do other things. 
+
+>We are not able to focus and reflect at the same time. If you want to unearth more ideas and if you want more rest, I think you need to leave some space between the things you do. 
+
+>Some people take a shower every morning, but they haven't actually taken a shower in years, because their mind is everywhere but the shower. **Waht use is a life that we don't remember and experience?** 
+
+>Love is really no different than sharing quality attention with somebody. 
+
+2. Skipper, C. (2018). [*Why Self-Help Might Actually Be Making You Less Happy*](https://www.gq.com/story/why-self-help-makes-you-less-happy)
+
+>[D]epression is the organism's way of reacting, withdrawing, and perhaps metaphorially recharging the batteries. BUt now, there's so much pressure in modern society to perform and to be productive, to be efficient, that we don't have this time to recharge. We tend to pathologize these kinds of sadness or losses of energy. 
+
+>Well, now we've actually had these therapies for 100 years and the world is just getting worse. How could that be? The answer is that all the sensitive, intelligent, resourceful people that should be out changing the world, they're actually just sitting in the therapy room trying to realize themselves or improving themselves. 
+
+>[But] staying with the image of the airplane, I would say the problem is nowadays that the plane is coming down, the pressure in the air cabin is falling, and the masks are coming down. People are putting on the masks, helping themselves, and breathing frantically into these masks. Then we call it mindfulness or therapy or self-help or whatever. And no one really gets up from the chair and tries to see what is going on with this aircraft. The pilots have passed out and the plane will actually crash because no one takes an interest in the whole structure. They only sit in their seat and breathe into their own masks. We actually need people who are brave enough to stop breathing into the mask and take an interest in the overarching structure.
+
+That's a really powerful metaphor!
+
+>I find it very important to be interested in something beyong yourself... Try not to be so obsessed with hapiness. You have this happiness imperative: Life is about being happy. It's ridiculous. 
+
+## 2021-06-21
+
+1. Skipper, C. (2018). [*The Secret to Being a Productive Human: Take More Breaks (and Naps!)*](https://www.gq.com/story/the-secret-to-being-a-productive-human-take-more-breaks-and-naps)
+
+>To take more and better breaks. 
+
+>Professionals take breaks, amateurs don't take breaks. 
+
+Even a small break of two minutes is better than no breaks at all. 
+
+>Moving is better than being stationary. 
+
+Be among nature: trees, being outside. 
+
+>I do think there's a false sense of urgency sometimes. I think it hurts out long-term performance. 
+
+Most people are "larks", those who feel peaks in the morning. They should be vigilant, avoid distractions and do deep work in the morning. Try replying to routine emails in the afternoon. In the evening, do creative task that don't require much vigilance and concentration. 
+
+2. Skipper, C. (2018). [*Why Being Less Busy is the Key to Getting More Done*](https://www.gq.com/story/how-to-be-less-distracted-and-get-more-done)
+
+PP. 1-3
+
+## 2021-06-20
+
+Skipper, C. (2019). [*Cal Newport on Why We'll Look Back at Our Smartphones Like Cigarettes*](https://www.gq.com/story/cal-newport-digital-minimalism). 
+
+>I don't fear missing out. I fear not giving enough attention to the things that I already know for sure are important. 
+
+>Yes, it's scary not to be distracted, but I think it's even more scary to avoid all of the deep good that comes from having to just be there with yourself, and confront all of those difficulties and opportunities that entails. 
+
+## 2021-06-19
+
+Xie, Y. (2018). [*My Early Career Crisis (2014 - 2015)*](https://yihui.org/en/2018/02/career-crisis/)
+
+- Reflect on your failures and make changes. 
+
+- Talk to people. Communicate. 
+
+- Your ego is your foe. Don't let the outside prizes fool you. 
+
+- Plan ahead. 
+
+- Know the person you want to be and do things to make it happen. 
+
+## 2021-06-18
+
+Lutz, W., Reiter, C., Özdemir, C., Yildiz, D., Guimaraes, R., & Goujon, A. (2021). [Skills-adjusted human capital shows rising global gap](https://www.pnas.org/content/pnas/118/7/e2015826118.full.pdf). *PNAS, 118*(7).
+
+Mean years of schooling (MYS) alone is not sufficient to indicate a person's true skills. The authors proposed a way to measure the quality of human capital. The authors employed the literacy skills dataset for countries across the globe to compute SLAMYS: skills in literacy adjusted mean years of schooling. Figure 3 shows that even though MYS indicates that the gap between the high-performing and low-performing countries is narrowing, the SLAMYS scores show that this gap is increasing fast. According to SLAMYS scores, the gap between countries above 3rd quartile and below 1st quartile is equivalent to ten years of schooling. 
+
 ## 2021-06-17
 
 Kizilcec, R. F., Makridis, C. A., & Sadowski, K. C. (2021). [Pandemic response policies’ democratizing effects on online learning](https://www.pnas.org/content/pnas/118/11/e2026725118.full.pdf). *PNAS, 118*(11).
