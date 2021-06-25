@@ -14,6 +14,25 @@ aliases:
 如果你对这个名单有建议，请点击目录上方的修改按钮， Fork 此 GitHub 仓库，提出修改建议后[提交合并请求](https://hongtaoh.com/en/2020/10/05/github-pull-request/)即可。
 {{<end>}}
 
+{{<block class="tip">}}
+相关博文：
+
+- [美国传播学博士项目一览](/cn/2021/01/10/us-comm-phd/)
+
+- [去读美国的传播学博士几条路](/cn/2021/05/22/us-phd-comm/)
+
+- [我的美国博士申请之路](/cn/2021/05/22/my-phd-app/)
+
+- [美国的信息学院(不完全统计)](/cn/2021/05/20/us-ischool/)
+
+- [2020年西北大学 MTS 博士项目校园面试的经历与体会](/cn/2020/03/01/northwestern-compus-visit/)
+
+- [Computational Social Science: Graduate Programs and Researchers](https://github.com/hongtaoh/CompSocSci)
+
+- [Academic CVs that you can emulate](https://github.com/hongtaoh/cv_emulate)
+
+{{<end>}}
+
 我们的一般印象是大多数美国非自然科学、非工程学科的硕士项目是不给全奖的。但查阅了很多学校的相关信息后，我的结论正好相反：一多半美国传播学院是有硕士全奖机会的，特别是地理位置一般的学校。地理位置好、受欢迎的学校一般不给硕士生钱，比如南加大、纽约大学、乔治城，但这种学校是少数。
 
 有硕士全奖机会的学校中，大多数只要录取就给你全奖，一小部分是在被录取的学生中择优提供全奖。

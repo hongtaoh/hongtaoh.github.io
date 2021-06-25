@@ -12,6 +12,24 @@ toc: true
 
 {{<end>}}
 
+{{<block class="tip">}}
+相关博文：
+
+- [美国提供全奖的新闻传播学硕士项目（不完全统计)](/cn/2020/02/01/us-comm-ma/)
+
+- [去读美国的传播学博士几条路](/cn/2021/05/22/us-phd-comm/)
+
+- [我的美国博士申请之路](/cn/2021/05/22/my-phd-app/)
+
+- [美国的信息学院(不完全统计)](/cn/2021/05/20/us-ischool/)
+
+- [2020年西北大学 MTS 博士项目校园面试的经历与体会](/cn/2020/03/01/northwestern-compus-visit/)
+
+- [Computational Social Science: Graduate Programs and Researchers](https://github.com/hongtaoh/CompSocSci)
+
+- [Academic CVs that you can emulate](https://github.com/hongtaoh/cv_emulate)
+
+{{<end>}}
 
 {{<figure src="/media/cnblog/us-map.jpg" caption="图片来源: wallpapercave.com" >}}
 
