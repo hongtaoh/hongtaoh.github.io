@@ -8,7 +8,7 @@ draft: false
 
 前几天，在 [John Kruschke](https://psych.indiana.edu/directory/faculty/kruschke-john.html) 老师的 [一门统计课](https://jkkweb.sitehost.iu.edu/jkkteach/P533/) 上，他讲到他去德国参观哥廷根的高斯故居。他说他到达故居时是晚上，周围一个人都没有，但是他又想去进去看看。他便推开门走了进去。
 
-他对我们说，如果里面有人，他就会跟那个人说 “Hey, I am just a stupid American having a look here^[原话记不清，大意是这个意思]”。 大意就是“嘿，我就是个傻不愣登的美国人，进来看看”。当然，整个班都笑了。
+他说，如果里面有人，他就会跟那个人说 “Hey, I am just a stupid American having a look here^[原话记不清，大意是这个意思]”。 大意就是“嘿，我就是个傻不愣登的美国人，进来看看”。当然，整个班都笑了。
 
 我笑过之后，就想，一个中国老师敢这么自黑吗？试想一下，一个中国老师，课上说道，去高斯故居，然后打算在里面有人的时候，说，“Hey, I am just a stupid Chinese having a look here” （嘿，我就是个傻不愣登的中国人，想进来看看) 。我估计底下的中国学生不仅不会笑，而且会认为这个老师看不起自己的中国人身份。
 
