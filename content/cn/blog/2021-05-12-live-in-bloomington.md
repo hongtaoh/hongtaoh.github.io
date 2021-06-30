@@ -51,6 +51,12 @@ toc: true
 
 - [University East Apartment](https://housing.indiana.edu/housing/locations/southeast/University/index.html)，在音乐学院旁边，单身公寓，和 Everman 的房型、价格一样。这个公寓就在校园离，所以去学校很方便。我认识一个韩国同学，从 2018 年硕士开学开始就在这里住，2020 年升博士后还住这里，应该挺好的。
 
+{{<block class="warning">}}
+
+2021 年 8 月：学校貌似计划在两三年内拆除 Redbud 和 Everman。
+
+{{<end>}}
+
 ### 校外公寓
 
 整体而言，学校东边、东南边比较安全一些。学校北边靠近体育场，比较乱一些。除了下面这些比较大的公寓，布卢明顿有很多小型的出租公寓，但是我不了解.

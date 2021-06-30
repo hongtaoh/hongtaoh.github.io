@@ -7,7 +7,7 @@ draft: false
 toc: true
 ---
 
-I finished reading Michale Nielsen's [*Principles of Effective Research*](https://michaelnielsen.org/blog/principles-of-effective-research/) and learned a great deal. The following is my notes. 
+I finished reading Michale Nielsen's [*Principles of Effective Research*](https://michaelnielsen.org/blog/principles-of-effective-research/) and learned a great deal. The following are my notes. 
 
 >We are what we repeatedly do. Excellence, then, is not an act but a habit. -- Aristotle.
 
@@ -17,11 +17,11 @@ I finished reading Michale Nielsen's [*Principles of Effective Research*](https:
 
 I cannot agree more with the above message. I feel that unless you are physically fit, you won't have enough energy to do anything. 
 
-Don't believe that you can suffer your health for the short term to get something done more quickly. That's a dangerous thought. Always, your productivity boosts when you are fit and have good relationships with people. 
+Don't believe that you can sacrifice your health for the short term to get something done more quickly. That's a dangerous thought. Always, your productivity boosts when you are fit and have good relationships with people. 
 
 >The heart of personal effectiveness is not necessarily any special knowledge or secret: it is doing the basics consistently well. 
 
-Can't agree more. For example, everyone knows that (1) sleeping and getting up early, (2) spending quality time with family members, (3) readings books, and (4) erercising, are good to our physical and mental health. But, ask yourself, do you set aside time for these activities each and every day?
+Can't agree more. For example, everyone knows that (1) sleeping and getting up early, (2) spending quality time with family members, (3) reading books, and (4) exercising, are good for your physical and mental health. But, ask yourself, do you set aside time for these activities each and every day?
 
 ## 1. Fundamental principles
 
@@ -29,9 +29,9 @@ Can't agree more. For example, everyone knows that (1) sleeping and getting up e
 
 #### 1.1.1 Take responsibilities
 
-Be responsible for everything happenning in your life: (1) don't blame others and realize that you have the power to improve your situation, whatever it is; (2) learn to say no to requests that waste your time and don't contribute to your growth; (3) when things are not going well in life, acknowledge the difficulties you are facing, writing down possible solutions, prioritize them and don't get caught in worries and anxieties. 
+Be responsible for everything happening in your life: (1) don't blame others and realize that you have the power to improve your situation, whatever it is; (2) learn to say no to requests that waste your time and don't contribute to your growth; (3) when things are not going well in life, acknowledge the difficulties you are facing, write down possible solutions, prioritize them and don't get caught in worries and anxieties. 
 
-Forget about the idea that a problem can resolve by itself. It won't! If you have a conflict with another person, don't put off confronting and solving the problem. Talk to the person, arrive a mutual understanding of both your viewpoints and interests. Then you can solve the problem "on a basis of shared trust".
+Forget about the idea that a problem can resolve by itself. It won't! If you have a conflict with another person, don't put off confronting and solving the problem. Talk to the person, arrive at a mutual understanding of both your viewpoints and interests. Then you can solve the problem "on a basis of shared trust".
 
 #### 1.1.2 Be proactive
 
@@ -53,11 +53,11 @@ Self-discipline is not simply *willpower*. There are three factors in achieving 
 
 2. A social environment that encourages and supports the development of your professional skills is of paramount importance. "The key is to be *accountable* to other people."
 
-  >Access to a social environment which encouages and supports the development of research skills and research excellence can make an enoumous difference to all aspect of one's research, including self-discipline. 
+  >Access to a social environment which encourages and supports the development of research skills and research excellence can make an enormous difference to all aspects of one's research, including self-discipline. 
 
 3. Be honest to and about yourself. Know what you are doing. For example, track your time to see how much time you are spending on research and other important stuff in the midst of checking emails, talking to friends through social media, and aimlessly surfing the internet. 
 
-     This is my (Hongtao's) personal opinion: when you set a rule, and you break it, be honest to yourself, be accountable, and punish yourself. 
+     This is my (Hongtao) personal opinion: when you set a rule, and you break it, be honest to yourself, be accountable, and punish yourself. 
 
 ## 2. Self-development and creative process
 
@@ -65,7 +65,7 @@ Self-discipline is not simply *willpower*. There are three factors in achieving 
 
 If you focus too much on self-development, you end up publishing no papers and finding it impossible to find an academic job. 
 
-Other people, on the other hand, focus too much on creative research to the exlusion of their self-development. 
+Other people, on the other hand, focus too much on creative research to the exclusion of their self-development. 
 
 Publishing papers is good. It gives you jobs, reputation, awards, and grants. And you are encouraged to publish at least several papers each year, even if they make very small contributions to an unimportant topic. 
 
@@ -79,7 +79,7 @@ Creative research is better viewed as an *extention* of self-development.
 
 #### 2.2.1 Principles of personal change
 
-How to build habits that brings research excellence? Be aware of the gap between your *actual* daily behavior and your *ideal* daily behavior, and try to narrow the gap by changing your *actual* behavior. Once the gap is gone, you can set higher goals. 
+How to build habits that bring research excellence? Be aware of the gap between your *actual* daily behavior and your *ideal* daily behavior, and try to narrow the gap by changing your *actual* behavior. Once the gap is gone, you can set higher goals. 
 
 - Set simple goals.
 
@@ -109,28 +109,30 @@ You can make positive changes even as a student.
 
 ##### 2.3.1.1 Developing a taste for what's important
 
-Set aside time each week to thik, and discuss with others about, things you believe are of the highest importance. If you are a researcher, these things might be:
+Set aside time each week to thik, and discuss with others about things you believe are of the highest importance. If you are a researcher, these things might be:
 
-  - What do you think characterize importance science?
+  - What do you think characterizes the important science?
   - What have been the most important developments in your field? Why are they important?
   - What were the seemingly promising ideas that didn't turn out well? Why did they fail?
 
 Difficult things are not necessarily important ones. 
 
-To identify and tackle important things, you need to think about what your work enables, what connections your work makes apparent, what unifying themes your work uncovers, and what new quesitons your work asks. 
+To identify and tackle important things, you need to think about what your work enables, what connections your work makes apparent, what unifying themes your work uncovers, and what new questions your work asks. 
 
 ##### 2.3.1.2 Internal and external motivators
 
-Don't work towards external recognition, such as a Nobel Prize; rather, work in an area you personally find "fun and interesting." This doesn't mean that your work should only belong to yourself. The decision of what's important should be informed by others: talk to your colleagues, read textbooks, and look at what win prizes. 
+Don't work towards external recognition, such as a Nobel Prize; rather, work in an area you personally find "fun and interesting." This doesn't mean that your work should only belong to yourself. The decision of what's important should be informed by others: talk to your colleagues, read textbooks, and look at what wins prizes. 
 
 ##### 2.3.1.3 Exploring for problems
 
-Problem-solvers only work on problems they can publish. Problem-creators, however, spend time explore problems systematically in a disciplined way. For example, they'll survey the landscape of a field, and understand the patterns of the questions people in this field ask. 
+Problem-solvers only work on problems they can publish. Problem-creators, however, spend time exploring problems systematically in a disciplined way. For example, they'll survey the landscape of a field, and understand the patterns of the questions people in this field ask. 
 
 If the important things in a field or subfield are already apparent, and what's needed is simply time spent and skills mastered, you'd better be careful. 
 
 #### 2.3.2 The skills of the problem-solver
 
-- Set goals, and set adide time for reflection and reconsideration of your goals. 
+- Set goals, and set aside time for reflection and reconsideration of your goals. 
 
-- When you are just starting your academic career, you can focus on small and controllable things. Then you continue self-development, and gradaully work on important things. Even when you are working on important things, it's better to keep publishing, even on small things. 
+- When you are just starting your academic career, you can focus on small and controllable things. Then you continue self-development, and gradually work on important things. Even when you are working on important things, it's better to keep publishing, even on small things. 
+
+
