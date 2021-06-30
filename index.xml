@@ -745,7 +745,7 @@ blackfriday 支持 自动计数 形式的脚注。所谓自动计数，就是说
 [^1]: 看到了吗？ 这一点，有人在 Github 上提过 ，想在 goldmark 中实现 免计数 脚注，但是目前貌似依然不支持。
 应该是一个日本人，他的 Github 网页在这里 &amp;#x21a9;&amp;#xfe0e;</description></item><item><title>Hugo 如何使用思源宋体</title><link>https://hongtaoh.com/cn/2020/01/19/hugo-google-noto-serif-sc/</link><pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2020/01/19/hugo-google-noto-serif-sc/</guid><description>先给自己填一个坑。 主要参考：
 Indev. Journal Reuixiy Another random blog</description></item><item><title>中美自黑文化的差异</title><link>https://hongtaoh.com/cn/2020/01/18/underbrag-cn-and-usa/</link><pubDate>Sat, 18 Jan 2020 11:19:33 -0500</pubDate><guid>https://hongtaoh.com/cn/2020/01/18/underbrag-cn-and-usa/</guid><description>前几天，在 John Kruschke 老师的 一门统计课 上，他讲到他去德国参观哥廷根的高斯故居。他说他到达故居时是晚上，周围一个人都没有，但是他又想去进去看看。他便推开门走了进去。
-他对我们说，如果里面有人，他就会跟那个人说 “Hey, I am just a stupid American having a look here^[原话记不清，大意是这个意思]”。 大意就是“嘿，我就是个傻不愣登的美国人，进来看看”。当然，整个班都笑了。
+他说，如果里面有人，他就会跟那个人说 “Hey, I am just a stupid American having a look here^[原话记不清，大意是这个意思]”。 大意就是“嘿，我就是个傻不愣登的美国人，进来看看”。当然，整个班都笑了。
 我笑过之后，就想，一个中国老师敢这么自黑吗？试想一下，一个中国老师，课上说道，去高斯故居，然后打算在里面有人的时候，说，“Hey, I am just a stupid Chinese having a look here” （嘿，我就是个傻不愣登的中国人，想进来看看) 。我估计底下的中国学生不仅不会笑，而且会认为这个老师看不起自己的中国人身份。
 我就想，为什么？这种自黑文化的差异在哪里？
 我想了想，也没有想得很明白。你说中国人不会自黑吗？肯定不是。你像谢益辉在他的博客 也是各种自黑。但是这些自黑是仅限于个人的，也就是说，只能“自”黑，而不能把别人也给黑了。你如果说“嗨，我就是个傻不愣登的中国人”，那么你就把别人也给黑了：把14亿中国人给黑了。
