@@ -10,6 +10,277 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+## 2021-07-16
+
+1. Finished [Xiong et al. (2019)](https://par.nsf.gov/servlets/purl/10196693).
+
+Experiment 1: People perceived more causality from 2-bar bar charts, and less from scatter plots. 
+
+Experiment 2: 
+  1. People rated bar visual encoding marks as the least causal, and dot encodings the most causal. 
+  2. Decreased data aggregation (i.e., with more bins) drops the perceived causality; Increased data aggregation improves perceived causality.
+
+- Experiment 3: scatter plots are perceived as the most causal, followed by line graphs. Histogram is the seen as the least causal. 
+
+- A comparison between Experiment 2 and 3 shows that data aggregation in data visualization is associated with more causality perceived. 
+
+{{<block class="warning">}}
+There seem to be there mistakes in the article:
+  1. Caption of Fig. 10 should be "Three aggregation levels tested in Experiment 2.."?
+  2. Caption of Fig. 11 should be "Experiment 2 (top) and Experiment 3 (bottom)"?
+  3. The last sentence in Section 6.3 should be "... that aggregated data (Experiment 2) were perceived more causal than visualizations that did not (Experiment 3...)"?
+
+It might also be because I misunderstood the article. 
+{{<end>}}
+
+2. Anderson, A., Maystre, L., Anderson, I., Mehrotra, R., & Lalmas, M. (2020, April). [Algorithmic effects on the diversity of consumption on spotify](http://www.cs.toronto.edu/~ashton/pubs/alg-effects-spotify-www2020.pdf). In *Proceedings of The Web Conference 2020* (pp. 2155-2165).
+
+PP. 1-3
+
+## 2021-07-15
+
+Xiong, C., Shapiro, J., Hullman, J., & Franconeri, S. (2019). [Illusion of causality in visualized data](https://par.nsf.gov/servlets/purl/10196693). *IEEE transactions on visualization and computer graphics, 26*(1), 853-862.
+
+PP. 1-8
+
+## 2021-07-14
+
+Finished [Correll et al. (2020)](https://arxiv.org/pdf/1907.02035.pdf).
+
+Exaggeration caused by y-axis truncation persists no matter whether it's a line chart or a bar chart, and no matter whether or not you explicitly inform the reader of the truncation.
+
+## 2021-07-13
+
+1. Finished Jones (2009).
+
+2. Correll, M., Bertini, E., & Franconeri, S. (2020, April). [Truncating the y-axis: Threat or menace?](https://arxiv.org/pdf/1907.02035.pdf). In *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems* (pp. 1-12).
+
+PP. 1-3
+
+## 2021-07-12
+
+Continued with Jones (2009). 
+
+An analysis of the data set of all the patents issued by the U.S Patent and Trademark Office (USPTO) between 1975 and 1999 shows that
+
+1. Team size is rising;
+2. The age at first innovation is rising;
+3. It is less common for solo innovators to switch fields. 
+
+PP. 1-13
+
+## 2021-07-11
+
+1. Finished Way et al. (2017)
+
+- Inequality in individual productivity has been decreasing. Measured by Gini coefficients, it has dropped from 0.62 in the 1970s to 0.40 in the 2000s. 
+
+- High-ranking institutions both select for and boost researchers' productivity. 
+
+2. Jones, B. F. (2009). [The burden of knowledge and the “death of the renaissance man”: Is innovation getting harder?](https://academic.oup.com/restud/article-abstract/76/1/283/1577537). *The Review of Economic Studies, 76*(1), 283-317.
+
+PP. 1
+
+## 2021-07-10
+
+1. I skimmed through the rest of Giuntella et al. (2021).
+
+2. Way, S. F., Morgan, A. C., Clauset, A., & Larremore, D. B. (2017). [The misleading narrative of the canonical faculty productivity trajectory](https://www.pnas.org/content/pnas/114/44/E9216.full.pdf). *PNAS, 114*(44), E9216-E9223.
+
+PP. 1-3
+
+## 2021-07-09
+
+1. Crowley, D. M., Scott, J. T., Long, E. C., Green, L., Israel, A., Supplee, L., ... & Giray, C. (2021).[Lawmakers' use of scientific evidence can be improved](https://www.pnas.org/content/118/9/e2012955118). *PNAS, 118*(9).
+
+Research-to-Policy Collaboration (RPC), a way to improve lawmakers' use of research evidence (URE), can increase lawmakers' perceived usefulness of scientific research and their URE in the bills they introduce. In addition, RPC can boost researchers' knowledge, motivation, and actual behavior of policy engagement. 
+
+2. Giuntella, O., Hyde, K., Saccardo, S., & Sadoff, S. (2021). [Lifestyle and mental health disruptions during COVID-19](https://www.pnas.org/content/pnas/118/9/e2016632118.full.pdf). *PNAS, 118*(9).
+
+PP. 1-2
+
+## 2021-07-08
+
+1. Pavelski, J. (2018). [*How to Get Lucky: The Secrets to Creating Your Own Good Fortune*](https://www.gq.com/story/how-to-get-lucky)
+
+- Show appreciation. Don't take what others have done for you as granted. 
+
+- Take risks. Try new things. Meet new people. 
+
+- Embrace crazy ideas. Look at everything coming to you as a gift and embrace it. 
+
+- About taking risks: do something little first. 
+
+>[P]assion follows engagement, not the other way around. 
+
+- You want an overlap in your passion, skills and market, and that's where your sweet pot is. 
+
+>Most of us choose where we're going to live, who we're going to spend time with, what kind of job we're going to have. I think that so many people limit themselves, they make a box around themselves that's much smaller than it needs to be. 
+
+2. Watts, D. J. (2007). [A twenty-first century science](https://www.nature.com/articles/445489a). *Nature, 445*(7127), 489-489.
+
+>(Social networks) are not unitary, but multiplex, meaning that people maintain a portfolio of types of ties -- formal, informal, strong, weak, sexual, business and friendship -- each of which serves different functions. 
+
+## 2021-07-07
+
+1. Finished Toubia, O., Berger, J., & Eliashberg, J. (2021). [How quantifying the shape of stories predicts their success](https://www.pnas.org/content/pnas/118/26/e2011695118.full.pdf). *PNAS, 118*(26).
+
+Three measures of texts: speed, volume, and circuitousness, can predict the success of movies, tv shows, and academic papers. 
+
+2. Kao, J., & Gillum, J. (2020). [Reverse-Engineering an Audio Aggression Detection Algorithm](https://cpb-us-w2.wpmucdn.com/sites.northeastern.edu/dist/d/53/files/2020/02/CJ_2020_paper_52.pdf). In *ProPublica, Computational journalism Symposium*.
+
+I skimmed through it. It concludes that the Sound Intelligence aggression detection algorithm does not perform very well. There are many false positives and false negatives. 
+
+## 2021-07-06
+
+1. Finished Ch.2 & 3 (PP. 9-59) of Chakrabarty, P. (2012). *A guide to academia: getting into and surviving grad school, postdocs, and a research job*. John Wiley & Sons. 
+
+- People care about your concrete products: patents, publications, companies. No one cares about your dissertation. 
+
+- Learn skills, tools, and techniques early in graduate school.
+
+- By the time you need qualifying exams, the committee will be more impressed if you already have several publications and grants under your belt than if you answer every question perfectly they ask you. 
+
+- Always bring a notebook and a pen with you. Take them out when you are talking with your advisor, with senior graduate students, or attending a seminar. 
+
+>You didn't go to graduate school to take classes; you are there to do original research. 
+
+>When starting out as a new graduate student, one of the best ways to start working toward increasing your publication list is bry writing a review paper. 
+
+>If you are interested in an undergraduate class, it is better to TA that class than to actually register to take it as a student; you will learn more as the TA, and you'll be exempt from the headache of having to actually take exams. 
+
+>(For TA classes), have designated office hours, but ask students to tell you in advance if they will be coming. 
+
+>It is much easier to write your thesis as you go, submitting chapters as publications along the way. 
+
+>Your graduate evaluations committee should be as small as possible. 
+
+>Faculty don't get very much credit for being on someone's committee unless they are the primary advisor. 
+
+Be ambitious with your dissertation proposal. 
+
+2. Toubia, O., Berger, J., & Eliashberg, J. (2021). [How quantifying the shape of stories predicts their success](https://www.pnas.org/content/pnas/118/26/e2011695118.full.pdf). *PNAS, 118*(26).
+
+PP. 1-2
+
+## 2021-07-05
+
+Continued with Chakrabarty, P. (2012).
+
+PP. 39-51
+
+## 2021-07-04
+
+Continued with Chakrabarty, P. (2012).
+
+PP. 22-39
+
+## 2021-07-03
+
+Continued Chakrabarty, P. (2012)
+
+PP. 10-22
+
+## 2021-07-02
+
+1. Finished Twenge, J. M. (2017). [Have smartphones destroyed a generation](http://www.postgrowth.ca/uploads/8/4/9/4/84946882/have_smartphones_destroyed_a_generation.pdf). *The Atlantic, 9*, 2017.
+
+>In the next decade, we may see more adults who know just the right emoji for a situation, but not the right facial expression. 
+
+2. Chakrabarty, P. (2012). *A guide to academia: getting into and surviving grad school, postdocs, and a research job*. John Wiley & Sons.
+
+PP. 9-10
+
+## 2021-07-01
+
+1. Finished Skipper, C. (2018). [*How (And Why) to Build Some Boredom Back Into Your Life*](https://www.gq.com/story/how-and-why-you-should-be-bored)
+
+>[T]he default mode is when you do your most original thinking. 
+
+>Until we have real regulation of big tech, self regulation needs to be practiced and taught, too. 
+
+>...this idea of feeding ourselves more and more and more information and then never actually doing anything with it... "Climate change is a disaster." Well, okay, yes. But then what? Does that mean that you are going to make a donation? Does that mean that you are going to start an initiative at work? Does that mean you are going to talk to your kids about it?
+
+2. Twenge, J. M. (2017). [Have smartphones destroyed a generation](http://www.postgrowth.ca/uploads/8/4/9/4/84946882/have_smartphones_destroyed_a_generation.pdf). *The Atlantic, 9*, 2017.
+
+PP. 1-6
+
+## 2021-06-30
+
+1. Skipper, C. (2018). [*The Most Important Survival Skill for the Next 50 Years Isn’t What You Think*](https://www.gq.com/story/yuval-noah-harari-tech-future-survival)
+
+>[Y]ou'll be the target of attention-grabbing, behavior-modifying algorithms so exponentially effective you won't even realize you're being targeted. -- The author of this interview
+
+>I don't have a smartphone. My attention is one of the most important resources I have, and the smartphone is constantly trying to grab my attention. There's always something coming in. 
+
+>I try to be very careful about how I use technology and really make sure that I'm using it for the purposes that I define instead of allowing it to kind of shape my purposes for me. 
+
+>The technology kind of dictated to you that this is what you're going to do by grabbing your attention in such a forceful way that it can kind of manipulate you. 
+
+2. Skipper, C. (2018). [*How (And Why) to Build Some Boredom Back Into Your Life*](https://www.gq.com/story/how-and-why-you-should-be-bored)
+
+PP. 1-4
+
+## 2021-06-29
+
+1. Finished NSF report: [Harnessing the computational and social sciences to solve critical societal problems.](https://www.nsf.gov/cise/advisory/SBE-CISE-roundtable-report.pdf)
+
+- Numbers of publications and citations are not good measures of societal impact.
+
+- "Use-inspired research", research that can help solve real social problems, such as misinformation, inequality, and future pandemics. 
+
+2. Way, S. F., Morgan, A. C., Clauset, A., & Larremore, D. B. (2017). [The misleading narrative of the canonical faculty productivity trajectory](https://www.pnas.org/content/pnas/114/44/E9216.full.pdf). *PNAS, 114*(44), E9216-E9223.
+
+## 2021-06-28
+
+NSF report: [Harnessing the computational and social sciences to solve critical societal problems.](https://www.nsf.gov/cise/advisory/SBE-CISE-roundtable-report.pdf)
+
+- New streams of funding.
+
+- New ways of interdisciplinary collaboration among scholars. The current academic system does not encourage either students or faculty to collaborate with people from other disciplines. 
+
+- New relationships among academia, government, and industry. 
+
+- New training and education programs
+
+- We need more data, and better data. It's desirable if we can build a new class of research infrastructure where many researchers create and maintain datasets for collective use. This will bring data of higher quality, and facilitate reproducibility. 
+
+- The current system for obtaining industry data is "nonsystematic, nontrasparent, and inequitable."
+
+PP. 1-13
+
+## 2021-06-27
+
+👍 Jun, T., & Sethi, R. (2021). [Extreme weather events and military conflict over seven centuries in ancient Korea](https://www.pnas.org/content/118/12/e2021976118). *PNAS, 118*(12).
+
+The analysis is based on data extracted from historical records of ancient Korea.
+
+- Countries experiencing extreme weather events are more likely to suffer from, rather than initiating, military attacks. This means that attacks during extreme weather events are more likely to be *opportunistic* rather than *desperate*. 
+
+- Food shortage mediates the relationship between extreme weather and being invaded. That is to say, extreme weather events have a significant effect on food insecurity which predicts invasion of a country. 
+
+- The possibility of successfully deterring an attack drops when the country being invaded is experiencing extreme weather events. The extent of this drop varies from country to country, though. 
+
+## 2021-06-26
+
+Skipper, C. (2018). [*How to Kick Your Bad Habits (And Why That's More Important Than You Think)*](https://www.gq.com/story/how-to-break-bad-habits).
+
+- In the world we live now, people focus on results. Social media exacerbates the problem because people only share with others their results and highlights in life. 
+
+- A ture long-term thinking does not involve goals. Goals are about winning an instance of a game whereas systems are about "continuing to play the game."
+
+- You should view a habit you want to develop as a lifestyle (since you'll have to do it forever) rather than a finish line to cross. 
+
+- For habits you wish to get better at, you need a process of reflection and review. Document your efforts and the results. 
+
+- To break a bad habit, you can either decrease your exposure to it or increase the difficulty to access it. 
+
+- In terms of a habit, even if you cannot do the whole thing, you should make a slight improvement. Throw away the 'all-or-nothing' mentality. If you act upon a habit until you feel it can transform your life altogether, you'll end up achieving nothing. 
+
+- **Find out the key moments in your day that determine how you spend the next one or two hours. Work backwards from those moments and which trigger events that caused these moments.** 
+
+- "Prune away the good things to get to the great things". This means to find out what is most important for you. 
+
 ## 2021-06-25
 
 Finished Cinelli et al. (2021)
@@ -44,11 +315,11 @@ PP. 1-1
 
 2. In the intervention group, participants who want to increase or decrease a trait see their desired changes. These changes are on the traits they want to change. 
 
-3. Observers only see increases for participants who want to increase a trait, but do not see decreases for those who want to decrease a trait. Further analysis shows that observers only see significant increase in conscientiousness.
+3. Observers only see increases for participants who want to increase a trait, but do not see decreases for those who want to decrease a trait. Further analysis shows that observers only see a significant increase in conscientiousness.
 
-4. When traits are measured by self-reports, they do not change 3 months after the end of the intervention among participants who want an increase on a trait whereas they witness another decrease among participants who want a decrease on a trait. Further analysis shows that participants who want a decrease in neuroticism showed another significant decrease after then end of the intervention wherease participants who want a decrease in openness showed a significant increase in openness. 
+4. When traits are measured by self-reports, they do not change 3 months after the end of the intervention among participants who want an increase on a trait whereas they witness another decrease among participants who want a decrease on a trait. Further analysis shows that participants who want a decrease in neuroticism showed another significant decrease after the end of the intervention whereas participants who want a decrease in openness showed a significant increase in openness. 
 
-   When traits are gauged by observers, they increase 3 months after the end of the intervention among participants who want an increase on a trait. Traits maintain for participants who want a decrease. Further analysis shows that only participants who want an increase in openness show a significant increase in openness after then end of the intervention. All other participants do not show significant changes. 
+   When traits are gauged by observers, they increase 3 months after the end of the intervention among participants who want an increase on a trait. Traits are maintained for participants who want a decrease. Further analysis shows that only participants who want an increase in openness show a significant increase in openness after the end of the intervention. All other participants do not show significant changes. 
 
 ### Discussions
 
@@ -69,21 +340,21 @@ PP. 1-5
 
 >The fascinating thing about email is: it takes up little of our time —— we maybe spend an hour or two on email a day —— but it takes up a disproportionate amount of our attention. 
 
->We can't seamlessly switch from doing one thing to doing another thing. Out mind isn't capable of that. 
+>We can't seamlessly switch from doing one thing to doing another thing. Our mind isn't capable of that. 
 
 >Notice what you pay attention to when you're low on energy. So when you're kind of burnt out a little bit, what apps do you fire up? What websites do you visit mindlessly, out of habit, that just stimulate you and prevent you from really resting? [Knowing those is] a way by which we can shut off autopilot. 
 
->When we say we don't have time for someting, we're really just saying that something's not important to us. You hear people say, "I don't have time to read this book." But then they have time to check email, or read the news, or go on social media for a few hours. What we really mean when we say we don't have time for something is that we don't have the attention or patience for it. You have time for everything. It's jst that you choose to do other things. 
+>When we say we don't have time for something, we're really just saying that something's not important to us. You hear people say, "I don't have time to read this book." But then they have time to check email, or read the news, or go on social media for a few hours. What we really mean when we say we don't have time for something is that we don't have the attention or patience for it. You have time for everything. It's just that you choose to do other things. 
 
 >We are not able to focus and reflect at the same time. If you want to unearth more ideas and if you want more rest, I think you need to leave some space between the things you do. 
 
->Some people take a shower every morning, but they haven't actually taken a shower in years, because their mind is everywhere but the shower. **Waht use is a life that we don't remember and experience?** 
+>Some people take a shower every morning, but they haven't actually taken a shower in years, because their mind is everywhere but the shower. **What use is a life that we don't remember and experience?** 
 
 >Love is really no different than sharing quality attention with somebody. 
 
 2. Skipper, C. (2018). [*Why Self-Help Might Actually Be Making You Less Happy*](https://www.gq.com/story/why-self-help-makes-you-less-happy)
 
->[D]epression is the organism's way of reacting, withdrawing, and perhaps metaphorially recharging the batteries. BUt now, there's so much pressure in modern society to perform and to be productive, to be efficient, that we don't have this time to recharge. We tend to pathologize these kinds of sadness or losses of energy. 
+>[D]epression is the organism's way of reacting, withdrawing, and perhaps metaphorically recharging the batteries. BUt now, there's so much pressure in modern society to perform and to be productive, to be efficient, that we don't have this time to recharge. We tend to pathologize these kinds of sadness or losses of energy. 
 
 >Well, now we've actually had these therapies for 100 years and the world is just getting worse. How could that be? The answer is that all the sensitive, intelligent, resourceful people that should be out changing the world, they're actually just sitting in the therapy room trying to realize themselves or improving themselves. 
 
@@ -91,7 +362,7 @@ PP. 1-5
 
 That's a really powerful metaphor!
 
->I find it very important to be interested in something beyong yourself... Try not to be so obsessed with hapiness. You have this happiness imperative: Life is about being happy. It's ridiculous. 
+>I find it very important to be interested in something beyond yourself... Try not to be so obsessed with happiness. You have this happiness imperative: Life is about being happy. It's ridiculous. 
 
 ## 2021-06-21
 
@@ -109,7 +380,7 @@ Be among nature: trees, being outside.
 
 >I do think there's a false sense of urgency sometimes. I think it hurts out long-term performance. 
 
-Most people are "larks", those who feel peaks in the morning. They should be vigilant, avoid distractions and do deep work in the morning. Try replying to routine emails in the afternoon. In the evening, do creative task that don't require much vigilance and concentration. 
+Most people are "larks", those who feel peaks in the morning. They should be vigilant, avoid distractions and do deep work in the morning. Try replying to routine emails in the afternoon. In the evening, do creative tasks that don't require much vigilance and concentration. 
 
 2. Skipper, C. (2018). [*Why Being Less Busy is the Key to Getting More Done*](https://www.gq.com/story/how-to-be-less-distracted-and-get-more-done)
 
@@ -742,7 +1013,7 @@ I don't think the tips in this post are "realistic". For undergraduate students,
 
 - Try Linux. 
 
-- Take a compilers class. 
+- Take a compiler class. 
 
 - Learn to program in C and JavaScript. 
 
@@ -900,7 +1171,7 @@ PP. 1-3
 
 Kowal, M., Groyecka-Bernard, A., Kochan-Wójcik, M., & Sorokowski, P. (2021). [When and how does the number of children affect marital satisfaction? An international survey](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0249516). *Plos one, 16*(4), e0249516.
 
-- Survey takers (7178 married individuals from 33 countries/regions)  expressed significantly a lower level of marital satisfaction with more children they have. This negative association is significantly only among women. Figure 3 showed that men are more satisfied in the marriage than women.
+- Survey takers (7178 married individuals from 33 countries/regions)  expressed significantly a lower level of marital satisfaction with more children they have. This negative association is significantly only among women. Figure 3 showed that men are more satisfied in marriage than women.
 
 - Fig. 2 showed that when the number of children is fewer than two, then the more education people receive, the more satisfied they are with their marriage. The results are the opposite when the number of children exceeds two. **Caution**: I do not know whether these differences are significant. 
 
@@ -930,7 +1201,7 @@ I believe this work is a summary of this [book/course](https://www.callingbullsh
 - Many retracted papers are still cited after retraction. 
 - Predatory publishers are a real problem. Chances are authors are aware that the publishers are not legitimate but they go ahead anyway due to pressure to publish a lot. Also, if malicious people publish misleading work intentionally, the public will be misinformed and gradually have a lower trust in science overall. 
 - arXiv papers that later published in prestigious venues attracted more citations than those found their places in less well-known journals. This indicates journals are a good gatekeeper. However, there is another side of the story: highly cited arXiv papers are less likely to be accepted for publication somewhere else at all!
-- There might be "Google Scholar buble": less diversity in searching results; Matthew Effect
+- There might be a "Google Scholar bubble": less diversity in searching results; Matthew Effect
 - Data, when processed, analyzed, or presented in a wrong way, can misinform. 
 
 ## 2021-04-25
@@ -965,7 +1236,7 @@ Hypotheses:
 
 - H1: Social information leads to better recall of the data shown.
 
-- H2: Congruence in social signal leads to higher trust, and higher likelihood of updating their beliefs. 
+- H2: Congruence in social signals leads to higher trust, and higher likelihood of updating their beliefs. 
 
 - H3a: Congruent-HighConsensus leads to higher trust and higher likelihood to update beliefs; Incongruent-HighCnsensus leads to the opposite results. 
 
@@ -1029,7 +1300,7 @@ PP. 1-5
 
 Finished Watts et al. (2021)
 
-Lots of publications on misinformation are based on data of social media or websites. However, a nationally representative survey finds that (1) news is a small fraction of media consumption; (2) online news is a small fraction of news consumption; and (3) fake news is only a tiny portion of the information Americans receive. 
+Lots of publications on misinformation are based on data from social media or websites. However, a nationally representative survey finds that (1) news is a small fraction of media consumption; (2) online news is a small fraction of news consumption; and (3) fake news is only a tiny portion of the information Americans receive. 
 
 The authors proposed a comprehensive research agenda that aims to achieve four objectives:
 
@@ -1119,7 +1390,7 @@ Task-specific data based on historical outcomes has a better predictive ability 
 
 Finished Guess et al. (2021)
 
-Those who set their desktop browser homepage to Huffington Post visited the Huffington Post website more. Those who set the homepage to Fox News increased their visits to Fox News website. Treatment had little impacts on participants' political opinions, but decreased participants' trust in mainstream media up to one year after the experiment. 
+Those who set their desktop browser homepage to Huffington Post visited the Huffington Post website more. Those who set the homepage to Fox News increased their visits to the Fox News website. Treatment had little impacts on participants' political opinions, but decreased participants' trust in mainstream media up to one year after the experiment. 
 
 ## 2021-04-04
 
@@ -1165,7 +1436,7 @@ To calibrate yourself may take years. Working with your advisor can speed up thi
 
 It's [not very helpful to read general writing tips](https://metaphorhacker.net/2021/01/the-nonsense-of-style-academic-writing-should-be-scrupulous-not-stylish/):
 
-> The first advice you need to give to an academic writing is not to read a book on stylish writing but rather to read how people in their field are writing. 
+> The first advice you need to give to an academic writer is not to read a book on stylish writing but rather to read how people in their field are writing. 
 
 ### Writing consistently and regularly
 
@@ -1196,7 +1467,7 @@ That said, good papers always have higher chances of acceptance and winning awar
 
 1. Reviewed [Guo (2013)](https://pg.ucsd.edu/guo-faculty-job-search.pdf)
 
-### 1. Research statment
+### 1. Research statement
 Research statement: 4 pages, single-spaced, 12-point, 1.25-inch margin; The first 1.5 pages to describe your previous work, the next 1.5 pages to show your future research ideas, and the last page for a bibliography. 
 
 ### 2. Scheduling interviews
@@ -1219,7 +1490,7 @@ Research statement: 4 pages, single-spaced, 12-point, 1.25-inch margin; The firs
 
 - Pay attention to and be aware of why they brought you there in the first place. Is it because your research fits into the department's future agenda? Play up these parts in your talk and individual meetings. 
 
-- Try to *Engage*, not to *impress*. Professor interviewing you have much more research experience and publications than you do. There is no need to impress others. 
+- Try to *Engage*, not to *impress*. Professors interviewing you have much more research experience and publications than you do. There is no need to impress others. 
 
 #### 4.1 Job talk
 - If you cannot *hook* the audience in the first 10 minutes, chances are your talk will just be mediocre. 
@@ -1266,7 +1537,7 @@ The dean is probably not involved in the hiring decisions. So just be chill.
 
 - Don't linger on slides. Just click "Next"!
 
-- When switching to the next slide, don't say anything of it before you advance to it. 
+- When switching to the next slide, don't say anything about it before you advance to it. 
 
 - Minimize the use of a laser pointer. 
 
@@ -1288,7 +1559,7 @@ The dean is probably not involved in the hiring decisions. So just be chill.
 
 - There is no need to spend TOO MUCH time getting to know every one of your "talk mates" beforehand. They know you are busy and don't expect that you know about their research in detail. 
 
-- People sign up for meeting with you for a reason. For example, they may want to collaborate with you; they want to know whether your research strengthens the department research portfolio; or that they are on the faculty search committee. Only when you let the other party lead the meeting, and be a good listener, can you know what they want from you and then adapt accordingly. 
+- People sign up for meetings with you for a reason. For example, they may want to collaborate with you; they want to know whether your research strengthens the department research portfolio; or that they are on the faculty search committee. Only when you let the other party lead the meeting, and be a good listener, can you know what they want from you and then adapt accordingly. 
 
 - Follow-up emails to people you talk to are VERY important. 
 
@@ -1328,7 +1599,7 @@ PP. 1-8
 
 Guo, P. (2016). [*What I would've wanted to know as a first-year assistant professor*](https://pg.ucsd.edu/first-year-assistant-professor.htm)
 
-- When you become a first-year assistant professor, you'll have much free time. You only need to dedicate roughly six hours per week (3 hours to teaching, and 3 hours to department and committee meetings). You are free to do whatever you want in the rest of your time each week. **This freedom is the challenge**: you have to learn how to manage this free time. 
+- When you become a first-year assistant professor, you'll have a lot of free time. You only need to dedicate roughly six hours per week (3 hours to teaching, and 3 hours to department and committee meetings). You are free to do whatever you want for the rest of your time each week. **This freedom is the challenge**: you have to learn how to manage this free time. 
 
 - Tenure. From the first day of your job, you have about five years to build up your publication list, submit your material in the sixth year, and hopefully get tenure. To get tenure, you need (1) to get recommendation letters from full professors detailing why you are the best in the field you are in; and (2) to have good relationships with tenured colleagues in your department so that they will interpret the recommendation letters in the most favorable light. For the first requirement, if your research is super innovative, then you risk not being able to find enough recommenders in your "field". 
 
@@ -1358,13 +1629,13 @@ Finished Pennycook, G., Epstein, Z., Mosleh, M., Arechar, A. A., Eckles, D., & R
 
 - Purpose: To see whether mistaken belief is sufficient to explain the sharing of misinformation. 
 
-- Procedure: 1015 participants recruited through Amazon Mechanical Turk. Participants are presented headline, lead sentence, and images for 36 news stories obtained from social media. Half of these stories were entirely false and the other half are true. Half of the headlines are favorable to Democrats and the other half favorable to Republicans. Participants were randomly assigned to decide either the veracity of the headline they see (accuracy condition) or their intention to share the story (sharing condition).
+- Procedure: 1015 participants recruited through Amazon Mechanical Turk. Participants are presented with headlines, lead sentences, and images for 36 news stories obtained from social media. Half of these stories were entirely false and the other half are true. Half of the headlines are favorable to Democrats and the other half favorable to Republicans. Participants were randomly assigned to decide either the veracity of the headline they saw (accuracy condition) or their intention to share the story (sharing condition).
 
 - Results: 
 
-  - In the accuracy condition, true headlines are rated as accurate significantly more often than false headlines. Whereas politically concordant headlines are rated as accurate more than than politically discordant headlines, this difference stemming from political alignment is significantly smaller than the veracity-driven difference. 
+  - In the accuracy condition, true headlines are rated as accurate significantly more often than false headlines. Whereas politically concordant headlines are rated as accurate more than politically discordant headlines, this difference stemming from political alignment is significantly smaller than the veracity-driven difference. 
 
-  - In the sharing condition, difference in sharing intention based on political alignment is significantly larger than the veracity-driven difference. 
+  - In the sharing condition, the difference in sharing intention based on political alignment is significantly larger than the veracity-driven difference. 
 
   - Across conditions: the effect of headline veracity is significantly larger in the accuracy condition than in the sharing condition; the effect of political alignment is significantly larger in the sharing condition than in the accuracy condition. 
 
@@ -1448,7 +1719,7 @@ PP. 1-5
 
 - People treat Rinsta and Finsta differently because they are targeting different audiences. 
 
-- Since people might have multiple accounts in the same social medium and use these accounts differently, surveying people their experiences of using this medium might lead to wrong conclusions. 
+- Since people might have multiple accounts in the same social media and use these accounts differently, surveying people their experiences of using this medium might lead to wrong conclusions. 
 
 2. Türkay, S., Formosa, J., Adinolf, S., Cuthbert, R., & Altizer, R. (2020, April). See no evil, hear no evil, speak no evil: How collegiate players define, experience and cope with toxicity. In *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems* (pp. 1-13).
 
@@ -1715,13 +1986,13 @@ Completed Sekara et al. (2018)
 
    `$$ c / c_{random} $$`
 
-   where `$c$` is the ratio of **the number of authors who became last authors from non-last authors** to **the number of those who never made this transition**. `$c_random$` is the same ratio but in a system where the order of authors is randomly permuted. This randomization is necessary if we want to compare the chaperone effect of different scientific fields. If we measure chaperone effect by `$c$` rather than `$C$`, we fail to consider the fact that `$c$` might be influenced by individual productivity, team size, or simply random factors. 
+   where `$c$` is the ratio of **the number of authors who became last authors from non-last authors** to **the number of those who never made this transition**. `$c_random$` is the same ratio but in a system where the order of authors is randomly permuted. This randomization is necessary if we want to compare the chaperone effect of different scientific fields. If we measure the chaperone effect by `$c$` rather than `$C$`, we fail to consider the fact that `$c$` might be influenced by individual productivity, team size, or simply random factors. 
 
    If `$C$` is larger one 1, then the chaperone effect exists. 
 
 - Fig. 2 shows that the chaperone effect is strongest in interdisciplinary fields, biology, and medicine, and weakest in Mathematics. 
 
-- An interesting question to ask is whose papers have more impacts, those by new PIs, or those by chaperoned and established PIs. The authors assumed that those by new PIs have more impact because it is difficult to publish in a journal, say, in *Nature*, if you didn't have a publication record there. However, results show that papers by established and chaperoned PIs receive more citations. 
+- An interesting question to ask is whose papers have more impact, those by new PIs, or those by chaperoned and established PIs. The authors assumed that those by new PIs have more impact because it is difficult to publish in a journal, say, in *Nature*, if you didn't have a publication record there. However, results show that papers by established and chaperoned PIs receive more citations. 
 
 - The chaperone effect is stronger in prestigious, interdisciplinary journals with a general audience than in field-specific journals. 
 
@@ -1731,9 +2002,9 @@ Sekara, V., Deville, P., Ahnert, S. E., Barabási, A. L., Sinatra, R., & Lehmann
 
 - Three kinds of principal investigators (PIs, last author in a paper):
   
-  1. New PIs have never published in a specific journal.
-  2. Chaperoned PIs have published in a journal previously as nonlast authors.
-  3. Established PIs have published in a journal before as last authors. 
+  1. New PIs who have never published in a specific journal.
+  2. Chaperoned PIs who have published in a journal previously as nonlast authors.
+  3. Established PIs who have published in a journal before as last authors. 
 
 ## 2021-02-16 (completed on 2021-02-17)
 
@@ -1773,7 +2044,7 @@ Finished Kubin et al. (2021)
 
 Kubin, E., Puryear, C., Schein, C., & Gray, K. (2021). [Personal experiences bridge moral and political divides better than facts](https://www.pnas.org/content/118/6/e2008389118.full). *PNAS, 118*(6).
 
-- People who base their viewpoints on personal experiences (rather than on facts) are considered more rational and are respected more by the opponents. Opponents are also more willing to interact with them. 
+- People who base their viewpoints on personal experiences (rather than on facts) are considered more rational and are respected more by their opponents. Opponents are also more willing to interact with them. 
 
 - To increase perceived rationality, personal experiences are better to be relevant, and harm-based. 
 
@@ -1871,7 +2142,7 @@ Finished Sterling et al. (2020)
 
 - For engineering and CS undergraduates, in their first jobs after they graduate, women's salaries are lower than men's. 
 
-- Gender does not predict how important salary is important to a person. 
+- Gender does not predict how important salary is to a person. 
 
 - Women do emphasize workplace culture more, but this emphasis is associated with higher rather than lower compensation. 
 
@@ -2011,7 +2282,7 @@ Miao, L., Murray, D., Jung, W-S., Lariviere, V., Sugimoto, C., & Ahn, Y-Y. (draf
 
 - The scientific diversity of a country highly correlates with its GDP. 
 
-- Scientific diversity is very predictive of future economic growth of a country; more so than Economic Complexity Index (ECI). 
+- Scientific diversity is very predictive of future economic growth of a country; more so than the Economic Complexity Index (ECI). 
 
 PP. 1-18. 
 
@@ -2045,7 +2316,7 @@ Piwowar, H., Priem, J., Larivière, V., Alperin, J. P., Matthias, L., Norlander,
 
    Around 27.9% of all articles with a DOI. Recent articles are more likely to be open access (See [Fig. 2B](https://peerj.com/articles/4375/#fig-2)). 
 
-- Open access articles received 18% more citation than if it were not open access. This is only correlation, not causation. It might well be that authors only made their most impactful work open access. 
+- Open access articles received 18% more citations than if it were not open access. This is only correlation, not causation. It might well be that authors only made their most impactful work open access. 
 
 ## 2021-01-19
 
@@ -2264,7 +2535,7 @@ To explain why success in the cultural market is different from average performa
 
 Social influence, i.e., information about the choice of others, contributed to both **inequality** and **unpredictability** of the songs. 
 
-  - [Fig. 1](https://science.sciencemag.org/content/sci/311/5762/854/F1.large.jpg) shows that there is more inequality when social influence is present. This is because, as we can see, the dark bars are consistently taller than the light bars. It also shows that increased level of social influence leads to increased level of inequality. 
+  - [Fig. 1](https://science.sciencemag.org/content/sci/311/5762/854/F1.large.jpg) shows that there is more inequality when social influence is present. This is because, as we can see, the dark bars are consistently taller than the light bars. It also shows that an increased level of social influence leads to increased level of inequality. 
 
   - Fig. 2 shows that as social influence increases, it becomes more unpredictable to tell whether a song turns out to be good or bad. 
 
@@ -2311,7 +2582,7 @@ Continued with Lu et al. (2016)
 
 - The frequency of emoji usage has a power-law distribution. 😂 is by far the most popular emoji, accounting for 15.4% of the total emoji usage.
 
-- France stands out because 1) 19.8 of all messages sent using the Kika keyboard by French users contained at least on emoji; and 2) the most commonly used emoji is ❤️‍. How romantic!
+- France stands out because 1) 19.8% of all messages sent using the Kika keyboard by French users contained at least one emoji; and 2) the most commonly used emoji is ❤️‍. How romantic!
 
 PP. 2-9
 
@@ -2439,7 +2710,7 @@ Continued with Sinatra et al. (2016)
 P.3 
 
 {{<block class="note">}}
-I am not sure of whether it's only the order of a scientist's papers that was randomized or that the order remains unchanged but papers' `$c_{10}$` was randomized. The authors did not make this point crystal clear. 
+I am not sure whether it's only the order of a scientist's papers that was randomized or that the order remains unchanged but papers' `$c_{10}$` were randomized. The authors did not make this point crystal clear. 
 {{<end>}}
 
 ## 2020-12-20
@@ -2542,9 +2813,9 @@ PP. 1-2
 
 1. Finished Wu et al. (2019)
 
-The title of this paper well explains the main finding. One point worth noticing is that, as the authors mentioned at the end of the paper, fundings from government for individuals or small teams do not enable smaller teams to produce disruptive results. This is because small teams funded by the government don't want to take the risk of entering uncharted areas. 
+The title of this paper explains the main finding. One point worth noticing is that, as the authors mentioned at the end of the paper, fundings from the government for individuals or small teams do not enable smaller teams to produce disruptive results. This is because small teams funded by the government don't want to take the risk of entering uncharted areas. 
 
-This paper well explains my intuition: more and more scientists, and more and more money invested in research, do not necessarily mean more ground-breaking results. Also, I don't believe large teams should always dominate the science community. I also don't think it's a good idea to always promote publications with a massive number of individuals. Teamwork is great, but does not always produce disruptive work. 
+This paper explains my intuition: more and more scientists, and more and more money invested in research, do not necessarily mean more ground-breaking results. Also, I don't believe large teams should always dominate the science community. I also don't think it's a good idea to always promote publications with a massive number of individuals. Teamwork is great, but does not always produce disruptive work. 
 
 2. Evans, J. A. (2008). Electronic publication and the narrowing of science and scholarship. *Science, 321*(5887), 395-399.
 
@@ -2592,7 +2863,7 @@ PP. 1-6
 
 ## 2020-12-05
 
-Ai, W., Chen, R., Chen, Y., Mei, Q., & Phillips, W. (2016). Recommending teams promotes prosocial lending in online microfinance. *PNAS, 113*(52), 14944-14948.
+Ai, W., Chen, R., Chen, Y., Mei, Q., & Phillips, W. (2016). [Recommending teams promotes prosocial lending in online microfinance](https://www.pnas.org/content/113/52/14944.full). *PNAS, 113*(52), 14944-14948.
 
 Key questions: 
 
@@ -2684,7 +2955,7 @@ Hypothesis: the number of contacts (followers and friends) is positively related
 PP. 1-5
 
 ## 2020-11-28 (Completed on 2020-11-29)
-Continue Donoho (2015).
+Continued with Donoho (2015).
 
 PP. 10-18
 
@@ -2709,7 +2980,7 @@ Data about family and children were available only for waves 1-5 (from child bir
 
 Result:
 
-Scientists leveraging complicated machine learning algorithms could not predict those outcomes correctly. If a score of 1 means perfectly accurate, and 0 not accurate at all, the best predictions got a score of 0.2 for material hardship and child GPA, and only 0.05 for the other four outcomes. Also note that a linear regression or logistic regression model with only four variables chosen by domain experts were only slightly worse than the best submission, and were much better than most of other submissions. 
+Scientists leveraging complicated machine learning algorithms could not predict those outcomes correctly. If a score of 1 means perfectly accurate, and 0 not accurate at all, the best predictions got a score of 0.2 for material hardship and child GPA, and only 0.05 for the other four outcomes. Also note that a linear regression or logistic regression model with only four variables chosen by domain experts were only slightly worse than the best submission, and were much better than most of the other submissions. 
 
 >... the submissions were much better than predicting each other than predicting the truth. 
 
@@ -2787,7 +3058,7 @@ Group 2, 3, and 4 are all structured social networks with an equal number of con
 
 Each group provided estimates for three times. For the first round, each member estimated independently. 
 
-In Round 2 and Round 3, the control group revised their answers independently. Group 2 revised their answers while being exposed to their neighbors' average answer. Group 3 revised their answer while being exposed to Republican and Democratic party logo below their neighbors' average estimate. Group 4 revised their response while being shown the usernames, political identification, and the average of each of their four neighbors, and the average of these four neighbors' answers.
+In Round 2 and Round 3, the control group revised their answers independently. Group 2 revised their answers while being exposed to their neighbors' average answer. Group 3 revised their answer while being exposed to Republican and Democratic party logos below their neighbors' average estimate. Group 4 revised their response while being shown the usernames, political identification, and the average of each of their four neighbors, and the average of these four neighbors' answers.
 
 ### Results
 Group 2: both liberals and conservatives improved their trend accuracy, with an elimination of partisan bias in interpreting climate change data. Even conservatives in this group predicted trends significant more accurately than liberals in the control condition. 
@@ -2821,7 +3092,7 @@ It's better to have political discussions in bipartisan networks without partisa
 ## 2020-11-19
 Continue with Guilbeault, Becker, & Centola. (2018)
 
-- Complex contagions require a critical mass to start a large-scale cascade and critical mass is dependent on network topology, nodes degree distribution, and adoption thresholds. 
+- Complex contagions require a critical mass to start a large-scale cascade and critical mass is dependent on network topology, node degree distribution, and adoption thresholds. 
 
 New directions:
 
@@ -2850,7 +3121,7 @@ If one has too many friends, he or she might not be an ideal target of complex c
 Continue with Guilbeault, Becker, & Centola. (2018)
 - When social networks get smaller, it becomes easier to spread for simple contagions but harder for complex contagions. 
 - Research in complex contagions: health, innovation, social media, and politics
-- Peer characteristics, such as homophily and diversity, influenced how likely behavior changes. 
+- Peer characteristics, such as homophily and diversity, influence how likely behavior changes. 
 - Diffusion of innovations is characterized by complex contagions. 
   - Dynamics of adoption might be different from that of termination. 
 - Which has more effects on the likelihood of spreading through social influence: the influence of the source person, or the quality of the contagion?
@@ -2870,7 +3141,7 @@ Participants were randomly assigned to two conditions: control condition vs soci
 
 - Those in the social condition answered independently in Round 1. In Round 2, they were shown the average answer of four other participants connected to them in a social network and then updated their answer. In Round 3, they were shown the average of the updated answers of four other participants connected to them (same in Round 2) and provided a final answer to the question. 
 
-- A network consists of 35 participants who shared the same political orientation (either Democrats or Republicans). Participants in the network **did not** know that other people in the network had the same partisan preference as theirs. 
+- A network consists of 35 participants who share the same political orientation (either Democrats or Republicans). Participants in the network **did not** know that other people in the network had the same partisan preference as theirs. 
 
 - The researchers tested four questions. Each question was answered by 3 network groups and 1 control group for each political party. 
 
@@ -2941,7 +3212,7 @@ Popp, T. (2019). The Virality Paradox. *The Pennsylvania Gazette*. Retrieved fro
 
 - Even without digital tools to communicate with each other, rebel activities became more widespread in Syria. This is surprising because without telecommunication, Syrian rebels lost long ties that bridge groups far away from each other. That is, they had to rely on face-to-face communication to coordinate. How did it happen? When you get to understand that the way behaviors spread is different from that information diffuses, the answer will become clearer.
 
-- Information, messages, and ideas spread like epidemic whereas human behaviors don't. Contagions can be classified into two types: simple and complex. A single contact can start a simple contagion, but won't do the same for complex contagions, which involve efforts and costs, and require confirmation or reinforcement from multiple sources. 
+- Information, messages, and ideas spread like an epidemic whereas human behaviors don't. Contagions can be classified into two types: simple and complex. A single contact can start a simple contagion, but won't do the same for complex contagions, which involve efforts and costs, and require confirmation or reinforcement from multiple sources. 
 
 - Long ties are enough for simple contagions whereas complex contagions favor wide ties. How wide should a tie be for a behavior to spread varies. If reputation is at stake, the threshold will be higher. That's where complex contagions are very different from simple ones. In simple contagions, hubs get infected early and then it spreads the infections to many others. In a complex contagion, however, hubs usually have reputation at stake, so they are less, rather than more, likely to get infected. 
 
@@ -2982,7 +3253,7 @@ Results:
 - In Round 1, both smokers and nonsmokers were equally inaccurate at estimating the health risk of smoking;
 - No significant improvement in estimated accuracy in the control group. 
 - The decrease in estimate error in group 2 was significantly greater than both smoker and nonsmokers in the control group;
-- The decrease in estimate error in group 3 was significantly greater than group 2. Specifically, this decrease is ten times greater than both smoker and nonsmoker in the control group. 
+- The decrease in estimated error in group 3 was significantly greater than group 2. Specifically, this decrease is ten times greater than both smoker and nonsmoker in the control group. 
 
 
 ## 2020-11-10
@@ -3071,7 +3342,7 @@ The clustering coefficient of a network is the mean of all nodes' clustering coe
 
 This is so true. I have several thoughts about this point:
 
-First, it shows how arbitrary the choices in data processing and model picking are, and therefore, how arbitrary the statistical results might be. When I was doing research on selfie, I also had the same feeling. When I was doing the content analysis study comparing the differences in White women's selfies on Twitter and Chinese women's selfies on Weibo, I had to made so many arbitrary choices: whether to drop an item from a construct, whether to combine items, should I use a *t* test or nonparametric test, etc. 
+First, it shows how arbitrary the choices in data processing and model picking are, and therefore, how arbitrary the statistical results might be. When I was doing research on selfies, I also had the same feeling. When I was doing the content analysis study comparing the differences in White women's selfies on Twitter and Chinese women's selfies on Weibo, I had to made so many arbitrary choices: whether to drop an item from a construct, whether to combine items, should I use a *t* test or nonparametric test, etc. 
 
 Second, doing multiverse analysis reporting is very methodologically challenging. I cannot imagine a Master student after attending one statistics class doing a project involving more than 200 choice combinations. 
 
@@ -3168,10 +3439,10 @@ Continue with Kramer et al. (2014)
 ### Measurements & Measures
 - To test the hypotheses, how are negativity and positivity measured: The percentage of the words as either positive or negative produced by a person.
 - A check before running the experiment: all four groups did not differ in emotional expression in the week prior to the experiment. 
-- Why using a weighted linear regression:  It was described in the Study Design that the chance a post being omitted is not fixed. However, an effect was found that when people see fewer posts (i.e., more omission), they in turn posted fewer words. Therefore, we need to account for this effect by assigning weights to people. Specifically, people having more omission were given a higher weight in the regression. See details on p. 8789. 
+- Why using a weighted linear regression:  It was described in the Study Design that the chance of a post being omitted is not fixed. However, an effect was found that when people see fewer posts (i.e., more omission), they in turn posted fewer words. Therefore, we need to account for this effect by assigning weights to people. Specifically, people having more omission were given a higher weight in the regression. See details on p. 8789. 
 
 ### Results
-Both H1 and H2 were supported. As can be seen in [the figure](https://www.pnas.org/content/pnas/111/24/8788/F1.large.jpg?width=800&height=600&carousel=1), when negativity is reduced, people generate more positive words and fewer negative words, compared to the control group. The opposite pattern occurred when positivity is reduced. It shows that **emotions expressed by our friends through online social networks influenced our own mood status**.  
+Both H1 and H2 were supported. As can be seen in [the figure](https://www.pnas.org/content/pnas/111/24/8788/F1.large.jpg?width=800&height=600&carousel=1), when negativity is reduced, people generate more positive words and fewer negative words, compared to the control group. The opposite pattern occurs when positivity is reduced. It shows that **emotions expressed by our friends through online social networks influenced our own mood status**.  
 
 Some implications:
 1. Direct interactions were not necessary for emotional contagion. 
@@ -3188,7 +3459,7 @@ Continue with Kramer et al. (2014)
 - H2: "Opposite emotion should be inversely affected" (p. 8789): Group A should express increased negativity, and Group B should express increased positivity. 
 
 ### Thoughts
-- It's interesting that in people's own status updates during the experimental period, only 3.6% were positive and 1.6% negative. However, for posts in people's News Feed, 46.8% were positive and 22.4% were negative. Why was it that News Feed posts were so much more **emotional** than people's own status updates? Is it because Facebook's algorithms like to show more emotional contents to its users? I guess so. 
+- It's interesting that in people's own status updates during the experimental period, only 3.6% were positive and 1.6% negative. However, for posts in people's News Feed, 46.8% were positive and 22.4% were negative. Why was it that News Feed posts were so much more **emotional** than people's own status updates? Is it because Facebook's algorithms like to show more emotional content to its users? I guess so. 
 
 ## 2020-10-26
 
@@ -3222,7 +3493,7 @@ Continue reading Lawrence (2007).
 - Authors might 1) complicate their methods section so that it's difficult for reviewers to fault it; 2) hide results that do not fit with their arguments; 3) split the findings into multiple papers even if one paper is enough to cover all the results; 4) compress the results to meet the requirements of top journals like *Nature* or *Science*; 5) hype their work.
 
   - I would add one: p-hacking.
-  - The point that authors might complicate their methods section resonate with me strongly. After reading papers each day for over 6 weeks, I felt that the methods section of some papers is so dense and complicated that, if I were the reviewer, I didn't have that much time and effort and decode it! This, I think, is really a problem. As I mentioned multiple times, I feel the most ideal studies are those with **simple methodology** and yet **impactful results**. A perfect example is Professor Duncan Watts and Steven Strogatz's masterpiece of [*Collective dynamics of 'small world' networks*](http://materias.df.uba.ar/dnla2019c1/files/2019/03/watts-collective_dynamics-nature_1998.pdf).
+  - The point that authors might complicate their methods section resonates with me strongly. After reading papers each day for over 6 weeks, I felt that the methods section of some papers is so dense and complicated that, if I were the reviewer, I didn't have that much time and effort to decode it! This, I think, is really a problem. As I mentioned multiple times, I feel the most ideal studies are those with **simple methodology** and yet **impactful results**. A perfect example is Professor Duncan Watts and Steven Strogatz's masterpiece of [*Collective dynamics of 'small world' networks*](http://materias.df.uba.ar/dnla2019c1/files/2019/03/watts-collective_dynamics-nature_1998.pdf).
 
 - Students have fewer opportunities to learn and fail. Since publication is so important, group leaders may end up writing students' work. 
 
@@ -3286,7 +3557,7 @@ Börner et al. (2018). Skill discrepancies between research, education, and jobs
 
 Main takeaway: Soft skills are in high demand by the industry. 
 
-My issue: I like data viz. However, I feel visualizations in this paper are a little bit too much. 
+My issue: I like data viz. However, I feel the visualizations in this paper are a little bit too much. 
 
 ## 2020-10-19
 
@@ -3330,7 +3601,7 @@ I started to think about my selfie studies. Specifically, I looked at 1) whether
 
 I also looked at 2) whether there are gender differences between men's selfies and women's selfies. For example, do women show more self-touching in selfies? 
 
-I used a small-data approach. Although I downloaded over 30,000 images from Twitter and 8,000 images from Weibo, I only selected 200 from each platform for analysis, simply because I didn't have that much man power to analyze them all. 
+I used a small-data approach. Although I downloaded over 30,000 images from Twitter and 8,000 images from Weibo, I only selected 200 from each platform for analysis, simply because I didn't have that much manpower to analyze them all. 
 
 Talking about big data and small data research, I think I can combine the two here. Human content analysis can offer some insights and then directions for big data research. After all, there are so many things to detect in a selfie: the gender of the person, his or her mood, surroundings, posture, facial expressions, etc. Deep learning algorithms need some directions so that they can give us the analysis we need. 
 
@@ -3410,7 +3681,7 @@ Homophily is defined as "the tendency of social contacts to be similar to one an
 To study the effect of homophily on the adoption of healthy behavior
 
 ### Design
-710 participants are randomly put into two conditions: homophilous population condition, and unconstructed population condition. Homophilous population condition consists of people having similar individual characteristics (gender, age, and BMI) whereas people in the other condition are random and mixed. 
+710 participants are randomly put into two conditions: homophilous population condition, and unconstructed population condition. The homophilous population condition consists of people having similar individual characteristics (gender, age, and BMI) whereas people in the other condition are random and mixed. 
 
 All networks in the study have the same size (= 72), clustering coefficient (= 0.4), and degree distribution (= 6). The only difference is the level of homophily. 
 
@@ -3425,13 +3696,13 @@ Comparing adoption among obese and nonobese individuals: Within homophilous cond
 
 Comparing the two conditions: homophily increased the adoption among both the obese and nonobese people. 
 
-However, from these results, we cannot say for sure that **homophily** is the reason. For example, it may be that in the homophilous condition, obese people have more neighbors who sign up and thus have more exposure. It may also because that homophily increases the likelihood for people to sign up once they are exposed. Therefore, we need to compare 1.) **exposure**, and 2.) **the likelihood to adopt once exposed** in the two conditions. 
+However, from these results, we cannot say for sure that **homophily** is the reason. For example, it may be that in the homophilous condition, obese people have more neighbors who sign up and thus have more exposure. It may also be because that homophily increases the likelihood for people to sign up once they are exposed. Therefore, we need to compare 1.) **exposure**, and 2.) **the likelihood to adopt once exposed** in the two conditions. 
 
 It showed that, **within each of the two conditions**, the percentage of exposed obese people (num. of exposed obese / total num. of obese ppl) and that of exposed nonobese people (num. of exposed nonobese / total num. of nonobese ppl) do not differ significantly. **Across conditions**, homophily significantly increased the percentage of exposed obese people. See Fig. 2D.
 
 How about the likelihood? **within conditions**, the likelihood to adopt after exposure was much higher for the obesed than for the nonobesed. **Acorss conditions**, homophily significantly increased obese people's likelihood to adopt after exposure. 
 
-Therefore, homophily increased obese people's **access** to, and the **likelihood** to adopt, health behavior. 
+Therefore, homophily increased obese people's **access** to, and the **likelihood** to adopt healthy behavior. 
 
 >... low adoption levels of health innovations among less healthy individuals may be a function of social environment rather than a baseline reluctance for adoption. 
 
@@ -3523,7 +3794,7 @@ p1-p6.
 
 Stivers et al. (2009)
 
-There is a universal pattern for turn-taking. People aim to minimize gap and overlap in conversations. 
+There is a universal pattern for turn-taking. People aim to minimize gaps and overlap in conversations. 
 
 - Slower:
 
@@ -3617,7 +3888,7 @@ The work is indeed significant. It compared the spreading of true and false news
 
 - Was it because those who spread the false were more influential or active?
 
-Not really. Those who spread false news had fewer followers, followed fewer people on Twitter, are less likely to be verified, and had been on Twitter for less time. 
+Not really. Those who spread false news had fewer followers, followed fewer people on Twitter, were less likely to be verified, and had been on Twitter for less time. 
 
 - Was it because false news was more noval and users are more likely to retweet information with more novelty?
 
@@ -3628,7 +3899,7 @@ Not really. Those who spread false news had fewer followers, followed fewer peop
 - Was it because of selection bias? I mean, the tweets from the six organizations might not be representative of all tweets. 
   - The authors verified a second sample of Tweets, which were labeled by three undergraduate students as true, false, or mixed. Again, the results were the same. 
 
-- Did false news spread faster, deeper, farther, and more broadly because of bot activities? I mean, was it because bot crazily retweeted and replied to false news?
+- Did false news spread faster, deeper, farther, and more broadly because of bot activities? I mean, was it because of  bots that crazily retweeted and replied to false news?
   - Two bot-detection algorithms were applied independently to detect and remove bots before data analysis. Results were the same. This has significant implications: that false news traveled faster and farther not because of bots, but because of humans. 
 
 ### I had several issues:
@@ -3718,4 +3989,5 @@ Lazer et al. (2020)
 
 ## 2020-09-10
 - p1-p4. Cha et al. (2007, October). I tube, you tube, everybody tubes: analyzing the world's largest user generated content video system. In *Proceedings of the 7th ACM SIGCOMM conference on Internet measurement* (pp. 1-14).
+
 
