@@ -7,7 +7,7 @@ draft: false
 toc: false
 ---
 
-I saw [this question](https://stackoverflow.com/questions/8639383/how-do-i-center-an-svg-in-a-div/66766245#66766245) on Stakoverflow: How to center an SVG in a div. 
+I saw [this question](https://stackoverflow.com/questions/8639383/how-do-i-center-an-svg-in-a-div/66766245#66766245) on Stack Overflow: How to center an SVG in a div. 
 
 [Spadar Shut](https://stackoverflow.com/a/8640044/13716814) suggested using `display: block` and `margin: auto`. Other people, like [David](https://stackoverflow.com/a/25185515/13716814) suggested using `<div style="text-align:center;">`. 
 

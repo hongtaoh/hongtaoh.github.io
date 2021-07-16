@@ -1,5 +1,5 @@
 ---
-title: "How to Embed An Observable Notebook in A Stand-alone Webpage"
+title: "How to Embed An Observable Notebook in A Stand-alone Web Page"
 date: 2020-11-02T09:03:10-05:00
 author: Hongtao Hao
 slug: exporting-observable-notebook
