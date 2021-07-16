@@ -47,7 +47,7 @@ Also, `background: #f5f5f5 2px top/3em no-repeat;` means that the image will app
 
 ## Create shortcode
 
-Then, we are going to create shortcodes for custome blocks. 
+Then, we are going to create shortcodes for costume blocks. 
 
 Create a shortcode named "block" (or any name you want) with the following code:
 

@@ -6,9 +6,9 @@ slug: remote-origin-already-exists-error-shooting
 draft: false
 toc: false
 ---
-Here is my situation: I want to use another GitHub account. I need to transfer a repo from my old account to the new one. Maybe there is an easy way to transfer, but it is beyong my ability now (I guess it's complicated so I didn't even bother searching for an answer).
+Here is my situation: I want to use another GitHub account. I need to transfer a repo from my old account to the new one. Maybe there is an easy way to transfer, but it is beyond my ability now (I guess it's complicated so I didn't even bother searching for an answer).
 
-So I `git clone` the repo from my old account and tried to push it to my new account. Then, a error occured: 
+So I `git clone` the repo from my old account and tried to push it to my new account. Then, a error occurred: 
 
 ```bash
 fatal: remote origin already exists.

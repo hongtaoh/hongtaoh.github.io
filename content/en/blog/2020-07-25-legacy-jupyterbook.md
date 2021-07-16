@@ -17,7 +17,7 @@ You can install the legacy version [here](https://pypi.org/project/jupyter-book/
 
 In this article, I'll briefly talk about how to use this legacy version of jupyterbook together with GitHub and Netlify. 
 
-First off, you should install the legacy version using `pip install jupyter-book==0.6.5` as mentioned above. Then, I will show you how to start a book named "legacy-jupyterbook" on Desktop. I am asusming that you are using a Mac. All the following codes should run in Terminal. 
+First off, you should install the legacy version using `pip install jupyter-book==0.6.5` as mentioned above. Then, I will show you how to start a book named "legacy-jupyterbook" on Desktop. I am assuming that you are using a Mac. All the following codes should run in Terminal. 
 
 ```bash
 cd Desktop # or any other directory you want to place your project
@@ -77,14 +77,14 @@ git commit -m "$msg"
 git push origin master
 ```
 
-You can store this file as `deploy.sh`, save it to the root directory of YourProject. Every time after you've make all the changes you want, at the root directory of YourProject, simply run `bash deploy.sh` and Github and Netlify will deploy by themseles. 
+You can store this file as `deploy.sh`, save it to the root directory of YourProject. Every time after you've make all the changes you want, at the root directory of YourProject, simply run `bash deploy.sh` and GitHub and Netlify will deploy by themselves. 
 
 ## Example
 
 Finally, you can view the final product of the example I provided above [here](https://legacy-jupyterbook.netlify.app/). And [here](https://github.com/hongtaoh/legacy-jupyterbook) is its GitHub repository. 
 
 ## Changing content
-I am not detailing how to customize the content here. You simply need to change it in the `content` folder at the root directory, and then make corressponding changes to `toc.yml` under the `_data` folder. You can find more information in the [official guide](https://legacy.jupyterbook.org/intro.html)
+I am not detailing how to customize the content here. You simply need to change it in the `content` folder at the root directory, and then make corresponding changes to `toc.yml` under the `_data` folder. You can find more information in the [official guide](https://legacy.jupyterbook.org/intro.html)
 
 
 

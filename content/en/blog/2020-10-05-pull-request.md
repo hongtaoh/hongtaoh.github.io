@@ -87,7 +87,13 @@ When you are woking on your fork and find that it is several commits behind the 
 
 When git asks you to explain how this merge is necessary, please follow [thise steps](https://stackoverflow.com/a/19085954). 
 
-{{<block class="note">}}
+{{<block class="warning">}}
+Don't click "Fetch upstream" on github, as this will complicate things. If you click it, your remote will be ahead of your local repo and you have to run `git pull` before `git push`. 
+
+Follow the steps below instead. 
+{{<end>}}
+
+{{<block class="tip">}}
 I tried [GitHub's offiical guide](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) but it seemed to complicate things. From [this post](https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/), I learned that only two steps suffice:
 ```
 git pull upstream master

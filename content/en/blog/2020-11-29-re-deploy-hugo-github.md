@@ -9,7 +9,7 @@ toc: true
 {{<block class="tip">}}
 2021-04-06: As of April 06, 2021, Hugo only [recommends](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch) deployment with [GitHub Action](https://github.com/marketplace/actions/github-pages-action). 
 
-GitHub Action is suprior to the method mentioned below because (1) You don't need to run `hugo` to build your site locally; (2) It is easier to leave a custom commit message. The method below neccessitates a `deploy.sh` script, which makes a custom message difficult. 
+GitHub Action is superior to the method mentioned below because (1) You don't need to run `hugo` to build your site locally; (2) It is easier to leave a custom commit message. The method below necessitates a `deploy.sh` script, which makes a custom message difficult. 
 
 Read [*How to Deploy A Hugo Website Using GitHub Pages Action*](/en/2021/04/05/hugo-gh-pages-action/) for instructions on deploying your site with GitHub Action. 
 {{<end>}}

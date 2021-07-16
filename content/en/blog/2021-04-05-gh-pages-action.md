@@ -15,7 +15,7 @@ I didn't find a tutorial in details I deemed necessary, so I decided to craft on
 
 ## Create .github/workflows/gh-pages.yml
 
-First change directory to your hugo project using `cd`.
+First change directory to your Hugo project using `cd`.
 
 Then
 
@@ -104,7 +104,7 @@ MAC:
 open .github/workflows/gh-pages.yml -a TextEdit 
 ```
 
-You can replace `TextEdit` with `"Sublime Text"` if have Sublime Text installed.
+You can replace `TextEdit` with `"Sublime Text"` if you have Sublime Text installed.
 
 Windows:
 
@@ -170,9 +170,6 @@ git commit -m "deploying with github pages action"
 git push
 ```
 
-Go to your `username.github.io` repository to see whether the deployment is successful. If yes, go to "Settings", scoll down to "GitHub Pages". Choose "gh-pages" as the Source branch, then select "root" as the folder. Click "Save". Wait a minute or so and your website will be live at `https://USERNAME.github.io/`.
+Go to your `username.github.io` repository to see whether the deployment is successful. If yes, go to "Settings'', scroll down to "GitHub Pages". Choose "gh-pages'' as the Source branch, then select "root" as the folder. Click "Save". Wait a minute or so and your website will be live at `https://USERNAME.github.io/`.
 
-If the deployment fails, click the X mark to solve the issues. I cannot help here. 
-
-
-
+If the deployment fails, click the X mark to solve the issues by yourself. I cannot help there. 
