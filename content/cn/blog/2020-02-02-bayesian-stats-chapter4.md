@@ -4,9 +4,7 @@ author: 郝鸿涛
 date: '2020-02-02'
 slug: bayesian-stats-chapter4
 categories:
-  - 统计学
 tags:
-  - 贝叶斯
 toc: true
 ---
 

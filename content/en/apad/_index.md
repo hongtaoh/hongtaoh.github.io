@@ -30,7 +30,7 @@ There seem to be there mistakes in the article:
   2. Caption of Fig. 11 should be "Experiment 2 (top) and Experiment 3 (bottom)"?
   3. The last sentence in Section 6.3 should be "... that aggregated data (Experiment 2) were perceived more causal than visualizations that did not (Experiment 3...)"?
 
-It might also be because I misunderstood the article. 
+It might also be that I misunderstood this article. 
 {{<end>}}
 
 2. Anderson, A., Maystre, L., Anderson, I., Mehrotra, R., & Lalmas, M. (2020, April). [Algorithmic effects on the diversity of consumption on spotify](http://www.cs.toronto.edu/~ashton/pubs/alg-effects-spotify-www2020.pdf). In *Proceedings of The Web Conference 2020* (pp. 2155-2165).

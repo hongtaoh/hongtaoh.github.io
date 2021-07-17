@@ -6,6 +6,10 @@ slug: julia-bang
 draft: false
 toc: true
 ---
+{{<block class="warning">}}
+Unless you are able to constantly moniter and update changes in this post, please DON'T repost it anywere. 
+{{<end>}}
+
 {{<block class="tip">}}
 The following codes were tested under Julia v1.6.1 and DataFrames v1.2.0.
 {{<end>}}
@@ -89,7 +93,7 @@ c = [1, 3, missing, 6, missing]
 df = DataFrame(:Name => a, :Var1 => b, :Var2 => c)
 ```
 
-```
+```bash
 julia> df
 
 5×3 DataFrame
@@ -105,7 +109,7 @@ julia> df
 
 See how `!` will mutate the source:
 
-```
+```bash
 julia>df = DataFrame(:Name => a, :Var1 => b, :Var2 => c)
 
 julia> df[!, :Var1] = collect(1:5)
@@ -133,7 +137,7 @@ Vector{Int64} (alias for Array{Int64, 1})
 
 You'll see a slightly different result when using `:`.
 
-```
+```bash
 julia>df = DataFrame(:Name => a, :Var1 => b, :Var2 => c)
 
 julia> df[:, :Var1] = collect(1:5) 
@@ -177,7 +181,7 @@ matrixA = [1 2; 3 4; 5 6; 7 8; 9 10 ] # This creates a 5×2 array
 df[!, [:Var1, :Var2]] = matrixA
 ```
 
-```
+```bash
 julia> df
 
 5×3 DataFrame
@@ -205,7 +209,7 @@ matrixA = [1 2; 3 4; 5 6; 7 8; 9 10 ]
 df[:, [:Var1, :Var2]] = matrixA
 ```
 
-```
+```bash
 julia> df
 
 5×3 DataFrame
@@ -223,7 +227,7 @@ julia> df
 
 The following example is taken from [Bogumił Kamiński's post](https://bkamins.github.io/julialang/2021/01/30/bang.html).
 
-```
+```bash
 julia> df1 = DataFrame(col1=1:3, col2='a':'c')
 3×2 DataFrame
  Row │ col1   col2 
@@ -254,7 +258,7 @@ julia> df1[!, :col1] = v # Using ! here
 
 Take a break here. Guess what the result of `col1` and  `df2.col1` will be.
 
-```
+```bash
 julia> col1
 3-element Array{Int64,1}:
  1
@@ -270,7 +274,7 @@ julia> df1.col1
 
 Okay. Let's see what the results will be if we use `:`.
 
-```
+```bash
 julia> df1 = DataFrame(col1=1:3, col2='a':'c')
 3×2 DataFrame
  Row │ col1   col2 
@@ -301,7 +305,7 @@ julia> df1[:, :col1] = v # Using : here
 
 See the results:
 
-```
+```bash
 julia> col1
 3-element Array{Int64,1}:
  11
@@ -337,7 +341,7 @@ A special way to update column(s) is through [**broadcasting**](https://datafram
 
 You'll need [Dot Syntax](https://docs.julialang.org/en/v1/manual/functions/#man-vectorized) to get broadcasting to work. What Dot Syntax does is to apply a function to each element in an array and then to return a new array. 
 
-```
+```bash
 julia> df = DataFrame(:Name => a, :Var1 => b, :Var2 => c)
 
 julia> df[!, :Name] .= "Johnson"
@@ -380,7 +384,7 @@ One thing I don't understand is that if I replace `"A"` with `'a'`, there won't 
 
 Another thing I don't understand is that `df[!, [:Var1, :Var2]] .= 99` will return the whole data frame whereas `df[:, [:Var1, :Var2]] .= 99` returns only the selected two columns:
 
-```
+```bash
 julia> df = DataFrame(:Name => a, :Var1 => b, :Var2 => c)
 
 julia> df[!, [:Var1, :Var2]] .= 99
@@ -414,7 +418,7 @@ Updating a single cell is different from updating columns: When updating a singl
 
 This is essentially the same as [# accessing columns](/en/2021/07/05/julia-bang/#accessing-columns).
 
-```
+```bash
 julia> df = DataFrame(:Name => a, :Var1 => b, :Var2 => c)
 
 julia> df[!, :Var1][2] = 99
@@ -492,7 +496,7 @@ julia> df
 
 In `df[!, col] = ` or `df[:, col] = `, if `col` is not present in `df`, then a new column will be added. 
 
-```
+```bash
 julia> df = DataFrame(:Name => a, :Var1 => b, :Var2 => c)
 
 julia> df[!, :Var3] = collect(11:15)
@@ -544,7 +548,6 @@ I haven't talked about how `df.col` works. It pretty much does the same thing as
 | Add cols                        | ❌                                       | ❌                      | ❌                         |
 | Add 1 col with broadcasting     | create a new col                        | create a new col       | ❌ ([available later](https://github.com/JuliaData/DataFrames.jl/issues/2804)) |
 | Add cols with broadcasting      | ❌                                       | ❌                      | ❌                         |
-
 
 ### Best practices
 

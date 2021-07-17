@@ -382,7 +382,7 @@ cp -r content/cn/posts content
 
 2. 修改 layouts/partials/nav.html
 
-将 <ul class = "nav-links"> 和 </ul> 之间的部分改为：
+将 `<ul class = "nav-links">` 和 `</ul>` 之间的部分改为：
 
 ```html
 {{ $currentPage := . }}
