@@ -1,5 +1,5 @@
 ---
-title: "Julia: Navigating directories"
+title: "Julia: How to Navigate Directories"
 date: 2021-07-11T17:25:53-04:00
 author: "Hongtao Hao"
 slug: julia-directory

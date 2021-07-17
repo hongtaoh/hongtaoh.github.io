@@ -1,8 +1,6 @@
 ---
 title: Curriculum Vitae
 type : apad
-aliases:
-    - /en/en-vitae/
 ---
 # Hongtao Hao
 <i class="fa fa-envelope"></i> :: [hhao@iu.edu](mailto:hhao@iu.edu) 
@@ -17,8 +15,8 @@ aliases:
    - Committee: Nicole Martins (Chair), Danielle Kilgo, Bryant Paul
    - Relevant Coursework: [Introduction to Bayesian Data Analysis I](https://jkkweb.sitehost.iu.edu/jkkteach/P533/), [Data Visualization](http://yyahn.com/dviz-course/), Quantitative Methods for Public Health Research, Introduction to Statistics in Media Research, Content Analysis , Media Theories , Children and Media, Applying Social Science Research Methods to Media
 
-- 2016 ~ 2018, M.A. in Journalism, Renmin University of China (GPA:3.92/4.00)
-- 2012 ~ 2016, B.A. in English , Hebei Normal University (Rank: 1 / 44; GPA: 3.92/4.00)
+- 2016 ~ 2018, M.A. in Journalism, Renmin University of China (GPA: 3.91/4.00)
+- 2012 ~ 2016, B.A. in English , Hebei Normal University (GPA: 3.92/4.00)
 
 ## Research Experience
 

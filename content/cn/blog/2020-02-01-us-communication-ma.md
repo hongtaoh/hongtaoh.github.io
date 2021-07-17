@@ -3,8 +3,9 @@ title: 美国提供全奖的新闻传播学硕士项目（不完全统计）
 author: 郝鸿涛
 date: '2020-02-01'
 slug: us-comm-ma
-categories: ["留学申请"]
-tags: ["传播学", "申请"]
+categories: 
+tags: 
+  - 留学
 toc: true
 aliases: 
   - /cn/2020/02/01/us-communication-ma-programs/
@@ -23,7 +24,7 @@ aliases:
 
 - [我的美国博士申请之路](/cn/2021/05/22/my-phd-app/)
 
-- [美国的信息学院(不完全统计)](/cn/2021/05/20/us-ischool/)
+- [美国的信息学院 (不完全统计)](/cn/2021/05/20/us-ischool/)
 
 - [2020年西北大学 MTS 博士项目校园面试的经历与体会](/cn/2020/03/01/northwestern-compus-visit/)
 
