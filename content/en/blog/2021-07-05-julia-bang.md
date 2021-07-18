@@ -7,7 +7,7 @@ draft: false
 toc: true
 ---
 {{<block class="warning">}}
-Unless you are able to constantly moniter and update changes in this post, please DON'T repost it anywere. 
+Unless you are able to constantly moniter and update changes in this post, please DO NOT repost it anywere!
 {{<end>}}
 
 {{<block class="tip">}}
