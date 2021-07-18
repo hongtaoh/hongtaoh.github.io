@@ -3,7 +3,7 @@ title: Curriculum Vitae
 type : apad
 ---
 # Hongtao Hao
-<i class="fa fa-envelope"></i> :: [hhao@iu.edu](mailto:hhao@iu.edu) 
+<i class="fa fa-envelope"></i> :: [hongtaoh@cs.wisc.edu](mailto:hongtaoh@cs.wisc.edu) 
 
 <i class="fa fa-globe" style="font-size: 19pt"></i> :: [https://hongtaoh.com](https://hongtaoh.com/)
 

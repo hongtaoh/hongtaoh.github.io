@@ -1,5 +1,5 @@
 ---
-title: "Please Mute Yourself on Zoom the Moment You Finish Your Question"
+title: "It Is Better to Mute Yourself the Moment You Finish Your Question on Zoom"
 date: 2021-07-15T11:41:54-04:00
 author: "Hongtao Hao"
 slug: zoom-mute

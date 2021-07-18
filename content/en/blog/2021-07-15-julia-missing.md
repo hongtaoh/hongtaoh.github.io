@@ -7,7 +7,7 @@ draft: false
 toc: true
 ---
 {{<block class="warning">}}
-Unless you are able to constantly moniter and update changes in this post, please DON'T repost it anywere. 
+Unless you are able to constantly moniter and update changes in this post, please DO NOT repost it anywere!
 {{<end>}}
 
 {{<block class="tip">}}
@@ -231,7 +231,7 @@ for col in eachcol(df)
 end
 ```
 
-The above solution comes from roelpi's post: [ Replacing NaN/Missing in Julia DataFrames](https://www.roelpeters.be/replacing-nan-missing-in-julia-dataframes/).
+which comes from roelpi's post: [Replacing NaN/Missing in Julia DataFrames](https://www.roelpeters.be/replacing-nan-missing-in-julia-dataframes/).
 
 Or,
 
@@ -265,33 +265,46 @@ julia> df .= ifelse.(isequal.(df, missing), 0, df)
    4 │ John         0       5
 ```
 
-You can replace `isequal.(df, missing)` with `ismissing.(df)`, which will get you the same result. 
+You can replace `isequal.(df, missing)` with `ismissing.(df)`, which will get you the same result.
 
-Note that you can omit the doc before `=`, but this way you are creating new column vectors which replace the one ones, instead of applying the operation in-place. 
+There is one restriction when you use dot syntax, i.e., having a dot in `df .=`: you cannot convert missing to values of other data types. Let's say we have a missing value in the `name` column as well:
 
 ```bash
+julia> name = ["Julia", missing, "Tom", "John"]
+
+julia> x = [2, missing, 4, missing]
+
+julia> y = [missing, 3, missing, 5]
+
 julia> df = DataFrame(:name => name, :var1 => x, :var2 => y)
 4×3 DataFrame
- Row │ name    var1     var2    
-     │ String  Int64?   Int64?  
-─────┼──────────────────────────
-   1 │ Julia         2  missing 
-   2 │ Mike    missing        3
-   3 │ Tom           4  missing 
-   4 │ John    missing        5
+ Row │ name     var1     var2    
+     │ String?  Int64?   Int64?  
+─────┼───────────────────────────
+   1 │ Julia          2  missing 
+   2 │ missing  missing        3
+   3 │ Tom            4  missing 
+   4 │ John     missing        5
 
-julia> df = ifelse.(isequal.(df, missing), 0, df)
-# or: df = ifelse.(ismissing.(df), 0, df)
+julia> df .= ifelse.(ismissing.(df), 0, df)
+ERROR: MethodError: Cannot `convert` an object of type Int64 to an object of type String
+``` 
 
-# Note the question marks following `Int64` now disappear
+With the doc before `=`, you are applying the operation in-place, which disallows replacement with a different data type. That is why you see an error when replacing the missing value in the `name` column with 0.
+
+You can curciumvent this restriction by simply omitting the `.`. This way, you are creating new column vectors that replace the one ones.
+
+```bash
+julia> df = ifelse.(ismissing.(df), 0, df)
+# Note how each column's data type changes
 4×3 DataFrame
- Row │ name    var1   var2  
-     │ String  Int64  Int64 
-─────┼──────────────────────
-   1 │ Julia       2      0
-   2 │ Mike        0      3
-   3 │ Tom         4      0
-   4 │ John        0      5
+ Row │ name   var1   var2  
+     │ Any    Int64  Int64 
+─────┼─────────────────────
+   1 │ Julia      2      0
+   2 │ 0          0      3
+   3 │ Tom        4      0
+   4 │ John       0      5
 ```
 
 {{<block class="tip">}}
