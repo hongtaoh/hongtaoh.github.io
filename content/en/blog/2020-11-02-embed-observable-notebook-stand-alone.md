@@ -100,6 +100,12 @@ The `D3ExplorableNotebook` in the second line should the name your imported note
 
 You can study the [source code](https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/d3/explorable-data/index.html) in detail. I'll explain the basic ideas here. With `<div id="viewof-season"></div>`, we'll put the relevant visualization there. If needed, you can edit the style within the CSS stylesheet with `#viewof-season {}`. I barely used any CSS in my example, so I simply place the CSS code within `style` tags of the webpage. If you want more complicated styling, of course you can (and probably should) reference an external CSS stylesheet. 
 
+Two points are worth mentioning:
+
+  1. Each [`id` you assigned above](/en/2020/11/02/exporting-observable-notebook/#assign-id-to-cells-you-are-importing) has to be used here. If there is an unused `id`, the whole web page won't render. If that is your case, delete the unnecessary id(s) [above](/en/2020/11/02/exporting-observable-notebook/#assign-id-to-cells-you-are-importing). 
+
+  2. Each `id` can be used only for once. If you use an `id` twice, only the first one will be rendered. 
+
 ### What if I have more than one notebook in one webpage
 
 It's not that difficult. First, import the second/third/... notebook as you import the first one. Remember that you need to use different names for different notebooks, for example, `import notebook2 from ...`, and `import notebook3 from ...`. 

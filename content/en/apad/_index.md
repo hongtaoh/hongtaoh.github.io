@@ -10,6 +10,178 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+## 2021-08-02
+
+Finished Kecht (2017)
+
+I understand why the hedge fund manager (end of p. 18) believes he deserves the money: those who excel get more money. This idea makes sense when you only look at the "market" you are in. But when you look at the world from above, you will realize that the reason why you can be successful and earn so much money is not because you are hardworking (there are millions of people who are more hardworking than you are but failed); It's because many others have helped you in one way or another and you are simply lucky. The moment you look down upon a poor man as being not hard working enough, you misunderstand how the world works. 
+
+## 2021-08-01
+
+Hecht, K. (2017). [A relational analysis of top incomes and wealth: Economic evaluation, relative (dis) advantage and the service to capital](http://eprints.lse.ac.uk/101845/1/Hecht_a_relational_analysis_of_top_incomes_and_wealth_wp11.pdf).
+
+PP. 1-15
+
+## 2021-07-31
+
+Demeter, M. (2018). [Nobody notices it? Qualitative inequalities of leading publications in communication and media research](https://ijoc.org/index.php/ijoc/article/download/7887/2281). *International Journal of Communication, 12*, 31.
+
+I skimmed through this paper. The main conclusions of this paper are that (1) journals originated from developed countries mostly publish papers by authors from developed countries; (2) cross-cultural collaboration is not common in communication and media studies. 
+
+## 2021-07-30
+
+People receiving personalized ads feel negative emotions, but they continue to disclose private information. 
+
+>Despite their negative reactions, participants who received personalized ads did not differ significantly from those who received generic ads in how many questions they answered. 
+
+PP. 2-9
+
+## 2021-07-29
+
+1. 👍 Finished [Bollen et al. (2021)](https://www.pnas.org/content/pnas/118/30/e2102061118.full.pdf)
+
+The authors analyzed 14 million books (Google Books) in English (US), German, and Spanish in 125 years (1855-2019) based on the prevalence of labeled cognitive distortion schemata (CDS) language patterns. As Fig. 2 shows, the prevalence of CDS language markers is much higher nowadays than 100 years ago. The increase starting from 2007/2008 is very obvious. 
+
+I am wondering whether the results are due to artifacts. In the past, the elite few were the sources of the authors. Nowadays, it's becoming more common for ordinary people to publish. Therefore, books in the past were not good indicators of the general public. That said, this is a very impressive study. Since the data is freely available online for everyone, I can no longer use "lack of data" as an excuse for not being able to publish high quality research. 
+
+2. Hanson, J., Wei, M., Veys, S., Kugler, M., Strahilevitz, L., & Ur, B. (2020, April). [Taking Data Out of Context to Hyper-Personalize Ads: Crowdworkers' Privacy Perceptions and Decisions to Disclose Private Information](https://dl.acm.org/doi/pdf/10.1145/3313831.3376415). In *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems* (pp. 1-13).
+
+PP. 1-2
+
+## 2021-07-28
+
+1. Skimmed through the rest of [Murray et al. (2020)](https://arxiv.org/pdf/2012.02785.pdf). The paper is too technical for me. 
+
+2. Bollen, J., ten Thij, M., Breithaupt, F., Barron, A. T., Rutter, L. A., Lorenzo-Luaces, L., & Scheffer, M. (2021). [Historical language records reveal a surge of cognitive distortions in recent decades](https://www.pnas.org/content/pnas/118/30/e2102061118.full.pdf). *PNAS, 118*(30).
+
+PP. 1-4
+
+## 2021-07-27
+
+1. Skimmed through the rest of [Chattopadhyay et al. (2020)](https://par.nsf.gov/servlets/purl/10189069)
+
+>For researchers, it's important that we support the language data scientists actually use, not the languages we *wish* they would use. 
+
+- Data scientists want version controls for their notebooks. 
+
+{{<block class="tip">}}
+This article puts the section of *Related Work* to the end, which I think is pretty good! After all, why do we have to put literature review in the beginning?
+{{<end>}}
+
+2. Murray, D., Yoon, J., Kojaku, S., Costas, R., Jung, W. S., Milojević, S., & Ahn, Y. Y. (2020). [Unsupervised embedding of trajectories captures the latent structure of mobility](https://arxiv.org/pdf/2012.02785.pdf). *arXiv preprint arXiv:2012.02785*.
+
+PP. 1-4
+
+## 2021-07-26
+
+1. Finished Simon (1969).
+
+2. Chattopadhyay, S., Prasad, I., Henley, A. Z., Sarma, A., & Barik, T. (2020, April). [What's Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunitie](https://par.nsf.gov/servlets/purl/10189069)s. In *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems* (pp. 1-12).
+
+PP. 1-1
+
+## 2021-07-25
+
+Continued with Simon (1969).
+
+>Designing an intelligence system on the principle that attention is scarce and must be preserved is quite different from designing it on the principle of "the more information the better."
+
+>The proper aim of a management information system is not "to bring the manager all the information he needs," but to reorganize the manager's environment of information so as to reduce the amount of time he must devote to receiving it. 
+
+>Knowledge from the laboratory is not always cheaper——and frequently is much less reliable——than knowledge from life. 
+
+PP. 10-22
+
+## 2021-07-24
+
+1. Skimmed through the rest of Börner et al. (2019)
+
+Encodings from the most accurate to the least: position, length, angle & rotation, area. 
+
+2. Simon, H. A. (1969). Designing organizations for an information-rich world. *Brookings Institute Lecture*.
+
+>What information consumes is rather obvious: it consumes the attention of its recipients. Hence a wealth of information creates a poverty of attention, and a need to allocate that attention efficiently among the overabundance of information sources that might consume it. 
+
+>In an information-rich world, most of the cost of information is the cost incurred by the recipient. It is not enough to know how much it costs to produce and transmit it; We must also know how much it costs, in terms of scarce attention, to receive it. 
+
+>If we tell someone he can have certain information processing services free, or almost free, he may demand almost an infinite amount of them. 
+
+PP. 1-10
+
+## 2021-07-23
+
+1. Stuart, T. E., & Ding, W. W. (2006). [When do scientists become entrepreneurs? The social structural antecedents of commercial activity in the academic life sciences](http://faculty.haas.berkeley.edu/tstuart/publications/2006/When%20do%20scienitsts%20become%20entrepreneurs.pdf). *American journal of sociology, 112*(1), 97-144.
+
+I skimmed through it. 
+
+2. Börner, K., Bueckle, A., & Ginda, M. (2019). [Data visualization literacy: Definitions, conceptual frameworks, exercises, and assessments](https://www.pnas.org/content/pnas/116/6/1857.full.pdf). *PNAS, 116*(6), 1857-1864.
+
+PP. 1-4
+
+## 2021-07-22
+
+Read the reviews in [Besançon & Dragicevic (2019)](https://hal.inria.fr/hal-01980268/file/alt.chi_2019_CPDI-authors.pdf)
+
+It's interesting to see what Professor Jessica Hullman says: 
+
+>I suspect the difficulty for many researchers to learn alternatives to NHST may be one cause (for researchers being "selectively listening" to advice on statistical reform).
+
+## 2021-07-21
+
+👍 Finished [Besançon & Dragicevic (2019)](https://hal.inria.fr/hal-01980268/file/alt.chi_2019_CPDI-authors.pdf)
+
+The authors converted all CHI papers between 2010 and 2018 from PDF to texts. They wanted to understand the statistical reporting practices by analyzing the parsed texts. Their results showed that:
+
+  1. Exact *p*-values reporting has been increasing modestly.
+  2. Reporting confidence intervals has been increasing from 6% in 2010 to 15% in 2018. 
+  3. Reporting exclusively *p*-value inequalities (such as *p* < 0.01) has been decreasing modestly.
+  4. Reporting exact *p*-values does not reduce dichotomous inference. 
+  5. Papers that exclusively report confidence intervals are much less likely to report dichotomous inference. 
+
+## 2021-07-20
+
+1. Finished [Gulati et al. (2021)](https://www.pnas.org/content/118/8/e1921338118)
+
+  1. Human deaths and injuries dominate damages caused by wild animals in India. Damages from losses of crops and livestock are very small compared to that from human casualties. 
+
+  2. In terms of cost, damage by an elephant is over 600 times higher than that by herbivores: pig and nilgai. 
+
+  3. Elephants contribute to the higher number of human casualties than any other animals. 
+
+2. Besançon, L., & Dragicevic, P. (2019, May). [The continued prevalence of dichotomous inferences at CHI](https://hal.inria.fr/hal-01980268/file/alt.chi_2019_CPDI-authors.pdf) In *Extended Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems* (pp. 1-11).
+
+PP. 1-3
+
+## 2021-07-19
+
+1. Skimmed through the rest of [Tsai et al. (2000)](https://culture-emotion-lab.sites.stanford.edu/sites/g/files/sbiybj9351/f/tsai_ying_lee_2000.pdf)
+
+For ABCs (American-born Chinese), "being Chinese" and "being American" are unrelated: they can be Chinese in one setting, and be American in another. 
+
+On the other hand, for immigrant Chinese, "being Chinese" and "being American" are negatively related: as they become more American, they become less Chinese. 
+
+2. Gulati, S., Karanth, K. K., Le, N. A., & Noack, F. (2021). [Human casualties are the dominant cost of human–wildlife conflict in India](https://www.pnas.org/content/118/8/e1921338118). *PNAS, 118*(8).
+
+PP. 1
+
+## 2021-07-18
+
+1. Rossman, G., & Fisher, J. C. (2021). [Network hubs cease to be influential in the presence of low levels of advertising](https://www.pnas.org/content/pnas/118/7/e2013391118.full.pdf). *PNAS, 118*(7).
+
+The authors' simulation shows that when diffusion involves external influences such as mass media, seeding with a hub, i.e., opinion leader, does not lead to faster adoption of an innovation. This implies that, for example, when promoting health information, massive advertising might be more effective than we previously thought. 
+
+2. Tsai, J. L., Ying, Y. W., & Lee, P. A. (2000). [The meaning of “being Chinese” and “being American” variation among Chinese American young adults](https://culture-emotion-lab.sites.stanford.edu/sites/g/files/sbiybj9351/f/tsai_ying_lee_2000.pdf). *Journal of Cross-Cultural Psychology, 31*(3), 302-332.
+
+PP. 1-3
+
+## 2021-07-17
+
+Finished [Anderson et al. (2020)](http://www.cs.toronto.edu/~ashton/pubs/alg-effects-spotify-www2020.pdf)
+
+- Algorithmically-driven listening on Spotify is associated with decreased diversity in users' music consumption. 
+
+- High diversity in content consumption on Spotify is associated with a higher level of user retention (i.e., staying on the platform) and user conversion (from trying the free version to paying for the premium service). 
+
 ## 2021-07-16
 
 1. Finished [Xiong et al. (2019)](https://par.nsf.gov/servlets/purl/10196693).
@@ -1715,7 +1887,9 @@ PP. 1-5
 
 ## 2021-03-15
 
-1. Finished Taber & Whittaker. (2020)
+1. Finished [Taber & Whittaker. (2020)](https://www.researchgate.net/profile/Steve-Whittaker/publication/341694794_On_Finsta_I_can_say_%27Hail_Satan%27_Being_Authentic_but_Disagreeable_on_Instagram/links/5f752f3da6fdcc00864bef36/On-Finsta-I-can-say-Hail-Satan-Being-Authentic-but-Disagreeable-on-Instagram.pdf)
+
+- People tend to post positive things in their Rinsta (i.e., real Instagram accounts) and negative (but authentic) things in their Finsta (i.e., false Instagram accounts). They want to present a polished and emotional-free self on their Rinsta. Self-presentation can be coarse and emotional on Finsta. People might also talk about taboo activities on their Finsta. 
 
 - People treat Rinsta and Finsta differently because they are targeting different audiences. 
 
@@ -1729,21 +1903,19 @@ PP. 1
 
 Continued with Taber & Whittaker (2020)
 
-- People tend to post positive things in their Rinsta (i.e., real Instagram accounts) and negative (but authentic) things in their Finsta (i.e., false Instagram accounts). They want to present a polished and emotional-free self on their Rinsta. Self-presentation can be coarse and emotional on Finsta. People might also talk about taboo activities on their Finsta. 
-
 PP. 4-8
 
 ## 2021-03-13
 
 1. I skimmed through Moran et al. (2021) and found it was too difficult for me to understand. I gave it up. 
 
-2. Taber, L., & Whittaker, S. (2020, April). ['' On Finsta, I can say Hail Satan'": Being Authentic but Disagreeable on Instagram](https://www.researchgate.net/profile/Steve-Whittaker/publication/341694794_On_Finsta_I_can_say_%27Hail_Satan%27_Being_Authentic_but_Disagreeable_on_Instagram/links/5f752f3da6fdcc00864bef36/On-Finsta-I-can-say-Hail-Satan-Being-Authentic-but-Disagreeable-on-Instagram.pdf). In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (pp. 1-14).
+2. Taber, L., & Whittaker, S. (2020, April). ['' On Finsta, I can say Hail Satan'": Being Authentic but Disagreeable on Instagram](https://www.researchgate.net/profile/Steve-Whittaker/publication/341694794_On_Finsta_I_can_say_%27Hail_Satan%27_Being_Authentic_but_Disagreeable_on_Instagram/links/5f752f3da6fdcc00864bef36/On-Finsta-I-can-say-Hail-Satan-Being-Authentic-but-Disagreeable-on-Instagram.pdf). In *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems* (pp. 1-14).
 
 PP. 1-4.
 
 ## 2021-03-12
 
-1. Finished McDonald et al. (2021)
+1. Finished [McDonald et al. (2021)](https://www.pnas.org/content/pnas/118/3/e2016238117.full.pdf)
 
 The authors trained their machine learning model with the behavior and characteristics of known vessels associated with forced labor. They then used this model to predict high-risk vessels among 16,000 industrial vessels, utilizing these vessels' satellite monitoring data. The results showed that 14% - 26% of these vessels are of high risk, and 57,000 - 100,000 people worked on these vessels. 
 

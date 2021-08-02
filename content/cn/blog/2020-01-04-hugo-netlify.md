@@ -105,7 +105,7 @@ git push -u origin master
 
 ## 五、将 Github 仓库部署于Netlify
 
-{{<figure src="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/blogdown-signpost-5.png" title="图片作者：Allison Hill ">}}
+{{<figure src="https://alison.rbind.io/blog/2017-06-up-running-with-blogdown/blogdown-signpost-5.png" title="图片作者：Allison Hill ">}}
 
 [Netlify](https://www.netlify.com/) 提供免费的静态网站托管服务，它可以帮我们把 Github 仓库里的文件以网页形式发布到互联网。
 
