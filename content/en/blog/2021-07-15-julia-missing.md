@@ -7,7 +7,7 @@ draft: false
 toc: true
 ---
 {{<block class="warning">}}
-Unless you are able to constantly moniter and update changes in this post, please DO NOT repost it anywere!
+Unless you are able to constantly moniter and update changes in this post, please DO NOT repost it anywere. Feel free to share the link, though. 
 {{<end>}}
 
 {{<block class="tip">}}
@@ -152,7 +152,7 @@ You are allowed to replace missing values with strings here because `df.var2 =` 
 
 Since it's not changes in-place, but rather a new column inserted, you can change `missing` to values of any data type. 
 
-### Base.Coalesce
+### Base.coalesce
 
 [`Base.coalesce(x, y)`](https://docs.julialang.org/en/v1/base/base/#Base.coalesce) returns the first value in the argument which is not `missing`, if any. Otherwise, it returns `missing`.
 

@@ -39,21 +39,33 @@ div.splitbox div.left {
 div.splitbox div.right {
                width:100%;
                float:left;}
+.column {
+  width:  100%;
+}
 }
 
-#top {
-  position: fixed;
-  right: 0;
-  z-index: 1;
+
+.wide {
+/*From Yihui's blog post:  https://yihui.org/en/2021/06/css-full-width/*/
+ width: 90vw;
+ margin-left: calc(44% - 42vw);
+ display: flex;
+}
+
+.wide-single {
+ width: 90vw;
+ margin-left: calc(44% - 42vw);
+}
+
+.column {
+  flex: 50%;
+  padding: .05px;
 }
 
 .fullwidth {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+/*From Yihui's blog post:  https://yihui.org/en/2021/06/css-full-width/*/
+ width: 100vw;
+ margin-left: calc(50% - 50vw);
 }
 
 /*Stylying footer text*/

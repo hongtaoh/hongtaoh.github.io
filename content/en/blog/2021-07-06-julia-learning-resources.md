@@ -20,7 +20,7 @@ toc: false
 
 - [Julia Tutorials on Julia.School](https://julia.school/julia/) by [Ron Erdos](https://twitter.com/RonErdos), [Source Code](https://github.com/moonbooth/julia-school)
 
-## DataFrames
+## DataFrames.jl
 
 - [DataFrames.jl official documentation](https://dataframes.juliadata.org/stable/)
 
