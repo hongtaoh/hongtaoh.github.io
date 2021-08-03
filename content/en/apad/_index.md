@@ -14,8 +14,10 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 
 Finished Kecht (2017)
 
+{{<block class="tip">}}
 I understand why the hedge fund manager (end of p. 18) believes he deserves the money: those who excel get more money. This idea makes sense when you only look at the "market" you are in. But when you look at the world from above, you will realize that the reason why you can be successful and earn so much money is not because you are hardworking (there are millions of people who are more hardworking than you are but failed); It's because many others have helped you in one way or another and you are simply lucky. The moment you look down upon a poor man as being not hard working enough, you misunderstand how the world works. 
-
+{{<end>}}
+  
 ## 2021-08-01
 
 Hecht, K. (2017). [A relational analysis of top incomes and wealth: Economic evaluation, relative (dis) advantage and the service to capital](http://eprints.lse.ac.uk/101845/1/Hecht_a_relational_analysis_of_top_incomes_and_wealth_wp11.pdf).
