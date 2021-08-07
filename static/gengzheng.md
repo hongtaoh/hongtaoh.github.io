@@ -1,5 +1,5 @@
 ---
-title: 通知
+title: 更正
 author: 郝鸿涛
 ---
 
