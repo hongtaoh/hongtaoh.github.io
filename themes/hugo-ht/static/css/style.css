@@ -39,11 +39,7 @@ div.splitbox div.left {
 div.splitbox div.right {
                width:100%;
                float:left;}
-.column {
-  width:  100%;
 }
-}
-
 
 .wide {
 /*From Yihui's blog post:  https://yihui.org/en/2021/06/css-full-width/*/
@@ -474,6 +470,10 @@ hr {
 
   pre, code {
     font-size: 12px;
+  }
+
+  .column {
+  width:  100%;
   }
 
 }
