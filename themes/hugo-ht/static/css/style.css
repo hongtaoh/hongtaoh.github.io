@@ -471,16 +471,6 @@ hr {
   pre, code {
     font-size: 12px;
   }
-
-  .column {
-    width: 100%;
-  }
-
-  figure img {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-  }
-
 }
 
 
