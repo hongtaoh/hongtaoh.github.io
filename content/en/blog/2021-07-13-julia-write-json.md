@@ -10,7 +10,7 @@ toc: true
 The following post is tested under Julia v1.6.1, DataFrames.jl v1.2.0, JSON.jl v0.21.1, and JSONTables.jl v1.0.1.
 {{<end>}}
 
-To export data frames as JSON files in Julia, you need [JSON.jl](https://github.com/JuliaIO/JSON.jl), or [JSONTables.jl](https://github.com/JuliaData/JSONTables.jl). The key difference between the two packages is that JSON.jl transforms **a dictionary, a vector of dictionaries, or a vector of DataFrameRow**, whereas JSONTables.jl processes **dataframes**. Note that JSON.jl might be able to process other forms of data than the three types I mention; I don't know what they are, though. 
+To export data frames as JSON files in Julia, you need [`JSON.jl`](https://github.com/JuliaIO/JSON.jl), or [`JSONTables.jl`](https://github.com/JuliaData/JSONTables.jl). The key difference between the two packages is that `JSON.jl` transforms **a dictionary, a vector of dictionaries, or a vector of DataFrameRow**, whereas `JSONTables.jl` processes **dataframes**. Note that `JSON.jl` might be capable of processing other forms of data than what I mentioned above, but I don't know what they are. 
 
 To write JSON files, the output can either be a json object of arrays, or a json array of objects. I'll explain the differences between the two in the following part. 
 
@@ -55,7 +55,7 @@ end
 
 {{<figure src="/media/enblog/julia_write_json/jts_objecttable.png" caption="Results of jts_objecttable.json (rendered on Observablehq)" class="fullwidth">}}
 
-We can achieve this through JSON.jl as well, and there are two ways we can do this.
+We can achieve this through `JSON.jl` as well, and there are two ways we can do this.
 
 The first solution:
 
@@ -99,7 +99,7 @@ end
 
 {{<figure src="/media/enblog/julia_write_json/jts_arraytable.png" caption="Results of jts_arraytable.json (rendered on Observablehq)" class="fullwidth">}}
 
-To get a JSON array of objects using JSON.jl, we need to first obtain an array whose element corresponds to each row in the data frame:
+To get a JSON array of objects using `JSON.jl`, we need to first obtain an array whose element corresponds to each row in the data frame:
 
 ```julia
 array_objects = [] # initiate an array
