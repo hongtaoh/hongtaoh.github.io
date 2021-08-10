@@ -3,7 +3,8 @@ title: Curriculum Vitae
 type : apad
 ---
 # Hongtao Hao
-Contact: [Email](/files/email.png)
+Contact: hongtaoh@cs.wisc.edu
+<!-- Contact: [Email](/files/email.png) -->
 
 ## Education
 
