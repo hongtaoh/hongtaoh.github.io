@@ -10,6 +10,141 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+## 2021-08-15
+
+1. Finished Western et al. (2021)
+
+The authors analyzed jail admission records in New York City from 2008 to 2017 and came to three findings:
+
+  1. Black men are 8-20 times more likely to be put into jail compared to White men. Latino men are also at a higher risk of jail incarceration. 
+
+  2. Jail incarceration is concentrated in high-poverty areas. 
+
+  3. Cuts in the jail population during the 10 year period are associated with reductions in risks of jail incarceration for Black and Latino men. 
+
+2. Preston, S. H., & Vierboom, Y. C. (2021). [Excess mortality in the United States in the 21st century](https://www.pnas.org/content/pnas/118/16/e2024850118.full.pdf). *PNAS, 118*(16).
+
+I skimmed through this paper. The authors compared the US and five largest European countries in terms of mortality. Fig. 1A shows that the US has a higher mortality rate for most age ranges except for over age 85y. 
+
+{{<block class="reminder">}}
+Fig. 1 shows ratios. I guess they need to use a log scale??
+{{<end>}}
+
+## 2021-08-14 (completed on 2021-08-15)
+
+1. Kruczkiewicz et al. (2021). [Opinion: Compound risks and complex emergencies require new approaches to preparedness](https://www.pnas.org/content/pnas/118/19/e2106795118.full.pdf). *PNAS, 118*(19).
+
+2. Western, B., Davis, J., Ganter, F., & Smith, N. (2021). [The cumulative risk of jail incarceration](https://www.pnas.org/content/pnas/118/16/e2023429118.full.pdf). *PNAS, 118*(16).
+
+PP. 1-2
+
+## 2021-08-13
+
+1. Finished [Adam, D. (2021)](https://www.pnas.org/content/pnas/118/14/e2104652118.full.pdf)
+
+2. Nyberg, L., Magnussen, F., Lundquist, A., Baaré, W., Bartrés-Faz, D., Bertram, L., ... & Fjell, A. M. (2021). [Educational attainment does not influence brain aging](https://www.pnas.org/content/pnas/118/18/e2101644118.full.pdf). *PNAS, 118*(18).
+
+The finding of this paper challenges the belief that higher education translates into slower brain aging. 
+
+## 2021-08-12
+
+1. Skimmed through the rest of [Thöni & Volk. (2021)](https://www.pnas.org/content/118/23/e2026112118)
+
+The title captures the main findings well, that is, men have greater variability in time, risk, and social preferences. 
+
+2. Conley, D., & Johnson, T. (2021). [Opinion: Past is future for the era of COVID-19 research in the social sciences](https://www.pnas.org/content/pnas/118/13/e2104155118.full.pdf). *PNAS, 118*(13).
+
+3. Adam, D. (2021). [Core Concept: Muography offers a new way to see inside a multitude of objects](https://www.pnas.org/content/pnas/118/14/e2104652118.full.pdf). *PNAS, 118*(14).
+
+PP. 1-2
+
+## 2021-08-11
+
+1. Andersen, S. H., Richmond-Rakerd, L. S., Moffitt, T. E., & Caspi, A. (2021). [Nationwide evidence that education disrupts the intergenerational transmission of disadvantage](https://www.pnas.org/content/pnas/118/31/e2103896118.full.pdf). *PNAS, 118*(31).
+
+I skimmed through it. 
+
+Those who are at a health and social disadvantage tend to have both parents and children who are high-need users of health and social sectors. This means the disadvantage can be transmitted from the past generation and to the next generation. 
+
+Education disrupts the transmission from the previous generation and to the next generation. For people in the same generation, siblings with higher education have reduced risks for these disadvantages. 
+
+2. Thöni, C., & Volk, S. (2021). [Converging evidence for greater male variability in time, risk, and social preferences](https://www.pnas.org/content/118/23/e2026112118). *PNAS, 118*(23).
+
+PP. 1-3
+
+## 2021-08-10
+
+Asimovic, N., Nagler, J., Bonneau, R., & Tucker, J. A. (2021). [Testing the effects of Facebook usage in an ethnically polarized setting](https://www.pnas.org/content/pnas/118/25/e2022819118.full.pdf). *PNAS, 118*(25).
+
+I skimmed through it. 
+
+Deactivating Facebook for a week during a genocide commemoration in Bosnia and Herzegovina led to greater outgroup hostility. 
+
+
+## 20201-08-09
+
+Riedl, C., Kim, Y. J., Gupta, P., Malone, T. W., & Woolley, A. W. (2021). [Quantifying collective intelligence in human groups](https://www.pnas.org/content/118/21/e2005737118). *PNAS, 118*(21).
+
+I skimmed through it. 
+
+## 2021-08-08 (Completed on 2021-08-09)
+
+Clauset, A., Larremore, D. B., & Sinatra, R. (2017). [Data-driven predictions in the science of science](https://par.nsf.gov/servlets/purl/10039722). *Science, 355*(6324), 477-480.
+
+>A dangerous possibility is that funders, publishers, and universities will exploit large bibliographic databases to create new systems that automatically evaluate the future "impact" of project proposals, manuscripts, or young scholars. Such data-mining efforts should be undertaken with extreme caution. 
+
+>A troubling trend, however, is that the nearly annual declaration by a Nobel laureate that their biggest discovery would not have been possible in today's research environment. The 2016 declaration came from Ohsumi, who declared the fact that "scientists are now increasingly required to provide evidence of immediate and tangible application of their work".
+
+>... a more reliable engine for generating scientific discoveries may be to cultivate and maintain a healthy ecosystem of scientists rather than focus on predicting individual discoveries. 
+
+
+## 2021-08-07
+
+1. Finished Jiska (2018)
+
+2. Finished Sharma, N. (2020). [Two or three things I learned from being alone](http://agentsofishq.com/hi/being-alone/). 
+
+## 2021-08-06
+
+1. Finished González-Bailón & De Domenico (2021)
+
+Twitter and the web are different news ecosystems; unverified bots are not the cause for these differences. 
+
+2. Jiska (2018). Empowering AI to drive humanity's moral evolution. 
+
+PP. 1-2
+
+## 2021-08-05
+
+1. Ornes, S. (2021). [News Feature: The tricky challenge holding back electric cars](https://www.pnas.org/content/pnas/118/26/e2109654118.full.pdf). *PNAS, 118*(26).
+
+Dendrites are the major problems facing future development of EVs. 
+
+2. González-Bailón, S., & De Domenico, M. (2021). [Bots are less central than verified accounts during contentious political events](https://www.pnas.org/content/pnas/118/11/e2013443118.full.pdf). *PNAS, 118*(11).
+
+PP. 1-4
+
+## 2021-08-04
+
+Finished Long et al. (2020)
+
+## 2021-08-03
+
+1. Masaki, H., Shibata, K., Hoshino, S., Ishihama, T., Saito, N., & Yatani, K. (2020, April). [Exploring nudge designs to help adolescent sns users avoid privacy and safety threats](https://iis-lab.org/paper/CHI2020.pdf). In *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems* (pp. 1-11).
+
+I skimmed through it. The main findings are:
+
+  1. To nudge people to be aware of privacy and safety issues on social media, it's better to use negative expressions such as "90% of people would not post images without permission" than to use affirmative ones like "10% of people would post images without permission".
+  2. General suggestions such as "People would feel uncomfortable with this" also work. 
+
+2. Ashtari, N., Bunt, A., McGrenere, J., Nebeling, M., & Chilana, P. K. (2020, April). [Creating augmented and virtual reality applications: Current practices, challenges, and opportunities](http://www.cs.ubc.ca/labs/edapt/papers/ashtari2020.pdf). In *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems* (pp. 1-13).
+
+I skimmed through it. 
+
+3. Long, D., & Magerko, B. (2020, April). [What is AI literacy? Competencies and design considerations](https://static1.squarespace.com/static/53c69580e4b08011fc2337bf/t/5e2893e4a9d342214836e832/1579717605435/CHI+2020+AI+Literacy+Paper-Camera+Ready.pdf). In *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems* (pp. 1-16).
+
+PP. 1-2
+
 ## 2021-08-02
 
 Finished Kecht (2017)
