@@ -12,7 +12,7 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 
 ## 2021-08-15
 
-1. Finished Western et al. (2021)
+1. Finished [Western et al. (2021)](https://www.pnas.org/content/pnas/118/16/e2023429118.full.pdf)
 
 The authors analyzed jail admission records in New York City from 2008 to 2017 and came to three findings:
 
