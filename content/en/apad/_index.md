@@ -10,6 +10,94 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+## 2021-08-24
+
+Zhao, Y., Wang, Z., Shen, Z. J. M., & Sun, F. (2021). [Assessment of battery utilization and energy consumption in the large-scale development of urban electric vehicles](https://www.pnas.org/content/pnas/118/17/e2017318118.full.pdf). *PNAS, 118*(17).
+
+I skimmed through this paper. 
+
+- In Beijing, long-distance EVs do not necessarily use a large portion of the vehicle's available energy. Also, due to technological constraints, around 35% of battery energy of EVs cannot be used.
+
+- It's better not to develop EVs so fast in cities with extremely high or low temperatures. 
+
+## 2021-08-23 (Completed on 2021-08-24)
+
+Skimmed through the rest of [Clayton et al. (2021)](https://www.pnas.org/content/pnas/118/23/e2024125118.full.pdf)
+
+For Trump supporters, exposure to his norm-violating statements regarding election frauds decreases their trust in elections. But exposure to these statements increases trust in elections among Trump disapprover. 
+
+## 2021-08-22
+
+1. Skimmed through the rest of [Chaabouni et al. (2021)](https://www.pnas.org/content/pnas/118/12/e2016569118.full.pdf)
+
+2. Suran, M. (2021). [News Feature: Keeping Black students in STEM](https://www.pnas.org/content/pnas/118/23/e2108401118.full.pdf). *PNAS, 118*(23).
+
+We need resource allocation and related policies to increase diversity in STEM. 
+
+3. Clayton, K., Davis, N. T., Nyhan, B., Porter, E., Ryan, T. J., & Wood, T. J. (2021). [Elite rhetoric can undermine democratic norms](https://www.pnas.org/content/pnas/118/23/e2024125118.full.pdf). *PNAS, 118*(23).
+
+PP. 1-1
+
+## 2021-08-21 
+
+1. Skimmed through the rest of [Nanakdewa et al. (2021)](https://www.pnas.org/content/pnas/118/30/e2021727118.full.pdf)
+
+2. Chaabouni, R., Kharitonov, E., Dupoux, E., & Baroni, M. (2021). [Communicating artificial neural networks develop efficient color-naming systems](https://www.pnas.org/content/pnas/118/12/e2016569118.full.pdf). *PNAS, 118*(12).
+
+PP. 1-4
+
+## 2021-08-20 (Completed on 2021-08-21)
+
+1. Nomi, T., Raudenbush, S. W., & Smith, J. J. (2021). [Effects of double-dose algebra on college persistence and degree attainment](https://www.pnas.org/content/pnas/118/27/e2019030118.full.pdf). *PNAS, 118*(27).
+
+Skimmed through this paper. 
+
+The authors find that providing additional training on algebra for incoming 9th graders with median skills in algebra, most of whom were minorities from low-income families, increased their life chances. For example, those who received double-dose on algebra stayed longer in college and were more likely to obtain college degrees. 
+
+The key to the success of this intervention is that (1) the schools strictly adhere to the policy, and (2) schools assign median-skills students to classes with similar or higher, but not lower, math skills. 
+
+2. Nanakdewa, K., Madan, S., Savani, K., & Markus, H. R. (2021). [The salience of choice fuels independence: Implications for self-perception, cognition, and behavior](https://www.pnas.org/content/pnas/118/30/e2021727118.full.pdf). *PNAS, 118*(30).
+
+PP. 1-1
+
+## 2021-08-19 (Completed on 2021-08-21)
+
+1. Skimmed through the rest of [Ellis et al. (2021)](https://www.pnas.org/content/pnas/118/17/e2023483118.full.pdf)
+
+This paper shows that around 75% of earth land was already inhabited and reshaped by human activity over 12,000 years ago. The recent loss of biodiversity should better be seen as the intensifying use of lands **already** reshaped by human activities. 
+
+2. Bird, M. I., Crabtree, S. A., Haig, J., Ulm, S., & Wurster, C. M. (2021). [A global carbon and nitrogen isotope perspective on modern and ancient human diet](https://www.pnas.org/content/pnas/118/19/e2024642118.full.pdf). *PNAS, 118*(19).
+
+I skimmed through this paper. 
+
+The isotope dietary breadth across industrialized nonsubsistence populations is only one thirds of that of pre-industrialization populations and subsistence populations in modern times. 
+
+## 2021-08-18 (Completed on 2021-08-21)
+
+1. Kraus, S., & Koch, N. (2021). [Provisional COVID-19 infrastructure induces large, rapid increases in cycling](https://www.pnas.org/content/pnas/118/15/e2024399118.full.pdf). *PNAS, 118*(15).
+
+I skimmed through this paper. The authors show that new provisional infrastructure for cycling led to an increase in cycling in more than 100 European cities. 
+
+2. Ellis, E. C., Gauthier, N., Goldewijk, K. K., Bird, R. B., Boivin, N., Díaz, S., ... & Watson, J. E. (2021). [People have shaped most of terrestrial nature for at least 12,000 years](https://www.pnas.org/content/pnas/118/17/e2023483118.full.pdf). *PNAS, 118*(17).
+
+PP. 1-2
+
+## 2021-08-17 (Completed on 2021-08-21)
+
+Persson, J., Parie, J. F., & Feuerriegel, S. (2021). [Monitoring the COVID-19 epidemic with nationwide telecommunication data](https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/483529/e2100664118.full.pdf?sequence=2&isAllowed=y). *PNAS, 118*(26).
+
+I skimmed through this paper. 
+
+The authors used telecommunication data obtained from swisscom to estimate the effects of COVID-19 policy measures in Switzerland on human bility from 10 February to 26 April 2020 and to test the predictive power of human mobility inferred from telecommunication data for reported COVID-19 cases. The results show that related measures reduced human mobility, and reduction in human mobility predicted decreased reported cases. 
+
+## 2021-08-16
+
+McNulty, J. K., Meltzer, A. L., Neff, L. A., & Karney, B. R. (2021). [How both partners’ individual differences, stress, and behavior predict change in relationship satisfaction: Extending the VSA model](https://andreameltzer.com/wp-content/uploads/2021/07/PNAS-2021-McNulty-et-al.pdf). *PNAS, 118*(27).
+
+I skimmed through this paper. 
+
+Based on 10 independent longitudinal studies, this paper tests the Vulnerability-Stress-Adaptation (VSA) model to understand why marital satisfaction declines. The findings of this research support the central tenets of the VSA model but also propose some revisions to the model.
+
 ## 2021-08-15
 
 1. Finished [Western et al. (2021)](https://www.pnas.org/content/pnas/118/16/e2023429118.full.pdf)
