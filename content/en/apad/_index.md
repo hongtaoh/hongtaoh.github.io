@@ -10,6 +10,104 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+## 2021-09-03
+
+Haghtalab, N., Jackson, M. O., & Procaccia, A. D. (2021). [Belief polarization in a complex world: A learning theory perspective](https://www.pnas.org/content/pnas/118/19/e2010144118.full.pdf). *PNAS, 118*(19).
+
+I skimmed through this paper. The authors use machine learning theories to model how people form beliefs. This approach is different from the Bayesian one. A Bayesian model of human learning posits that people have a prior and update this distribution based on new data. A ML approach, on the other hand, allows people to discard one prior for new ones when the old one fails to explain the data. 
+
+{{<block warning>}}
+I don't 100% understand the details of this paper. Therefore, I am not sure whether my interpretation above is correct. 
+{{<end>}}
+
+## 2021-09-02
+
+Buntaine, M. T., Zhang, B., & Hunnicutt, P. (2021). [Citizen monitoring of waterways decreases pollution in China by supporting government action and oversight](https://www.pnas.org/content/pnas/118/29/e2015175118.full.pdf). *PNAS, 118*(29).
+
+I skimmed through this paper. 
+
+## 2021-09-01
+
+Swencionis, J. K., Pouget, E. R., & Goff, P. A. (2021). [Supporting social hierarchy is associated with White police officers’ use of force](https://www.pnas.org/content/pnas/118/18/e2007693118.full.pdf). *PNAS, 118*(18).
+
+I skimmed through this paper. 
+
+For White patrol officers, the higher their SDO (social dominance orientation, which means maintaining social hierarchies), the more force they use in the service of their job. 
+
+## 2021-08-31 (Completed on 2021-09-01)
+
+Finished [Starck et al. (2021)](https://www.pnas.org/content/pnas/118/16/e2013833118.full.pdf)
+
+Instrumental rationale of diversity: diversity brings educational benefits. 
+
+Moral rationale: diversity involves intrinsic values such as justice. 
+
+White participants (students & caregivers) prefer and expect more positive outcomes at instrumentally motivated universities compared to moral motivated ones. Black participants prefer and expect the opposite. University admission officers are aware of, and share these preference and expectation differences.
+
+Both texts from the official websites of universities and admission officers show that universities use instrumental rationales to a greater extent than moral ones. 
+
+Regression models show that when texts from official websites show low morality, high instrumentality correlates with worse graduation rates for Black students. 
+
+The results of this study show that the common practice of diversity among universities favor White Americans rather than racial minorities. 
+
+## 2021-08-30
+
+Starck, J. G., Sinclair, S., & Shelton, J. N. (2021). [How university diversity rationales inform student preferences and outcomes](https://www.pnas.org/content/pnas/118/16/e2013833118.full.pdf). *PNAS, 118*(16). 
+
+PP. 1-4
+
+## 2021-08-29
+
+Turkel, E., Saha, A., Owen, R. C., Martin, G. J., & Vasserman, S. (2021). [A method for measuring investigative journalism in local newspapers](https://www.pnas.org/content/pnas/118/30/e2105155118.full.pdf). PNAS, 118(30).
+
+The authors use a classifier to identify investigative reporting, and measure how investigativeness they are, among 5.9 million articles in the past 10 decade (2010-2020) produced by a selection of 50 newspapers located in different regions of the US. They find that despite the widespread changes recently in the news industry, the quality of investigative reporting in US local newspapers was stable. That said, there is a decline in the past two years, possibly because of newsroom layoffs. 
+
+## 2021-08-28
+
+Finished [Gordon & Mendes (2021)](https://www.pnas.org/content/pnas/118/31/e2105573118.full.pdf)
+
+The authors use smartphone apps to measure participants' blood pressure and heart rates along with their self-reported experiences in daily life three times a day. 
+
+They find that when people are experiencing stress, their blood pressure (both systolic and diastolic) will be significantly higher than their baseline level. Resources people have to cope with stresses, such as financial, and interpersonal networks, have a role here as well. The more resources people have, the lower their blood pressure will be when experiencing stress. 
+
+>[S]tress is best understood in its relation to the resources that individuals have. 
+
+{{<block class="reminder">}}
+There is a typo on p.5: "so these data are limited in how well then can characterize how stress and emotion affect BP reactivity in the very old (80 and older)".
+
+"Then" here should be "they".
+{{<end>}}
+
+## 2021-08-27 (completed on 2021-08-28)
+
+1. Finished [Salon et al. (2021)](https://www.pnas.org/content/pnas/118/27/e2106499118.full.pdf)
+
+2. Gordon, A. M., & Mendes, W. B. (2021). [A large-scale study of stress, emotions, and blood pressure in daily life using a digital platform](https://www.pnas.org/content/pnas/118/31/e2105573118.full.pdf). *PNAS, 118*(31).
+
+PP. 1-4
+
+## 2021-08-26
+
+1. Finished Mirza et al. (2021)
+
+The authors used nighttime light (NTL) which is remotely sensed as a proxy for economic inequality across and within countries in the world. As can be seen in Fig. 1A and 1B, light Gini estimate (2010) almost overlaps with income Gini estimate (2010). Statistical analysis also shows that light Gini for high income countries is significantly lower than that for low and middle income nations. 
+
+Finer resolutions of NTL shows that the areas with high inequality are: eastern China, Southern Africa, coastal areas of the USA (e.g., California and Texas), northern Egypt, and central Brazil. 
+
+2. Salon, D., Conway, M. W., da Silva, D. C., Chauhan, R. S., Derrible, S., Mohammadian, A. K., ... & Pendyala, R. M. (2021). [The potential stickiness of pandemic-induced behavior changes in the United States](https://www.pnas.org/content/pnas/118/27/e2106499118.full.pdf). *PNAS, 118*(27).
+
+PP. 1-1
+
+## 2021-08-25
+
+1. Mueller, H., Groeger, A., Hersh, J., Matranga, A., & Serrat, J. (2021). [Monitoring war destruction from space using machine learning](https://www.pnas.org/content/pnas/118/23/e2025400118.full.pdf). *PNAS, 118*(23).
+
+I skimmed through this paper. The authors show that machine learning can be used to monitor war destruction of urban infrastructure. 
+
+2. Mirza, M. U., Xu, C., van Bavel, B., van Nes, E. H., & Scheffer, M. (2021). [Global inequality remotely sensed](https://www.pnas.org/content/pnas/118/18/e1919913118.full.pdf). *PNAS, 118*(18).
+
+PP. 1-1
+
 ## 2021-08-24
 
 Zhao, Y., Wang, Z., Shen, Z. J. M., & Sun, F. (2021). [Assessment of battery utilization and energy consumption in the large-scale development of urban electric vehicles](https://www.pnas.org/content/pnas/118/17/e2017318118.full.pdf). *PNAS, 118*(17).
@@ -1785,7 +1883,7 @@ Task-specific data based on historical outcomes has a better predictive ability 
 
 ## 2021-04-05
 
-Finished Guess et al. (2021)
+Finished [Guess et al. (2021)](https://www.pnas.org/content/pnas/118/14/e2013464118.full.pdf)
 
 Those who set their desktop browser homepage to Huffington Post visited the Huffington Post website more. Those who set the homepage to Fox News increased their visits to the Fox News website. Treatment had little impacts on participants' political opinions, but decreased participants' trust in mainstream media up to one year after the experiment. 
 
@@ -3299,7 +3397,7 @@ Forgot about this paper (*You had me at hello*) on 2020-12-05. Finished it on 20
 
 ## 2020-12-03
  
-Finished Hosseinmardi et al. (2020)
+Finished [Hosseinmardi et al. (2020)](https://arxiv.org/pdf/2011.12843.pdf?mc_cid=49e377e0c0)
 
 Main findings:
 
@@ -3311,7 +3409,7 @@ Main findings:
 
 1. Service, R. ‘The game has changed.’ AI triumphs at solving protein structures. From [Sciencemag](https://www.sciencemag.org/news/2020/11/game-has-changed-ai-triumphs-solving-protein-structures).
 
-2. Hosseinmardi, H., Ghasemian, A., Clauset, A., Rothschild, D. M., Mobius, M., & Watts, D. J. (2020). Evaluating the scale, growth, and origins of right-wing echo chambers on YouTube. *arXiv preprint arXiv:2011.12843.*
+2. Hosseinmardi, H., Ghasemian, A., Clauset, A., Rothschild, D. M., Mobius, M., & Watts, D. J. (2020). [Evaluating the scale, growth, and origins of right-wing echo chambers on YouTube](https://arxiv.org/pdf/2011.12843.pdf?mc_cid=49e377e0c0). *arXiv preprint arXiv:2011.12843.*
 
 PP. 1-2
 
