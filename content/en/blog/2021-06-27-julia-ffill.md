@@ -16,7 +16,7 @@ I'll answer in the following.
 
 The following answer is entirely based on the discussions in this thread: [Julia DataFrame Fill NA with LOCF](https://stackoverflow.com/q/41196748/13716814). More specifically, it is based on the answers by Danish Shrestha, [Dan Getz](https://stackoverflow.com/a/41198219/13716814), and [btsays](https://stackoverflow.com/a/67465356/13716814).
 
-As [laborg](https://stackoverflow.com/a/58724665/13716814) implies, the [accumulate](https://docs.julialang.org/en/v1/base/arrays/#Base.accumulate) function in Base Julia will do the job. 
+As [laborg](https://stackoverflow.com/a/58724665/13716814) implies, the [`accumulate`](https://docs.julialang.org/en/v1/base/arrays/#Base.accumulate) function in Base Julia will do the job. 
 
 Suppose we have an array: `a = [1, missing, 2, missing, 9]`. We want to replace the 1st `missing` with `1` and the second with `2`: a = [1, 1, 2, 2, 9], which is `a = a[[1, 1, 3, 3, 5]]` ([1, 1, 3, 3, 5] here are indexes). 
 
