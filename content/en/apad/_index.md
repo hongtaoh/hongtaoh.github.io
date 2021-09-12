@@ -10,14 +10,112 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
+2021: [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
+
+2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
+
+## 2021-09-11
+
+1. Finished [Gurrieri et al. (2021)](https://www.pnas.org/content/pnas/118/20/e2101937118.full.pdf)
+
+As the title indicates, alcohol reduces the distance between strangers, but not that between friends. 
+
+Under the backdrop of COVID-19, it might serve the public's interests to limit the open hours of bars. 
+
+2. Malmgren, R. D., Ottino, J. M., & Amaral, L. A. N. (2010). [The role of mentorship in protégé performance](https://www.nature.com/articles/nature09040). *Nature, 465*(7298), 622-626.
+
+PP. 1-2
+
+## 2021-09-10
+
+{{<block class="reminder">}}
+
+One year goal achieved!
+
+What a year. I was working on YY's COVID-19 visualization project a year ago and then busily prepared for my PhD application. Results turned out well. I moved to a new place, Madison, WI, to persue my study, in a different field from what I have been doing for the past 10 years. Not sure how long I can keep reading papers like this, but who knows. Fingers crossed.
+
+Glance: 211 papers/reports/blogs read; 211 hours and 34 minutes garnered. 
+
+{{<end>}}
+
+{{<figure src="https://media.giphy.com/media/YPc5e834zAN5lsUpZV/giphy.gif?cid=ecf05e47tfod65xuf5wl10rbsehz92s7dpd4njfb0h3hfuzi&rid=giphy.gif&ct=g" caption="One year achieved (Image credit: Giphy)">}}
+
+1. Finished reading reports on South Korea, Indian, Singapore, and New Zealand, which are part of [Fleming (2016)](https://www.nature.com/articles/536S1a).
+
+2. Gurrieri, L., Fairbairn, C. E., Sayette, M. A., & Bosch, N. (2021). [Alcohol narrows physical distance between strangers](https://www.pnas.org/content/pnas/118/20/e2101937118.full.pdf). *PNAS, 118*(20).
+
+PP. 1-1
+
+## 2021-09-09 (completed on 2021-09-10)
+
+Fleming, N. (2016). [Career guide: Asia-Pacific](https://www.nature.com/articles/536S1a). *Nature, 536*(7617), S1-S1.
+
+I finished reading China, Japan, and Australia. 
+
+## 2021-09-08 (completed on 2021-09-10)
+
+Finished [Hofman et al. (2021)](https://www.nature.com/articles/s41586-021-03659-0)
+
+- Social scientists focus on explanations that are often for causal relationships derived from theories Computer scientists, on the other hand, emphasize predictions. As long as a model improves predictions, computer scientists is Okay with the model being super complex. 
+
+ - What NHST, a method applied widely in social science research, does is that it tests whether the hypothesized effect derived from theories is not zero. If it is not zero, then researchers conclude these observations are not in conflict with the theory, so the theory can continue to be used as an explanatory tool. 
+
+ However, NHST has the following flaws:
+
+   - NHST does not test directly the outcome of interest, nor the magnitude of effect. It only looks at whether the hypothesized effect based on a theory is non-zero. 
+
+   - In reality, many effects are non-zero. Therefore, statements that a theory cannot be ruled out by data are not valid as they appear. 
+
+- Computer scientists use models to predict. It should be noted that the value of a model does not only depend on its absolute performance, but also its comparison with a baseline. For example, search data is highly correlated with flu numbers two weeks later, which is quite impressive. But it turns out that the same correlation can be found between CDC case numbers in previous weeks, and case numbers in future weeks. 
+
+## 2021-09-07
+
+Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., ... & Yarkoni, T. (2021). [Integrating explanation and prediction in computational social science](https://www.nature.com/articles/s41586-021-03659-0). *Nature, 595*(7866), 181-188.
+
+PP. 1-2
+
+## 2021-09-06
+
+1. Finished skimming through [Conlen et al. (2019)](https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.13720)
+
+This paper analyzed audiences' log data from three interactive visualizations authored by Idyll, a markup language to create interactive content. 
+
+- My main takeaways from this papers are:
+
+  - People usually spend around 1-2 minutes on a visualization. 
+
+  - If some contents are hidden behind a click, around half of the people will not click and see it. Maybe they don't notice it or they are satisfied with high level information enough to skip details. 
+
+  - Many people will quickly skim through all the content before they dive into details (if they ever do so).
+
+- How I can further this work:
+
+  1. The function of accessing users' log data is restricted to visualizations made by the Idyll language. However, most interactive visualizations available online might be created by other languages. This means we cannot use this feature to study interactive visualizations in the wild. 
+
+  2. I am thinking of a study where I ask participants to interact with many interactive visualizations and look at what features of visualizations (1) make people spend more time and (2) lead to better recall.
+
+## 2021-09-05
+
+Conlen, M., Kale, A., & Heer, J. (2019, June). [Capture & analysis of active reading behaviors for interactive articles on the web](https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.13720). In *Computer Graphics Forum* (Vol. 38, No. 3, pp. 687-698).
+
+PP. 1-7
+
+## 2021-09-04
+
+Schaefer, J. D., Hamdi, N. R., Malone, S. M., Vrieze, S., Wilson, S., McGue, M., & Iacono, W. G. (2021). [Associations between adolescent cannabis use and young-adult functioning in three longitudinal twin studies](https://www.pnas.org/content/pnas/118/14/e2013180118.full.pdf). *PNAS, 118*(14).
+
+I skimmed through this paper. 
+
+This study is a twin study. It shows that using cannabis during adolescence has a possible causal relationship with young adults' socioeconomic outcomes. However, cannabis use is no longer associated with negative emotional and cognitive outcomes once we consider familial factors. 
+
 ## 2021-09-03
 
 Haghtalab, N., Jackson, M. O., & Procaccia, A. D. (2021). [Belief polarization in a complex world: A learning theory perspective](https://www.pnas.org/content/pnas/118/19/e2010144118.full.pdf). *PNAS, 118*(19).
 
-I skimmed through this paper. The authors use machine learning theories to model how people form beliefs. This approach is different from the Bayesian one. A Bayesian model of human learning posits that people have a prior and update this distribution based on new data. A ML approach, on the other hand, allows people to discard one prior for new ones when the old one fails to explain the data. 
+I skimmed through this paper. The authors use machine learning theories to model how people form beliefs. This approach is different from the Bayesian one. A Bayesian model of human learning posits that people have a prior and update this distribution based on new data. An ML approach, on the other hand, allows people to discard one prior for another when the old one fails to explain the data.
 
-{{<block warning>}}
-I don't 100% understand the details of this paper. Therefore, I am not sure whether my interpretation above is correct. 
+{{<block class="warning">}}
+I don't fully understand the details of this paper, so I am not 100% sure of my interpretation above. 
 {{<end>}}
 
 ## 2021-09-02
@@ -33,6 +131,8 @@ Swencionis, J. K., Pouget, E. R., & Goff, P. A. (2021). [Supporting social hiera
 I skimmed through this paper. 
 
 For White patrol officers, the higher their SDO (social dominance orientation, which means maintaining social hierarchies), the more force they use in the service of their job. 
+
+# 2021-08
 
 ## 2021-08-31 (Completed on 2021-09-01)
 
@@ -344,6 +444,8 @@ I understand why the hedge fund manager (end of p. 18) believes he deserves the 
 Hecht, K. (2017). [A relational analysis of top incomes and wealth: Economic evaluation, relative (dis) advantage and the service to capital](http://eprints.lse.ac.uk/101845/1/Hecht_a_relational_analysis_of_top_incomes_and_wealth_wp11.pdf).
 
 PP. 1-15
+
+# 2021-07
 
 ## 2021-07-31
 
@@ -700,6 +802,8 @@ PP. 9-10
 
 PP. 1-6
 
+# 2021-06
+
 ## 2021-06-30
 
 1. Skipper, C. (2018). [*The Most Important Survival Skill for the Next 50 Years Isn’t What You Think*](https://www.gq.com/story/yuval-noah-harari-tech-future-survival)
@@ -1043,6 +1147,8 @@ PP. 1-6
 👍 Barres, B. A. (2013). [How to pick a graduate advisor](https://www.sciencedirect.com/science/article/pii/S0896627313009070). *Neuron, 80*(2), 275-279.
 
 See my summary in Chinese [here](https://hongtaoh.com/cn/2021/06/01/advisor/).
+
+# 2021-05
 
 ## 2021-05-31
 
@@ -1636,6 +1742,8 @@ Finished [Hoffman et al. (2016)](https://www.pnas.org/content/113/16/4296)
 
 - Participants in Study 2 who do not endorse, or endorse fewer, false beliefs, report that a White person feels less pain. However, these participants are not biased in their treatment recommendations for White people. 
 
+# 2021-04
+
 ## 2021-04-30
 
 1. Hoffman, K. M., Trawalter, S., Axt, J. R., & Oliver, M. N. (2016). [Racial bias in pain assessment and treatment recommendations, and false beliefs about biological differences between blacks and whites](https://www.pnas.org/content/113/16/4296). *PNAS, 113*(16), 4296-4301.
@@ -1912,6 +2020,8 @@ PP. 1-8
 Banet-Weiser, S., & Portwood-Stacer, L. (2006). [‘I just want to be me again!’ Beauty pageants, reality television and post-feminism](https://journals.sagepub.com/doi/pdf/10.1177/1464700106064423?casa_token=p9r61O0DuMQAAAAA:fLqzuU2EWHvw49tu4tkzWqBtdCA1-e-k0PN2CNsspifpu8dtzBRadSqCweN59z0WSYgAwWNeApuG). *Feminist Theory, 7*(2), 255-272.
 
 pp.1
+
+# 2021-03
 
 ## 2021-03-31 (Completed on 2021-04-01)
 
@@ -2368,6 +2478,8 @@ PP. 1-6
 
 - In your response, use different fonts to distinguish between quoting reviewers, your reply, and quoting text in your revised paper. 
 
+# 2021-02
+
 ## 2021-02-28
 
 Continued with Kim et al. (2020)
@@ -2687,6 +2799,8 @@ Luhrmann, T. M., Weisman, K., Aulino, F., Brahinsky, J. D., Dulin, J. C., Dzokot
 
 PP. 1-4
 
+# 2021-01
+
 ## 2021-01-31
 
 McDermott, A. (2021). [Science and Culture: At the nexus of music and medicine, some see treatments for disease](https://www.pnas.org/content/118/4/e2025750118.short). *PNAS, 118*(4).
@@ -2695,7 +2809,6 @@ Music seems to have medical benefits. Musical treatment might alleviate pain, an
 
 Early studies of music therapy were not necessarily "scientific" in the sense that many of them were not properly blind trials. Right now, there are some ongoing studies funded by NIH.
  
-
 ## 2021-01-30
 
 1. Skimmed through the rest of [Fienberg (2006)](https://projecteuclid.org/download/pdf_1/euclid.ba/1340371071). Too difficult for me to grasp now. 
@@ -3097,6 +3210,8 @@ Palchykov, V., Kaski, K., Kertész, J., Barabási, A. L., & Dunbar, R. I. (2012)
 
 PP. 1-3
 
+# 2020-12
+
 ## 2020-12-31
 
 Shneiderman, B. (2018). Twin-Win Model: A human-centered approach to research success. *PNAS, 115*(50), 12590-12594.
@@ -3104,7 +3219,6 @@ Shneiderman, B. (2018). Twin-Win Model: A human-centered approach to research su
 - Some research questions are more useful than others. Research that solves a real-world problem has more impacts and should be encouraged. Good research should lead to both new knowledge and solutions to societal problems. 
 
 >... researchers need to work with professionals who have authentic problems. 
-
 
 ## 2020-12-30
 
@@ -3426,6 +3540,8 @@ Conclusions:
 2. The pattern and effect of consuming news on desktop are different than that of consuming news on multiplatform, with the later reaching increasingly larger audiences, attracting more time spent on news consumption, and making audiences less fragmented. 
 
 3. More than half of the US population access little to no news. These people might also be susceptible to misinformation. 
+
+# 2020-11
 
 ## 2020-11-30
 1. Finished Huberman et al. (2008)
@@ -3831,6 +3947,7 @@ It describes how well its neighbors are connected.
 The clustering coefficient of a network is the mean of all nodes' clustering coefficient. It stands for the probability of a link between two randomly selected nodes that share a neighbor. 
 
 ## 2020-11-03
+
 1. Finished Steegen et al. (2016)
 
 >In a more complete analysis, the multiverse of data sets could be crossed with the multiverse of models to further reveal the multiverse of statistical results. 
@@ -3876,6 +3993,7 @@ When only one choice is clearly and unambiguously the most appropriate one, vari
 {{<end>}}
 
 ## 2020-11-01
+
 Steegen, S., Tuerlinckx, F., Gelman, A., & Vanpaemel, W. (2016). Increasing transparency through a multiverse analysis. *Perspectives on Psychological Science, 11*(5), 702-712.
 
 - Some common measures to solve the reproducibility crisis in social sciences: high power, adjusting the `$\alpha$` level, focusing on estimation not on testing, using Bayesian statistics.
@@ -3888,6 +4006,8 @@ Steegen, S., Tuerlinckx, F., Gelman, A., & Vanpaemel, W. (2016). Increasing tran
 
 PP. 702-707
 
+
+# 2020-10
 
 ## 2020-10-31
 
@@ -4276,6 +4396,8 @@ p7-p12.
 
 p2 -p7.
 
+# 2020-09
+
 ## 2020-09-30
 Bullmore & Sporns. (2009). p6-p9.
 
@@ -4484,5 +4606,3 @@ Lazer et al. (2020)
 
 ## 2020-09-10
 - p1-p4. Cha et al. (2007, October). I tube, you tube, everybody tubes: analyzing the world's largest user generated content video system. In *Proceedings of the 7th ACM SIGCOMM conference on Internet measurement* (pp. 1-14).
-
-
