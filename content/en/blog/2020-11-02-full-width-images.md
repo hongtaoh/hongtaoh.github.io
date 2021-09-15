@@ -6,9 +6,10 @@ slug: full-width-image-hugo
 draft: false
 toc: false
 ---
+
 I thought it must be super difficult to have full width images in a Hugo post because the width of my body text is already defined and yet all figures have to be within the body. I stumbled upon a very easy solution [here](https://visionscarto.net/observable-jekyll/).
 
-Add the following[^1] to your website stylesheet:
+Add the following CSS codes[^1] to your website stylesheet:
 
 ```css
 .fullwidth {
@@ -20,6 +21,15 @@ Add the following[^1] to your website stylesheet:
   margin-right: -50vw;
 }
 ```
+
+{{<block class="tip">}}
+Thanks to [Yihui's post](https://yihui.org/en/2021/06/css-full-width/), I now know that the above snippet can be shortened to only two lines of CSS:
+
+```css
+width: 100vw;
+margin-left: calc(50% - 50vw);
+``` 
+{{<end>}}
 
 Then, when using Hugo's [built-in `figure` shortcode](https://gohugo.io/templates/shortcode-templates/#single-named-example-image), include `class="fullwidth"` :
 
