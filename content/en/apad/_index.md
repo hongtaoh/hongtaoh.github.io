@@ -32,13 +32,13 @@ PP. 1-2
 
 One year goal achieved!
 
-What a year. I was working on YY's COVID-19 visualization project a year ago and then busily prepared for my PhD application. Results turned out well. I moved to a new place, Madison, WI, to persue my study, in a different field from what I have been doing for the past 10 years. Not sure how long I can keep reading papers like this, but who knows. Fingers crossed.
+What a year. I was working on [YY's COVID-19 visualization project](https://yyahn.com/covid19-dashboard/index.html) a year ago and then busily prepared for [my PhD application](/cn/2021/05/22/my-phd-app/). Results turned out well. I moved to a new place, Madison, WI, to persue my study, in a different field from what I have been doing for the past 10 years. Not sure how long I can keep reading papers like this, but who knows. Fingers crossed.
 
-Glance: 211 papers/reports/blogs read; 211 hours and 34 minutes garnered. 
+A glance: 211 papers/reports/blogs read; 211 hours and 34 minutes collected. 
 
 {{<end>}}
 
-{{<figure src="https://media.giphy.com/media/YPc5e834zAN5lsUpZV/giphy.gif?cid=ecf05e47tfod65xuf5wl10rbsehz92s7dpd4njfb0h3hfuzi&rid=giphy.gif&ct=g" caption="One year achieved (Image credit: Giphy)">}}
+{{<figure src="https://media.giphy.com/media/YPc5e834zAN5lsUpZV/giphy.gif?cid=ecf05e47tfod65xuf5wl10rbsehz92s7dpd4njfb0h3hfuzi&rid=giphy.gif&ct=g" caption="One year goal achieved (Image credit: Giphy)">}}
 
 1. Finished reading reports on South Korea, Indian, Singapore, and New Zealand, which are part of [Fleming (2016)](https://www.nature.com/articles/536S1a).
 

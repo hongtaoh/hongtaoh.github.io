@@ -396,7 +396,7 @@ Yield 标不是说让你要停下来，而是让你慢行，注意来往车辆�
 
 如果五年内你有4次或以上重大违章 (major traffic violations) 或者12次及以上非重大违章 (minor violations), 车管所 (DMV) 会宣称你为惯犯 (habitual offender)。如果你是惯犯，你的驾照将被吊销 5 年，并且两年之内你无法申请临时驾照 (occupational licence). 
 
-在威斯康星，上路意味着你默许 (implied consent): 当警察要看你是否酒驾或者吸毒时，你必须要配合。
+在威斯康星，上路即意味着你默许 (implied consent): 当警察检查你是否酒驾或者吸毒时，你必须要配合。
 
 [^1]: 参考 https://posts.careerengine.us/p/5b121b134fb8460b67ea9be3
 
