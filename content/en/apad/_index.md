@@ -56,7 +56,7 @@ I finished reading China, Japan, and Australia.
 
 Finished [Hofman et al. (2021)](https://www.nature.com/articles/s41586-021-03659-0)
 
-- Social scientists focus on explanations that are often for causal relationships derived from theories Computer scientists, on the other hand, emphasize predictions. As long as a model improves predictions, computer scientists is Okay with the model being super complex. 
+- Social scientists focus on explanations that are often for causal relationships derived from theories. Computer scientists, on the other hand, emphasize predictions. As long as a model improves predictions, computer scientists is Okay with the model being super complex. 
 
  - What NHST, a method applied widely in social science research, does is that it tests whether the hypothesized effect derived from theories is not zero. If it is not zero, then researchers conclude these observations are not in conflict with the theory, so the theory can continue to be used as an explanatory tool. 
 
