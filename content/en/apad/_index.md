@@ -10,9 +10,265 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
-2021: [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
+2021: [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
 
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
+
+# 2021-09
+
+## 2021-09-28
+
+1. Ivancevic, A. (2018). [Done is better than perfect: overcoming PhD perfectionism](http://blogs.nature.com/naturejobs/2018/07/09/done-is-better-than-perfect-overcoming-phd-perfectionism/)
+
+  - If you are too perfectionist, you'll probably never publish anything. 
+  - Don't expect your PhD thesis to be perfect. If you do, you'll never be able to graduate. 
+
+2. Stearns, S. [Modest Advice](https://stearnslab.yale.edu/modest-advice)
+
+  - Prepare for the worst: your research might fail, you won't get along with your advisor. 
+  - Your advisor doesn't have time to care about you. You have to figure out what to do on your own. 
+  - If you don't understand someone else's work, then it's their fault. 
+  - You have to figure out on your own why your work is important.
+  - Never expect your thesis to be perfect. There is no perfect thesis. 
+  - Be open to job opportunities outside of your PhD. This prevents you from losing your independence. If you know you have other options outside of your research, you are better off. 
+  - Avoid taking lectures. 
+     - "To learn to think, you need two things: large blocks of time, and as much one-on-one interaction as you can get with someone who thinks more clearly than you do."
+  - "Write a proposal and get it criticized."
+  - At least once a year, send to your advisor a 1-2 page file documenting the progress you've made to your program. Your advisor will appreciate that. 
+  - Start publishing papers early on. 
+  - Publish regularly but not too often. Uncited papers are a waste of time and energy. 
+
+## 2021-09-27 (completed on 2021-09-28)
+
+1. Cirik, V. (2019). [*PhD 101*](https://www.cs.cmu.edu/~vcirik/blog/2019/phd-101/)
+
+  - Research involves lots of uncertainty and failures. Be prepared. 
+  - Don't equate your self-worth to research ideas you have. 
+  - The narrative you see in papers sound like their ideas flow smoothly. In reality, it's never going to happen. There will be many trials and errors and many "dead ends". 
+  - "Your relationship with your advisor is the single biggest factor on your happiness. Be **as transparent as possible.**"
+  - Success is not equal to great personality. Don't be surprised if you know terrible things happening in your research community. 
+  - PhD should definitely not become the whole of your life! You should have a life outside of your PhD!
+
+2. Taylor, L. (2018). [Twenty things I wish I’d known when I started my PhD](https://www.nature.com/articles/d41586-018-07332-x)
+
+  - (About work-life balance & mental health)
+  - Having a work-life balance by doing daily routines that work for you. Taking good care of yourself is key to your success. 
+  - Have a life outside your work. PhD should not become your whole life. 
+  - Socialize your other graduate students. 
+  - Don't compare yourself with others. 
+
+  - (About research)
+  - Attend seminars and lab-group meetings. Things you'll hear might change your research trajectory completely. 
+  - Back up. Back up. Back up. 
+  - Write down everything. Don't count on your memory. 
+  - You need *completed* work, not *perfect* work. 
+
+  - (About relationship with advisor)
+  - Discuss expectations with your supervisor. 
+  - Be honest with your supervisor. 
+  - Don't struggle alone. Ask help if you need.
+
+## 2021-09-26 (completed on 2021-09-28)
+
+1. Kreiner, J. (2021). [How to reduce digital distractions: advice from medieval monks](https://aeon.co/ideas/how-to-reduce-digital-distractions-advice-from-medieval-monks)
+
+I had no idea what this article was talking about. 
+
+2. Fiesler, C. (2019). [Why (and how) academics should blog their papers](https://cfiesler.medium.com/why-and-how-academics-should-blog-their-papers-e6869559b8ea)
+
+Blogging helps the general public know about your studies. 
+
+3. Fiesler, C. (2018). [What Our Tech Ethics Crisis Says About the
+State of Computer Science Education](https://howwegettonext.com/what-our-tech-ethics-crisis-says-about-the-state-of-computer-science-education-a6a5544e1da6)
+
+Ethics should not be separated from software engineering. You code, and then you are responsible for your codes. 
+
+Even scientists might consider negative impacts their studies might have. 
+
+## 2021-09-25
+
+👍 Bromham, L., Dinnage, R., & Hua, X. (2016). [Interdisciplinary research has consistently lower funding success](https://www.nature.com/articles/nature18315). *Nature, 534*(7609), 684-687.
+
+The authors examined the relationship between (1) the degree of interdisciplinarity of research proposals and (2) the success rate of this proposal being approved of. 
+
+The dataset consists of all proposals, both successful and unsuccessful, submitted to the Australian Research Council Discovery Programme from 2010 to 2014. 
+
+Success rate is easy to calculate but "interdisciplinarity" of a proposal is not. Researchers used to measure "interdisciplinarity" by checking specific words like "interdisciplinary" or through bibliometric analysis. These two measures have many disadvantages. The authors here propose a new measure called interdisciplinary distance (IDD).
+
+The results show that interdisciplinary proposals have lower success rates and this is not because universities with higher success rates submit more narrowly focused research proposals. 
+
+## 2021-09-24 (completed on 2021-09-25)
+
+1. Chris (2020). [11 Things I’d Tell Myself if I Were Starting My PhD Again. Advice for PhD Students.](https://roostervane.com/advice-for-phd-students/)
+
+- Treat a PhD like a job. You are not a student anymore. Don't wait for others to tell you want to do. 
+
+- Apply for as many grants as your time allows you to do so. 
+
+2. Casey Flesler (2019). [Advice for New PhD Students: Your Research Career is a Long Game](https://cfiesler.medium.com/advice-for-new-phd-students-your-research-career-is-a-long-game-4721abbd80ac)
+
+- Read papers like you'll be able to cite it in the next 20 years instead of right now. 
+
+- Don't write papers just to be accepted by a conference. Write it like it will be a start of your whole new research path. 
+
+- Don't compare yourself with others. 
+
+- If you don't have any free time at all during your PhD, something must be wrong. 
+
+3. Li, F-F. (2009). [De-Mystifying Good Research and Good Papers](https://bigaidream.gitbooks.io/tech-blog/content/2014/de-mystifying-good-research.html)
+
+>Not enough people conduct first class research. And not enough people write good papers. 
+
+>[Y]our research topic should have many 'customers', and your solution would be the one they want to use. 
+
+- You should aim to let your paper inspire many other papers in the future to follow and cite you. 
+
+>Badly written papers get bad reviewers. 
+
+## 2021-09-23 (completed on 2021-09-24)
+
+👍 Im, J., Chandrasekharan, E., Sargent, J., Lighthammer, P., Denby, T., Bhargava, A., ... & Gilbert, E. (2020, July). [Still out there: Modeling and identifying russian troll accounts on twitter](https://dl.acm.org/doi/pdf/10.1145/3394231.3397889). In *12th ACM Conference on Web Science* (pp. 1-10).
+
+The authors used a machine learning model (logistic regression) to identify Russian Troll Twitter accounts based on the dataset released by Twitter of potential Troll accounts. This model is able to distinguish troll accounts from randomly selected Twitter accounts with good precision. Adjusted by human verification, the authors argue that around 2.6% of examined accounts on Twitter are Russian Troll accounts. 
+
+The authors also find that those troll accounts do not behave like bots. 
+
+## 2021-09-22
+
+Finished *Advice for early-stage Ph.D. students* by Philip Guo. 
+
+## 2021-09-21 
+*Advice for early-stage Ph.D. students* by Philip Guo. 
+
+PP. 16-27
+
+## 2021-09-20 (completed on 2021-09-21)
+
+*Advice for early-stage Ph.D. students* by Philip Guo. 
+
+PP. 8-15
+
+## 2021-09-19 (completed on 2021-09-20)
+
+*Advice for early-stage Ph.D. students* by Philip Guo. 
+
+PP. 1-7
+
+## 2021-09-18
+
+👍 Ruder S. (2020). [*10 Tips for Research and a PhD*](https://ruder.io/10-tips-for-research-and-a-phd/)
+
+1. Read broadly. 
+
+  - Look beyond your immediate interest. Papers that connect different topics and even different fields are insightful. 
+  - It's better to read 10 papers superficially than to read one paper in depth. With a paper management system, you can always go back and read more deeply. 
+
+2. Work on two things. 
+   - If you only have one project in hand, then : 1) when the project fails, you lose motivation; 2) when the project comes to a standstill, you have no choice but to keep grinding. In comparison, if you have two projects, you can work on the other one if one project is stagnant, which gives you a rest and maybe a new perspective. 
+
+   - If the two projects are in different fields, then it's better to focus on one project a day. 
+
+3. Be ambitious. 
+
+   When you have two projects going on, one can be a safe one and you can take risks with the other one. The risky one might have more impact if it succeeds. Work on something that excites you. Challenge the status quo. 
+
+4. Collaborate. 
+
+   - If you collaborate with others remotely, it's important to "communicate clearly and to set expectations". 
+
+   - Be open in terms of collaboration. Work with something different than your supervisor. Collaborate with people from a different university than your own. 
+
+5. Be proactive. 
+
+   Seek out collaborations, meetings, and advice actively. Talk with people.
+
+6. Write a blog. 
+
+   Writing a blog helps you develop your communication skills.
+
+7. Keep a source of positive energy. 
+
+   - Work on things that excite you. If you cannot decide things to work on, try to find an angle that excites you. 
+
+   - Establish a support network that you can count on. Surround yourself with positive people. 
+
+   - Find something that you can fall back on when things don't go well: exercise, a side project, meditation, blogging, to name just a few. Always remember that your well-being is the single most important thing. 
+
+8. Play to your strengths. 
+
+   This section is very inspiring for me personally. I come from a non-CS background and should use this as a strength. A different perspective on and/or approach towards problems is my strength. 
+
+9. Intern or visit a university. 
+
+   - If you are deciding between the industry and academia, an internship or a research visit can give you insights. 
+
+   - Working with a mentor different from your advisor can help you grow. 
+
+10. Play the long game. 
+
+   Be nice. 
+
+## 2021-09-17
+
+👍 Liu, L., Wang, Y., Sinatra, R., Giles, C. L., Song, C., & Wang, D. (2018). [Hot streaks in artistic, cultural, and scientific careers](https://www.nature.com/articles/s41586-018-0315-8). *Nature, 559*(7714), 396-399.
+
+This paper is significant because it reconciles two opposing models of individuals' career productivity. The first model is the "Matthew effect" which believes that there is a unique period when a person performs consistently better than in other periods. The second model argues that the best work is purely random and is driven by high productivity. 
+
+The hot-streak model proposed by this paper argues that peak-performance period occurs randomly in a person's career, but high-impact work is more likely to occur during this hot-streak period. 
+
+The study begins by investigating the probability of each of the three most impactful work (`$N*$`, `$N**$`, and `$N***$`) by an artist, film director, and a scientist and finds that each of the three works by an individual occurs randomly. But when the authors looked at the distance between individuals' most impactful work, they found that high-impact work tends to occur together. That is to say, there is a temporal correlation between highly impactful work for an individual. 
+
+Some other key findings in this paper:
+
+1. All three careers, i.e., artists, directors, and scientists have peak-performance periods, but the hot-streak pattern varies across careers. See Figure 2 for details. 
+
+2. Hot streaks rarely happen more than once. 
+
+3. For the three careers considered in this paper, a hot streak usually lasts 3-6 years.
+
+4. People are not more productive during a hot streak period. 
+
+## 2021-09-16
+
+1. [*Fraudulent data raise questions about superstar honesty researcher*](https://www.geeksscience.com/fraudulent-data-raise-questions-about-superstar-honesty-researcher-science/)
+
+2. [Evidence of Fraud in an Influential Field Experiment About Dishonesty](https://datacolada.org/98)
+
+## 2021-09-15
+
+Kim, S. Y. S., Lebovits, H., & Shugars, S. (2021). [Building a Bigger Table: Networking 101 For Graduate Students](https://preprints.apsanet.org/engage/api-gateway/apsa/assets/orp/resource/item/6090e37d30049a686236c4c5/original/building-a-bigger-table-networking-101-for-graduate-students.pdf).
+
+- Socialize with those with similar experience and similar interests to yours. 
+
+- Whatever your rank or power is, you are able to make someone in your community feel welcome. Aim to find those who feel uneasy and alone, and try to make them feel welcome. Strive to establish a community, not only your personal network. 
+
+- Try to connect people, rather than simply increase your own social network.
+
+- Reach out to senior scholars four weeks ahead of the conference and ask for their time to give you feedback on your work. If they don't respond, don't take it personally. Maybe they receive too many emails and are not able to respond to yours. 
+
+## 2021-09-14
+
+Halpern, B. S., Longo, C., Hardy, D., McLeod, K. L., Samhouri, J. F., Katona, S. K., ... & Zeller, D. (2012). [An index to assess the health and benefits of the global ocean](https://www.nature.com/articles/nature11397). *Nature, 488*(7413), 615-620.
+
+I skimmed through this paper. 
+
+## 2021-09-13 (completed on 2021-09-14)
+
+Finished [Lazer et al. (2021)](https://www.nature.com/articles/s41586-021-03660-7)
+
+- Does the data we have measure the construct we want to study?
+
+- Are the people we are studying representative of the population? Can we generalize our findings?
+
+- Is it ethical to access & analyze the data that we have?
+
+## 2021-09-12
+
+1. Finished [Malmgren et al. (2010)](https://www.nature.com/articles/nature09040)
+
+2. Lazer, D., Hargittai, E., Freelon, D., Gonzalez-Bailon, S., Munger, K., Ognyanova, K., & Radford, J. (2021). [Meaningful measures of human society in the twenty-first century](https://www.nature.com/articles/s41586-021-03660-7). *Nature, 595*(7866), 189-196.
+
+PP. 1-3
 
 ## 2021-09-11
 
@@ -876,7 +1132,7 @@ Skipper, C. (2018). [*How to Kick Your Bad Habits (And Why That's More Important
 
 - In terms of a habit, even if you cannot do the whole thing, you should make a slight improvement. Throw away the 'all-or-nothing' mentality. If you act upon a habit until you feel it can transform your life altogether, you'll end up achieving nothing. 
 
-- **Find out the key moments in your day that determine how you spend the next one or two hours. Work backwards from those moments and which trigger events that caused these moments.** 
+- **Find out the key moments in your day that determine how you spend the next one or two hours. Work backwards from those moments and try to figure out what was the trigger events that caused these moments.** 
 
 - "Prune away the good things to get to the great things". This means to find out what is most important for you. 
 
@@ -1410,7 +1666,7 @@ PP. 1-2
 
 PP. 1-2
 
-2. Finished *How to Be a Successful PhD Student* by Mark Dredze and Hanna M. Wallach (2012). 
+2. Finished [*How to Be a Successful PhD Student*](https://www.cs.jhu.edu/~mdredze/publications/HowtoBeaSuccessfulPhDStudent.pdf) by Mark Dredze and Hanna M. Wallach (2012). 
 
 ### How to interact with your advisor
 
@@ -1642,17 +1898,7 @@ I don't think the tips in this post are "realistic". For undergraduate students,
 
 3. Finished Guilbert. (2020)
 
-- For talks: plan and practice
-
-- It's Okay to (1) repeat the questioner's question and ask whether it's what they asked; and (2) wait for a second or two before you answer that question. 
-
->Please take care of yourself, in whatever way you need ... For example, I need to sleep, exercise, and spend time with my family. I prioritize those things every day.
-
-> Setting everyday boundaries can be very difficult in academia, but I think it has really helped me over the long term. 
-
-## 2021-05-06
-
-Continued with Guilbert. (2020)
+## Papers
 
 >[T]he process of discovering what makes a great paper *great* is itself an invaluable learning experience. 
 
@@ -1666,14 +1912,29 @@ Continued with Guilbert. (2020)
 
 PP. 9-18
 
-### About classes
+### Classes
 >Many students, having excelled in classes their entire academic lives, have trouble letting go of this, and need to excel in every class they take while in the PhD program. In my opinion, this is a common reason for burnout in grad school. When you go on the job market, almost no one will care what classes you took during grad school and how well you performed in them. Everyone will care about your research and what contributions you made. 
 
 >[Classes] should come second to your research, your data, your questions. 
 
 >The PhD program is all about learning new things, but as your research problems lead you there. 
 
->You might seek out a class to help you master something you know you need in research. But let the research drive that exploration and those decisions. 
+>You might seek out a class to help you master something you know you need in research. But let the research drive that exploration and those decisions.
+
+## Talks 
+- Plan and practice your talks.
+
+- It's Okay to (1) repeat the questioner's question and ask whether it's what they asked; and (2) wait for a second or two before you answer that question. 
+
+## Life 
+
+>Please take care of yourself, in whatever way you need ... For example, I need to sleep, exercise, and spend time with my family. I prioritize those things every day.
+
+> Setting everyday boundaries can be very difficult in academia, but I think it has really helped me over the long term. 
+
+## 2021-05-06
+
+Continued with Guilbert. (2020) 
 
 PP. 9-18
 
