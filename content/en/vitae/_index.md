@@ -8,6 +8,8 @@ Contact: hongtaoh@cs.wisc.edu
 
 ## Education
 
+- 2021 ～ 2026 (expected), [Ph.D. in Computer Sciences](https://www.cs.wisc.edu/), University of Wisconsin Madison
+
 - 2018 ~ 2020, M.A. in Media Arts and Sciences, Indiana Univeristy Bloomington (GPA: 4.00/4.00)
    - Committee: Nicole Martins (Chair), Danielle Kilgo, Bryant Paul
    - Relevant Coursework: [Introduction to Bayesian Data Analysis I](https://jkkweb.sitehost.iu.edu/jkkteach/P533/), [Data Visualization](http://yyahn.com/dviz-course/), Quantitative Methods for Public Health Research, Introduction to Statistics in Media Research, Content Analysis , Media Theories , Children and Media, Applying Social Science Research Methods to Media

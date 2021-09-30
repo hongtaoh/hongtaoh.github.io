@@ -10,7 +10,7 @@ When I was updating my blog using Git, I was sent an email from GitHub:
 
 >Basic authentication using a password to Git is deprecated and will soon no longer work. Visit https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information around suggested workarounds and removal dates.
 
-To solve this issue, go to [https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/) as suggested. AT [What you need to do today](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/#what-you-need-to-do-today), you will see that using a personal access token is recommended. 
+To solve this issue, go to [https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/) as suggested. At [What you need to do today](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/#what-you-need-to-do-today), you will see that using a personal access token is recommended. 
 
 Read [this official documentation](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to create a personal access token. Remember to save your token carefully!
 

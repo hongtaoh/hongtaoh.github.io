@@ -13,6 +13,8 @@ In fact, there are only two steps:
 
 2. Open Terminal, and type `open -a Finder /usr/local/bin`[^2]. This will open the folder of `/usr/local/bin`. Then drag the `hugo` file in `hugo_0.70.0_macOS-64bit` that you just downloaded and unzipped into the `/bin` folder. If you are upgrading, just replace the old one. 
 
+If you don't have `/usr/local/bin`, you can first go to `/usr/local` and create the `bin` folder by yourself.  
+
 To make it clearer, this is where you should place the `hugo` file:
 
 ```bash
