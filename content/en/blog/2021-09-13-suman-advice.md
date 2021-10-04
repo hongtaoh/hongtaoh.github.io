@@ -1,9 +1,9 @@
 ---
-title: "Professor Suman Banerjee's Advice for New Graduate Students"
+title: "Professor Suman Banerjee's Advice for New CS Graduate Students"
 date: 2021-09-13T11:13:51-05:00
 author: "Hongtao Hao"
 slug: suman-advice
-draft: false
+draft: true
 toc: false
 ---
 
