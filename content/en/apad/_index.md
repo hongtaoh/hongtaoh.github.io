@@ -18,7 +18,7 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 
 ## 2021-09-28
 
-1. Ivancevic, A. (2018). [Done is better than perfect: overcoming PhD perfectionism](http://blogs.nature.com/naturejobs/2018/07/09/done-is-better-than-perfect-overcoming-phd-perfectionism/)
+1. Ivancevic, A. (2018). [*Done is better than perfect: overcoming PhD perfectionism*](http://blogs.nature.com/naturejobs/2018/07/09/done-is-better-than-perfect-overcoming-phd-perfectionism/)
 
   - If you are too perfectionist, you'll probably never publish anything. 
   - Don't expect your PhD thesis to be perfect. If you do, you'll never be able to graduate. 
@@ -135,7 +135,7 @@ The authors also find that those troll accounts do not behave like bots.
 
 ## 2021-09-22
 
-Finished *Advice for early-stage Ph.D. students* by Philip Guo. 
+Finished *Advice for early-stage Ph.D. students* by Philip Guo. Find my summary of it [here](/en/2021/09/22/philip-guo-phd-advice/). 
 
 ## 2021-09-21 
 *Advice for early-stage Ph.D. students* by Philip Guo. 

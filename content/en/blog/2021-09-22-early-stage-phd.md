@@ -1,5 +1,5 @@
 ---
-title: "Philip Guo's Advice for Early Stage PhD Students"
+title: "Philip Guo's Advice for Early-stage PhD Students"
 date: 2021-09-22T17:01:43-05:00
 author: "Hongtao Hao"
 slug: philip-guo-phd-advice

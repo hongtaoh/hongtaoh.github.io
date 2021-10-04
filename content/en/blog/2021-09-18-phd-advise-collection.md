@@ -39,13 +39,27 @@ toc: false
 
 - Hutchinson, S. (2010). [Surviving the Review Process [Editor’s Corner]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5663683). IEEE *Robotics & Automation Magazine, 17*(4), 101-104., [my summary](/en/apad/#2021-03-01)
 
-看完 2021 年的了
+**看完 2021 年的了，该 2020 年的了**
 
-- Suman
+- [My summary]((/en/2021/09/13/suman-advice/)) of Professor Suman Banerjee's advice for new CS graduate students
 
-- YY
+- My blog post of [What I Have Learned from Professor YY](/en/2020/09/05/yy/)
 
-- Philip Guo early stage
+- [My summary](/en/2021/09/22/philip-guo-phd-advice/) of Philip Guo's advice for early-stage PhD students
+
+- [*Done is better than perfect: overcoming PhD perfectionism*](http://blogs.nature.com/naturejobs/2018/07/09/done-is-better-than-perfect-overcoming-phd-perfectionism/) by Ivancevic, A. (2018). [My summary](/en/apad/#2021-09-28)
+
+- [*Modest Advice*](https://stearnslab.yale.edu/modest-advice) by Stearns, S. [My summary](/en/apad/#2021-09-28)
+
+- Cirik, V. (2019). [PhD 101](https://www.cs.cmu.edu/~vcirik/blog/2019/phd-101/). [My summary](/en/apad/#2021-09-27-completed-on-2021-09-28)
+
+- Taylor, L. (2018). [Twenty things I wish I’d known when I started my PhD](https://www.nature.com/articles/d41586-018-07332-x). [My summary](https://www.nature.com/articles/d41586-018-07332-x)
+
+- Casey Flesler (2019). [Advice for New PhD Students: Your Research Career is a Long Game](https://cfiesler.medium.com/advice-for-new-phd-students-your-research-career-is-a-long-game-4721abbd80ac). [My summary](https://cfiesler.medium.com/advice-for-new-phd-students-your-research-career-is-a-long-game-4721abbd80ac)
+
+- Li, F-F. (2009). [De-Mystifying Good Research and Good Papers](https://bigaidream.gitbooks.io/tech-blog/content/2014/de-mystifying-good-research.html). [My summary](https://bigaidream.gitbooks.io/tech-blog/content/2014/de-mystifying-good-research.html)
+
+- [A Letter to Research Students](http://www.cs.williams.edu/~bailey/p/research.pdf) by Duane A. Bailey. [My summary](/en/apad/#2021-10-02)
 
 ## Life
 
@@ -63,5 +77,4 @@ toc: false
 ## Jobs
 
 - [Academic job search advice](http://matt.might.net/articles/advice-for-academic-job-hunt/) by Matt Might, [my summary](/en/apad/#2021-05-13)
-
 - 

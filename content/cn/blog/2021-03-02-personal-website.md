@@ -469,6 +469,10 @@ open content/cn/hobby/_index.md -a TextEdit
     weight = 4
 ```
 
+#### 新添加文件
+
+你可以直接把文件，比如 `myPDF.pdf` 放到 `static` 文件夹，这样的话，这个文件的地址就是 `https://USERNAME.github.io/myPDF.pdf`。当你的文件比较多时，建议你在 `static` 文件夹下新建一个子文件夹，比如 `files`，然后把文件统一放到 `files` 里，这样的话，地址就是 `https://USERNAME.github.io/files/myPDF.pdf`
+
 ### 自定义域名
 {{<block class="tip">}}
 如果你对 USERNAME.github.io 这个免费域名很满意，就没必要自己再去买域名。
