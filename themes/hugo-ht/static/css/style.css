@@ -274,6 +274,9 @@ blockquote {
 .tip {
   background-image: url("/media/blocks/tip.png");
 }
+.info {
+  background-image: url("/media/blocks/tip.png");
+}
 .caution {
   background-image: url("/media/blocks/caution.png");
 }

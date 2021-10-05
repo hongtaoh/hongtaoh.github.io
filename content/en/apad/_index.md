@@ -14,7 +14,101 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
+## 2021-10-05
+
+Carsey, T. (2020). [*Tom’s Comments: Advice about Graduate School, Finding a Job, Reaching Tenure in Political Science and other Social Sciences, and All of the Steps in Between*](https://politicalscience.unc.edu/wp-content/uploads/sites/186/2020/09/Toms-Comments-Carsey-book-9-7-2020.pdf).
+
+I skimmed through the whole book. Some suggestions I bore in mind:
+
+  - Don't let graduate school kill your personal time. You need an adequate amount of sleep. You need to eat and drink well. You need to have a personal life. 
+  - Set aside time each day, at least each week, for writing. Do it even though you don't feel like doing it that day/week. 
+  - Write one co-authored paper and one solo-authored paper each year in the first two years of your PhD. 
+  - Mentorship is better than apprenticeship. The first means you work with more than one advisor to develop your own research agenda whereas the second means you work for only one advisor on his/her research project. 
+  - Practice your research talk! You definitely need practice. 
+  - *R* is good!
+
+{{<block class="info">}}
+I disagree with Tom's suggestions about websites (p.70). Tom says it is not very useful if you have a professional website at the start of your PhD as you don't have much stuff to put on it. Rather, he suggests a website at the end of PhD when you are looking for a job. 
+
+I highly disagree with it. In my opinion, **a homepage is much more than your CV**. Yes, you might not have papers to put on your homepage, but there are millions of other things you can put. Write blogs! Document your daily tangible progress! Publish your projects! Introduce yourself! These activities will (1) let you know what you lack, and (2) motivate you to make progress each and every day.
+
+Again, your homepage is more than your CV!
+{{<end>}}
+
+## 2021-10-04
+
+Finished [Chen at al. (2021)](https://www.nature.com/articles/s41467-021-25738-6)
+
+The authors initiated a few neutral bots on Twitter, called "drifters". These drifters are the same except for the political alignment of the initial account they follow. The key findings of this paper:
+  
+  1. The information drifters receive is largely dependent on the initial accounts they follow. 
+  2. Most drifters find themselves in echo chambers. Echo chambers of conservative accounts are especially dense. 
+  3. Right-leaning drifters encounter more low-credibility information. 
+  4. The type of content a drifter receives is not manipulated by the platform, i.e., Twitter. Rather, it was largely dependent on the political alignment of their friends. 
+
+## 2021-10-03
+
+1. 👍 Vespignani, A. (2018). [Twenty years of network science](https://www.nature.com/articles/d41586-018-05444-y). *Nature*. 
+
+The model of small-world and preferential-attachment still underpin our understanding of networks. 
+
+{{<block class="info">}}
+This piece is a super good explanation of the [small-world paper](https://www.nature.com/articles/30918.) by Watts and Strogatz (1998).
+{{<end>}}
+
+2. Chen, W., Pacheco, D., Yang, K. C., & Menczer, F. (2021). [Neutral bots probe political bias on social media](https://www.nature.com/articles/s41467-021-25738-6). *Nature Communications, 12*(1), 1-10. 
+
+PP. 1-3.
+
+## 2021-10-02
+
+1. [A Letter to Research Students](http://www.cs.williams.edu/~bailey/p/research.pdf) by Duane A. Bailey. 
+
+  - Keep reading papers, and summarizing them. The summary will be very useful when (1) you introduce a paper to others, and (2) you reread it. 
+
+  - Write well. Practice. Set time aside. 
+
+  - Collaborate. Work with other people. 
+
+  - "Rehearse and time your talks."
+
+2.[Some grad school advice](http://www.cs.cmu.edu/%7Enasmith/advice.html) by Noah Smith.
+
+- Grad school is mostly about research. 
+
+- The people you will be working with are the most important factor when you decide which program to attend. 
+
+3. [How to evaluate an advisor](https://www.cs.jhu.edu/%7Ejason/advice/how-to-evaluate-an-advisor.html) by Jason Eisner. 
+
+# 2021-10
+
+## 2021-10-01 (completed on 2021-10-02)
+
+McAfee, A., Brynjolfsson, E., Davenport, T. H., Patil, D. J., & Barton, D. (2012). [Big data: the management revolution](https://wiki.uib.no/info310/images/4/4c/McAfeeBrynjolfsson2012-BigData-TheManagementRevolution-HBR.pdf). *Harvard business review, 90*(10), 60-68.
+
+>Each of us is now a walking data generator. 
+
+>Computers are useless. They can only give you answers. -- Pablo Picasso
+
 # 2021-09
+
+## 2021-09-30 (completed on 2021-10-02)
+
+👍 1. Finished [West et al. (2021)](https://www.pnas.org/content/pnas/118/38/e2106152118.full.pdf)
+
+This paper analyzed attention cycles for deceased public figures based on data collected from (1) news on the web and (2) Twitter mentions. The authors find that short-term boosts last for around 30 days within the death. On average, long-term attention boosts are largest for artists and smallest for leaders. It might be because artists have legacies that people can enjoy even after they die. 
+
+2. McAfee, A. (2011). [What every CEO needs to know about the cloud](https://ide.mit.edu/sites/default/files/publications/McAfee_What_Every_CEO_Needs_to_Know_About_the_Cloud.pdf). *Harvard business review, 89*(11), 124-132.
+
+I didn't know that Box has been around for a decade.
+
+This article has been almost ten years old. Looking back, I didn't feel that cloud computing has revolutionized the whole industry nor people's lives. Maybe it's only because I didn't notice it?
+
+## 2021-09-29
+
+West, R., Leskovec, J., & Potts, C. (2021). [Postmortem memory of public figures in news and social media](https://www.pnas.org/content/pnas/118/38/e2106152118.full.pdf). *Proceedings of the National Academy of Sciences, 118*(38).
+
+PP. 1-5
 
 ## 2021-09-28
 

@@ -6,7 +6,7 @@ author: Hongtao Hao
 toc: true
 ---
 
-{{<figure src="/media/b2b.png" title=" A conceptual description of how b2b communication works, by Hongtao Hao" width="700">}}
+{{<figure src="/media/b2b.png" title=" A conceptual description of how b2b communication works, image source from the internet; adapted by Hongtao Hao" width="700">}}
 
 ## Where Does Brain-to-brain Communication Come From?
 “The Internet of Things” (IoT) captures people’s imagination. Experts envision that things in the future would be interconnected and freely share information with each other. For example, a car, through sensors, would be connected with tunnels and bridges it passes through and all other vehicles. Based on IoT technology and big data, an intelligent transportation system (ITS) could be built which promotes safety, efficiency, and conveniences[^1]. Thanks to IoT technology, someday our watches, TV sets, refrigerators, outfits and even our food would be equipped with sensors so that information can freely flow.
