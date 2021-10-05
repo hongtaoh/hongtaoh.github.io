@@ -27,7 +27,7 @@ I skimmed through the whole book. Some suggestions I bore in mind:
   - Practice your research talk! You definitely need practice. 
   - *R* is good!
 
-{{<block class="info">}}
+{{<block class="info" >}}
 I disagree with Tom's suggestions about websites (p.70). Tom says it is not very useful if you have a professional website at the start of your PhD as you don't have much stuff to put on it. Rather, he suggests a website at the end of PhD when you are looking for a job. 
 
 I highly disagree with it. In my opinion, **a homepage is much more than your CV**. Yes, you might not have papers to put on your homepage, but there are millions of other things you can put. Write blogs! Document your daily tangible progress! Publish your projects! Introduce yourself! These activities will (1) let you know what you lack, and (2) motivate you to make progress each and every day.
@@ -300,7 +300,7 @@ PP. 1-7
 
 10. Play the long game. 
 
-   Be nice. 
+   Be nice 😎. 
 
 ## 2021-09-17
 

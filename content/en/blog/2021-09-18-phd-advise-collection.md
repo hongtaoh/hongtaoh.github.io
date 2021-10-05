@@ -11,7 +11,7 @@ toc: false
 
 - [What I Have Learned from Professor YY](/en/2020/09/05/yy/)
 
-- [*10 Tips for Research and a PhD*](https://ruder.io/10-tips-for-research-and-a-phd/) by Sebastian Ruder
+- [*10 Tips for Research and a PhD*](https://ruder.io/10-tips-for-research-and-a-phd/) by Sebastian Ruder, [my summary](/en/apad/#2021-09-18)
 
 - Chapers 2 & 3 (PP. 9-59) of *A guide to academia: getting into and surviving grad school, postdocs, and a research job*, by Chakrabarty, P. (2012), [my summary](/en/apad/#2021-07-06)
 
@@ -49,19 +49,19 @@ toc: false
 
 - [My summary](/en/2021/09/22/philip-guo-phd-advice/) of Philip Guo's advice for early-stage PhD students
 
-- [*Done is better than perfect: overcoming PhD perfectionism*](http://blogs.nature.com/naturejobs/2018/07/09/done-is-better-than-perfect-overcoming-phd-perfectionism/) by Ivancevic, A. (2018). [my summary](/en/apad/#2021-09-28)
+- [*Done is better than perfect: overcoming PhD perfectionism*](http://blogs.nature.com/naturejobs/2018/07/09/done-is-better-than-perfect-overcoming-phd-perfectionism/) by Ivancevic, A. (2018), [my summary](/en/apad/#2021-09-28)
 
 - [*Modest Advice*](https://stearnslab.yale.edu/modest-advice) by Stearns, S. [my summary](/en/apad/#2021-09-28)
 
-- Cirik, V. (2019). [PhD 101](https://www.cs.cmu.edu/~vcirik/blog/2019/phd-101/). [My summary](/en/apad/#2021-09-27-completed-on-2021-09-28)
+- Cirik, V. (2019). [PhD 101](https://www.cs.cmu.edu/~vcirik/blog/2019/phd-101/), [my summary](/en/apad/#2021-09-27-completed-on-2021-09-28)
 
-- Taylor, L. (2018). [Twenty things I wish I’d known when I started my PhD](https://www.nature.com/articles/d41586-018-07332-x). [my summary](https://www.nature.com/articles/d41586-018-07332-x)
+- Taylor, L. (2018). [Twenty things I wish I’d known when I started my PhD](https://www.nature.com/articles/d41586-018-07332-x), [my summary](https://www.nature.com/articles/d41586-018-07332-x)
 
-- Casey Flesler (2019). [Advice for New PhD Students: Your Research Career is a Long Game](https://cfiesler.medium.com/advice-for-new-phd-students-your-research-career-is-a-long-game-4721abbd80ac). [my summary](https://cfiesler.medium.com/advice-for-new-phd-students-your-research-career-is-a-long-game-4721abbd80ac)
+- Casey Flesler (2019). [Advice for New PhD Students: Your Research Career is a Long Game](https://cfiesler.medium.com/advice-for-new-phd-students-your-research-career-is-a-long-game-4721abbd80ac), [my summary](https://cfiesler.medium.com/advice-for-new-phd-students-your-research-career-is-a-long-game-4721abbd80ac)
 
-- Li, F-F. (2009). [De-Mystifying Good Research and Good Papers](https://bigaidream.gitbooks.io/tech-blog/content/2014/de-mystifying-good-research.html). [my summary](https://bigaidream.gitbooks.io/tech-blog/content/2014/de-mystifying-good-research.html)
+- Li, F-F. (2009). [De-Mystifying Good Research and Good Papers](https://bigaidream.gitbooks.io/tech-blog/content/2014/de-mystifying-good-research.html), [my summary](https://bigaidream.gitbooks.io/tech-blog/content/2014/de-mystifying-good-research.html)
 
-- [A Letter to Research Students](http://www.cs.williams.edu/~bailey/p/research.pdf) by Duane A. Bailey. [my summary](/en/apad/#2021-10-02)
+- [A Letter to Research Students](http://www.cs.williams.edu/~bailey/p/research.pdf) by Duane A. Bailey, [my summary](/en/apad/#2021-10-02)
 
 - Carsey, T. (2020). [*Tom’s Comments: Advice about Graduate School, Finding a Job, Reaching Tenure in Political Science and other Social Sciences, and All of the Steps in Between*](https://politicalscience.unc.edu/wp-content/uploads/sites/186/2020/09/Toms-Comments-Carsey-book-9-7-2020.pdf), [my summary](/en/apad/#2021-10-05)
 

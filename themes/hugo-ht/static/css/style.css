@@ -257,6 +257,7 @@ blockquote {
 .note,
 .important,
 .tip,
+.info,
 .caution,
 .warning {
   min-height: 2.2em;
