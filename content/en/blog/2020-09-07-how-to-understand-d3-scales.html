@@ -1,0 +1,168 @@
+---
+title: How to Understand D3.js Continuous Scales
+author: Hongtao Hao
+date: '2020-09-07'
+slug: d3-scales
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 2
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#why-bother-using-d3-scales-couldnt-we-plot-it-directly">Why Bother Using D3 Scales? Couldn’t We Plot It Directly?</a></li>
+<li><a href="#what-are-input-domain-and-output-range">What are Input Domain and Output Range?</a></li>
+<li><a href="#how-do-the-input-domain-and-output-range-work">How do the input domain and output range work?</a></li>
+<li><a href="#d3-scales-do-not-capture-relative-length">D3 Scales Do Not Capture Relative Length</a></li>
+<li><a href="#how-does-d3.scalelinear-work">How does d3.scaleLinear() work?</a></li>
+<li><a href="#what-does-d3.scalelinear-preserve">What Does d3.scaleLinear() Preserve?</a></li>
+<li><a href="#how-to-maintain-relative-length">How to Maintain Relative Length?</a></li>
+<li><a href="#closing-words">Closing Words</a></li>
+<li><a href="#other-resourses">Other resourses</a></li>
+</ul>
+</div>
+
+<hr />
+<p>Most online tutorials on D3 scales, at best do not get the point, and at worst are really misleading.</p>
+<p>Before I move on, I’d like to specify two most important points I realized about D3 continuous scales:</p>
+<ol style="list-style-type: decimal">
+<li><p>The essence of D3 continuous scales is <strong><em>interpolation</em></strong> between two known points;</p></li>
+<li><p>D3 continuous scales are supposed to capture <strong><em>relative positions</em></strong>, not <strong><em>relative length</em></strong>.</p></li>
+</ol>
+<p>This blog post is all about D3 continuous scales. I might omit the word “continuous” in the following.</p>
+<div id="why-bother-using-d3-scales-couldnt-we-plot-it-directly" class="section level2">
+<h2>Why Bother Using D3 Scales? Couldn’t We Plot It Directly?</h2>
+<p>Well, the thing is, sometimes the numbers are so big that you don’t have enough pixels to plot them directly.</p>
+<p>For example, suppose we have this dataset, [34, 59, 109, 544, 1299], and we are going to <strong>plot a bar chart of this data</strong>. It would be best if we can draw it directly. Five bars whose heights (in pixels) are equal to the corresponding data values: The first bar will be 34 px tall, the second 59 px … and the last 1299 px. For this dataset, it might be Okay to plot it this way. However, if we had another number, 999999, it would be impossible to draw a bar whose height is <code>999999 px</code> simply because we don’t have such a big screen. That’s why we need input domain and output range, both of which are basically intervals.</p>
+</div>
+<div id="what-are-input-domain-and-output-range" class="section level2">
+<h2>What are Input Domain and Output Range?</h2>
+<p>The input domain can be anything, as long as the minimum and the maximum number in our dataset are included in this interval<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Note that the start of the input domain <strong>does not have to</strong> be <span class="math inline">\(0\)</span>. For the above dataset, let’s set the input domain to be [30, 1300].</p>
+<p>Then what is an output range? Well, it can be anything too. Usually the output range is defined by the pixels we have. Let’s say our screen is only 80 pixels in height, and we set the output range to be [10, 75]. Again, the starting point of the output range does not have to be <span class="math inline">\(0\)</span>.</p>
+</div>
+<div id="how-do-the-input-domain-and-output-range-work" class="section level2">
+<h2>How do the input domain and output range work?</h2>
+<p>What we are certain now is that the minimum (the starting point) in the input domain should also be the minimum (the starting point) of the output range. The same is for the maximum (the finishing point).</p>
+<p>That is to say, <span class="math inline">\(30\)</span> in the input domain becomes <span class="math inline">\(10\)</span> in the output range, and <span class="math inline">\(1300\)</span> in the input domain becomes <span class="math inline">\(75\)</span> in the output range.</p>
+<p>The situation here is depicted in the figure below:</p>
+<p>{{% figure src="/media/enblog/d3_scale_01.png" caption="The situation: from input domain to output range" width="800" %}}</p>
+<p>The question is, what are the corresponding values of <span class="math inline">\(34\)</span>, <span class="math inline">\(59\)</span>, <span class="math inline">\(109\)</span>, and <span class="math inline">\(544\)</span>?</p>
+<p>We can solve this problem by drawing a coordinate, with the X-axis representing the input domain and the Y-axis representing the output range. Why? Because as we can see from the transformations from input domain to output range, the relationship can be expressed as</p>
+<p><span class="math display">\[y = function (x)\]</span></p>
+<p>where <span class="math inline">\(y\)</span> is values in the output range and <span class="math inline">\(x\)</span> represent values in the input domain.</p>
+<pre class="r"><code>x&lt;-30:1300
+m0 &lt;- 65 / (1300^0.5 - 30^0.5)
+b0 &lt;- 10 - m0*(30^0.5)
+fun0 &lt;- function(x) m0*x^0.5 + b0
+m1 &lt;- 65 / 1270
+b1 &lt;- 10 - m1*30
+fun1 &lt;- function(x) m1*x + b1
+m2 &lt;- 65 / (1300^2 - 30^2)
+b2 &lt;- 10 - m2*(30^2)
+fun2 &lt;- function(x) m2*x^2 + b2
+m3 &lt;- 65 / (1300^3 - 30^3)
+b3 &lt;- 10 - m3*(30^3)
+fun3 &lt;- function(x) m3*x^3 + b3
+m4 &lt;- 65 / (1300^4 - 30^4)
+b4 &lt;- 10 - m4*(30^4)
+fun4 &lt;- function(x) m4*x^4 + b4
+matplot(x,cbind(fun0(x), fun1(x),fun2(x),fun3(x),fun4(x)),
+        type=&quot;l&quot; ,col=c(&quot;blue&quot;,&quot;red&quot;),
+        xlab = &quot;Input domain&quot;, ylab = &quot;Output range&quot;,
+        main = &quot;Mapping from input domain to output range&quot;)
+points(30, 10, col=&quot;orange&quot;, pch=19, cex=1.5)
+points(1300, 75, col=&quot;skyblue&quot;, pch=19, cex=1.5)</code></pre>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:input-output-mapping"></span>
+<img src="/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/input-output-mapping-1.png" alt="Mapping from input domain to output range" width="672" />
+<p class="caption">
+Figure 1: Mapping from input domain to output range
+</p>
+</div>
+<p>The two points we are certain are the orange one, which is [30, 10], and the blue one, which is [1300, 75]. Then the “mapping” is essentially we trying to interpolate from the orange point to the blue point. As we can see from Figure <a href="#fig:input-output-mapping">1</a> that there are so many different ways to interpolate between the two points.</p>
+<p>In our situation, we should use the linear interpolation. Why? Sorry that I cannot explain mathematically here. I can only explain intuitively. In our example above, there is a “shrinkage” from the input domain to the output range. However, this transformation is linear. A linear transformation can be expressed as</p>
+<p><span class="math display">\[y = mx + b\]</span></p>
+<p>Simple math will let us know that for out example here, <span class="math inline">\(m = 0.051, b = 8.465\)</span>.</p>
+</div>
+<div id="d3-scales-do-not-capture-relative-length" class="section level2">
+<h2>D3 Scales Do Not Capture Relative Length</h2>
+<p>Okay. Let’s plot the bars now.</p>
+<pre class="r"><code>par(mfrow=c(1,2))
+input.domain &lt;- c (34, 59, 109, 544, 1299)
+output.range &lt;- fun1(input.domain)
+barplot(input.domain, ylim = c(0, 1400),
+        col = &quot;orange&quot;,
+        main = &quot;Bar heights in input domain&quot;)
+barplot(output.range, ylim = c(0, 80),
+        col = &quot;skyblue&quot;,
+        main = &quot;Bar heights in output range&quot;)</code></pre>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:no-relative-length"></span>
+<img src="/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/no-relative-length-1.png" alt="D3 scales do not cpature relative length" width="672" />
+<p class="caption">
+Figure 2: D3 scales do not cpature relative length
+</p>
+</div>
+<p>The first impression would be that it’s relatively Okay, since the two seem to be comparable. However, if you look closer, you’ll find that on the original scale, the input domain, the third bar is around 3 times taller than the first bar. However, on the transformed scale, the output range, the third bar is less than twice as tall as the first one. The relative height is not maintained, and therefore, the two results are not comparable.</p>
+<p>“D3 scales suck”, you might say. “What was Mike Bostock thinking? D3 scales did not preserve comparability between the two results and they are misleading!”.</p>
+<p>Well, it’s actually our fault rather than D3 scales’. Before I explain how come that the two results are not comparable and how to avoid that, let me talk about how D3’s <code>scaleLinear()</code> works.</p>
+</div>
+<div id="how-does-d3.scalelinear-work" class="section level2">
+<h2>How does d3.scaleLinear() work?</h2>
+<p><a href="https://www.dashingd3js.com/d3js-scales">This tutorial</a> very well explains how <code>d3.scaleLinear()</code> works. I’ll recap it here.</p>
+<p>Suppose the following is the input domain. The starting point is labeled as S and the end E. There are three data points, i.e., A, B, C. The distance between S and A is a, that between A and B is b, that between B and C is c, and that between C and E is d. Then, how will <code>d3.scaleLinear()</code> compute the corresponding value for data point A, B and C in the output range?</p>
+<p>{{% figure src="/media/enblog/d3_scale_five_points.png" caption="Some data points" width="800" %}}</p>
+<p>Let’s say Data point A will become Data point <span class="math inline">\(A&#39;\)</span> in the output range. <code>d3.scaleLinear()</code> will get the value of <span class="math inline">\(A&#39;\)</span> this way: First, it computes the proportion of the distance between A and the starting point, to the length, or range, of the entire input domain. This proportion will be <span class="math inline">\(\frac{a}{a+b+c+d}\)</span>. Let’s denote the starting point in the output range as S’, and the length of the output range as <span class="math inline">\(L&#39;\)</span>, then <span class="math inline">\(A&#39;\)</span> is <span class="math inline">\(L&#39; * \frac{a}{a+b+c+d}\)</span> away from S`.</p>
+</div>
+<div id="what-does-d3.scalelinear-preserve" class="section level2">
+<h2>What Does d3.scaleLinear() Preserve?</h2>
+<p>Now that we know how <code>d3.scaleLinear()</code> transforms data from the input domain to the output range, let’s think about what does this transformation preserve.</p>
+<p>Let’s normalize both the input domain and the output range. That is, we imagine that the length of the input domain and the output range is both <span class="math inline">\(1\)</span> unit. Then, let’s divide both intervals into 100 parts. If point <span class="math inline">\(A\)</span> in input domain sits right on the dividing line of the 2nd and the 3rd part, then, in the output range, <span class="math inline">\(A&#39;\)</span> will also sit on the dividing line of the 2nd and the 3rd part. Right? (If you do not understand why, please refer to <a href="How%20does%20d3.scaleLinear()%20work?">/#how-does-d3.scalelinear-work</a>) That’s why we say that D3 scales preserves <strong>relative positions</strong> of data points.</p>
+<p>This property will be super useful in coordinates, for example, when we are plotting scatter plots.</p>
+<p><img src="/media/enblog/d3_scale_relative_position.png" /></p>
+<p>For example, we have <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span>. The left is the three dots plotted using their original data values in the input domain, and on the right is the corresponding three dots plotted using the linearly transformed data values in the output range. The input domain is [5,95] for the X-axis, and [9, 17] for the Y-axis, and the output range is [3,9] for the X-axis, and [100, 900] for the Y-axis.</p>
+<p>Let’s say the coordinate of <span class="math inline">\(A\)</span> is <span class="math inline">\((35, 11)\)</span> and that of <span class="math inline">\(B\)</span> is <span class="math inline">\((50, 15)\)</span>. If we understand how linear transformation is done by <code>d3.scaleLinear()</code>, we’ll know that the coordinate of <span class="math inline">\(A&#39;\)</span> is <span class="math inline">\((5, 300)\)</span> and that of <span class="math inline">\(B&#39;\)</span> is <span class="math inline">\((6, 700)\)</span>.</p>
+<p>We can see that <code>d3.scaleLinear()</code> does not preserve relative length. <span class="math inline">\(\frac{x_a}{x_b} = \frac{7}{10}\)</span>, but <span class="math inline">\(\frac{x_(a&#39;)}{x_(b&#39;)} = \frac{5}{6}\)</span>. Then, what does <code>d3.scaleLinear()</code> preserve? <strong>Relative positions</strong>, as we discussed above.</p>
+<p>How is relative positions maintained here?</p>
+<p>In the input domain:</p>
+<p><span class="math display">\[x_a = \frac{1}{3} X, y_a = \frac{1}{4} Y\]</span></p>
+<p>In the output range:</p>
+<p><span class="math display">\[x_(a&#39;) = \frac{1}{3} X&#39;, y_(a&#39;) = \frac{1}{4} Y&#39;\]</span></p>
+<p>I won’t list these for <span class="math inline">\(B, B&#39;, C, C&#39;\)</span> here.</p>
+<p>You see, for each data point, the relative coordinate <strong>values</strong> change but its relative <strong>position</strong> to both axes remains the same.</p>
+</div>
+<div id="how-to-maintain-relative-length" class="section level2">
+<h2>How to Maintain Relative Length?</h2>
+<p>Now, let’s go back to our initial problem: the relative length is not preserved after transforming bar heights from the input domain to the output range.</p>
+<p>I asked this question in d3js’s Slack group.</p>
+<p><img src="/media/enblog/d3_scales_slack_my_question.png" /></p>
+<p>Then, Daniel Nass answered this question. Mike Bostock, the creator of D3.js also responded!</p>
+<p><img src="/media/enblog/d3_scales_slack_nass_answer.png" /></p>
+<p><img src="/media/enblog/d3_scales_slack_bostock_answer01.png" /></p>
+<p><img src="/media/enblog/d3_scales_slack_bostock_answer02.png" /></p>
+<p><a href="https://observablehq.com/@d3/bar-chart">Here</a> is the Observable Notebook Mike Bostock was referring to.</p>
+<p>Later, I recapped my understanding and expressed my gratitude.</p>
+<p><img src="/media/enblog/d3_scales_slack_my_thankyou.png" /></p>
+</div>
+<div id="closing-words" class="section level2">
+<h2>Closing Words</h2>
+<p>D3 scales are meant to preserve data’s relative positions to axes and each other (using Daniel Nass’s words), not their relative length. To preserve relative length, we need to set the start of the input domain to be zero, and the start of the output range to be the edge of our chart, as Mike Bostock suggested.</p>
+</div>
+<div id="other-resourses" class="section level2">
+<h2>Other resourses</h2>
+<p>I found these articles on D3 scales helped me a lot, in order of helpfulness:</p>
+<ol style="list-style-type: decimal">
+<li>Chapter 7. Scales of <a href="https://alignedleft.com/work/d3-book-2e">Interactive Data Visualization for the Web, 2nd Ed.</a> by Scott Murray</li>
+<li><a href="http://www.jeromecukier.net/2011/08/11/d3-scales-and-color/">Jerome Cukier’s great page on ‘d3:scales and color’</a>;</li>
+<li><a href="http://jonathansoma.com/tutorials/d3/using-scales/">Using scales</a> by <a href="http://jonathansoma.com/tutorials/d3/using-scales/">Jonathan Soma</a></li>
+<li><a href="https://www.dashingd3js.com/d3js-scales">D3.js Scales</a> on <a href="https://www.dashingd3js.com/">Dashing D3.js</a></li>
+<li><a href="https://github.com/d3/d3-scale">d3-scale official documentation on GitHub</a></li>
+</ol>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Well, the min and max in our dataset do not have to be within the input domain. If they happen to be outside of the domain, D3 Scales can deal with this issue with <code>clamping</code>. That said, it’s always better to make sure that your input domain contains all of your data.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

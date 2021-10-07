@@ -62,7 +62,7 @@ julia> findfirst(x -> x>17, df.B)
 5
 ```
 
-Also useful are the functions of [`Base.findmax()`](https://docs.julialang.org/en/v1/base/collections/#Base.findmax) and [`Base.findmin()`](https://docs.julialang.org/en/v1/base/collections/#Base.findmin), which return both value and the location. 
+Also useful are the functions of [`Base.findmax()`](https://docs.julialang.org/en/v1/base/collections/#Base.findmax) and [`Base.findmin()`](https://docs.julialang.org/en/v1/base/collections/#Base.findmin), which return both the value and the location. 
 
 ```bash
 julia> using Random
