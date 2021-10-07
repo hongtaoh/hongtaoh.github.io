@@ -1,0 +1,25 @@
+---
+title: Include fig.cap when referencing a figure in Bookdown or Blogdown
+author: Hongtao Hao
+date: '2020-08-21'
+slug: including-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>Yihui <a href="https://bookdown.org/yihui/bookdown/figures.html">documented</a> figure referencing very well. There is only one thing I need to add: do remember to add a figure caption if you want to reference it.</p>
+<p>For example, if we have a chunk label without a figure caption:</p>
+<pre class="r"><code>plot(pressure)</code></pre>
+<p><img src="/en/blog/2020-08-21-do-include-a-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown_files/figure-html/first-label-1.png" width="672" /></p>
+<p>We cannot reference it: Figure <a href="#fig:first-label"><strong>??</strong></a>.</p>
+<p>This is because without a figure caption, the figure won’t be numbered. Without a number, the figure cannot be referenced.</p>
+<p>Simply adding a figure caption solves the problem:</p>
+<pre class="r"><code>plot(pressure)</code></pre>
+<div class="figure"><span style="display:block;" id="fig:second-label"></span>
+<img src="/en/blog/2020-08-21-do-include-a-fig-cap-when-referencing-a-figure-in-bookdown-or-blogdown_files/figure-html/second-label-1.png" alt="temperature-pressure" width="672" />
+<p class="caption">
+Figure 1: temperature-pressure
+</p>
+</div>
+<p>Now we can reference it: Figure <a href="#fig:second-label">1</a></p>

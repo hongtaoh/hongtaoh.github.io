@@ -1,0 +1,70 @@
+---
+title: How to Read Local or Online Files in Rmarkdown, Bookdown, and Blogdown
+author: Hongtao Hao
+date: '2020-08-24'
+slug: reading-online-and-local-files-in-rmarkdown
+categories: []
+tags: []
+output:
+  blogdown::html_page:
+    toc: yes
+    toc_depth: 2
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#reading-online-files">Reading Online Files</a></li>
+<li><a href="#reading-local-files">Reading Local Files</a></li>
+</ul>
+</div>
+
+<hr />
+<p><a href="https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/">Here</a> is a tutorial on how to read local data files in Rmarkdown. I found it very helpful. Nonetheless, I decided to write on this topic again myself because that post is a bit more complicated than it should be.</p>
+<p>We can read data files from two sources: <strong>online</strong>, or <strong>local</strong>.</p>
+<div id="reading-online-files" class="section level2">
+<h2>Reading Online Files</h2>
+<p>Reading online files is easy:</p>
+<pre class="r"><code>library(readr)</code></pre>
+<pre class="r"><code>hello  &lt;- read_csv(&quot;https://hongtaoh.com/files/HGN.csv&quot;)</code></pre>
+</div>
+<div id="reading-local-files" class="section level2">
+<h2>Reading Local Files</h2>
+<p>To read local files in Rmarkdown, you can either specify the exact paths, or use the package of <code>here</code>. One thing worth noticing is that <code>R</code> can read any local files, either they are in the same root directory as your <code>Rmarkdown</code> file or not, as long as you correctly specify the exact paths. However, if you use the package of <code>here</code>, the data files to be read must be in the same directory as your <code>Rmarkdown</code> file.</p>
+<div id="files-in-a-different-directory" class="section level3">
+<h3>Files in a different directory</h3>
+<p>No matter where your <strong>local</strong> data file is located, you can simply specify its full path, and it should always work:</p>
+<pre class="r"><code>hello &lt;- read_csv(&quot;/full/path/to/your/file/filename.csv&quot;)</code></pre>
+<p>Note that the file does not have to be in a <code>csv</code> format. It can be an <code>Excel</code> or anything that <code>R</code> can read.</p>
+<p>How to find a file’s full path then?</p>
+<p>I assume you are using a Mac: Right click the data file, click on <code>Get Info</code>, and then you can find it in <code>Where</code>. Simply copy and past that path. Don’t forget to add the forename to the end. For example, if you have a data file called <code>filename.csv</code>, the path you can find in <code>Where</code> is only <code>/full/path/to/your/file/</code>, you should add <code>filename.csv</code> to the end by yourself.</p>
+</div>
+<div id="files-in-a-the-same-directory" class="section level3">
+<h3>Files in a the same directory</h3>
+<div id="relative-path-without-using-here" class="section level4">
+<h4>Relative path WITHOUT using <code>here</code></h4>
+<p>I tried the <code>../../</code> method mentioned in the <a href="https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/">blog post above</a> but it simply gave me an Error, at least on Blogdown.</p>
+<p>For example, suppose you have a folder named <code>Project</code> on your <code>Desktop</code>, and the location of your data file relative to your <code>Blogdown</code> project or <code>Rmd</code> is this:</p>
+<pre class="bash"><code>|____Folder_1
+|____Folder_2
+|____Static
+| |____Data
+| | |____YourData.csv
+|____YourBlogdownProj.RProj</code></pre>
+<p>Then using <code>AGoodName &lt;- read_csv( "../../Static/Data/YourData.csv")</code> won’t work the way <a href="https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/">the blog post</a> mentioned.</p>
+<p>Then how to solve this problem?</p>
+<ul>
+<li><p>Simply use the full path using the method I gave above: <code>/Users/YourMacUserName/Desktop/Project/Static/Data/YourData.csv</code></p></li>
+<li><p>Use the <code>here</code> package, if you are lazy.</p></li>
+</ul>
+</div>
+<div id="relative-path-using-here" class="section level4">
+<h4>Relative path using <code>here</code></h4>
+<p>Simply use this:</p>
+<pre class="r"><code>library(here)
+AGoodNmae &lt;- read_csv(here(&quot;Static&quot;, &quot;Data&quot;, &quot;YourData.csv&quot;))</code></pre>
+<p>You can find more information about the <code>here</code> package from the <a href="https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/">blog post</a> or <a href="https://community.rstudio.com/t/how-to-correctly-specify-relative-path/9612">this thread</a>.</p>
+</div>
+</div>
+</div>

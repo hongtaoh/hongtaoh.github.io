@@ -1,0 +1,14 @@
+---
+title: How to Read Graphs Using igraph in R
+author: Hongtao Hao
+date: '2020-08-21'
+slug: reading-gml-file-using-igraph
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>You can read the official documentation on <code>read_graph()</code> <a href="https://igraph.org/r/doc/read_graph.html">here</a> for more info. Be sure to <strong>put the file name in between quotation marks</strong>. For example:</p>
+<pre class="r"><code>library(igraph)
+read_graph(&quot;lesmiss.gml&quot;, format = &quot;gml&quot;)</code></pre>
+<p>For more information on how to read local files, refer to <a href="https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/">this post</a>.</p>
