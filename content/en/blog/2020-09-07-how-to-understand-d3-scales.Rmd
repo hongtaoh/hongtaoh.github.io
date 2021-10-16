@@ -3,11 +3,9 @@ title: How to Understand D3.js Continuous Scales
 author: Hongtao Hao
 date: '2020-09-07'
 slug: d3-scales
-output:
-  blogdown::html_page:
-    toc: true
-    toc_depth: 2
----
+categories: []
+tags: []
+toc: true
 ---
 Most online tutorials on D3 scales, at best do not get the point, and at worst are really misleading. 
 

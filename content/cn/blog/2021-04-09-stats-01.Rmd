@@ -6,6 +6,7 @@ slug: stats-01
 categories: []
 tags: []
 toc: false
+draft: true
 ---
 
 统计的一个核心问题是，我们想要知道母体 (population) 的情况，但是现实中，母体的情况是未知的，这时我们就需要通过随机抽样的方法，获取样本，通过样本来了解总体。 

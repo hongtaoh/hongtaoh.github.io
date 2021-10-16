@@ -6,6 +6,7 @@ slug: hugo-netlify-deploy
 toc: true
 aliases:
     - /cn/2020-01-04-hugo-netlify-deployment/
+    - /cn/2020/01/04/hugo-netlify-deployment/
 ---
 {{<block class="tip">}}
 2021-04-06: [Netlify](https://www.netlify.com/) 貌似已经被墙了。请参考我最新的这篇博客：[如何零基础免费搭建个人网站](/cn/2021/03/02/personal-webiste-tutorial/)

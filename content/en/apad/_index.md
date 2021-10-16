@@ -14,6 +14,111 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
+---
+
+## 2021-10-16
+
+1. Strohmayer, A., Clamen, J., & Laing, M. (2019, May). [Technologies for social justice: Lessons from sex workers on the front lines](https://core.ac.uk/download/pdf/327369457.pdf). In *Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems* (pp. 1-14).
+
+I skimmed through this paper. 
+
+This paper talks about a sex worker rights organization in Canada which maintains a bad client list. One interesting point the authors point out is that technologies are not the **solution** to complex social justice problems; they only support, or aid, the efforts. 
+
+2. Binns, R., Van Kleek, M., Veale, M., Lyngs, U., Zhao, J., & Shadbolt, N. (2018, April). ['It's Reducing a Human Being to a Percentage' Perceptions of Justice in Algorithmic Decisions](https://michae.lv/static/papers/2018itsreducing.pdf). In *Proceedings of the 2018 Chi conference on human factors in computing systems* (pp. 1-14).
+
+I skimmed through this paper. 
+
+This paper is about how algorithmic decisions affect people's perceptions of justice. The study finds that people consider justice-related issues when they encounter decisions made by algorithms. The study also finds that explanations may or may not affect how people feel about the fairness of the decisions, depending on the scenarios. The authors conclude that there might be no best approach to explaining algorithmic decisions. 
+
+## 2021-10-15 (completed on 2021-10-16)
+
+Strohmayer, A., Laing, M., & Comber, R. (2017, May). [Technologies and social justice outcomes in sex work charities: Fighting stigma, saving lives](https://researchportal.northumbria.ac.uk/ws/portalfiles/portal/21806714/CHI_2017.pdf). In *Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems* (pp. 3352-3364).
+
+I skimmed through this paper. 
+
+This paper talks about NUM, a charity organization that helps sex workers in the UK. Sex workers join NUM to report and receive alerts of bad clients. The authors argue that HIC can help sex workers. 
+
+## 2021-10-14 (completed on 2021-10-15)
+
+1. Guo, P. (2012). [The Ph.D. Grind: Lead From Below](https://cacm.acm.org/blogs/blog-cacm/155690-the-phd-grind-lead-from-below/fulltext)
+
+As a subordinate, you need to know how to get support from your boss even when you are implementing your ideas, not theirs. It's hard. 
+
+2. Kurenokov, A. (2020). Lessons Learned the Hard Way in Grad School (so far) (/writing /life/lessons-learned-from-failures/)
+
+- Teamwork is useful and helpful. It may relieve some of your stress as working alone might not produce papers. 
+
+- You need to maintain your health. 
+
+## 2021-10-13
+
+Finished [Potvin & Levenberg (2016)](https://dl.acm.org/doi/fullHtml/10.1145/2854146)
+
+Google and its thousands of developers around the world have been using one single monolithic repository which contains one billion files and 35 million commits. Google used tools like Piper and CitC (Clinetns in the Cloud) to support using one monolithic repository. 
+
+Using a monolithic repository has benefits such as encouraging collaboration and easier dependency management. The drawbacks are that it requires investment to support such a huge repository and the codebase might become too complicated. However, the benefits outweigh the drawbacks and that's why Google is not interested in splitting the repository. 
+
+## 2021-10-12
+
+1. 👍 Sarma, A. (2018). [Tell don’t just show: Narratives improve insight more than interactivity in communicative visualizations (Master's thesis)](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/145705/abhsarma_thesis.pdf?sequence=1).
+
+I skimmed through this thesis. 
+
+Abhraneel's study tries to compare insights (operationalized as *recall* and *comprehension*) users obtain from visualizations with narratives and with interactivity (there are four conditions, see Fig. 1 on p.9). The results show narratives have weak effects and interactivity has barely any effects. The conclusion is that interactivity may not be a necessary component of information visualizations. This, however, by no means means that interactivity is always useless. 
+
+2. Potvin, R., & Levenberg, J. (2016). [Why Google stores billions of lines of code in a single repository](https://dl.acm.org/doi/fullHtml/10.1145/2854146). *Communications of the ACM, 59*(7), 78-87.
+
+PP. 1-5
+
+## 2021-10-11
+
+1. Haeussler, C., & Sauermann, H. (2020). Division of labor in collaborative knowledge production: The role of team size and interdisciplinarity. *Research Policy, 49*(6), 103987.
+
+I skimmed through this paper. Didn't understand it. Generally, larger/interdisciplinary teams have greater division of labor. 
+
+## 2021-10-10
+
+Linxen, S., Sturm, C., Brühlmann, F., Cassau, V., Opwis, K., & Reinecke, K. (2021, May). [How WEIRD is CHI?](https://homes.cs.washington.edu/~reinecke/Publications_files/Linxen_CHI2021.pdf). In *Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems* (pp. 1-14).
+
+I skimmed through this paper. 
+
+- The study finds that 73% of participants in CHI publications from 2016 to 2020 are from "WEIRD" (Western, Educated, Industrialized, Rich, and Democratic) countries where 97% come from countries that satisfy all the five "WEIRD" variables. 
+
+- Of 2,7688 papers, 2,611 had human participants. Of these 2,611, only 38.9% reported country origin of participants or allowed guessing based on the authors' country origin. 
+
+- Around 70% of all the participants are university students or have a university degree.
+
+- Over 80% of authors recruit participants "in their own backyards."
+
+## 2021-10-09
+
+Finished Tannenbaum et al. (2019)
+
+The authors argue that sex and gender analysis is important for research of different fields, and propose that funding agencies, academic journals, and universities support incorporating sex and gender analysis into scientific research.
+
+## 2021-10-08
+
+Tannenbaum, C., Ellis, R. P., Eyssel, F., Zou, J., & Schiebinger, L. (2019). [Sex and gender analysis improves science and engineering](https://www.nature.com/articles/s41586-019-1657-6). *Nature, 575*(7781), 137-146.
+
+PP. 1-5
+
+## 2021-10-07 (completed on 2021-10-08)
+
+Chu, J. S., & Evans, J. A. (2021). [Slowed canonical progress in large fields of science](https://www.pnas.org/content/pnas/118/41/e2021636118.full.pdf). *Proceedings of the National Academy of Sciences, 118*(41).
+
+The paper first theorizes that as scientific fields get large, the top cited papers will only become more impactful, making new ideas hard to be found and cited. The authors then use data from Web of Science to test six predictions based on their theory. The data support the predictions. 
+
+## 2021-10-06
+
+Yin, Y., Wang, Y., Evans, J. A., & Wang, D. (2019). [Quantifying the dynamics of failure across science, startups and security](https://www.nature.com/articles/s41586-019-1725-y). *Nature, 575*(7781), 190-194.
+
+The study uses three data sets, i.e., NIH grants applications, startups, and terrorist attacks to test a simple one-parameter model that predicts failure & success. The model works pretty well. Key findings:
+
+  - Success is not due to chance. 
+  - People who succeed do not necessarily try more times than their failed counterparts. 
+  - Among successful people, there is significant improvement in the second attempt compared to the first one. This improvement is absent for the failed group. 
+  - It is unnecessary to learn from all past failures. 
+
 ## 2021-10-05
 
 Carsey, T. (2020). [*Tom’s Comments: Advice about Graduate School, Finding a Job, Reaching Tenure in Political Science and other Social Sciences, and All of the Steps in Between*](https://politicalscience.unc.edu/wp-content/uploads/sites/186/2020/09/Toms-Comments-Carsey-book-9-7-2020.pdf).
@@ -21,6 +126,7 @@ Carsey, T. (2020). [*Tom’s Comments: Advice about Graduate School, Finding a J
 I skimmed through the whole book. Some suggestions I bore in mind:
 
   - Don't let graduate school kill your personal time. You need an adequate amount of sleep. You need to eat and drink well. You need to have a personal life. 
+  - Especially in the first year, if you want to collaborate with two different professors, make sure to let them know. Otherwise, one of them will be surprised if you decline the opportunity to work with him/her. (p73)
   - Set aside time each day, at least each week, for writing. Do it even though you don't feel like doing it that day/week. 
   - Write one co-authored paper and one solo-authored paper each year in the first two years of your PhD. 
   - Mentorship is better than apprenticeship. The first means you work with more than one advisor to develop your own research agenda whereas the second means you work for only one advisor on his/her research project. 
