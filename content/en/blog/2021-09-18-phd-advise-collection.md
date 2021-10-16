@@ -39,8 +39,6 @@ toc: false
 
 - Hutchinson, S. (2010). [Surviving the Review Process [Editor’s Corner]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5663683). IEEE *Robotics & Automation Magazine, 17*(4), 101-104., [my summary](/en/apad/#2021-03-01)
 
-- [Time Management](/en/2021/05/18/time-management/)
-
 <!-- 看完 2021 年的了，该 2020 年的了 -->
 
 - [My summary]((/en/2021/09/13/suman-advice/)) of Professor Suman Banerjee's advice for new CS graduate students
@@ -66,6 +64,8 @@ toc: false
 - Carsey, T. (2020). [*Tom’s Comments: Advice about Graduate School, Finding a Job, Reaching Tenure in Political Science and other Social Sciences, and All of the Steps in Between*](https://politicalscience.unc.edu/wp-content/uploads/sites/186/2020/09/Toms-Comments-Carsey-book-9-7-2020.pdf), [my summary](/en/apad/#2021-10-05)
 
 ## Life
+
+- [Time Management](/en/2021/05/18/time-management/)
 
 - [How to Get Lucky: The Secrets to Creating Your Own Good Fortune](https://www.gq.com/story/how-to-get-lucky), [my summary](/en/apad/#2021-07-08)
 

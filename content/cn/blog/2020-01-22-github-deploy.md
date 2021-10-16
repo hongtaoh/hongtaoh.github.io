@@ -5,8 +5,8 @@ slug: hugo-github-deploy
 author: 郝鸿涛
 toc: true
 aliases:
-    - /cn/2020-01-22-deploy-on-github/
-    - /cn/2020-01-22-github-deploy/
+    - /cn/2020/01/22/deploy-on-github/
+    - /cn/2020/01/22/github-deploy/
 ---
 {{<block class="tip">}}
 2021-04-06: Hugo 的[官方建议](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch)里目前只剩 GitHub Action 了，这也是我比较推荐的方法。具体 GitHub Action 怎么用，请参考：
