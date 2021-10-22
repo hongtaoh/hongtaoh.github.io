@@ -1,0 +1,172 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>郝鸿涛：Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+            <link rel="icon" href="https://hongtaoh.com/ht10.ico">
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+        
+        
+           <li><a href="/">Home</a></li>
+       
+           <li><a href="/en/vitae/">Vitae</a></li>
+       
+           <li><a href="/en/projects/">Projects</a></li>
+       
+           <li><a href="/en/blog/">Blog</a></li>
+       
+           <li><a href="/en/apad/">APAD</a></li>
+       
+           <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>Understanding the Groupby Function in Pandas</h1>
+
+<p>Hongtao Hao 
+ / 2021-07-10 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2021-07-10-pandas-groupby.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+<div class="body-text list-text">
+<h2 id="some-key-points">Some key points<a href="#some-key-points" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<ul>
+<li>
+<p>Suppose you have a DataFrame named as <code>df</code>, then <code>df.groupby('param')</code> will create multiple groups based on the parameter you provide.</p>
+</li>
+<li>
+<p>Each group is a DataFrame.</p>
+</li>
+<li>
+<p>For each group, <code>group[0]</code> is the string of <code>param</code>, whereas <code>group[1]</code> is the group&rsquo;s actual data in the form DataFrame.</p>
+</li>
+</ul>
+<h2 id="how-to-get-a-specific-groups-data">How to get a specific group&rsquo;s data<a href="#how-to-get-a-specific-groups-data" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dfGroupby <span style="color:#666">=</span> df<span style="color:#666">.</span>groupby(<span style="color:#ba2121">&#39;param&#39;</span>)
+dfGroupby<span style="color:#666">.</span>get_group(<span style="color:#ba2121">&#34;GROUP_NAME&#34;</span>)
+</code></pre></div><h2 id="how-to-print-a-groupby-object">How to print a groupby object<a href="#how-to-print-a-groupby-object" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>Question is posted here: https://stackoverflow.com/questions/22691010/how-to-print-a-groupby-object</p>
+<p>QPeiran <a href="https://stackoverflow.com/a/61264620/13716814" target="_blank" rel="noreferrer noopener">provides a clever solution</a>
+
+, which later is improved by set92:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df<span style="color:#666">.</span>groupby(<span style="color:#ba2121">&#39;param&#39;</span>)<span style="color:#666">.</span>apply(display)
+</code></pre></div><p>Gajraj Singh Chouhan mentions that you need to import <code>display</code> from <code>Ipython.display</code>, but I am not sure whether it&rsquo;s necessary. I didn&rsquo;t import it and didn&rsquo;t experience any problem.</p>
+
+<p style="color:#777;">Last modified on 2021-10-05</p>
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+      
+       
+       
+       
+       <li><a href="/en/blog/index.xml" type="application/rss+xml" title="RSS feed">
+       Subscribe </a>
+       </li>
+       
+       
+       <li>
+       
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+       
+        License
+        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+        </a>
+       </li>
+       
+     </ul>
+     <div class="copyright-text">
+            
+            ©
+            
+            Hongtao Hao
+            
+            2020-2021
+            
+     </div>
+</footer>
+
+
+
+
+

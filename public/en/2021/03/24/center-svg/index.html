@@ -1,0 +1,174 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>郝鸿涛：Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+            <link rel="icon" href="https://hongtaoh.com/ht10.ico">
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+        
+        
+           <li><a href="/">Home</a></li>
+       
+           <li><a href="/en/vitae/">Vitae</a></li>
+       
+           <li><a href="/en/projects/">Projects</a></li>
+       
+           <li><a href="/en/blog/">Blog</a></li>
+       
+           <li><a href="/en/apad/">APAD</a></li>
+       
+           <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>How to Center an SVG in a div</h1>
+
+<p>Hongtao Hao 
+ / 2021-03-24 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2021-03-24-center-svg.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+<div class="body-text list-text">
+<p>I saw <a href="https://stackoverflow.com/questions/8639383/how-do-i-center-an-svg-in-a-div/66766245#66766245" target="_blank" rel="noreferrer noopener">this question</a>
+
+ on Stack Overflow: How to center an SVG in a div.</p>
+<p><a href="https://stackoverflow.com/a/8640044/13716814" target="_blank" rel="noreferrer noopener">Spadar Shut</a>
+
+ suggested using <code>display: block</code> and <code>margin: auto</code>. Other people, like <a href="https://stackoverflow.com/a/25185515/13716814" target="_blank" rel="noreferrer noopener">David</a>
+
+ suggested using <code>&lt;div style=&quot;text-align:center;&quot;&gt;</code>.</p>
+<p>I tried both methods, and they worked.</p>
+<p>To sum, You can either add <code>style = &quot;text-align: center;&quot;</code> to the <code>div</code>, or add <code>style= &quot;display: block; margin: auto&quot;</code> to the <code>svg</code>.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">div</span> <span style="color:#7d9029">style</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;width: 900; text-align: center&#34;</span>&gt;
+  &lt;<span style="color:#008000;font-weight:bold">svg</span> <span style="color:#7d9029">id</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;demo&#34;</span> <span style="color:#7d9029">width</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;500&#34;</span> <span style="color:#7d9029">height</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;100&#34;</span> 
+       <span style="color:#7d9029">style</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;background-color: skyblue&#34;</span>&gt;
+    &lt;<span style="color:#008000;font-weight:bold">rect</span> <span style="color:#7d9029">x</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;200&#34;</span> <span style="color:#7d9029">y</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;30&#34;</span> <span style="color:#7d9029">width</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;100&#34;</span> <span style="color:#7d9029">height</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;70&#34;</span> 
+          <span style="color:#7d9029">style</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;fill: red&#34;</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">rect</span>&gt;
+  &lt;/<span style="color:#008000;font-weight:bold">svg</span>&gt;
+&lt;/<span style="color:#008000;font-weight:bold">div</span>&gt;
+</code></pre></div><p>or:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#008000;font-weight:bold">div</span> <span style="color:#7d9029">style</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;width: 900&#34;</span>&gt;
+  &lt;<span style="color:#008000;font-weight:bold">svg</span> <span style="color:#7d9029">id</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;demo&#34;</span> <span style="color:#7d9029">width</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;500&#34;</span> <span style="color:#7d9029">height</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;100&#34;</span> 
+        <span style="color:#7d9029">style</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;background-color: skyblue; display: block; margin: auto&#34;</span>&gt;
+    &lt;<span style="color:#008000;font-weight:bold">rect</span> <span style="color:#7d9029">x</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;200&#34;</span> <span style="color:#7d9029">y</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;30&#34;</span> <span style="color:#7d9029">width</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;100&#34;</span> <span style="color:#7d9029">height</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;70&#34;</span> <span style="color:#7d9029">style</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;fill: red&#34;</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">rect</span>&gt;
+  &lt;/<span style="color:#008000;font-weight:bold">svg</span>&gt;
+&lt;/<span style="color:#008000;font-weight:bold">div</span>&gt;
+</code></pre></div>
+<p style="color:#777;">Last modified on 2021-10-05</p>
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+      
+       
+       
+       
+       <li><a href="/en/blog/index.xml" type="application/rss+xml" title="RSS feed">
+       Subscribe </a>
+       </li>
+       
+       
+       <li>
+       
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+       
+        License
+        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+        </a>
+       </li>
+       
+     </ul>
+     <div class="copyright-text">
+            
+            ©
+            
+            Hongtao Hao
+            
+            2020-2021
+            
+     </div>
+</footer>
+
+
+
+
+

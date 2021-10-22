@@ -1,0 +1,208 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>郝鸿涛：Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+            <link rel="icon" href="https://hongtaoh.com/ht10.ico">
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+        
+        
+           <li><a href="/">Home</a></li>
+       
+           <li><a href="/en/vitae/">Vitae</a></li>
+       
+           <li><a href="/en/projects/">Projects</a></li>
+       
+           <li><a href="/en/blog/">Blog</a></li>
+       
+           <li><a href="/en/apad/">APAD</a></li>
+       
+           <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>Qualtrics: How to Make Sure An Audio Can Only Be Played Once</h1>
+
+<p>Hongtao Hao 
+ / 2021-10-13 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2021-10-13-qualtrics-audio-once.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+<div class="body-text list-text">
+<p>Choose the question that contains the audio. You&rsquo;ll see &ldquo;JavaScript&rdquo; on the left panel.</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/qualtrics-js-panel.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/qualtrics-js-panel.png"
+            alt="JavaScript option"
+            />
+    </a>
+    
+    <figcaption>
+        
+        
+        <p>
+        JavaScript option
+        
+        </p>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Click it and add the following codes</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">jQuery(<span style="color:#ba2121">&#39;audio&#39;</span>).on(<span style="color:#ba2121">&#39;ended&#39;</span>, <span style="color:#008000;font-weight:bold">function</span>() {
+jQuery(<span style="color:#008000;font-weight:bold">this</span>).css(<span style="color:#ba2121">&#34;pointer-events&#34;</span>,<span style="color:#ba2121">&#34;none&#34;</span>);
+});
+</code></pre></div><p>Within</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Qualtrics.SurveyEngine.addOnReady(<span style="color:#008000;font-weight:bold">function</span>()
+{
+	<span style="color:#408080;font-style:italic">/*Place your JavaScript here to run when the page is fully displayed*/</span>
+
+});
+
+</code></pre></div><p>Like this:</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/qualtrics-js-audio-once.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/qualtrics-js-audio-once.png"
+            alt="Final option after codes insertion"
+            />
+    </a>
+    
+    <figcaption>
+        
+        
+        <p>
+        Final option after codes insertion
+        
+        </p>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>I found the answer <a href="https://community.qualtrics.com/XMcommunity/discussion/10870/how-to-restrict-how-many-times-participant-plays-uploaded-audio" target="_blank" rel="noreferrer noopener">here</a>
+
+. It was by rondev.</p>
+
+<p style="color:#777;">Last modified on 2021-10-16</p>
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+      
+       
+       
+       
+       <li><a href="/en/blog/index.xml" type="application/rss+xml" title="RSS feed">
+       Subscribe </a>
+       </li>
+       
+       
+       <li>
+       
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+       
+        License
+        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+        </a>
+       </li>
+       
+     </ul>
+     <div class="copyright-text">
+            
+            ©
+            
+            Hongtao Hao
+            
+            2020-2021
+            
+     </div>
+</footer>
+
+
+
+
+

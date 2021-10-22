@@ -1,0 +1,190 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>郝鸿涛：Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+            <link rel="icon" href="https://hongtaoh.com/ht10.ico">
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+        
+        
+           <li><a href="/">Home</a></li>
+       
+           <li><a href="/en/vitae/">Vitae</a></li>
+       
+           <li><a href="/en/projects/">Projects</a></li>
+       
+           <li><a href="/en/blog/">Blog</a></li>
+       
+           <li><a href="/en/apad/">APAD</a></li>
+       
+           <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>Julia: How to Upgrade to A New Release</h1>
+
+<p>Hongtao Hao 
+ / 2021-07-04 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2021-07-04-julia-upgrade.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+<div class="body-text list-text">
+<p>I am using macOS.</p>
+<p>First, download the new Julia release you are looking for from the <a href="https://julialang.org/downloads/" target="_blank" rel="noreferrer noopener">Official Downloads</a>
+
+. Take Julia v1.6.1 for example. When downloading is done, drag the julia icon to Applications. You&rsquo;ll see that the old Julia was replaced by the new one. That said, when you open Applications from Finder, or simply run the following snippet from your Terminal</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open -a Finder ../../Applications
+</code></pre></div><p>You&rsquo;ll see that the old version(s) is still there.</p>
+<p>At this time, when you type <code>julia --version</code> in Terminal, what will be shown is the old version, not the updated one you just downloaded.</p>
+<p>To update the Julia version in Terminal, you need to create a symlink to the updated version. The following snippet should run from your shell, e.g., the Terminal app on MacOS:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -f /usr/local/bin/julia
+ln -s /Applications/Julia-1.6.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
+</code></pre></div><p>The above snippet is taken from <a href="https://julialang.org/downloads/platform/" target="_blank" rel="noreferrer noopener">Julia&rsquo;s Office Documentation</a>
+
+. Refer to that link for updated codes if the new version you downloaded is not v1.6.1.</p>
+<p>Run <code>julia --version</code> from your Terminal, you will see the updated version.</p>
+<p>You can check by running this snippet from your Terminal as well:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia <span style="color:#408080;font-style:italic"># Initiate the Julia prompt</span>
+versioninfo<span style="color:#666">()</span>
+</code></pre></div><p>At this time, all the packages in your old Julia version are not in the updated version.</p>
+<p>To &ldquo;transfer&rdquo; packages, run the following codes in your Terminal (Suppose you are upgrading from v1.5 to v1.6):</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> ~/.julia/environments/
+mkdir v1.6
+cp v1.5/Project.toml v1.6/
+cp v1.5/Manifest.toml v1.6/
+</code></pre></div><p>The above snippet came from <a href="https://stackoverflow.com/a/63391099/13716814" target="_blank" rel="noreferrer noopener">Antonello&rsquo;s answer</a>
+
+ on Stack Overflow.</p>
+<p>At this point, if you previously have <code>IJulia</code> installed, when you open the Jupyter Notebook, you can only see the old version.</p>
+<p>To add the new Julia version in Jupyter Notebook, run the following in your Terminal:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Julia <span style="color:#408080;font-style:italic"># Initiate the Julia prompt</span>
+import Pkg
+<span style="color:#408080;font-style:italic"># Pkg.add(&#34;IJulia&#34;) if you haven&#39;t installed IJulia yet; </span>
+<span style="color:#408080;font-style:italic"># or Pkg.update(&#34;IJulia&#34;) if you want an update</span>
+Pkg.build<span style="color:#666">(</span><span style="color:#ba2121">&#34;IJulia&#34;</span><span style="color:#666">)</span>
+</code></pre></div><p>You will be able to see the updated version in your Jupyter Notebook.</p>
+<p>I learned this snippet from <a href="https://discourse.julialang.org/t/using-ijulia-with-existing-jupyter-installation-outwith-anaconda/38832" target="_blank" rel="noreferrer noopener">this thread on Julia&rsquo;s forum</a>
+
+.</p>
+<p>One last question you might have is how to remove old Julia versions from Jupyter Notebook. <a href="https://stackoverflow.com/a/45211705/13716814" target="_blank" rel="noreferrer noopener">Louise Davies&rsquo;s answer</a>
+
+ comes in handy here. Run <code>jupyter kernelspec list</code> in your Terminal, and run something like <code>jupyter kernelspec uninstall julia-1.5</code> to uninstall the old version(s).</p>
+
+<p style="color:#777;">Last modified on 2021-10-05</p>
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+      
+       
+       
+       
+       <li><a href="/en/blog/index.xml" type="application/rss+xml" title="RSS feed">
+       Subscribe </a>
+       </li>
+       
+       
+       <li>
+       
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+       
+        License
+        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+        </a>
+       </li>
+       
+     </ul>
+     <div class="copyright-text">
+            
+            ©
+            
+            Hongtao Hao
+            
+            2020-2021
+            
+     </div>
+</footer>
+
+
+
+
+

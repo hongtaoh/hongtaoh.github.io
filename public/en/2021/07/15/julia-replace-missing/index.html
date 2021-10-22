@@ -1,0 +1,619 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>郝鸿涛：Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+            <link rel="icon" href="https://hongtaoh.com/ht10.ico">
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+        
+        
+           <li><a href="/">Home</a></li>
+       
+           <li><a href="/en/vitae/">Vitae</a></li>
+       
+           <li><a href="/en/projects/">Projects</a></li>
+       
+           <li><a href="/en/blog/">Blog</a></li>
+       
+           <li><a href="/en/apad/">APAD</a></li>
+       
+           <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>Julia: How to Replace Missing Values in A Data Frame</h1>
+
+<p>Hongtao Hao 
+ / 2021-07-15 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2021-07-15-julia-missing.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+<aside class="toc">
+Table of Contents:
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#replace-missing-value-with-a-specific-value">Replace missing value with a specific value</a>
+      <ul>
+        <li><a href="#basereplace">Base.replace!</a></li>
+        <li><a href="#basereplace-1">Base.replace</a></li>
+        <li><a href="#basecoalesce">Base.coalesce</a></li>
+        <li><a href="#replacement-operations-on-the-whole-data-frame">Replacement operations on the whole data frame</a></li>
+      </ul>
+    </li>
+    <li><a href="#replace-missing-values-with-the-previous-non-missing-value">Replace missing values with the previous non-missing value</a></li>
+    <li><a href="#replace-missing-values-with-values-from-another-column">Replace missing values with values from another column</a></li>
+    <li><a href="#replace-missing-values-by-using-a-dictionary">Replace missing values by using a dictionary</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+</aside>
+
+
+<div class="body-text list-text">
+<p><div class="warning">
+Unless you are able to constantly moniter and update changes in this post, please DO NOT repost it anywere. Feel free to share the link, though.
+</div></p>
+<p><div class="tip">
+This post is tested under Julia v1.6.1 and DataFrames v1.2.0.
+</div></p>
+<p>A simple example:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#008000;font-weight:bold">using</span> DataFrames
+name <span style="color:#666">=</span> [<span style="color:#ba2121">&#34;Julia&#34;</span>, <span style="color:#ba2121">&#34;Mike&#34;</span>, <span style="color:#ba2121">&#34;Tom&#34;</span>, <span style="color:#ba2121">&#34;John&#34;</span>]
+x <span style="color:#666">=</span> [<span style="color:#666">2</span>, <span style="color:#008000">missing</span>, <span style="color:#666">4</span>, <span style="color:#008000">missing</span>]
+y <span style="color:#666">=</span> [<span style="color:#008000">missing</span>, <span style="color:#666">3</span>, <span style="color:#008000">missing</span>, <span style="color:#666">5</span>]
+df <span style="color:#666">=</span> DataFrame(<span style="color:#19177c">:name</span> <span style="color:#666">=&gt;</span> name, <span style="color:#19177c">:var1</span> <span style="color:#666">=&gt;</span> x, <span style="color:#19177c">:var2</span> <span style="color:#666">=&gt;</span> y)
+</code></pre></div><div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; df
+4×3 DataFrame
+ Row │ name    var1     var2    
+     │ String  Int64?   Int64?  
+─────┼──────────────────────────
+   <span style="color:#666">1</span> │ Julia         <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike    missing        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom           <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John    missing        <span style="color:#666">5</span>
+</code></pre></div><h2 id="replace-missing-value-with-a-specific-value">Replace missing value with a specific value<a href="#replace-missing-value-with-a-specific-value" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p><a href="https://stackoverflow.com/a/56361434/13716814" target="_blank" rel="noreferrer noopener">Cameron Bieganek</a>
+
+ has given a very detailed answer on Stack Overflow. You can either use <code>Base.replace!</code>, <code>Base.replace</code>, <code>Base.ismissing</code>, or <code>Base.coalesce</code>.</p>
+<h3 id="basereplace">Base.replace!<a href="#basereplace" class="header-anchor" ariaLabel="Anchor"> # </a></h3>
+<p>Using <code>Base.replace!</code> is convenient but cannot change the type of the column:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; replace!<span style="color:#666">(</span>df.var1, <span style="color:#19177c">missing</span> <span style="color:#666">=</span>&gt; 0<span style="color:#666">)</span>
+
+julia&gt; df
+4×3 DataFrame
+ Row │ name    var1    var2    
+     │ String  Int64?  Int64?  
+─────┼─────────────────────────
+   <span style="color:#666">1</span> │ Julia        <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike         <span style="color:#666">0</span>        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom          <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John         <span style="color:#666">0</span>        <span style="color:#666">5</span>
+
+julia&gt; typeof<span style="color:#666">(</span>df.var1<span style="color:#666">)</span>
+Vector<span style="color:#666">{</span>Union<span style="color:#666">{</span>Missing, Int64<span style="color:#666">}}</span> <span style="color:#666">(</span><span style="color:#008000">alias</span> <span style="color:#008000;font-weight:bold">for</span> Array<span style="color:#666">{</span>Union<span style="color:#666">{</span>Missing, Int64<span style="color:#666">}</span>, 1<span style="color:#666">})</span>
+</code></pre></div><p>You can still see the question mark following <code>Int64</code> under <code>var1</code>, and the data type of the column of <code>var1</code> indicates that it still contains missing.</p>
+<p>Also, <code>Base.replace!</code> won&rsquo;t allow you to replace missing values with something of a different data type:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+4×3 DataFrame
+ Row │ name    var1     var2    
+     │ String  Int64?   Int64?  
+─────┼──────────────────────────
+   <span style="color:#666">1</span> │ Julia         <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike    missing        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom           <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John    missing        <span style="color:#666">5</span>
+
+julia&gt; replace!<span style="color:#666">(</span>df.var1, <span style="color:#19177c">missing</span> <span style="color:#666">=</span>&gt; <span style="color:#ba2121">&#34;Good&#34;</span><span style="color:#666">)</span>
+ERROR: MethodError: Cannot <span style="color:#ba2121">`</span>convert<span style="color:#ba2121">`</span> an object of <span style="color:#008000">type</span> String to an object of <span style="color:#008000">type</span> Int64
+</code></pre></div><p>This is because <a href="https://dataframes.juliadata.org/stable/man/working_with_dataframes/#Replacing-Data" target="_blank" rel="noreferrer noopener"><code>replace!</code> updates values in the <code>df.var1</code> in-place</a>
+
+. Since &ldquo;Good&rdquo; is a string, neither <code>missing</code> or an integer, in-place operation is disallowed.</p>
+<p>In fact, here, <code>replace!(df.var1, missing =&gt; &quot;Good&quot;)</code> is equivalent to <code>df[:, :var1] = replace(df.var1, missing =&gt; &quot;Good&quot;)</code> which <a href="/en/2021/07/05/julia-bang/#updating-columns">also updates values in-place</a>
+
+ and therefore is alos disallowed:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+4×3 DataFrame
+ Row │ name    var1     var2    
+     │ String  Int64?   Int64?  
+─────┼──────────────────────────
+   <span style="color:#666">1</span> │ Julia         <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike    missing        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom           <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John    missing        <span style="color:#666">5</span>
+
+julia&gt; df<span style="color:#666">[</span>:, :var1<span style="color:#666">]</span> <span style="color:#666">=</span> replace<span style="color:#666">(</span>df.var1, <span style="color:#19177c">missing</span> <span style="color:#666">=</span>&gt; <span style="color:#ba2121">&#34;Good&#34;</span><span style="color:#666">)</span>
+ERROR: MethodError: Cannot <span style="color:#ba2121">`</span>convert<span style="color:#ba2121">`</span> an object of <span style="color:#008000">type</span> String to an object of <span style="color:#008000">type</span> Int64
+</code></pre></div><h3 id="basereplace-1">Base.replace<a href="#basereplace-1" class="header-anchor" ariaLabel="Anchor"> # </a></h3>
+<p>Using <code>Base.replace</code> can solve both problems:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+4×3 DataFrame
+ Row │ name    var1     var2    
+     │ String  Int64?   Int64?  
+─────┼──────────────────────────
+   <span style="color:#666">1</span> │ Julia         <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike    missing        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom           <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John    missing        <span style="color:#666">5</span>
+
+julia&gt; df.var1 <span style="color:#666">=</span> replace<span style="color:#666">(</span>df.var1, <span style="color:#19177c">missing</span> <span style="color:#666">=</span>&gt; 0<span style="color:#666">)</span>
+
+<span style="color:#408080;font-style:italic"># Note the the question mark following Int64 under var1 disappears</span>
+julia&gt; df
+4×3 DataFrame
+ Row │ name    var1   var2    
+     │ String  Int64  Int64?  
+─────┼────────────────────────
+   <span style="color:#666">1</span> │ Julia       <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike        <span style="color:#666">0</span>        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom         <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John        <span style="color:#666">0</span>        <span style="color:#666">5</span>
+
+julia&gt; typeof<span style="color:#666">(</span>df.var1<span style="color:#666">)</span>
+Vector<span style="color:#666">{</span>Int64<span style="color:#666">}</span> <span style="color:#666">(</span><span style="color:#008000">alias</span> <span style="color:#008000;font-weight:bold">for</span> Array<span style="color:#666">{</span>Int64, 1<span style="color:#666">})</span>
+
+julia&gt; df.var2 <span style="color:#666">=</span> replace<span style="color:#666">(</span>df.var2, <span style="color:#19177c">missing</span> <span style="color:#666">=</span>&gt; <span style="color:#ba2121">&#34;Good&#34;</span><span style="color:#666">)</span>
+4-element Vector<span style="color:#666">{</span>Any<span style="color:#666">}</span>:
+  <span style="color:#ba2121">&#34;Good&#34;</span>
+ <span style="color:#666">3</span>
+  <span style="color:#ba2121">&#34;Good&#34;</span>
+ <span style="color:#666">5</span>
+
+julia&gt; df
+4×3 DataFrame
+ Row │ name    var1   var2 
+     │ String  Int64  Any  
+─────┼─────────────────────
+   <span style="color:#666">1</span> │ Julia       <span style="color:#666">2</span>  Good
+   <span style="color:#666">2</span> │ Mike        <span style="color:#666">0</span>  <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom         <span style="color:#666">4</span>  Good
+   <span style="color:#666">4</span> │ John        <span style="color:#666">0</span>  <span style="color:#666">5</span>
+</code></pre></div><p>You are allowed to replace missing values with strings here because <code>df.var2 =</code> <a href="/en/2021/07/05/julia-bang/#updating-columns">updates the column by allocating the new column vector</a>
+
+ you just created with  <code>Base.replace()</code>. Only the updated data is shown but the old column is stored in memory.</p>
+<p>Since it&rsquo;s not changes in-place, but rather a new column inserted, you can change <code>missing</code> to values of any data type.</p>
+<h3 id="basecoalesce">Base.coalesce<a href="#basecoalesce" class="header-anchor" ariaLabel="Anchor"> # </a></h3>
+<p><a href="https://docs.julialang.org/en/v1/base/base/#Base.coalesce" target="_blank" rel="noreferrer noopener"><code>Base.coalesce(x, y)</code></a>
+
+ returns the first value in the argument which is not <code>missing</code>, if any. Otherwise, it returns <code>missing</code>.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+
+julia&gt; df.var1 <span style="color:#666">=</span> coalesce.<span style="color:#666">(</span>df.var1, 0<span style="color:#666">)</span>
+
+julia&gt; df
+4×3 DataFrame
+ Row │ name    var1   var2    
+     │ String  Int64  Int64?  
+─────┼────────────────────────
+   <span style="color:#666">1</span> │ Julia       <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike        <span style="color:#666">0</span>        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom         <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John        <span style="color:#666">0</span>        <span style="color:#666">5</span>
+</code></pre></div><p>Note that you cannot omit the <a href="https://docs.julialang.org/en/v1/manual/functions/#man-vectorized" target="_blank" rel="noreferrer noopener">dot</a>
+
+ in <code>coalesce.</code>, which indicates that the function applies to each element in <code>df.var1</code>, which is an array.</p>
+<p>Also note that you are allowed to replace missing values with things of a different type. With <code>df.var1 = coalesce.(df.var1, &quot;Good&quot;)</code>, you are creating a new column which replaces the old one.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+4×3 DataFrame
+ Row │ name    var1     var2    
+     │ String  Int64?   Int64?  
+─────┼──────────────────────────
+   <span style="color:#666">1</span> │ Julia         <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike    missing        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom           <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John    missing        <span style="color:#666">5</span>
+
+julia&gt; df.var1 <span style="color:#666">=</span> coalesce.<span style="color:#666">(</span>df.var1, <span style="color:#ba2121">&#34;Good&#34;</span><span style="color:#666">)</span>
+
+julia&gt; df
+4×3 DataFrame
+ Row │ name    var1  var2    
+     │ String  Any   Int64?  
+─────┼───────────────────────
+   <span style="color:#666">1</span> │ Julia   <span style="color:#666">2</span>     missing 
+   <span style="color:#666">2</span> │ Mike    Good        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom     <span style="color:#666">4</span>     missing 
+   <span style="color:#666">4</span> │ John    Good        <span style="color:#666">5</span>
+</code></pre></div><p>To dig deeper, if you add a dot before <code>=</code>, that is, <code>df.var1 .= coalesce.(df.var1, &quot;Good&quot;)</code>, you are applying the operation in-place, and therefore it is disallowed:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+4×3 DataFrame
+ Row │ name    var1     var2    
+     │ String  Int64?   Int64?  
+─────┼──────────────────────────
+   <span style="color:#666">1</span> │ Julia         <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike    missing        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom           <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John    missing        <span style="color:#666">5</span>
+
+julia&gt; df.var1 .<span style="color:#666">=</span> coalesce.<span style="color:#666">(</span>df.var1, <span style="color:#ba2121">&#34;Good&#34;</span><span style="color:#666">)</span>
+ERROR: MethodError: Cannot <span style="color:#ba2121">`</span>convert<span style="color:#ba2121">`</span> an object of <span style="color:#008000">type</span> String to an object of <span style="color:#008000">type</span> Int64
+</code></pre></div><p>To summarize, <code>Base.replace!</code> update values in-place; therefore, you cannot replace missing with values of a different data type. You are able to do so by using <code>df.var1 = foo</code>. The <code>foo</code> here might involve <code>replace</code> or <code>coalesce.</code>. It creates a new column which replaces the old column of <code>var1</code>.</p>
+<p>Note that if you use <code>df.var1 .= foo</code>, with a dot before <code>=</code>, you are applying the operation in-place; therefore, replacement with a different data type is disallowed.</p>
+<h3 id="replacement-operations-on-the-whole-data-frame">Replacement operations on the whole data frame<a href="#replacement-operations-on-the-whole-data-frame" class="header-anchor" ariaLabel="Anchor"> # </a></h3>
+<p>To replace missing values in the whole data frame, you need a <a href="https://docs.julialang.org/en/v1/base/base/#for" target="_blank" rel="noreferrer noopener">for loop</a>
+
+ combined with the above mentioned solutions.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#008000;font-weight:bold">for</span> col <span style="color:#008000;font-weight:bold">in</span> eachcol(df)
+    col <span style="color:#666">=</span> replace(col, <span style="color:#008000">missing</span> <span style="color:#666">=&gt;</span> <span style="color:#666">0</span>)
+<span style="color:#008000;font-weight:bold">end</span>
+</code></pre></div><p>which comes from roelpi&rsquo;s post: <a href="https://www.roelpeters.be/replacing-nan-missing-in-julia-dataframes/" target="_blank" rel="noreferrer noopener">Replacing NaN/Missing in Julia DataFrames</a>
+
+.</p>
+<p>Or,</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#008000;font-weight:bold">for</span> i <span style="color:#008000;font-weight:bold">in</span> <span style="color:#666">1</span><span style="color:#666">:</span>size(df)[<span style="color:#666">2</span>] <span style="color:#408080;font-style:italic"># size(df)[2] returns the number of columns in df</span>
+    df[<span style="color:#666">!</span>, i] <span style="color:#666">=</span> coalesce<span style="color:#666">.</span>(df[<span style="color:#666">!</span>, i], <span style="color:#666">0</span>)
+<span style="color:#008000;font-weight:bold">end</span>
+</code></pre></div><p>The simplest way is on <a href="https://dataframes.juliadata.org/stable/man/working_with_dataframes/#Replacing-Data" target="_blank" rel="noreferrer noopener">the official documentation of DataFrames.jl</a>
+
+:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+4×3 DataFrame
+ Row │ name    var1     var2    
+     │ String  Int64?   Int64?  
+─────┼──────────────────────────
+   <span style="color:#666">1</span> │ Julia         <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike    missing        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom           <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John    missing        <span style="color:#666">5</span>
+
+julia&gt; df .<span style="color:#666">=</span> ifelse.<span style="color:#666">(</span>isequal.<span style="color:#666">(</span>df, missing<span style="color:#666">)</span>, 0, df<span style="color:#666">)</span>
+4×3 DataFrame
+ Row │ name    var1    var2   
+     │ String  Int64?  Int64? 
+─────┼────────────────────────
+   <span style="color:#666">1</span> │ Julia        <span style="color:#666">2</span>       <span style="color:#666">0</span>
+   <span style="color:#666">2</span> │ Mike         <span style="color:#666">0</span>       <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom          <span style="color:#666">4</span>       <span style="color:#666">0</span>
+   <span style="color:#666">4</span> │ John         <span style="color:#666">0</span>       <span style="color:#666">5</span>
+</code></pre></div><p>You can replace <code>isequal.(df, missing)</code> with <code>ismissing.(df)</code>, which will get you the same result.</p>
+<p>There is one restriction when you use dot syntax, i.e., having a dot in <code>df .=</code>: you cannot convert missing to values of other data types. Let&rsquo;s say we have a missing value in the <code>name</code> column as well:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">name</span> <span style="color:#666">=</span> <span style="color:#666">[</span><span style="color:#ba2121">&#34;Julia&#34;</span>, missing, <span style="color:#ba2121">&#34;Tom&#34;</span>, <span style="color:#ba2121">&#34;John&#34;</span><span style="color:#666">]</span>
+
+julia&gt; <span style="color:#19177c">x</span> <span style="color:#666">=</span> <span style="color:#666">[</span>2, missing, 4, missing<span style="color:#666">]</span>
+
+julia&gt; <span style="color:#19177c">y</span> <span style="color:#666">=</span> <span style="color:#666">[</span>missing, 3, missing, 5<span style="color:#666">]</span>
+
+julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+4×3 DataFrame
+ Row │ name     var1     var2    
+     │ String?  Int64?   Int64?  
+─────┼───────────────────────────
+   <span style="color:#666">1</span> │ Julia          <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ missing  missing        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom            <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John     missing        <span style="color:#666">5</span>
+
+julia&gt; df .<span style="color:#666">=</span> ifelse.<span style="color:#666">(</span>ismissing.<span style="color:#666">(</span>df<span style="color:#666">)</span>, 0, df<span style="color:#666">)</span>
+ERROR: MethodError: Cannot <span style="color:#ba2121">`</span>convert<span style="color:#ba2121">`</span> an object of <span style="color:#008000">type</span> Int64 to an object of <span style="color:#008000">type</span> String
+</code></pre></div><p>With the doc before <code>=</code>, you are applying the operation in-place, which disallows replacement with a different data type. That is why you see an error when replacing the missing value in the <code>name</code> column with 0.</p>
+<p>You can curciumvent this restriction by simply omitting the <code>.</code>. This way, you are creating new column vectors that replace the one ones.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> ifelse.<span style="color:#666">(</span>ismissing.<span style="color:#666">(</span>df<span style="color:#666">)</span>, 0, df<span style="color:#666">)</span>
+<span style="color:#408080;font-style:italic"># Note how each column&#39;s data type changes</span>
+4×3 DataFrame
+ Row │ name   var1   var2  
+     │ Any    Int64  Int64 
+─────┼─────────────────────
+   <span style="color:#666">1</span> │ Julia      <span style="color:#666">2</span>      <span style="color:#666">0</span>
+   <span style="color:#666">2</span> │ <span style="color:#666">0</span>          <span style="color:#666">0</span>      <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom        <span style="color:#666">4</span>      <span style="color:#666">0</span>
+   <span style="color:#666">4</span> │ John       <span style="color:#666">0</span>      <span style="color:#666">5</span>
+</code></pre></div><p><div class="tip">
+I can totally understand how the <a href="https://docs.julialang.org/en/v1/manual/functions/#man-vectorized" target="_blank" rel="noreferrer noopener">dot syntax</a>
+
+ works for a vector:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">a</span> <span style="color:#666">=</span> <span style="color:#666">[</span>1, 2, 3<span style="color:#666">]</span>
+3-element Vector<span style="color:#666">{</span>Int64<span style="color:#666">}</span>:
+ <span style="color:#666">1</span>
+ <span style="color:#666">2</span>
+ <span style="color:#666">3</span>
+
+julia&gt; sin.<span style="color:#666">(</span>a<span style="color:#666">)</span>
+3-element Vector<span style="color:#666">{</span>Float64<span style="color:#666">}</span>:
+ 0.8414709848078965
+ 0.9092974268256817
+ 0.1411200080598672
+</code></pre></div><p>However, I don&rsquo;t understand how the doc syntax can work for a data frame: <code>ismissing.(df)</code>.</p>
+<p>I wanted to understand <a href="https://docs.julialang.org/en/v1/devdocs/reflection/#Reflection-and-introspection" target="_blank" rel="noreferrer noopener">what&rsquo;s going on</a>
+
+. I first tried <code>@code_warntype</code>:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+4×3 DataFrame
+ Row │ name    var1     var2    
+     │ String  Int64?   Int64?  
+─────┼──────────────────────────
+   <span style="color:#666">1</span> │ Julia         <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike    missing        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom           <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John    missing        <span style="color:#666">5</span>
+
+julia&gt; @code_warntype ismissing.<span style="color:#666">(</span>df<span style="color:#666">)</span>
+Variables
+  <span style="color:#408080;font-style:italic">#self#::Core.Const(var&#34;##dotfunction#257#1&#34;())</span>
+  x1::DataFrame
+
+Body::DataFrame
+<span style="color:#666">1</span> ─ %1 <span style="color:#666">=</span> Base.broadcasted<span style="color:#666">(</span>Main.ismissing, x1<span style="color:#666">)</span>::Base.Broadcast.Broadcasted<span style="color:#666">{</span>DataFrames.DataFrameStyle, Nothing, typeof<span style="color:#666">(</span>ismissing<span style="color:#666">)</span>, Tuple<span style="color:#666">{</span>DataFrame<span style="color:#666">}}</span>
+│   %2 <span style="color:#666">=</span> Base.materialize<span style="color:#666">(</span>%1<span style="color:#666">)</span>::DataFrame
+└──      <span style="color:#008000;font-weight:bold">return</span> %2
+</code></pre></div><p><code>Meta@lower</code> and <code>@code_lowered</code> gave basically the same result. I didn&rsquo;t quite understand it. Then I tried <code>@code_typed</code>:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; @code_typed ismissing.<span style="color:#666">(</span>df<span style="color:#666">)</span>
+CodeInfo<span style="color:#666">(</span>
+<span style="color:#666">1</span> ─ %1  <span style="color:#666">=</span> Core.tuple<span style="color:#666">(</span>x1<span style="color:#666">)</span>::Tuple<span style="color:#666">{</span>DataFrame<span style="color:#666">}</span>
+│   %2  <span style="color:#666">=</span> invoke DataFrames.nrow<span style="color:#666">(</span>_2::DataFrame<span style="color:#666">)</span>::Int64
+│   %3  <span style="color:#666">=</span> DataFrames.getfield<span style="color:#666">(</span>x1, :colindex<span style="color:#666">)</span>::DataFrames.Index
+│   %4  <span style="color:#666">=</span> Base.getfield<span style="color:#666">(</span>%3, :names<span style="color:#666">)</span>::Vector<span style="color:#666">{</span>Symbol<span style="color:#666">}</span>
+│   %5  <span style="color:#666">=</span> Base.arraylen<span style="color:#666">(</span>%4<span style="color:#666">)</span>::Int64
+│   %6  <span style="color:#666">=</span> Base.slt_int<span style="color:#666">(</span>%2, 0<span style="color:#666">)</span>::Bool
+│   %7  <span style="color:#666">=</span> Base.ifelse<span style="color:#666">(</span>%6, 0, %2<span style="color:#666">)</span>::Int64
+│   %8  <span style="color:#666">=</span> %new<span style="color:#666">(</span>Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}</span>, %7<span style="color:#666">)</span>::Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}</span>
+│   %9  <span style="color:#666">=</span> Base.slt_int<span style="color:#666">(</span>%5, 0<span style="color:#666">)</span>::Bool
+│   %10 <span style="color:#666">=</span> Base.ifelse<span style="color:#666">(</span>%9, 0, %5<span style="color:#666">)</span>::Int64
+│   %11 <span style="color:#666">=</span> %new<span style="color:#666">(</span>Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}</span>, %10<span style="color:#666">)</span>::Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}</span>
+│   %12 <span style="color:#666">=</span> Core.tuple<span style="color:#666">(</span>%8, %11<span style="color:#666">)</span>::Tuple<span style="color:#666">{</span>Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}</span>, Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}}</span>
+│   %13 <span style="color:#666">=</span> %new<span style="color:#666">(</span>Base.Broadcast.Broadcasted<span style="color:#666">{</span>DataFrames.DataFrameStyle, Tuple<span style="color:#666">{</span>Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}</span>, Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}}</span>, typeof<span style="color:#666">(</span>ismissing<span style="color:#666">)</span>, Tuple<span style="color:#666">{</span>DataFrame<span style="color:#666">}}</span>, ismissing, %1, %12<span style="color:#666">)</span>::Base.Broadcast.Broadcasted<span style="color:#666">{</span>DataFrames.DataFrameStyle, Tuple<span style="color:#666">{</span>Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}</span>, Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}}</span>, typeof<span style="color:#666">(</span>ismissing<span style="color:#666">)</span>, Tuple<span style="color:#666">{</span>DataFrame<span style="color:#666">}}</span>
+│   %14 <span style="color:#666">=</span> invoke Base.Broadcast.copy<span style="color:#666">(</span>%13::Base.Broadcast.Broadcasted<span style="color:#666">{</span>DataFrames.DataFrameStyle, Tuple<span style="color:#666">{</span>Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}</span>, Base.OneTo<span style="color:#666">{</span>Int64<span style="color:#666">}}</span>, typeof<span style="color:#666">(</span>ismissing<span style="color:#666">)</span>, Tuple<span style="color:#666">{</span>DataFrame<span style="color:#666">}})</span>::DataFrame
+└──       <span style="color:#008000;font-weight:bold">return</span> %14
+<span style="color:#666">)</span> <span style="color:#666">=</span>&gt; DataFrame
+</code></pre></div><p>It seems the process involves a lot with the <a href="https://github.com/JuliaLang/julia/blob/master/base/broadcast.jl" target="_blank" rel="noreferrer noopener">source codes of <code>Base.broadcast</code></a>
+
+. My understanding is that <code>ismissing.(df)</code> will iterate each row (or column?) in <code>df</code>. Each iteration returns a BitVector.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; ismissing.<span style="color:#666">(</span>df.var1<span style="color:#666">)</span>
+4-element BitVector:
+ <span style="color:#666">0</span>
+ <span style="color:#666">1</span>
+ <span style="color:#666">0</span>
+ <span style="color:#666">1</span>
+</code></pre></div><p>All these BitVectors are then &ldquo;<a href="https://github.com/JuliaLang/julia/blob/2893de764f86e3990e74a3cefdd46e13eb93a676/base/broadcast.jl#L900" target="_blank" rel="noreferrer noopener">materialized</a>
+
+&rdquo; into a data frame.
+</div></p>
+<h2 id="replace-missing-values-with-the-previous-non-missing-value">Replace missing values with the previous non-missing value<a href="#replace-missing-values-with-the-previous-non-missing-value" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>Read my other post: <a href="/en/2021/06/27/julia-ffill/">Julia: How to Fill A Missing Value with the Previous Non-missing Value</a>
+
+ for details.</p>
+<h2 id="replace-missing-values-with-values-from-another-column">Replace missing values with values from another column<a href="#replace-missing-values-with-values-from-another-column" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>With <code>coalesce.</code>, you can replace missing values in a column with values in another:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+4×3 DataFrame
+ Row │ name    var1     var2    
+     │ String  Int64?   Int64?  
+─────┼──────────────────────────
+   <span style="color:#666">1</span> │ Julia         <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike    missing        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom           <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John    missing        <span style="color:#666">5</span>
+
+julia&gt; df.var1 <span style="color:#666">=</span> coalesce.<span style="color:#666">(</span>df.var1, df.var2<span style="color:#666">)</span>
+
+julia&gt; df
+4×3 DataFrame
+ Row │ name    var1   var2    
+     │ String  Int64  Int64?  
+─────┼────────────────────────
+   <span style="color:#666">1</span> │ Julia       <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike        <span style="color:#666">3</span>        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom         <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John        <span style="color:#666">5</span>        <span style="color:#666">5</span>
+</code></pre></div><p>This is very useful if you have the missing data, and want to merge &amp; update.</p>
+<p>For example, <code>var1</code> for Mike and John is <code>3</code> and <code>5</code> respectively. Then you can do this:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+
+julia&gt; <span style="color:#19177c">name1</span> <span style="color:#666">=</span> <span style="color:#666">[</span><span style="color:#ba2121">&#34;Mike&#34;</span>, <span style="color:#ba2121">&#34;John&#34;</span><span style="color:#666">]</span>
+
+julia&gt; <span style="color:#19177c">x1</span> <span style="color:#666">=</span> <span style="color:#666">[</span>3, 5<span style="color:#666">]</span>
+
+julia&gt; <span style="color:#19177c">df1</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name1, :var1 <span style="color:#666">=</span>&gt; x1<span style="color:#666">)</span>
+2×2 DataFrame
+ Row │ name    var1  
+     │ String  Int64 
+─────┼───────────────
+   <span style="color:#666">1</span> │ Mike        <span style="color:#666">3</span>
+   <span style="color:#666">2</span> │ John        <span style="color:#666">5</span>
+
+julia&gt; <span style="color:#19177c">df_full</span> <span style="color:#666">=</span> leftjoin<span style="color:#666">(</span>df, df1, <span style="color:#19177c">on</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;name&#34;</span>, <span style="color:#19177c">makeunique</span><span style="color:#666">=</span><span style="color:#008000">true</span><span style="color:#666">)</span>
+4×4 DataFrame
+ Row │ name    var1     var2     var1_1  
+     │ String  Int64?   Int64?   Int64?  
+─────┼───────────────────────────────────
+   <span style="color:#666">1</span> │ Mike    missing        <span style="color:#666">3</span>        <span style="color:#666">3</span>
+   <span style="color:#666">2</span> │ John    missing        <span style="color:#666">5</span>        <span style="color:#666">5</span>
+   <span style="color:#666">3</span> │ Julia         <span style="color:#666">2</span>  missing  missing 
+   <span style="color:#666">4</span> │ Tom           <span style="color:#666">4</span>  missing  missing 
+
+julia&gt; df_full.var1 <span style="color:#666">=</span> coalesce.<span style="color:#666">(</span>df_full.var1, df_full.var1_1<span style="color:#666">)</span>
+
+julia&gt; df_full
+4×4 DataFrame
+ Row │ name    var1   var2     var1_1  
+     │ String  Int64  Int64?   Int64?  
+─────┼─────────────────────────────────
+   <span style="color:#666">1</span> │ Mike        <span style="color:#666">3</span>        <span style="color:#666">3</span>        <span style="color:#666">3</span>
+   <span style="color:#666">2</span> │ John        <span style="color:#666">5</span>        <span style="color:#666">5</span>        <span style="color:#666">5</span>
+   <span style="color:#666">3</span> │ Julia       <span style="color:#666">2</span>  missing  missing 
+   <span style="color:#666">4</span> │ Tom         <span style="color:#666">4</span>  missing  missing 
+
+julia&gt; <span style="color:#008000;font-weight:bold">select</span>!<span style="color:#666">(</span>df_full, Not<span style="color:#666">(</span>:var1_1<span style="color:#666">))</span>
+4×3 DataFrame
+ Row │ name    var1   var2    
+     │ String  Int64  Int64?  
+─────┼────────────────────────
+   <span style="color:#666">1</span> │ Mike        <span style="color:#666">3</span>        <span style="color:#666">3</span>
+   <span style="color:#666">2</span> │ John        <span style="color:#666">5</span>        <span style="color:#666">5</span>
+   <span style="color:#666">3</span> │ Julia       <span style="color:#666">2</span>  missing 
+   <span style="color:#666">4</span> │ Tom         <span style="color:#666">4</span>  missing 
+</code></pre></div><p>The above solution comes from @chedieck&rsquo;s issue: <a href="https://github.com/JuliaData/DataFrames.jl/issues/2243" target="_blank" rel="noreferrer noopener">Merge two DataFrames only to missing values</a>
+
+.</p>
+<h2 id="replace-missing-values-by-using-a-dictionary">Replace missing values by using a dictionary<a href="#replace-missing-values-by-using-a-dictionary" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; <span style="color:#19177c">df</span> <span style="color:#666">=</span> DataFrame<span style="color:#666">(</span>:name <span style="color:#666">=</span>&gt; name, :var1 <span style="color:#666">=</span>&gt; x, :var2 <span style="color:#666">=</span>&gt; y<span style="color:#666">)</span>
+4×3 DataFrame
+ Row │ name    var1     var2    
+     │ String  Int64?   Int64?  
+─────┼──────────────────────────
+   <span style="color:#666">1</span> │ Julia         <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike    missing        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom           <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John    missing        <span style="color:#666">5</span>
+
+julia&gt; <span style="color:#19177c">dict</span> <span style="color:#666">=</span> Dict<span style="color:#666">(</span>
+           <span style="color:#ba2121">&#34;Mike&#34;</span> <span style="color:#666">=</span>&gt; 3,
+           <span style="color:#ba2121">&#34;John&#34;</span> <span style="color:#666">=</span>&gt; <span style="color:#666">5</span>
+       <span style="color:#666">)</span>
+Dict<span style="color:#666">{</span>String, Int64<span style="color:#666">}</span> with <span style="color:#666">2</span> entries:
+  <span style="color:#ba2121">&#34;John&#34;</span> <span style="color:#666">=</span>&gt; <span style="color:#666">5</span>
+  <span style="color:#ba2121">&#34;Mike&#34;</span> <span style="color:#666">=</span>&gt; <span style="color:#666">3</span>
+
+julia&gt; <span style="color:#008000;font-weight:bold">for</span> r in eachrow<span style="color:#666">(</span>df<span style="color:#666">)</span>
+           <span style="color:#008000;font-weight:bold">if</span> r.name in collect<span style="color:#666">(</span>keys<span style="color:#666">(</span>dict<span style="color:#666">))</span>
+               r.var1 <span style="color:#666">=</span> coalesce<span style="color:#666">(</span>r.var1, dict<span style="color:#666">[</span>r.name<span style="color:#666">])</span>
+           end
+       end
+
+julia&gt; df
+4×3 DataFrame
+ Row │ name    var1    var2    
+     │ String  Int64?  Int64?  
+─────┼─────────────────────────
+   <span style="color:#666">1</span> │ Julia        <span style="color:#666">2</span>  missing 
+   <span style="color:#666">2</span> │ Mike         <span style="color:#666">3</span>        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ Tom          <span style="color:#666">4</span>  missing 
+   <span style="color:#666">4</span> │ John         <span style="color:#666">5</span>        <span style="color:#666">5</span>
+</code></pre></div><h2 id="references">References<a href="#references" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<ul>
+<li>
+<p><a href="https://www.roelpeters.be/replacing-nan-missing-in-julia-dataframes/" target="_blank" rel="noreferrer noopener">Replacing NaN/Missing in Julia DataFrames</a>
+
+ by roelpi</p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/a/56361434/13716814" target="_blank" rel="noreferrer noopener">Cameron Bieganek&rsquo;s response</a>
+
+ to <a href="https://stackoverflow.com/q/34611109/13716814" target="_blank" rel="noreferrer noopener">Julia | DataFrame | Replacing missing Values</a>
+
+ on Stack Overflow</p>
+</li>
+<li>
+<p><a href="https://dataframes.juliadata.org/stable/man/working_with_dataframes/#Replacing-Data" target="_blank" rel="noreferrer noopener"><em>Replacing data</em></a>
+
+ on the <a href="https://dataframes.juliadata.org/stable/" target="_blank" rel="noreferrer noopener">official documentation of DataFrames.jl</a>
+
+</p>
+</li>
+</ul>
+
+<p style="color:#777;">Last modified on 2021-10-05</p>
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+      
+       
+       
+       
+       <li><a href="/en/blog/index.xml" type="application/rss+xml" title="RSS feed">
+       Subscribe </a>
+       </li>
+       
+       
+       <li>
+       
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+       
+        License
+        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+        </a>
+       </li>
+       
+     </ul>
+     <div class="copyright-text">
+            
+            ©
+            
+            Hongtao Hao
+            
+            2020-2021
+            
+     </div>
+</footer>
+
+
+
+
+

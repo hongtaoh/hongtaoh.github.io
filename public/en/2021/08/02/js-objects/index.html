@@ -1,0 +1,186 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>郝鸿涛：Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+            <link rel="icon" href="https://hongtaoh.com/ht10.ico">
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+        
+        
+           <li><a href="/">Home</a></li>
+       
+           <li><a href="/en/vitae/">Vitae</a></li>
+       
+           <li><a href="/en/projects/">Projects</a></li>
+       
+           <li><a href="/en/blog/">Blog</a></li>
+       
+           <li><a href="/en/apad/">APAD</a></li>
+       
+           <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>JavaScript Ojbects: Add and Change Name:Value Pairs</h1>
+
+<p>Hongtao Hao 
+ / 2021-08-02 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2021-08-02-js-objects.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+<div class="body-text list-text">
+<p>Take the following as an example</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">data <span style="color:#666">=</span> [
+  { <span style="color:#ba2121">&#34;date&#34;</span> <span style="color:#666">:</span> <span style="color:#ba2121">&#39;2013-01-01&#39;</span>, <span style="color:#ba2121">&#34;value&#34;</span> <span style="color:#666">:</span> <span style="color:#666">45</span> },
+  { <span style="color:#ba2121">&#34;date&#34;</span> <span style="color:#666">:</span> <span style="color:#ba2121">&#39;2013-02-01&#39;</span>, <span style="color:#ba2121">&#34;value&#34;</span> <span style="color:#666">:</span> <span style="color:#666">50</span> },
+  { <span style="color:#ba2121">&#34;date&#34;</span> <span style="color:#666">:</span> <span style="color:#ba2121">&#39;2013-03-01&#39;</span>, <span style="color:#ba2121">&#34;value&#34;</span> <span style="color:#666">:</span> <span style="color:#666">55</span> },
+  { <span style="color:#ba2121">&#34;date&#34;</span> <span style="color:#666">:</span> <span style="color:#ba2121">&#39;2013-04-01&#39;</span>, <span style="color:#ba2121">&#34;value&#34;</span> <span style="color:#666">:</span> <span style="color:#666">50</span> },
+  { <span style="color:#ba2121">&#34;date&#34;</span> <span style="color:#666">:</span> <span style="color:#ba2121">&#39;2013-05-01&#39;</span>, <span style="color:#ba2121">&#34;value&#34;</span> <span style="color:#666">:</span> <span style="color:#666">45</span> },
+  { <span style="color:#ba2121">&#34;date&#34;</span> <span style="color:#666">:</span> <span style="color:#ba2121">&#39;2013-06-01&#39;</span>, <span style="color:#ba2121">&#34;value&#34;</span> <span style="color:#666">:</span> <span style="color:#666">50</span> },
+  { <span style="color:#ba2121">&#34;date&#34;</span> <span style="color:#666">:</span> <span style="color:#ba2121">&#39;2013-07-01&#39;</span>, <span style="color:#ba2121">&#34;value&#34;</span> <span style="color:#666">:</span> <span style="color:#666">50</span> },
+  { <span style="color:#ba2121">&#34;date&#34;</span> <span style="color:#666">:</span> <span style="color:#ba2121">&#39;2013-08-01&#39;</span>, <span style="color:#ba2121">&#34;value&#34;</span> <span style="color:#666">:</span> <span style="color:#666">52</span> }
+]
+</code></pre></div><h2 id="how-to-add-new-namevalue-pairs">How to add new name:value pairs<a href="#how-to-add-new-namevalue-pairs" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">data.map(<span style="color:#008000;font-weight:bold">function</span>(d) {
+  d.valuePlus <span style="color:#666">=</span> d.value <span style="color:#666">+</span> <span style="color:#666">1</span>;
+  <span style="color:#008000;font-weight:bold">return</span> d;
+})
+</code></pre></div><p>Or:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">data.map(d =&gt; {
+  d.valuePlus <span style="color:#666">=</span> d.value <span style="color:#666">+</span> <span style="color:#666">1</span>;
+  <span style="color:#008000;font-weight:bold">return</span> d;
+})
+</code></pre></div><h2 id="how-to-change-names-in-the-objects-namevalue-pairs">How to change names in the object&rsquo;s name:value pairs<a href="#how-to-change-names-in-the-objects-namevalue-pairs" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>This is basically to create a new object or a new array of objects</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">data.map(<span style="color:#008000;font-weight:bold">function</span>(d) {<span style="color:#008000;font-weight:bold">return</span> {
+  <span style="color:#ba2121">&#34;newdate&#34;</span><span style="color:#666">:</span> d.date,
+  <span style="color:#ba2121">&#34;newvalue&#34;</span><span style="color:#666">:</span> d.value,
+}})
+</code></pre></div><p>Or</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">data.map(d =&gt; ({
+  <span style="color:#ba2121">&#34;newdate&#34;</span><span style="color:#666">:</span> d.date,
+  <span style="color:#ba2121">&#34;newvalue&#34;</span><span style="color:#666">:</span> d.value,
+}))
+</code></pre></div><p>Note that in the second arrow function (right above), we use parentheses around object literals to let the function return &ldquo;a single value&rdquo;, which is an object.</p>
+<p>We don&rsquo;t need parenthese in the first arrow function because &ldquo;curly braces are execuating multiple lines of codes&rdquo;, quoting <a href="https://stackoverflow.com/a/39629982/13716814" target="_blank" rel="noreferrer noopener">david</a>
+
+.</p>
+
+<p style="color:#777;">Last modified on 2021-10-05</p>
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+      
+       
+       
+       
+       <li><a href="/en/blog/index.xml" type="application/rss+xml" title="RSS feed">
+       Subscribe </a>
+       </li>
+       
+       
+       <li>
+       
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+       
+        License
+        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+        </a>
+       </li>
+       
+     </ul>
+     <div class="copyright-text">
+            
+            ©
+            
+            Hongtao Hao
+            
+            2020-2021
+            
+     </div>
+</footer>
+
+
+
+
+

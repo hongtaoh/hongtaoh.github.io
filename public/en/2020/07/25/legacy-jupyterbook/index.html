@@ -1,0 +1,274 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>郝鸿涛：Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+            <link rel="icon" href="https://hongtaoh.com/ht10.ico">
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+        
+        
+           <li><a href="/">Home</a></li>
+       
+           <li><a href="/en/vitae/">Vitae</a></li>
+       
+           <li><a href="/en/projects/">Projects</a></li>
+       
+           <li><a href="/en/blog/">Blog</a></li>
+       
+           <li><a href="/en/apad/">APAD</a></li>
+       
+           <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>How to Use Legacy Jupyterbook</h1>
+
+<p>Hongtao Hao 
+ / 2020-07-25 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2020-07-25-legacy-jupyterbook.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+<aside class="toc">
+Table of Contents:
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-jupyterbook">About Jupyterbook</a></li>
+    <li><a href="#using-jupyterbook">Using Jupyterbook</a></li>
+    <li><a href="#example">Example</a></li>
+    <li><a href="#changing-content">Changing content</a></li>
+  </ul>
+</nav>
+</aside>
+
+
+<div class="body-text list-text">
+<h2 id="about-jupyterbook">About Jupyterbook<a href="#about-jupyterbook" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>Jupyterbook totally changed the way a book is built in April 2020. The final legacy version is <a href="https://github.com/executablebooks/jupyter-book/releases/tag/v0.6.5" target="_blank" rel="noreferrer noopener">v0.6.5</a>
+
+. You can compare the <a href="https://legacy.jupyterbook.org/intro.html" target="_blank" rel="noreferrer noopener">legacy demo</a>
+
+ with the <a href="https://jupyterbook.org/intro.html" target="_blank" rel="noreferrer noopener">newest version demo</a>
+
+.</p>
+<p>You can install the legacy version <a href="https://pypi.org/project/jupyter-book/0.6.5/" target="_blank" rel="noreferrer noopener">here</a>
+
+.</p>
+<h2 id="using-jupyterbook">Using Jupyterbook<a href="#using-jupyterbook" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>In this article, I&rsquo;ll briefly talk about how to use this legacy version of jupyterbook together with GitHub and Netlify.</p>
+<p>First off, you should install the legacy version using <code>pip install jupyter-book==0.6.5</code> as mentioned above. Then, I will show you how to start a book named &ldquo;legacy-jupyterbook&rdquo; on Desktop. I am assuming that you are using a Mac. All the following codes should run in Terminal.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> Desktop <span style="color:#408080;font-style:italic"># or any other directory you want to place your project</span>
+jupyter-book create legacy-jupyterbook <span style="color:#408080;font-style:italic"># You&#39;ll see the file created on Desktop</span>
+<span style="color:#008000">echo</span> <span style="color:#ba2121">&#34;2.6.2&#34;</span> &gt; .ruby-version <span style="color:#408080;font-style:italic"># To put a .ruby-version file in there</span>
+</code></pre></div><p>The <code>echo &quot;2.6.2&quot; &gt; .ruby-version</code> solution come from <a href="https://stackoverflow.com/a/38194231" target="_blank" rel="noreferrer noopener">here</a>
+
+.</p>
+<p>Then, go to GitHub, and create a repository <strong>without</strong> checking &ldquo;Initialize this repository with a README&rdquo;. Take a look at this HTTPS address:</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/legacy-jupyterbook-github-repo-https.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/legacy-jupyterbook-github-repo-https.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>HTTPS of the GitHub Repo</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Then, go back to your Terminal:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> legacy-jupyterbook
+git init
+<span style="color:#008000">cd</span> .. <span style="color:#408080;font-style:italic"># To go back to the Desktop directory because the following line only functions in a level higher than the current one</span>
+jupyter-book build legacy-jupyterbook
+<span style="color:#008000">cd</span> - <span style="color:#408080;font-style:italic"># To go back to legacy-jupyterbook</span>
+git add .
+git commit -m “uploading initial files.”
+git remote add origin https://github.com/hhao1992/second-try.git <span style="color:#408080;font-style:italic"># Replace it with yours</span>
+git push -u origin master
+</code></pre></div><p>Then, you&rsquo;ll see some security alerts:</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/legacy-jupyterbook-alert01.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/legacy-jupyterbook-alert01.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>Alert info-01</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="/media/enblog/legacy-jupyterbook-alert02.png"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="/media/enblog/legacy-jupyterbook-alert02.png"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>Alert info-02</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Solve them this way:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf Gemfile.lock
+make install 
+git add .
+git commit -m <span style="color:#ba2121">&#34;changing Gemfile.lock.&#34;</span>
+git push origin master 
+</code></pre></div><p>The above solution come from <a href="https://www.bookstack.cn/read/jupyterbook/8124f882effb2130.md#What%20is%20this%20Gemfile.lock%20file%20or%20why%20am%20I%20getting%20Jekyll%20dependency%20warnings?" target="_blank" rel="noreferrer noopener">here</a>
+
+.</p>
+<p>Then go to <a href="www.netlify.com/">Netlify</a>
+
+ and connect to the GitHub repo. When we deploy the Jupyterbook project with Nellify, it will automatically know that this is a Jekyll theme and you don&rsquo;t need to change anything. I am not detailing what you can do with Netlify here. Please look for information about it by yourself if you are not familiar with it already.</p>
+<p>If you want to make changes later, first please <code>cd path/to/YourProject</code> and then use the following script:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf _build <span style="color:#408080;font-style:italic">#If you are familiar with Jekyll, you&#39;ll know what _build mean here.</span>
+<span style="color:#008000">cd</span> ..
+jupyter-book build YourProject
+<span style="color:#008000">cd</span> YourProject
+git add .
+<span style="color:#19177c">msg</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;rebuilding site </span><span style="color:#008000;font-weight:bold">$(</span>date<span style="color:#008000;font-weight:bold">)</span><span style="color:#ba2121">&#34;</span> 
+git commit -m <span style="color:#ba2121">&#34;</span><span style="color:#19177c">$msg</span><span style="color:#ba2121">&#34;</span> 
+git push origin master
+</code></pre></div><p>You can store this file as <code>deploy.sh</code>, save it to the root directory of YourProject. Every time after you&rsquo;ve make all the changes you want, at the root directory of YourProject, simply run <code>bash deploy.sh</code> and GitHub and Netlify will deploy by themselves.</p>
+<h2 id="example">Example<a href="#example" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>Finally, you can view the final product of the example I provided above <a href="https://legacy-jupyterbook.netlify.app/" target="_blank" rel="noreferrer noopener">here</a>
+
+. And <a href="https://github.com/hongtaoh/legacy-jupyterbook" target="_blank" rel="noreferrer noopener">here</a>
+
+ is its GitHub repository.</p>
+<h2 id="changing-content">Changing content<a href="#changing-content" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>I am not detailing how to customize the content here. You simply need to change it in the <code>content</code> folder at the root directory, and then make corresponding changes to <code>toc.yml</code> under the <code>_data</code> folder. You can find more information in the <a href="https://legacy.jupyterbook.org/intro.html" target="_blank" rel="noreferrer noopener">official guide</a>
+
+</p>
+
+<p style="color:#777;">Last modified on 2021-10-05</p>
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+      
+       
+       
+       
+       <li><a href="/en/blog/index.xml" type="application/rss+xml" title="RSS feed">
+       Subscribe </a>
+       </li>
+       
+       
+       <li>
+       
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+       
+        License
+        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+        </a>
+       </li>
+       
+     </ul>
+     <div class="copyright-text">
+            
+            ©
+            
+            Hongtao Hao
+            
+            2020-2021
+            
+     </div>
+</footer>
+
+
+
+
+

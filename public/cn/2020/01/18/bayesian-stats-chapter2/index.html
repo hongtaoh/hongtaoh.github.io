@@ -1,0 +1,219 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>郝鸿涛：Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+            <link rel="icon" href="https://hongtaoh.com/ht10.ico">
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+        
+        
+           <li><a href="/cn/">关于</a></li>
+       
+           <li><a href="/cn/blog/">日志</a></li>
+       
+           <li><a href="/">English</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>贝叶斯统计之概述</h1>
+
+<p>郝鸿涛 
+ / 2020-01-18 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2020-01-18-bayesian-stats-chapter2.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="编辑本页"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+<div class="body-text list-text">
+<p>前言：这篇文章是我上约翰.克鲁斯克老师 (<a href="https://psych.indiana.edu/directory/faculty/kruschke-john.html" target="_blank" rel="noreferrer noopener">John Kruschke</a>
+
+) 的《贝叶斯数据分析》 (<a href="https://jkkweb.sitehost.iu.edu/jkkteach/P533/" target="_blank" rel="noreferrer noopener">P533: Bayesian Data Analysis</a>
+
+) 这门课时，在课下看他的教材 <em><a href="https://www.sciencedirect.com/book/9780124058880/doing-bayesian-data-analysis" target="_blank" rel="noreferrer noopener">Doing Bayesian Data Analysis (Second Edition)</a>
+
+</em> 所做的笔记。</p>
+<p>贝叶斯的本质是对于可能性<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>(credibility) 的重置 (reallocation)。比如，早上刚出家门，你看到门前地面是湿的。这个有很多种可能的原因：下雨了、小孩子撒尿了、环卫工人刚打扫了、物业洒水车刚洒了水、有人不小心把水杯里的水洒出来了、外星人来过自己的家然后离开的时候不小心留下的痕迹&hellip;这些所有的可能，<strong>在我们获得进一步数据之前</strong>，都有着自己的先验概率 (prior probability)。这些先验概率，是我们主观上认为的可能性，比如根据我们往常的生活经验，下雨的可能性要比外星人到访高的多。虽然高得多，我们获得的信息毕竟是有限的，因为我们只是观察了门前的一小块地。因此，这些可能性都是存在的。</p>
+<p>然后，我们接着在路上走，发现不仅整条路都是湿的，而且房屋顶都是湿的，那么我们对概率进行重置：下雨的可能性进步一提升，而之前有可能的洒水车洒过水的可能性下降，因为洒水车不可能把水洒到房顶上。</p>
+<p>Kruschke 老师的教材中的<a href="https://www.sciencedirect.com/science/article/pii/B9780124058880000027#f0010" target="_blank" rel="noreferrer noopener">图2.1</a>
+
+对这一过程进行了进一步阐释。这张图展示了从一开始认为 A, B, C, D 都有可能是罪犯，而且可能性相同，然后一步一步找到新的线索，最后认定 D 是罪犯的过程。</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000027-f02-01-9780124058880.jpg"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000027-f02-01-9780124058880.jpg"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>图2.1, 来源: Kruschke 老师的教材 p.17</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>贝叶斯统计中很关键的一步是找到可能的解释情况。比如看到门前的路面是湿的，我们已经想到了很多可能的情况，但是不可能把这些情况穷尽。比如，也有可能是一个人在正好经过你的家门的时候，接到一个电话，然后她就哭了，于是门前的路面就湿了，等等。我们也不用试着去穷尽可能情况，只需要找到我们感兴趣的几个情况就好。通过分析，我们可以看到这几个情况是否很好地解释了我们观察到的数据，如果没有，那么我们再去找别的可能的情况。这一过程叫做 posterior predictive check.</p>
+<p>很多的时候，一种可能性由一个数学公式来代表，然后看哪个公式可以更好得描述观察到的数据（具体来说，是看是否契合数据的<em>趋势 (trends)<em>以及</em>分散度 (spread)</em> 。从图<a href="https://www.sciencedirect.com/science/article/pii/B9780124058880000027#f0025" target="_blank" rel="noreferrer noopener">2.4</a>
+
+可以看到， 两个数学公式中，明显第一个公式更好地描述了观察到的数据。需要注意的是，数学公式和观察到的数据之间并不存在因果关系。</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000027-f02-04-9780124058880.jpg"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000027-f02-04-9780124058880.jpg"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>图2.4, 来源: Kruschke 老师的教材 p.23</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Kruschke 老师举了一个身高－体重的例子。<a href="https://www.sciencedirect.com/science/article/pii/B9780124058880000027#f0030" target="_blank" rel="noreferrer noopener">图2.5</a>
+
+左边的图中，小圆圈代表了具体的每个人的身高－体重数据。</p>
+<figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000027-f02-05-9780124058880.jpg"  itemprop="contentUrl"> 
+        <img itemprop="thumbnail"
+            src="https://ars.els-cdn.com/content/image/3-s2.0-B9780124058880000027-f02-05-9780124058880.jpg"
+            
+            />
+    </a>
+    
+    <figcaption>
+        <h4>图2.5, 来源: Kruschke 老师的教材 p.26</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>这里，可能性当然也可以看做概率 (probability)，其实，概率是更为准确的说法。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+<p style="color:#777;">最后一次修改于 2021-10-05</p>
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+      
+       
+       
+       
+       <li><a href="/cn/blog/index.xml" type="application/rss+xml" title="RSS feed">
+       订阅 </a>
+       </li>
+       
+       
+       <li>
+       
+       <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">
+       
+        版权
+        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+        </a>
+       </li>
+       
+     </ul>
+     <div class="copyright-text">
+            
+            ©
+            
+            郝鸿涛
+            
+            2020-2021
+            
+     </div>
+</footer>
+
+
+
+
+

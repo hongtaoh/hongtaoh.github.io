@@ -1,0 +1,219 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>郝鸿涛：Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+            <link rel="icon" href="https://hongtaoh.com/ht10.ico">
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+        
+        
+           <li><a href="/">Home</a></li>
+       
+           <li><a href="/en/vitae/">Vitae</a></li>
+       
+           <li><a href="/en/projects/">Projects</a></li>
+       
+           <li><a href="/en/blog/">Blog</a></li>
+       
+           <li><a href="/en/apad/">APAD</a></li>
+       
+           <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>How to Use Multiple GitHub Accounts on the Same Computer</h1>
+
+<p>Hongtao Hao 
+ / 2021-03-29 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2021-03-29-multiple-github.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+<div class="body-text list-text">
+<div class="warning">
+<p>I am not sure whether the methods mentioned below will actually work. Ping me if you have a better solution.</p>
+</div>
+<p>I saw <a href="https://stackoverflow.com/questions/3860112/multiple-github-accounts-on-the-same-computer" target="_blank" rel="noreferrer noopener">this question</a>
+
+ on Stack Overflow. I also saw the <a href="https://stackoverflow.com/a/3860139/13716814" target="_blank" rel="noreferrer noopener">highest rated answer</a>
+
+ and <a href="https://code.tutsplus.com/tutorials/quick-tip-how-to-work-with-github-and-multiple-accounts--net-22574" target="_blank" rel="noreferrer noopener">Jeffrey Way&rsquo;s blog post</a>
+
+ mentioned in this answer. However, I didn&rsquo;t manage to follow their steps.</p>
+<p>I later found <a href="https://medium.com/the-andela-way/a-practical-guide-to-managing-multiple-github-accounts-8e7970c8fd46" target="_blank" rel="noreferrer noopener"><em>A Practical Guide to Managing Multiple GitHub Accounts</em></a>
+
+ by Fredrick. It successfully helped me set up the SSH keys. The post is already clear enough, but I would like to go over the steps in my own words, and clarify some points I found most confusing.</p>
+<p>Almost all the following codes come from Fredrick. I just added my explanation to them.</p>
+<p>First, open your Terminal.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">cd</span> ~/.ssh 
+ssh-keygen -t rsa -b <span style="color:#666">4096</span> -C <span style="color:#ba2121">&#34;secondary_account@example.com&#34;</span>
+ssh-keygen -t rsa -b <span style="color:#666">4096</span> -C <span style="color:#ba2121">&#34;primary_account@example.com&#34;</span>
+</code></pre></div><p>After running <code>ssh-keygen -t ...</code>, a question will pop up (Suppose your Mac username is Julia):</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Enter file in which to save the key <span style="color:#666">(</span>/Users/Julia/.ssh/id_rsa<span style="color:#666">)</span>: 
+</code></pre></div><p>After the <code>:</code>, you are supposed to enter something like: <code>/Users/Julia/.ssh/id_rsa_secondary</code> or <code>/Users/Julia/.ssh/id_rsa_primary</code>. This is a very important step, but none of the posts I read mentioned it, which has been very frustring for me.</p>
+<p>You&rsquo;ll also be asked to enter passphrases. In fact, you are asked to <em>create</em> passphrases, rather than to enter your GitHub or Computer passwords.</p>
+<p>Open the <code>.ssh/</code> folder with</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open -a Finder ~/.ssh
+</code></pre></div><p>You should see four files in the folder:</p>
+<pre tabindex="0"><code>id_rsa_primary
+id_rsa_primary.pub
+id_rsa_secondary
+id_rsa_secondary.pub
+</code></pre><h2 id="copy">Copy<a href="#copy" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>Then, copy the content of the keys for your secondary GitHub account:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pbcopy &lt; ~/.ssh/id_rsa_secondary.pub
+</code></pre></div><p>Now, log in your secondary GitHub account, Click your avatar on the upper-right corner -&gt; Settings -&gt; &ldquo;SSH and GPG keys&rdquo; on left panel -&gt; New SSH key. Paste (<code>Cmd + v</code>) in the &ldquo;key&rdquo; input field, and add a title in the &ldquo;Title&rdquo; box.</p>
+<h2 id="configuration">Configuration<a href="#configuration" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>Go back to your Terminal:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch config
+</code></pre></div><p>Now you can see a file called <code>config</code> within the folder of <code>/Users/Julia/.ssh/</code>. Open it and add the following to it:</p>
+<pre tabindex="0"><code># Primary account - default config
+Host github.com-primary
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa_primary
+
+# Secondary account
+Host github.com-secondary
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa_secondary
+</code></pre><p>Save (<code>Ctrl + S</code>).</p>
+<p>I didn&rsquo;t create the two <code>git</code> configuration files mentioned by Fredrick and I didn&rsquo;t encounter any problems.</p>
+<h2 id="save-and-authenticate">Save and Authenticate<a href="#save-and-authenticate" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>Be aware that the following codes starting with <code>ssh-add ...</code> should run at the directory of <code>Users/Julia/.ssh/</code>, not <code>Users/Julia/</code> as Frederick implies. Check your present working directory with <code>pwd</code> if you are not sure.</p>
+<p>Remove previous SSH keys:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-add -D
+</code></pre></div><p>Add the new SSH keys just created:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-add id_rsa_secondary
+ssh-add id_rsa_primary
+</code></pre></div><p>Check whether it works:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-add -l
+</code></pre></div><p>To authenticate:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  <span style="color:#408080;font-style:italic"># Open your secondary GitHub account, and run:</span>
+ssh -T github.com-secondary
+  <span style="color:#408080;font-style:italic"># Open your primary GitHub account, and run:</span>
+ssh -T github.com-primary
+</code></pre></div><p>If successful, you can see:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Hi USERNAME! You<span style="">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div><h2 id="use">Use<a href="#use" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<p>When working on projects associated with your secondary GitHub account, it&rsquo;s better to use the SSH format when cloning or pushing. Also, you&rsquo;d better specify which account you are using:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone git@github.com-secondary:USERNAME/REPONAME.git
+</code></pre></div>
+<p style="color:#777;">Last modified on 2021-10-05</p>
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+      
+       
+       
+       
+       <li><a href="/en/blog/index.xml" type="application/rss+xml" title="RSS feed">
+       Subscribe </a>
+       </li>
+       
+       
+       <li>
+       
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+       
+        License
+        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+        </a>
+       </li>
+       
+     </ul>
+     <div class="copyright-text">
+            
+            ©
+            
+            Hongtao Hao
+            
+            2020-2021
+            
+     </div>
+</footer>
+
+
+
+
+

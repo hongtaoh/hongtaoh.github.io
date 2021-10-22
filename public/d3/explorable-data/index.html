@@ -1,0 +1,105 @@
+<!-- Result of the following codes: https://hongtaoh.com/d3/explorable-data/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Explorable Data</title>
+    <style>
+      body {
+        line-height: 1.8;
+        font-size: 19px;
+        text-align: center;
+      }
+      h1{font-size: 200%}
+      h2{font-size: 150%}
+      h3{font-size: 120%}
+
+      #chart {
+        position: center;
+      }
+
+    </style>
+
+    <script type="module">
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+
+      import D3ExplorableNotebook from "https://api.observablehq.com/@hongtaoh/explrable-data.js?v=3";
+
+      import ScatterPlot from "https://api.observablehq.com/@hongtaoh/scatter-plots.js?v=3";
+   
+      const rendersExplorable = {
+        "viewof season": "#viewof-season",
+        "TimeSeason": "#TimeSeason",
+        "viewof CI": "#viewof-CI",
+        "CIbody": "#CIbody",
+        "dataset": "#dataset",
+        "reset": "#reset",
+        "add": "#add",
+        "D_chart": "#chart",
+      }
+
+      const rendersScatterPlot = {
+        "newDataPoints": "#newDataPoints",
+        "scatterPlot": "#ScatterPlot"
+      }
+
+      const runtimeExplorable = new Runtime();
+      
+      const mainExplorable = runtimeExplorable.module(D3ExplorableNotebook, name => {
+        const selector = rendersExplorable[name];
+        if (selector) {
+              return new Inspector(document.querySelector(selector));
+          } else {
+              return true;
+          }
+      });
+
+      const runtimeScatterPlot = new Runtime();
+      
+      const mainScatterPlot = runtimeScatterPlot.module(ScatterPlot, name => {
+        const selector = rendersScatterPlot[name];
+        if (selector) {
+              return new Inspector(document.querySelector(selector));
+          } else {
+              return true;
+          }
+      });
+      
+    </script>
+  </head>
+  <body>
+    <h1>1. Dropdown menu: Select your favorite season!</h1>
+    <div>
+      <div id="viewof-season"></div>
+      <div id="TimeSeason"></div>
+    </div>
+
+    <h1>2. Slider: Choose your confidence interval</h1>
+    <div>
+      <div id="viewof-CI"></div>
+      Dataset: <div id="dataset"></div>
+      <div id="CIbody"></div>
+    </div>
+
+    <h1>3. Button: Adding values and reset</h1>
+    <div>
+      <div id="add"></div>
+      <div id="reset"></div>
+      <div id="chart"></div>
+      <button type="button" onclick="window.location.href='https://observablehq.com/@hongtaoh/explrable-data#D_chart';">See the source code.</button>
+    </div>
+
+    </hr>
+
+    <h1>4. Another notebook: example</h1>
+    <div>
+      <div id="newDataPoints"></div>
+      <div id="ScatterPlot"></div>
+      <button type="button" onclick="window.location.href='https://observablehq.com/@hongtaoh/scatter-plots#scatterPlot';">See the source code.</button>
+    </div>
+
+    
+  </body>
+</html>

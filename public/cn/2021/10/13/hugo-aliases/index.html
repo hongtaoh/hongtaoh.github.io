@@ -1,0 +1,160 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>郝鸿涛：Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+            <link rel="icon" href="https://hongtaoh.com/ht10.ico">
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+        
+        
+           <li><a href="/cn/">关于</a></li>
+       
+           <li><a href="/cn/blog/">日志</a></li>
+       
+           <li><a href="/">English</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>Hugo 的帖子如何改改 URL 地址</h1>
+
+<p>郝鸿涛 
+ / 2021-10-13 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2021-10-13-hugo-aliases.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="编辑本页"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+<div class="body-text list-text">
+<p>要用到 <a href="https://gohugo.io/content-management/urls/#aliases" target="_blank" rel="noreferrer noopener">Hugo Aliases</a>
+
+。</p>
+<p>比如，我有一篇帖子，之前的 slug 是 <code>if-senior-high-again</code> 我想改成 <code>senior-high</code>。那我那篇帖子的 YAML front matter 应该设置成：</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#008000;font-weight:bold">title</span>:<span style="color:#bbb"> </span>如果我的高中能再来一遍<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">date</span>:<span style="color:#bbb"> </span>2020-04-19T10:57:52<span style="color:#666">-04</span>:<span style="color:#666">00</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">author</span>:<span style="color:#bbb"> </span>郝鸿涛<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">slug</span>:<span style="color:#bbb"> </span>senior-high<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">draft</span>:<span style="color:#bbb"> </span><span style="color:#008000;font-weight:bold">false</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">toc</span>:<span style="color:#bbb"> </span><span style="color:#008000;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#008000;font-weight:bold">aliases</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- /cn/2020/04/19/if-senior-high-again/<span style="color:#bbb">
+</span></code></pre></div><p>Aliases 具体的地址是你之前帖子的原 URL 去除你的网站地址。比如，我那篇帖子的原地址是 <a href="https://hongtaoh.com/cn/2020/04/19/if-senior-high-again/" target="_blank" rel="noreferrer noopener">https://hongtaoh.com/cn/2020/04/19/if-senior-high-again/</a>
+
+，去除我的网站地址 <code>https://hongtaoh.com</code> 后还剩下 <code>/cn/2020/04/19/if-senior-high-again/</code>，这就是我要在 aliases 中填的。更新后，当别人打开就地址，浏览器会自动跳转到新地址。你可以点开上面的链接自己看看效果。</p>
+<p>另外，Aliases 可以是多个。</p>
+
+<p style="color:#777;">最后一次修改于 2021-10-16</p>
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+      
+       
+       
+       
+       <li><a href="/cn/blog/index.xml" type="application/rss+xml" title="RSS feed">
+       订阅 </a>
+       </li>
+       
+       
+       <li>
+       
+       <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">
+       
+        版权
+        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+        </a>
+       </li>
+       
+     </ul>
+     <div class="copyright-text">
+            
+            ©
+            
+            郝鸿涛
+            
+            2020-2021
+            
+     </div>
+</footer>
+
+
+
+
+

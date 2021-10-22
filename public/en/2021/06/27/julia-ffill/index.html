@@ -1,0 +1,242 @@
+<a name="top"></a>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>郝鸿涛：Hongtao Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+            <link rel="icon" href="https://hongtaoh.com/ht10.ico">
+
+
+
+
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav" >
+      <a href="/" class="nav-logo">
+        <img src="/media/ht10.png"
+         width="50"
+         height="50"
+         alt="Hongtao Hao">
+      </a>
+
+      <ul class="nav-links" >
+        
+        
+           <li><a href="/">Home</a></li>
+       
+           <li><a href="/en/vitae/">Vitae</a></li>
+       
+           <li><a href="/en/projects/">Projects</a></li>
+       
+           <li><a href="/en/blog/">Blog</a></li>
+       
+           <li><a href="/en/apad/">APAD</a></li>
+       
+           <li><a href="/cn/blog/">中文</a></li>
+       
+       
+      </ul>
+</nav>
+      </header>
+
+<main class = "content" role="main">
+<div style="text-align: center">
+
+<h1>Julia: How to Fill A Missing Value with the Previous Non-missing Value</h1>
+
+<p>Hongtao Hao 
+ / 2021-06-27 </p>
+
+<hr/>
+</div>
+
+<span class="article-toolbar">
+  
+  
+  
+  
+  
+  
+  
+  <a href='https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2021-06-27-julia-ffill.md'style="font-size: 24px; color: black;" target="_blank"><i class="fa fa-edit" aria-hidden="true" title="Suggest an edit of this page"></i>
+  </a>
+  
+  
+  
+</span>
+
+
+
+<div class="body-text list-text">
+<p><div class="tip">
+The following codes were tested under Julia v1.6.1 and DataFrames v1.2.0.
+</div></p>
+<p>I saw this question on Stack Overflow: <a href="https://stackoverflow.com/q/58722185/13716814" target="_blank" rel="noreferrer noopener">What&rsquo;s an efficient way to fill <code>missing</code> values with previous non-missing value?</a>
+
+.</p>
+<p>I&rsquo;ll answer in the following.</p>
+<p>The following answer is entirely based on the discussions in this thread: <a href="https://stackoverflow.com/q/41196748/13716814" target="_blank" rel="noreferrer noopener">Julia DataFrame Fill NA with LOCF</a>
+
+. More specifically, it is based on the answers by Danish Shrestha, <a href="https://stackoverflow.com/a/41198219/13716814" target="_blank" rel="noreferrer noopener">Dan Getz</a>
+
+, and <a href="https://stackoverflow.com/a/67465356/13716814" target="_blank" rel="noreferrer noopener">btsays</a>
+
+.</p>
+<p>As <a href="https://stackoverflow.com/a/58724665/13716814" target="_blank" rel="noreferrer noopener">laborg</a>
+
+ implies, the <a href="https://docs.julialang.org/en/v1/base/arrays/#Base.accumulate" target="_blank" rel="noreferrer noopener"><code>accumulate</code></a>
+
+ function in Base Julia will do the job.</p>
+<p>Suppose we have an array: <code>a = [1, missing, 2, missing, 9]</code>. We want to replace the 1st <code>missing</code> with <code>1</code> and the second with <code>2</code>: a = [1, 1, 2, 2, 9], which is <code>a = a[[1, 1, 3, 3, 5]]</code> ([1, 1, 3, 3, 5] here are indexes).</p>
+<p>This function will do the job:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">ffill(v) <span style="color:#666">=</span> v[accumulate(max, [i<span style="color:#666">*!</span>ismissing(v[i]) <span style="color:#008000;font-weight:bold">for</span> i <span style="color:#008000;font-weight:bold">in</span> <span style="color:#666">1</span><span style="color:#666">:</span>length(v)], init<span style="color:#666">=</span><span style="color:#666">1</span>)]
+</code></pre></div><p>BTW, &ldquo;ffill&rdquo; means &ldquo;forward filling&rdquo;, a name I adopted from Pandas.</p>
+<p>I&rsquo;ll explain in the following.</p>
+<p>What the <code>accumulate</code> function does is that it returns a new array based on the array we input.</p>
+<p>For those of you who are new to Julia like me: in Julia&rsquo;s mathematical operations, <code>i*true = i</code>, and <code>i*false=0</code>. Therefore, when an element in the array is NOT missing, then <code>i*!ismissing() = i</code>; otherwise,  <code>i*!ismissing() = 0</code>.</p>
+<p>In the case of <code>a = [1, missing, 2, missing, 9]</code>, <code>[i*!ismissing(a[i]) for i in 1:length(a)]</code> will return <code>[1, 0, 3, 0, 5]</code>. Since this array is in the <code>accumulate</code> function where the operation is <code>max</code>, we&rsquo;ll get <code>[1, 1, 3, 3, 5]</code>.</p>
+<p>Then <code>a[[1, 1, 3, 3, 5]]</code> will return <code>[1, 1, 2, 2, 9]</code>.</p>
+<p>That&rsquo;s why</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">a <span style="color:#666">=</span> ffill(a)
+</code></pre></div><p>will get <code>[1, 1, 2, 2, 9]</code>.</p>
+<p>Now, you may wonder why we have <code>init = 1</code> in <code>ffill(v)</code>. Say, <code>b = [missing, 1, missing, 3]</code>. Then, <code>[i*!ismissing(b[i]) for i in 1:length(b)]</code> will return <code>[0, 2, 0, 4]</code>. Then the <code>accumulate</code> function will return [0, 2, 2, 4]. The next step, b[[0, 2, 2, 4]] will throw an error because in Julia, index starts from <code>1</code> not <code>0</code>. Therefore, <code>b[0]</code> doesn&rsquo;t mean anything.</p>
+<p>With <code>init = 1</code> in the <code>accumulate</code> function, we&rsquo;ll get [1, 2, 2, 4] rather than [0, 2, 2, 4] since 1 (the <code>init</code> we set) is larger than 0 (the first number).</p>
+<p>We can go further from here. The <code>ffill()</code> function above only works for a single array. But what if we have a large dataframe?</p>
+<p>Say, we have:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#008000;font-weight:bold">using</span> DataFrames
+
+a <span style="color:#666">=</span> [<span style="color:#ba2121">&#34;Tom&#34;</span>, <span style="color:#ba2121">&#34;Mike&#34;</span>, <span style="color:#ba2121">&#34;John&#34;</span>, <span style="color:#ba2121">&#34;Jason&#34;</span>, <span style="color:#ba2121">&#34;Bob&#34;</span>]
+b <span style="color:#666">=</span> [<span style="color:#008000">missing</span>, <span style="color:#666">2</span>, <span style="color:#666">3</span>, <span style="color:#008000">missing</span>, <span style="color:#666">8</span>]
+c <span style="color:#666">=</span> [<span style="color:#666">1</span>, <span style="color:#666">3</span>, <span style="color:#008000">missing</span>, <span style="color:#666">99</span>, <span style="color:#008000">missing</span>]
+df <span style="color:#666">=</span> DataFrame(<span style="color:#19177c">:Name</span> <span style="color:#666">=&gt;</span> a, <span style="color:#19177c">:Var1</span> <span style="color:#666">=&gt;</span> b, <span style="color:#19177c">:Var2</span> <span style="color:#666">=&gt;</span> c)
+</code></pre></div><div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; df
+
+5×3 DataFrame
+ Row │ Name    Var1     Var2    
+     │ String  Int64?   Int64?  
+─────┼──────────────────────────
+   <span style="color:#666">1</span> │ Tom     missing        <span style="color:#666">1</span>
+   <span style="color:#666">2</span> │ Mike          <span style="color:#666">2</span>        <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ John          <span style="color:#666">3</span>  missing 
+   <span style="color:#666">4</span> │ Jason   missing       <span style="color:#666">99</span>
+   <span style="color:#666">5</span> │ Bob           <span style="color:#666">8</span>  missing 
+</code></pre></div><p>Here, <a href="https://stackoverflow.com/a/41198219/13716814" target="_blank" rel="noreferrer noopener">Dan Getz&rsquo;s answer</a>
+
+ comes in handy:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">nona_df <span style="color:#666">=</span> DataFrame([ffill(df[<span style="color:#666">!</span>, c]) <span style="color:#008000;font-weight:bold">for</span> c <span style="color:#008000;font-weight:bold">in</span> names(df)], names(df))
+</code></pre></div><div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">julia&gt; nona_df 
+
+5×3 DataFrame
+ Row │ Name    Var1     Var2   
+     │ String  Int64?   Int64? 
+─────┼─────────────────────────
+   <span style="color:#666">1</span> │ Tom     missing       <span style="color:#666">1</span>
+   <span style="color:#666">2</span> │ Mike          <span style="color:#666">2</span>       <span style="color:#666">3</span>
+   <span style="color:#666">3</span> │ John          <span style="color:#666">3</span>       <span style="color:#666">3</span>
+   <span style="color:#666">4</span> │ Jason         <span style="color:#666">3</span>      <span style="color:#666">99</span>
+   <span style="color:#666">5</span> │ Bob           <span style="color:#666">8</span>      <span style="color:#666">99</span>
+</code></pre></div><h2 id="reflections">Reflections<a href="#reflections" class="header-anchor" ariaLabel="Anchor"> # </a></h2>
+<ul>
+<li>
+<p>Two questions to think about:</p>
+<ol>
+<li>
+<p>In <code>nona_df = ...</code>, is there any difference between using <code>ffill(df[!, c])</code> and using <code>ffill(df[:, c])</code>?</p>
+</li>
+<li>
+<p>When we use <code>ffill(df[!, c])</code>, will values in the original <code>df</code> be changed as well?</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Answers to the above two questions:</p>
+<ol>
+<li>
+<p><code>!</code> and <code>:</code> are different when accessing a column. <code>!</code> references directly to <code>df</code> whereas <code>:</code> makes a copy of that column. In the case of <code>ffill</code>, the function basically creates a new array based on the array we input. Therefore, no matter how we modify the result of<code>ffill(df[!, c])</code> or <code>ffill(df[:, c])</code>, <code>df</code> remains unchanged. So practically speaking, there is no difference between using <code>ffill(df[!, c])</code> and using <code>ffill(df[:, c])</code>.</p>
+</li>
+<li>
+<p>No. <code>df</code> will remain the same.</p>
+</li>
+</ol>
+</li>
+</ul>
+
+<p style="color:#777;">Last modified on 2021-10-05</p>
+</div>
+<a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
+
+</main>
+
+<footer class="footer">
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <script type="text/javascript" src="/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="/js/center-img.js"></script>
+
+
+
+     <ul class="footer-links">
+      
+       
+       
+       
+       <li><a href="/en/blog/index.xml" type="application/rss+xml" title="RSS feed">
+       Subscribe </a>
+       </li>
+       
+       
+       <li>
+       
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+       
+        License
+        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+        </a>
+       </li>
+       
+     </ul>
+     <div class="copyright-text">
+            
+            ©
+            
+            Hongtao Hao
+            
+            2020-2021
+            
+     </div>
+</footer>
+
+
+
+
+
