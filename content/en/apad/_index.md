@@ -22,7 +22,7 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 
 I skimmed through this paper. 
 
-This paper talks about a sex worker rights organization in Canada which maintains a bad client list. One interesting point the authors point out is that technologies are not the **solution** to complex social justice problems; they only support, or aid, the efforts. 
+The paper talks about a sex worker rights organization in Canada which maintains a bad client list. One interesting point the authors point out is that technologies are not the **solution** to complex social justice problems; they only support, or aid, the efforts. 
 
 2. Binns, R., Van Kleek, M., Veale, M., Lyngs, U., Zhao, J., & Shadbolt, N. (2018, April). ['It's Reducing a Human Being to a Percentage' Perceptions of Justice in Algorithmic Decisions](https://michae.lv/static/papers/2018itsreducing.pdf). In *Proceedings of the 2018 Chi conference on human factors in computing systems* (pp. 1-14).
 
