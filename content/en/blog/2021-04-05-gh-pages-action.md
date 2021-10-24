@@ -207,6 +207,6 @@ git commit -m "deploying with github pages action"
 git push
 ```
 
-Go to your `username.github.io` repository to see whether the deployment is successful. If yes, go to "Settings'', scroll down to "GitHub Pages". Choose "gh-pages'' as the Source branch, then select "root" as the folder. Click "Save". Wait a minute or so and your website will be live at `https://USERNAME.github.io/`.
+Go to your `username.github.io` repository to see whether the deployment is successful. If yes, go to "Settings'', scroll down to "Pages". Choose "gh-pages'' as the Source branch, then select "root" as the folder. Click "Save". Wait a minute or so and your website will be live at `https://USERNAME.github.io/`.
 
 If the deployment fails, click the X mark to solve the issues by yourself. I cannot help there. 
