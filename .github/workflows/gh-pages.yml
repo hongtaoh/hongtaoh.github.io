@@ -15,7 +15,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install r packages
         run: |
-          Rscript -e "install.packages(c("rmarkdown", "blogdown", "igraph", "readr", "here"))"
+          Rscript -e 'install.packages(c("rmarkdown", "blogdown", "igraph", "readr", "here"))'
       - name: install hugo
         run: Rscript -e 'blogdown::install_hugo(extended = TRUE, version = "0.88.1")'
       - name: Look at files
