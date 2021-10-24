@@ -31,24 +31,53 @@ Open a new Terminal window (Cmd+N on Mac; alt+F2 for git-bash on Windows).
 
 MAC:
 
+Try the following snippet first:
+
 ```bash
+cd ~/.ssh
+```
+
+If you see `~/.ssh does not exist`, then run the following snippet:
+
+```bash
+mkdir -p ~/.ssh
 cd ~/.ssh
 ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
 open -a Finder ~/.ssh
 ```
 
+{{<block class="info">}}
+The line of `mkdir -p ~/.ssh` is from [https://superuser.com/a/635270](https://superuser.com/a/635270). If you want to know what `mkdir -p` means, refer to [mkdir - Unix, Linux Command](https://www.tutorialspoint.com/unix_commands/mkdir.htm).
+{{<end>}}
+
 Windows:
+
+{{<block class="warning">}}
+Replace `Admin` with your own username for your PC. 
+{{<end>}}
+
+Try the following snippet first:
 
 ```bash
 cd C:\Users\admin\.ssh
+```
+
+If it says the file could not be found, run the following:
+
+```bash
+cd /C/Users/Admin
+start ~/.ssh
+mkdir ~/.ssh/ && cd ~/.ssh
 ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
-start C:\Users\admin\.ssh
+start ~/.ssh
 ```
 Then you can see two files are generated in the `.ssh` folder: 
 
 - gh-pages 
 
 - gh-pages.pub
+
+Now go back to the original Terminal page (the one for your Hugo project) for the following commands. 
 
 ## Set deploy_key
 
@@ -90,7 +119,7 @@ Press Cmd+V (Windows: Control+V) in the "Value" section. In the "Name" section, 
 
 Click [here](https://github.com/settings/tokens) to generate a personal access token. 
 
-Press "Generate new token". In "Select scopes", check "workflow". Then leave a note to yourself in the "Note" section. Scroll down and press "Generate token". Then copy the token you see.
+Press "Generate new token". Change the default expiration (30 days) if you would like. In "Select scopes", check "workflow". Then leave a note to yourself in the "Note" section. Scroll down and press "Generate token". Then copy the token you see.
 
 Go back to your `username.github.io` repository on GitHub -> Settings -> Secrets -> New repository secret.
 
