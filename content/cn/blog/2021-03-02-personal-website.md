@@ -499,7 +499,7 @@ open content/cn/hobby/_index.md -a TextEdit
 
 其中，185.199.108.153 这个 A Record 的 TTL 选 30 min，其他填 Automatic
 
-然后，加一个 CNAME Record, Host 填 www ， value 填 `<username>.github.io`，比如我的填 hhao1992.github.io, 随后 TTL 选 30 min。设置如下：
+然后，加一个 CNAME Record, Host 填 www ，value 填 `<username>.github.io`，比如我的填 hhao1992.github.io, 随后 TTL 选 30 min。设置如下：
 
 {{<figure src="https://namecheap.simplekb.com//SiteContents/2-7C22D5236A4543EB827F3BD8936E153E/media/2018-06-20_1804.png" title="图片来源：Namecheap">}}
 
