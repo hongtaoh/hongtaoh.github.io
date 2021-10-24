@@ -149,6 +149,10 @@ hugo server -D # 这里的 D 是 draft 的意思
 
 {{<figure src="/media/cnblog/username.github.io.png" title="新建仓库设置">}}
 
+{{<block class="info">}}
+如果你觉得下面的太麻烦或者你有 Blogdown 写的帖子，可以选择用 Netlify 而不是 GitHub Pages。用 Netlify 的教程看[这里](/cn/2020/01/04/hugo-netlify-deploy/)。
+{{<end>}}
+
 ## 密钥设置
 
 ### 创建 .github/workflows/gh-pages.yml
@@ -229,7 +233,7 @@ start ~/.ssh
 
 ## 设置 Personal Token
 
-首先，打开[这个链接](https://github.com/settings/tokens)。进去后，点击 Generate new token 按钮, 在随后出现的页面中，在 Select scopes 这里选中 workflow，在 Note 那里随便写点东西，然后将页面往下拖，点击 Generate token。
+首先，打开[这个链接](https://github.com/settings/tokens)。进去后，点击 Generate new token 按钮, 在随后出现的页面中，选择你觉得合适的有效期限（默认为 30 天），在 Select scopes 这里选中 workflow，在 Note 那里随便写点东西，然后将页面往下拖，点击 Generate token。
 
 生成之后，点击那一串字母后边的复制板，将 token 复制下来。
 
@@ -514,6 +518,3 @@ Github 的 [官方指南](https://help.github.com/en/github/working-with-github-
           publish_dir: ./public
           cname: example.com
 ```
-
-
-
