@@ -125,6 +125,14 @@ Go back to your `username.github.io` repository on GitHub -> Settings -> Secrets
 
 Press Cmd+V (Windows: Control+V) in the "Value" section. In the "Name" section, input `PERSONAL_TOKEN`. Press "Add secret".
 
+If you update your Personal Token later, when you `git push`, you'll probably see an error: 
+
+```bash
+refusing to allow a Personal Access Token to create or update workflow `.github/workflows/gh-pages.yml` without `workflow` scope
+```
+
+In this case, you need to [update passwords in Keychain Access](https://stackoverflow.com/a/67765064) (if you are using a Mac).
+
 ## Add your workflow file
 
 MAC:
