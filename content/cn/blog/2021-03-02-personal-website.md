@@ -241,6 +241,10 @@ start ~/.ssh
 
 现在请回到 GitHub 你新建的仓库。把屏幕拉宽，点击 Settings -> 点击 Secrets -> 点击 New repository secret。把鼠标放在 Value 下面的文本框，苹果电脑按 Command+V，微软系统按 Control+V。在 Name 那里填 PERSONAL_TOKEN，然后点击 Add secret。
 
+{{<block class="info">}}
+如果你之后更新 Personal Token 的话，一定记得在 Keychina Access 更新 “github.com, Internet password” 这里的密码，详情看[这里](https://stackoverflow.com/a/67765064)。 
+{{<end>}}
+
 ## 添加 workflow
 
 回到最开始的那个终端。（如果你把之前的终端关了，也不要紧，cd 到你的 hugo 项目就好）。
