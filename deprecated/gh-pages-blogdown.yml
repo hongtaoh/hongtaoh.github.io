@@ -1,0 +1,33 @@
+on: 
+  push:
+    branches:
+      - sources
+
+name: deployblog
+
+jobs:
+  deployblog:
+    name: Render and deploy blogdown
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Install r packages
+        run: |
+          Rscript -e 'install.packages(c("rmarkdown", "blogdown", "igraph", "readr", "here"))'
+      - name: install hugo
+        run: Rscript -e 'blogdown::install_hugo(extended = TRUE, version = "0.88.1")'
+      - name: Look at files
+        run: ls ./public
+      - name: Render blog
+        run: Rscript -e 'blogdown::build_site(local = FALSE)'
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
+          cname: hongtaoh.com
+
+# https://adsoncostanzifilho.github.io/blog/2021/04/01/github-actions-for-r-users/

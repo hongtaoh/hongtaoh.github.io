@@ -2,9 +2,11 @@
 title: "How to Deploy A Hugo Website Using GitHub Pages Action"
 date: 2021-04-05T16:43:21-04:00
 author: "Hongtao Hao"
-slug: hugo-gh-pages-action
+slug: hugo-deploy-github-actions
 draft: false
 toc: false
+aliases: 
+  - /en/2021/04/05/hugo-gh-pages-action/
 ---
 
 I didn't find a tutorial in details I deemed necessary, so I decided to craft one by myself. These two sources helped me a lot:
@@ -210,3 +212,17 @@ git push
 Go to your `username.github.io` repository to see whether the deployment is successful. If yes, go to "Settings'', scroll down to "Pages". Choose "gh-pages'' as the Source branch, then select "root" as the folder. Click "Save". Wait a minute or so and your website will be live at `https://USERNAME.github.io/`.
 
 If the deployment fails, click the X mark to solve the issues by yourself. I cannot help there. 
+
+If you have a personal domain, read [this post](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages/). It helps even if you are not with namecheap. Also, change the last part of `gh-pages.yml` to:
+
+```yml
+- name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
+          cname: example.com
+```
+
+Replace `example.com` with your own domain. For example, mine: `hongtaoh.com`

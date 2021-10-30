@@ -321,7 +321,7 @@ git push -u origin master
 使用 Windows 系统的同学，如果你是第一次使用 Git，按完回车后，因为最后一步是往 GitHub 上传内容，你会被要求登陆 (Sign in) GitHub, 点击 Sign in with your browser 就可以，然后你会被要求 Authorize Git Credential Manager，点击绿色的 Authorize Git Credential Manager，在随后的页面中输入你的 GitHub 密码 (password)。随后，可能还会出现 OpenSSH 的页面，让你输入 GitHub 用户名 (Username for `https://github.com`)，按要求输入然后点击 OK 就好。Show input 可点可不点，点开的话你就可以看到你输的内容。
 {{<end>}}
 
-现在请再回到 GitHub 你新建的仓库。把屏幕拉宽，点击 Settings，一直往下拖，到你看到 GitHub Pages 为止。在 Source 那里，Branch 选择 gh-pages, 右侧的框框选择 root，然后点 Save。等一两分钟，当出现 
+现在请再回到 GitHub 你新建的仓库。把屏幕拉宽，点击 Settings，一直往下拖，到你看到 Pages 为止。在 Source 那里，Branch 选择 gh-pages, 右侧的框框选择 root，然后点 Save。等一两分钟，当出现 
 
 >Your site is published at https://USERNAME.github.io/ 
 

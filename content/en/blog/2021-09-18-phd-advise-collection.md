@@ -57,7 +57,7 @@ toc: false
 
 - Casey Flesler (2019). [Advice for New PhD Students: Your Research Career is a Long Game](https://cfiesler.medium.com/advice-for-new-phd-students-your-research-career-is-a-long-game-4721abbd80ac), [my summary](https://cfiesler.medium.com/advice-for-new-phd-students-your-research-career-is-a-long-game-4721abbd80ac)
 
-- Li, F-F. (2009). [De-Mystifying Good Research and Good Papers](https://bigaidream.gitbooks.io/tech-blog/content/2014/de-mystifying-good-research.html), [my summary](https://bigaidream.gitbooks.io/tech-blog/content/2014/de-mystifying-good-research.html)
+- Li, F-F. (2009). [De-Mystifying Good Research and Good Papers](https://bigaidream.gitbooks.io/tech-blog/content/2014/de-mystifying-good-research.html), [my summary](/en/apad/#2021-09-24-completed-on-2021-09-25)
 
 - [A Letter to Research Students](http://www.cs.williams.edu/~bailey/p/research.pdf) by Duane A. Bailey, [my summary](/en/apad/#2021-10-02)
 
