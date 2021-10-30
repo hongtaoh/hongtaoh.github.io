@@ -1,5 +1,5 @@
 ---
-title: "How to Navigate Through Difficult Conversations"
+title: "How to Approach Difficult Conversations"
 date: 2021-10-21T21:14:49-05:00
 author: "Hongtao Hao"
 slug: difficult-conversations

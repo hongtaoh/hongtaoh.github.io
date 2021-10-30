@@ -15,6 +15,172 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2021-10-29 (completed on 2021-10-30)
+
+Alpaslan-Roodenberg, S., Anthony, D., Babiker, H., Bánffy, E., Booth, T., Capone, P., ... & Zahir, M. (2021). [Ethics of DNA research on human remains: five globally applicable guidelines](https://www.nature.com/articles/s41586-021-04008-x). *Nature*, 1-6.
+
+{{<block class="info">}}
+  The translations of this paper into more than 20 languages are available [here](https://figshare.com/articles/journal_contribution/Translations_of_Ethics_of_DNA_research_on_human_remains_five_globally_applicable_guidelines_/16744552/1).
+{{<end>}}
+
+- The rule of "consulting indigenous communities" which mostly applies to USa may not work for other countries, for example, those in Central and South America. 
+
+- Using ancient DNA research to establish group identity can be potentially extremely harmful.
+
+- Five guidelines
+  1. Follow regulations in the places where they work and where they obtain human remains. When local regulations are insufficient, researchers should follow guidelines below. 
+  2. Have a detailed plan before doing any study: research questions, DNA data to be used, techniques to be employed, where to store data, etc. 
+    - responsibility is not transferable. 
+  3. Minimize damages to human remains. 
+  4. Make data public after publication. 
+  5. Respect and be sensitive to other stakeholders' perspectives. 
+    - Genetic data may be inconsistent with other forms of knowledge. When this occurs, researchers should never decrease the importance of traditional knowledge and long-held beliefs. 
+
+## 2021-10-28 (Completed on 2021-10-29)
+
+Finished [Wagner et al. (2021)](https://www.nature.com/articles/s41586-021-03666-1)
+
+### Problems
+
+- Insufficient quality of measurements
+  - Measurement models: tie theoretical constructs to observable data
+  - In social sciences, the constructs we are measuring, predicting, and explaining are unstable and they are influenced by the mere act of measuring, predicting, or explaining. 
+
+- The consequence of mis-measurements
+  - There might be a mismatch between the theoretical understanding of a construct and the measurement: what we measure is not what we want to measure
+  - How to anticipate the side effects of measurements in this "algorithmically-infused society"?
+
+- The limits of existing social theories
+
+  - We need theories explaining the role of algorithms in societies. 
+  - In social sciences, should research be theory-driven or data-driven? This is a question. 
+
+### Solutions
+
+- Possible solutions to above three problems: (1) develop **responsible** and **trustworthy** models for measurement; (2) mitigate negative effects of mismeasurements; and (3) develop "empirically informed theories". 
+
+- How to improve measurements
+  1. Use different from different sources (e.g., self-report, mobile phone apps, experimental data, etc)
+  2. Have good guidelines. For example, to document, develop, and maintain measurement models. 
+    - Measurement itself may affect the outcome. For example, ranking of popularity influences popularity itself. 
+
+- Responsible social science agenda
+  - Are the measurements "just and equitable", "transparent and interpretable", and "privacy preserving"?
+
+- To integrate data and measurements in theory-building might be beneficial. This is more so at algorithmically infused societies where new phenomena emerge frequently which requires theories to be updated. 
+
+- We need to avoid "black box measurement models" which rely on unjustifiable assumptions, inaccurate logic and biased data. 
+
+- We need to consider the potential consequences of measurements. These consequences might affect individuals and societies, and might also be hard to identify and quantify. 
+
+## 2021-10-27
+
+Wagner, C., Strohmaier, M., Olteanu, A., Kıcıman, E., Contractor, N., & Eliassi-Rad, T. (2021). [Measuring algorithmically infused societies](https://www.nature.com/articles/s41586-021-03666-1). *Nature, 595*(7866), 197-204.
+
+PP. 1-4
+
+## 2021-10-26
+
+Yuste, R., Goering, S., Bi, G., Carmena, J. M., Carter, A., Fins, J. J., ... & Wolpaw, J. (2017). [Four ethical priorities for neurotechnologies and AI](https://www.nature.com/articles/551159a). *Nature News, 551*(7679), 159.
+
+I like this piece. I believe some of the concerns brought up in it will be real. 
+
+- Privacy. Neural data is so personal. Imagine a hacker hijacking the BCI system you are using, "stealing" all of the thoughts and emotions you had since your childhood. He will know more about you than anybody in the world. I agree with the suggestion that access and sale of personal neural data be strictly regulated, much like sale of human organs. 
+
+- Identity. This is a very pressing concern. Imagine your brain is connected with many others. You don't even know which thought is yours. Then it's natural you lose your sense of identity. This can be spiritually enlightening or psychologically devastating, depending on your reaction. 
+
+- Augmentation. It's so easy to have an "augmentation arm race": people, or even countries, augment their abilities through nanotechnologies. This will exacerbate social inequality. 
+ 
+
+## 2021-10-25
+
+Cowen, A. S., Keltner, D., Schroff, F., Jou, B., Adam, H., & Prasad, G. (2021). [Sixteen facial expressions occur in similar contexts worldwide](https://www.nature.com/articles/s41586-020-3037-7). *Nature, 589*(7841), 251-257.
+
+The study studies universality of emotions by examining how people in 6 million videos from 12 world regions encompassing 144 countries express emotions in similar social contexts. The results show that the 16 types of emotions systematically occur in these videos. The authors show that there is 70% overlap in the association between social contexts and facial expression. 
+
+## 2021-10-24
+
+Willett, F. R., Avansino, D. T., Hochberg, L. R., Henderson, J. M., & Shenoy, K. V. (2021). [High-performance brain-to-text communication via handwriting](https://www.nature.com/articles/s41586-021-03506-2?f=cs). *Nature, 593*(7858), 249-254.
+
+The authors design a brain-computer-interface (BCI) that can decode attempted handwriting movement from a paralyzed participant (T5) and translate it into texts in real time. The system achieved a typing speed of 90 words per minute with an accuracy rate of 94.1 online and more than 99% offline. This outperformed all previous BCI systems, for example, those that decode point-to-point movements. 
+
+{{<block class="info">}}
+I am wondering how the system works for decoding attempted handwriting of CJK (Chinese, Japanese, Korean).
+{{<end>}}
+
+## 2021-10-23
+
+1. Reed, C. (2021). [Argument technology for debating with humans](https://www.nature.com/articles/d41586-021-00539-5).
+
+A new study has made significant progress in argument mining. 
+
+2. Ledford, H. (2020). [Social scientists battle bots to glean insights from online](https://media.nature.com/original/magazine-assets/d41586-020-00141-1/d41586-020-00141-1.pdf). *Nature, 578*(7793), 17-17.
+
+Social media bots can potentially contaminate social media research. As bot detection advances, bots developers are also becoming skilled, making more sophisticated bots. 
+
+3. [Big-data studies of human behaviour need a common language](https://media.nature.com/original/magazine-assets/d41586-021-01736-y/d41586-021-01736-y.pdf)
+
+Analyzing personal data without consent poses challenges to society. 
+
+Algorithms influence people's behavior. Therefore, big data not only shows patterns of human behavior, but also algorithms behind the behavior. 
+
+## 2021-10-22
+
+👍 Wagner, C., Mitter, S., Körner, C., & Strohmaier, M. (2012, April). [When Social Bots Attack: Modeling Susceptibility of Users in Online Social Networks](https://www2012.universite-lyon.fr/proceedings/nocompanion/MSM2012_paper_11.pdf). In *# MSM* (pp. 41-48).
+
+The authors study the characteristics of Twitter users susceptible to social bots based on the data from Social Bot Challenge 2011. They find that susceptible users interact with more users (have a high out-degree), and tend to use Twitter for a conversational purpose rather than for an informational one. 
+
+The study is also very limited. For example, all the users had an interest in or had retweeted about *cats*. In addition, the dataset is too small: only around 400 users (76 susceptible and 298 non-susceptible). But I like this paper: it is short and clear. 
+
+## 2021-10-21
+
+Finished [Thaler (1999)](https://onlinelibrary.wiley.com/doi/pdf/10.1002/%28SICI%291099-0771%28199909%2912%3A3%3C183%3A%3AAID-BDM318%3E3.0.CO%3B2-F).
+
+- Reference price is important. We will consider a beer from a resort hotel worth more money than that from a grocery store. Sellers make use of this by telling consumers how much money they are saving relative to the regular price. 
+
+- If people have two stocks, one of which is increasing in value and the other one decreasing, they tend to sell the winner rather than the loser. This is not rational. 
+
+- Paying with credit cards means payment is (1) later than, and (2) separated from the purchase. This makes the payment less salient. Another thing making a payment less salient is that multiple bills arrive together.
+
+- If you want to give someone a gift, you can give them something they wouldn't buy for themselves. 
+
+- People go for variety when choosing multiple things in advance but will choose a limited category of things if asked to choose one at a time. 
+
+- If people are given one stock fund and one bond fund, they'll invest 50% of their money in stocks. However, if given two stock funds and one bond fund, they'll invest 75% of their money in stocks. 
+
+## 2021-10-20
+
+Continued with Thaler (1999).
+
+PP. 10-17
+
+## 2021-10-19
+
+Continued with Thaler (1999).
+
+PP. 4-10
+
+## 2021-10-18
+
+1. Finished [Johnson et al. (2020)](https://www.nature.com/articles/s41586-020-2281-1?fbclid=IwAR3Z_Q2x2Xc--1zJ9-W6v5A-VIwaeWUZGU7wWIbMB07_ZEi8NdnaeENHHks)
+
+This study finds that although anti-vaccination clusters are small in size, they are more entangled with undecided clusters. In comparison, pro-vaccination is more peripheral. 
+
+The theory built by the authors predicts that anti-vaccination narratives will dominate the network in the next ten years. 
+
+2. Thaler, R. H. (1999). [Mental accounting matters](https://onlinelibrary.wiley.com/doi/pdf/10.1002/%28SICI%291099-0771%28199909%2912%3A3%3C183%3A%3AAID-BDM318%3E3.0.CO%3B2-F). *Journal of Behavioral decision making, 12*(3), 183-206.
+
+PP. 1-4
+
+## 2021-10-17 (completed on 2021-10-18)
+
+1. Oh, J., Hwang, A. H. C., & Lim, H. S. (2020). [How Interactive Data Visualization and Users’ BMI (Body Mass Index) Influence Obesity Prevention Intentions: The Mediating Effect of Cognitive Absorption](https://angelhwang.github.io/docs/dataviz_healthcomm.pdf). *Health Communication*, 1-10.
+
+The study finds that (1) people with a lower BMI are more involved in highly interactive data visualization, and (2) this greater level of involvement makes lower BMI people (but not high BMI folks) think this (i.e., obesity) is a serious issue. 
+
+2. Johnson, N. F., Velásquez, N., Restrepo, N. J., Leahy, R., Gabriel, N., El Oud, S., ... & Lupu, Y. (2020). [The online competition between pro-and anti-vaccination views](https://www.nature.com/articles/s41586-020-2281-1?fbclid=IwAR3Z_Q2x2Xc--1zJ9-W6v5A-VIwaeWUZGU7wWIbMB07_ZEi8NdnaeENHHks). *Nature, 582*(7811), 230-233.
+
+PP. 1-2
 
 ## 2021-10-16
 
@@ -44,7 +210,7 @@ This paper talks about NUM, a charity organization that helps sex workers in the
 
 As a subordinate, you need to know how to get support from your boss even when you are implementing your ideas, not theirs. It's hard. 
 
-2. Kurenokov, A. (2020). Lessons Learned the Hard Way in Grad School (so far) (/writing /life/lessons-learned-from-failures/)
+2. Kurenokov, A. (2020). [Lessons Learned the Hard Way in Grad School (so far)](https://www.andreykurenkov.com/writing/life/lessons-learned-from-failures/)
 
 - Teamwork is useful and helpful. It may relieve some of your stress as working alone might not produce papers. 
 
