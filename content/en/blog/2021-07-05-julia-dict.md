@@ -124,6 +124,10 @@ OrderedDict{String, Int64} with 5 entries:
   "South Korea" => 77
 ```
 
+## How to create a Dict from a DataFrame
+
+See [here](https://stackoverflow.com/a/63752262).
+
 ## References
 
 - [Julia Dictionary](https://www.geeksforgeeks.org/julia-dictionary/) on [Geeks for Geeks](https://www.geeksforgeeks.org/)

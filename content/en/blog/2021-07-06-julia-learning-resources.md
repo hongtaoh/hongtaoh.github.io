@@ -10,6 +10,8 @@ toc: false
 
 - [Julia's Official Documentation](https://docs.julialang.org/en/v1/)
 
+- [Chapter 1, Julia Tutorial](https://www.sas.upenn.edu/~jesusfv/Chapter_HPC_8_Julia.pdf)
+
 - [RIP Tutorial's Learning Julia Language eBook (PDF)](https://riptutorial.com/ebook/julia-lang)
 
 - [Julia language: a concise tutorial](https://syl1.gitbook.io/julia-language-a-concise-tutorial/) by [Antonello Lobianco](https://github.com/sylvaticus)
