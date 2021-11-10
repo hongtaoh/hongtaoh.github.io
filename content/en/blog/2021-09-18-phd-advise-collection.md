@@ -11,6 +11,10 @@ toc: false
 
 - [What I Have Learned from Professor YY](/en/2020/09/05/yy/)
 
+- [My summary](/en/2021/09/22/philip-guo-phd-advice/) of Philip Guo's advice for early-stage PhD students
+
+- [*A graduate school survival guide: "So long, and thanks for the Ph.D!"*](http://www.cs.virginia.edu/%7Erobins/PhD.html), by Azuma, R.T. (1997), [my summary](/en/apad/#2021-11-09-completed-on-2021-11-10)
+
 - [*10 Tips for Research and a PhD*](https://ruder.io/10-tips-for-research-and-a-phd/) by Sebastian Ruder, [my summary](/en/apad/#2021-09-18)
 
 - Chapers 2 & 3 (PP. 9-59) of *A guide to academia: getting into and surviving grad school, postdocs, and a research job*, by Chakrabarty, P. (2012), [my summary](/en/apad/#2021-07-06)
@@ -45,8 +49,6 @@ toc: false
 
 - My blog post of [What I Have Learned from Professor YY](/en/2020/09/05/yy/)
 
-- [My summary](/en/2021/09/22/philip-guo-phd-advice/) of Philip Guo's advice for early-stage PhD students
-
 - [*Done is better than perfect: overcoming PhD perfectionism*](http://blogs.nature.com/naturejobs/2018/07/09/done-is-better-than-perfect-overcoming-phd-perfectionism/) by Ivancevic, A. (2018), [my summary](/en/apad/#2021-09-28)
 
 - [*Modest Advice*](https://stearnslab.yale.edu/modest-advice) by Stearns, S. [my summary](/en/apad/#2021-09-28)
@@ -62,6 +64,8 @@ toc: false
 - [A Letter to Research Students](http://www.cs.williams.edu/~bailey/p/research.pdf) by Duane A. Bailey, [my summary](/en/apad/#2021-10-02)
 
 - Carsey, T. (2020). [*Tom’s Comments: Advice about Graduate School, Finding a Job, Reaching Tenure in Political Science and other Social Sciences, and All of the Steps in Between*](https://politicalscience.unc.edu/wp-content/uploads/sites/186/2020/09/Toms-Comments-Carsey-book-9-7-2020.pdf), [my summary](/en/apad/#2021-10-05)
+
+- [*PhD survival guide: Some brief advice for PhD students*](https://www.embopress.org/doi/full/10.1038/embor.2012.15), by Almeida‐Souza, L., & Baets, J. (2012), [my summary](/en/apad/2021-11-07-completed-on-2021-11-09)
 
 ## Life
 
