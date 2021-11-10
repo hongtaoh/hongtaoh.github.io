@@ -10,11 +10,131 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
-2021: [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
+2021: [2021-10](/en/apad/#2021-10), [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
 
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2021-11-09 (Completed on 2021-11-10)
+
+Finished [Azuma (1997)](https://www.embopress.org/doi/full/10.1038/embor.2012.15).
+
+- As a PhD student, you must have initiative. Don't wait for your advisors to tell you what to do for the next step. 
+
+- Respect others' time. Minimize their burden when asking help from them. 
+
+- Send a weekly email informing your advisor the progress you've made. They'll appreciate it. 
+
+- Pay attention to your physical health. 
+
+- Talk with PhD graduates. This helps you graduate two years earlier. 
+
+## 2021-11-08 (Completed on 2021-11-10)
+
+Continued with [Azuma (1997)](https://www.embopress.org/doi/full/10.1038/embor.2012.15).
+
+PP. 3-9
+
+## 2021-11-07 (Completed on 2021-11-09)
+
+1. Almeida‐Souza, L., & Baets, J. (2012). [*PhD survival guide: Some brief advice for PhD students*](https://www.embopress.org/doi/full/10.1038/embor.2012.15). *EMBO reports, 13*(3), 189-192.
+
+  - Do not assume that your boss knows about what is going on in your projects and in your life. Your boss has his or her own concerns and is supervising a lot of people. When you face problems, just talk to them to find a solution and don't wait. 
+
+  - Sometimes, you can ignore the advice of your supervisor. 
+
+2. Azuma, R.T. (1997). [*A graduate school survival guide: "So long, and thanks for the Ph.D!"*](http://www.cs.virginia.edu/%7Erobins/PhD.html)
+
+PP. 1-3
+
+## 2021-11-06 (Completed on 2021-11-07)
+
+1. Olm, M. R., & Sonnenburg, J. L. (2021). [Ancient human faeces reveal gut microbes of the past](https://www.nature.com/articles/d41586-021-01266-7?).
+
+[Wibowo et al's study](https://www.nature.com/articles/s41586-021-03532-0) analyzed the DNA of gut microbes found in ancient (1000-2000 yrs old) human faeces. The analysis showed that these ancient gut microbes are similar to those of modern non-industrialized populations. 
+
+2. Ma, K. C., & Lipsitch, M. (2021). [Big data and simple models used to track the spread of COVID-19 in cities](https://www.nature.com/articles/d41586-020-02964-4).
+
+[Chang et al's study](https://www.nature.com/articles/s41586-020-2923-3) uses mobility data of 98 million people in the United States to model Covid-19 cases in multiple cities. Key findings:
+
+  - Infections in "restaurants, gyms and religious establishments" have a larger role in the pandemic;
+  - Compared to high-income neighborhoods, low-income neighborhoods had a smaller decline in mobility during lockdowns. 
+  - Places visited by people from low-income neighborhoods are more crowded than those visited by people from high-income neighborhoods. 
+
+## 2021-11-05 (Completed on 2021-11-07)
+
+1. Weng, C. H., & Rogers, J. R. (2021). [An AI tool to make clinical trials more inclusive](https://media.nature.com/original/magazine-assets/d41586-021-00845-y/d41586-021-00845-y.pdf). *Nature, 592*(7855), 512-513.
+
+[Liu et al's study](https://www.nature.com/articles/s41586-021-03430-5) uses an AI approach to enlarge clinical trial pools. 
+
+2. Obermeyer, Z. (2021). [A machine-learning algorithm to target COVID testing of travellers](https://www.nature.com/articles/d41586-021-02556-w).
+
+[Bastani et al's study](https://www.nature.com/articles/s41586-021-04014-z) uses machine learning to help Greece border agents decide which travellers to test for COVID-19 given the fact that it's impossible to test all of them. 
+
+## 2021-11-04 (Completed on 2021-11-07)
+
+1. Arcaute, E. (2020). [Hierarchies defined through human mobility](https://www.nature.com/articles/d41586-020-03197-1).
+
+[Alessandretti et al's paper](https://www.nature.com/articles/s41586-020-2909-1) reconciles two contradictory findings: humans travel across certain spatial scales vs. human mobility has no scales. The point is that human mobility has hierarchies, represented by different levels of "containers". When each container is viewed separately, the container size follows a log-normal distribution. However, if we aggregate all containers, the container size follows a power-law distribution. 
+
+2. Hoffmann, S. (2021). [Lend an ear to a classic tale of mammalian evolution](https://www.nature.com/articles/d41586-021-00064-5).
+
+[Want et al's study](https://www.nature.com/articles/s41586-020-03137-z), which is based on a new fossile (160 million yrs old) discovered in China, updates mammalian evolution of the middle ear. 
+
+## 2021-11-03 (Completed on 2021-11-04)
+
+1. Laschi, C., & Calisti, M. (2021). [Soft robot reaches the deepest part of the ocean](https://www.nature.com/articles/d41586-021-00489-y). *Nature News*.
+
+Li and colleagues designed a soft robot that can withstand the pressure in the Mariana Trench, the deepest place on Earth. 
+
+2. Huentemeyer, P. (2021). [Hunting the strongest accelerators in our Galaxy](https://www.nature.com/articles/d41586-021-01377-1). *Nature News*.
+
+An observatory in China (LHAASO) reported potential candidates for PeVatron, the strongest particle accelerators in our Galaxy. 
+
+3. Patel, M. S. (2021). [Text-message nudges encourage COVID vaccination.](https://www.nature.com/articles/d41586-021-02043-2). *Nature News*.
+
+Text nudges should (1) make the behavior easier; (2) motivate people, by, for example, invoking ownership of something; and finally (3) make people act right now. 
+
+## 2021-11-02 (Completed on 2021-11-03)
+
+1. Hein, J. (2021). [Machine learning made easy for optimal reactions](https://media.nature.com/original/magazine-assets/d41586-021-00209-6/d41586-021-00209-6.pdf). *Nature News*
+
+- An open-sourced machine learning toolkit is built to help chemists optimize reaction conditions. The result of the competition game between experts and the algorithm is that although experts made better initial choices, the algorithm outperformed the experts after the 3rd trial. 
+
+2. Roca, A. (2021). [A mammoth step back in genomic time](https://media.nature.com/original/magazine-assets/d41586-021-00348-w/d41586-021-00348-w.pdf)
+
+This news piece introduces a paper that uses gene sequencing to uncover the evolutionary history of mammoths.
+
+3. Rajeswaran, P. & Orsborn, A.L. (2021). [Neural interface translates thoughts into type](https://www.nature.com/articles/d41586-021-00776-8). *Nature News*.
+
+This news article introduces [Willett et al's work](https://www.nature.com/articles/s41586-021-03506-2?f=cs).
+
+## 2021-11-01 (Completed on 2021-11-03)
+
+1. Nature Podcast of 07 July 2021. [Food shocks and how to avoid them](https://www.nature.com/articles/d41586-021-01868-1)
+
+- A higher level of supply chain diversity makes a city in the US less likely to experience food shocks.
+
+2. Normile, D (2021). [It's official: China has eliminated malaria](https://www.science.org/content/article/it-s-official-china-has-eliminated-malaria). *Science*.
+
+# 2021-10
+
+## 2021-10-31
+
+1. Finished [Galesic et al. (2021)](https://www.nature.com/articles/s41586-021-03649-2)
+
+Human social sensing: to ask people about their social environments, for example, the thoughts and behavior of their social contacts. 
+
+Human social sensors can help us gain a more accurate understanding of the current and future societal trends. 
+
+2. Lisovski, S., & Liedvogel, M. (2021). [A bird’s migration decoded](https://www.nature.com/articles/d41586-021-00510-4?fbclid=IwAR2l26Uvi2SzNrhte67BdaAbG82rpm-kJmiMhXl9MkQf8gU-W52FgB_2uBo). *Nature News*
+
+## 2021-10-30
+
+Galesic, M., Bruine de Bruin, W., Dalege, J., Feld, S. L., Kreuter, F., Olsson, H., ... & van Der Does, T. (2021). [Human social sensing is an untapped resource for computational social science](https://www.nature.com/articles/s41586-021-03649-2). *Nature, 595*(7866), 214-222.
+
+PP. 1-3
+
 ## 2021-10-29 (completed on 2021-10-30)
 
 Alpaslan-Roodenberg, S., Anthony, D., Babiker, H., Bánffy, E., Booth, T., Capone, P., ... & Zahir, M. (2021). [Ethics of DNA research on human remains: five globally applicable guidelines](https://www.nature.com/articles/s41586-021-04008-x). *Nature*, 1-6.
@@ -351,8 +471,6 @@ PP. 1-3.
 - The people you will be working with are the most important factor when you decide which program to attend. 
 
 3. [How to evaluate an advisor](https://www.cs.jhu.edu/%7Ejason/advice/how-to-evaluate-an-advisor.html) by Jason Eisner. 
-
-# 2021-10
 
 ## 2021-10-01 (completed on 2021-10-02)
 

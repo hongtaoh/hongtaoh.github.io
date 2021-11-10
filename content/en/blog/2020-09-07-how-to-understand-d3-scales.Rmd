@@ -134,7 +134,7 @@ Let's say Data point A will become Data point $A'$ in the output range. `d3.scal
 
 ## What Does d3.scaleLinear() Preserve?
 
-Now that we know how `d3.scaleLinear()` transforms data from the input domain to the output range, let's think about what does this transformation preserve. 
+Now that we know how `d3.scaleLinear()` transforms data from the input domain to the output range, let's think about what this transformation preserves. 
 
 Let's normalize both the input domain and the output range. That is, we imagine that the length of the input domain and the output range is both $1$ unit. Then, let's divide both intervals into 100 parts. If point $A$ in input domain sits right on the dividing line of the 2nd and the 3rd part, then, in the output range, $A'$ will also sit on the dividing line of the 2nd and the 3rd part. Right? (If you do not understand why, please refer to [/#how-does-d3.scalelinear-work](How does d3.scaleLinear() work?)) That's why we say that D3 scales preserves **relative positions** of data points. 
 
