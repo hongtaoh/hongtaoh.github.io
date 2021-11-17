@@ -87,7 +87,7 @@ plot!(size = (750, 400))
 
 But what if you have a lot of columns, say, 100? It's impractical for you to manually enter their labels. What should we do then?
 
-When we check, we can see that `["B" "C" "D"]` is a 1×3 Matrix:
+When we check the labels, we can see that `["B" "C" "D"]` is a 1×3 Matrix:
 
 ```
 julia> ["B" "C" "D"]
@@ -126,3 +126,18 @@ Then, we just pass the `label_matrix` to `label`:
 ```
 plot(df.A, df_matrix, labels=label_matrix)
 ```
+
+<!-- 我不理解的是：
+
+```
+@df df plot(:A, [:B, :C, :D])
+```
+
+可以出图，但是
+
+```
+s = [:B, :C, :D]
+@df df plot(:A, s)
+```
+
+不行 -->

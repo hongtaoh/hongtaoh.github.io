@@ -6,6 +6,10 @@ slug: us-phd-app-advice
 draft: false
 toc: false
 ---
+{{<block class="info">}}
+对于硕、博士申请者，我强烈建议你[建一个网站](/cn/2021/06/17/homepage/)，并将其放到你的简历里。
+{{<end>}}
+
 1. 目标陈述，statement of purpose (sop): 
 
   - 1)一句话总结你想研究什么；

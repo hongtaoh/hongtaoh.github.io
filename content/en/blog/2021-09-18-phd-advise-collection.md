@@ -13,6 +13,10 @@ toc: false
 
 - [My summary](/en/2021/09/22/philip-guo-phd-advice/) of Philip Guo's advice for early-stage PhD students
 
+- [The PhD Grind] by Philip Guo, [my summary in Chinese](/cn/2021/05/12/phd-grind/)
+
+- [Graduate Students: You are more than your Ph.D.](https://katiewedemeyer.files.wordpress.com/2020/05/katie-ws-spectra-may-2020.pdf) by [Wedemeyer-Strombel, K](https://katiewedemeyer.wordpress.com/about/). (2020), [my takeaway](/cn/2021/05/12/phd-grind/)
+
 - [*A graduate school survival guide: "So long, and thanks for the Ph.D!"*](http://www.cs.virginia.edu/%7Erobins/PhD.html), by Azuma, R.T. (1997), [my summary](/en/apad/#2021-11-09-completed-on-2021-11-10)
 
 - [*10 Tips for Research and a PhD*](https://ruder.io/10-tips-for-research-and-a-phd/) by Sebastian Ruder, [my summary](/en/apad/#2021-09-18)
@@ -66,6 +70,10 @@ toc: false
 - Carsey, T. (2020). [*Tom’s Comments: Advice about Graduate School, Finding a Job, Reaching Tenure in Political Science and other Social Sciences, and All of the Steps in Between*](https://politicalscience.unc.edu/wp-content/uploads/sites/186/2020/09/Toms-Comments-Carsey-book-9-7-2020.pdf), [my summary](/en/apad/#2021-10-05)
 
 - [*PhD survival guide: Some brief advice for PhD students*](https://www.embopress.org/doi/full/10.1038/embor.2012.15), by Almeida‐Souza, L., & Baets, J. (2012), [my summary](/en/apad/2021-11-07-completed-on-2021-11-09)
+
+- [*How to Pick a Graduate Advisor*](https://www.sciencedirect.com/science/article/pii/S0896627313009070) by Barres, B. (2013), [my summary in Chinese](/cn/2021/06/01/advisor/)
+
+- [*A field guid to grad school*](https://www.amazon.com/Field-Guide-Grad-School-Uncovering/dp/0691201099) by Jessica McCrory Calarco, [my summary in Chinese](/cn/2021/07/01/phd-field-guide/)
 
 ## Life
 

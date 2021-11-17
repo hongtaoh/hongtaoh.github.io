@@ -15,9 +15,83 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2021-11-17
+
+Barrett, L. F. (2021). [Debate about universal facial expressions goes big](https://media.nature.com/original/magazine-assets/d41586-020-03509-5/d41586-020-03509-5.pdf). *Nature, 589*(7841), 202-203.
+
+This article reviews a study that shows there is universality in humans facial expressions. This study comes to this conclusion after using machine learning to analyze 6 million YouTube videos from 144 countries around the world. The article in the end shows some methodological flaws in the study, for example, there is no validation that the facial expression annotated by the human rater is in fact what the person in the video is experiencing, and the annotations are made only in English. Nonetheless, this paper opens up new methodological possibilities for similar studies in the future. 
+
+## 2021-11-16 (Completed on 2021-11-17)
+
+1. Preiner, M., & Martin, W. F. (2021). [Life in a carbon dioxide world](https://www.nature.com/articles/d41586-021-00977-1). *Nature News*.
+
+The article reviews a paper that talks about how the bacteria called *Hippea maritima* uses the reversed oxidative TCA cycle when there is a high concentration of carbon dioxide. (TCA cycle is a pathway that converts sugars, fats and proteins into energy and carbon dioxide.)
+
+2. Jongman, B. (2021). [Fraction of population at risk of floods is growing](https://www.nature.com/articles/d41586-021-01974-0). *Nature News*.
+
+This article reviews a paper that uses a new dataset of floods in all continents except Antarctica to show that the percentage of people exposed to floods will continue to grow in the next decade. The estimation of the percentage of people vulnerable to floods based on this new data is ten times higher than the estimation based on previous data and methodology. 
+
+3. Yi, R. (2021). [Relax to grow more hair](https://www.nature.com/articles/d41586-021-00656-1). *Nature News*
+
+This article reviews a study that shows chronic stress in mice reduced their hair growth. Injecting GAS6 into their skill restored the hair growth in mice even when they are still experiencing chronic stress.   
+
+## 2021-11-15 (Completed on 2021-11-16)
+
+👍 Kwak, H., Lee, C., Park, H., & Moon, S. (2010, April). What is Twitter, a social network or a news media?. In *Proceedings of the 19th international conference on World wide web* (pp. 591-600). 
+
+I skimmed through this paper. This study shows that on Twitter (1) follower distribution does not follow a power-law, (2) degree of separation is small, only 4.12, and (3) reciprocity is low. These characteristics deviate from known features of social network sites. This indicates that Twitter is more like a news sharing site than a social network site. 
+
+## 2021-11-14 (Completed on 2021-11-16)
+
+1. Ellison, N. B., Steinfield, C., & Lampe, C. (2007). The benefits of Facebook “friends:” Social capital and college students’ use of online social network sites. *Journal of computer‐mediated communication, 12*(4), 1143-1168.
+
+I skimmed through this paper. The study finds a positive relationship between Facebook use and the formation and maintenance of social capital. 
+
+2. Boyd, D. M., & Ellison, N. B. (2007). Social network sites: Definition, history, and scholarship. *Journal of computer‐mediated Communication, 13*(1), 210-230.
+
+I skimmed through this paper. It reviewed the history of social network sites worldwide and talks about the scholarship in this field. 
+
+## 2021-11-13 (Completed on 2021-11-15)
+
+1. Garry, R. F. (2021). [Ebola virus can lie low and reactivate after years in human survivors](https://www.nature.com/articles/d41586-021-02378-w). *Nature News*
+
+An infection of Ebola virus kept dormant for five years before reawakening. 
+
+2. Mehrabi, Z. (2021). [How to buffer against an urban food shortage](https://www.nature.com/articles/d41586-021-01758-6). *Nature News*
+
+Adding diversity to city food supply chains can buffer against crises of food shortage (i.e., food shocks). 
+
+3. Warren, M. E. (2021). [A bridge across the democracy–expertise divide](https://www.nature.com/articles/d41586-021-02006-7). *Nature News*
+
+An algorithm was created to randomly select people to form a minipublic to bridge the gap between democracy and expertise. 
+
+## 2021-11-12 (Completed on 2021-11-13)
+
+1. Skimmed through [Goel et al. (2016)](https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2015.2158).
+
+2. Spiers, H. (2021). [Brain rhythms on the border](https://media.nature.com/original/magazine-assets/d41586-020-03576-8/d41586-020-03576-8.pdf). *Nature News*. 
+
+Theta oscillations in our brain's medial temporallobe (MTL) increase when we or the people we are watching are nearing boundaries, for example, approaching the edge of a cliff. 
+
+## 2021-11-11
+
+Goel, S., Anderson, A., Hofman, J., & Watts, D. J. (2016). [The structural virality of online diffusion](https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2015.2158). *Management Science, 62*(1), 180-196.
+
+PP. 1-7
+
+## 2021-11-10 (Completed on 2021-11-11)
+
+Juul, J. L., & Ugander, J. (2021). [Comparing information diffusion mechanisms by matching on cascade size](https://www.pnas.org/content/118/46/e2100786118). *Proceedings of the National Academy of Sciences, 118*(46).
+
+The study re-examined the results of two landmark studies. [The first one](https://www.science.org/doi/10.1126/science.aap9559) studies the diffusion of fact-checked false and true news on Twitter. [The second](https://pubsonline.informs.org/doi/pdf/10.1287/mnsc.2015.2158) compares the diffusion of news, videos, images, and petitions on Twitter. 
+
+The authors of this paper show that when we control for the cascade size (i.e., the number of retweets), the structural and temporal differences in the first study disappear, whereas these differences in the second study remain. This indicates that when the items in diffusion are of the same type, controlling for cascade sizes explains their structural and temporal differences in diffusion. When they are of different types, controlling for cascade sizes does not explain their structural differences in diffusion patterns. 
+
 ## 2021-11-09 (Completed on 2021-11-10)
 
 Finished [Azuma (1997)](https://www.embopress.org/doi/full/10.1038/embor.2012.15).
+
+>As a graduate student, you are on the bottom of the academic totem pole. Even undergraduates can rank higher, especially at private universities (because they actually pay tuition!) You cannot *order* anybody to do anything.
 
 - As a PhD student, you must have initiative. Don't wait for your advisors to tell you what to do for the next step. 
 
@@ -27,7 +101,7 @@ Finished [Azuma (1997)](https://www.embopress.org/doi/full/10.1038/embor.2012.15
 
 - Pay attention to your physical health. 
 
-- Talk with PhD graduates. This helps you graduate two years earlier. 
+- Talk with PhD graduates. This might help you graduate two years earlier than if you don't. 
 
 ## 2021-11-08 (Completed on 2021-11-10)
 
