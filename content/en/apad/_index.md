@@ -37,19 +37,19 @@ This article reviews a study that shows chronic stress in mice reduced their hai
 
 ## 2021-11-15 (Completed on 2021-11-16)
 
-👍 Kwak, H., Lee, C., Park, H., & Moon, S. (2010, April). What is Twitter, a social network or a news media?. In *Proceedings of the 19th international conference on World wide web* (pp. 591-600). 
+👍 Kwak, H., Lee, C., Park, H., & Moon, S. (2010, April). [What is Twitter, a social network or a news media?](https://dl.acm.org/doi/pdf/10.1145/1772690.1772751). In *Proceedings of the 19th international conference on World wide web* (pp. 591-600). 
 
-I skimmed through this paper. This study shows that on Twitter (1) follower distribution does not follow a power-law, (2) degree of separation is small, only 4.12, and (3) reciprocity is low. These characteristics deviate from known features of social network sites. This indicates that Twitter is more like a news sharing site than a social network site. 
+I skimmed through this paper. This study shows that on Twitter (1) follower distribution does not follow a power-law, (2) degree of separation is small, only 4.12, and (3) reciprocity is low. These characteristics deviate from known features of social network sites. This indicates that Twitter is more like a news sharing platform than a social network site. 
 
 ## 2021-11-14 (Completed on 2021-11-16)
 
-1. Ellison, N. B., Steinfield, C., & Lampe, C. (2007). The benefits of Facebook “friends:” Social capital and college students’ use of online social network sites. *Journal of computer‐mediated communication, 12*(4), 1143-1168.
+1. Ellison, N. B., Steinfield, C., & Lampe, C. (2007). [The benefits of Facebook “friends:” Social capital and college students’ use of online social network sites](https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1083-6101.2007.00367.x). *Journal of computer‐mediated communication, 12*(4), 1143-1168.
 
-I skimmed through this paper. The study finds a positive relationship between Facebook use and the formation and maintenance of social capital. 
+  I skimmed through this paper. The study finds a positive relationship between Facebook use and the formation and maintenance of social capital. 
 
-2. Boyd, D. M., & Ellison, N. B. (2007). Social network sites: Definition, history, and scholarship. *Journal of computer‐mediated Communication, 13*(1), 210-230.
+2. Boyd, D. M., & Ellison, N. B. (2007). [Social network sites: Definition, history, and scholarship](https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1083-6101.2007.00393.x). *Journal of computer‐mediated Communication, 13*(1), 210-230.
 
-I skimmed through this paper. It reviewed the history of social network sites worldwide and talks about the scholarship in this field. 
+  I skimmed through this paper. It reviewed the history of social network sites worldwide and talks about the scholarship in this field. 
 
 ## 2021-11-13 (Completed on 2021-11-15)
 
