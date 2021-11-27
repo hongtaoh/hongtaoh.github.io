@@ -15,6 +15,112 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2021-11-27
+
+1. Finished [Chu et al. (2021)](https://www.pnas.org/content/pnas/118/49/e2106481118.full.pdf)
+
+The study found that among American Christians who are hesitant to get vaccination, knowing that medical experts share religious belief with them increases their intention to get vaccinated and makes them want to encourage others to get vaccination. 
+
+2. Athey, S., Ferguson, B., Gentzkow, M., & Schmidt, T. (2021). [Estimating experienced racial segregation in US cities using large-scale GPS data](https://www.pnas.org/content/pnas/118/46/e2026160118.full.pdf). *Proceedings of the National Academy of Sciences, 118*(46).
+
+PP. 1-6
+
+## 2021-11-26
+
+1. Yu, H., Xue, L., Barrangou, R., Chen, S., & Huang, Y. (2021). [Opinion: Toward inclusive global governance of human genome editing](https://www.pnas.org/content/pnas/118/47/e2118540118.full.pdf). *Proceedings of the National Academy of Sciences, 118*(47).
+
+This is an opinion piece regarding regulation of human genome editing. The authors argue that the global government of gene editing should be inclusive: voices of representatives from marginalized countries and regions should be heard and seriously considered. 
+
+2. Chu, J., Pink, S. L., & Willer, R. (2021). [Religious identity cues increase vaccination intentions and trust in medical experts among American Christians](https://www.pnas.org/content/pnas/118/49/e2106481118.full.pdf). *Proceedings of the National Academy of Sciences, 118*(49).
+
+PP. 1-2
+
+## 2021-11-25
+
+Hangartner, D., Kopp, D., & Siegenthaler, M. (2021). Monitoring hiring discrimination through online recruitment platforms. *Nature, 589*(7843), 572-576.
+
+This paper traces the searching and browsing behavior of Swiss recruiters on the public recruiting platform. The analyses based on the rich data show that (1) there is apparent discrimination based on ethinicity in terms of the contact likelihood and time spent on viewing the profile; (2) overall, there is no sign of discrimination based on gender but there is variation across different occupations.  
+
+## 2021-11-24 (Completed on 2021-11-25)
+
+Slonim, N., Bilu, Y., Alzate, C., Bar-Haim, R., Bogin, B., Bonin, F., ... & Aharonov, R. (2021). An autonomous debating system. *Nature, 591*(7850), 379-384.
+
+I skimmed through this paper. 
+
+A debating system based on AI was developed to debate with humans. This system breaks the big task, i.e., debating, down into smaller tasks, and then solves them one by one. 
+
+## 2021-11-23 (Completed on 2021-11-24)
+
+1. Ortega, R. P. (2021). [Divided we sleep](https://www.science.org/doi/pdf/10.1126/science.acx9445). *Science, 374*(6567), 552-555.
+
+Non-White people in the US suffer more sleep problems. Causes might include discrimination, night shifts, light pollution, air pollution, and stress. 
+
+
+2. Madruga, R. P. (2021). [Linking climate and biodiversity](https://www.science.org/doi/full/10.1126/science.abm8739). *Science*
+
+This is a viewpoint piece. It argues that climate change and the loss of biodiversity are linked to each other and the United Nations is trying to solve the two challenges together. 
+
+
+## 2021-11-22
+
+1. Thorp, H. H. (2021). [Time to unfriend Facebook?](https://www.science.org/doi/abs/10.1126/science.abm5515). *Science*
+
+Thorp argues that scientists should be active Facebook to compete with key figures in the antiscience world. I am not sure whether this is a good or practical idea. Why? Because using Facebook is very time consuming. I don't think scientists doing research have the time for that. 
+
+2. Normile, D. (2021). [A greener path](https://www.science.org/doi/full/10.1126/science.acx9528). *Science*
+
+I don't question the objectiveness of this report on Belt and Road Initiative (BRI). However, I don't think it captures the whole picture. Reading this feature article gives me the impression that BRI is doing all bad things. It does appreciate its recent going green but the overall message is that BRI is bad. 
+
+I don't think it's good to damage the environment. But just as [how Putin commented on](https://www.reuters.com/article/us-russia-putin-thunberg/putin-i-dont-share-excitement-about-greta-thunbergs-u-n-speech-idUSKBN1WH1FM) Greta Thunberg, the famous Swedish environmental activist, the author of this paper might not have thought about how these BRI projects might improve the livelihood of people in impoverished countries. 
+
+It is easy to criticize something but hard to give constructive suggestions. 
+
+## 2021-11-21
+
+1. Jessoe, K., & Moore, F. C. (2021). [The cost of changes in energy use in a warming world](https://www.nature.com/articles/d41586-021-02721-1). *Nature News*
+
+This is a review piece. It reviews a paper that models the effects of climate change on energy consumption across the globe. The result shows that during the remaining years of the 21st century, with global warming, the rise in electricity use will be offset by the decrease in fuel use. The result will be a modest decrease in energy consumption. It should be noted that the paper fails to include some important factors in their model. For example, the price of air conditioning or electricity might decrease. 
+
+2. Willoughby, P. R. (2021). [Early Africans living inland collected unusual objects](https://media.nature.com/original/magazine-assets/d41586-021-00795-5/d41586-021-00795-5.pdf). *Nature, 592*(7853), 193-193.
+
+This article reviews a paper that talks about new archaeological findings in South Africa. This new finding indicates that people in the site might have already started using ornamental objects. 
+
+3. Saçma, M., & Geiger, H. (2021). [Exercise generates immune cells in bone](https://www.nature.com/articles/d41586-021-00419-y). *Nature News*
+
+This article reviews a paper that shows how exercising boosts the immune system. 
+
+## 2021-11-20
+
+1. Sadowski, J., Viljoen, S., & Whittaker, M. (2021). [Everyone should decide how their digital data are used—Not just tech companies](https://www.nature.com/articles/d41586-021-01812-3). *Nature*
+
+This is a comment piece. The authors propose that academics (especially computational social scientists), government, and the public should take actions to make sure big corporate companies do not have significant monopoly over the data they have. Everyone should have a say over how the data can be used. 
+
+2. Ledford, H. (2020). [How Facebook, Twitter and other data troves are revolutionizing social science](https://www.nature.com/articles/d41586-020-01747-1). *Nature, 582*(7812), 328-331.
+
+This is a feature story. It talks about the differences between traditional social science and the emerging computational social science. 
+
+## 2021-11-19
+
+1. Rotimi, C. & Adeyemo, A. (2021). [Expanding diversity in genomics](https://media.nature.com/original/magazine-assets/d41586-021-00237-2/d41586-021-00237-2.pdf). *Nature News*
+
+This is a viewpoint piece. As the title indicates, the authors propose that we need more diversity in the participating individuals in genomics research. This is because knowledge found in one ethnic group may not apply to the other. 
+
+2. Van Noorden, R. (2020). [The ethical questions that haunt facial-recognition research](https://www.nature.com/articles/d41586-020-03187-3).
+
+This is a news piece. It talks about ethical concerns in facial recognition research in particular and AI in general. 
+
+## 2021-11-18
+
+1. Lauritzen, L. (2021). [A spotlight on seafood for global human nutrition](https://www.nature.com/articles/d41586-021-02436-3). *Nature News*
+
+This article reviews a paper that uses modeling to estimate whether boosting the intake of seafood around the world might improve human health. The model indicates that it does. Countries in sub-Saharan Africa and southern Asia will benefit the most. In terms of the make-up of the population, women and children will benefit the most from a rise in seafood intake. 
+
+2. Jaeger, K. L. (2021). [Most rivers and streams run dry every year](https://www.nature.com/articles/d41586-021-01528-4). *Nature News*
+
+This article reviews a study that shows (1) 51%-60% of all the streams in the world run dry for at least one day per year and (2) 44%-53% of worldwide stream length runs dry for at least one month per year. 
+
+Overall, the study indicates that non-perennial streams make up a major proportion of rivers and streams in the world and therefore call for more studies. 
+
 ## 2021-11-17
 
 Barrett, L. F. (2021). [Debate about universal facial expressions goes big](https://media.nature.com/original/magazine-assets/d41586-020-03509-5/d41586-020-03509-5.pdf). *Nature, 589*(7841), 202-203.
