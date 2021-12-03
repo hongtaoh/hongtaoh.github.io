@@ -13,6 +13,7 @@ This post is tested under Julia v1.6.1.
 In Julia, you can set a random seed using the [`Random.seed!`](https://docs.julialang.org/en/v1/stdlib/Random/#Random.seed!) function. However, keep in mind that you have to use it every time you are using the random number generator. 
 
 ```bash
+julia> using Random
 julia> Random.seed!(1234)
 MersenneTwister(1234)
 
