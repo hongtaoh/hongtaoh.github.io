@@ -173,6 +173,5 @@ To be coming (hopefully)...
 
 - [Introduction to D3.js and Observable notebooks](/slides/d3.html), March 31, 2021 ([Recording](https://iu.mediaspace.kaltura.com/media/t/1_txlx5k1v))
   - [D3 Example](https://observablehq.com/@hongtaoh/d3-practice-2021-03-31), to be able to embed a chart, be sure to name the cell first. 
-  - 
 
 
