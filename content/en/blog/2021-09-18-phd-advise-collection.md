@@ -1,5 +1,5 @@
 ---
-title: "A Collection of My Summaries of PhD Advice I've Read"
+title: "A Collection of PhD Advice I've Read And My Summaries of Them"
 date: 2021-09-18T16:57:14-05:00
 author: "Hongtao Hao"
 slug: phd-advice-collection
@@ -13,7 +13,7 @@ toc: false
 
 - [My summary](/en/2021/09/22/philip-guo-phd-advice/) of Philip Guo's advice for early-stage PhD students
 
-- [The PhD Grind] by Philip Guo, [my summary in Chinese](/cn/2021/05/12/phd-grind/)
+- The PhD Grind by Philip Guo, [my summary in Chinese](/cn/2021/05/12/phd-grind/)
 
 - [Graduate Students: You are more than your Ph.D.](https://katiewedemeyer.files.wordpress.com/2020/05/katie-ws-spectra-may-2020.pdf) by [Wedemeyer-Strombel, K](https://katiewedemeyer.wordpress.com/about/). (2020), [my takeaway](/cn/2021/05/12/phd-grind/)
 
@@ -50,8 +50,6 @@ toc: false
 <!-- 看完 2021 年的了，该 2020 年的了 -->
 
 - [My summary]((/en/2021/09/13/suman-advice/)) of Professor Suman Banerjee's advice for new CS graduate students
-
-- My blog post of [What I Have Learned from Professor YY](/en/2020/09/05/yy/)
 
 - [*Done is better than perfect: overcoming PhD perfectionism*](http://blogs.nature.com/naturejobs/2018/07/09/done-is-better-than-perfect-overcoming-phd-perfectionism/) by Ivancevic, A. (2018), [my summary](/en/apad/#2021-09-28)
 
