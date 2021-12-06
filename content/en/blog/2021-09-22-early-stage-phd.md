@@ -111,7 +111,7 @@ if you get stuck in your research, let your advisor or other mentors know IMMEDI
 
 It's really a vicious circle when you get stuck, do not get help ASAP, and keep procrastinating. Many students fail this way. 
 
-#20 everyone is busy, but ask them for help anyways
+#20 everyone is busy, but ask them for help anyway
 
 If you do your homework, it's okay to ask help from those who are super busy. They'll emphasize and help. 
 
@@ -131,7 +131,7 @@ Relying on external metrics like publications or awards isn't sufficient since t
 
 >focus on the action, and ignoring the result, moves you closer to the result. -- quoted from [the video](https://www.youtube.com/watch?v=_ZVGXmafWqY) linked in the article. 
 
-#22 My project stinks...should Ii quit and find something else?
+#22 My project stinks...should I quit and find something else?
 
 - If it's your own project, try sticking with it for at least 3 months. 
 - If it's others' project, try switching if you've done enough to earn authorship from the first author after you quite
