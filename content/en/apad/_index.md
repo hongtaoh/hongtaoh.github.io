@@ -10,11 +10,186 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
-2021: [2021-10](/en/apad/#2021-10), [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
+2021: [2021-11](/en/apad/#2021-11), [2021-10](/en/apad/#2021-10), [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
 
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+
+{{<block class="info">}}
+I feel so bad about "binge read" these days. I'm adjusting my time to do APAD. 
+{{<end>}}
+
+## 2021-12-11
+
+1. Chang, S., Pierson, E., Koh, P. W., Gerardin, J., Redbird, B., Grusky, D., & Leskovec, J. (2021). [Mobility network models of COVID-19 explain inequities and inform reopening](https://www.nature.com/articles/s41586-020-2923-3). *Nature, 589*(7840), 82-87.
+
+I skimmed through this paper. 
+
+Using mobility data (from SafeGraph) of 90 million people in the USA, the authors predicted infection cases with a simple susceptible-exposed-infectious-removed (SEIR) model. The model was able to predict the evolution of daily confirmed cases in ten large cities of the USA from early March to early May, despite the changing policies and changing human behavior during this period. 
+
+The model confirmed that people from disadvantaged groups in terms of racial and income are more vulnerable to COVID infections. This is because they visited denser locations and stayed longer. This finding has important implications for public policies. As cities are thinking of reopening, governments can implement policies helping reduce infection rates in low-income areas. 
+
+2. Buckee, C., Noor, A., & Sattenspiel, L. (2021). [Thinking clearly about social aspects of infectious disease transmission](https://www.nature.com/articles/s41586-021-03694-x). *Nature, 595*(7866), 205-213.
+
+PP. 1-2
+
+## 2021-12-10 (Completed on 2021-12-11)
+
+Finished [Lee et al. (2021)](https://www.science.org/doi/full/10.1126/science.abe7365)
+
+I skimmed through this paper very carelessly. It debunked some myths regarding the effects of caloric restriction (CR) diets on prolonging lifespan. 
+
+## 2021-12-09 (Completed on 2021-12-11)
+
+1. Spyrison, N., Lee, B., & Besançon, L. (2021). ["Is IEEE VIS* that* good?" On key factors in the initial assessment of manuscript and venue quality](https://altvis.github.io/papers/spyrison.pdf).
+
+To decide whether to read a paper in detail, among the 46 respondents, (1) publication venue prestige, and (2) publication year, i.e., whether it's recent or not, are the most important factors. 
+
+The authors argued that we should abandon the idea that the prestige of a publication venue dictates the value of the paper. 
+
+2. Lee, M. B., Hill, C. M., Bitto, A., & Kaeberlein, M. (2021). [Antiaging diets: Separating fact from fiction](https://www.science.org/doi/full/10.1126/science.abe7365). *Science, 374*(6570), eabe7365.
+
+PP. 1-3
+
+## 2021-12-08 (Completed on 2021-12-11)
+
+Isenberg, P., Isenberg, T., Sedlmair, M., Chen, J., & Möller, T. (2016). [Visualization as seen through its research paper keywords](https://ieeexplore.ieee.org/iel7/2945/4359476/07539364.pdf). *IEEE Transactions on Visualization and Computer Graphics, 23*(1), 771-780.
+
+I skimmed through this paper. 
+
+This paper employed co-word analysis to analyze keywords in IEEE Vis papers from 1990 to 2015. In terms of IEEE Vis, there are two types of keywords: those appeared in actual papers in PDF, and those appeared on IEEE Xplore website. The difference is that authors are free to decide their own keywords and put them in their papers, but when they submit their paper on IEEE Vis platform, they have to choose from keywords already defined by IEEE Vis. The second type is called PCS keywords. Based on these two types of keywords, the authors manually created **topics**. 
+
+This paper is mainly about two questions: (1) what are the key themes among IEEE Vis papers and what are the relationships among them; (2) how do certain keywords emerge and evolve. 
+
+Later, the authors analyzed "topic-coded keywords" and PCS keywords from two perspectives: cluster (how they cluster), and networks (how they relate to each other). The results indicated that topic keywords lack mainstream topics but PCS keywords have mainstream topics. 
+
+The authors also mentioned that keywords inputted by paper authors have unnecessary duplicates, for example, singular vs. plural. This is not helpful. The authors also mentioned a fixed list of keywords. But this list is always evolving and it's a good question to ask whether we can automate the updating process. 
+
+keyvis.org is one of the outputs of this paper where people can search keywords appearing in IEEE Vis papers. 
+
+## 2021-12-07 (Completed on 2021-12-08)
+
+👍 Cha, M., Haddadi, H., Benevenuto, F., & Gummadi, K. (2010, May). [Measuring user influence in twitter: The million follower fallacy](https://ojs.aaai.org/index.php/ICWSM/article/download/14033/13882). In *Proceedings of the international AAAI conference on web and social media* (Vol. 4, No. 1).
+
+I skimmed through this paper. 
+
+This study analyzed 6 million Twitter users. The authors distinguished between three different types of influencers in Twitter: indegree, retweet, and mentions. The authors showed that:
+
+  1. Indegree influence does not necessarily translate into retweets and mention influences. 
+  2. Most influential people have considerable influences over various topics. 
+  3. People gain influence through concerted efforts, for example, creating content on one single topic, rather than through accidents.
+
+## 2021-12-06 (Completed on 2021-12-07)
+
+1. Wittenberg, C., Tappin, B. M., Berinsky, A. J., & Rand, D. G. (2021). [The (minimal) persuasive advantage of political video over text](https://www.pnas.org/content/pnas/118/47/e2114388118.full.pdf). *Proceedings of the National Academy of Sciences, 118*(47).
+
+This study finds that although videos, compared to texts (annotated transcripts of the videos), are more likely to make people believe something actually existed or occurred, they are not more persuasive nor more engaging, at least not in a political context. 
+
+This research contains two studies, both employing a within-subject design. Study one contains 48 persuasive messages covering a wide range of topics and Study two has 24 messages about COVID-19. 
+
+The authors stated that belief is not equal to persuasion. They said that scholars outside of political science should also pay attention to this point. 
+
+{{<block class="info">}}
+1. I am not sure whether a participant only saw one message or all the messages. 
+2. I am not sure why the authors decided to employ a within-subject design. It seems to me that having watched the video clip will definitely affect the outcome of reading transcriptions. 
+{{<end>}}
+
+## 2021-12-05 (Completed on 2021-12-07)
+
+👍 Tovanich, N., Dragicevic, P., & Isenberg, P. (2021). [Gender in 30 Years of IEEE Visualization](https://ieeexplore.ieee.org/iel7/2945/4359476/09552840.pdf?casa_token=slMNIPuU79cAAAAA:-wIneEvFyAl3pw9vxYKwEqagWhyLIVRs4jkClosCEtOLD9Z1_JsGH8JG8VKSebz7I3G_PYF19A). *IEEE Transactions on Visualization and Computer Graphics*.
+
+This paper analyzed all the authors in IEEE Visualization (a conference in the field of Visualization) from a perspective of gender. They examined the overall gender representation, career age, dropout rate, author positioning, collaboration networks, and paper awards. 
+
+The key findings can be found at the end of this paper. Here are two findings I especially noted:
+
+1. On average, it takes more years for an author to publish their first paper at IEEE Vis. 
+2. There is a gender bias in author collaboration in IEEE Vis. 
+
+## 2021-12-04 (Completed on 2021-12-05)
+
+Bartneck, C., & Hu, J. (2009, April). [Scientometric analysis of the CHI proceedings](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.154.965&rep=rep1&type=pdf). In *Proceedings of the SIGCHI conference on human factors in computing systems* (pp. 699-708).
+
+Based on all CHI proceedings, including extended abstracts, from 1982 to 2008, this study examines (1) which countries and organizations (i.e., universities, institutes, companies, etc) contributed most to these papers, and (2) whether papers receiving Best Paper Awards received more citations than a randomly selected paper. 
+
+## 2021-12-03 (Completed on 2021-12-05)
+
+Levers, C., Romero-Muñoz, A., Baumann, M., De Marzo, T., Fernández, P. D., Gasparri, N. I., ... & Kuemmerle, T. (2021). [Agricultural expansion and the ecological marginalization of forest-dependent people](https://www.pnas.org/content/pnas/118/44/e2100436118.full.pdf). *Proceedings of the National Academy of Sciences, 118*(44).
+
+I skimmed through this paper. 
+
+This study uses high-resolution satellite images to identify forest smallholders and forest areas occupied by them. The authors focus on Gran Chaco, a deforestation hotspot located in South America. The analysis is for the period of 1985-2015. The authors found a general decrease in the forest resources in the surroundings of forest smallholders' homesteads. 
+
+## 2021-12-02
+
+1. Finished [Master et al. (2021)](https://www.pnas.org/content/118/48/e2100030118)
+
+I skimmed through this paper. 
+
+This study combined results from surveys and experiments to demonstrate the (1) existence and the (2) effect of gender stereotypes regarding computer science and engineering abilities among children and adolescents. 
+
+Results from the two surveys show that children as young as six and adolescents endorse the stereotype that boys are better at computer science and engineering than girls. The results also show that for individual girls, the more she endorses this stereotype, the less interested she is and the lower sense of belonging she has in the fields.
+
+The experiments showed that girls are less interested in an activity labeled with this kind of gender stereotype compared with an activity without such a label. 
+
+2. Hannák, A., Wagner, C., Garcia, D., Mislove, A., Strohmaier, M., & Wilson, C. (2017, February). [Bias in online freelance marketplaces: Evidence from taskrabbit and fiverr](http://claudiawagner.info/publications/cscw_bias_olm.pdf). In *Proceedings of the 2017 ACM conference on computer supported cooperative work and social computing* (pp. 1914-1933).
+
+I skimmed through this paper. 
+
+The study showed that on TaskRabbit and Fiverr, two freelance marketplaces, gender and race significantly correlate with the number and nature of feedback workers received. There also existed a search ranking bias. 
+
+{{<block class="info">}}
+This paper only has three levels for the variable of race: White, Asian, Black. White about Latinx? I know it will be very difficult to distinguish between White and Latinx based on workers' profile, though. I am just wondering whether adding "Latinx" as a level in race changes the results. 
+{{<end>}}
+
+## 2021-12-01
+
+1. McDermott, A. (2021). [News Feature: What was the first “art”? How would we know?](https://www.pnas.org/content/118/44/e2117561118). *Proceedings of the National Academy of Sciences, 118*(44).
+
+The article talks about how to define art and how to know what was the first artistic piece. 
+
+2. Master, A., Meltzoff, A. N., & Cheryan, S. (2021). [Gender stereotypes about interests start early and cause gender disparities in computer science and engineering](https://www.pnas.org/content/118/48/e2100030118). *Proceedings of the National Academy of Sciences, 118*(48).
+
+PP. 1-4
+
+# 2021-11
+
+## 2021-11-30 (Completed on 2021-12-01)
+
+1. Shah, H. (2020). [Global problems need social science](https://www.nature.com/articles/d41586-020-00064-x). *Nature, 577*(7789), 295-296.
+
+The challenges we are facing need not only data scientists, but also scientists in the field of social sciences and humanities. 
+
+2. Franks, N. P., & Wisden, W. (2021). [The inescapable drive to sleep: Overlapping mechanisms of sleep and sedation](https://www.science.org/doi/full/10.1126/science.abi8372). *Science, 374*(6567), 556-559.
+
+We know a lot about why we need food, water and sex but we still do not know whhy we need sleeping. The authors give a nice review of what we know about sleeping so far. The authors argue that we sleep because we need an unconscious brain to restore our body. 
+
+## 2021-11-29 (Completed on 2021-11-30)
+
+1. Zhou, C., Sylvia, S., Zhang, L., Luo, R., Yi, H., Liu, C., ... & Rozelle, S. (2015). China’s left-behind children: impact of parental migration on health, nutrition, and educational outcomes. *Health affairs, 34*(11), 1964-1971.
+
+The study found that in rural China, left-behind children do as well as, or slightly better than, children living with both parents, in terms of health, nutrition, and academic performance (Chinese, Math, and English). This result indicates that special programs helping rural children in China should not be restricted to left-behind children only.
+
+The authors estimate that there are over 73 million left-behind children in rural China.
+
+2. Li, W., & Keene, A. C. (2021). [Flies sense the world while sleeping](https://www.nature.com/articles/d41586-021-02441-6). *Nature News*
+
+This piece reviews a study which finds that when starved, fruit flies will wake up when they sense odors of food.  
+
+## 2021-11-28
+
+1. Finished [Athey et al. (2021)](https://www.pnas.org/content/pnas/118/46/e2026160118.full.pdf)
+
+I skimmed through this paper. 
+
+This study compares residential racial isolation with "experienced isolation" based on mobile phone GPS data. The key difference between the measures is that the first one is about location of homes whereas the second one tracks the movement of people. The key findings are (1) experienced isolation is lower than residential isolation, and (2) the two are highly correlated. 
+
+👍 2. Fochesato, M., Higham, C., Bogaard, A., & Castillo, C. C. (2021). [Changing social inequality from first farmers to early states in Southeast Asia](https://www.pnas.org/content/pnas/118/47/e2113598118.full.pdf). *Proceedings of the National Academy of Sciences, 118*(47).
+
+I skimmed through this paper. 
+
+The authors studied social inequality measured by Gini coefficients (GCs) which were computed based on burials in Northeast Thailand spanning 2500 years. The data shows that there were three periods of increased social inequality. The authors argue that in the last period of these three, there was a transition from dry-rice to wet-rice. This transition might have contributed to wealth inequalities and a rise in state societies. 
+
 ## 2021-11-27
 
 1. Finished [Chu et al. (2021)](https://www.pnas.org/content/pnas/118/49/e2106481118.full.pdf)
