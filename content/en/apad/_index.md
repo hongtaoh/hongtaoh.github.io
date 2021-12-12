@@ -17,7 +17,7 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 ---
 
 {{<block class="info">}}
-I feel so bad about "binge read" these days. I'm adjusting my time to do APAD. 
+I feel so bad about "binge reading" today. I'm adjusting my time to do APAD. 
 {{<end>}}
 
 ## 2021-12-11
