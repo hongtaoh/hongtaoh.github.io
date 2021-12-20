@@ -20,7 +20,11 @@ toc: false
   - 6）这个是非必须的：一个段落说明你未来的的职业计划
 
 {{<block class="tip">}}
-参考：我申请威斯康星计算机方向博士项目的[目标陈述](https://hongtaoh.com/files/wisconsin-cs.pdf)
+参考：我申请威斯康星计算机方向博士项目的[目标陈述](https://hongtaoh.com/files/wisconsin-cs.pdf)。这份 SOP 我是用 RMarkdown 做的，你可以看我的[源代码](https://hongtaoh.com/files/wisc-sop.zip)。
+
+我申请 UC Davis Communication 的目标陈述在[这里](https://hongtaoh.com/files/hongtao_ucdavis_sop.pdf)。戴维斯录取我了，不过没去。
+
+另外，我申请 Upenn Annenberg 的 [SOP](https://hongtaoh.com/files/hongtao_ps_penn.pdf) 和[源代码](https://hongtaoh.com/files/upenn-sop.zip)你也可以参考，不过 Upenn 并没有要我。
 {{<end>}}
 
 2. 简历 CV: [cv_emulate](https://github.com/hongtaoh/cv_emulate)。最好用 [Latex](/cn/2020/05/26/bookdown-tips/#latex-资料)。最简单的方法是用 [Overleaf](https://www.overleaf.com/). 
