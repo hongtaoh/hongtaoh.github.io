@@ -30,9 +30,9 @@ toc: false
 2. 简历 CV: [cv_emulate](https://github.com/hongtaoh/cv_emulate)。最好用 [Latex](/cn/2020/05/26/bookdown-tips/#latex-资料)。最简单的方法是用 [Overleaf](https://www.overleaf.com/). 
 
 {{<block class="tip">}}
-我申请时用的简历：
-  1. [PDF](https://raw.githubusercontent.com/hongtaoh/cv_emulate/master/oneColumn/Hongtao_CV_1col.pdf), [源代码](https://github.com/hongtaoh/cv_emulate/tree/master/oneColumn)
-  2. [PDF](https://raw.githubusercontent.com/hongtaoh/cv_emulate/master/twoColumnCV/twoColumnCV.pdf), [源代码](https://github.com/hongtaoh/cv_emulate/tree/master/twoColumnCV)
+我申请时用的简历： 
+  1. [PDF](https://raw.githubusercontent.com/hongtaoh/cv_emulate/master/twoColumnCV/twoColumnCV.pdf), [源代码](https://github.com/hongtaoh/cv_emulate/tree/master/twoColumnCV)
+  2. [PDF](https://raw.githubusercontent.com/hongtaoh/cv_emulate/master/oneColumn/Hongtao_CV_1col.pdf), [源代码](https://github.com/hongtaoh/cv_emulate/tree/master/oneColumn)
 
 把源代码那几个文件一股脑上传到一个 Overleaf 项目，应该就能导出一摸一样的 PDF。
 
