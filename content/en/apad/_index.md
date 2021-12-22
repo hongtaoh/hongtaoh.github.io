@@ -15,6 +15,122 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2021-12-22
+
+1. Jaidka, K., Zhou, A., & Lelkes, Y. (2019). [Brevity is the soul of Twitter: The constraint affordance and political discussion](https://academic.oup.com/joc/article/69/4/345/5547032). *Journal of Communication, 69*(4), 345-372.
+
+I skimmed through this paper. 
+
+The author studied close to 360K Twitter replies to US Congressmen and Congresswomen. The compared replies before and after the 280-character limit change from the perspective of linguistic features, such as incivility, politeness, respect, etc. The results show that doubling the number of characters allowed in a tweet made the political discussions less uncivil and more deliberate. This change in character limit, however, decreased empathy and respect. 
+
+The data and codes for the figures in this paper is [here](https://osf.io/u2nfp/).
+
+2. Aref, S., Zagheni, E., & West, J. (2019, November). [The demography of the peripatetic researcher: Evidence on highly mobile scholars from the Web of Science](https://arxiv.org/pdf/1907.13414.pdf). In *International Conference on Social Informatics* (pp. 50-65). Springer, Cham.
+
+PP. 1-6
+
+## 2021-12-21
+
+Jiang, M. (2014). [The business and politics of search engines: A comparative study of Baidu and Google’s search results of Internet events in China](https://journals.sagepub.com/doi/pdf/10.1177/1461444813481196). *New media & society, 16*(2), 212-233.
+
+The author compared the search results of 316 internet events of 2009 on Baidu and Google. She compared the results from the perspectives of accessibility (whether the links can be opened), overlapping, ranking, and bias. She only considered the top ten results for each query. 
+
+The results show that (1) after Google moved its server from Mainland China to Hong Kong, its results are as inaccessible, if not more, as those of Baidu, partly due to the Great Firewall and bad links; (2) The results of Google and Baidu are very different, with a very low overlapping rate and different rankings; (3) Baidu's results are biased towards its own services (i.e., against its competitors like Hudong Baike).
+
+## 2021-12-20
+
+Heider, F., & Simmel, M. (1944). [An experimental study of apparent behavior](https://www.jstor.org/stable/pdf/1416950.pdf). *The American journal of psychology, 57*(2), 243-259.
+
+The authors presented moving pictures, i.e., a short film to three groups of female undergraduate students. The film consists of movements of three objects: a large triangle, a small triangle, and a small circle. There is also a rectangle that can be opened and closed. This rectangle does not move. 
+
+The first group of students simply watched this film and were asked to describe it. The second group watched it and were asked to interpret movements as those of persons. The third group had the same instructions as the second one; the only difference is that they watched the film in reverse. 
+
+The results show that no matter whether participants were told to interpret the movements as those of persons', they almost all tended to do so. The authors argue that as soon as we consider moving objects as persons, "perception of motive or need is involved."
+
+## 2021-12-19
+
+1. 👍 Finished [Segel & Heer (2010)](https://idl.cs.washington.edu/files/2010-Narrative-InfoVis.pdf)
+
+I skimmed through this paper. 
+
+This study examined 58 examples of narrative visualizations, taken from online journalism, business, and visualization research. Based on these examples, the authors came up with seven genres of narrative visualization: magazine style, annotated chart, partitioned poster, flow chart, comic stric, slide show and film/video/animation. The authors also pointed out that a promising future research direction is to study users' experiences and engagement when interacting with narrative visualizations. 
+
+2. Ma, J., Gao, W., Mitra, P., Kwon, S., Jansen, B. J., Wong, K. F., & Cha, M. (2016). [Detecting rumors from microblogs with recurrent neural networks](https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=5633&context=sis_research).
+
+I skimmed through this paper. 
+
+The authors used a recurrent neural networks (RNN) model to detect rumors on Twitter and Weibo. 
+
+## 2021-12-18
+
+1. DeVito, N. J., Richards, G. C., & Inglesby, P. (2020). [How we learnt to stop worrying and love web scraping](https://www.nature.com/articles/d41586-020-02558-0). *Nature, 585*(7826), 621-623.
+
+The authors briefly introduced how web scrapers work and why web scraping should be embraced as an important tool for scientific research. 
+
+2. Segel, E., & Heer, J. (2010). [Narrative visualization: Telling stories with data](https://idl.cs.washington.edu/files/2010-Narrative-InfoVis.pdf). *IEEE transactions on visualization and computer graphics, 16*(6), 1139-1148.
+
+PP. 1-5
+
+## 2021-12-17
+
+Yang, T., Ticona, J., & Lelkes, Y. (2021). [Policing the Digital Divide: Institutional Gate-keeping & Criminalizing Digital Inclusion](https://academic.oup.com/joc/article/71/4/572/6325613). *Journal of Communication, 71*(4), 572-597.
+
+This is a very cool study. The authors were interested in whether free Wi-Fi offered by restaurants increased the incidents of quality-of-life crime reporting, and how that increase (if there is one) interacts with race and income. 
+
+The authors then collected data (restaurants with free Wi-Fi, and crime records) of Chicago. Their analysis shows that free Wi-Fi does not lead to an increase in quality-of-life policing. However, it does lead to an increase in affluent areas, and White areas, but not in poorer areas and non-White areas.
+
+## 2021-12-16
+
+👍 Finished [Jung et al. (2021)](https://pages.cs.wisc.edu/~yeaseulkim/assets/papers/2021_alt_text_vis.pdf)
+
+This is very interesting and meaningful work! The authors first gathered and summarized major guidelines for alternative text (alt text). The authors pointed out that these guidelines do not provide empirical evidence of their rationale.
+
+The authors then went on collecting visualizations from news websites and surprisingly found that none of them include alt texts. Then they turned to scientific visualizations on publications of IEEE Vis, ACM ASSETS, and ACM CHI. 
+
+In the second phase of the study, the authors interviewed 21 blind people and 1 person with low vision. Each participant saw four visualizations without alt texts and was asked to describe what they found. Later, they were given the alt texts.
+
+Based on the interview, the authors found that blind people tend to visualize in their head when they interact with visualizations. Therefore, providing necessary information, such as chart type, color, axes, etc, can relieve their cognitive burden when constructing a mental image of the visualization. 
+
+The authors then provided guidelines for alt text generation based on their interview results. 
+
+{{<block class="info">}}
+I am wondering how blind people interact with interactive visualizations.
+{{<end>}}
+
+## 2021-12-15
+
+Jung, C., Mehta, S., Kulkarni, A., Zhao, Y., & Kim, Y. S. (2021). [Communicating Visualizations without Visuals: Investigation of Visualization Alternative Text for People with Visual Impairments](https://pages.cs.wisc.edu/~yeaseulkim/assets/papers/2021_alt_text_vis.pdf). *IEEE Transactions on Visualization and Computer Graphics*.
+
+PP. 1-7
+
+## 2021-12-14
+
+1. Finished [Yang (2021)](https://link.springer.com/article/10.1007/s00146-020-01141-5)
+
+2. Pennisi, E. (2021). [Getting the big picture of biodiversity](https://www.science.org/content/article/satellites-offer-new-ways-study-ecosystems-maybe-even-save-them). *Science*
+
+This news piece talks about remote sensing. Satellites, planes, drones, etc, can capture sunlight reflected off tree leaves. These data can be used to measure five of the six essential biodiversity variables (EBVs): species by color, tree height, diversity maps, land cover, and usage. Remote sensing has also been used to monitor animals, for example, birds and penguins. 
+
+When combined with ground measurements, remote sensing can be more powerful and accurate. For example, a team from Yale University is building computer models based on both remote sensing data and ground measurements, for example, climate and vegetation. These models can be used to predict the location where a given animal species can be found. 
+
+## 2021-12-13
+
+Yang, G. (2021). [Online lockdown diaries as endurance art](https://link.springer.com/article/10.1007/s00146-020-01141-5). *Ai & Society*, 1-10.
+
+- Online lockdown diaries need endurance
+- Wuhan: unique opportunity to record what was going on
+- Three types of endurance: (1) living with the unknown, (2) self-doubt, and (3) ephemeral cyberspace, and censorship
+
+PP. 1-7
+
+## 2021-12-12
+
+Isenberg, P., Heimerl, F., Koch, S., Isenberg, T., Xu, P., Stolper, C. D., ... & Stasko, J. (2016). vispubdata. org: A metadata collection about IEEE visualization (VIS) publications. *IEEE transactions on visualization and computer graphics, 23*(9), 2199-2206.
+
+The authors collected and cleaned publication data of IEEE Vis papers. They detailed the data collection and cleaning process. The major difficulty is name disambiguation since one author name can have multiple variants, and might also change due to marriage. The authors found that the official IEEE Xplore library missed some information. 
+
+The dataset is available at vispubdata.org. The authors also made three visualizations based on this dataset. The visualizations are available at https://www.cc.gatech.edu/gvu/ii/citevis/VIS25/.
+
 
 {{<block class="info">}}
 I feel so bad about "binge reading" today. I'm adjusting my time to do APAD. 
