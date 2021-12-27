@@ -15,6 +15,72 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2021-12-27
+
+1. Finished Viswanath et al. (2009)
+
+I skimmed through this paper. 
+
+This paper examines the evolution of *activity network* on Facebook. The sample came from FaceBook users from New Orleans. The researchers find that individual links in activity networks changed rapidly over time. The structure of the network, at least in terms of (1) average user degree, (2) clustering coefficient, and (3) average path length, remain stable. 
+
+2. Alkuraya, F. (2021). [A genetic revolution in rare-disease medicine](https://media.nature.com/original/magazine-assets/d41586-021-00294-7/d41586-021-00294-7.pdf) *Nature News*
+
+I skimmed through it. 
+
+The author argues that genomics has been improving people's lives. 
+
+{{<block class="warning">}}
+I have finished all articles of the type of "Nature News' '. In the beginning, I thought reading those kinds of papers will give me quicker and easier information about various fields. After all, I can read other people's recap of a major paper published on *Nature*. However, after reading more than 30 papers of these, I feel this is not a good idea. Reading the original paper is better. 
+{{<end>}}
+
+## 2021-12-26
+
+1. Finished [Wickham (2014)](https://www.jstatsoft.org/article/view/v059i10)
+
+Tidy data: "each variable is a column, each observation is a row, and each type of observational unit is a table"
+
+2. Viswanath, B., Mislove, A., Cha, M., & Gummadi, K. P. (2009, August). [On the evolution of user interaction in facebook](http://kees.famkraakman.nl/p37-viswanath.pdf). In *Proceedings of the 2nd ACM workshop on Online social networks* (pp. 37-42).
+
+PP. 1-3
+
+## 2021-12-25
+
+1. Finished [Buckee et al. (2021)](https://www.nature.com/articles/s41586-021-03694-x)
+
+This paper is too abstract. I didn't understand what it was saying. Below are some points I got:
+  1. Mobile phone data did not provide much disaggregated information. For example, it does not disaggregate gender and occupation. If we consider gender and occupation, the mobility pattern might be very different from that generated from the aggregated data. 
+  2. Instead of having one large model for all disease outbreaks, it is better to have different models for different outbreaks in different contexts.
+
+2. Wickham, H. (2014). [Tidy data](https://www.jstatsoft.org/article/view/v059i10). *Journal of statistical software, 59*(1), 1-23.
+
+PP. 1-8
+
+## 2021-12-24
+
+1. Finished [Wickham (2011)](https://www.jstatsoft.org/article/view/v040i01)
+
+I skimmed through it. The paper is too technical for me. 
+
+2. Continued with [Buckee et al. (2021)](https://www.nature.com/articles/s41586-021-03694-x)
+
+PP. 2-6
+
+## 2021-12-23
+
+1. Finished [Aref et al. (2019)](https://arxiv.org/pdf/1907.13414.pdf)
+
+The authors analyzed the mobility pattern of authors who had main affiliation in at least three countries. The data, which contains 62 million publications, is from Web of Science. More than 90% of authors in these publications did not move internationally. The final dataset is 1.7 million authors who moved globally (as defined above).
+
+These are the main results:
+  1. The USA and China are the two hubs for highly mobile scholars, followed by England and Germany.
+  2. China is the top 1 destination for super-movers.
+  3. The USA is the top 1 destination for early-career super-movers, whereas China is the top 1 destination for intermediate and senior super-movers.
+  4. Although China is one the two hubs, it is not an important (ranked only 18th globally) node in the paths of all super-movers. That is to say, China is not a "connector".
+
+2. Wickham, H. (2011). [The split-apply-combine strategy for data analysis](https://www.jstatsoft.org/article/view/v040i01). *Journal of statistical software, 40*(1), 1-29.
+
+PP. 1-5
+
 ## 2021-12-22
 
 1. Jaidka, K., Zhou, A., & Lelkes, Y. (2019). [Brevity is the soul of Twitter: The constraint affordance and political discussion](https://academic.oup.com/joc/article/69/4/345/5547032). *Journal of Communication, 69*(4), 345-372.
