@@ -1,5 +1,5 @@
 ---
-title: "2021 12 30 My Sgs Story"
+title: "My Story of Attending the St.Gallen Symposium"
 date: 2021-12-30T16:28:20-06:00
 author: "Hongtao Hao"
 slug: sg-symposium-story
@@ -9,7 +9,7 @@ toc: false
 {{<block class="info">}}
 The following is my story of attending the 47th St.Gallen Symposium. I wrote this story back in 2018. 
 
-I wrote [my memories of attending the Symposium in Chinese](cn/2020/01/17/sgs/) as well, which is more thorough. 
+I wrote [my memories of attending the Symposium in Chinese](/cn/2020/01/17/sgs/) as well, which is more thorough. 
 {{<end>}}
 
 I attended the latest Symposium and it is having an unbelievable impact on my life. I could not imagine my life without having been influenced by the activity. I am now applying for a PhD and the aspiration for the area I want to do research on comes from my essay for the Essay Competition. Preparing for the Competition made me convinced of what I am passionate about.
