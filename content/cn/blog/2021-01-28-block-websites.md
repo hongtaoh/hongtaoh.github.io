@@ -21,7 +21,7 @@ toc: false
 127.0.0.1 www.baidu.com
 ```
 
-   需要注意的是，不需要 `https://`
+   需要注意的是，不需要 `https://`。另外，如果你要屏蔽的网站，没有 `www`，比如我的网站：`https://hongtaoh.com`，那么就是：`127.0.0.1 hongtaoh.com`，不用 `www`。
 
 4. 按 `Ctrl` + `O`，然后回车
 5. 按 `Ctrl` + `X` 退出 nano 编辑器，回到终端

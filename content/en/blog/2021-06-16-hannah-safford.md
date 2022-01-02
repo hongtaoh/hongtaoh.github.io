@@ -6,7 +6,7 @@ slug: hannah-safford
 draft: false
 toc: false
 ---
-{{<figure src="https://www.symposium.org/sites/default/files/styles/round/public/2019-06/SYMP-49-Magazine-Web-Article-9tW-Safford.jpg?itok=OuYhRMo3" caption="Hannah Safford in St.Gallen, May 2019" width="500">}}
+{{<figure src="https://symposium.org/wp-content/uploads/2021/11/SYMP-49-Magazine-Web-Article-9tW-Safford.jpg" caption="Hannah Safford in St.Gallen, May 2019" width="500">}}
 
 Partly due to climate change, water resources are becoming increasingly scarce globally. To combat this pressing issue, relying on existing water supplies is not enough. At some point, we have to find ways to reuse dirty water.  
 
