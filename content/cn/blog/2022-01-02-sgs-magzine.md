@@ -91,7 +91,7 @@ Luis Schuepbach 是当年杂志的负责人 (Magazine Project Manager)，他 201
 
 第二天，我作为记者，跟着当年的 Leaders of Tomorrow 一起去旅游。先去看了 IWC，一个名表公司的工厂，然后在 Schaffhausen 城里逛。
 
-{{<figure src="/media/cnblog/sgs/mgz/map.JPG" caption="Schafhausen 地图">}}
+{{<figure src="/media/cnblog/sgs/mgz/map.JPG" caption="Schaffhausen 地图">}}
 
 {{<figure src="/media/cnblog/sgs/mgz/iwc-lunch.JPG" caption="大家一起在 IWC 吃午饭">}}
 

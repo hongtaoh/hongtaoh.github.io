@@ -10,11 +10,107 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
-2021: [2021-11](/en/apad/#2021-11), [2021-10](/en/apad/#2021-10), [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
+2022: 
+
+2021: [2021-12](/en/apad/#2021-12), [2021-11](/en/apad/#2021-11), [2021-10](/en/apad/#2021-10), [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
 
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2022-01-04
+
+1. Gross, K., & Bergstrom, C. T. (2021). [Why ex post peer review encourages high-risk research while ex ante review discourages it](https://www.pnas.org/content/118/51/e2111615118). *Proceedings of the National Academy of Sciences, 118*(51).
+
+I skimmed through this paper. 
+
+The authors used math models and simulations to study whether proposal-based (ex ante) peer review and outcome-based (ex post) peer review lead to different questions that scientists decide to study. The authors find that ex ante peer review makes scientists less likely to pursue risky questions whereas ex post peer review encourages risky questions. 
+
+To promote open science, there is a movement in the scientific community to let researchers submit proposals to journals before they start their study. Journals decide whether to accept it based on the proposals, not the results. This practice encourages open science and deters p-hacking. On the other hand, as this paper argues, it might also make researchers less likely to pursue risky projects. 
+
+{{<block class="info">}}
+I am wondering whether we can study the differences between the two modes of peer review through experiments. 
+{{<end>}}
+
+## 2022-01-03
+
+Scheffer, M., van de Leemput, I., Weinans, E., & Bollen, J. (2021). [The rise and fall of rationality in language](https://www.pnas.org/content/118/51/e2107848118). *Proceedings of the National Academy of Sciences, 118*(51).
+
+The authors analyzed word frequencies in Google nGram data covering books from 1850 to 2019. They find that relative to sentiment words, frequency of rationality-related words increased from 1850 to the end of 20th century. Then frequency of rationality-related words decreased relative to sentiment words. This pattern is also observed in the New York Times corpra. Since 2004, Google search query results show similar patterns. 
+
+## 2022-01-02 (Completed on 2022-01-03)
+
+1. Shaffer, L. (2021). [Inner Workings: Using vaccines to harness the immune system and fight drugs of abuse](https://www.pnas.org/content/118/52/e2121094118). *Proceedings of the National Academy of Sciences, 118*(52).
+
+Researchers are developing vaccines that can target molecules of drugs of abuse before they reach the brain. However, there are difficulties. For example, people have various antibody generation patterns, and vaccines that work for one drug might fail to work for another. 
+
+2. [Menstrual irregularity as a biological limit to early pregnancy awareness](https://www.pnas.org/content/119/1/e2113762118)
+
+Menstrual irregularity makes detection of pregnancy harder. Using data from a commercial app where people can record menstrual cycles, the authors of this paper find that those people have higher risks for irregular menstrual cycles: 
+   - Those who report polycystic ovary syndrome (PCOS), diabetes, obesity, etc
+   - Hispanic women
+
+In some states, laws disallow abortion after the dection of fetel "hearbeat", which usually occurs 6 weeks after the last menstruation. To be eligible for abortion, people need to detect pregnancy early one. However, the earliest symptoms of pregnancy--irregular menstruation--is missed, especially for those who have irregular menstrual cycles. 
+
+## 2022-01-01
+
+Finished [Balietti et al. (2021)](https://www.pnas.org/content/118/52/e2112552118)
+
+The authors matched people based on non-political similarities. A matched group might have similar or different political stances. In each matched group, one person read a short and argumentative essay about wealth redistribution in the US. The authors want to see how similarity in non-political interests (high, and low), political stances (high similarity, and low similarity), and the interactions between the two variables, influenced opinion updates. I feel the study is very complicated. 
+
+Major findings:
+
+   - The increase caused by reading an essay by a matched person in favor of redistribution is higher than the decrease caused by reading an essay by a matched person against redistribution. 
+
+   - Polarization for participants with mild views decreased regardless of their matched person's political stance whereas participants holding strong views became more extreme if they were in the "same stance" group. 
+
+   - Feelings of closeness are associated with greater belief updates. This effect of closeness is smaller for those with extreme opinions. 
+
+   - Interaction with people with different opinions decreased closeness; Interaction with people with similar opinions increased closeness. The decrease is greater than the increase. 
+
+# 2021-12
+
+## 2021-12-31
+
+Balietti, S., Getoor, L., Goldstein, D. G., & Watts, D. J. (2021). [Reducing opinion polarization: Effects of exposure to similar people with differing political views](https://www.pnas.org/content/118/52/e2112552118). *Proceedings of the National Academy of Sciences, 118*(52).
+
+PP. 1-7
+
+## 2021-12-30
+
+Finished [The Good Research Code Handbook](https://goodresearch.dev/index.html)
+
+- Write small functions. 
+- Stick to python coding conventions: use underscores. 
+- Document your code. 
+- Make your codes self-explanatory so they don't even need documentation. 
+
+{{<block class="info">}}
+Google's [Python style guide](https://google.github.io/styleguide/pyguide.html)
+{{<end>}}
+
+## 2021-12-29
+
+Batty, E. (2021). [The Good Research Code Handbook](https://goodresearch.dev/index.html)
+
+Read three chapters. 
+
+## 2021-12-28
+
+1. Gebru, T., Morgenstern, J., Vecchione, B., Vaughan, J. W., Wallach, H., Iii, H. D., & Crawford, K. (2021). [Datasheets for datasets](https://dl.acm.org/doi/fullHtml/10.1145/3458723). *Communications of the ACM, 64*(12), 86-92.
+
+The authors suggest that datasets for machine learning have a datasheet which contains:
+   - motivation
+   - composition
+   - collection process
+   - preprocessing/cleaning/labeling
+   - uses
+   - distribution
+   - maintenance
+
+2. Cao, Y. T., & Daumé III, H. (2019). [Toward gender-inclusive coreference resolution](https://arxiv.org/pdf/1910.13913.pdf). *arXiv preprint arXiv*:1910.13913.
+
+I skimmed through it. Could not understand it. 
+
 ## 2021-12-27
 
 1. Finished Viswanath et al. (2009)
