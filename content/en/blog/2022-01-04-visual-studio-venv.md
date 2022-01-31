@@ -1,5 +1,5 @@
 ---
-title: "How to Set Up Virtual Environment for Visual Studio Code"
+title: "How to Set Up Python Virtual Environments for Visual Studio Code"
 date: 2022-01-04T14:49:39-06:00
 author: "Hongtao Hao"
 slug: visual-studio-venv
