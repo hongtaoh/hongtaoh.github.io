@@ -73,6 +73,8 @@ toc: false
 
 - [*A field guid to grad school*](https://www.amazon.com/Field-Guide-Grad-School-Uncovering/dp/0691201099) by Jessica McCrory Calarco, [my summary in Chinese](/cn/2021/07/01/phd-field-guide/)
 
+- [The Ph.D Experience](https://cseweb.ucsd.edu//~mihir/phd.html) by [Mihir Bellare](https://cseweb.ucsd.edu/~mihir/), [my summary](en/apad/2022-01-13)
+
 ## Life
 
 - [Time Management](/en/2021/05/18/time-management/)

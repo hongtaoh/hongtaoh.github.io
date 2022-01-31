@@ -10,13 +10,282 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
-2022: 
+2022: [2022-01](/en/apad/#2022-01)
 
 2021: [2021-12](/en/apad/#2021-12), [2021-11](/en/apad/#2021-11), [2021-10](/en/apad/#2021-10), [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
 
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+# 2022-01
+
+## 2022-01-31
+
+1. Servick, K. (2022). [Window of opportunity](https://www.science.org/doi/10.1126/science.ada0099). *Science*, 375 (6578), • DOI: 10.1126/science.ada0099
+
+This report talks about the dilemma facing researchers and medical experts. It is very difficult and unethical to peek into people's brains if it is not because you have to do so for medical reasons. Therefore, when there is an opportunity to do brain surgeries, the doctors will want to do research during the same time. These are opportunities, but, at the same time, bring many ethical concerns. For example, the patients might feel urged to consent even though they are unwilling to participate in research. 
+
+2. Nelson, A, & Lubchenco, J. (2022). [Strengthening scientific integrity](https://www.science.org/doi/10.1126/science.abo0036). *Science*, 375 (6578), • DOI: 10.1126/science.abo0036
+
+This piece talks about principles of scientific integrity at the White House Office of Science and Technology Policy (OSTP).
+
+## 2022-01-30
+
+1. Dobrovidova, O. (2022). [Russia begins work on a national permafrost monitoring system](https://www.science.org/doi/10.1126/science.acz9933). *Science, 375* (6576), • DOI: 10.1126/science.acz9933
+
+permafrost thaws can lead to disasters, for example, collapses of buildings. Russia has the largest expanse of permafrost in the world, covering 2/3 of the nation. In response to this threat, Russia has started to build a national system to monitor permafrost thaws, which is expected to deliver data in 2023 or later. Some researchers say, however, that the investment in the system is far from enough to generate sufficient data to monitor the thawing. 
+
+2. Acquisti, A., Brandimarte, A., Hancock, J. (2022). [How privacy’s past may shape its future](https://www.science.org/doi/10.1126/science.abj0826). *Science, 375* (6578), • DOI: 10.1126/science.abj0826
+
+This article argues that to protect users' privacy, instead of relying on notice and consent (like what GDPR does), we should focus on developing and deploying privacy technologies. 
+
+## 2022-01-29
+
+1. [Will global vaccine shortfalls end in 2022?](https://www.science.org/doi/epdf/10.1126/science.acz9880)
+
+This news piece talks about the progress made by COVID-19 Vaccines Global Access (COVAX), an initiative that aims to vaccinate 20% of the population in every country.
+
+2. [When hyping technology is a crime](https://www.science.org/doi/10.1126/science.abo0022)
+
+This editorial talks about the verdict of Elizabeth Holmes, a former CEO of a start-up that is guilty of frauds. 
+
+## 2022-01-28 (Completed on 2022-01-29)
+
+1. Normile, D. (2022). [China falls silent about its recruitment efforts](https://www.science.org/content/article/china-aggressively-recruited-foreign-scientists-now-it-avoids-talking-about-those).
+
+This news piece talks about China's Thousand Talents Program (TTP). The US claims that this program is for China to steal innovative ideas from the US. Some scientists say, however, that this program aims to build up academic programs in Chinese universities, and the exchanges between two cultures will be mutually beneficial. 
+
+2. Asche et al. (2022). [China’s seafood imports—Not for domestic consumption?](https://www.science.org/doi/10.1126/science.abl4756)
+
+The authors show that the majority (75%) of China's seafood imports are processed and then exported, rather than domestically consumed. The authors argue that processing seafood locally is more desirable for sustainable development.
+
+## 2022-01-27 (Completed on 2022-01-28)
+
+1. [What the Lieber verdict means for the China Initiative](https://www.science.org/content/article/what-charles-lieber-verdict-says-about-u-s-china-initiative). *Science*
+
+This story frightens me. I feel very insecure studying in the US after reading the story. I feel so fragile. 
+
+2. [Why a high-profile China Initiative case collapsed](https://www.science.org/content/article/u-s-prosecutors-said-mit-scientist-hid-his-china-ties-here-s-why-their-case-collapsed). *Science*
+
+This story is about why US federal allegations into Gang Chen, an MIT engineering professor, failed. This is largely because these allegations were not based on facts. 
+
+## 2022-01-26 
+
+Finished [Willett et al. (2021)](https://ieeexplore.ieee.org/abstract/document/9552195)
+
+This paper draws inspiration for future visualization from superpower comics. For example, a future visualization system might let people see through things or count many things instantly. 
+
+## 2022-01-25
+
+1. Santos, F. P., Lelkes, Y., & Levin, S. A. (2021). [Link recommendation algorithms and dynamics of polarization in online social networks](https://www.pnas.org/content/118/50/e2102141118). *Proceedings of the National Academy of Sciences, 118*(50).
+
+I skimmed through this study. 
+
+The authors find that recommendation algorithms that recommend similar people contribute to opinion polarization. If the algorithm recommends dissimilar people, polarization might be curbed. 
+
+2. Willett, W., Aseniero, B. A., Carpendale, S., Dragicevic, P., Jansen, Y., Oehlberg, L., & Isenberg, P. (2021). [Perception! Immersion! Empowerment! Superpowers as Inspiration for Visualization](https://ieeexplore.ieee.org/abstract/document/9552195). *IEEE Transactions on Visualization and Computer Graphics, 28*(1), 22-32.
+
+PP. 1-4
+
+## 2022-01-24 (Completed on 2022-01-25)
+
+1. Kanngiesser, P., Schäfer, M., Herrmann, E., Zeidler, H., Haun, D., & Tomasello, M. (2022). [Children across societies enforce conventional norms but in culturally variable ways](https://www.pnas.org/content/119/1/e2112521118). *Proceedings of the National Academy of Sciences, 119*(1).
+
+I skimmed through this study. 
+
+This study looks at whether children would correct other children's behavior if they have different rules in mind. The results show yes: Children intervene and correct others more frequently when they have followed different rules than when they have the same rules. The magnitude and style of intervention vary across cultures. 
+
+## 2022-01-23
+
+Liu, J., Tang, T., Wang, W., Xu, B., Kong, X., & Xia, F. (2018). [A survey of scholarly data visualization](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8314667&tag=1). Ieee Access, 6, 19205-19221.
+
+This paper lists resources on how to visualize scholarly data. 
+
+## 2022-01-22
+
+Meho, L. I., & Rogers, Y. (2008). [Citation counting, citation ranking, and h‐index of human‐computer interaction researchers: a comparison of Scopus and Web of Science](https://asistdl.onlinelibrary.wiley.com/doi/full/10.1002/asi.20874). *Journal of the American Society for Information Science and Technology, 59*(11), 1711-1726.
+
+The authors compared Web of Science with Scopus as a source of citation analysis for the field of HCI. The results show that Scopus has a wider coverage than WoS because the former indexes many conference proceedings that were not part of WoS. The authors conclude that it is inappropriate to use WoS as the sole source for citation analysis for HCI researchers. 
+
+{{<block class="info">}}
+This study is very old: it was published 14 years ago. I am not sure whether the results still hold water today. 
+{{<end>}}
+
+## 2022-01-21
+
+Healy, K., & Schussman, A. (2003). [The ecology of open-source software development](https://immagic.com/eLibrary/ARCHIVES/GENERAL/UARIZONA/U030129H.pdf). Technical report, University of Arizona, USA.
+
+The authors found that the popularity of open-source software follows a power law such that a tiny number of software received most of the attention (for example, web page visits and downloads). 
+
+The authors also found that open source software development is mostly a single person's performance: the median number of contributors to open source software is 1. 
+
+In the Discussion section, the authors hypothesized that the structure of open source software development is very centralized; that is to say, a key person plays a crucial part. 
+
+## 2022-01-20
+
+Healy, K. (2017). [Fuck nuance](https://journals.sagepub.com/doi/full/10.1177/0735275117709046). *Sociological Theory, 35*(2), 118-127.
+
+The author argues that it is not beneficial to have too many details in sociological theory. Theory is abstraction and abstraction means it may not apply to individual things. 
+
+## 2022-01-19
+
+Ahn, Y. Y., Bagrow, J. P., & Lehmann, S. (2010). [Link communities reveal multiscale complexity in networks](https://www.nature.com/articles/nature09182). *nature, 466*(7307), 761-764.
+
+This paper is too dense for me and I couldn't fully understand it. I got the key idea: treating communities as groups of links is better than as groups of nodes. This is because nodes may belong to different groups, which makes it difficult to infer relationships between overlapping groups from the hierarchy of nodes. Treating communities as groups of links solves this problem. 
+
+## 2022-01-18
+
+1. Finished [Chen et al. (2021)](https://ieeexplore.ieee.org/abstract/document/9337213)
+
+The authors detailed how they collected all the figures and tables in all the full papers in IEEE VIS of the past 30 years (1990-2019).
+
+2. Liu, Y., Goncalves, J., Ferreira, D., Xiao, B., Hosio, S., & Kostakos, V. (2014, April). [CHI 1994-2013: Mapping two decades of intellectual progress through co-word analysis](https://people.eng.unimelb.edu.au/vkostakos/files/papers/hfcs14.pdf). In *Proceedings of the SIGCHI conference on human factors in computing systems* (pp. 3553-3562).
+
+The authors analyzed keyword networks in CHI proceedings of 1994-2013. They found that HCI is a diverse field, and some keywords merged. They also found that HCI research dealt with new areas as new technologies emerged. 
+
+## 2022-01-17
+
+1. Lehmann, S., Jackson, A., & Lautrup, B. (2008). [A quantitative analysis of indicators of scientific performance](https://link.springer.com/content/pdf/10.1007/s11192-007-1868-8.pdf). *Scientometrics, 76*(2), 369-390.
+
+I skimmed through this paper. 
+
+The authors find that we need 50 papers to determine a scientist's performance. 
+
+2. Chen, J., Ling, M., Li, R., Isenberg, P., Isenberg, T., Sedlmair, M., ... & Wang, Q. (2021). [VIS30K: A collection of figures and tables from IEEE visualization conference publications](https://ieeexplore.ieee.org/abstract/document/9337213). *IEEE Transactions on Visualization and Computer Graphics*.
+
+PP. 1-5
+
+## 2022-01-16
+
+Choe, E. K., Lee, N. B., Lee, B., Pratt, W., & Kientz, J. A. (2014, April). [Understanding quantified-selfers' practices in collecting and exploring personal data](https://terpconnect.umd.edu/~choe/download/CHI-2014-Choe-QuantifiedSelf.pdf). In *Proceedings of the SIGCHI conference on human factors in computing systems* (pp. 1143-1152).
+
+The authors did a qualitative analysis of 52 Quantified-Selfers Meetup videos. The average length of the videos is around 15 minutes. The authors analyzed (1) what do Q-Selfers track, (2) why they track these, (3) what tool they use, (4) mistakes they made when tracking, (5) how they collect, analyze, and visualize their data, (6) what insights they obtained through self tracking, and (7) what obstacles they encountered in self tracking. Based on these, the authors proposed some suggestions for HCI researchers to help Q-Selfers. For example, to build a tool where people can see the analysis and visualization in real time.  
+
+## 2022-01-15
+
+Cha, M., Kwak, H., Rodriguez, P., Ahn, Y. Y., & Moon, S. (2009). [Analyzing the video popularity characteristics of large-scale user generated content systems](http://yongyeol.com/papers/cha-video-2009.pdf). *IEEE/ACM Transactions on networking, 17*(5), 1357-1370.
+
+This paper analyzed User Generated videos on YouTube, and Daum Videos of South Korea, and non-UGC videos on Netflix, Lovefilm, and Yahoo! Movies. The authors performed various analyses on the features of these videos. 
+
+## 2022-01-14
+
+👍 Brietzke, S., & Meyer, M. L. (2021). [Temporal self-compression: Behavioral and neural evidence that past and future selves are compressed as they move away from the present](https://www.pnas.org/content/118/49/e2101403118). *PNAS*
+
+The authors find that our past and future selves are temporally compressed in a way that our more distant selves are increasingly similar to each other compared to current and nearby selves. Put it in another way, the further our selves are away from our current self, the less discriminable they become. 
+
+The results suggest that representations of our past and future selves might be collectively stored in the same brain regions. 
+
+## 2022-01-13
+
+1. Nilizadeh, S., Groggel, A., Lista, P., Das, S., Ahn, Y. Y., Kapadia, A., & Rojas, F. (2016, March). [Twitter's glass ceiling: The effect of perceived gender on online visibility](https://ojs.aaai.org/index.php/ICWSM/article/view/14711). In *Proceedings of the International AAAI Conference on Web and Social Media* (Vol. 10, No. 1).
+
+I skimmed through this paper. 
+
+The authors examined close to 100 thousand Twitter users. They find that being perceived as a female based on the displayed first name is beneficial among users who don't have a lot of visibility. For the highest quantitle of visibility, being perceived as a female is unfavorable. 
+
+2. 👍 [The Ph.D Experience](https://cseweb.ucsd.edu//~mihir/phd.html) by [Mihir Bellare](https://cseweb.ucsd.edu/~mihir/) 
+
+>Don't look down on simplicity; good research is often simple. 
+
+>A good deal of research is spontaneous and social, arising from interactions with your peers or advisor. 
+
+Prepare well every meeting you have with your advisor! Make notes during the meeting! Document the key points after the meeting!
+
+>Successful research comes from having a good understanding, especially of the basics. 
+
+Instead of focusing on your thesis, "try to do good research and get recognition in the research community." Thesis is "only a formality for the university and less than you need."
+
+>It's never too late to change areas. If you don't like where you are now, switching to a different area or advisor can make a marked difference. Try to explore before settling down. 
+
+## 2022-01-12
+
+Moss-Racusin, C. A., Dovidio, J. F., Brescoll, V. L., Graham, M. J., & Handelsman, J. (2012). [Science faculty’s subtle gender biases favor male students](https://www.pnas.org/content/109/41/16474). *Proceedings of the national academy of sciences, 109*(41), 16474-16479.
+
+The authors find that 127 professors in the field of biology, chemistry, and physics in the United States, regardless of their own genders, after reviewing the application material to a lab manager position, rated male applicants as more competent, hireable, and worthy of more mentoring. They also gave male applicants higher salaries than female applicants. The application material is the same; the only difference is the gender of the name associated with the application. 
+
+It should be noted that professors responded that they like female applicants more. This may suggest that the biases against women in science is unintentional. Cultural stereotypes might be the reason. 
+
+## 2022-01-11
+
+1. Finished [Huszár et al. (2022)](https://www.pnas.org/content/119/1/e2025334119)
+
+I skimmed through this paper. 
+
+The authors analyzed Tweets activities of over 3,600 accounts of legislators in seven countries (US, Canada, France, Germany, Japan, Spain, and UK). The main results are:
+
+  - Twitter's recommender system favors the political right wing in all seven countries except for Germany. 
+  - The recommender system does not seem to favor extreme ideologies. 
+
+2. Bernstein, M. S., Levi, M., Magnus, D., Rajala, B. A., Satz, D., & Waeiss, C. (2021). [Ethics and society review: Ethics reflection as a precondition to research funding](https://www.pnas.org/content/118/52/e2117261118). *Proceedings of the National Academy of Sciences, 118*(52).
+
+I skimmed through this paper. 
+
+This paper presents the result of a 1-year implementation of Ethics and society review (ESR) at Stanford University. The idea is that IRB discourages considering a research project's long-term impact on human society; they only focus on its impact on human subjects (sometimes animals as well). ESR fills this gap. ESR requires researchers to report their research projects' possible risks for the human society (and mitigation methods) to get the funding. After one year's implementation, the result is that all researchers are willing to continue with it despite the added commitment. 
+
+## 2022-01-10
+
+1. Cui, J., Wang, C., Zhang, J., & Zheng, Y. (2021). [The effectiveness of China’s regional carbon market pilots in reducing firm emissions](https://www.pnas.org/content/118/52/e2109912118). *Proceedings of the National Academy of Sciences, 118*(52).
+
+I skimmed through this paper. 
+
+Using data from firms, the authors analyzed the effect of China's emission trading system (ETS) which aims to decrease China's greenhouse gas emissions. The authors conclude that:
+    - Carbon price plays a key role. If China can increase its carbon price, more emission reduction can be achieved. 
+    - If China wants to achieve its goal of 2030 (greenhouse gas emissions will peak in that year and then decline), it needs to implement a mass-based rule, which exerts an emission cap, rather than a rate-based rule. 
+
+2. Huszár, F., Ktena, S. I., O’Brien, C., Belli, L., Schlaikjer, A., & Hardt, M. (2022). [Algorithmic amplification of politics on Twitter](https://www.pnas.org/content/119/1/e2025334119). *Proceedings of the National Academy of Sciences, 119*(1).
+
+PP. 1-2
+
+## 2022-01-09
+
+Groh, M., Epstein, Z., Firestone, C., & Picard, R. (2022). [Deepfake detection by human crowds, machines, and machine-informed crowds](https://www.pnas.org/content/119/1/e2110013119). *Proceedings of the National Academy of Sciences, 119*(1).
+
+I skimmed through this paper. 
+
+The authors compared the accuracy of detecting deepfake videos by humans and by the leading computer vision model. The results show that humans are as accurate as and sometimes more accurate than machines. Humans are better at standard quality videos whereas machines are better at blurry or very dark videos. When the video contains two actors, humans perform better. 
+
+The authors did not find that humans' accuracy improved as they watched more videos. Also, anger decreased humans' accuracy at detecting real videos. 
+
+## 2022-01-08
+
+Finished [Miao & Chan. (2021)](https://academic.oup.com/jcmc/article/26/1/38/6032887)
+
+Using domestication theory and based on interviews with three Chinese gay men from different classes and generations, this paper analyzed how these three people use Blued in their life. 
+
+## 2022-01-07
+
+1. Holland, K. J., Hutchison, E. Q., Ahrens, C. E., & Torres, M. G. (2021). [Reporting is not supporting: Why mandatory supporting, not mandatory reporting, must guide university sexual misconduct policies](https://www.pnas.org/content/118/52/e2116515118). *Proceedings of the National Academy of Sciences, 118*(52).
+
+This article argues that mandatory reporting of sexual misconduct in universities should be replaced with mandatory supporting. Mandatory reporting is bad because it leaks survivors' private information without their consent, and may also make teaching and research on sexual misconduct difficult, if not impossible. 
+
+2. Miao, W., & Chan, L. S. (2021). [Domesticating Gay Apps: An Intersectional Analysis of the Use of Blued Among Chinese Gay Men](https://academic.oup.com/jcmc/article/26/1/38/6032887). *Journal of Computer-Mediated Communication, 26*(1), 38-53.
+
+PP. 1-8
+
+## 2022-01-06
+
+Finished [Block et al. (2021)](https://www.pnas.org/content/118/52/e2110347118)
+
+This study looks at the possibility of the public and political elites to respond to emails sent by White names and Black names. This study employs a within subject design; every person receives two emails, one from a White name and the other from a Black name. The results show that both the public and elected officials discriminate against Black senders. 
+
+Among the public, 1.6% responded to the White sender. The figure for Black sender is 1.4%. Among the elected officials, 4.2% responded to the White sender, whereas 3.9% responded to the Black sender. 
+
+Elected officials discriminate against Black people less than the public, but the difference is not statistically significant. 
+
+Fig.2 shows the breakdown of ethnicity of email recipients. It shows that only Black people do not discriminate Black people.
+
+## 2022-01-05
+
+1. Sèbe, M., & Gourguet, S. (2022). [Opinion: To save whales, look to the sky](https://www.pnas.org/content/119/1/e2121360119). *Proceedings of the National Academy of Sciences, 119*(1).
+
+The authors suggest that the International Maritime Organization (IMO) learn from the International Civil Aircraft Organization (ICAO) in terms of avoiding collision with animals. Whale-ship collisions lead to hundreds, and possibly thousands, of whale deaths. ICAO has an extensive database of aircraft-bird collisions (detailed reports for 150,000 incidents). The authors suggest that IMO do the same. The authors also proposed several other measures, which are listed at the end of the article. 
+
+To me, it is interesting that the authors compared traffic in the sea and that in the air. They are parallel and comparable. 
+
+2. Block, R., Crabtree, C., Holbein, J. B., & Monson, J. Q. (2021). [Are Americans less likely to reply to emails from Black people relative to White people?](https://www.pnas.org/content/118/52/e2110347118). *Proceedings of the National Academy of Sciences, 118*(52).
+
+PP. 1-3
+
 ## 2022-01-04
 
 1. Gross, K., & Bergstrom, C. T. (2021). [Why ex post peer review encourages high-risk research while ex ante review discourages it](https://www.pnas.org/content/118/51/e2111615118). *Proceedings of the National Academy of Sciences, 118*(51).

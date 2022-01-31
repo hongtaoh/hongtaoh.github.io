@@ -10,11 +10,11 @@ I was invited to an organization account on GitHub. To edit a repository, I thou
 
 Then, how to contribute? I first thoguht about **Fork**. But [Isabel Constantino](https://cns-nrt.indiana.edu/students/affiliates/2020/Isabel-Constantino.html) and [Professor YY](http://yongyeol.com/) recommended creating a new branch, making changes, and submitting a pull request. 
 
-I then wondered: what's the difference between **forking** and **branch**? I found the same question on [this thread](https://stackoverflow.com/questions/5009600/difference-between-fork-and-branch-on-github). Basically, when you fork a repo, you are thinking of building on it for your own purpose and might not merge it with the original repo. However, when you create a new branch, your intention was to directly contribute to a project. That said, you can of course fork a project with the intention to contribute to it. I've talked about how to make a pull request on [this post](/en/2020/10/05/github-pull-request/). Now, I want to talk about how to create a new branch and make a pull request. 
+I then wondered: what's the difference between **forking** and **branch**? I found the same question on [this thread](https://stackoverflow.com/questions/5009600/difference-between-fork-and-branch-on-github). Basically, when you fork a repo, you are thinking of building on it for your own purpose and might not merge it with the original repo. However, when you create a new branch, your intention is to directly contribute to a project. That said, you can of course fork a project with the intention to contribute to it. I've talked about how to make a pull request on [this post](/en/2020/10/05/github-pull-request/). Now, I want to talk about how to create a new branch and make a pull request. 
 
 I found the solution [here](https://learntocodetogether.com/create-your-first-pull-request/). I'll summarize the steps here myself:
 
-1. First, copy the url of the project you want to contribute to. , On your computer, change directory. For example, `cd Desktop`. Then, clone this repository in the current directory: `git clone yourRepoURL`
+1. First, copy the url of the project you want to contribute to. On your computer, change directory. For example, `cd Desktop`. Then, clone this repository in the current directory: `git clone yourRepoURL`
 
 2. Change directory to this repository
 
