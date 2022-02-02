@@ -113,7 +113,7 @@ Windows:
 clip < ~/.ssh/gh-pages
 ```
 
-Go to your `username.github.io` repository on GitHub -> Settings -> Secrets -> New repository secret.
+Go to your `username.github.io` repository on GitHub -> Settings -> Secrets -> Actions -> New repository secret.
 
 Press Cmd+V (Windows: Control+V) in the "Value" section. In the "Name" section, input `ACTIONS_DEPLOY_KEY`. Press "Add secret".
 
@@ -123,7 +123,7 @@ Click [here](https://github.com/settings/tokens) to generate a personal access t
 
 Press "Generate new token". Change the default expiration (30 days) if you would like. In "Select scopes", check "workflow". Then leave a note to yourself in the "Note" section. Scroll down and press "Generate token". Then copy the token you see.
 
-Go back to your `username.github.io` repository on GitHub -> Settings -> Secrets -> New repository secret.
+Go back to your `username.github.io` repository on GitHub -> Settings -> Secrets -> Actions -> New repository secret.
 
 Press Cmd+V (Windows: Control+V) in the "Value" section. In the "Name" section, input `PERSONAL_TOKEN`. Press "Add secret".
 
