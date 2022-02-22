@@ -37,7 +37,7 @@ toc: false
 
 {{<figure src="/media/cnblog/sgs/mgz/2019-team.JPG" caption="如愿以偿">}}
 
-Andrew Curry 是杂志的主编辑。他后来跟我说，我在我的 Motivation Letter 提到我是一个中国人，可以提供一个不同的视角，他说这句话非常触动他。
+[Andrew Curry](https://www.andrewcurry.com/) 是杂志的主编辑。他后来跟我说，我在我的 Motivation Letter 提到我是一个中国人，可以提供一个不同的视角，他说这句话非常触动他。
 
 {{<figure src="/media/cnblog/sgs/mgz/history.jpg" caption="2020 年杂志负责人 Aisha Thuering 坐在往届杂志中">}}
 
