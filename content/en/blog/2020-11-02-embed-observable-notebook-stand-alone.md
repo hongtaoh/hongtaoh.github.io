@@ -6,6 +6,11 @@ slug: exporting-observable-notebook
 draft: false
 toc: true
 ---
+
+{{<block class="warning">}}
+If you have multiple Observable notebooks in one website, it is better to make all variables unique. 
+{{<end>}}
+
 After designing data visualizations on [ObserbableHQ](https://observablehq.com), you might want to present your them in a stand-alone webpage. This post is to teach you how to do it. 
 
 If you find my post not helpful, you can refer to [Advanced Embedding and Downloading](https://observablehq.com/@observablehq/downloading-and-embedding-notebooks). 

@@ -14,6 +14,10 @@ aliases:
 如果你在这篇帖子中看到了错误，请点击本文目录上的按钮，复克 (fork) 我的个人网站之后就可以提交你的修改建议了。十分感谢！
 {{<end>}}
 
+{{<block class="info">}}
+你也可以参考这篇：[手把手带你搭建个人博客(基础版)](https://cosx.org/2022/03/build-blog-step-by-step/)，作者庄亮亮。
+{{<end>}}
+
 本教程旨在手把手帮你搭建属于你的个人网站。建站工具是[Hugo](https://gohugo.io/) + [GitHub](https://github.com/)。两个都是免费的。完成后，你的个人网站网址是：`https://github用户名.github.io`。
 
 ## 前期准备

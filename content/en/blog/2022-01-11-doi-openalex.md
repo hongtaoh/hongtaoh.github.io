@@ -29,7 +29,6 @@ According to the [The API Dcoumentataion](https://docs.openalex.org/api/get-sing
    - https://api.openalex.org/works/http://dx.doi.org/10.1109/TVCG.2020.3030380
    - https://api.openalex.org/works/https://doi.org/10.1109/TVCG.2020.3030380
 
-
 ## Search by title
 
 According to [official documentation](https://docs.openalex.org/api/get-lists-of-entities#search), we can search by title this way:
@@ -43,7 +42,7 @@ The above url will show all the papers whose title contain the word of cubist.
 If you have the exact title, just put it at the end of the url, for example,
 
 ```
-https://api.openalex.org/works?filter=title.search:Efficient%20simplification%20of%20point-sampled%20surfaces
+https://api.openalex.org/works?filter=title.search:Efficient simplification of point-sampled surfaces
 ```
 
 If the title your are quering contains '&', ':', '?, and/or ',', rememeber to replace them with `''`. This is because both '&' and ':' are quering parameters and will rusult in errors when quering. 
@@ -55,6 +54,32 @@ import re
 title = 'this: is a bad title & not recommended for you, right?'
 title_converted = re.sub(r'\:|\?|\&|\,', '', title)
 ```
+
+## Search for host venues
+
+Reference:
+  1. https://docs.openalex.org/api/get-lists-of-entities#venues-filters
+  2. https://docs.openalex.org/about-the-data/venue
+
+### By display name
+
+```
+https://api.openalex.org/venues?filter=display_name.search:communication and sport
+```
+
+### By ISSN
+
+```
+https://api.openalex.org/venues?filter=issn:2374-3670
+```
+
+### By ISSN_L
+
+```
+https://api.openalex.org/venues/issn_l:2167-8359
+```
+
+Note that if you use `?filter=`, then the results are usually more than one. 
 
 ## Pagination 
 
