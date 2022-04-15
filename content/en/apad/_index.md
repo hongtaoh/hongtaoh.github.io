@@ -33,7 +33,7 @@ This piece talks about principles of scientific integrity at the White House Off
 
 1. Dobrovidova, O. (2022). [Russia begins work on a national permafrost monitoring system](https://www.science.org/doi/10.1126/science.acz9933). *Science, 375* (6576), • DOI: 10.1126/science.acz9933
 
-permafrost thaws can lead to disasters, for example, collapses of buildings. Russia has the largest expanse of permafrost in the world, covering 2/3 of the nation. In response to this threat, Russia has started to build a national system to monitor permafrost thaws, which is expected to deliver data in 2023 or later. Some researchers say, however, that the investment in the system is far from enough to generate sufficient data to monitor the thawing. 
+Permafrost thaws can lead to disasters, for example, collapses of buildings. Russia has the largest expanse of permafrost in the world, covering 2/3 of the nation. In response to this threat, Russia has started to build a national system to monitor permafrost thaws, which is expected to deliver data in 2023 or later. Some researchers say, however, that the investment in the system is far from enough to generate sufficient data to monitor the thawing. 
 
 2. Acquisti, A., Brandimarte, A., Hancock, J. (2022). [How privacy’s past may shape its future](https://www.science.org/doi/10.1126/science.abj0826). *Science, 375* (6578), • DOI: 10.1126/science.abj0826
 
@@ -189,7 +189,7 @@ The authors examined close to 100 thousand Twitter users. They find that being p
 
 >A good deal of research is spontaneous and social, arising from interactions with your peers or advisor. 
 
-Prepare well every meeting you have with your advisor! Make notes during the meeting! Document the key points after the meeting!
+Prepare well for every meeting you have with your advisor! Make notes during the meeting! Document the key points after the meeting!
 
 >Successful research comes from having a good understanding, especially of the basics. 
 
