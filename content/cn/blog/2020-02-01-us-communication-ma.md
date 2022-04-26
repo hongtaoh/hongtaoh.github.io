@@ -58,9 +58,9 @@ aliases:
 
 - Fellowship。Fellowship 就比较复杂了。有的 Fellowship 和 Scholarship 一样，属于一次性的资助。但有的 Fellowship 是全奖 Fellowship，给你学费全免，每个月给你足够的生活补助。具体看你拿到的奖学金的介绍。
 
-- Assistantships。这种才是一般意义上的全奖。具体分为 Teaching assistanships 和 Research assistanships。Teaching assistantships 又可以分为 teaching assistant 和 instructor，前者是助教，后者是你要自己开一门课。具体的名称每个学校可能不一样，比如我在的印第安纳大学，比 TA 叫做 Graduate assistanships，换汤不换药而已。
+- Assistantships。这种才是一般意义上的全奖。具体分为 Teaching assistanships 和 Research assistanships。Teaching assistantships 又可以分为 teaching assistant 和 instructor，前者是助教，后者是你要自己开一门课。具体的名称每个学校可能不一样，比如我在的印第安纳大学，TA 叫做 Graduate assistanships，换汤不换药而已。
   
-  Assistanships 会给你学费全免 (full tuition waiver)，每个月给你生活费 (monthly stipen)，大部分会给你买医疗保险 (health insurance)。工资数额每个学校不一样，但足够你的生活开销。一般每年 1 万到 2 万美元。一般是规定每周工作 20 小时，但实际上很可能不用这么多，我在印第安纳媒体学院的前三个学期，每周最多也就 7-8 个小时，这个要看学校，每个学校情况不一样。
+  Assistanships 会给你学费全免 (full tuition waiver)，每个月给你生活费 (monthly stipend)，大部分会给你买医疗保险 (health insurance)。工资数额每个学校不一样，但足够你的生活开销。一般每年 1 万到 2 万美元。一般是规定每周工作 20 小时，但实际上很可能不用这么多，我在印第安纳媒体学院的前三个学期，每周最多也就 7-8 个小时，这个要看学校，每个学校情况不一样。
 
   大部分学校是让你做助教，非常少的学校有助研 (RA) 的机会。
 
