@@ -40,3 +40,7 @@ Run it, and you can see that the changes are highlighted with yellow.
 It looks all good, until you open the document again, which shows all the tracked changes on the right panel. To delete those, under "Reivew" -> "Accept", choose "Accept All Changes".
 
 Next time, after making changes, you only need to "Macro -> Macros", and you'll see "Highlight_insertions2". Simply click "Run". 
+
+{{<block class="note">}}
+I found another solution [here](https://xp-song.github.io/posts/trackchange-word/).
+{{<end>}}

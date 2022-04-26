@@ -18,4 +18,4 @@ and
 
 `$$\frac{b}{a} = \frac{\frac{1}{10}}{10} = \frac{1}{100} \tag{2}\label{eq2}$$` 
 
-If you do not use log scale, then the difference between 1 and `$\frac{a}{b}$` is much larger than the difference between 1 and `$\frac{b}{a}$`. However, intuitively, the two difference should be the same, right? Using log scale solves this issue. 
+If you do not use log scale, then the difference between 1 and `$\frac{a}{b}$` is much larger than the difference between 1 and `$\frac{b}{a}$`. However, intuitively, the two differences should be the same, right? Using log scale solves this issue. 
