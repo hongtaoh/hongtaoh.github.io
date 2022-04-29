@@ -1,5 +1,5 @@
 ---
-title: "2022 04 28 Github Workflow Action Token Update"
+title: "How to Update Personal Token for GitHub Action"
 date: 2022-04-28T20:36:35-05:00
 author: "Hongtao Hao"
 slug: update-github-action-token
