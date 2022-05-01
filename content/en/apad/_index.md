@@ -10,13 +10,866 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
-2022: [2022-01](/en/apad/#2022-01)
+2022: [2022-01](/en/apad/#2022-01), [2022-02](/en/apad/#2022-02), [2022-03](/en/apad/#2022-03)
 
 2021: [2021-12](/en/apad/#2021-12), [2021-11](/en/apad/#2021-11), [2021-10](/en/apad/#2021-10), [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
 
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2022-04-26 (Completed on 2022-05-01)
+
+[Facebook Managing unconscious bias](https://managingbias.fb.com/)
+
+45:00-end
+
+- Companies that have more diversity have better performance
+
+- We all have biases. To acknowledge it is important because if we do not acknowledge it, we cannot do anything about it. 
+
+- We form a first impression on people we meet. If we have a good impression on them, then it's easy for us to like them. 
+
+- Small changes can make a big difference. 
+
+- Not being part of the problem doesn't mean you are actively part of the solution. 
+
+- Oftentimes we are unaware of the biases we have in our mind. 
+
+### Four types of biases we can change
+
+- Performance bias. Male's performance is often overestimated. Race also plays a role here. White people might get hired or promoted because of their potential but people of color will get hired or promoted based on the work they have achieved and ability demonstrated. 
+
+- Performance attribution. If we see a man who is successful, we might think it is because of his brilliance but if a woman is successful, we might attribute her success to luck and hard work. 
+
+- Competence vs. likeability tradeoff: if a woman is very competent, then we might think she is selfish and not likable but men do not have this tradeoff.      
+   - We think that women should do the office housework. To counteract it, we should assign people to do the housework rather than letting people volunteer (because women will be more likely to volunteer).
+
+- Maternal bias: we believe strongly that mothers cannot be good employees.
+   - Don't make assumptions that women cannot be good employees when they become mothers. Instead, have direct conversations with them and plan ahead. 
+
+### What we can do to counteract
+
+- For a company, it should set decision-making criteria in the beginning. 
+
+- More:
+
+{{<figure src="/media/apad/counteract-bias.png" caption="How to counteract biases (by Facebook)">}}
+
+## 2022-04-25 (Completed on 2022-05-01)
+
+[Facebook Managing unconscious bias](https://managingbias.fb.com/)
+
+23:00-45:00
+
+## 2022-04-24 (Completed on 2022-05-01)
+
+[Facebook Managing unconscious bias](https://managingbias.fb.com/)
+
+0:00-23:00
+
+## 2022-04-23 (Completed on 2022-04-30)
+
+Wu, A., Tong, W., Dwyer, T., Lee, B., Isenberg, P., & Qu, H. (2020). Mobilevisfixer: Tailoring web visualizations for mobile phones leveraging an explainable reinforcement learning framework. *IEEE Transactions on Visualization and Computer Graphics, 27*(2), 464-474.
+
+This is a very cool project. The authors used reinforcement learning to convert visualizations in a way that they are adapted to mobile screens. 
+
+## 2022-04-22 (Completed on 2022-04-29)
+
+1. A draft shared by a friend. 
+
+This article is about a new design/system that displays abstracts of a large amount of scientific papers. The system aids finding similar papers. 
+
+2. Guan, L., Liang, H., & Zhu, J. J. (2022). [Predicting reposting latency of news content in social media: A focus on issue attention, temporal usage pattern, and information redundancy](https://www.sciencedirect.com/science/article/pii/S0747563221004039). *Computers in Human Behavior, 127*, 107080.
+
+This is an interesting study. The authors looked at what factors influenced reposting speed on Twitter. The authors find that reposting on Twitter is highly skewed, with half of the posts examined reposted in half an hour and the maximum gap between first appearance and reposting being over 70k hours. Second, the author found that Twitter users who cared about multiple issues are slower in reposting Tweets. 
+
+## 2022-04-21 (Completed on 2022-04-28)
+
+1. Gleicher, M., Yu, X., & Chen, Y. (2022). T[rinary tools for continuously valued binary classifiers](https://arxiv.org/pdf/2204.08136.pdf). *Visual Informatics*.
+
+This study looks at how to visually communicate the continuous values of binary classification. 
+
+2. A draft shared by a friend that is under review. 
+
+This is indeed innovative work!
+
+This study looks at what questions are common tasks when blind people try to understand data charts. The authors then come up with a taxonomy for a "chart QA system" where blind people ask the machines about what they want to know from the chart. 
+
+
+## 2022-04-20 (Completed on 2022-04-27)
+
+Philip Guo's newsletter of April 2022, on his 10-year anniversary of PhD dissertation defense. 
+
+   - PhD oral defense is not really a serious thing. The fact that the committee agreed that you can do the defense means they won't fail you. That said, you probably will still be nervous until it is officially over. 
+
+   - To graduate in 5 years, it is better to have 2-3 papers published in legitimate venues with you being the first author and your advisor as the last author. 
+
+   - Do more than simply stapling your N papers to be your PhD dissertation. The reason is that you have been working in your subfield for so many years and you have many insights that were not part of the individual papers that you have published. You can describe the big picture you have in mind in your dissertation. That will be helpful both to you and to scientists of future generations. If you don't write your insights down, you'll most likely forget all of them after you graduate. 
+
+   - Schedule your defense at least two months beforehand. It's so difficult to find a common slot that everyone has time considering that professors are super busy. 
+
+## 2022-04-19 (Completed on 2022-04-26)
+
+1. Roberts, M. E., Stewart, B. M., & Tingley, D. (2019). Stm: An R package for structural topic models. Journal of Statistical Software, 91, 1-40.
+
+This article talks about how the stm package was designed and how to use it (with an example).
+
+2. Esfahani, H., Tavasoli, K., & Jabbarzadeh, A. (2019). Big data and social media: A scientometrics analysis. *International Journal of Data and Network Science, 3*(3), 145-164.
+
+This is a typical scientometric analysis. The authors analyzed publications on big data and social media. They analyzed authors, citations, and keywords co-occurrence.
+
+3. Eble, A., & Hu, F. (2022). Gendered beliefs about mathematics ability transmit across generations through children’s peers. *Nature Human Behaviour*, 1-12.
+
+This study shows that the belief that girls are weaker at math than boys transmitted across generations via children's peers. 
+
+
+## 2022-04-18 (Completed on 2022-04-25)
+
+1. Pooley, J., & Katz, E. (2008). Further notes on why American sociology abandoned mass communication research. *Journal of Communication, 58*(4), 767-786.
+
+The paper, from a historical perspective, talks about why Communication research and Sociology research in the US are separated from each other. THe reason is that Sociology researchers who were interested in media research went to Journalism school. Sociology researchers who remained in the Sociology department did not continue doing media research. 
+
+2. Zhang, R., E. Ringland, K., Paan, M., C. Mohr, D., & Reddy, M. (2021, May). Designing for Emotional Well-being: Integrating Persuasion and Customization into Mental Health Technologies. In *Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems* (pp. 1-13).
+
+This study finds that for mental health apps, customization functions that are not burdensome might be rewarding. If those functions are burdensome, then people with severe depression and/or anxiety symptoms will find them difficult to use. 
+
+## 2022-04-17 (Completed on 2022-04-24)
+
+This study finds two trends: (1) an increasing number of scientific papers are getting cited at least a few times, and (2) citations are concentrated on only top papers. https://www.pnas.org/doi/10.1073/pnas.2117488119
+
+
+## 2022-04-16 (Completed on 2022-04-23)
+
+1. [Ahead of the Tokyo Olympics, Japan ponders what it means to be Japanese](https://medium.com/@the_economist/ahead-of-the-tokyo-olympics-japan-ponders-what-it-means-to-be-japanese-fcf6c0ec98af). 
+
+In this article, the author talked about how Japanese identify themselves. They used to think that Japanese people are the chosen one. That changed when it was defeated in the Second World War and its economy stopped growing fast in the 1990s. 
+
+2. I read some other random articles that interest me on *Economists*. 
+
+## 2022-04-15 (Completed on 2022-04-22)
+
+[Why doing a PhD is often a waste of time](https://medium.economist.com/why-doing-a-phd-is-often-a-waste-of-time-349206f9addb)
+
+The article argues that doing a PhD is a waste of time. First, there are more PhDs than academia wants. The number of full-time tenure track professor openings is much smaller than the number of newly minted PhDs. Also, PhDs are paid badly. The author argues that PhD students can use their time to do more meaningful things. 
+
+I do not totally agree with the point that PhD is a waste of time. At least for me, as a PhD in Computer Science, I do not think time invested in my study is a waste of time. I see a clear relationship between my expertise and the salary I can make after I graduate. For other majors, there is some truth that time invested in PhD study is not worth it. 
+
+One point I do agree with is that which is hinted at the end of the article: PhD students are good at study and have been the best at what they have done. However, they know little about the "real world". This is very inspiring for me. I kind of understand that even if I feel inferior attending classes (because I am not the best in class), I should not be despised because the people around me are not a representative sample of the whole population. Too often, we PhD students are easily drowned in study and research and we forget about the fact that knowledge is only part of our life; not the whole of it. 
+
+## 2022-04-14 (Completed on 2022-04-20)
+
+1. Gleicher, M. (2017). Considerations for visualizing comparison. IEEE transactions on visualization and computer graphics, 24(1), 413-423.
+
+This is a highly influential work. To be honest, I didn't quite understand this article. I know the gist of it, though: what should we consider when comparing visualizations. 
+
+2. Sarikaya, A., Gleicher, M., & Szafir, D. A. (2018, June). Design factors for summary visualization in visual analytics. In Computer Graphics Forum (Vol. 37, No. 3, pp. 145-156).
+
+This is an innovative study. The author came up with a taxonomy of data summarization and examined whether this taxonomy covers (randomly selected) visualizations in the visualization field. They think that there are four major methods of data summarization: aggregation, subsampling, filtering, and projection. When choosing these four methods, a designer can consider these factors: purpose, task, and data. 
+
+The interactive system affiliated with this paper is super cool: https://graphics.cs.wisc.edu/Vis/vis_summaries/
+
+## 2022-04-13 (Completed on 2022-04-19)
+
+1. Wang, H. (2021). Generational Change in Chinese Journalism: Developing Mannheim’s Theory of Generations for Contemporary Social Conditions. Journal of Communication, 71(1), 104-128.
+
+This study analyzed changes in Chinese journalism by interviewing over 100 journalists. 
+
+2. Petr, M., Engels, T. C., Kulczycki, E., Dušková, M., Guns, R., Sieberová, M., & Sivertsen, G. (2021). Journal article publishing in the social sciences and humanities: A comparison of Web of Science coverage for five European countries. PloS one, 16(4), e0249879.
+
+This study looks at where research articles (in social science and humanities) by scholars from the Czech Republic, Slovakia, Poland, Belgium, and Norway, were published. The authors of this article find that an increasing number of those articles are published in journals indexed by the Web of Science, indicating that they are of high quality. 
+
+## 2022-04-12 (Completed on 2022-04-18)
+
+1. Huth, A. G., De Heer, W. A., Griffiths, T. L., Theunissen, F. E., & Gallant, J. L. (2016). Natural speech reveals the semantic maps that tile human cerebral cortex. *Nature, 532*(7600), 453-458.
+
+This paper is too technical for me so I do not understand the details. But I got the basic idea: the authors created a semantic atlas where it is clear which brain areas correspond to which semantic groups. That is to say, using this atlas, we know the corresponding brain areas to specific words.
+
+## 2022-04-11 (Completed on 2022-04-18)
+
+1. Chen, Y. T., Smith, A. D., Reinecke, K., & To, A. (2022). [Collecting and Reporting Race and Ethnicity Data in HCI](https://homes.cs.washington.edu/~reinecke/Publications_files/Chen_CHI2022.pdf).
+
+The authors analyzed reporting of the race and ethnicity of participants in CHI publications from 2016 to 2021. They found that reporting race and ethnicity is uncommon in CHI publications (they analyzed 3910 papers but only 340 contained race reporting). I am not sure whether they can claim like this because we do not know the baseline of papers that involve participants. For example, what if only 1/5 of all 3910 papers involve human participants? The rest 4/5 do not need to report race because there are no human participants. 
+
+2. Wang, L. L., Stanovsky, G., Weihs, L., & Etzioni, O. (2021). Gender trends in computer science authorship. *Communications of the ACM, 64*(3), 78-84.
+
+The authors analyzed authors' gender in CS publications. They found that gender parity is not predicted to be reached until 2100. I am not sure whether the results are reliable. I believe Gender API is not able to predict gender for Asian names very accurately. 
+
+3. Wang, L. L., Lo, K., Chandrasekhar, Y., Reas, R., Yang, J., Eide, D., ... & Kohlmeier, S. (2020). [Cord-19: The covid-19 open research dataset](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7251955/). ArXiv.
+
+This paper details how CORD-19 was created, and how CORD-19 has been used in research so far. 
+
+## 2022-04-10 (Completed on 2022-04-16)
+
+1. Zhao, R., & Wang, J. (2011). Visualizing the research on pervasive and ubiquitous computing. *Scientometrics, 86*(3), 593-612.
+
+The authors analyzed over 5,000 publications accessed from Web of Science on the topic of pervasive or ubiquitous computing. They then conducted a typical scientometric analysis using CiteSpace. 
+
+2. Yin, Y., Dong, Y., Wang, K., Wang, D., & Jones, B. (2021). Science as a Public Good: Public Use and Funding of Science (No. w28748). National Bureau of Economic Research.
+
+This is a very interesting study. The authors analyzed the alignment among what scientists use, what the public use, and what is funded. They found that the alignment is greater than previously thought. 
+
+3. Pop, M., & Salzberg, S. L. (2015). [Use and mis-use of supplementary material in science publications](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4630891/pdf/12859_2015_Article_668.pdf). *BMC bioinformatics, 16*(1), 1-4.
+
+This is important work. The authors argued that supplementary material is being abused by scientists. We needed supplementary material in the past because of the page limit (since we were printing our papers). Nowadays, however, people mostly read papers in electronic rather than printed form. Therefore, it does not make much sense to still use supplementary material. The problems with supplementary material are that 1) they are not fully reviewed, and therefore their quality is not guaranteed; 2) they are not very well integrated into the full text of the paper and therefore are difficult to use; and 3) references in supplementary material are not indexed as citations, making the works referenced un-noticed, which is unfair for scientists whose works were cited in supplementary material. 
+
+## 2022-04-09 (Completed on 2022-04-14)
+
+Herbst, S. (2008). Disciplines, intersections, and the future of communication research. Journal of Communication, 58(4), 603-614.
+
+In this article, the author talks about the interdisciplinary-ness of Communication research and also about what communication scholars should do in order to make the field more influential. One suggestion is that Communication scholars need to publish in non-communication journals. 
+
+## 2022-04-08 (Completed on 2022-04-12)
+
+1. Edelmann, A., Wolff, T., Montagne, D., & Bail, C. A. (2020). [Computational social science and sociology](https://www.annualreviews.org/doi/full/10.1146/annurev-soc-121919-054621). *Annual Review of Sociology, 46*, 61-81.
+
+The authors identified around 400 papers of computational social science and analyzed their core topics. 
+
+2. Liu, Y., Goncalves, J., Ferreira, D., Xiao, B., Hosio, S., & Kostakos, V. (2014, April). [CHI 1994-2013: Mapping two decades of intellectual progress through co-word analysis](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.704.9875&rep=rep1&type=pdf). In *Proceedings of the SIGCHI conference on human factors in computing systems* (pp. 3553-3562).
+
+This is a very innovative study. The authors analyzed the keywords of all CHI papers from 1994 to 2013. They find that HCI is a diverse field where many different topics are related to each other. Based on the results, the authors did not think it is a good idea to break CHI into several sub-conferences partly because having many different topics together can spawn unpredicted new research topics. 
+
+3. Else, H. (2021). [‘Tortured phrases’ give away fabricated research papers](https://media.nature.com/original/magazine-assets/d41586-021-02134-0/d41586-021-02134-0.pdf). *Nature, 596* (7872), 328-329.
+
+To bypass plagiarism check, some papers used reverse translation. For example, big data becomes "colossal information". This is a new type of fabricated publications. 
+
+## 2022-04-07 (Completed on 2022-04-12)
+
+1. Padilla, S., Methven, T. S., Corne, D. W., & Chantler, M. J. (2014). Hot topics in CHI: trend maps for visualising research. In *CHI'14 extended abstracts on human factors in computing systems* (pp. 815-824).
+
+The authors parsed the PDFs of all CHI papers from 2009 to 2013 into raw text and conducted topic modeling. They then categorized these topics into three groups based on their popularity trends: hot, cold, stable. The output is a one-page presentation showing all these topics. 
+
+2. Hu, Y., Feng, L., Mutlu, B., & Admoni, H. (2021, June). Exploring the Role of Social Robot Behaviors in a Creative Activity. In *Designing Interactive Systems Conference 2021* (pp. 1380-1389).
+
+This study examines how a robot's behavior affects users' creativity activity and how they perceive the robot. The authors find that playfulness of the robot is important. 
+
+## 2022-04-06 (Completed on 2022-04-11)
+
+1. You, T., Park, J., Lee, J. Y., Yun, J., & Jung, W. S. (2021). [Disturbance of greedy publishing to academia](https://arxiv.org/pdf/2106.15166). arXiv preprint arXiv:2106.15166.
+
+This is an innovative study. The authors analyzed how predatory journals make their impact factors look better than they really are. They also examined the impact of publications in predatory journals. They found that those questionable publications were not as impactful as normal publications. 
+
+2. Beall, J. (2012). [Predatory publishers are corrupting open access](https://www.nature.com/articles/489179a). *Nature, 489*(7415), 179-179.
+
+In this article, the author of Beall's list expressed his concern over predatory publishing. 
+
+## 2022-04-05 (Completed on 2022-04-10)
+
+1. Wadden, D., Lin, S., Lo, K., Wang, L. L., van Zuylen, M., Cohan, A., & Hajishirzi, H. (2020). [Fact or fiction: Verifying scientific claims](https://arxiv.org/pdf/2004.14974). arXiv preprint arXiv:2004.14974.
+
+This is a cool project. The authors built a model that can automatically check whether a claim in a scientific study is supported by evidence or not. 
+
+2. Lo, K., Wang, L. L., Neumann, M., Kinney, R., & Weld, D. S. (2019). S2ORC: The semantic scholar open research corpus. arXiv preprint arXiv:1911.02782.
+
+This is super cool research. The authors built the largest English language academic corpus based on full texts of 8.1 million papers. This is indeed a formidable task but they managed to complete it. The pipeline is also used to build a COVID-19 research corpus (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7251955/).
+
+3. Waisbord, S. (2015). My vision for the Journal of Communication. Journal of Communication, 65(4), 585-588.
+
+Dr. Waisbord served as the editor in Chief of Journal of Communication. In this article, he shared his vision for the journal. He mentioned that Communication as a field is fragmented and he called for internationalization of the journal and the field.
+
+## 2022-04-04 (Completed on 2022-04-09)
+
+1. Correia, A., Jameel, S., Schneider, D., Fonseca, B., & Paredes, H. (2019, May). [The effect of scientific collaboration on CSCW research: A scientometric study](https://bashthebuilder.github.io/files/Camera_Ready_CSCWD_Scientific_Collaboration.pdf). In 2019 IEEE 23rd International Conference on Computer Supported Cooperative Work in Design (CSCWD) (pp. 129-134). IEEE.
+
+This study looks at collaborations in CSCW research from three aspects: local level, national level, and international level. 
+
+2. Wang, X., Song, Y., & Su, Y. (2022). [Less Fragmented but Highly Centralized: A Bibliometric Analysis of Research in Computational Social Science](https://journals.sagepub.com/doi/pdf/10.1177/08944393211058112). Social Science Computer Review, 08944393211058112.
+
+This is exciting work. The authors found more than 7000 papers belonging to the field of computational social science based on the Web of Science database and analyzed the co-subject network. They analyzed this network using four network structures: 1. free-scale, 2. plural-island, 3. small-world, and 4. a random model. They found that this network is centralized but not very fragmented as we thought. 
+
+After reading this paper, I have the following follow-ups:
+
+  1. How about analyzing the citation network (both references and citations)?
+  2. How about analyzing the co-author network? Right now, they only studied co-subject networks. But I don't think this is enough. We need to examine the interdisciplinary-ness from the aspect of co-authors' disciplines. 
+  3. How about analyzing the co-subject network using the tags on Google Scholar? That might be more reflective of the disciplinary makeup of CSS authors. 
+
+## 2022-04-03 (Completed on 2022-04-08)
+
+1. The author found that China (Mainland China + Hong Kong SAR) has already overtaken the US in terms of the total number of publications on artificial intelligence. The quality is set to overtake US in less than a decade. https://blog.allenai.org/china-to-overtake-us-in-ai-research-8b6b1fe30595. I am very doubtful of this result, though. 
+
+2. Dong, Y., Ma, H., Shen, Z., & Wang, K. (2017, August). A century of science: Globalization of scientific collaborations, citations, and innovations. In Proceedings of the 23rd ACM SIGKDD international conference on knowledge discovery and data mining (pp. 1437-1446).
+
+The title of this paper explains its content very well. They analyzed over 100 million scientific papers between 1990 and 2015. They analyze authors, collaborations, and citations. 
+
+3. Sinha, A., Shen, Z., Song, Y., Ma, H., Eide, D., Hsu, B. J., & Wang, K. (2015, May). An overview of microsoft academic service (mas) and applications. In *Proceedings of the 24th international conference on world wide web* (pp. 243-246).
+
+This paper is about how Microsoft Academic Graph identifies papers, authors, venues, institutions, and fields of study. It also talked about the applications of MAG. 
+
+## 2022-04-02 (Completed on 2022-04-07)
+
+1. Bucchi, M., & Trench, B. (2017). Science communication and science in society: a conceptual review in ten keywords. TECNOSCIENZA: Italian Journal of Science & Technology Studies, 7(2), 151-168.
+
+The authors reviewed around 70 publications in the field of science communication through the lens of ten key words they selected. 
+
+2. Arkhipov, D. (1999). Scientometric analysis of Nature, the journal. Scientometrics, 46(1), 51-72.
+
+This article presents a scientometric analysis of *Nature*. 
+
+3. Goerlandt, F., Li, J., & Reniers, G. (2020). The landscape of risk communication research: A scientometric analysis. International journal of environmental research and public health, 17(9), 3255.
+
+This study looks at the field of risk communication and presents a complete scientometric analysis on it. 
+
+4. Coursaris, C. K., & Van Osch, W. (2014). A scientometric analysis of social media research (2004–2011). Scientometrics, 101(1), 357-380.
+
+This study analyzed around 600 papers on social media and conducted a scientometric analysis. I was surprised that they chose ProQuest as the platform where they obtained social media research articles and that they only studied 600 papers. I didn't know how this study could be published. 
+
+5. Purnomo, A., Sari, Y. K. P., Firdaus, M., Anam, F., & Royidah, E. (2020, August). Digital literacy research: A scientometric mapping over the past 22 years. In 2020 International Conference on Information Management and Technology (ICIMTech) (pp. 108-113). IEEE.
+
+The authors did a scientometric analysis of research on digital literacy. 
+
+## 2022-04-01 (Completed on 2022-04-06)
+
+1. Wang, L. L., Mack, K., McDonnell, E. J., Jain, D., Findlater, L., & Froehlich, J. E. (2021, May). A bibliometric analysis of citation diversity in accessibility and HCI research. In Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems (pp. 1-7).
+
+This study focused on accessibility research (specifically, 836 papers from ASSETS and CHI). It examined fields of study of references (i.e., those referenced in these 836 papers) and citing papers (i.e., those citing these 836 papers). 
+
+2. Mack, K., McDonnell, E., Jain, D., Lu Wang, L., E. Froehlich, J., & Findlater, L. (2021, May). What Do We Mean by “Accessibility Research”? A Literature Survey of Accessibility Papers in CHI and ASSETS from 1994 to 2019. In Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (pp. 1-18).
+
+This is amazing work. The authors analyzed 836 papers on accessibility published in ASSETS and CHI. They analyzed the methods, participants, foci, etc. in these papers. 
+
+3. Kaye, J. J. (2009). Some statistical analyses of CHI. In CHI'09 extended abstracts on human factors in computing systems (pp. 2585-2594).
+
+This paper did some random analyses on CHI authors. Specifically, number of authors, genders, and repeated authorship. 
+
+# 2022-03
+
+## 2022-03-31 (Completed on 2022-04-05)
+
+1. This paper examines possible labor abuse in fishing and illegal, unreported, and unregulated fishing vessels around the world. They found that higher risks of human labor abuse were correlated with poor control of corruption in a country and also with Chinese flagged vessels. https://www.nature.com/articles/s41467-022-28916-2.pdf
+
+2. Plastic pollution is pervasive in the Arctic. https://www.nature.com/articles/s43017-022-00279-8
+
+3. Syropoulos, S., Lifshin, U., Greenberg, J., Horner, D. E., & Leidner, B. (2022). Bigotry and the human–animal divide:(Dis) belief in human evolution and bigoted attitudes across different cultures. *Journal of Personality and Social Psychology*.
+
+Low belief in human evolution is associated with higher levels of racism and prejudice. 
+
+## 2022-03-30 (Completed on 2022-04-04)
+
+1. Pohl, H., & Mottelson, A. (2019, May). How we guide, write, and cite at Chi. In Extended abstracts of the 2019 CHI conference on human factors in computing systems (pp. 1-11).
+
+This is indeed a very interesting paper. The authors analyzed how CHI papers' readability, titles, novelty, and mentioning of famous scholars impacted citation counts. One pity is that the authors did not make their data and codes. Otherwise, they will be enormously useful for future researchers. 
+
+2. Heffner, J., & FeldmanHall, O. (2022). A probabilistic map of emotional experiences during competitive social interactions. Nature Communications, 13(1), 1-11.
+
+In this study, the authors did not give an emotion a specific name but rather created a probabilistic map of emotions. They wanted to look at how emotions are linked to the type of social choices. They found that "punitive and uncooperative choices" are linked to sadness and disappointment but very weakly related to anger. This is contradictory to conventional belief. 
+
+## 2022-03-29 (Completed on 2022-04-03)
+
+1. Kaplan, R. D. (2005). How we would fight China. *The Atlantic Monthly, 295*(5), 49-64.
+
+This article talks about how the US military should prepare for wars against China. 
+
+2. Wang, D., Pedreschi, D., Song, C., Giannotti, F., & Barabasi, A. L. (2011, August). Human mobility, social ties, and link prediction. In *Proceedings of the 17th ACM SIGKDD international conference on Knowledge discovery and data mining* (pp. 1100-1108).
+
+This article finds that people's similarity in physical movements is strongly correlated with their proximity in social networks. They further showed that mobility patterns have the predictive power for predicting a social link. 
+
+
+## 2022-03-28 (Completed on 2022-04-03)
+
+1. This article talks about the history and the status quo of AI research in China. https://dl.acm.org/doi/10.1145/3239540
+
+
+## 2022-03-27 (Completed on 2022-04-01)
+
+Kim, M. C., Zhu, Y., & Chen, C. (2016). How are they different? A quantitative domain comparison of information visualization and data visualization (2000–2014). Scientometrics, 107(1), 123-165.
+
+This study compares information visualization and data visualization from the perspective of keywords and citation trends. They found that the two fields co-evolved while at the same time had different foci. 
+
+## 2022-03-26 (Completed on 2022-04-01)
+
+1. Haroz, S. (2018, October). Open practices in visualization research: Opinion paper. In 2018 IEEE Evaluation and Beyond-Methodological Approaches for Visualization (BELIV) (pp. 46-52). IEEE.
+
+The author checked the open science practice at IEEE VIS 2017. He then proposed recommended methods to practice open science. 
+
+2. Wacharamanotham, C., Eisenring, L., Haroz, S., & Echtler, F. (2020, April). Transparency of CHI Research Artifacts: Results of a Self-Reported Survey. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (pp. 1-14).
+
+The authors asked HCI researchers whether, how, and where they shared their data. They recommended sharing data and codes on OSF or Zenodo rather than on GitHub. 
+
+## 2022-03-25 (Completed on 2022-03-29)
+
+Browsed through lots of articles titles on *Nature* but did not go into details of any. 
+
+<!-- Next time, start from p.9 https://www.nature.com/search?subject=social-sciences&article_type=protocols%2Cresearch%2Creviews&page=9 -->
+
+## 2022-03-24 (Completed on 2022-03-28)
+
+1. This study looks at the past progress made around the globe in reaching the Sustainable Development Goals (SDGs) and projects future progress. They looked at whether the globe can reach universal primary, secondary and tertiary education. They also looked at the gender gap. They found that the gender gap in education has been closed in 2018 with some countries in Africa and Middle East having high gender gaps. They also estimate that by 2030, in eighteen countries females will have more education than males. https://www.nature.com/articles/s41586-020-2198-8
+
+2. This is an interesting study. The authors found that globally, climate has a stronger impact on language diversity than landscape features. https://www.nature.com/articles/s41467-019-09842-2
+
+3. This is also a very interesting study. The authors used OECD's PISA dataset and found that although females had lower scores than males on math and science (and higher scores on reading tests), they were able to sustain their performance across all three subjects. Therefore, if a math or science test is longer, it will decrease the gender gap in scores. https://www.nature.com/articles/s41467-019-11691-y
+
+## 2022-03-23 (Completed on 2022-03-27)
+
+1. This study finds that China is well-positioned to reach its emission-reducing goals as declared in Paris in June 2015. https://www.nature.com/articles/s41467-019-09159-0.pdf
+
+2. This study finds that scientific topics associated with scientific prizes experienced increased growth. https://www.nature.com/articles/s41467-021-25712-2.pdf
+
+<!-- Next time, social media usage reveals ... on page 5
+ -->
+ 
+## 2022-03-22 (Completed on 2022-03-26)
+
+1. The authors found that co-authoring a paper with a top scientist predicts later success in academia. They were focusing on physics and life sciences. https://www.nature.com/articles/s41467-019-13130-4
+
+2. This is a very interesting study. The authors compared **emotions** and **readbility** between IPCC reports for policymakers and scientific and media coverage on findings of these reports. The authors found that IPCC reports were low in both metrics. https://www.nature.com/articles/nclimate2824
+
+
+## 2022-03-21 (Completed on 2022-03-25)
+
+1. This study used data from the world bank which is about learning in countries across the globe. The data shows that learning progress made is only modest. Also, the authors show that learning score is more associated with economic growth than other variables used elsewhere, such as Penn world tables and UN's human development Index. 
+
+I really like this study not because it has eye-opening results or ground-breaking methods, but because it shows to me that using publicly available datasets can also allow people to publish on *Nature*. 
+
+By the way, 
+
+ - [here](https://datacatalog.worldbank.org/search?q=&sort=last_updated_date%20desc) is all the publicly available data on The World Bank. 
+    - [data bank](https://data.worldbank.org/)
+ - [here](http://data.un.org/Explorer.aspx) is all the data from the UN. 
+ - [here](https://data.oecd.org/searchresults/?r=+f/type/datasets) is all the publicly available data on OECD.
+    - [PISA](https://www.oecd.org/pisa/data/)
+ - [data](https://www.who.int/data/gho/) from WHO
+ - [Registry of open data on AWS](https://registry.opendata.aws/)
+ - [Data](https://data.imf.org/?sk=388DFA60-1D26-4ADE-B505-A05A558D9A42&sId=1479329132316) from IMF
+ - [European Data Portal](https://data.europa.eu/en)
+ - [FiveThirtyEight](https://data.fivethirtyeight.com/)
+ - [Data.gov](https://data.gov/)
+ - [DBpedia](https://www.dbpedia.org/resources/), knowledge graph
+ - [Yelp](https://www.yelp.com/dataset)
+ - [unicef](https://data.unicef.org/)
+
+The above list is partially based on [freeCodeCamp](https://www.freecodecamp.org/news/https-medium-freecodecamp-org-best-free-open-data-sources-anyone-can-use-a65b514b0f2d/)
+
+## 2022-03-20 (Completed on 2022-03-24)
+
+### Phys.org (2022-03-24)
+
+  - The [Hollywood Diversity Report](https://socialsciences.ucla.edu/wp-content/uploads/2022/03/UCLA-Hollywood-Diversity-Report-2022-Film-3-24-2022.pdf) examines the diversity (in terms of race and gender) in Hollywood movie actors, directors, writers, and consumers. They found that people of color are a salient part in all these roles. 
+  - Future telescopes might be able to [identify technosignature directly](https://phys.org/news/2022-03-next-generation-telescopes-intelligent-civilizations.html).
+  - Nuclear weapons are real and if used, even on a small scale, could end up killing billions of people. https://phys.org/news/2022-03-russia-invading-ukraine-threat-nuclear.html
+
+## 2022-03-19 (Completed on 2022-03-23)
+
+I browsed through articles on https://www.nature.com/search?article_type=protocols,research,reviews&subject=social-sciences. I only very briefly read through the titles and summaries without going deep into every article. The problem is that I forgot what I read now. So I believe it is a good idea to always summarize what I've read rather than jumping to the next article directly. 
+
+## 2022-03-18 (Completed on 2022-03-22)
+
+I read the latest scientific news at https://phys.org/latest-news/. I feel that climate change, water scarcity, energy shortage, poverty, and pollution are among the most urgent issues around the globe. 
+
+## 2022-03-17 (Completed on 2022-03-21)
+
+I read two articles on *The Atlantic*
+
+1. What Happened to Hong Kong?
+2. Only NATO can save Putin
+
+## 2022-03-16 (Completed on 2022-03-20)
+
+I briefly browsed through articles on pnas.org. 
+
+## 2022-03-15 (Completed on 2022-03-19)
+
+I read daily scientific news on phys.org and some papers in Nature. 
+
+<!-- Will start at "inequality is rising when social..." next day -->
+
+## 2022-03-14 (Completed on 2022-03-18)
+
+Langrock, I., & González-Bailón, S. (2020). The Gender Divide in Wikipedia: Quantifying and Assessing the Impact of Two Feminist Interventions. Available at SSRN 3739176.
+
+This papers looks at the results of two feminists interventions aimed to counteract gender divide on Wikepedia. The gender divide on Wikipedia refers to the fact that there is more content about men than women. This study finds that the two interventions were successful at adding content about women but were not successful at reducing structural biases that limit the visibility of that specific content. 
+
+## 2022-03-13 (Completed on 2022-03-17)
+
+The authors used a mathematical model to study people's attention given to different kinds of digital content. They found that the increasing ups and downs of attention to content are because of increasing creation and consumption of digital content. Now, topics can only receive shorter periods of attention from people. https://doi.org/10.1038/s41467-019-09311-w 
+
+## 2022-03-12 (Completed on 2022-03-16)
+
+1. Choi, J., Jung, S., Park, D. G., Choo, J., & Elmqvist, N. (2019, June). Visualizing for the Non‐Visual: Enabling the Visually Impaired to Use Visualization. In *Computer Graphics Forum* (Vol. 38, No. 3, pp. 249-260).
+
+This is a cool project. The aim of this paper is to extract information stored in a raster image and reconstruct the information into a data table that is accessible to, for example, blind populations. 
+
+2. This is a very cool study. The authors analyzed literature in different parts of the world throughout history from the perspective of romantic love. They found that economic development was strongly correlated with the increase in love fictions. https://www.nature.com/articles/s41562-022-01292-z.pdf
+
+## 2022-03-11 (Completed on 2022-03-15)
+
+I read all contents on https://www.nature.com/collections/djdhcibbdh, which is basically about scientific work in, and collaborations between, the top five countries measured by NatureIndex, which tracks 82 high-impact natural science journals. It is a good idea to study the outcome of international collaborations and see what benefits they have.
+
+## 2022-03-10 (Completed on 2022-03-14)
+
+1. Kong, H. K., Liu, Z., & Karahalios, K. (2019, May). Trust and recall of information across varying degrees of title-visualization misalignment. In *Proceedings of the 2019 CHI conference on human factors in computing systems* (pp. 1-13).
+
+This is a very innovative study. 
+
+This study found that 1) people think visualization is impartial even if its title is misaligned with the visualization, and 2) people's recall of the message is more aligned with the title, not the visualization. 
+
+2. This is a very interesting study. The authors used AI to restore damaged ancient Greek inscription. https://www.nature.com/articles/s41586-022-04448-z
+
+## 2022-03-09 (Completed on 2022-03-13)
+
+Krischkowsky, A., Fuchsberger, V., & Tscheligi, M. (2021, May). Making un-use: When humans disengage with technology. In *Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems* (pp. 1-10).
+
+This paper examines how people disengage with their digital technologies. 
+
+## 2022-03-08 (Completed on 2022-03-12)
+
+I quickly skimmed through a dozen papers. They are not easily understandable to me so I was not able to summarize them here. 
+
+## 2022-03-07 (Completed on 2022-03-10)
+
+1. Lim, B. Y., Dey, A. K., & Avrahami, D. (2009, April). Why and why not explanations improve the intelligibility of context-aware intelligent systems. In Proceedings of the SIGCHI conference on human factors in computing systems (pp. 2119-2128).
+
+This is a very innovative study.
+
+This study looks at what explanations an intelligent system should give to the users. The authors compared two kinds of explanations: 1) why the system makes a specific decision, and 2) why not the system makes a specific decision. The results show that the first kind of explanations leads to better understanding of and higher trust in the system.
+
+2. Garg, N., Schiebinger, L., Jurafsky, D., & Zou, J. (2018). Word embeddings quantify 100 years of gender and ethnic stereotypes. *Proceedings of the National Academy of Sciences, 115*(16), E3635-E3644.
+
+The author looked at gender and racial stereotypes by analyzing texts in the US Census in the past 100 years using word embeddings. 
+
+## 2022-03-06 (Completed on 2022-03-09)
+
+This study finds that interaction data, both online and offline, such as phone calls and messaging, can still reveal personal data even after 20 weeks and even if the data is anonymized, if hackers link multiple data together. 
+
+<!-- I need to continue with "life and death decisions of autonomous vehicles." -->
+
+## 2022-03-05 (Completed on 2022-03-08)
+
+1. Trisovic, A., Lau, M. K., Pasquier, T., & Crosas, M. (2022). A large-scale study on research code quality and execution. *Scientific Data, 9*(1), 1-16.
+
+The authors reran R codes from more than 2000 replication datasets deposited in Harvard DataVerse. They found that after cleaning the codes, half the codes failed to rerun without errors. The authors also found that ggplot2 is the most popular library, which indicates that data visualization is a common task for researchers. 
+
+2. Kaltenegger, L., & Faherty, J. K. (2021). Past, present and future stars that can see Earth as a transiting exoplanet. *Nature, 594*(7864), 505-507.
+
+This study is eye-opening. It analyzed past, present, and future stars that can see earth as a transiting planet around the sun. They concluded that 1,715 stars within 100 parsecs of the Sun are in the position to have witnessed life on Earth since the early stage of human civilization. Around 200 stars will have this opportunity in the next 5000 years. 
+
+## 2022-03-04 (Completed on 2022-03-07)
+
+Brülhart, M., Klotzbücher, V., Lalive, R., & Reich, S. K. (2021). Mental health concerns during the COVID-19 pandemic as revealed by helpline calls. *Nature, 600*(7887), 121-126.
+
+This is a very cool study. The authors analyzed 8 million helpline calls during and before COVID-19 collected from 19 countries/regions. They found that calls during the pandemic were mostly driven by (1) fear of being infected, (2) being lonely and (3) physical health. The pandemic did not contribute to more calls about relationships, economic issues, violence or suicide attempts. The authors also found that financial support may help relieve psychological stress people face. 
+
+<!-- I need to read "Evidence from a long-term experiment that.." next -->
+
+## 2022-03-03 (Completed on 2022-03-06)
+
+1. https://www.pnas.org/doi/10.1073/pnas.2117320119
+
+This paper analyzed how black lives matter movement shifted public discourse on Twitter, newspapers, Google search, and Google Books. They found that terms associated with this movement became more popular in public discussions. 
+
+2. Peng, H., Ke, Q., Budak, C., Romero, D. M., & Ahn, Y. Y. (2021). Neural embeddings of scholarly periodicals reveal complex disciplinary organizations. *Science Advances, 7*(17), eabb9004.
+
+This study uses network embedding to examine the citation networks of academic journals on Microsoft Academic Graph. 
+
+
+## 2022-03-02 (Completed on 2022-03-05)
+
+1. As the title indicates, around the world, prosociality is a predictor of a successful labor market. https://www.nature.com/articles/s41467-020-19007-1
+
+2. This is a very interesting study. The authors found that those who sleep less than 7.5 hours per night at home tend to sleep more when traveling, whereas those who sleep more than 7.5 hours per night at home tend to sleep less when traveling. The figures in this paper are impressive. https://www.nature.com/articles/s41562-022-01291-0
+
+<!-- I need to start with "mental health concerns during the covid19...." next time -->
+
+## 2022-03-01 (Completed on 2022-03-03)
+
+1. Humans started processing ochre and using tools 40,000 years ago in China. https://www.nature.com/articles/s41586-022-04445-2
+
+2. If we know more about other people, we feel that they also know about us (even if they don't at all). This means that if we know more about a stranger, we are less likely to lie or to do inappropriate things. I resonate a lot with the finding of this paper. Oftentimes, I tend to know a lot about new friends. Then I assume that they also know a lot about me, which in turn makes me feel that our relationship is closer than it actually is. When I feel we are close, I might invite them to hang out together or even borrow money from them. Sometimes I get rejected. Then I got hurt. Now I know the culprit of my being hurt might be that I know more about them than they know about me. https://www.nature.com/articles/s41586-022-04452-3
+
+3. This article analyzed and compared 500 editorials published in *Science* and *Nature* from 1966 to 2016. The results show that both journals have an increasing number of editorials on climate change with some peaks (1990; years before and including 2019; and 2015) in response to external events. The two journals also have differences in climate change editorials. Specifically, in the beginning *Nature* focused on government and policy whereas *Science* focused on energy and technology. But in recent years, *Science*, more than *Nature* is focusing on global policy. Journal history, local cultures, and readerships might be the sources of influences that shape how these two journals frame their climate change editorials. https://www.nature.com/articles/s41558-018-0174-1
+
+# 2022-02
+
+## 2022-02-28 (Completed on 2022-03-02)
+
+I read news on Science. 
+
+## 2022-02-27 (Completed on 2022-03-01)
+
+I read the daily news on https://phys.org/latest-news/. I don't think it is a good source of academic news for me. 
+
+## 2022-02-26 (Completed on 2022-02-28)
+
+I explored some potential sources to get the latest articles I am interested in:
+
+- https://www.nature.com/search?article_type=protocols,research,reviews&subject=social-sciences
+- https://www.journals.elsevier.com/social-science-research/recent-articles
+- https://phys.org/latest-news/
+- https://www.science.org/news/all-news
+
+## 2022-02-25 (Completed on 2022-02-27)
+
+1. Margulis, E. H., Wong, P. C., Turnbull, C., Kubit, B. M., & McAuley, J. D. (2022). Narratives imagined in response to instrumental music reveal culture-bounded intersubjectivity. Proceedings of the National Academy of Sciences, 119(4).
+
+This paper finds that the stories conjured up by people after listening to a piece of music are similar if participants are from the same culture, and are different if they are from different cultures. 
+
+2. Cecchinato, M. E., Cox, A. L., & Bird, J. (2014, September). " I check my emails on the toilet": Email Practices and Work-Home Boundary Management. ACM Conference on Human Factors in Computing Systems (CHI).
+
+The authors find that email activities enabled by mobile technologies blurred people's work and personal boundaries. 
+
+3. Lu, Y., & Pan, J. (2021). Capturing clicks: How the Chinese government uses clickbait to compete for visibility. *Political Communication, 38*(1-2), 23-54.
+
+The study finds that Chinese local governments are using clickbaits to generate more reads for their social media posts. 
+
+## 2022-02-24 (Completed on 2022-02-26)
+
+1. Coppersmith, G., Leary, R., Crutchley, P., & Fine, A. (2018). Natural language processing of social media as screening for suicide risk. *Biomedical informatics insights, 10*, 1178222618792860.
+
+This article detects people's suicide risks from their social media posts using natural language processing. 
+
+2. Anderson, A., Huttenlocher, D., Kleinberg, J., & Leskovec, J. (2014, April). Engaging with massive online courses. In *Proceedings of the 23rd international conference on World wide web* (pp. 687-698).
+
+This article is based on data from MOOCs at Stanford University. The authors find that 1) students have five distinct categories of behavior when studying MOOC courses, and 2) a badge system has an effect on student's activity. 
+
+## 2022-02-23 (Completed on 2022-02-24)
+
+1. Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805.
+
+This paper is about a new language representation model called Bert. It's too technical and I could not understand it. 
+
+2. Pennington, J., Socher, R., & Manning, C. D. (2014, October). Glove: Global vectors for word representation. In *Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)* (pp. 1532-1543).
+
+This paper introduces a new model to represent words in vector space. It's too technical for me and I could not understand it. 
+
+## 2022-02-22 (Completed on 2022-02-23)
+
+1. Liddy, E. D. (2001). [Natural language processing](https://surface.syr.edu/cgi/viewcontent.cgi?article=1043&context=istpub).
+
+This article talks about the definition and historical development of NLP.
+
+2. Xu, J. M., Jun, K. S., Zhu, X., & Bellmore, A. (2012, June). [Learning from bullying traces in social media](https://aclanthology.org/N12-1084.pdf). In *Proceedings of the 2012 conference of the North American chapter of the association for computational linguistics: Human language technologies* (pp. 656-666).
+
+This paper talks about how to detect social bullying utterances on social media using NLP techniques.
+
+## 2022-02-21 (Completed on 2022-02-22)
+
+1. Ayres-Bennett, Wendy, Marco Hafner, Eliane Dufresne, and Erez Yerushalmi, The economic value to the UK of speaking other languages. Santa Monica, CA: RAND Corporation, 2022. https://www.rand.org/pubs/research_reports/RRA1814-1.html.
+
+This report analyzes why studying other languages can help the UK economy. 
+
+2. Mønsted, B., & Lehmann, S. (2022). [Characterizing polarization in online vaccine discourse—A large-scale study](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263746). *PloS one, 17*(2), e0263746.
+
+The authors analyzed vaccine sentiment using a sample of 60 billion Tweets. The major findings of this study:
+    - Content shared by anti-vaccine users are mostly commercial.
+    - Vaccine debate on Twitter is polarized in a way that users interact mainly with similar users. 
+
+## 2022-02-20 (Completed on 2022-02-21)
+
+1. Goldberg, A. B., & Zhu, X. (2006, June). Seeing stars when there aren’t many stars: Graph-based semi-supervised learning for sentiment categorization. In *Proceedings of TextGraphs: The first workshop on graph based methods for natural language processing* (pp. 45-52).
+
+I skimmed through this paper. The authors developed a semi-supervised algorithm to infer ratings (for example, ratings on movie or Amazon items) based on very few labeled data. This algorithm performs better than all other algorithms. 
+
+## 2022-02-19 (Completed on 2022-02-20)
+
+1. Schmidt, A., & Wiegand, M. (2019, January). A survey on hate speech detection using natural language processing. In *Proceedings of the Fifth International Workshop on Natural Language Processing for Social Media*, April 3, 2017, Valencia, Spain (pp. 1-10). Association for Computational Linguistics.
+
+The authors of this paper give a nice overview of hate speech detection techniques using NLP. 
+
+2. Xu, J. M., Huang, H. C., Bellmore, A., & Zhu, X. (2014, May). School bullying in twitter and weibo: a comparative study. In *Eighth International AAAI Conference on Weblogs and Social Media*.
+
+The author analyzed Twitter and Weibo posts that are about school-bullying. The results show that there are fewer victim authors on Weibo. Also, Weibo posts mention families more. 
+
+## 2022-02-18 (Completed on 2022-02-19)
+
+Pan, J., & Chen, K. (2018). [Concealing corruption: How Chinese officials distort upward reporting of online grievances](https://www.cambridge.org/core/journals/american-political-science-review/article/concealing-corruption-how-chinese-officials-distort-upward-reporting-of-online-grievances/43D20A0E5F63498BB730537B7012E47B). *American Political Science Review, 112*(3), 602-620.
+
+This study analyzed a portion of leaked emails between a monitoring body and upper level officials in a prefecture in Southern China. The results show that the lower level monitoring body will omit some wrong doings when reporting public sentiment analysis to upper level officials. This means that China's ability to gather information regarding citizens' complaints have systematic shortcomings. 
+
+## 2022-02-17 (Completed on 2022-02-19)
+
+Hirschberg, J., & Manning, C. D. (2015). Advances in natural language processing. *Science, 349*(6245), 261-266.
+
+This article gives a very nice review of the development of natural language processing (NLP). It talks about the following topics in NLP: Machine Translation (MT), spoken dialogue and system conversational agents, machine reading, social media data mining, and sentiment analysis. 
+
+## 2022-02-16 (Completed on 2022-02-18)
+
+1. Bao, L., Krause, N. M., Calice, M. N., Scheufele, D. A., Wirz, C. D., Brossard, D., ... & Xenos, M. A. (2022). Whose AI? How different publics think about AI and its social impacts. *Computers in Human Behavior*, 107182.
+
+I skimmed through this study. The authors found that increases in rainfalls are associated with decreases in economic growth. They also found that rich countries, and service & manufacturing sections are affected most by rainfall increases. 
+
+2. Kotz, M., Levermann, A., & Wenz, L. (2022). The effect of rainfall changes on economic production. *Nature, 601*(7892), 223-227.
+
+I skimmed through this paper. The authors found that US people's attitudes towards AI can be grouped into five segments: negative, ambivalent, tepid, ambiguous, and indifferent. 
+
+3. Anderson, A., Huttenlocher, D., Kleinberg, J., & Leskovec, J. (2013, May). Steering user behavior with badges. In *Proceedings of the 22nd international conference on World Wide Web* (pp. 95-106).
+
+I skimmed through this paper. The authors studied how badges in websites like Stack Overflow can lead to increases in user participation and user online activities. 
+
+## 2022-02-15 (Completed on 2022-02-17)
+
+Anderson, A., Goel, S., Huber, G., Malhotra, N., & Watts, D. J. (2014). [Political ideology and racial preferences in online dating](https://sociologicalscience.com/download/volume%201/february_/political%20ideological%20and%20racial%20preferences%20in%20online%20dating.pdf). *Sociological Science, 1*, 28.
+
+This study examines how political alignment impacts racial preference in online dating by studying more than 250K online dating users in the United States. The authors conclude that conservatives, regardless of their own race and sex, prefer same-race partners, compared to liberals. Also, those who do not claim this preference act as if they do. As a result, the gap between conservatives and liberals in terms of preference for same-race partners, while still clear, is smaller. 
+
+{{<block class="info">}}
+Fig. 5 seems to indicate that there is no difference between conservatives and liberals in terms of same-race partner preference?
+{{<end>}}
+
+## 2022-02-14
+
+Waller, I., & Anderson, A. (2021). [Quantifying social organization and political polarization in online platforms](https://www.nature.com/articles/s41586-021-04167-x?fr=operanews). *Nature, 600*(7888), 264-268.
+
+I skimmed through this paper. The authors used computational methods to study the representation of Reddit communities in terms of Age, Gender, and Partisanship. The analyses were based on over 1.5 billion comments in 10K communities within 14 years of Reddit history. The authors found that Reddit became more "right-wing" after the 2016 US Presidential election; this polarization was more driven by new users. The authors argue that their methods can be applied to the analyses of other online communities as well. 
+
+{{<block class="info">}}
+I have a question regarding this paper: How can you assume that all Reddit users are Americans? I personally know a Swedish friend who is using Reddit. If Reddit users are from all over the world, how can you infer the platform's political partisanship?
+{{<end>}}
+
+## 2022-02-13
+
+1. De Choudhury, M., Kiciman, E., Dredze, M., Coppersmith, G., & Kumar, M. (2016, May). [Discovering shifts to suicidal ideation from mental health content in social media](https://www.cs.jhu.edu/~mdredze/publications/2016_chi.pdf). In *Proceedings of the 2016 CHI conference on human factors in computing systems* (pp. 2098-2110).
+
+I skimmed through this paper. The authors identified suicidal ideation from users' Reddit posts. 
+
+2. Blitzer, J., Dredze, M., & Pereira, F. (2007, June). [Biographies, bollywood, boom-boxes and blenders: Domain adaptation for sentiment classification](https://aclanthology.org/P07-1056.pdf). In *Proceedings of the 45th annual meeting of the association of computational linguistics* (pp. 440-447).
+
+I skimmed through this paper. The authors improved structural correspondence learning (SCL) algorithm in terms of detecting sentiment in Amazon reviews. 
+
+## 2022-02-12
+
+1. Templeton, E. M., Chang, L. J., Reynolds, E. A., LeBeaumont, M. D. C., & Wheatley, T. (2022). Fast response times signal social connection in conversation. *Proceedings of the National Academy of Sciences, 119*(4).
+
+I skimmed through this paper. 
+
+The authors found that faster response time in people's conversations make people feel more connected. 
+
+2. De Choudhury, M., Gamon, M., Counts, S., & Horvitz, E. (2013, June). Predicting depression via social media. In Seventh international AAAI conference on weblogs and social media.
+
+I very briefly skimmed through this paper. The authors first identified some Twitter users who were diagnosed with depression and then studied their tweets a year before their diagnosis. The authors found that social media can help predict depression. For example, depressive people might decrease their social activity and have greater ego networks. 
+
+3. De Choudhury, M., & De, S. (2014, May). Mental health discourse on reddit: Self-disclosure, social support, and anonymity. In *Eighth international AAAI conference on weblogs and social media*.
+
+I skimmed through this paper. 
+
+The authors studied how Reddit users disclose their mental health issues and how they got social support. 
+
+## 2022-02-11
+
+1. Castellucci, G. A., Kovach, C. K., Howard, M. A., Greenlee, J. D., & Long, M. A. (2022). A speech planning network for interactive language use. *Nature*, 1-6.
+
+I could not understand this article. 
+
+2. Chi, G., Fang, H., Chatterjee, S., & Blumenstock, J. E. (2022). Microestimates of wealth for all low-and middle-income countries. *Proceedings of the National Academy of Sciences, 119*(3).
+
+The authors used machine learning to estimate wealth geographically for low- and middle-income countries around the world. These estimates can help the government target poor populations for humanitarian aid. 
+
+## 2022-02-10
+
+1. Montag, C., Błaszkiewicz, K., Sariyska, R., Lachmann, B., Andone, I., Trendafilov, B., ... & Markowetz, A. (2015). [Smartphone usage in the 21st century: who is active on WhatsApp?](https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-015-1280-z). *BMC research notes, 8*(1), 1-6.
+
+I skimmed through this paper. 
+
+The authors did a survey among around 2500 people (I guess all of them are German). The authors asked the participants to download a custom app that tracks their smartphone use. The study finds that on average people spend around 2.5 hours using smartphones each day. WhatsApp accounts for 1/5 (0.5 h) of total smartphone usage time. Female participants spend more time on WhatsApp each day than male. 
+
+2. Choi, V. K., Shrestha, S., Pan, X., & Gelfand, M. J. (2022). [When danger strikes: A linguistic tool for tracking America’s collective response to threats](https://www.pnas.org/content/119/4/e2113891119.short). *Proceedings of the National Academy of Sciences, 119*(4).
+
+I skimmed through this study. The authors developed a threat dictionary, and validated this dictionary using historical data. The authors found that the threat dictionary is sensitive to wars and conflict, pathogen, and natural disasters. The authors also found that changes in threats are associated with rising conservatism and greater approval of the sitting US presidents. 
+
+## 2022-02-09
+
+1. Montag, C., Zhao, Z., Sindermann, C., Xu, L., Fu, M., Li, J., ... & Becker, B. (2018). [Internet communication disorder and the structure of the human brain: Initial insights on WeChat addiction](https://www.nature.com/articles/s41598-018-19904-y.pdf). *Scientific Reports, 8*(1), 1-10.
+
+I skimmed through this article. 
+
+This study finds that excessive use of WeChat is associated with changes in brain structure. 
+
+This study uses scales. I am not quite convinced of the results. 
+
+2. Király, O., Potenza, M. N., Stein, D. J., King, D. L., Hodgins, D. C., Saunders, J. B., ... & Demetrovics, Z. (2020). [Preventing problematic internet use during the COVID-19 pandemic: Consensus guidance](https://www.sciencedirect.com/science/article/pii/S0010440X20300225). *Comprehensive psychiatry, 100*, 152180.
+
+This article lists some suggestions for people in COVID-19 lockdown on how to prevent problematic use of the Internet, such as gambling, watching porn, excessive use of social media, etc. 
+
+I am not sure why this article got more than 400 citations on Google Scholar within 1.5 years of publication.
+## 2022-02-08
+
+1. Reid, T., & Gilbert, J. (2022). [Inclusion in human–machine interactions](https://www.science.org/doi/10.1126/science.abf2618). *Science, 375* (6577), • DOI: 10.1126/science.abf2618
+
+I really enjoyed reading this piece. It talks about potential problems in human-machine interactions (HMIs). 
+    - When building an airport, the developers will consider more the negative impacts (such as noises) on high-income communities as opposed to low-income communities. 
+    - Facial recognition works well for East Asian and White populations, but has problems for Black people. 
+    - It is problematic to deploy new technologies without letting people in the community know. For example, the use of DigDog by the New York police in New York. 
+    - Automatic weapons or robots used as weapons can be problematic. 
+
+2. Wardle, S. G., Paranjape, S., Taubert, J., & Baker, C. I. (2022). [Illusory faces are more likely to be perceived as male than female](https://www.pnas.org/content/119/5/e2117413119). *Proceedings of the National Academy of Sciences, 119*(5).
+
+I skimmed through this paper. 
+
+The authors find that people are more likely to perceive illusory faces as male than female. Gender associations with object name and color cannot explain this bias. 
+
+## 2022-02-07
+
+1. Hessler, A. (2021). [A path to independence](https://www.science.org/doi/10.1126/science.acx9813)
+
+The author talks about her journey of becoming an independent researcher. 
+
+2. Davies, A., Veličković, P., Buesing, L., Blackwell, S., Zheng, D., Tomašev, N., ... & Kohli, P. (2021). [Advancing mathematics by guiding human intuition with AI](https://www.nature.com/articles/s41586-021-04086-x). *Nature, 600*(7887), 70-74.
+
+I skimmed through this article very briefly. It talks about how machine learning can help mathematicians discover new conjectures and theorems. 
+
+3. Chang, K. C., Hobbs, W. R., Roberts, M. E., & Steinert-Threlkeld, Z. C. (2022). [COVID-19 increased censorship circumvention and access to sensitive topics in China](https://www.pnas.org/content/119/4/e2102818119). *Proceedings of the National Academy of Sciences, 119*(4).
+
+I skimmed through this paper. The author found that during Covid-19, an increasing number of people in China circumvented the Great Firewall and got access to Twitter and Wikipedia for information censored in China. 
+
+## 2022-02-06
+
+1. Jbaily, A., Zhou, X., Liu, J., Lee, T. H., Kamareddine, L., Verguet, S., & Dominici, F. (2022). [Air pollution exposure disparities across US population and income groups](https://www.nature.com/articles/s41586-021-04190-y). *Nature, 601*(7892), 228-233.
+
+I skimmed through this paper. The authors find that White population and Native Americans are exposed to lower levels of PM2.5 compared to Black, Asian, and Hispanic populations. In terms of income, low income populations are at higher risk of PM2.5 exposure compared to high income people. 
+
+2. O'merar, S. (2019). [China’s ambitious quest to lead the world in AI by 2030](https://media.nature.com/original/magazine-assets/d41586-019-02360-7/d41586-019-02360-7.pdf)
+
+This article talks about China's AI plans and the difficulties facing China's AI research. 
+
+3. [Back in person, back to the races](https://www.science.org/doi/10.1126/science.abn2374).
+
+I like the replies written by these scientists. The most inspiring one is that although competition in academia is fierce, it might not be a bad idea to talk with other academics. You never know what they went through to get the achievements you saw. 
+
+## 2022-02-05
+
+Box-Steffensmeier, J.M., Burgess, J., Corbetta, M. et al. The future of human behaviour research. *Nat Hum Behav 6*, 15–24 (2022). https://doi.org/10.1038/s41562-021-01275-6
+
+I skimmed through this article. Domain experts talk about future research directions in their field. 
+
+## 2022-02-04
+
+1. NASA’s Webb telescope reaches deep space home
+
+I am amazed by the science and technology available today: Scientists are able to operate and communicate with a telescope 1.5 million kilometers away. I am curious about where the telescope gets its energy. From sunlight?
+
+2. Lessons learned from leading NIH
+
+Francis Collins was the director of NIH for 12 years. He talked about achievements made by NIH these years and also lessons he learned over the years. 
+
+## 2022-02-03
+
+1. Cohen, J. (2022). India’s pandemic toll far exceeds official count. *Science*.
+
+As the title says, the real death number far exceeds the official count by the Indian Government. 
+
+2. Huston, M. (2022). Artificial intelligence unmasks anonymous chess players. *Science*. 
+
+A new study published in NeurIPS used AI to identify unique chess players based on their chess playing style. This finding has significant implications for privacy issues online. For example, given enough data, AI can identify unique drivers and social media users.
+
+3. Cohen, J. (2022). The pandemic whistleblower. *Science*. 
+
+This piece talks about Dr. Bright. How he revealed the Trump Administration's failures of Covid policies. 
+
+## 2022-02-02
+
+Kloor, K. (2022). [Paranormal activity](https://www.science.org/doi/10.1126/science.ada0327). *Science*, 375 (6579), • DOI: 10.1126/science.ada0327
+
+This is a nice feature story. It talks about Avi Loeb, a Harvard professor in astronomy who is now studying UFOs. 
+
+## 2022-02-01
+
+1. Guglielmi, G. (2022). [EU grants restrict U.K. and Swiss research](https://www.science.org/doi/10.1126/science.ada0232). *Science*, 375 (6578), • DOI: 10.1126/science.ada0232
+
+The political tensions between EU and Switzerland, and those between EU and the UK are affecting scientists in the UK and Switzerland. Scientists in these two countries who receive funding from the EU might have to relocate themselves in order to use the money. 
+
+2. Gibbons, A. (2022). [Early migration may have spread Celtic languages](https://www.science.org/doi/10.1126/science.acz9883). *Science*, 374 (6575), • DOI: 10.1126/science.acz9883
+
+This news piece talks about a study published in *Nature*. That study finds that around 3000 years ago, there was an influx of people from France to Britain. That was probably when the Celtic language was brought from Europe to Britain. 
+
+
 # 2022-01
 
 ## 2022-01-31
