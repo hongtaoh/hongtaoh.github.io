@@ -10,13 +10,87 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
-2022: [2022-01](/en/apad/#2022-01), [2022-02](/en/apad/#2022-02), [2022-03](/en/apad/#2022-03)
+2022: [2022-01](/en/apad/#2022-01), [2022-02](/en/apad/#2022-02), [2022-03](/en/apad/#2022-03), [2022-04](/en/apad/#2022-04)
 
 2021: [2021-12](/en/apad/#2021-12), [2021-11](/en/apad/#2021-11), [2021-10](/en/apad/#2021-10), [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
 
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2022-05-02
+
+I read some news on Phys.org and also at [https://www.science.org/news/all-news](https://www.science.org/news/all-news)
+
+## 2022-05-01 (Completed on 2022-05-02)
+
+1. Lee, C. Y. P., Zhang, Z., Herskovitz, J., Seo, J., & Guo, A. (2021, October). CollabAlly: Accessible Collaboration Awareness in Document Editing. In *The 23rd International ACM SIGACCESS Conference on Computers and Accessibility* (pp. 1-4).
+
+The authors created CollabAlly, a tool that helps blind people collaboratively edit documents.
+
+2.  Pinho-Gomes, A. C., Peters, S., Thompson, K., Hockham, C., Ripullone, K., Woodward, M., & Carcel, C. (2020). [Where are the women? Gender inequalities in COVID-19 research authorship](https://gh.bmj.com/content/bmjgh/5/7/e002922.full.pdf). *BMJ Global Health, 5*(7), e002922.
+
+The authors analyzed author genders in COVID-19 papers. They found that women accounted for 1/3 of all authors. 
+
+3. Cryan, J., Tang, S., Zhang, X., Metzger, M., Zheng, H., & Zhao, B. Y. (2020, April). [Detecting gender stereotypes: lexicon vs. supervised learning methods](https://par.nsf.gov/servlets/purl/10213249). In *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems* (pp. 1-11).
+
+This paper finds that in terms of detecting gender biases, supervised learning models by fine tuning BERT is more accurate and robust than the traditional lexicon method. 
+
+# 2022-04
+
+## 2022-04-30 (Completed on 2022-05-02)
+
+1. Kim, H., Rossi, R., Du, F., Koh, E., Guo, S., Hullman, J., & Hoffswell, J. (2022). [Cicero: A declarative grammar for responsive visualization](https://arxiv.org/pdf/2203.08314.pdf). *CHI2022*.
+
+This is a cool paper. The authors invented a declarative grammar to create responsive visualizations. 
+
+2. Chen, K., Jeon, J., & Zhou, Y. (2021). [A critical appraisal of diversity in digital knowledge production: Segregated inclusion on YouTube](https://journals.sagepub.com/doi/full/10.1177/14614448211034846). *New Media & Society*, 14614448211034846.
+
+The authors analyzed YouTube channels that are related to science. They analyzed these channels' profile diversity and citation network. They found that those profiles are diverse and that a few videos attracted most of the citations. 
+
+3. Rakita, D., Mutlu, B., & Gleicher, M. (2018, March). An autonomous dynamic camera method for effective remote teleoperation. In *2018 13th ACM/IEEE International Conference on Human-Robot Interaction (HRI)* (pp. 325-333). IEEE.
+
+The authors proposed a method that facilitates remote teleoperation of a robot by using a camera-in-hand robot. 
+
+4. Ekdale, B., Rinaldi, A., Ashfaquzzaman, M., Khanjani, M., Matanji, F., Stoldt, R., & Tully, M. (2022). [Geographic Disparities in Knowledge Production: A Big Data Analysis of Peer-Reviewed Communication Publications from 1990 to 2019](https://ijoc.org/index.php/ijoc/article/viewFile/18386/3773). *International Journal of Communication, 16*, 28.
+
+This paper analyzed communication scholars from a geographic standpoint. They found that the proportion of scholars from North America and Europe has been declining and that scholars from North America and Europe are overrepresented in high prestige journals. 
+
+## 2022-04-29 (Completed on 2022-05-02)
+
+1. Wang, Y., Jung, C., Wang, R., & Kim, Y. S. (2022). What makes web data tables accessible? Insights and a tool for rendering accessible tables for people with visual impairments.
+
+This study first looks at why a table is inaccessible to blind people. The authors then made a Chrome extension to convert inaccessible HTML tables to accessible ones for blind users. 
+
+2. Kim, H., Rossi, R., Sarma, A., Moritz, D., & Hullman, J. (2021). An Automated Approach to Reasoning About Task-Oriented Insights in Responsive Visualization. *IEEE transactions on visualization and computer graphics, 28*(1), 129-139.
+
+This is a cool paper. The authors used machine learning to create a recommender system which recommends responsive visualizations based on visualizations on large screens. 
+
+## 2022-04-28 (Completed on 2022-05-02)
+
+[How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf)
+
+  - Do an internship during Summer. 
+  - Do not focus on your grades in classes. 
+  - Trust your advisor. 
+  - Go to conferences and talk with people. 
+  - Practice your presentation. 
+
+## 2020-04-27 (Completed on 2022-05-02)
+
+[10 ways to succeed and 10 ways to fail in graduate school](http://slideplayer.com/slide/3491634/)
+
+  - Help other graduate students. And don't compare yourself with others. 
+
+  - Talk with your peers about research. 
+
+  - Improve your work efficiency rather than work for longer hours. 
+
+  - Your grades in classes do not equate with how good you are. 
+
+  - Try to do an internship. 
+
+  - Have a break or a vacation when you need to. 
+
 ## 2022-04-26 (Completed on 2022-05-01)
 
 [Facebook Managing unconscious bias](https://managingbias.fb.com/)
