@@ -159,7 +159,7 @@ This is an interesting study. The authors looked at what factors influenced repo
 
 ## 2022-04-21 (Completed on 2022-04-28)
 
-1. Gleicher, M., Yu, X., & Chen, Y. (2022). T[rinary tools for continuously valued binary classifiers](https://arxiv.org/pdf/2204.08136.pdf). *Visual Informatics*.
+1. Gleicher, M., Yu, X., & Chen, Y. (2022). [Trinary tools for continuously valued binary classifiers](https://arxiv.org/pdf/2204.08136.pdf). *Visual Informatics*.
 
 This study looks at how to visually communicate the continuous values of binary classification. 
 
@@ -232,13 +232,45 @@ One point I do agree with is that which is hinted at the end of the article: PhD
 
 ## 2022-04-14 (Completed on 2022-04-20)
 
-1. Gleicher, M. (2017). Considerations for visualizing comparison. IEEE transactions on visualization and computer graphics, 24(1), 413-423.
+1. Gleicher, M. (2017). [Considerations for visualizing comparison](https://ieeexplore.ieee.org/abstract/document/8017615/). *IEEE transactions on visualization and computer graphics, 24*(1), 413-423.
 
-This is a highly influential work. To be honest, I didn't quite understand this article. I know the gist of it, though: what should we consider when comparing visualizations. 
+This is a highly influential work. 
 
-2. Sarikaya, A., Gleicher, M., & Szafir, D. A. (2018, June). Design factors for summary visualization in visual analytics. In Computer Graphics Forum (Vol. 37, No. 3, pp. 145-156).
+The author argues that there are four considerations in a comparison task:
+  1. identify elements to compare
+     - identify targets (what to compare)
+     - actions on relationships
+  2. know what the challenges are in comparison
+  3. decide on the strategies to be used for comparison. 
+  4. creat the design for comparison
 
-This is an innovative study. The author came up with a taxonomy of data summarization and examined whether this taxonomy covers (randomly selected) visualizations in the visualization field. They think that there are four major methods of data summarization: aggregation, subsampling, filtering, and projection. When choosing these four methods, a designer can consider these factors: purpose, task, and data. 
+There are three reasons why comparisons might become difficult: 
+  - number of items to compare
+  - complexities in each item
+  - complexities in the relationships between items
+
+There are three strategies that can be used for a comparison task:
+  - scan sequentially
+  - subset
+  - summarize (two things to consider:)
+     - how to create the summary
+     - how to present it 
+
+The author mentioned that there are three basic designs for visual comparisons: juxtaposition, superpsotion, and explicit encoding. 
+
+The author also mentioned that summarization can be done in two orders: First find the relationships between objects and summarize these relationships; or first summarize items and compare these summarizations. 
+
+{{<block class="info">}}
+What is the relationship between the three basic designs for visual comparisons and the three strategies for a comparison task?
+{{<end>}}
+
+2. Sarikaya, A., Gleicher, M., & Szafir, D. A. (2018, June). [Design factors for summary visualization in visual analytics](https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.13408). In *Computer Graphics Forum* (Vol. 37, No. 3, pp. 145-156).
+
+ and examined 1) whether this taxonomy covers (randomly selected) visualizations in the visualization field, and 2) how these taxonomies interact.
+
+This is an innovative study. The author came up with a taxonomy of data summarization. They think that there are four major methods of data summarization: aggregation, subsampling, filtering, and projection. When choosing from these four methods, a designer can consider these factors: purpose, task, and data. Therefore, there are four factors of summarization in visualization: methods, purpose, tasks, and data types. 
+
+The authors then did a content analysis on randomly selected publications. They wanted to study whether the taxonomy proposed in this paper are well represented by the randomly selected publications, and what are the proportions (for example, how many papers used aggregation method). They also examined how these four factors interact. For example, in visualizations that used the summarization method of aggregation, what are the tasks and data types in these visualizations. 
 
 The interactive system affiliated with this paper is super cool: https://graphics.cs.wisc.edu/Vis/vis_summaries/
 
