@@ -28,7 +28,9 @@ aliases:
 
 - 下载了[文本编辑器](https://intro2code.hongtaoh.com/prep.html#text-editor)
 
-- [安装 Git](https://intro2code.hongtaoh.com/html-basics.html#windows-%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85-git)
+- 安装 Git
+  - 苹果系统：打开 Terminal, 输入 `xcode-select --install`，这是[为了下载 Xcode Command Line Tools](https://dev.to/squademy/install-and-configure-git-on-a-fresh-new-macos-11-big-sur-in-2021-a-complete-guide-6ld)。然后在 Terminal 输入 `git --version`。更多 Git 下载办法请参考 [git 官方介绍](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git)。
+  - Windows 系统请参考[这里](https://intro2code.hongtaoh.com/html-basics.html#windows-%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85-git)
 
 - 掌握了 Markdown 的基础语法
 
