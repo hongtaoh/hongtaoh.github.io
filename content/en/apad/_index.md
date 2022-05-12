@@ -17,6 +17,127 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2022-05-12
+
+LeCun, Y., Bengio, Y., & Hinton, G. (2015). [Deep learning](https://www.nature.com/articles/nature14539). *nature, 521*(7553), 436-444.
+
+This is exciting work! It surprised me that I could understand 1/4 of what this article is talking about, given that the subject is super difficult. 3blue1brown's videos on neural networks helped me a lot. Those vidoes prepared me for understanding this article. 
+
+This article explains how neural networks work. Then the authors introduced Convolutional neural networks and recurrent neural networks. In the end of the article, the authors talk about the future of deep learning. They believe that unsupervised learning will be more important than supervised learning in the future. 
+
+## 2022-05-11
+
+1. Lu, L., Liu, J., & Yuan, Y. C. (2021). [Cultural differences in cancer information acquisition: cancer risk perceptions, fatalistic beliefs, and worry as predictors of cancer information seeking and avoidance in the US and China](https://www.tandfonline.com/doi/abs/10.1080/10410236.2021.1901422). *Health Communication*, 1-10.
+
+In this study, the authors looked at how perceived cancer risks, fatalistic beliefs, and worry about cancer are correlated with cancer information seeking and cancer information avoidance in the US and China.
+
+They found that perceived risks, and cancer worry are correlated with increased cancer information seeking in the US and China. Cancer worry is negatively related to cancer info avoidance in the US but positively related to avoidance in China. This indicates that Chinese survey takers, worried about cancer, actively seek certain information about cancer but at the same time avoid other information. 
+
+{{<block class="info">}}
+Since this is a cross-sectional study, it is better not to use the word "predictors".
+{{<end>}}
+
+2. Lu, L., Liu, J., Yuan, Y. C., Burns, K. S., Lu, E., & Li, D. (2021). [Source trust and COVID-19 information sharing: the mediating roles of emotions and beliefs about sharing](https://journals.sagepub.com/doi/full/10.1177/1090198120984760). *Health Education & Behavior, 48*(2), 132-139.
+
+This is an interesting study. The authors were interested in how trust about source information on COVID-19 is related to information sharing intentions, and how this relationship is mediated with (1) belief about sharing, and (2) emotions. They found that health professionals, government, and academic institutions are more trusted than social media, family, and friends. 
+
+As for mediations, they found that high trust is related to higher intentions of sharing through the belief that sharing leads to positive outcomes. On the other hand, low trust is related to higher intentions of sharing through negative emotions (anxiety, fear, and anger).
+
+## 2022-05-10
+
+Doshi-Velez, F., & Kim, B. (2017). [Towards a rigorous science of interpretable machine learning](https://arxiv.org/abs/1702.08608). *arXiv preprint arXiv:1702.08608*.
+
+This is a very influential work. The authors tried to *define* what interpretability is and how to *measure* it. Specifically, the author came up with some evaluation methods. 
+
+## 2022-05-09
+
+Collison, P., & Nielsen, M. (2018). [Science is getting less bang for its buck](https://www.theatlantic.com/science/archive/2018/11/diminishing-returns-science/575665/). *The Atlantic*.
+
+This is a thought-provoking article. The authors were interested in whether science is slowing down and why. 
+
+They distinguished between a limited frontier or an endless one. If science is a limited frontier, that means the number of scientific areas and scientific questions we can ask is limited, and the map of science is gradually being filled. If we regard science as an endless frontier, then there are an endless number of possible questions we can answer. If we view science this way, then the slowdown of science can be attributed to the fact that we are focusing on only established fields and not exploring new areas. 
+
+The productivity in the US has been declining since the 1950s, rather than increasing. Since the 1970s, we haven't seen many advances in major technologies, except for computers and the internet. 
+
+{{<block class="info">}}
+[Here](https://news.ycombinator.com/item?id=18468469) is the discussion about this topic on Hacker News.
+{{<end>}}
+
+## 2022-05-08 
+
+1. Li, Y., & Bond, R. M. (2022). [Evidence of the persistence and consistency of social signatures](https://link.springer.com/article/10.1007/s41109-022-00448-0). *Applied Network Science, 7*(1), 1-19.
+
+The authors find that communication networks via text and phone calls are more stable than in-person ones. 
+
+2. Hagar, N., Bandy, J., Trielli, D., Wang, Y., & Diakopoulos, N. (2020). [Defining local news: a computational approach](https://cpb-us-w2.wpmucdn.com/sites.northeastern.edu/dist/d/53/files/2020/02/CJ_2020_paper_40.pdf). In *Computational+ Journalism Symposium 2020*.
+
+This is indeed interesting work! The authors were interested in how we can define local news. They then choose two national news outlets, two regional ones, and two local ones. They then analyzed these outlets' followers on Twitter. They especially focused on the location of these followers. They found clear differences in the cumulative percentage of followers by distances (from the outlet) among these outlets, as shown in Figure 1. 
+
+There are, of course, drawbacks of this approach. First, I am not sure why they do not plot hundreds of outlets rather than just six. Second, subscribers to news outlets are not necessarily Twitter users. Third, not all Twitter users share their location information. 
+
+3. Wang, Y., & Diakopoulos, N. (2021, May). [Journalistic source discovery: Supporting the identification of news sources in user generated content](https://dl.acm.org/doi/abs/10.1145/3411764.3445266). In *Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems* (pp. 1-18).
+
+This is indeed interesting work! The authors were interested in what User-generated content journalists are looking for. They did interviews with professional journalists to find the answers. Then the authors build a tool to help journalists find the content they need. 
+
+## 2022-05-07
+
+1. Barthelemy, R. S., Swirtz, M., Garmon, S., Simmons, E. H., Reeves, K., Falk, M. L., ... & Atherton, T. J. (2022). [LGBT+ physicists: Harassment, persistence, and uneven support](https://journals.aps.org/prper/pdf/10.1103/PhysRevPhysEducRes.18.010124). *Physical Review Physics Education Research, 18*(1), 010124.
+
+The authors conducted an online survey with 324 LGBT+ physicists. They found that 22% of them experienced exclusive behavior in the past year and 36% of them are considering leaving this field. The authors also find that transgender physists are more likely to experience exclusive behavior; 49% of them exeprienced that in the past year. 
+
+2. Sparks, K., Moehl, J., Weber, E., Brelsford, C., & Rose, A. (2022). [Shifting temporal dynamics of human mobility in the United States](https://www.sciencedirect.com/science/article/pii/S0966692322000187). *Journal of Transport Geography, 99*, 103295.
+
+This study examines how COVID-19 impacts human mobility patterns. They find that during the pandemic, in the USA, people's morning activities started later and evening activities started earlier. Also, behavioral patterns in the weekdays are more similar to those in weekends. 
+
+3. Wu, L., Kittur, A., Youn, H., Milojević, S., Leahey, E., Fiore, S. M., & Ahn, Y. Y. (2022). [Metrics and mechanisms: Measuring the unmeasurable in the science of science](https://www.sciencedirect.com/science/article/pii/S1751157722000426). Journal of *Informetrics, 16*(2), 101290.
+
+This is an interesting study. The authors propose that we can measure science in these three categories: hot vs cold science, hard vs soft science, and fast vs slow science. The authors also talked about how to measure those metrics. 
+
+
+## 2022-05-06
+
+1. Abhari, R., Vincent, N., Dambanemuya, H. K., Bodon, H., & Horvát, E. Á. (2022). Twitter Engagement with Retracted Articles: Who, When, and How?. arXiv preprint arXiv:2203.04228.
+
+The authors analyzed Twitter discussions on retracted papers. They find that (1) retracted papers receive more discussion than normal papers, especially among public users and social bots; and (2) most of the discussions occur before retraction. 
+
+2. Vásárhelyi, O., Zakhlebin, I., Milojević, S., & Horvát, E. Á. (2021). [Gender inequities in the online dissemination of scholars’ work.](https://www.pnas.org/doi/10.1073/pnas.2102945118) *Proceedings of the National Academy of Sciences, 118*(39).
+
+This is interesting work. The authors find that female scientists' work is less mentioned compared to men's scientific work. In addition, the authors find that for men, their prior scientific impact and collaboration networks are associated with higher online visibility; For women, however, there are no clear indicators of visibility. 
+
+The authors shared these valuable resources:
+
+  - [Researcher Data Access Program](https://www.altmetric.com/research-access/)
+  - [Microsoft Open Academic Graph](https://www.microsoft.com/en-us/research/project/open-academic-graph/)
+  - [CADRE of Indiana University](https://cadre.iu.edu/about-cadre) which contains Web of Science and Microsoft Academic Graph data. 
+
+## 2022-05-05
+
+1. Rakita, D., Mutlu, B., & Gleicher, M. (2017, March). [A motion retargeting method for effective mimicry-based teleoperation of robot arms](https://graphics.cs.wisc.edu/Papers/2017/RMG17/hri17-preprint.pdf). In *Proceedings of the 2017 ACM/IEEE International Conference on Human-Robot Interaction* (pp. 361-370).
+
+The authors created an interface where a user can control a robot arm by moving their hand (and the robot arm will mimic the movement).
+
+2. Szafir, D. A., Haroz, S., Gleicher, M., & Franconeri, S. (2016). [Four types of ensemble coding in data visualizations](https://jov.arvojournals.org/article.aspx?articleid=2504104). *Journal of vision, 16*(5), 11-11.
+
+The authors proposed that there are four types of ensemble tasks for visualizations: summary, identification, pattern recognition, and segmentation. They also argued that there exist some unanswered questions in each of the tasks. 
+
+## 2022-05-04 
+
+1. Finished Griffiths, T. L., & Steyvers, M. (2004). Finding scientific topics. *Proceedings of the National academy of Sciences, 101*(suppl 1), 5228-5235.
+
+This is indeed great work. I tried to understand the details of this article but gave it up. It is far beyond my capabilities now. But I will revisit this paper. 
+
+This paper proposed a statistical LDA method to find scientific topics and applied this method to identify topics by analyzing PNAS abstracts. The authors identified 300 topics and analyzed hot and cold topics. 
+
+2. Tang, S., Zhang, X., Cryan, J., Metzger, M. J., Zheng, H., & Zhao, B. Y. (2017). Gender bias in the job market: A longitudinal analysis. *Proceedings of the ACM on Human-Computer Interaction, 1*(CSCW), 1-19.
+
+This is indeed innovative work. The authors analyzed 17 million job listings on LinkedIn posted between 2005 and 2016. They found that gender biases in the wording of job listings have been declining over the years. They also changed the wording for some listings to remove gender biases and tested whether these changes lead to more applications from applicants who would not apply otherwise. They found that the effects of word changes are limited; smaller than participants' preconceived biases about job types. For example, even if a job related to technology is devoid of gender bias words, female participants may not want to apply. 
+
+## 2022-05-03 
+
+Griffiths, T. L., & Steyvers, M. (2004). Finding scientific topics. Proceedings of the National academy of Sciences, 101(suppl 1), 5228-5235.
+
+PP. 1-2
+
 ## 2022-05-02
 
 I read some news on Phys.org and also at [https://www.science.org/news/all-news](https://www.science.org/news/all-news)
