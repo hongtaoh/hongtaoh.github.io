@@ -23,7 +23,7 @@ LeCun, Y., Bengio, Y., & Hinton, G. (2015). [Deep learning](https://www.nature.c
 
 This is exciting work! It surprised me that I could understand 1/4 of what this article is talking about, given that the subject is super difficult. 3blue1brown's videos on neural networks helped me a lot. Those vidoes prepared me for understanding this article. 
 
-This article explains how neural networks work. Then the authors introduced Convolutional neural networks and recurrent neural networks. In the end of the article, the authors talk about the future of deep learning. They believe that unsupervised learning will be more important than supervised learning in the future. 
+This article explains how neural networks work. Then the authors introduced convolutional neural networks and recurrent neural networks. In the end of the article, the authors talk about the future of deep learning. They believe that unsupervised learning will be more important than supervised learning in the future. 
 
 ## 2022-05-11
 

@@ -123,14 +123,15 @@ hugo new site quickstart # quickstart 可以换成任何你想用的名称
 {{<end>}}
 
 ```bash
-cd quickstart/themes
+cd quickstart/themes 
 git clone https://github.com/hongtaoh/hugo-ht
-mkdir hugo-ht-new
-cp -r hugo-ht/* hugo-ht-new
-rm -rf hugo-ht
-mv hugo-ht-new hugo-ht
+mkdir hugo-ht-new # create a new folder called hugo-ht-new
+cp -r hugo-ht/* hugo-ht-new # copy everything in hugo-ht to hugo-ht-new
+rm -rf hugo-ht # delete the folder of hugo-ht
+mv hugo-ht-new hugo-ht # change folder name
 cd ..
-cp -r themes/hugo-ht/exampleSite/* .
+cp -r themes/hugo-ht/exampleSite/* . # copy everything in the exampleSite folder to quickstart
+cp -r themes/hugo-ht/archetypes . # replace the archetypes folder
 ```
 
 记得回车。然后运行
