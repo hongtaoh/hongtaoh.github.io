@@ -39,7 +39,7 @@ Since this is a cross-sectional study, it is better not to use the word "predict
 
 2. Lu, L., Liu, J., Yuan, Y. C., Burns, K. S., Lu, E., & Li, D. (2021). [Source trust and COVID-19 information sharing: the mediating roles of emotions and beliefs about sharing](https://journals.sagepub.com/doi/full/10.1177/1090198120984760). *Health Education & Behavior, 48*(2), 132-139.
 
-This is an interesting study. The authors were interested in how trust about source information on COVID-19 is related to information sharing intentions, and how this relationship is mediated with (1) belief about sharing, and (2) emotions. They found that health professionals, government, and academic institutions are more trusted than social media, family, and friends. 
+This is an interesting study. The authors were interested in how trust about source information on COVID-19 is related to information sharing intentions, and how this relationship is mediated by (1) belief about sharing, and (2) emotions. They found that health professionals, government, and academic institutions are more trusted than social media, family, and friends. 
 
 As for mediations, they found that high trust is related to higher intentions of sharing through the belief that sharing leads to positive outcomes. On the other hand, low trust is related to higher intentions of sharing through negative emotions (anxiety, fear, and anger).
 
@@ -55,7 +55,7 @@ Collison, P., & Nielsen, M. (2018). [Science is getting less bang for its buck](
 
 This is a thought-provoking article. The authors were interested in whether science is slowing down and why. 
 
-They distinguished between a limited frontier or an endless one. If science is a limited frontier, that means the number of scientific areas and scientific questions we can ask is limited, and the map of science is gradually being filled. If we regard science as an endless frontier, then there are an endless number of possible questions we can answer. If we view science this way, then the slowdown of science can be attributed to the fact that we are focusing on only established fields and not exploring new areas. 
+They distinguished between a limited frontier and an endless one. If science is a limited frontier, that means the number of scientific areas and scientific questions we can ask is limited, and the map of science is gradually being filled. If we regard science as an endless frontier, then there are an endless number of possible questions we can answer. If we view science this way, then the slowdown of science can be attributed to the fact that we are focusing on only established fields and not exploring new areas. 
 
 The productivity in the US has been declining since the 1950s, rather than increasing. Since the 1970s, we haven't seen many advances in major technologies, except for computers and the internet. 
 
