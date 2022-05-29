@@ -17,6 +17,153 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2022-05-29
+
+1. Bozarth, L., Quercia, D., Capra, L., & Scepanovic, S. (2022). [The role of the Big Geographic Sort in the circulation of misinformation among US Reddit users](https://arxiv.org/pdf/2205.10161). arXiv preprint arXiv:2205.10161.
+
+This is a very innovative study. The authors find that (1) Reddit users are less likely to interact if they are geographically far away from each other, despite the fact that their real identity and location are not known to each other; (2) news seldomly circulated across states, possibly due to the geographically restrained interactions; (3) Reddit users' news consumption is more affected by the personality of the state this user is located compared to the platform itself; and (4) the personality of states is more related to culture than political beliefs.  
+
+2. Quercia, D., Schifanella, R., & Aiello, L. M. (2014, September). [The shortest path to happiness: Recommending beautiful, quiet, and happy routes in the city](https://s.yimg.com/ge/labs/v2/uploads/ht14.pdf). In *Proceedings of the 25th ACM conference on Hypertext and social media* (pp. 116-125).
+
+This is also a very innovative study. The authors suggest that instead of suggesting the shortest path, we should consider beauty, quietness, and happiness when suggesting routes. 
+
+
+## 2022-05-28 (Completed on 2022-05-29)
+
+Bagrow, J., & Ahn, Y. (2022). [Network Cards: concise, readable summaries of network data](https://bagrow.com/pdf/bagrow2022-network-cards-v1.pdf)
+
+This study proposes that we add network cards to network data. This is just like documentation. 
+
+
+## 2022-05-27 (Completed on 2022-05-29)
+
+Nummenmaa, L., Glerean, E., Hari, R., & Hietanen, J. K. (2014). [Bodily maps of emotions](https://www.pnas.org/doi/pdf/10.1073/pnas.1321664111). Proceedings of the National Academy of Sciences, 111(2), 646-651.
+
+This is indeed a very innovative study. The authors asked participants from different cultures to indicate which parts of their body became active and less active when they experience different emotions. The results show that emotions correspond to discrete and yet overlapping areas in our body. These results may help us detect and respond to emotions. 
+
+## 2022-05-26 (Completed on 2022-05-28)
+
+1. Hajibabaei, A., Schiffauerova, A., & Ebadi, A. (2022). [Gender-specific patterns in the artificial intelligence scientific ecosystem](https://www.sciencedirect.com/science/article/pii/S175115772200027X). Journal of Informetrics, 16(2), 101275.
+
+The author analyzed around 40K publications about artificial intelligence published during 2000-2019. The results show an increasing trend for male-female collaborations. 
+
+2. Jiang, L., Stocco, A., Losey, D. M., Abernethy, J. A., Prat, C. S., & Rao, R. P. (2019). [BrainNet: a multi-person brain-to-brain interface for direct collaboration between brains](https://www.nature.com/articles/s41598-019-41895-7). Scientific reports, 9(1), 1-11.
+
+This is a super cool study. The experiment involved three human participants. They played a game. Two participants are senders and one is the receiver. Senders' intentions are recorded by the EEG and then delivered to the receiver through TMS. This way, the three people communicate with each other purely through their brain signals. 
+
+
+## 2022-05-25 (Completed on 2022-05-27)
+
+Read science news at https://www.science.org/news
+
+## 2022-05-24 (Completed on 2022-05-27)
+
+Read news on https://techxplore.com/latest-news/
+
+## 2022-05-23
+
+1. Battiston, P., Sacco, P. L., & Stanca, L. (2022). [Cover effects on citations uncovered: Evidence from Nature](https://www.sciencedirect.com/science/article/pii/S1751157722000451). Journal of Informetrics, 16(2), 101293.
+
+This is an interesting study. It finds that although *Nature* cover publications received significantly more citations than non-cover articles, publishing a cover article decreases citations to its authors' previous articles compared to citations to non-cover article authors' previous articles. 
+
+2. Shang, J., Zeng, M., & Zhang, G. (2022). [Investigating the mentorship effect on the academic success of young scientists: An empirical study of the 985 project universities of China](https://www.sciencedirect.com/science/article/pii/S1751157722000372). Journal of Informetrics, 16(2), 101285.
+
+I do not fully understand this article's result but I got the gist of it. It shows that for young scientists in China, being able to get an academic title (basically an award offered by the government) is influenced by two factors: research output and the status of their mentors. The authors show that the second factor, mentors, does not have a very strong effect. 
+
+## 2022-05-22
+
+1. Zhang, G., Xu, S., Sun, Y., Jiang, C., & Wang, X. (2022). [Understanding the peer review endeavor in scientific publishing](https://www.sciencedirect.com/science/article/pii/S1751157722000165). Journal of Informetrics, 16(2), 101264.
+
+This is indeed interesting work! The authors analyzed how gender, culture, English proficiency, country of origin's economy, and the research field of researchers influence the length of their peer-review. The authors find that males, those working in humanities and social sciences, those who are proficient in English, those in developed economies, and those in non-Confucian cultures, tend to write longer reviews. 
+
+2. Wu, J., Ou, G., Liu, X., & Dong, K. (2022). [How does academic education background affect top researchers’ performance? Evidence from the field of artificial intelligence](https://www.sciencedirect.com/science/article/pii/S175115772200044X). Journal of Informetrics, 16(2), 101292.
+
+This is an interesting paper. The authors analyzed top AI researchers' educational backgrounds. Unsurprisingly, they found that most of these researchers were educated in the United States and got their highest degrees from prestigious universities. 
+
+Some of the major findings of this paper:
+  - More publications during study is related to higher outputs later. 
+  - Those who graduated from prestigious universities have higher citations. 
+  - The degrees received, i.e., BS, MS, or PhD have influences on scientific performance for people working in the industry but not for those working in academia. 
+
+
+## 2022-05-21 (Completed on 2022-05-22)
+
+Lin, Y., Evans, J. A., & Wu, L. (2022). [New directions in science emerge from disconnection and discord](https://www.sciencedirect.com/science/article/pii/S175115772100105X). Journal of Informetrics, 16(1), 101234.
+
+This study finds that novel papers, characterized by disconnected papers in their references, disrupt science. Conventional papers, characterized by well-connected papers in their references, develop science. It takes longer for novel papers to reveal its impact whereas it takes shorter for conventional papers to get many citations. 
+
+## 2022-05-20
+
+This study finds that video conferencing hinders the generation of creative ideas. https://www.nature.com/articles/s41586-022-04643-y
+
+
+## 2022-05-19
+
+1. Wasserstein, R. L., & Lazar, N. A. (2016). [The ASA statement on p-values: context, process, and purpose](https://www.tandfonline.com/doi/full/10.1080/00031305.2016.1154108). The American Statistician, 70(2), 129-133.
+
+The American Statistical Association published this statement on $p$-values. It clarifies that $p$ values do not measure the probability that one argument is true and does not measure the effect size. They mention that $p$ values are oftentimes misunderstood and misused by researchers. 
+
+2. Nuzzo, R. (2014). [Statistical errors](https://www.nature.com/articles/506150a). Nature, 506(7487), 150.
+
+This article talks about why p-values are quirky and not as reliable as many people think. 
+
+## 2022-05-18
+
+Smaldino, P. E. (2017). [Models are stupid, and we need more of them](https://smaldino.com/wp/wp-content/uploads/2018/01/Smaldino2017-ModelsAreStupid.pdf). Computational social psychology, 311-331.
+
+This is indeed interesting work. The author argues that although models are imperfect, they are necessary. For example, Newton's Gravity model was proven inaccurate by the General Relativity but it is nonetheless a very good approximation of reality and very helpful for humans to understand the world. 
+
+## 2022-05-17
+
+1. Bhattacharya, J., & Packalen, M. (2020). [Stagnation and scientific incentives (No. w26752)](https://www.nber.org/system/files/working_papers/w26752/w26752.pdf). *National Bureau of Economic Research*.
+
+With citation being the indicator of a scientist's success, more and more scientists are working on the Incremental Advance stage of scientific ideas, rather than the Exploration and the Breakthrough stages, as is illustrated in Figure 4. This causes scientific stagnation. 
+
+The authors came up with an "edge factor" which measures scientific novelty. Impact factor rewards work done in the breakthrough and incremental stages whereas edge factor rewards exploratory work. 
+
+The authors also mentioned how authors and journals may "play the game" of edge factor. For example, they can use synonyms of an old idea, and then their article will be regarded as containing new ideas. The authors believe that the problem can be solved, by building a comprehensive dictionary or using machine learning algorithms. 
+
+2. Shibayama, S., Yin, D., & Matsumoto, K. (2021). [Measuring novelty in science with word embedding](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0254034). PloS one, 16(7), e0254034.
+
+As the title indicates, the authors used machine learning to measure the novelty of a scientific paper based on its reference lists. 
+
+## 2022-05-16 
+
+1. Finished [Samldio & McElreath (2016)](https://royalsocietypublishing.org/doi/full/10.1098/rsos.160384?wm=3049_a111).
+
+The authors demonstrated, through a model and simulation, why bad sciences triumph in today's scientific culture. 
+
+2. Bhattacharya, J., & Packalen, M. (2020). [Stagnation and scientific incentives (No. w26752)](https://www.nber.org/system/files/working_papers/w26752/w26752.pdf). *National Bureau of Economic Research*.
+
+PP. 1-26
+
+## 2022-05-15
+
+Smaldino, P. E., & McElreath, R. (2016). [The natural selection of bad science.](https://royalsocietypublishing.org/doi/full/10.1098/rsos.160384?wm=3049_a111) *Royal Society open science, 3*(9), 160384.
+
+PP. 1-8
+
+## 2022-05-14
+
+1. Bowman, N. D., & Keene, J. R. (2018). [A layered framework for considering open science practices](https://www.tandfonline.com/doi/pdf/10.1080/08824096.2018.1513273). *Communication Research Reports, 35*(4), 363-372.
+
+This is an interesting study. The authors proposed a "layered" framework for open science practices. From the outside to the inside is this: by request, shared materials, shared analysis, shared data, and pre-registration. 
+
+{{<block class="info">}}
+I am thinking of a follow-up study: what are the status-quo of open science practices in publications in the field of communication? How many of them share data, and are pre-registered?
+{{<end>}}
+
+
+2. Lu, L., Liu, J., Yuan, Y. C., Lu, E., & Li, D. (2022). [Psychological antecedents of COVID-19 information sharing within strong-tie and weak-tie networks](https://www.sciencedirect.com/science/article/pii/S2772628222000206). *PEC innovation, 1*, 100035.
+
+This study looks at how emotions and beliefs (about the usefulness of information) are related to sharing information about COVID-19. The authors find that people who have negative emotions and strong belief that the information to be shared is helpful to prevent the disease will share the information with their strong-tie friends. For information sharing with weak-tie friends, only negative emotion is related. 
+
+## 2022-05-13
+
+Petroni, F., Rocktäschel, T., Lewis, P., Bakhtin, A., Wu, Y., Miller, A. H., & Riedel, S. (2019). [Language models as knowledge bases?](https://arxiv.org/pdf/1909.01066.pdf). *arXiv preprint arXiv:1909.01066*.
+
+Although I was not able to fully understand this article, I think it is an interesting study. The authors are interested in whether pre-trained language models, both unidirectional (fairseq-fconv, Transformer-XL) and directional (ELMo and BERT) store relational knowledge and how these models compare with knowledge sources (such as Google-RE and T-REx) in terms of allowing us extract that relational knowledge (for example, where was Dant born?). The results show that BERT-large performs very well in terms of enabling knowledge extraction. 
+
 ## 2022-05-12
 
 LeCun, Y., Bengio, Y., & Hinton, G. (2015). [Deep learning](https://www.nature.com/articles/nature14539). *nature, 521*(7553), 436-444.

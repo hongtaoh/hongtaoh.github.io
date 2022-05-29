@@ -78,6 +78,11 @@ type : list-single
 <!-- 2. 除非你很明确你之后的研究会用到、怎么用到一个东西，否则不要轻易花时间去学它。（这句话的适用范围请自己把握好度。我说这句话是想提醒我，要让科研项目告诉自己该学什么，而不是漫无目的地去学。） -->
 - 博士生涯中，非常容易每天都在忙碌琐碎的事情（助教任务、助研任务、课程作业、回复邮件...）而忘记自己的长远规划（每天看论文、保持身体和心理健康、维持良好人际关系等）。
 
+## 我经常看的博客
+
+<!-- https://blog.shuiba.co/
+https://dlyang.me/ -->
+
 ## 关于本站
 
 本站结构采用 [Hugo](https://gohugo.io)。主题为在谢益辉 [Hugo Xmin](https://github.com/yihui/hugo-xmin) 基础上微改而来的 [Hugo-ht](https://github.com/hongtaoh/hugo-ht)。
