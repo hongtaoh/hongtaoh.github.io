@@ -7,6 +7,10 @@ draft: false
 toc: false
 ---
 {{<block class="info">}}
+博主张沥今分享了[她的博士申请经验](https://lijinzhang.com/post/2022-03-03-tutorial-phd-app/)，我觉得很值得参考。
+{{<end>}}
+
+{{<block class="info">}}
 对于硕、博士申请者，我强烈建议你[建一个网站](/cn/2021/06/17/homepage/)，并将其放到你的简历里。
 {{<end>}}
 
