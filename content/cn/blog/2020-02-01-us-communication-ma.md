@@ -64,7 +64,7 @@ aliases:
 
   大部分学校是让你做助教，非常少的学校有助研 (RA) 的机会。
 
-对于家里多金的朋友，如果这些以下项目申请不上，可以用钱砸以下硕士项目：南加大，宾大，密歇根州立，威斯康星大学麦迪逊分校新闻与大众传播学院，西北大学，纽约布法罗等等，这些都是很好的项目，但是不给钱。有些学校会给一些小奖，比如维克森林大学 (Wake Forest University)。
+对于家里多金的朋友，如果以下项目申请不上，可以用钱砸这些硕士项目：南加大，宾大，密歇根州立，威斯康星大学麦迪逊分校新闻与大众传播学院，西北大学，纽约布法罗等等，这些都是很好的项目，但是不给钱。有些学校会给一些小奖，比如维克森林大学 (Wake Forest University)。
 
 ## 我比较确定给硕士生全奖的项目
 
@@ -146,7 +146,7 @@ aliases:
 
 - 威斯康星大学密尔沃基分校 (University of Wisconsin-Milwaukee, [Department of Communication](https://uwm.edu/communication/))
 
-- 南伊利诺伊大学 (Southern Illinois University, [Department of Communication Studies](http://cola.siu.edu/communicationstudies/index.php)], 请参阅 [MA Handbook](https://cola.siu.edu/communicationstudies/graduate/))
+- 南伊利诺伊大学 (Southern Illinois University, [Department of Communication Studies](http://cola.siu.edu/communicationstudies/index.php), 请参阅 [MA Handbook](https://cola.siu.edu/communicationstudies/graduate/))
 
 - 孟菲斯大学 (University of Memphis, [Department of Communication](https://www.memphis.edu/communication/graduate/assistantships.php))
 
