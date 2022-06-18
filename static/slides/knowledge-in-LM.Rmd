@@ -1,0 +1,179 @@
+---
+title: "How Much Knowledge Can You Pack Into the Parameters of a Language Model?"
+subtitle: "Prof. Junjie Hu's NLP Reading Group"
+author: "Hongtao Hao"
+institute: ""
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+background-image: url(https://raw.githubusercontent.com/hongtaoh/hongtaoh.github.io/sources/static/media/slides/nlp-reading/author.png)
+background-size: 700px
+background-position: 50% 50%
+
+## Authors
+---
+
+## Before You Fall Asleep
+
+--
+### Goal
+Fine-tune language models pre-trained on **unstructured text** and see how well they perform on question answering tasks **without any external resources**.
+
+--
+### Result
+  1. The performance is competitive with open-domain question answering systems that utilize external knowledge resources.
+
+--
+
+  2. The performance increases as the model gets bigger.
+
+---
+## Motivation
+
+Neural language models trained on unstructured and unlabeled text are able to store implicit knowledge. 
+
+Okay, but so what?
+
+--
+1. We have much more unstructured and unlabeled text than labeled text data. 
+
+2. These models are better at information retrievel when queried with informal queries (Don't forget that they are language models!)
+
+---
+
+## How is this work different from others?
+
+- No relevant information, or external resources allowed
+
+- Purpose: see how much knowledge is stored in the model's parameters. 
+- Also looks at whether more parameters mean more knowledge stored. 
+
+---
+class: inverse, middle, center
+
+# Background
+
+---
+## Question answering
+
+- Definition: select or output the correct answer when asked a question
+
+--
+
+- Types: 
+
+  1. Reading comprehension: providing context where answer is stored.
+  
+--
+
+  2. Open-domain question answering: allowing access to external knowledge bases. 
+
+---
+## Transfer learning with language models
+
+- Transfer learning in NLP: train a model with unstructured text before fine-tuning it on downstream tasks. 
+
+- Advantages: 
+  - word meaning
+  - syntax
+  - world knowledge
+
+--
+
+- However, the most popular model in NLP transfer learning--BERT--is not applicable in this study because as an encoder-only model, it is not able to answer question without a context. 
+
+--
+
+- Encoder-decoder Transformer, i.e., “Text-to-Text Transfer Transformer” (T5)
+
+---
+class: inverse, middle, center
+
+# Experiment
+
+---
+## Datasets
+
+- Natural Questions
+
+- WebQuestions
+
+- TriviaQA
+
+--
+
+Each of these datasets contains both questions and the associated context. In this study, only questions are used. 
+
+---
+## Training
+
+- Original T5 models were trained on a multi-task mixture: reading comprehension, translation, classification, question answering, etc.
+
+   - Datasets used in original T5 models training are different from the evaluation datasets in this study. 
+  
+   - Because original T5 was trained on question answering tasks, this study also reports the performance of T5.1.1 checkpoints that were only trained on unstructured text. 
+  
+  
+- Model size
+  1. Base
+  2. Large
+  3. 3 Billion
+  4. 11 Billion
+
+- Salient Span Masking
+
+---
+class: inverse, middle, center
+
+# Results
+
+---
+background-image: url(https://raw.githubusercontent.com/hongtaoh/hongtaoh.github.io/sources/static/media/slides/nlp-reading/result.png)
+background-size: 400px
+background-position: 50% 50%
+
+---
+## Major results 
+
+1. Performance is competitive with open-domain QA systems
+
+2. Performance increases as the model gets bigger
+
+3. SSM improves performance
+
+---
+## Are large models with the compuatio cost?
+
+Probably yes. Open-domain systems are computational expensive as well. 
+
+---
+background-image: url(https://raw.githubusercontent.com/hongtaoh/hongtaoh.github.io/sources/static/media/slides/nlp-reading/false-negatives.png)
+background-size: 800px
+background-position: 50% 50%
+
+---
+## False negatives
+
+The performance of closed-book QA systems may be underestimated by the evaluation procedure of benchmarks. 
+
+Among 150 hand coded answers (to questions in validation set of Natural Questions), only 62% are true negatives. 
+
+If we consider this, the score will be 57.8
+
+
+---
+class: inverse, center, middle
+
+# Thank you!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+Slides source codes can be found  [**here**](https://raw.githubusercontent.com/hongtaoh/hongtaoh.github.io/sources/static/slides/knowledge-in-LM.Rmd).
+  
+
