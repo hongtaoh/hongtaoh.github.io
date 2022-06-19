@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: live-in-bloomington
 draft: false
 toc: true
+tags: 经验
 ---
 
 {{<block class="note">}}

@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: principles
 draft: false
 toc: true
+tags: 读书
 ---
 {{<block class="info">}}
 我的主要收获：

@@ -5,6 +5,7 @@ author: 郝鸿涛
 slug: confidence-hierarchy
 draft: false
 toc: true
+tags: 感悟
 ---
 
 ## 第一种层次：条件自信

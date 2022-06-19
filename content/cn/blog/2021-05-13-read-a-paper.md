@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: read-a-paper
 draft: false
 toc: false
+tags: 科研
 ---
 
 之前读了施一公在科学网上写的[《学生如何提高专业英文阅读能力》](http://blog.sciencenet.cn/blog-46212-350496.html)，当时没有太大体会。连续半年多[每天看半小时论文](/en/apad/)之后，再读这篇帖子，有一些体会，就来分享一下。

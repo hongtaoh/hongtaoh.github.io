@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: boc-money-transfer
 draft: false
 toc: false
+tags: 经验
 ---
 
 首先，你需要中国银行的 App。下载、登陆后，点击「结汇购汇」-> 选择你想要的外币 ->「买外币」。钞汇选项请选择「现汇」。购汇结束后回到 App 首页，选择「转账」->「跨境汇款」->「境外他行」。

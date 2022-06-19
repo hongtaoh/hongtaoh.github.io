@@ -5,6 +5,7 @@ author: 郝鸿涛
 slug: wechat-contacts-extracting
 draft: false
 toc: false
+tags: 经历
 ---
 
 我微信上有将近800个好友。我在为之后彻底不用微信做准备，因此需要把这800个好友认真浏览一遍，看哪些需要我进一步联系，好问一下他们微信外的联系方式，哪些则不用管。

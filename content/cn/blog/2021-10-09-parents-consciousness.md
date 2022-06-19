@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: parents-consciousness
 draft: false
 toc: false
+tags: 思考
 ---
  我觉得父母的意识决定了孩子某一方面的发展，有时候真不在于是否有钱。
 

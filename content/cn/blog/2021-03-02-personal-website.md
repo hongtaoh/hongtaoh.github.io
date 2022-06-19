@@ -3,8 +3,9 @@ title: "如何零基础免费搭建个人网站"
 date: 2021-03-02T12:03:38-05:00
 author: "郝鸿涛"
 slug: personal-website-tutorial
-draft: draft
+draft: false
 toc: true
+tags: 编程
 aliases: 
   - /cn/2021/03/02/personal-webiste-tutorial/
 ---

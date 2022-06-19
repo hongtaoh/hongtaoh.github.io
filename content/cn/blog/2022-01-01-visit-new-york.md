@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: nyc
 draft: false
 toc: false
+tags: 经历
 ---
 {{<block class="info">}}
 2019 年 5 月份参加完 ICA 会议后，我从 DC 坐大巴到纽约。在纽约呆了 4 天。以下是我当时发在朋友圈的游记，写于从纽约开往波士顿的大巴上。

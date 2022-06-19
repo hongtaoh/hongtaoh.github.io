@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: driving-knowledge-wi
 draft: false
 toc: true
+tags: 经验
 ---
 你可以看这篇帖子的 [PDF 版](/files/cnblog/wi-driving-knowledge.pdf) 以及它的[源代码](https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/files/cnblog/wi-driving-knowledge.Rmd)。
 

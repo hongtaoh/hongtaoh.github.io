@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: kids
 draft: false
 toc: false
+tags: 思考
 ---
 一般人都能想到的是美国的孩子比较独立。但，原因是什么？我觉得原因在于孩子的「所属权」。
 

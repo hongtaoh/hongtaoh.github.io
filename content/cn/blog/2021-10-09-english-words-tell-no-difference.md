@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: en-words-differences
 draft: false
 toc: false
+tags: 英语
 ---
 对于英语词汇的辨析，我自己之前还写过，但我现在的感觉是不要记，不用查，你只需要多读，自然就懂了。比如， learn 和 study 的区别：
 

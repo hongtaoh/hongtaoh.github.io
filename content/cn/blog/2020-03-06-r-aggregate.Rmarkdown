@@ -4,7 +4,7 @@ author: 郝鸿涛
 date: '2020-03-06'
 slug: r-aggregate-function-na
 categories: []
-tags: []
+tags: 统计
 ---
 
 今天碰到的一个问题是，用 `aggregate` 求不同组平均数的时候，缺失值不好处理。下面通过用 `iris` 这个经典数据说一下如果处理缺失值。

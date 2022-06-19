@@ -5,6 +5,7 @@ author: 郝鸿涛
 slug: after-class-after-classes
 draft: false
 toc: false
+tags: 英语
 ---
 
 我在[这里](https://english.stackexchange.com/questions/406771/after-class-vs-after-classes) 和 [这里](https://hinative.com/en-US/questions/438363)看到的解答。

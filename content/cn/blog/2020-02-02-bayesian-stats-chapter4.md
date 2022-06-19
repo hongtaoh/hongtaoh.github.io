@@ -4,7 +4,7 @@ author: 郝鸿涛
 date: '2020-02-02'
 slug: bayesian-stats-chapter4
 categories:
-tags:
+tags: 统计
 toc: true
 ---
 上篇，也就是第二章，k老师主要是简单介绍了一下贝叶斯的方法。第三章是介绍了 r 语言的基本操作，这里不再介绍。从第四章开始，整本书渐渐进入主体，开始涉及贝叶斯的核心。

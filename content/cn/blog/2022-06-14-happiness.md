@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: happiness
 draft: true
 toc: false
+tags: 人生
 ---
 
 前几天我在思考的一个问题是，我的幸福，有多少我自己说了算。

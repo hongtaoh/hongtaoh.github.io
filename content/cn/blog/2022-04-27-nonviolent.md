@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: nonviolent
 draft: false
 toc: false
+tags: 读书
 ---
 {{<figure src="/media/cnblog/non-violent.png" caption="非暴力沟通">}}
 

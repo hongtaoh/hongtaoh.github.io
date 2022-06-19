@@ -5,6 +5,7 @@ author: 郝鸿涛
 slug: english-listening
 draft: false
 toc: false
+tags: 英语
 ---
 
 最近在学日语，我忽然想到我的英语听力能力。就想着是不是之后每天听《老友记》来提高自己的听力。我看了一集，就觉得不太适合我。

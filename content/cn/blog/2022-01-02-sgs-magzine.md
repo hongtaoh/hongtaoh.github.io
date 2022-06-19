@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: sgs-mgz
 draft: false
 toc: false
+tags: 经历
 ---
 {{<block class="info">}}
 

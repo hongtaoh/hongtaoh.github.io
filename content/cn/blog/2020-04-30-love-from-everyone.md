@@ -5,6 +5,7 @@ author: 郝鸿涛
 slug: love-from-everyone-conquers-neumoconiosis
 draft: false
 toc: true
+tags: 稿件
 ---
 >注：原文写于 2016 年 12 月
 

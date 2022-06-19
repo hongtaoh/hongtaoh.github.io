@@ -4,6 +4,7 @@ date: 2020-01-18T11:19:33-05:00
 author: 郝鸿涛
 slug: underbrag-cn-and-usa
 draft: false
+tags: 思考
 ---
 
 前几天，在 [John Kruschke](https://psych.indiana.edu/directory/faculty/kruschke-john.html) 老师的 [一门统计课](https://jkkweb.sitehost.iu.edu/jkkteach/P533/) 上，他讲到他去德国参观哥廷根的高斯故居。他说他到达故居时是晚上，周围一个人都没有，但是他又想去进去看看。他便推开门走了进去。

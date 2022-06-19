@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: en-learning-greed
 draft: false
 toc: false
+tags: 感悟
 ---
 我觉得”贪婪“是中国人学英语路上非常严重的一个问题，我甚至觉得它是最严重的问题，没有之一。
 

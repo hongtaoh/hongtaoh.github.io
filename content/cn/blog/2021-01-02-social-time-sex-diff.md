@@ -5,6 +5,7 @@ author: 郝鸿涛
 slug: social-time-gender-diff
 draft: false
 toc: false
+tags: 科研
 ---
 在周涛老师的[科学网博客上](http://blog.sciencenet.cn/blog-3075-676890.html)看到他提到这篇论文：
 

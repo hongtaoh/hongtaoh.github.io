@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: macbook-air-battery-replace
 draft: false
 toc: false
+tags: 经验
 ---
 在亚马逊上搜 "Macbook air battery" 有非常多，买下后很容易就自己换好了。我猜在淘宝搜 ”Macbook air 电池“应该也有很多结果吧。
 

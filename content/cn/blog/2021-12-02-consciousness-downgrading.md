@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: consciousness-downgrading
 draft: false
 toc: false
+tags: 思考
 ---
 
 大刘的《三体》里提到，由于战争与猜忌，宇宙从十一维度一直坍缩到二维。书中对四维时空的描写令人神往，更不要提十一维。有一天我突然想到，人的意识也许也是如此。

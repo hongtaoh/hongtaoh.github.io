@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: still-forest-pool
 draft: false
 toc: false
+tags: 读书
 ---
 
 {{<figure src="/media/cnblog/a_still_forest_poll.png">}}

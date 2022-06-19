@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: relationship
 draft: false
 toc: true
+tags: 读书
 ---
 {{<figure src="/media/cnblog/relationship-bridge-soul.png" caption="《亲密关系》中文版封面" width="350">}}
 

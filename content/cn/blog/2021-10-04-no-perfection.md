@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: no-perfection
 draft: false
 toc: false
+tags: 感悟
 ---
 很多给博士的经验贴都提到不要追求完美，特别是在写毕业论文和发表其他论文的时候。如果过度追求完美，你根本就不可能提交论文，因为你可以无限度地完善。发论文也是这样，如果你期望你的论文是完美的，那么你一个字都没办法写下去。Philip Guo 有[一条建议](/en/2021/09/22/philip-guo-phd-advice/)是，先把字数凑够，再说别的[^1]。我深表同意。好像是在 [YY Lab](http://yongyeol.com/group/) 的一次会上 YY 老师提到 "Writig is about iteration." 意思是说写东西就是要反复修改，所以别指望你的第一稿多么完美。
   

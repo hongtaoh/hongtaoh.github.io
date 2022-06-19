@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: living-with-death
 draft: false
 toc: true
+tags: 读书
 ---
 {{<figure src="/media/cnblog/living-with-death.png" caption="《生死学十四讲》封面">}}
 
