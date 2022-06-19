@@ -5,6 +5,7 @@ author: 郝鸿涛
 slug: zhang-and-jobs
 draft: false
 toc: false
+tags: 思考
 ---
 
 毫无疑问，两者都极其成功，至少在世俗意义上如此。除此之外，他们还有一个共同点：都没有做到「己所不欲，勿施于人」。

@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: reflection-perservere
 draft: false
 toc: false
+tags: 感悟
 ---
 
 前几天和一位朋友的聊天，我提到了自己每天的反省和坚持。给朋友的信息中我也强调了这两点：

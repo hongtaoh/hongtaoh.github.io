@@ -4,7 +4,7 @@ author: 郝鸿涛
 date: '2020-01-19'
 slug: hugo-google-noto-serif-sc
 categories:
-tags: 
+tags: 编程
 ---
 
 打开 [Google Fonts](https://fonts.google.com/)。在 "Language" 下拉菜单栏选择 "Chinese (Simplified)"。Noto Sans Serif" 是思远宋体。打开，选择你要的样式，一般最常见的是 "Regular 400"，点开其所对应的 "Select this style"，侧边会显示出 "Selected family"，如果你想选不止一个样式，可以选 "Add more styles"。

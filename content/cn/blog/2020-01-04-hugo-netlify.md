@@ -4,6 +4,7 @@ author: 郝鸿涛
 date: '2020-01-04'
 slug: hugo-netlify-deploy
 toc: true
+tags: 编程
 aliases:
     - /cn/2020-01-04-hugo-netlify-deployment/
     - /cn/2020/01/04/hugo-netlify-deployment/

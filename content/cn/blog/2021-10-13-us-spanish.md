@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: spanishi-in-us
 draft: false
 toc: false
+tags: 经历
 ---
 西班牙语在美国真的是很流行，几乎成了第二语言，或者说本来就是第二语言。2018 年底去佛罗里达，感觉那里说西班牙语的人比说英语的人要多。
 

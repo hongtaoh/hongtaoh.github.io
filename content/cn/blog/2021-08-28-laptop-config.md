@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: laptop-configuration
 draft: false
 toc: false
+tags: 思考
 ---
 我猜大多数人买电脑时都十分在乎电脑的配置，但我觉得很多时候那么高的配置你根本用不上。
 

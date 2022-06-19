@@ -5,6 +5,7 @@ author: 郝鸿涛
 slug: how-to-start
 draft: false
 toc: false
+tags: 感悟
 ---
 
 前几天和一位朋友告诉我她新的一年想写点东西，她虽然喜欢，但一直没开始。这让我想到我 2020 年的一些体会，就来分享一下。

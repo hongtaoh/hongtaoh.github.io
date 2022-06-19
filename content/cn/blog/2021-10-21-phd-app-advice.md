@@ -1,10 +1,11 @@
 ---
-title: "美国博士申请的一些经验"
+title: "美国博士申请的一些经验和我的申请材料"
 date: 2021-10-21T20:54:58-05:00
 author: "郝鸿涛"
 slug: us-phd-app-advice
 draft: false
 toc: false
+tags: 留学
 ---
 {{<block class="info">}}
 博主张沥今分享了[她的博士申请经验](https://lijinzhang.com/post/2022-03-03-tutorial-phd-app/)，我觉得很值得参考。

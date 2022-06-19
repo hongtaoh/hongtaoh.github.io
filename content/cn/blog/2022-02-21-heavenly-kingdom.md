@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: heavenly-kingdom
 draft: false
 toc: false
+tags: 读书
 ---
 这本书是普乾推荐给我的。
 

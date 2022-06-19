@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: social-comparison
 draft: false
 toc: false
+tags: 思考
 ---
 我觉得现代社会人们心中的焦虑很大一部分是因为本不该有的社会比较。
 

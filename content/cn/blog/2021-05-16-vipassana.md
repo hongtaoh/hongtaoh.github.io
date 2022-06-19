@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: vipassana
 draft: false
 toc: false
+tags: 经历
 ---
 祖平问我参加十日内观的感受。我就想把我的经历和体会简单写下来。
 

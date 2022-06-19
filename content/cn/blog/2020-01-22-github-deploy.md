@@ -4,6 +4,7 @@ date: 2020-01-22T17:04:17-05:00
 slug: hugo-github-deploy
 author: 郝鸿涛
 toc: true
+tags: 编程
 aliases:
     - /cn/2020/01/22/deploy-on-github/
     - /cn/2020/01/22/github-deploy/

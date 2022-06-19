@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: thyself
 draft: false
 toc: false
+tags: 感悟
 ---
 
 {{<figure src="https://www.yesilscience.com/wp-content/uploads/2020/04/know-thyself-830x483.jpg" caption="图片来源：yesilscience.com/know-thyself-2/">}}

@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: hugo aliases
 draft: false
 toc: false
+tags: 编程
 ---
 要用到 [Hugo Aliases](https://gohugo.io/content-management/urls/#aliases)。
 

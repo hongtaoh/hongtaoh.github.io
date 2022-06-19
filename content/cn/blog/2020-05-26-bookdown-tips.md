@@ -5,6 +5,7 @@ author: 郝鸿涛
 slug: bookdown-tips
 draft: false
 toc: true
+tags: 编程
 ---
 
 最近的一周一直在调试 [Bookdown](https://github.com/rstudio/bookdown)。其实，Bookdown 本身并不难，[益辉大神](https://yihui.org/) 在他的那本 [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/) 已经介绍的非常清楚。我一直在调试的、也是我一直不会的主要集中在 PDF 的样式上，比如：

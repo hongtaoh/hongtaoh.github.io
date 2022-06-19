@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: persevere
 draft: false
 toc: false
+tags: 稿件
 ---
 {{<block class="note">}}
 全国新高考Ⅰ卷 【适用省份：山东 湖北 江苏 河北 广东 湖南 福建】

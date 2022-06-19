@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: step-outside-comfort-zone
 draft: false
 toc: false
+tags: 感悟
 ---
 
 最近上 Bilge Mutlu 老师的 CS770 Human Computer Interaction 这门课。其中有一个作业是要求我们做一个定性的研究，需要做采访。我最讨厌的就是我的研究中要采访到别人，应该是以为我讨厌求人，也讨厌被拒绝的感受。

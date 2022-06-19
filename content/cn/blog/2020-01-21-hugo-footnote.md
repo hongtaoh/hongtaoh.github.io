@@ -2,6 +2,7 @@
 title: Hugo 如何实现脚注
 date: 2020-01-21T12:22:37-05:00
 author: 郝鸿涛
+tags: 编程
 ---
 [Hugo](https://gohugo.io/) 从 [v0.60.0](https://github.com/gohugoio/hugo/releases/tag/v0.60.0)开始，Markdown 解析器不再使用 [Blackfriday](https://github.com/russross/blackfriday), 改用由 [yuin](https://github.com/yuin)[^1] 编写的 [goldmark](https://github.com/yuin/goldmark) 。
 

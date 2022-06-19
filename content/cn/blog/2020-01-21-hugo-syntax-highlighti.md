@@ -3,6 +3,7 @@ title: Hugo 如何代码高亮
 date: 2020-01-21T12:22:37-05:00
 author: 郝鸿涛
 draft: true
+tags: 编程
 ---
 [Hugo](https://gohugo.io/) 目前自带代码高亮功能，官网的[说明](https://gohugo.io/getting-started/configuration-markup/#highlight) 列出如下的设置选项 （以 `toml` 格式为例）：
 

@@ -5,6 +5,7 @@ author: "郝鸿涛"
 slug: core-strength
 draft: false
 toc: true
+tags: 感悟
 ---
 ## 核心价值
 

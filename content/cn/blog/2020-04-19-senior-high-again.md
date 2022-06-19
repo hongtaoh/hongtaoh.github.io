@@ -5,6 +5,7 @@ author: 郝鸿涛
 slug: senior-high
 draft: false
 toc: true
+tags: 感悟
 aliases:
   - /cn/2020/04/19/if-senior-high-again/
 ---
