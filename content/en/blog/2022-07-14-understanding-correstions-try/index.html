@@ -1,22 +1,23 @@
 ---
-title: Understanding Correlation
-author: Hongtao Hao
+title: Understanding Correlations
+author: 'Hongtao '
 date: '2022-07-14'
 slug: corr
 categories: []
-tags:
-  - statistics
+tags: stats
 toc: no
 ---
 
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 
 </div>
 
-<p>Load data:</p>
-<pre class="r"><code>df &lt;- read.csv(&quot;../../../static/files/selfie-data.csv&quot;)</code></pre>
+<p>This post is based on the book of <a href="https://greenteapress.com/wp/think-stats-2e/"><em>Think Stats 2e</em></a> by Allen B. Downey.</p>
+<p>Load package and data:</p>
+<pre class="r"><code>library(ggplot2)
+df &lt;- read.csv(&quot;../../../../static/files/selfie-data.csv&quot;)</code></pre>
 <div id="plotting" class="section level2">
 <h2>Plotting</h2>
 <p>Scatter plot</p>
@@ -24,8 +25,7 @@ toc: no
   geom_point() +
   xlab(&quot;Height (in cm)&quot;) +
   ylab(&quot;Weight (in kg)&quot;)</code></pre>
-<p><img src="/en/blog/2022-07-14-corr_files/figure-html/scatter-1.png" width="672" /></p>
-<!-- Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot. -->
+<p><img src="staticscatter-1.png" width="672" /></p>
 <p>The problem is that people might round their weight and height off. For example, 164.5 cm will be rounded as 165 cm. To reverse the rounding effect, we can add some random noise. This procudure is called <strong>jittering</strong>.</p>
 <p>We can define a jitter function by ourselves:</p>
 <pre class="r"><code>MyJitter &lt;- function(values, jitter = 0.5) {
@@ -38,13 +38,13 @@ toc: no
   geom_point() +
   xlab(&quot;Height (in cm)&quot;) +
   ylab(&quot;Weight (in kg)&quot;)</code></pre>
-<p><img src="/en/blog/2022-07-14-corr_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="staticunnamed-chunk-2-1.png" width="672" /></p>
 <p>We can change the jitter to be <span class="math inline">\(1\)</span>:</p>
 <pre class="r"><code>ggplot(df, aes(x=MyJitter(height,1), y=MyJitter(weight,1))) +
   geom_point() +
   xlab(&quot;Height (in cm)&quot;) +
   ylab(&quot;Weight (in kg)&quot;)</code></pre>
-<p><img src="/en/blog/2022-07-14-corr_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="staticunnamed-chunk-3-1.png" width="672" /></p>
 <p>Remember that jittering is good for visualizations but in the actual data analysis, we want to analyze the original data.</p>
 <p>Even with jittering, the scatter plot has some issues. For example, some points get overlapped in crowded areas. This will give outliers lots of highlights that they don’t deserve. This is because, for example, in a crowded point there might be 10 overlapping points but we nonetheless consider it as important as an outlier that also occupy one point. This effect is called <strong>saturation</strong>.</p>
 <p>To solve this problem, we can set the <code>alpha</code> parameter, basically making the points transparent. If two points overlap, we make that place darker. That is to say, the color corresponds to the density.</p>
@@ -54,7 +54,7 @@ toc: no
   geom_point(alpha = 0.5) +
   xlab(&quot;Height (in cm)&quot;) +
   ylab(&quot;Weight (in kg)&quot;)</code></pre>
-<p><img src="/en/blog/2022-07-14-corr_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="staticunnamed-chunk-4-1.png" width="672" /></p>
 </div>
 <div id="covariance" class="section level2">
 <h2>Covariance</h2>
