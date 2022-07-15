@@ -1,19 +1,23 @@
 ---
-title: Understanding Correlation
-author: Hongtao Hao
+title: Understanding Correlations
+author: 'Hongtao '
 date: '2022-07-14'
 slug: corr
-categories:
-tags: statistics
+categories: []
+tags: stats
 toc: no
 ---
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.path = "static")
+```
+
 This post is based on the book of [*Think Stats 2e*](https://greenteapress.com/wp/think-stats-2e/) by Allen B. Downey. 
 
 Load package and data:
 
 ```{r load_data}
 library(ggplot2)
-df <- read.csv("../../static/files/selfie-data.csv")
+df <- read.csv("../../../../static/files/selfie-data.csv")
 ```
 
 ## Plotting 
@@ -26,8 +30,6 @@ ggplot(df, aes(x=height, y=weight)) +
   xlab("Height (in cm)") +
   ylab("Weight (in kg)")
 ```
-
-<!-- Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot. -->
 
 The problem is that people might round their weight and height off. For example, 164.5 cm will be rounded as 165 cm. To reverse the rounding effect, we can add some random noise. This procudure is called **jittering**. 
 
