@@ -1,0 +1,126 @@
+---
+title: undercor
+author: hongtao hao
+date: '2022-07-14'
+slug: undercor
+categories: []
+tags:
+  - 人生
+draft: no
+toc: no
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>This post is based on the book of <a href="https://greenteapress.com/wp/think-stats-2e/"><em>Think Stats 2e</em></a> by Allen B. Downey.</p>
+<p>Load package and data:</p>
+<pre class="r"><code>library(ggplot2)
+df &lt;- read.csv(&quot;selfie-data.csv&quot;)</code></pre>
+<div id="plotting" class="section level2">
+<h2>Plotting</h2>
+<p>Scatter plot</p>
+<pre class="r"><code>ggplot(df, aes(x=height, y=weight)) +
+  geom_point() +
+  xlab(&quot;Height (in cm)&quot;) +
+  ylab(&quot;Weight (in kg)&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/scatter-1.png" width="672" /></p>
+<!-- Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot. -->
+<p>The problem is that people might round their weight and height off. For example, 164.5 cm will be rounded as 165 cm. To reverse the rounding effect, we can add some random noise. This procudure is called <strong>jittering</strong>.</p>
+<p>We can define a jitter function by ourselves:</p>
+<pre class="r"><code>MyJitter &lt;- function(values, jitter = 0.5) {
+  n &lt;- length(values)
+  return(runif(n, -jitter, +jitter) + values)
+}</code></pre>
+<p>The <code>MyJitter</code> function takes in two parameters: <code>values</code> and <code>jitter</code>. <code>values</code> is a vector. <code>jitter</code> is a number, whose default is <span class="math inline">\(0.5\)</span>. The function returns a vector.</p>
+<p>Then, apply it:</p>
+<pre class="r"><code>ggplot(df, aes(x=MyJitter(height), y=MyJitter(weight))) +
+  geom_point() +
+  xlab(&quot;Height (in cm)&quot;) +
+  ylab(&quot;Weight (in kg)&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>We can change the jitter to be <span class="math inline">\(1\)</span>:</p>
+<pre class="r"><code>ggplot(df, aes(x=MyJitter(height,1), y=MyJitter(weight,1))) +
+  geom_point() +
+  xlab(&quot;Height (in cm)&quot;) +
+  ylab(&quot;Weight (in kg)&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Remember that jittering is good for visualizations but in the actual data analysis, we want to analyze the original data.</p>
+<p>Even with jittering, the scatter plot has some issues. For example, some points get overlapped in crowded areas. This will give outliers lots of highlights that they don’t deserve. This is because, for example, in a crowded point there might be 10 overlapping points but we nonetheless consider it as important as an outlier that also occupy one point. This effect is called <strong>saturation</strong>.</p>
+<p>To solve this problem, we can set the <code>alpha</code> parameter, basically making the points transparent. If two points overlap, we make that place darker. That is to say, the color corresponds to the density.</p>
+<p>The lower the <code>alpha</code>, the lighter the colors. If <code>alpha</code> is <span class="math inline">\(1\)</span>, that equals to without applying <code>alpha</code>.</p>
+<p>Let’s try <code>alpha = 0.5</code>:</p>
+<pre class="r"><code>ggplot(df, aes(x=MyJitter(height,1), y=MyJitter(weight,1))) +
+  geom_point(alpha = 0.5) +
+  xlab(&quot;Height (in cm)&quot;) +
+  ylab(&quot;Weight (in kg)&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="covariance" class="section level2">
+<h2>Covariance</h2>
+<p>We are interested in whether height and weight covary, i.e., vary together. When they say they covary, we mean that increases in height correspond to increases in weight, and vice versa. The question is, how do we <strong>quantify</strong> this relationship? Also, what do we mean by “increases”? Increases compared to what? What is the baseline?</p>
+<p>The baseline may be <span class="math inline">\(0\)</span>, or the mean, mode, or median of the vector of <span class="math inline">\(X\)</span> or <span class="math inline">\(Y\)</span>. It can also be <span class="math inline">\(100\)</span>, <span class="math inline">\(1000\)</span>, or even a million. But I guess the mean, or the average, should be an intuitive solution. Let’s use the mean first, and we’ll revisit later regarding whether we can use other baselines.</p>
+<p>Okay. We now set the baseline to be the mean of a vector. When I say vector, I simply mean the array of values of <span class="math inline">\(X\)</span> or <span class="math inline">\(Y\)</span>.</p>
+<p>Now that we solved the question of what baseline we use. Let’s solve the first question: how to quantify the relationship.</p>
+<p>Let’s use <span class="math inline">\(dx_i = x_i - \bar{x}\)</span> to denote the deviation of <span class="math inline">\(x_i\)</span> from the mean. Same for <span class="math inline">\(dy_i = y_i - \bar{y}\)</span>. According to the definition of covary above, i.e., “vary together”, we know that the <strong>sign</strong>, i.e., positive or negative, and the <strong>value</strong> of <span class="math inline">\(dx_i\)</span> and <span class="math inline">\(dy_i\)</span> should be related.</p>
+<p>Let’s first solve the problem of <strong>sign</strong>. It’s easy to solve: we can simply use <span class="math inline">\(dx_i \times dy_i\)</span>. This way, if the two have the same sign, then the product is positive; otherwise negative. Surprisingly, <span class="math inline">\(dx_i \times dy_i\)</span> solves the problem of <strong>value</strong> as well. THis is because, the higher the value of <span class="math inline">\(dx_i\)</span> and <span class="math inline">\(dy_i\)</span>, the higher the value of their product. Depending on the sign of their product, we can know whether, and by how much, they “vary together”.</p>
+<p>But when we talk about covary, we are talking about two vectors, or arrays: <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. That’s easy to solve: we can add up all <span class="math inline">\(dx_i \times dy_i\)</span>, and then take the average of the sum.</p>
+<p>Therefore, for two vectors of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, we can measure their covariance this way:</p>
+<p><span class="math display">\[Cov(X,Y) = \frac{1}{n}\sum dx_i dy_i\]</span></p>
+<p>where <span class="math inline">\(n\)</span> is the length of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. BTW, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> have to be of the same length; otherwise, we cannot compute their covariance.</p>
+<p>Also, when we want to extrapolate our knowledge about our sample to the population where the sample is drawn from, we’ll use <a href="https://www.statisticshowto.com/bessels-correction/">Bessel’s Correction</a>:</p>
+<p><span class="math display">\[Cov(X,Y) = \frac{1}{n -1}\sum_{i=1}^n dx_i dy_i\]</span></p>
+<p>Now, let’s write a function to compute the covriance of two arrays.</p>
+<pre class="r"><code>MyCov &lt;- function(x,y){
+  x_length &lt;- length(x)
+  y_length &lt;- length(y)
+  if(x_length != y_length){
+    message(&quot;Arrays should have the same length!&quot;)
+  }
+  sum_init &lt;- 0 # initiate the sum
+  for (i in 1:x_length) {
+    dxi = x[i] - mean(x)
+    dyi = y[i] - mean(y)
+    sum_init = sum_init +  dxi * dyi
+  }
+  return(sum_init/(x_length-1))
+}</code></pre>
+<p>If you happen to know linear algebra, you’ll know that <span class="math inline">\(\sum dx_i dy_i\)</span> is the dot product of <span class="math inline">\(dx\)</span> and <span class="math inline">\(dy\)</span>. So we can also define our function this way:</p>
+<pre class="r"><code>MyCov &lt;- function(x,y){
+  x_length &lt;- length(x)
+  y_length &lt;- length(y)
+  if(x_length != y_length){
+    message(&quot;Arrays should have the same length!&quot;)
+  }
+  x_means = rep(mean(x), times = x_length) # a vector of the mean of x
+  y_means = rep(mean(y), times = x_length) # a vector of the mean of y
+  d_x = x - x_means # a vector of deviations for x
+  d_y = y - y_means # a vector of deviations for y
+  return(sum(d_x * d_y) / (x_length-1))
+}</code></pre>
+<p>Let’s test whether our function works:</p>
+<pre class="r"><code>MyCov(df$height, df$weight) == cov(df$height, df$weight)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="pearsons-correlation-coefficient" class="section level2">
+<h2>Pearson’s correlation coefficient</h2>
+<p>There is a problem with covariance: we don’t know how to interpret it. For example, the covariance for height and weight in the data is</p>
+<pre class="r"><code>MyCov(df$height, df$weight)</code></pre>
+<pre><code>## [1] 9.015824</code></pre>
+<p>But, how would you interpret it? Is it large or small?</p>
+<p>Another problem is that covariance is very sensitive to units: If we measure something using another unit, the covariance will change. For example, if we measure weight in lbs rather than kg:</p>
+<pre class="r"><code>weight_in_lbs = df$weight *2.21
+MyCov(df$height, weight_in_lbs)</code></pre>
+<pre><code>## [1] 19.92497</code></pre>
+<p>We can see that the covariance changed.</p>
+<p>To solve this problem, instead of using simply <span class="math inline">\(dx_i\)</span>, we can divide it by the standard deviation of <span class="math inline">\(X\)</span>, denoted as <span class="math inline">\(S_X\)</span>. Same for <span class="math inline">\(dy_i\)</span>. Then, this “standardized” covariance, or “Pearson’s correlation”, denoted as <span class="math inline">\(\rho\)</span> will become:</p>
+<p><span class="math display">\[\rho = \frac{1}{n-1} \sum_{i=1}^n \frac{dx_i}{S_X} \frac{dy_i}{S_Y}\]</span>
+Which can be written as:</p>
+<p><span class="math display">\[\rho = \frac{Cov(X,Y)}{S_X S_Y}\]</span>
+or:</p>
+<p><span class="math display">\[\rho = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}\]</span></p>
+<p>This <span class="math inline">\(\rho\)</span>, i.e., Pearson’s correlation coeffience, is <a href="https://math.stackexchange.com/a/564843">always between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span></a>, which makes it perfect to measure the relationship between two variables.</p>
+</div>
