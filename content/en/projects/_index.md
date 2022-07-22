@@ -58,7 +58,6 @@ I gave a talk at [YY Lab](http://yongyeol.com/) on how to create onlinebooks.
 
 {{< endcolumn >}}
 
-
 ### Notes on Network Science
 {{< columns >}}
 
@@ -88,6 +87,21 @@ Class website for my students enrolled in *MSCH‑C100 Introduction to media* at
 > "Hongtao was an excellent discussion leader and AI (Associate Instructor). He made the class enjoyable and helped me understand the assignments and was very clear in doing so. His website for our discussion was very helpful and amazing." 
 
 [Website](https://c101.hongtaoh.com/) | [Code](https://github.com/hongtaoh/c101)
+
+{{< endcolumn >}}
+
+### Understanding 3blue1brown's Videos
+
+{{< columns >}}
+
+{{<figure-a src="https://hongtaoh.com/media/enblog/la/vectors-triangle.png" link="/en/blog/" >}}
+
+{{< column >}}
+
+I really like 3blue1brown's vidoes. I made notes on them:
+
+- [Essence of Linear Algebra](https://hongtaoh.com/en/2022/07/07/la/)
+- [Neural Networks](https://hongtaoh.com/en/2022/05/11/3blue1brown-nn/)
 
 {{< endcolumn >}}
 
