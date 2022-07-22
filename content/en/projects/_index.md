@@ -2,8 +2,64 @@
 title: Projects
 type : nolisting
 ---
-## Tutorials
-### 1. Notes on Network Science
+## 1. Data Visualizations
+### 32 Years of IEEE Visualization
+
+{{< columns >}}
+
+{{<figure-a src="/media/projects/32vis-sankey.png" link="https://observablehq.com/@hongtaoh/sankey-diagram-of-citation-flows" >}}
+
+{{< column >}}
+
+This website contains interactive visualizations for the paper of the same name. 
+
+[Website](https://32vis.hongtaoh.com/) | [Code](https://github.com/hongtaoh/32vis) | [Data](https://osf.io/zkvjm/) | [PDF](https://osf.io/95j7f)
+
+{{< endcolumn >}}
+
+### Visualizing 120 Years of Summer Olympic Games
+{{< columns >}}
+
+{{<figure-a src="https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/pics/g-4-2.png" link="https://olymvis.hongtaoh.com/" >}}
+
+{{< column >}}
+
+A team project together with [Chris Fang](https://www.linkedin.com/in/chriszihuifang) for Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s [*INFO I590 Data Visualization*](https://yyahn.com/dviz-course/) in 2019 Fall
+
+[Website](https://olymvis.hongtaoh.com/) | [Code](https://github.com/hongtaoh/olymvis) | [Data](https://github.com/hongtaoh/olymvis-data) | [PDF](https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/tex-pdf/fang_hao_olymvis.pdf)
+
+{{< endcolumn >}}
+
+### Coronavirus Trend Visualizations
+{{< columns >}}
+
+{{<figure-a src="/media/projects/covid19-2.png" link="https://yyahn.com/covid19-dashboard/" >}}
+
+{{< column >}}
+
+Worked as a research assistant for Professor [Yong-Yeol Ahn](http://yongyeol.com/) on his [Coronavirus Trend Visualizations](https://yyahn.com/covid19-dashboard/) project
+
+[Website](https://yyahn.com/covid19-dashboard/) | [Data](https://github.com/covid19-data/covid19-data)
+
+{{< endcolumn >}}
+
+## 2. Tutorials
+### How to Create Online Books
+
+{{< columns >}}
+
+{{<figure-a src="/media/projects/onlinebook-portfolio.png" link="https://onlinebook.hongtaoh.com/portfolio/" >}}
+
+{{< column >}}
+
+I gave a talk at [YY Lab](http://yongyeol.com/) on how to create onlinebooks. 
+
+[Website](https://onlinebook.hongtaoh.com/portfolio/) | [Code](https://github.com/hongtaoh/onlinebook) | [Slides](https://onlinebook.hongtaoh.com/slides/onlinebook.html#1)
+
+{{< endcolumn >}}
+
+
+### Notes on Network Science
 {{< columns >}}
 
 {{<figure-a src="/media/projects/bfsD2.png" link="https://netsci.hongtaoh.com/" >}}
@@ -16,7 +72,7 @@ My notes while auditing Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s onli
 
 {{< endcolumn >}}
 
-### 2. C101 With Hongtao
+### C101 With Hongtao
 {{< columns >}}
 
 {{<figure-a src="/media/projects/c101.png" link="https://c101.hongtaoh.com/" >}}
@@ -27,15 +83,15 @@ My notes while auditing Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s onli
 
 {{< column >}}
 
-Class website for my students enrolled in *MSCH‑C100 Introduction to media* at IU, 2020 Spring.
+Class website for my students enrolled in *MSCH‑C100 Introduction to media* at Indiana University Bloomington, 2020 Spring.
 
-> "Hongtao was an excellent discussion leader and AI. He made the class enjoyable and helped me understand the assignments and was very clear in doing so. His website for our discussion was very helpful and amazing." 
+> "Hongtao was an excellent discussion leader and AI (Associate Instructor). He made the class enjoyable and helped me understand the assignments and was very clear in doing so. His website for our discussion was very helpful and amazing." 
 
 [Website](https://c101.hongtaoh.com/) | [Code](https://github.com/hongtaoh/c101)
 
 {{< endcolumn >}}
 
-### 3. Blog Posts of "How to" Series
+<!-- ### Blog Posts of "How to" Series
 {{< columns >}}
 
 {{<figure-a src="https://hongtaoh.com/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/input-output-mapping-1.png" link="/en/blog/" >}}
@@ -55,9 +111,9 @@ Tutorial posts on a variety of topics. Representatives:
 - [How to Create Custom Blocks in Hugo](/en/2020/11/03/custom-blocks-hugo/)
 - [How to Use Different Fonts on Overleaf](/en/2020/11/13/overleaf-latex-fonts/)
 
-{{< endcolumn >}}
+{{< endcolumn >}} -->
 
-### 4. D3Book Companion
+### D3Book Companion
 {{< columns >}}
 
 {{<figure-a src="/media/projects/d3book-5.png" link="https://d3book.hongtaoh.com/" >}}
@@ -74,8 +130,8 @@ A simple tutorial website to help beginners like me learn D3.js. It is a side pr
 
 {{< endcolumn >}}
 
-## Website
-### 5. International Journalism Class at RUC
+## 3. Website
+### International Journalism Class at RUC
 {{< columns >}}
 
 {{<figure-a src="/media/projects/ruc.png" link="https://rucer.netlify.app/" >}}
@@ -88,31 +144,4 @@ Class website for *International Journalism* taught at [Renmin University of Chi
 
 {{< endcolumn >}}
 
-## Data Visualizations
-### 6. Visualizing 120 Years of Summer Olympic Games
-{{< columns >}}
 
-{{<figure-a src="https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/pics/g-4-2.png" link="https://olymvis.hongtaoh.com/" >}}
-
-{{< column >}}
-
-A team project together with [Chris Fang](https://www.linkedin.com/in/chriszihuifang) for Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s [*INFO I590 Data Visualization*](https://yyahn.com/dviz-course/) in 2019 Fall
-
-[Website](https://olymvis.hongtaoh.com/) | [Code](https://github.com/hongtaoh/olymvis) | [Data](https://github.com/hongtaoh/olymvis-data) | [PDF](https://raw.githubusercontent.com/hongtaoh/olymvis/master/static/tex-pdf/fang_hao_olymvis.pdf)
-
-{{< endcolumn >}}
-
-### 7. Coronavirus Trend Visualizations
-{{< columns >}}
-
-{{<figure-a src="/media/projects/covid19-2.png" link="https://yyahn.com/covid19-dashboard/" >}}
-
-{{< column >}}
-
-Worked as a research assistant for Professor [Yong-Yeol Ahn](http://yongyeol.com/) on his [Coronavirus Trend Visualizations](https://yyahn.com/covid19-dashboard/) project
-
-[Website](https://yyahn.com/covid19-dashboard/) | [Data](https://github.com/covid19-data/covid19-data)
-
-Disclaimer: this is ongoing work since it's part of my job as a research assistant. 
-
-{{< endcolumn >}}

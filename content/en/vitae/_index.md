@@ -29,7 +29,7 @@ Aug. 2020 ~ present, Research Assistant at YY Lab for [Dr. Yong-Yeol ("YY") Ahn]
 
 ## Publications
 
-To be coming (hopefully)...
+See [Research](/en/research)
 
 <!-- ## Peer-Reviewed Conference Presentations
 1. Hao, H. (May, 2020). *Cross-cultural comparisons of 'selfie-presentation': A content analysis*. Poster presented at the 70th Annual Conference of the International Communication Association, Converted from Australia to virtual due to COVID-19. 
