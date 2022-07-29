@@ -17,6 +17,504 @@ I was inspired by the story of [*This scientist read a paper every day for 899 d
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2022-07-29
+
+1. Krishnamoorthy, N., Malkarnenkar, G., Mooney, R., Saenko, K., & Guadarrama, S. (2013, June). [Generating natural-language video descriptions using text-mined knowledge](https://www.aaai.org/ocs/index.php/AAAI/AAAI13/paper/download/6454/7204). In Twenty-Seventh AAAI Conference on Artificial Intelligence.
+
+This paper introduces a new method of providing image captions. It first identifies objects, basically a subject and an object, for example, a person and a motorbike. Then it uses knowledge extracted from web texts to put these two elements together, producing a highly probable caption such as "A person is riding a motorbike".
+
+I agree that this method is innovative but it is not trustworthy at all. We can only get the most likely combination of two objects (if we identify them correctly), but this combination is not necessarily reflective of what is really going on in the video. 
+
+2. Ribeiro, M. T., Wu, T., Guestrin, C., & Singh, S. (2020). [Beyond accuracy: Behavioral testing of NLP models with CheckList](https://arxiv.org/pdf/2005.04118). arXiv preprint arXiv:2005.04118.
+
+This is indeed innovative and influential work. The researchers came up with an interactive tool that generates test examples for NLP models. This method is applicable to most NLP models, either commercial or academic. This model involves (1) capabilities such as Negation, Coreference, Logic, Robustness to typos and other errors, Fairness, etc, and (2) Test types (Minimum Functionality tests, Invariance, and Directional Expectation tests). 
+
+They found that this CheckList is able to identify bugs even in models that have been extensively used and debugged. 
+
+## 2022-07-28
+
+Srinivasan, A., Brehmer, M., Lee, B., & Drucker, S. M. (2018, April). [What's the difference? evaluating variations of multi-series bar charts for visual comparison tasks](https://dl.acm.org/doi/pdf/10.1145/3173574.3173878). In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (pp. 1-12).
+
+This study compares four designs for grouped bar charts for comparison tasks. The four designs are: a simple grouped bar chart; grouped bar chart with juxtaposed differences; single bar chart with juxtaposed differences; difference charts. The results show that bar charts with juxtaposed differences are better for comparison tasks.
+
+## 2022-07-27
+
+Karduni, A., Wesslen, R., Cho, I., & Dou, W. (2020, April). [Du bois wrapped bar chart: Visualizing categorical data with disproportionate values](https://dl.acm.org/doi/pdf/10.1145/3313831.3376365). In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (pp. 1-12).
+
+When values to present have large gaps, i.e., the biggest one is way larger than the smallest one, it is challenging to present all these values through a bar chart. Two problematic solutions are: 1) breaking the axis; 2) setting an upper bound for the axis. 
+
+Bar charts variants may include stacked bar charts and du bois wrapped bar charts.
+
+This study found that wrapped bar charts enable users to perform better on identification and comparison tasks when the data to visualize is disproportional, but may come with a price: more time spent and higher cognitive load.
+
+## 2022-07-26
+
+De Cao, N., Aziz, W., & Titov, I. (2021). [Editing factual knowledge in language models](https://arxiv.org/pdf/2104.08164). arXiv preprint arXiv:2104.08164.
+
+The purpose of this paper is this: to modify specific memory in a pre-trained language model so that when prompted, it will give the corrected output. This is important because the predictions by the original pre-trained language model might be outdated. It is computationally expensive to retrain the model. It will be best if we can modify the results without training again. The authors of this paper treat this as a learning problem. They basically built a hyper-network, i.e., a neural network that predicts parameters of another neural network. With this, they can predict the corrected parameter and therefore the corrected output. 
+
+It turns out that this method is very good. Detailed results are shown in Table 1. 
+
+## 2022-07-25 
+
+I re-read: Heimerl, F., Chang, C. C., Sarikaya, A., & Gleicher, M. (2018). [Visual designs for binned aggregation of multi-class scatterplots](https://arxiv.org/abs/1810.02445). arXiv preprint arXiv:1810.02445. 
+
+The authors want to create a design space for binned aggregation of multi-class scatterplot. They first came up with a taxonomy of common tasks associated with scatterplots (see Table 1). Then they used two example datasets to demonstrate how different designs of binned aggregation plots can facilitate different tasks. 
+
+Then they came up with a specific design space, as shown in Fig. 4.
+
+The authors came up with a system or a demo at: [https://graphics.cs.wisc.edu/Vis/binning/](https://graphics.cs.wisc.edu/Vis/binning/).
+
+### Question:
+
+1. I don't understand Fig. 2. What are the x and y axes specifically?
+
+## 2022-07-24
+
+1. Zhou, L., Gao, J., Li, D., & Shum, H. Y. (2020). [The design and implementation of xiaoice, an empathetic social chatbot](https://direct.mit.edu/coli/article/46/1/53/93380). Computational Linguistics, 46(1), 53-93.
+
+I didn't read the details of this paper but I know it is about the design of Xiaoice. I instead read some interviews with one of the creators of Xiaoice, Di Li. I was amazed by the ability of Xiaoice. 
+
+2. Celikyilmaz, A., Clark, E., & Gao, J. (2020). [Evaluation of text generation: A survey](https://arxiv.org/pdf/2006.14799). arXiv preprint arXiv:2006.14799.
+
+I didn't read the details of this paper but I know it talks about the evaluation methods of natural language generation (NLG).
+
+## 2022-07-23
+
+1. Finished Brachman, R. J., & Levesque, H. J. (2022, June). [Toward a New Science of Common Sense](https://ojs.aaai.org/index.php/AAAI/article/download/21485/21234). In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 36, No. 11, pp. 12245-12249).
+
+- Having common sense is different from knowing more facts. Common sense is the ability to make inferences and decisions based on already known facts. 
+
+- For humans, common sense is not always active. Only when we meet unusual circumstances, do we resort to common sense. If common sense does not help us find the solution, we use deeper thinking instead. 
+
+2. Coupland, R., & Kobi-Renée, L. (2005). Science and prohibited weapons. Science, 308(5730), 1841-1841.
+
+This editorial piece talks about how science can be misused to develop prohibited weapons as biological and chemical poisons. 
+
+3. Muise, D., Hosseinmardi, H., Howland, B., Mobius, M., Rothschild, D., & Watts, D. J. (2022). [Quantifying partisan news diets in Web and TV audiences](https://www.science.org/doi/full/10.1126/sciadv.abn0083). Science Advances, 8(28), eabn0083.
+
+This study shows that TV, rather than online news drives partisan audience segregation in the United States. 
+
+## 2022-07-22
+
+1. Brachman, R. J., & Levesque, H. J. (2022, June). [Toward a New Science of Common Sense](https://ojs.aaai.org/index.php/AAAI/article/download/21485/21234). In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 36, No. 11, pp. 12245-12249).
+
+PP. 1-4
+
+## 2022-07-21
+
+1. Lai, G., Xie, Q., Liu, H., Yang, Y., & Hovy, E. (2017). [Race: Large-scale reading comprehension dataset from examinations](https://arxiv.org/pdf/1704.04683). arXiv preprint arXiv:1704.04683.
+
+This paper introduces a new dataset called RACE for question answering. This dataset came from English tests for Chinese high school students. This dataset might be challenging for machines because there are many questions that involve reasoning and therefore cannot be easily answered by taking words from the original texts. 
+
+Right now, the highest accuracy achieved by machines is around 70%. It seems very impressive, given that it is the machines that are reading those passages. However, I still am not able to trust this kind of AI. It is still based on statistical learning. I am just wondering: for the next wave of AI revolution, is logical reasoning a necessity or not? Is it enough for us to rely on statistical learning?
+
+2. Liu, J., Cui, L., Liu, H., Huang, D., Wang, Y., & Zhang, Y. (2020). [Logiqa: A challenge dataset for machine reading comprehension with logical reasoning](https://arxiv.org/pdf/2007.08124). arXiv preprint arXiv:2007.08124.
+
+This is exciting work. The authors presented a new dataset for machine reading. This dataset is based on logical tests for civil servant tests in China. The authors translated those tests into English. The results show that machines' performance is much worse than humans. This shows that current nlp language models are not able to do logical inferences well. 
+
+3. Hutchinson, B., Smart, A., Hanna, A., Denton, E., Greer, C., Kjartansson, O., ... & Mitchell, M. (2021, March). [Towards accountability for machine learning datasets: Practices from software engineering and infrastructure](https://dl.acm.org/doi/pdf/10.1145/3442188.3445918). In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (pp. 560-575).
+
+In this paper, the authors talk about what should be done before and along with a new dataset for machine learning. 
+
+## 2022-07-20 
+
+Chevalier-Boisvert, M., Bahdanau, D., Lahlou, S., Willems, L., Saharia, C., Nguyen, T. H., & Bengio, Y. (2018). [Babyai: A platform to study the sample efficiency of grounded language learning](https://arxiv.org/pdf/1810.08272). arXiv preprint arXiv:1810.08272.
+
+I am not able to fully understand the details in this paper. The authors designed a platform to allow computers to understand language by incorporating humans in the training. They designed a 2D grid world and a language with clear structures. A bot agent was designed to play the role of a human teacher. They find that reinforcement learning performs poorly in letting machines learn the language in this physical 2D world. 
+
+
+## 2022-07-19
+
+Clark, K., Khandelwal, U., Levy, O., & Manning, C. D. (2019). [What does bert look at? an analysis of bert's attention](https://arxiv.org/pdf/1906.04341). arXiv preprint arXiv:1906.04341.
+
+I am not able to fully understand this paper. I know it first had pre-trained language models and then applied these models to BERT. The purpose is to study the attention heads of BERT. The authors find that some attention heads of BERT correspond to syntax and coreference. 
+
+## 2022-07-18 
+
+1. [In Times of Scarcity, War and Peace, a Ukrainian Finds the Magic in Math](https://www.quantamagazine.org/ukrainian-mathematician-maryna-viazovska-wins-fields-medal-20220705/)
+
+2. [He Dropped Out to Become a Poet. Now He’s Won a Fields Medal.](https://www.quantamagazine.org/june-huh-high-school-dropout-wins-the-fields-medal-20220705/#comments)
+
+
+## 2022-07-17 (Completed on 2022-07-18)
+
+Zhu, Y., & Fu, K. W. (2019). [The relationship between interdisciplinarity and journal impact factor in the field of Communication during 1997–2016](https://academic.oup.com/joc/article/69/3/273/5426454). Journal of Communication, 69(3), 273-297.
+
+This is the study I would have conducted myself. In fact, I have been thinking about it for quite a while. That said, I am glad that this work has been done; I am able to focus on other topics. 
+
+This study relies on citation data of over 90 communication journals indexed in web of science. The results show that citations in and out of communication studies focus on only a tiny few other disciplines, such as social psychology, sociology, and political science. Also, although communication tends to cite other fields compared to sociology and political science, it is very weak at receiving citations from other fields. 
+
+Another finding is that the dominance of psychology in communication has been declining. Also, citing interdisciplinary fields outside of the social sciences tend to increase the visibility of communication studies compared to citing other fields. 
+
+
+## 2022-07-16 (Completed on 2022-07-17)
+
+Leins, K., Lau, J. H., & Baldwin, T. (2020). [Give Me Convenience and Give Her Death: Who Should Decide What Uses of NLP are Appropriate, and on What Basis?](https://arxiv.org/pdf/2005.13213). arXiv preprint arXiv:2005.13213.
+
+This paper is a response to [a paper](https://arxiv.org/pdf/1908.11521.pdf) that utilizes NLP to predict legal sentencing. The current paper talks about ethical concerns associated with this method. 
+
+I haven't read the original paper this current paper is referring to but according to their descriptions, the paper seems horrible to me. I don't think NLP has reached such an accuracy that people can rely on it to determine people's life sentences. 
+
+## 2022-07-15 (Completed on 2022-07-16)
+
+Finished the book of *Rebooting AI: Building artificial intelligence we can trust.* 
+
+### Chapter 1
+
+- The present AI is narrow; it can only do a specific task and not general or broad enough
+- Our current approach to AI does not allow it to be true intelligence. 
+- People would believe machines understand them even if they somewhat know it's impossible. 
+
+### Chapter 2
+- Machine learning solely relying on training data isn't reliable. 
+
+### Chapter 3
+
+This chapter mainly introduces the history of machine learning, specifically the neural networks. 
+
+- Three drawbacks of deep learning
+  - Deep learning is greedy. It needs lots of data and relies on data. If the problem changes, deep learning no longer works. 
+  - Deep learning is a black box. 
+  - Deep learning is unreliable. 
+
+- Deep learning can recognize objects but won't tell you the relations between them. 
+
+- Deep learning is more like an art than science. 
+
+- Reading and Robots are two of the most challenging AI domains. 
+
+### Chapter 4
+
+- Deep learning today is not designed to understand human language. All that is involved is statistics. 
+
+- Computers can't read because they don't know how the world works. 
+
+### Chapter 5: Where's Rosie
+
+- Machine learning can identify objects, but it does not know what all those objects mean and their roles in the real world. 
+- Both human language understanding and real robots need cognitive models that can adapt to the changing world. 
+
+### Chapter 6: Insights from the human mind
+
+- Causality is important. 
+
+- Currently, machine learning researchers don't value 'prior knowledge'. Instead, they value learning from a blank stage. This might be a mistake. 
+
+- After reading this passage, I am thinking of building a system where researchers can share their 'models' that have learned (different kinds of) common knowledge. This way, we can build on each other's' work and gradually 'learn' about the real world. 
+
+- To be really intelligent, machines need to have a sense of three things: time, space, and causality. 
+
+- Future AI needs not only big data but also "abstract causal knowledge".
+
+### Chapter 7 Common Sense, and the path to deep understanding
+
+- It is super difficult to endow machines with human-like common sense such as "leaves swing if there is wind."
+
+- To allow machines to master common sense, we need two things: 1) know what kind of common sense is needed; 2) know how to encode/store learned common sense in machines.
+
+- Diagrams are not going to work because there is so much more explicit knowledge not shown there. 
+
+- It is difficult for machines to infer the representation of time from a sentence. 
+- Current AI systems don't have a sense of space. For example, it does not know that if you put a pen into a mesh bag, the pen will not stay in the bag. 
+- Simulations aren't a good solution to causality reasoning in AI. 
+
+- To change the paradigm, we need a new kind of learning, one that builds upon existing knowledge, rather than starting from scratch every time. 
+
+### Chapter 8 Trust
+
+- We need new metrics to test general intelligence. Turing testing isn't a good option. 
+
+- It will be dangerous for the machines to learn all ethical values from the world, as existing values such as biases based on gender and race, are obviously wrong. 
+
+### Epilogue
+
+>In hindsight, the turning point will be seen not as the 2012 rebirth of deep learning, but as the moment at which a solution to the challenges of common sense and reasoning yields deeper understanding. 
+
+It is hard to predict what the future will be like once general intelligence is achieved. The sky's the limit. 
+
+## 2022-07-14 (Completed on 2022-07-15)
+
+pp. 172-187
+
+## 2022-07-13 (Completed on 2022-07-14)
+
+pp. 159-172
+
+## 2022-07-12 (Completed on 2022-07-13)
+
+pp. 139-159
+
+## 2022-07-11 (Completed on 2022-07-12)
+
+pp. 119-139
+
+## 2022-07-10 (Completed on 2022-07-11)
+
+pp. 92-119
+
+## 2022-07-09 (Completed on 2022-07-10)
+
+pp. 70-92
+
+## 2022-07-08 (Completed on 2022-07-09)
+
+pp. 54-70
+
+## 2022-07-07 (Completed on 2022-07-09)
+
+p. 41-53
+
+## 2022-07-06 (Completed on 2022-07-08)
+
+pp. 18-41
+
+# 2022-07-05 (Completed on 2022-07-07)
+
+Marcus, G., & Davis, E. (2019). *Rebooting AI: Building artificial intelligence we can trust.* Vintage.
+
+pp. 5-18
+
+
+## 2022-07-04 (Completed on 2022-07-06)
+
+1. [A Visual Guide to Evolution Strategies](https://blog.otoro.net/2017/10/29/visual-evolution-strategies/)
+
+I was not able to fully understand this paper. It is not for a beginner. 
+
+2. [Generalized Visual Language Models](https://lilianweng.github.io/posts/2022-06-09-vlm/)
+
+I was not able to fully understand this post. 
+
+## 2022-07-03 (Completed on 2022-07-05)
+
+Song, H., Eberl, J. M., & Eisele, O. (2020). [Less fragmented than we thought? Toward clarification of a subdisciplinary linkage in communication science, 2010–2019](https://academic.oup.com/joc/article/70/3/310/5828491). Journal of communication, 70(3), 310-334.
+
+I re-read this paper, trying to get a deeper understanding of it. This time, I know that they first identified around 110 topics, and then clustered them together. Later, they grouped these clusters into subfields. They then examined the subdisciplinary network against four types of networks and concluded that communication as a field is not as fragmented as we previously thought. 
+
+I still have the following questions:
+
+1. How does CTM (correlated topic model) actually work?
+2. If CTM tells us the correlation between topics, then how can we know the correlations between subdisciplines?
+3. Why should we study the subdisciplinary network, but not the topic cluster network, against the four networks?
+
+## 2022-07-02 (Completed on 2022-07-04)
+
+Shin, T., Razeghi, Y., Logan IV, R. L., Wallace, E., & Singh, S. (2020). [Autoprompt: Eliciting knowledge from language models with automatically generated prompts](https://arxiv.org/pdf/2010.15980). arXiv preprint arXiv:2010.15980.
+
+I was not able to fully understand this paper but again, I got the gist of it: insteading of using manually generated prompts to test the capacity of language models to do downstream tasks, this paper designs a method to automatically generate prompts. Their prompts are better at testing the real capacity of language models. 
+
+Their results show that masked language models are able to do sentiment analysis and natural language inference without finetuning. 
+
+## 2022-07-01 (Completed on 2022-07-03)
+
+Min, S., Lewis, M., Hajishirzi, H., & Zettlemoyer, L. (2021). [Noisy channel language model prompting for few-shot text classification](https://arxiv.org/pdf/2108.04106). arXiv preprint arXiv:2108.04106.
+
+In this paper, the authors show that for text classification tasks, computing the probability of an input given an output (called the "channel model") outperforms the traditional direct model where we compute the probability of an output given an input. 
+
+## 2022-06-30 (Completed on 2022-07-02)
+
+1. Yang, S., Yim, J., Kim, J., & Shin, H. V. (2022, April). CatchLive: Real-time Summarization of Live Streams with Stream Content and Interaction Data. In CHI Conference on Human Factors in Computing Systems (pp. 1-20).
+
+This is a cool project. The authors came up with CatchLive that can help viewers of live stream videos join in the live streaming anytime and get to know the highlights in previous parts while engaged in the current streaming. 
+
+2. Blackwell, A. F. (2015, April). [HCI as an Inter-Discipline](https://dl.acm.org/doi/pdf/10.1145/2702613.2732505). In Proceedings of the 33rd Annual ACM Conference Extended Abstracts on Human Factors in Computing Systems (pp. 503-516).
+
+This is indeed interesting work. The author argues that HCI should not aspire to be a scientific discipline. Therefore, there is nothing wrong with CHI not having a core theme. Instead, the author argues that the value of HCI is, being interdisciplinary, to contribute to other disciplines.
+
+## 2022-06-29 (Completed on 2022-07-01)
+
+1. #CommunicationSoWhite: Race and Power in the Academy and Beyond
+
+This article is a introduction to special issue in *Communication, Culture & Critique* that talks about White supremacy in the field of communication. 
+
+2. de Albuquerque, A., de Oliveira, T. M., dos Santos Junior, M. A., & de Albuquerque, S. O. F. (2020). [Structural limits to the de-westernization of the communication field: The editorial board in Clarivate's JCR system](https://academic.oup.com/ccc/article-abstract/13/2/185/5855270). Communication, Culture and Critique, 13(2), 185-203.
+
+This work examines the editorial board members in Comm journals indexed by Web of Science. Unsurprisingly, these board members are dominated by the US.  
+
+## 2022-06-28 (Completed on 2022-06-30)
+
+Cui, J., Zhang, T., Jaidka, K., Pang, D., Sherman, G., Jakhetiya, V., ... & Guntuku, S. C. (2022, May). [Social Media Reveals Urban-Rural Differences in Stress across China](https://ojs.aaai.org/index.php/ICWSM/article/download/19277/19049). In Proceedings of the International AAAI Conference on Web and Social Media (Vol. 16, pp. 114-124).
+
+This is a cool project. It shows that in rural China, people post on social media more about personal and emotional stress. whereas in urban China, people post more about stress regarding external events such as politics or economy. 
+
+## 2022-06-27 (Completed on 2022-06-29)
+
+Shaw, A., Scharkow, M., & Wang, Z. J. (2021). [Opening a Conversation on Open Communication Research](https://academic.oup.com/joc/article-abstract/71/5/677/6389900). Journal of Communication, 71(5), 677-685.
+
+This is an editorial piece. I found it very interesting to read. This article summarizes the special issue on open science in Communication. Some of the key points in papers in this special issue:
+
+  - A survey of 1K communication scholars shows that questionable practices are common. 
+  - A growing number of communication research papers are mentioning open science terms but little to no effect on how this influences papers' citations. 
+  - We need to consider ethical issues in open science. 
+  - Open science practices may marginalize scholars in the Global South. 
+
+## 2022-06-26 (Completed on 2022-06-28)
+
+Chakravartty, P., Kuo, R., Grubbs, V., & McIlwain, C. (2018). [# CommunicationSoWhite](https://academic.oup.com/joc/article-abstract/68/2/254/4958972). Journal of Communication, 68(2), 254-266.
+
+This paper examines communication scholars' race. Besides the racial composition, it also looks at whether White scholars had more citations (Yes they did). 
+
+## 2022-06-25 (Completed on 2022-06-27)
+
+Caliskan, A., Bryson, J. J., & Narayanan, A. (2017). [Semantics derived automatically from language corpora contain human-like biases](https://www.science.org/doi/abs/10.1126/science.aal4230). Science, 356(6334), 183-186.
+
+This paper shows that human language corpora contains biases in human societies. 
+
+## 2022-06-24 (Completed on 2022-06-26)
+
+1. Wang, Y., Peng, T. Q., Lu, H., Wang, H., Xie, X., Qu, H., & Wu, Y. (2021). [Seek for success: a visualization approach for understanding the dynamics of academic careers](https://ieeexplore.ieee.org/abstract/document/9552870/). IEEE Transactions on Visualization and Computer Graphics, 28(1), 475-485.
+
+This study proposes a way to visualize scholars' academic careers. 
+
+2. Shen, Q., Wu, T., Yang, H., Wu, Y., Qu, H., & Cui, W. (2016). [Nameclarifier: A visual analytics system for author name disambiguation](https://ieeexplore.ieee.org/abstract/document/7534824/). IEEE transactions on visualization and computer graphics, 23(1), 141-150.
+
+This is a cool project. It aims to facilitate name disambiguation, a very important procedure in the study of sciences, through visualizations. The system also includes humans in the loop, which achieves higher accuracy than depending on machines alone. 
+
+3. Wu, T., Ribeiro, M. T., Heer, J., & Weld, D. (2019, January). [Errudite: Scalable, reproducible, and testable error analysis](https://par.nsf.gov/servlets/purl/10172006). In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics.
+
+This is a cool paper. The authors utilizes interactive visualization to facilitate error analysis in NLP tasks. 
+
+## 2022-06-23 (Completed on 2022-06-25)
+
+1. Kale, A., Wu, Y., & Hullman, J. (2021). [Causal Support: Modeling Causal Inferences with Visualizations](https://mucollective.northwestern.edu/files/2021-causal-support.pdf). IEEE transactions on visualization and computer graphics, 28(1), 1150-1160.
+
+Skimmed through this paper. Didn't fully understand. I know that the purpose of this paper is to examine whether visualization can help users make causal inferences. The results show that contingency tables in text are better than visualizations in terms of helping users make causal inferences. 
+
+2. Heimerl, F., Chang, C. C., Sarikaya, A., & Gleicher, M. (2018). [Visual designs for binned aggregation of multi-class scatterplots](https://arxiv.org/abs/1810.02445). arXiv preprint arXiv:1810.02445. 
+
+This paper presents a design space for binned aggregation methods for multi-class scatterplots. The optimal design is contingent on specific data and tasks. 
+
+## 2022-06-22 (Completed on 2022-06-24)
+
+Jordan, M. I. (2019). [Artificial intelligence—the revolution hasn’t happened yet](https://hdsr.mitpress.mit.edu/pub/wot7mkc1/release/5).
+
+This article says that the current AI technologies are not actually AI; at least not the AI when the term was coined. He believed that we are far from reaching the level of real artificial intelligence. He worries that when we are content with the progress we have made so far and when we only focus on solving easy problems with current "AI" technologies, we might forget the long term goals that are far away from us. 
+
+## 2022-06-21 (Completed on 2022-06-23)
+
+👍 Finished Bisk, Y., Holtzman, A., Thomason, J., Andreas, J., Bengio, Y., Chai, J., ... & Turian, J. (2020). [Experience grounds language](https://arxiv.org/pdf/2004.10151.pdf%3C/p%3E). arXiv preprint arXiv:2004.10151.
+
+WS1: Corpus
+WS2: Internet
+WS3: Perception
+WS4: Embodiment
+WS5: The Social World
+
+The first stage tries to rely on limited text data. The second stage tries to collect a massive quantity of text data and have massive language models. However, these models do not know how those words are related to the real world. The third stage learns about the world through videos and audios. Models based on these perceptions, however, are not able to test hypotheses through actions in the real world. For example, if I ask "what is the feeling of putting my hands on fire?", the model won't be able to answer if there is no relevant data. 
+
+The fourth stage is able to allow models to translate language into actions in the real world. The model will have a mental model of the world and know the properties of objects. 
+
+The ultimate goal of learning a language is to do something for the world. 
+
+The fifth stage is about social interactions. It's impossible to have a dataset large enough to contain all information in the world. Therefore, it's necessary for the (machine) learner to interact with humans and participate in world events. 
+
+The authors mention that most of current NLP research falls into WS2. To move towards WS3, NLP researchers can utilize research in computer vision and speech recognition. In order to test hypotheses through actions (WS4), robotics can help. To socially interact with humans and keep learning (WS5), video games can help. 
+
+## 2022-06-20
+
+Bisk, Y., Holtzman, A., Thomason, J., Andreas, J., Bengio, Y., Chai, J., ... & Turian, J. (2020). [Experience grounds language](https://arxiv.org/pdf/2004.10151.pdf%3C/p%3E). arXiv preprint arXiv:2004.10151.
+
+PP. 1-6
+
+## 2022-06-19
+
+1. Bailey, R. L., Read, G. L., Yan, Y. H., Liu, J., Makin, D. A., & Willits, D. (2021). [Camera point-of-view exacerbates racial bias in viewers of police use of force videos](https://academic.oup.com/joc/article/71/2/246/6134841?login=true). Journal of Communication, 71(2), 246-275.
+
+This study finds that body-worn cameras (BWC) worsen viewers' racial prejudice against Black people. 
+
+2. Chakraborty, P., Dutta, S., & Sanyal, D. K. (2022). [Personal Research Knowledge Graphs](https://arxiv.org/abs/2204.11428). arXiv preprint arXiv:2204.11428.
+
+This paper talks about the possibility of personal research knowledge graphs (PRKGs). My understanding of PRKGs is that they capture the research activities, for example, research method, topic, and tools. The edges will be something like "method" and "topic", and nodes will be specific methods, topics, or tools. 
+
+## 2022-06-18
+
+1. Finished Grimmer, J., Roberts, M. E., & Stewart, B. M. (2021). [Machine learning for social science: An agnostic approach](https://www.annualreviews.org/doi/abs/10.1146/annurev-polisci-053119-015921). Annual Review of Political Science, 24, 395-419.
+
+This paper reviews how social science can make use of machine learning methods, for example, classification and clustering. The authors argue that an inductive method (finding data first and then discovering patterns) might serve social science better than a deductive method, now that we have a large quantity of data. 
+
+2. Pasupat, P., Jiang, T. S., Liu, E. Z., Guu, K., & Liang, P. (2018). [Mapping natural language commands to web elements](https://arxiv.org/pdf/1808.09132). arXiv preprint arXiv:1808.09132.
+
+The authors collected over 50K commands related to manipulating web pages and tried to find whether they were able to find the correct web element using these commands. 
+
+## 2022-06-17
+
+Grimmer, J., Roberts, M. E., & Stewart, B. M. (2021). [Machine learning for social science: An agnostic approach](https://www.annualreviews.org/doi/abs/10.1146/annurev-polisci-053119-015921). Annual Review of Political Science, 24, 395-419.
+
+pp. 1-12
+
+## 2022-06-16
+
+1. Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). [Attention is all you need](https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf). Advances in neural information processing systems, 30.
+
+This paper introduces Transformer, a famous NLP model. Rather than using convolutional or recurrent neural networks, the Transformer uses self-attention in the computation of the representation of its inputs and outputs. I don't totally understand what that means but that's what they say. The transformer model is efficient since it requires less training time. It breaks the record of machine translation. 
+
+2. Fang, Y., Scott, L., Song, P., Burmeister, M., & Sen, S. (2020). [Genomic prediction of depression risk and resilience under stress](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6980948/). Nature human behaviour, 4(1), 111-118.
+
+This study depression polygenic risk score (MDD-PRS) is a predictor of depression. This association is stronger in the presence of stress. The participants of this study were over 5K training physicians in Europe. 
+
+## 2022-06-15
+
+1. Hendricks, G., Kramer, B., Maccallum, C. J., Manghi, P., & Neylon, C. (2021). [Now is the time to work together toward open infrastructures for scholarly metadata](http://eprints.lse.ac.uk/112845/1/impactofsocialsciences_2021_10_27_now_is_the_time_to_work_together.pdf). Impact of social sciences blog.
+
+Microsoft Academic Graph is down. The community is calling for open infrastructure to hold scholarly metadata. 
+
+2. Priem, J. (2013). [Beyond the paper](https://www.nature.com/articles/495437a). Nature, 495(7442), 437-440.
+
+This is a cool article. The author argues that the Web is changing how we communicate scientific findings. It changed how papers are written, viewed, published, and commented on. The author of this paper urges scholars to try to publish different products than merely papers, share them in new places, and "brag" them using different metrics. The author also urges scholars to think more about "Web-native production" than mere publications. 
+
+## 2022-06-14
+
+He, J., Neubig, G., & Berg-Kirkpatrick, T. (2021). [Efficient nearest neighbor language models](https://arxiv.org/pdf/2109.04212). arXiv preprint arXiv:2109.04212.
+
+I am not capable of fully understanding this paper. After listening to the talk by the first author of this paper, I got the main idea of it: nearest neighbor language models are effective but slow. This work tries to improve the efficiency of the model. 
+
+## 2022-06-13
+
+Bengio, Y., Courville, A., & Vincent, P. (2013). [Representation learning: A review and new perspectives](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6472238). IEEE transactions on pattern analysis and machine intelligence, 35(8), 1798-1828.
+
+This article is way beyond my capability to understand right now. However, I got to know what representation is:features, or inputs. 
+
+## 2022-06-12
+
+Rule, A., Chiang, M., & Hribar, M. (Draft). Medical Scribes Have a Variable Impact on Documentation Workflows
+
+This is a fun study. It finds that medical scribes affect both what medical staff (technicians, and doctors) document and when they document. The results also suggest that scribes without medical training may increase, rather than decrease, the workload for medical staff they work with. 
+
+## 2022-06-11
+
+Roberts, A., Raffel, C., & Shazeer, N. (2020). [How much knowledge can you pack into the parameters of a language model?](https://arxiv.org/pdf/2002.08910). arXiv preprint arXiv:2002.08910.
+
+This article shows that language models pretrained on unlabelled text are able to conduct open-domain question answering without access to any external knowledge base. The accuracy is higher than the benchmark. Also, the accuracy increases as the language model's size grows. Although large language models are computationally intensive, they don't need to (1) search for external knowledge, and (2) parse the external knowledge source and extract answers from it. 
+
+## 2022-06-09
+
+Rule, A., Tabard, A., & Hollan, J. D. (2018, April). [Exploration and explanation in computational notebooks](https://hal.archives-ouvertes.fr/hal-01676633/document). In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (pp. 1-12).
+
+This is a very cool study. The authors analyzed how people use Jupyter Notebooks in real life from three perspectives: 1 million notebooks hosted on GitHub; 200 hand coded notebooks used in academic publications; interviewing 15 researchers with experiences of using computational notebooks. 
+
+The analysis of over 1 million notebooks show that most of them do not contain narratives but are just codes with some loose notes. 
+
+Analyses of 200 notebooks for academic use show that most only contain documentation but few contain reasoning or explanation of the results. 
+
+In the end, the authors talked about design opportunities for computational notebooks. 
+
+## 2022-06-07
+
+Khandelwal, U., Levy, O., Jurafsky, D., Zettlemoyer, L., & Lewis, M. (2019). [Generalization through memorization: Nearest neighbor language models](https://arxiv.org/abs/1911.00172). arXiv preprint arXiv:1911.00172.
+
+I did not have enough background knowledge to fully understand this paper. That said, I got the gist of it: learning sentence sequences is an easier task than predicting the next word. The authors argue that instead of training on ever increasing datasets, we can learn representations from small datasets and later augment what has been learnt with k-nearest neighbors language models ($k$NN-LM), which is proposed in this paper, over a larger dataset. 
+
+## 2022-06-10
+
+Hullman, J., Kapoor, S., Nanayakkara, P., Gelman, A., & Narayanan, A. (2022). [The worst of both worlds: A comparative analysis of errors in learning from data in psychology and machine learning](https://arxiv.org/pdf/2203.06498). arXiv preprint arXiv:2203.06498.
+
+I wasn't able to fully understand this paper. It compares the replication issues in experimental psychology and machine learning. In psychology, low power designs and over-reliance on $p$ values lead to reproducibility crisis. In ML, the split of the training/test set gives the researcher the illusion that we can indeed test the performance of the model in real life. 
+
+## 2022-05-30 (Completed o 2022-07-25)
+
+I re-read: Sarikaya, A., Gleicher, M., & Szafir, D. A. (2018, June). [Design factors for summary visualization in visual analytics](https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.13408). In *Computer Graphics Forum* (Vol. 37, No. 3, pp. 145-156).
+
 ## 2022-05-29
 
 1. Bozarth, L., Quercia, D., Capra, L., & Scepanovic, S. (2022). [The role of the Big Geographic Sort in the circulation of misinformation among US Reddit users](https://arxiv.org/pdf/2205.10161). arXiv preprint arXiv:2205.10161.
@@ -534,13 +1032,12 @@ What is the relationship between the three basic designs for visual comparisons 
 
 2. Sarikaya, A., Gleicher, M., & Szafir, D. A. (2018, June). [Design factors for summary visualization in visual analytics](https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.13408). In *Computer Graphics Forum* (Vol. 37, No. 3, pp. 145-156).
 
- and examined 1) whether this taxonomy covers (randomly selected) visualizations in the visualization field, and 2) how these taxonomies interact.
 
-This is an innovative study. The author came up with a taxonomy of data summarization. They think that there are four major methods of data summarization: aggregation, subsampling, filtering, and projection. When choosing from these four methods, a designer can consider these factors: purpose, task, and data. Therefore, there are four factors of summarization in visualization: methods, purpose, tasks, and data types. 
+This is an innovative study. The author came up with a taxonomy of data summarization and examined 1) whether this taxonomy covers (randomly selected) visualizations in the visualization field, and 2) how these taxonomies interact.. They think that there are four major methods of data summarization: aggregation, subsampling, filtering, and projection. When choosing from these four methods, a designer can consider these factors: purpose, task, and data. Therefore, there are four factors of summarization in visualization: methods, purpose, tasks, and data types. 
 
 The authors then did a content analysis on randomly selected publications. They wanted to study whether the taxonomy proposed in this paper are well represented by the randomly selected publications, and what are the proportions (for example, how many papers used aggregation method). They also examined how these four factors interact. For example, in visualizations that used the summarization method of aggregation, what are the tasks and data types in these visualizations. 
 
-The interactive system affiliated with this paper is super cool: https://graphics.cs.wisc.edu/Vis/vis_summaries/
+The interactive system affiliated with this paper is super cool: [https://graphics.cs.wisc.edu/Vis/vis_summaries/](https://graphics.cs.wisc.edu/Vis/vis_summaries/).
 
 ## 2022-04-13 (Completed on 2022-04-19)
 
