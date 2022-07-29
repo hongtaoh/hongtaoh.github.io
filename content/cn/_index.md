@@ -101,7 +101,13 @@ type : list-single
 
 ## 我经常看的博客
 
-<!-- 益辉、金吉、 -->
+- [袁凡](https://yuanfan.vercel.app/)
+
+- [谢益辉](https://yihui.org/)
+
+- [逄金吉](https://jinjipang.com/cn/)
+
+- [黄湘云](https://xiangyun.rbind.io/)
 
 <!-- https://blog.shuiba.co/
 https://dlyang.me/ -->
