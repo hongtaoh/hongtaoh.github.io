@@ -10,13 +10,15 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
-2022: [2022-01](/en/apad/#2022-01), [2022-02](/en/apad/#2022-02), [2022-03](/en/apad/#2022-03), [2022-04](/en/apad/#2022-04)
+2022: [2022-01](/en/apad/#2022-01), [2022-02](/en/apad/#2022-02), [2022-03](/en/apad/#2022-03), [2022-04](/en/apad/#2022-04), [2022-05](/en/apad/#2022-05), [2022-06](/en/apad/#2022-06), [2022-07](/en/apad/#2022-07)
 
 2021: [2021-12](/en/apad/#2021-12), [2021-11](/en/apad/#2021-11), [2021-10](/en/apad/#2021-10), [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
 
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+# 2022-07
+
 ## 2022-07-29
 
 1. Krishnamoorthy, N., Malkarnenkar, G., Mooney, R., Saenko, K., & Guadarrama, S. (2013, June). [Generating natural-language video descriptions using text-mined knowledge](https://www.aaai.org/ocs/index.php/AAAI/AAAI13/paper/download/6454/7204). In Twenty-Seventh AAAI Conference on Artificial Intelligence.
@@ -312,6 +314,8 @@ Min, S., Lewis, M., Hajishirzi, H., & Zettlemoyer, L. (2021). [Noisy channel lan
 
 In this paper, the authors show that for text classification tasks, computing the probability of an input given an output (called the "channel model") outperforms the traditional direct model where we compute the probability of an output given an input. 
 
+# 2022-06
+
 ## 2022-06-30 (Completed on 2022-07-02)
 
 1. Yang, S., Yim, J., Kim, J., & Shin, H. V. (2022, April). CatchLive: Real-time Summarization of Live Streams with Stream Content and Interaction Data. In CHI Conference on Human Factors in Computing Systems (pp. 1-20).
@@ -510,6 +514,8 @@ I did not have enough background knowledge to fully understand this paper. That 
 Hullman, J., Kapoor, S., Nanayakkara, P., Gelman, A., & Narayanan, A. (2022). [The worst of both worlds: A comparative analysis of errors in learning from data in psychology and machine learning](https://arxiv.org/pdf/2203.06498). arXiv preprint arXiv:2203.06498.
 
 I wasn't able to fully understand this paper. It compares the replication issues in experimental psychology and machine learning. In psychology, low power designs and over-reliance on $p$ values lead to reproducibility crisis. In ML, the split of the training/test set gives the researcher the illusion that we can indeed test the performance of the model in real life. 
+
+# 2022-05
 
 ## 2022-05-30 (Completed o 2022-07-25)
 
