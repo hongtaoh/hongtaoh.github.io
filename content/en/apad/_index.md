@@ -45,7 +45,7 @@ Karduni, A., Wesslen, R., Cho, I., & Dou, W. (2020, April). [Du bois wrapped bar
 
 When values to present have large gaps, i.e., the biggest one is way larger than the smallest one, it is challenging to present all these values through a bar chart. Two problematic solutions are: 1) breaking the axis; 2) setting an upper bound for the axis. 
 
-Bar charts variants may include stacked bar charts and du bois wrapped bar charts.
+<!-- Bar charts variants may include stacked bar charts and du bois wrapped bar charts. -->
 
 This study found that wrapped bar charts enable users to perform better on identification and comparison tasks when the data to visualize is disproportional, but may come with a price: more time spent and higher cognitive load.
 
@@ -393,7 +393,7 @@ This paper presents a design space for binned aggregation methods for multi-clas
 
 Jordan, M. I. (2019). [Artificial intelligence—the revolution hasn’t happened yet](https://hdsr.mitpress.mit.edu/pub/wot7mkc1/release/5).
 
-This article says that the current AI technologies are not actually AI; at least not the AI when the term was coined. He believed that we are far from reaching the level of real artificial intelligence. He worries that when we are content with the progress we have made so far and when we only focus on solving easy problems with current "AI" technologies, we might forget the long term goals that are far away from us. 
+This article says that the current AI technologies are not actually AI; at least not the AI when the term was coined. The author believed that we are far from reaching the level of real artificial intelligence. He worries that when we are content with the progress we have made so far and when we only focus on solving easy problems with current "AI" technologies, we might forget the long term goals that are far away from us. 
 
 ## 2022-06-21 (Completed on 2022-06-23)
 
