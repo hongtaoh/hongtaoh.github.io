@@ -103,7 +103,7 @@ This, in fact, is the definition of [covariance](https://en.wikipedia.org/wiki/C
 
 ## Proportional deviations 
 
-The question now is, does the above equation solve the second property? The answer is NO. Why?
+The question now is, does the above equation satisfy the second property? The answer is NO. Why?
 
 First, our statment is ambiguous: what does it mean by "when A is big then B should be big as well"? How to quantify it? We can defign it this way: **\\((a\_i - \\bar{a})\\) should be proportional to \\((b\_i - \\bar{b})\\)**.
 
@@ -292,6 +292,6 @@ We want to understand the extent to which two variables covary, i.e., vary toget
   1. \\(a\_i - \\bar{a}\\) and \\(b\_i - \\bar{b}\\) in general should have the same sign. 
   2. When \\(a\_i - \\bar{a}\\) is big, \\(b\_i - \\bar{b}\\) should be big as well. 
   
-To meet the first property, we calculate the sum of product of \\(a\_i - \\bar{a}\\) and \\(b\_i - \\bar{b}\\). We find that this is equal to the dot product of \\(\\vec{d\_a}\\) and \\(\\vec{d\_b}\\). When the result is positive, then \\(\\vec{d\_a}\\) and \\(\\vec{d\_b}\\) are in general pointing to the same direction, and therefore, \\(a\_i - \\bar{a}\\) and \\(b\_i - \\bar{b}\\) in general share the same sign. However, the dot product does not meet the second property. We find that the second property is measuring **the extent to which** \\(\\vec{d\_a}\\) and \\(\\vec{d\_b}\\) are pointing to the same direction. Dot products do not tell us this. 
+To satisfy the first property, we calculate the sum of product of \\(a\_i - \\bar{a}\\) and \\(b\_i - \\bar{b}\\). We find that this is equal to the dot product of \\(\\vec{d\_a}\\) and \\(\\vec{d\_b}\\). When the result is positive, then \\(\\vec{d\_a}\\) and \\(\\vec{d\_b}\\) are in general pointing to the same direction, and therefore, \\(a\_i - \\bar{a}\\) and \\(b\_i - \\bar{b}\\) in general share the same sign. However, the dot product does not satisfy the second property. We find that the second property is measuring **the extent to which** \\(\\vec{d\_a}\\) and \\(\\vec{d\_b}\\) are pointing to the same direction. Dot products do not tell us this. 
 
 To know the extent to which \\(\\vec{d\_a}\\) and \\(\\vec{d\_b}\\) are pointing to the same direction, we divide the dot product by the product of these two vectors' lengths (in Euclidean distance). This quotient is the cosine of the angle between \\(\\vec{d\_a}\\) and \\(\\vec{d\_b}\\). This explains why the correlation between two variables is always between \\(-1\\) and \\(1\\). 
