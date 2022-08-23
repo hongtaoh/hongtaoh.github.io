@@ -3,7 +3,7 @@
 title: Re-Understanding Pearson Correlation Coefficient
 date: 2022-08-22
 author: Hongtao Hao
-slug: corr2
+slug: corr23
 draft: false
 toc: false
 tags: stats
@@ -48,7 +48,7 @@ plt.ylabel('b')
 
 
     
-![png](/en/blog/2022-08-22-correlation_files/2022-08-22-correlation_5_1.png)
+![png](/en/blog/2022-08-22-correlation-copy_files/2022-08-22-correlation-copy_4_1.png)
     
 
 
@@ -124,7 +124,7 @@ plt.ylabel('b')
 
 
     
-![png](/en/blog/2022-08-22-correlation_files/2022-08-22-correlation_9_1.png)
+![png](/en/blog/2022-08-22-correlation-copy_files/2022-08-22-correlation-copy_8_1.png)
     
 
 
@@ -146,7 +146,7 @@ plt.ylabel('d')
 
 
     
-![png](/en/blog/2022-08-22-correlation_files/2022-08-22-correlation_10_1.png)
+![png](/en/blog/2022-08-22-correlation-copy_files/2022-08-22-correlation-copy_9_1.png)
     
 
 
@@ -239,7 +239,7 @@ is the dot product of two vectors: `$\vec{d_a} = a_i - \bar{a}$` and `$\vec{d_b}
 
 When the dot product of two vectors is positive, then these two vectors are generally pointing to the same direction; when negative, different direction. However, the magnitude of the dot product doesn't translate into **the extent to which** two vectors are pointing to the same direction. 
 
-![](/en/blog/2022-08-22-correlation_files/corr-a-b.png)
+![](/en/blog/2022-08-22-correlation-copy_files/corr-a-b.png)
 
 
 
