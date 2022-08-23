@@ -87,15 +87,15 @@ Let's focus on the first property: same sign. This shouldn't be very difficult t
 
 However, we are talking about the covariance of two variables, not two individual items. Therefore, we need to consider the cumulative effect of all **deviation pairs**, i.e., \\(a\_i - \\bar{a}\\) and \\(b\_i - \\bar{b}\\). That's why why need the sum of \\((a\_i - \\bar{a}) \\cdot (b\_i - \\bar{b})\\):
 
-\\[\\sum\_{i=1}^n (a\_i - \\bar{a}) \\cdot (b\_i - \\bar{b})\\]
+\\[\\sum\_{i=1}^N (a\_i - \\bar{a}) \\cdot (b\_i - \\bar{b})\\]
 
 It's even better if we can devide it by the number of deviation pairs, so that we can know the average effect of all deviation pairs:
 
-\\[\\frac{\\sum\_{i=1}^n (a\_i - \\bar{a}) \\cdot (b\_i - \\bar{b})}{N}\\]
+\\[\\frac{\\sum\_{i=1}^N (a\_i - \\bar{a}) \\cdot (b\_i - \\bar{b})}{N}\\]
 
 where \\(N\\) is the deviation pairs. Note that, if we are esitmating a population based on samples, we need [Bessel’s Correction](https://en.wikipedia.org/wiki/Bessel%27s_correction):
 
-\\[Cov(a,b) = \\frac{\\sum\_{i=1}^n (a\_i - \\bar{a}) \\cdot (b\_i - \\bar{b})}{N-1}\\]
+\\[Cov(a,b) = \\frac{\\sum\_{i=1}^N (a\_i - \\bar{a}) \\cdot (b\_i - \\bar{b})}{N-1}\\]
 
 This, in fact, is the definition of [covariance](https://en.wikipedia.org/wiki/Covariance). 
 
@@ -238,7 +238,7 @@ covariance(c,d)
 
 If you are familiar with linear algebra, you'll know that 
 
-\\[\\sum\_{i=1}^n (a\_i - \\bar{a}) \\cdot (b\_i - \\bar{b})\\]
+\\[\\sum\_{i=1}^N (a\_i - \\bar{a}) \\cdot (b\_i - \\bar{b})\\]
 
 is the dot product of two vectors: \\(\\vec{d\_a} = a\_i - \\bar{a}\\) and \\(\\vec{d\_b} = b\_i - \\bar{b}\\), where \\(d\\) denotes deviation. These vectors are \\(N\\)-dimensional, where \\(N\\) is the size of \\(d\_a\\) (or \\(d\_b\\), which must be the same). 
 
@@ -274,16 +274,16 @@ Therefore,
 
 \begin{align}
 \rho(a,b) & =  \frac{Cov(a,b)}{\sigma_a \sigma_b} \\\\
- & = \frac{\frac{1}{N-1}\cdot\sum_{i=1}^n (a_i - \bar{a}) \cdot (b_i - \bar{b})}{\sigma_a \sigma_b} \\\\ 
+ & = \frac{\frac{1}{N-1}\cdot\sum_{i=1}^N (a_i - \bar{a}) \cdot (b_i - \bar{b})}{\sigma_a \sigma_b} \\\\ 
  & = \frac{\frac{1}{N-1}\cdot \vec{d_a} \cdot \vec{d_b}}{\sigma_a \sigma_b} \\\\
- & = \frac{\frac{1}{N-1}\cdot \vec{d_a} \cdot \vec{d_b}}{\sqrt{\frac{\sum_{i=1}^n (a_i - \bar{a})^2}{N-1}} \sqrt{\frac{\sum_{i=1}^n (b_i - \bar{b})^2}{N-1}}} \\\\
- & = \frac{\frac{1}{N-1}\cdot \vec{d_a} \cdot \vec{d_b}}{\frac{1}{N-1} \sqrt{\sum_{i=1}^n (a_i - \bar{a})^2} \sqrt{\sum_{i=1}^n (b_i - \bar{b})^2}} \\\\
- & = \frac{\vec{d_a} \cdot \vec{d_b}}{\sqrt{\sum_{i=1}^n (a_i - \bar{a})^2} \sqrt{\sum_{i=1}^n (b_i - \bar{b})^2}} \\\\
+ & = \frac{\frac{1}{N-1}\cdot \vec{d_a} \cdot \vec{d_b}}{\sqrt{\frac{\sum_{i=1}^N (a_i - \bar{a})^2}{N-1}} \sqrt{\frac{\sum_{i=1}^N (b_i - \bar{b})^2}{N-1}}} \\\\
+ & = \frac{\frac{1}{N-1}\cdot \vec{d_a} \cdot \vec{d_b}}{\frac{1}{N-1} \sqrt{\sum_{i=1}^N (a_i - \bar{a})^2} \sqrt{\sum_{i=1}^N (b_i - \bar{b})^2}} \\\\
+ & = \frac{\vec{d_a} \cdot \vec{d_b}}{\sqrt{\sum_{i=1}^N (a_i - \bar{a})^2} \sqrt{\sum_{i=1}^N (b_i - \bar{b})^2}} \\\\
  & = \frac{\vec{d_a} \cdot \vec{d_b}}{||\vec{d_a}||\cdot||\vec{d_b}||} \\\\
  & = \cos \theta \\\\
 \end{align}
 
-Therefore, correlation **measures the cosine of the angle between two deviation vectors**. 
+Therefore, correlation between two variables $\rho(a,b)$ **measures the cosine of the angle between the two corresponding deviation vectors in N-dimensional space where N is size of a (or b)**. By deviation vector, I mean the vector of differences between each item in a (and b) and its corresponding mean, i.e., $\bar{a}$ (and $\bar{b}$).
 
 ## Recap
 
