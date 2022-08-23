@@ -283,7 +283,7 @@ Therefore,
  & = \cos \theta \\\\
 \end{align}
 
-Therefore, correlation between two variables $\rho(a,b)$ **measures the cosine of the angle between the two corresponding deviation vectors in N-dimensional space where N is size of a (or b)**. By deviation vector, I mean the vector of differences between each item in a (and b) and its corresponding mean, i.e., $\bar{a}$ (and $\bar{b}$).
+Therefore, correlation between two variables `$\rho(a,b)$` **measures the cosine of the angle between the two corresponding deviation vectors in N-dimensional space where N is size of a (or b)**. By deviation vector, I mean the vector of differences between each item in a (and b) and its corresponding mean, i.e., `$\bar{a}$` (and `$\bar{b}$`).
 
 ## Recap
 
