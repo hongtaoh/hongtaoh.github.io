@@ -7,8 +7,6 @@ slug: corr2
 draft: false
 toc: false
 tags: stats
-aliases:
-  - /en/2022/08/22/corr23/
 
 ---
 

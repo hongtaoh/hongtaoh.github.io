@@ -82,18 +82,16 @@ type : list-single
 
 ## 影响我的人
 
-- 我父亲（坚毅、大度、责任、勇气）
+- 我父亲（坚毅、大度、担当、勇气）
 - 刘伟校长 ([学好、守拙、别怕](http://app.jyb.cn/zjzsnew/zx/tt/201807/t20180702_1135902.html?from=singlemessage))
 - 曾国藩（永不放弃、克己修身、为国为民、关心家人）
+- 谢益辉（写博客）
+- 李阳（疯狂英语）
 - 南仁东 (矢志不渝)
+- 季羡林（踏实）
 - 于谦(明)（勇敢、忠诚）
 - 杨涟(明)（勇敢、忠诚）
 - 稻盛和夫（努力、思索）
-- 季羡林（踏实）
-- 谢益辉（写博客）
-<!-- - 沈向洋（努力） -->
-- 李阳（疯狂英语）
-<!-- - 任正非（不短视） -->
 
 ## 我的博客
 
@@ -103,11 +101,15 @@ type : list-single
 
 - [袁凡](https://yuanfan.vercel.app/)
 
-- [谢益辉](https://yihui.org/)
-
 - [逄金吉](https://jinjipang.com/cn/)
 
+- [谢益辉](https://yihui.org/)
+
+- [赵文轩](https://allanware.github.io/)
+
 - [黄湘云](https://xiangyun.rbind.io/)
+
+- 落园
 
 <!-- https://blog.shuiba.co/
 https://dlyang.me/ -->
