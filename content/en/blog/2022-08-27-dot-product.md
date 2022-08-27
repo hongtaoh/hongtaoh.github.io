@@ -10,7 +10,7 @@ tags: ML
 
 Suppose we have:
 
-`$$\vec{a} = \begin{vmatrix} a_x \\ a_y \end{vmatrix}$$`
+`$$\vec{a} = \begin{bmatrix} a_x \\ a_y \end{bmatrix}$$`
 
 `$$\vec{b} = \begin{bmatrix} b_x \\ b_y \end{bmatrix}$$`
 
