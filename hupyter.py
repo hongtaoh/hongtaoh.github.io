@@ -6,7 +6,6 @@ import pathlib
 arg1 = sys.argv[1]
 arg2 = sys.argv[2]
 
-
 if __name__ == '__main__':
 	# make sure the file exists
 	assert os.path.exists(arg1), f'The file of {arg1} does not exist'

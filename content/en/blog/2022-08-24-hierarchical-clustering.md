@@ -64,7 +64,7 @@ for i in range(N):
     
 
 
-## Euclidean distance
+## 1. Euclidean distance
 
 
 ```python
@@ -86,7 +86,7 @@ eu_distance(M[1], M[3])
 
 
 
-## Distance matrix
+## 2. Distance matrix
 
 
 ```python
@@ -196,7 +196,7 @@ d_matrix_df.iloc[0:6, 0:6]
 
 
 
-## How does hierarchical clustering work
+## 3. How does hierarchical clustering work
 
 In our example, we have 10 data points, or nodes. The first step is to group the two nodes whose distance is the smallest among all distances. 
 
@@ -287,7 +287,7 @@ To summarize our above procedure: we sort pairs by their distance in ascending o
 
 All seem to be good but there are at least two problems in our above procedure. 
 
-### The first problem: we did not merge clusters with smaller distances first
+### 3.1 The first problem: we did not merge clusters with smaller distances first
 
 First of all, it seems strange that we have a cluster of `[2,8]`. We can see that the distance between Node2 and Node8 is larger than the distance between the cluster of `[5,7,0]` and `[1,3]`. So, before we merge the cluster of `[5,7,0]` and `[2,3]` into a larger cluster, we should not merge Node2 and Node8. 
 
@@ -297,13 +297,13 @@ Do you see the problem? With this rule, we are still grouping `[2]` and `[8]` be
 
 If you follow my thoughts, you know that the problem we face now is that we should gruop `[5,7,0]` and `[1,3]` before grouping `[2]` and `[8]` but our procedure, or algorithm, does not allow us to do so. Then we need to modify our algorithm. 
 
-Why should we gruop `[5,7,0]` and `[1,3]` before grouping `[2]` and `[8]`? Because the distance between `[5,7,0]` and `[1,3]` is smaller than that between `[2]` and `[8]`. Then, a simple solution is that we calculate distances betweenn all cluster pairs, and then merge the pair with the smallest diestance. 
+Why should we gruop `[5,7,0]` and `[1,3]` before grouping `[2]` and `[8]`? Because the distance between `[5,7,0]` and `[1,3]` is smaller than that between `[2]` and `[8]`. Then, a simple solution is that we calculate distances between all cluster pairs, and then merge the pair with the smallest diestance. 
 
 To do so, we should view a node which is not part of a cluster as a cluster. That's to say, before we start clustering anything, in our example, we have ten clusters: `[0]`, `[1]`, `[2]`, `[3]`, `[4]`, `[5]`, `[6]`, `[7]`, `[8]`, `[9]`.
 
 But we have a problem: how do we quantify the distance between two clusters when at least one of the two contains more than one nodes? It's easy to measure the distance between two clusters with single node: we just calculate their Euclidean distance, but for clusters with more nodes, we get lost. For example, I ask you, what is the distance between the cluster of `[5,7,0]` and `[1,3]`? This issue is related to the second problem. 
 
-### Second problem: which cluster to join?
+### 3.2 Second problem: which cluster to join?
 
 In our original procedure, in the fourth step, we have Node0 and Node7 but Node7 is already part of `[5, 7]`. We decided to let Node0 join `[5, 7]`, but there is a problem. 
 
@@ -321,7 +321,7 @@ We can see that it's better to let Node0 join the cluster of `[1,3]`.
 
 Or that because the largest distance between `[0]` and `[1,3]` is smaller than the largest distance between `[0]` and `[5,7]`, we should let Node0 join `[1,3]` instead of `[5,7]`. 
 
-## Three methods to measure distance between clusters
+## 4. Three methods to measure distance between clusters
 
 In fact, the above are the three methods of hierchical clustering:
 
@@ -333,7 +333,7 @@ In fact, the above are the three methods of hierchical clustering:
   
 I guess you will know how to compute the distance between `[5,7]` and `[1,3]`: we have four distance pairs: `$d_{5}^{1}$`, `$d_{5}^{3}$`, `$d_{7}^{1}$`, `$d_{7}^{3}$`. If we use single linkage, we use the smallest among the four. If we use complete linkage, we use the largest. For average linkage, we compute the mean of all four distances. 
 
-### Implementing the three methods
+### 4.1 Implementing the three methods
 
 
 ```python
@@ -405,7 +405,7 @@ def complete_linkage(cluster1, cluster2, d_matrix):
     return max(d_list)
 ```
 
-## Algorithm
+## 5. Algorithm
 
 Let's recap our algorithm. We start with 10 nodes. We consider each node as a separate cluster. Then we group two clusters with the smallest distances together. Then we keep doing the same, until the number of cluster is what we require. 
 
@@ -441,6 +441,7 @@ clusters
 
 
 ```python
+# This chunk of codes was inspired by the solution to CS540 P4 by Hugh Liu in 2021
 def hierarchical_clustering(M, d_matrix, target_cluster_num, method='single'):
     clusters = [[i] for i in range(len(M))]
     while len(clusters) > target_cluster_num:
@@ -452,7 +453,8 @@ def hierarchical_clustering(M, d_matrix, target_cluster_num, method='single'):
             for cluster2 in clusters:
                 if cluster1 != cluster2:
                     assert method in [
-                        'single', 'complete', 'average'], 'You have to choose from single, complete, and average'
+                        'single', 'complete', 'average'],\
+                    'You have to choose from single, complete, and average'
                     if method == 'single':
                         d = single_linkage(cluster1, cluster2, d_matrix)
                     elif method == 'complete':
@@ -470,7 +472,9 @@ def hierarchical_clustering(M, d_matrix, target_cluster_num, method='single'):
     return clusters
 ```
 
-## Testing
+## 6. Testing
+
+Let's test our result obtained from the above algorithm against `Scikit Learn` and `scipy.cluster.hierarchy`. 
 
 
 ```python
@@ -543,84 +547,47 @@ print(cut_tree(
 
 The three results should be interpreted this way: those numbers are the cluster number for each node. For example, in my clustering result, i.e., `clustering_result`, Node0 is in Cluster0, Node1 is in Cluster0, Node2 is in Cluster2, etc. Although the three results look different, they are actually the same: they just use different clustering numbers. 
 
-## Tie breaking
+## 7. Tie breaking
+
+In the above example, there are no ties, i.e., no two pairs have the same distance. This makes it easy to implement the above algorithm. However, this might not always be the case. 
 
 
 ```python
 np.random.seed(1234)
-N2 = 50 # number of points
-matrix = np.random.rand(N2, 2) # N points in 2 dimensional space
-M2 = matrix * 10 # multiply ten so that the numbers are easier to understand. 
+N = 10 # number of points
+matrix = np.random.rand(N, 2) # N points in 2 dimensional space
+M = matrix * 10 # multiply ten so that the numbers are easier to understand. 
 # Otherwise, all numbers are between 0 and 1
-M2
+M = M.round(decimals=0) 
+M
 ```
 
 
 
 
-    array([[1.9151945 , 6.22108771],
-           [4.37727739, 7.85358584],
-           [7.79975808, 2.72592605],
-           [2.76464255, 8.01872178],
-           [9.58139354, 8.75932635],
-           [3.5781727 , 5.00995126],
-           [6.83462935, 7.12702027],
-           [3.70250755, 5.61196186],
-           [5.03083165, 0.1376845 ],
-           [7.72826622, 8.82641191],
-           [3.64885984, 6.15396178],
-           [0.75381242, 3.68824006],
-           [9.33140102, 6.51378143],
-           [3.97202578, 7.88730143],
-           [3.16836122, 5.68098653],
-           [8.6912739 , 4.36173424],
-           [8.02147642, 1.43766825],
-           [7.04260971, 7.04581308],
-           [2.18792106, 9.24867629],
-           [4.42140755, 9.09315959],
-           [0.59809223, 1.84287084],
-           [0.47355279, 6.74880944],
-           [5.9462478 , 5.33310163],
-           [0.43324063, 5.6143308 ],
-           [3.29668446, 5.02966833],
-           [1.11894318, 6.07193706],
-           [5.65944643, 0.06764062],
-           [6.17441709, 9.12122886],
-           [7.90524133, 9.92081466],
-           [9.58801762, 7.91964135],
-           [2.8525096 , 6.24916705],
-           [4.78093796, 1.95675179],
-           [3.82317452, 0.53873685],
-           [4.51648408, 9.82004742],
-           [1.239427  , 1.19380898],
-           [7.38523056, 5.87303633],
-           [4.71632534, 1.07126817],
-           [2.29218565, 8.99965195],
-           [4.16753538, 5.35851663],
-           [0.06208517, 3.00641706],
-           [4.36893172, 6.12148997],
-           [9.18198075, 6.2573667 ],
-           [7.05997565, 1.49833716],
-           [7.46063409, 8.31006992],
-           [6.33725769, 4.38309881],
-           [1.52572775, 5.68409615],
-           [5.28224278, 9.51428764],
-           [4.80359179, 5.02559563],
-           [5.36878193, 8.19202067],
-           [0.57115638, 6.69421743]])
+    array([[ 2.,  6.],
+           [ 4.,  8.],
+           [ 8.,  3.],
+           [ 3.,  8.],
+           [10.,  9.],
+           [ 4.,  5.],
+           [ 7.,  7.],
+           [ 4.,  6.],
+           [ 5.,  0.],
+           [ 8.,  9.]])
 
 
 
 
 ```python
-X = M2[:, 0]
-Y = M2[:, 1]
+X = M[:, 0]
+Y = M[:, 1]
 from matplotlib.pyplot import figure
-figure(figsize = (10,10), dpi = 100)
+figure(figsize = (8,8), dpi = 100)
 plt.scatter(X,Y)
 plt.xlabel('X')
 plt.ylabel('Y')
-for i in range(N2):
+for i in range(N):
     plt.text(X[i], Y[i], str(i))
 ```
 
@@ -632,37 +599,322 @@ for i in range(N2):
 
 
 ```python
-d_matrix2 = np.zeros((N2, N2))
-for i in range(N2):
-    for j in range(N2):
+d_matrix = np.zeros((N, N))
+for i in range(N):
+    for j in range(N):
         if i < j:
-            d_matrix2[i,j] = eu_distance(M2[i], M2[j])
+            d_matrix[i,j] = eu_distance(M[i], M[j])
         else:
-            d_matrix2[i,j] = 10**5
+            d_matrix[i,j] = 10**5
 ```
 
 
 ```python
-all_ds2 = np.unique(d_matrix2) # all unique distances
-len(all_ds2)
+d_matrix_df = pd.DataFrame(d_matrix)
+d_matrix_df
 ```
 
 
 
 
-    1226
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100000.0</td>
+      <td>2.828427</td>
+      <td>6.708204</td>
+      <td>2.236068</td>
+      <td>8.544004</td>
+      <td>2.236068</td>
+      <td>5.099020</td>
+      <td>2.000000</td>
+      <td>6.708204</td>
+      <td>6.708204</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100000.0</td>
+      <td>100000.000000</td>
+      <td>6.403124</td>
+      <td>1.000000</td>
+      <td>6.082763</td>
+      <td>3.000000</td>
+      <td>3.162278</td>
+      <td>2.000000</td>
+      <td>8.062258</td>
+      <td>4.123106</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100000.0</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>7.071068</td>
+      <td>6.324555</td>
+      <td>4.472136</td>
+      <td>4.123106</td>
+      <td>5.000000</td>
+      <td>4.242641</td>
+      <td>6.000000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100000.0</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>7.071068</td>
+      <td>3.162278</td>
+      <td>4.123106</td>
+      <td>2.236068</td>
+      <td>8.246211</td>
+      <td>5.099020</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100000.0</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>7.211103</td>
+      <td>3.605551</td>
+      <td>6.708204</td>
+      <td>10.295630</td>
+      <td>2.000000</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>100000.0</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>3.605551</td>
+      <td>1.000000</td>
+      <td>5.099020</td>
+      <td>5.656854</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>100000.0</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>3.162278</td>
+      <td>7.280110</td>
+      <td>2.236068</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>100000.0</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>6.082763</td>
+      <td>5.000000</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>100000.0</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>9.486833</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>100000.0</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 
 
 
 ```python
-((1+N2)*N2)/2 + 1
+all_ds = np.unique(d_matrix) # all unique distances
+len(all_ds)
 ```
 
 
 
 
-    1276.0
+    27
+
+
+
+In the distance matrix, we have 27 unique distances. However, if all node pairs have different distances, we should have 46 unique values:
+
+
+```python
+((1+ (N-1))*(N-1))/2 + 1
+```
+
+
+
+
+    46.0
+
+
+
+
+```python
+# You can see that we have lots of pairs with the same distance:
+for i in range(len(all_ds)):
+    print(np.where(d_matrix == np.sort(all_ds)[i]))
+```
+
+    (array([1, 5]), array([3, 7]))
+    (array([0, 1, 4]), array([7, 7, 9]))
+    (array([0, 0, 3, 6]), array([3, 5, 7, 9]))
+    (array([0]), array([1]))
+    (array([1]), array([5]))
+    (array([1, 3, 6]), array([6, 5, 7]))
+    (array([4, 5]), array([6, 6]))
+    (array([1, 2, 3]), array([9, 6, 6]))
+    (array([2]), array([8]))
+    (array([2]), array([5]))
+    (array([2, 7]), array([7, 9]))
+    (array([0, 3, 5]), array([6, 9, 8]))
+    (array([5]), array([9]))
+    (array([2]), array([9]))
+    (array([1, 7]), array([4, 8]))
+    (array([2]), array([4]))
+    (array([1]), array([2]))
+    (array([0, 0, 0, 4]), array([2, 8, 9, 7]))
+    (array([2, 3]), array([3, 4]))
+    (array([4]), array([5]))
+    (array([6]), array([8]))
+    (array([1]), array([8]))
+    (array([3]), array([8]))
+    (array([0]), array([4]))
+    (array([8]), array([9]))
+    (array([4]), array([8]))
+    (array([0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6,
+           6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8,
+           8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]), array([0, 0, 1, 0, 1, 2, 0, 1, 2, 3, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 5, 0,
+           1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7,
+           8, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
+
+For example, the distance between Node1 and Node3, and that between Node5 and Node7, is both 1. We need to design a tie-breaking rule. For example, we can stipulate that we group pair which contains the node with the smallest index. In the above example, we will group Node1 and Node3 first. 
+
+In fact, this is the advantage of writing our own clustering algorithm instead of relying on existing packages such as `scikit learn` or `scipy`, which do not allow us to specify how to break ties. 
+
+The challenge now is: how do we integrate this tie-breaking rule into our hierarchical clustering algorithm. 
+
+
+```python
+import ast
+
+def hierarchical_clustering_with_tie_breaking(M, d_matrix, target_cluster_num, method='single'):
+    clusters = [[i] for i in range(len(M))]
+    while len(clusters) > target_cluster_num:
+        dmax = np.max(d_matrix) + 1
+        dmin = dmax
+        d_dict = {}
+        min_cluster1 = None
+        min_cluster2 = None
+        for cluster1 in clusters:
+            for cluster2 in clusters:
+                if cluster1 != cluster2:
+                    assert method in [
+                        'single', 'complete', 'average'],\
+                    'You have to choose from single, complete, and average'
+                    if method == 'single':
+                        d = single_linkage(cluster1, cluster2, d_matrix)
+                    elif method == 'complete':
+                        d = complete_linkage(cluster1, cluster2, d_matrix)
+                    elif method == 'average':
+                        d = average_linkage(cluster1, cluster2, d_matrix)
+                        
+                    if d < dmin:
+                        dmin = d
+                        min_cluster1 = cluster1
+                        min_cluster2 = cluster2
+        dist = np.array(list(d_dict.values()))
+        dmin_idxs = np.where(dist == dmin)[0]
+        cluster_pairs = list(d_dict.keys())
+        if len(dmin_idxs) > 1:
+            # cluster pairs with the same dmin
+            cluster_pairs_with_dmin = [ast.literal_eval(cluster_pairs[i]) for i in dmin_idxs]
+            flat_list = [item for sublist in cluster_pairs_with_dmin for item in sublist]
+            min_idx = min(flat_list)
+            for cluster_pair in cluster_pairs_with_dmin:
+                if min_idx in cluster_pair:
+                    cluster_pair_with_min_idx = cluster_pair
+            min_cluster1 = cluster_pair_with_min_idx[0]
+            min_cluster2 = cluster_pair_with_min_idx[1]
+        clusters.remove(min_cluster1)
+        clusters.remove(min_cluster2)
+        clusters.append(min_cluster1 + min_cluster2)
+    return clusters
+```
+
+
+```python
+clusters = hierarchical_clustering_with_tie_breaking(M, d_matrix, 3, method='complete')
+clusters
+```
+
+
+
+
+    [[1, 3, 0, 5, 7], [6, 4, 9], [2, 8]]
 
 
 
