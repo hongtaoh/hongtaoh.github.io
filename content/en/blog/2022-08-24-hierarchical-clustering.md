@@ -611,7 +611,7 @@ for i in range(N):
 
 ```python
 d_matrix_df = pd.DataFrame(d_matrix)
-d_matrix_df
+d_matrix_df.iloc[0:6, 0:6]
 ```
 
 
@@ -641,10 +641,6 @@ d_matrix_df
       <th>3</th>
       <th>4</th>
       <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
     </tr>
   </thead>
   <tbody>
@@ -656,10 +652,6 @@ d_matrix_df
       <td>2.236068</td>
       <td>8.544004</td>
       <td>2.236068</td>
-      <td>5.099020</td>
-      <td>2.000000</td>
-      <td>6.708204</td>
-      <td>6.708204</td>
     </tr>
     <tr>
       <th>1</th>
@@ -669,10 +661,6 @@ d_matrix_df
       <td>1.000000</td>
       <td>6.082763</td>
       <td>3.000000</td>
-      <td>3.162278</td>
-      <td>2.000000</td>
-      <td>8.062258</td>
-      <td>4.123106</td>
     </tr>
     <tr>
       <th>2</th>
@@ -682,10 +670,6 @@ d_matrix_df
       <td>7.071068</td>
       <td>6.324555</td>
       <td>4.472136</td>
-      <td>4.123106</td>
-      <td>5.000000</td>
-      <td>4.242641</td>
-      <td>6.000000</td>
     </tr>
     <tr>
       <th>3</th>
@@ -695,10 +679,6 @@ d_matrix_df
       <td>100000.000000</td>
       <td>7.071068</td>
       <td>3.162278</td>
-      <td>4.123106</td>
-      <td>2.236068</td>
-      <td>8.246211</td>
-      <td>5.099020</td>
     </tr>
     <tr>
       <th>4</th>
@@ -708,70 +688,10 @@ d_matrix_df
       <td>100000.000000</td>
       <td>100000.000000</td>
       <td>7.211103</td>
-      <td>3.605551</td>
-      <td>6.708204</td>
-      <td>10.295630</td>
-      <td>2.000000</td>
     </tr>
     <tr>
       <th>5</th>
       <td>100000.0</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>3.605551</td>
-      <td>1.000000</td>
-      <td>5.099020</td>
-      <td>5.656854</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>100000.0</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>3.162278</td>
-      <td>7.280110</td>
-      <td>2.236068</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>100000.0</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>6.082763</td>
-      <td>5.000000</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>100000.0</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>9.486833</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>100000.0</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
-      <td>100000.000000</td>
       <td>100000.000000</td>
       <td>100000.000000</td>
       <td>100000.000000</td>
@@ -909,6 +829,7 @@ def hierarchical_clustering_with_tie_breaking(M, d_matrix, target_cluster_num, m
 ```python
 clusters = hierarchical_clustering_with_tie_breaking(M, d_matrix, 3, method='complete')
 clusters
+# clustering result is the same as above.
 ```
 
 
@@ -917,8 +838,3 @@ clusters
     [[1, 3, 0, 5, 7], [6, 4, 9], [2, 8]]
 
 
-
-
-```python
-
-```
