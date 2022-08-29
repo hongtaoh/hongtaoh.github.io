@@ -30,6 +30,10 @@ $$x = \frac{dx}{x \cdot df} - dx$$
 
 Because `$dx$` is extremely small, we can safely ignore it, and therefore, we have:
 
+$$x = \frac{dx}{x \cdot df}$$
+
+Multiply the above equation by $x$ and we have:
+
 $$x^2 = \frac{dx}{df}$$
 
 So we have:
