@@ -36,7 +36,7 @@ So we have:
 
 $$\frac{df}{dx} = \frac{1}{x^2} = x^{-2}$$
 
-Because $df$ is negative, the derivative should be negative as well, so:
+Because `$df$` is negative, the derivative should be negative as well, so:
 
 $$\frac{df}{dx} = - \frac{1}{x^2} = - x^{-2}$$
 
