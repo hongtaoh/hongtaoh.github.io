@@ -16,7 +16,7 @@ First, I highly recommend to watch [here](https://youtu.be/S0_qX4VJhMQ?list=PLZH
 
 {{<figure src="/media/enblog/ml/1_x.png">}}
 
-The key part of the proof is that Since A and B are both on the curve of `$y = \frac{1}{x}$`, the x coordinate times the y coordinate is 1. That is to say: `$A_x \cdot A_y = 1$` and `$B_x \cdot B_y = 1$`. If you know if, then you'll know that the areas of the two shaded areas are equal. Therefore,
+The key part of the proof is that Since A and B are both on the curve of `$y = \frac{1}{x}$`, the x coordinate times the y coordinate is 1. That is to say: `$A_x \cdot A_y = 1$` and `$B_x \cdot B_y = 1$`. If you know this, then you'll know that the areas of the two shaded areas are equal. Therefore,
 
 $$dx \cdot (\frac{1}{x} - df) = x \cdot df$$
 

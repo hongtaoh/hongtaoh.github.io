@@ -13,7 +13,7 @@ type : nolisting
 
 This website contains interactive visualizations for the paper of the same name. 
 
-[Website](https://32vis.hongtaoh.com/) | [Code](https://github.com/hongtaoh/32vis) | [Data](https://osf.io/zkvjm/) | [PDF](https://osf.io/95j7f)
+[Website](https://32vis.hongtaoh.com/) | [Code](https://github.com/hongtaoh/32vis) | [Data](https://osf.io/zkvjm/) | [PDF](https://arxiv.org/pdf/2208.03772.pdf)
 
 {{< endcolumn >}}
 

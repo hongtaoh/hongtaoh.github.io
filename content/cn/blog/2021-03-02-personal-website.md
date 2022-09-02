@@ -61,6 +61,10 @@ brew install hugo
 
 完成后，在 Terminal 中输入 `hugo version`, 如果显示 `Hugo Static Site Generator...` 证明安装成功。
 
+{{<block class="info">}}
+如果你的苹果电脑比较新，而且你是用上面这种拖动的方法（而不是 brew hugo) 这种方式，那么 `hugo version` 可能会显示软件不安全，无法打开。这时候，你需要做的是在 Terminal 中输入 `open -a Finder /usr/local/bin`，然后找到 Hugo，接着右键 'Open'，选择同意，之后就没事了。
+{{<end>}}
+
 ### 微软系统 (Windows)
 
 到 [Hugo releases](https://github.com/gohugoio/hugo/releases)，找到类似 `hugo_0.81.0_Windows-64bit.zip` 的文件，点击下载，并解压。解压后的文件夹中你能看到一个 `hugo.exe` 文件。
@@ -445,6 +449,57 @@ defaultLang = "en"
 ```toml
 singleLang = true
 defaultLang = "cn" #如果你只用英文，则用 "en"
+```
+
+### 中文为主，英文为辅
+
+现在的设定是英文为主，如果你想把中文设置成主页，英文为辅，那么可以参考下面的步骤：
+
+#### 1. 修改 config.toml
+
+比如：
+
+```
+[[menu.cn]]
+    name = "主页"
+    url = "/"
+    weight = 1
+[[menu.cn]]
+    name = "关于"
+    url = "/cn/about/"
+    weight = 2
+[[menu.cn]]
+    name = "English"
+    url = "/en/about"
+    weight = 3
+[[menu.en]]
+    name = "About"
+    url = "/en/about"
+    weight = 1
+[[menu.en]]
+    name = "中文"
+    url = "/"
+    weight = 2
+```
+
+然后把预设语言改成中文：
+
+```
+defaultLang = "cn"
+```
+
+2. 修改 `themes/hugo-ht/layouts/partials/nav.html`
+
+把
+
+```
+{{ range .Site.Menus.en }}
+```
+
+改为
+
+```
+{{ range .Site.Menus.cn }}
 ```
 
 ### 新添加内容
