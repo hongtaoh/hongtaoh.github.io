@@ -12,7 +12,7 @@ tags: ML
 
 The derivative of `$y = \frac{1}{x}$` can be computed in the following way.
 
-First, I highly recommend to watch [here](https://youtu.be/S0_qX4VJhMQ?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr&t=605), where 3blue1brown visualizes this function. 
+First, I highly recommend you to watch [this clip](https://youtu.be/S0_qX4VJhMQ?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr&t=605), where 3blue1brown visualizes this function. 
 
 {{<figure src="/media/enblog/ml/1_x.png">}}
 
