@@ -130,6 +130,10 @@ See [Research](/en/research)
    - Worked with 5 trainees from Indonesia
 
 ## Teaching Experience
+- Univeristy of Wisconsin-Madison, WI
+   - 2022 Fall & 2021 Sprint, CS 570 Human Computer Interaction, Teaching Assistant with Professor Jacob 
+   - 2021 Fall, CS 639 Data Visualization, Teaching Assistant with Professor Yea-Seul Kim
+
 - Indiana University, Bloomington, IN
    - 2020 Spring, MSCH C101 Introduction to Media, Associate Instructor, 40 students  (Class Website: [C101 with Hongtao](https://c101.hongtaoh.com/)) <!--for Professor Mike Conway-->
    - 2019 Spring & Fall, MSCH C207 Introduction to Media Industry and Management, Teaching Assistant, 125 students <!--for for Matt Pierce-->
