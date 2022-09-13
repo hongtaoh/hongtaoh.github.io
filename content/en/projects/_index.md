@@ -43,7 +43,15 @@ Worked as a research assistant for Professor [Yong-Yeol Ahn](http://yongyeol.com
 
 {{< endcolumn >}}
 
-## 2. Tutorials
+### Visualizing Spotify
+
+## 2. Software
+
+### Hugo-Ht
+
+### Hupyter
+
+## 3. Tutorials
 ### How to Create Online Books
 
 {{< columns >}}
@@ -57,6 +65,12 @@ I gave a talk at [YY Lab](http://yongyeol.com/) on how to create onlinebooks.
 [Website](https://onlinebook.hongtaoh.com/portfolio/) | [Code](https://github.com/hongtaoh/onlinebook) | [Slides](https://onlinebook.hongtaoh.com/slides/onlinebook.html#1)
 
 {{< endcolumn >}}
+
+### Web Scraping
+
+### Snakemake 
+
+### Machine Learning Tutorials
 
 ### Notes on Network Science
 {{< columns >}}
@@ -102,6 +116,7 @@ I really like 3blue1brown's vidoes. I made notes on them:
 
 - [Essence of Linear Algebra](https://hongtaoh.com/en/2022/07/07/la/)
 - [Neural Networks](https://hongtaoh.com/en/2022/05/11/3blue1brown-nn/)
+- [Essence of Calculas]()
 
 {{< endcolumn >}}
 
@@ -144,7 +159,7 @@ A simple tutorial website to help beginners like me learn D3.js. It is a side pr
 
 {{< endcolumn >}}
 
-## 3. Website
+## 4. Websites
 ### International Journalism Class at RUC
 {{< columns >}}
 

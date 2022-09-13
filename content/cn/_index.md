@@ -101,7 +101,7 @@ type : list-single
 
 ## 我经常看的博客
 
-- [袁凡](https://yuanfan.vercel.app/)
+- [袁凡](https://yuanfan.rbind.io/)
 
 - [逄金吉](https://jinjipang.com/cn/)
 
