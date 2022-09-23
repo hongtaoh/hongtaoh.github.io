@@ -4,8 +4,7 @@ author: 郝鸿涛
 date: '2020-02-01'
 slug: us-comm-ma
 categories: 
-tags: 
-  - 留学
+tags: 留学
 toc: true
 aliases: 
   - /cn/2020/02/01/us-communication-ma-programs/
@@ -128,7 +127,7 @@ aliases:
 
 以下是一些可能会给全奖，但是我不是 100% 确定的项目，请自行确认：
 
-- 雪城大学 (Syracuse University, [Newhouse School of Public Communications](https://newhouse.syr.edu/), [media studies 硕士项目}(https://newhouse.syr.edu/academics/media-studies/masters/)有关[funding 的介绍](https://newhouse.syr.edu/academics/media-studies/funding/)中提到也许会有 instructional associateships 和 research assistanships。)
+- 雪城大学 (Syracuse University, [Newhouse School of Public Communications](https://newhouse.syr.edu/), [media studies 硕士项目](https://newhouse.syr.edu/academics/media-studies/masters/)有关[funding 的介绍](https://newhouse.syr.edu/academics/media-studies/funding/)中提到也许会有 instructional associateships 和 research assistanships。)
 
 - 夏威夷大学马诺阿分校 (University of Hawaii at Manoa, [School of Communications](https://communications.manoa.hawaii.edu/communication-ma/)，[课程设置](https://manoa.hawaii.edu/catalog/category/arts-sciences/social-sciences/com/)还不错)
 
