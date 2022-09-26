@@ -7,7 +7,7 @@ draft: false
 toc: false
 tags: 
 ---
-I attended the writing group led by YY on September 22, 2022 where YY, Vincent Wong, and I attended. The topic is "How to stay positive and have confidence in academia". The following are some of the key points:
+I attended the writing group led by [YY](https://yongyeol.com/) on September 22, 2022 where YY, Vincent Wong, and I attended. The topic is "How to stay positive and have confidence in academia". The following are some of the key points:
 
 - Don't compare yourself with others. I know this is cliche but it's difficult as well as important to do. There will always be super stars around you. If you keep comparing yourself with them, you will be negative and loss confidence. In fact, everyone has his or her own way of living and there is no way to make others your reference point. 
 
