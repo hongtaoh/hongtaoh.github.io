@@ -64,7 +64,7 @@ tags: 留学
 
 ## 5. 读一个名校镀金硕士
 
-如果你家里有钱，可以考虑读一个名校的镀金硕士再申请传播学博士项目。名校的光环还是有一定作用的。比如，东亚研究（斯坦福、哈佛、宾大、康奈尔等）、芝加哥大学社会科学硕士项目 ([The MA Program in the Social Sciences](https://mapss.uchicago.edu/)) 或者计算社会学硕士项目 ([Masters in Computational Social Science](https://macss.uchicago.edu/))、[哥大统计硕士](https://stat.columbia.edu/ma-programs/) 等等。我举这几个只是最常见的，而且我了解额非常有限。有钱的话，你可以申请任何可能会帮到你之后申请传播学博士的项目。
+如果你家里有钱，可以考虑读一个名校的镀金硕士再申请传播学博士项目。名校的光环还是有一定作用的。比如，东亚研究（斯坦福、哈佛、宾大、康奈尔等）、芝加哥大学社会科学硕士项目 ([The MA Program in the Social Sciences](https://mapss.uchicago.edu/)) 或者计算社会学硕士项目 ([Masters in Computational Social Science](https://macss.uchicago.edu/))、[哥大统计硕士](https://stat.columbia.edu/ma-programs/) 等等。我举这几个只是最常见的，而且我了解也非常有限。有钱的话，你可以申请任何可能会帮到你之后申请传播学博士的项目。
 
 ## 6. 本科毕业后申请香港、新加坡、欧洲的硕士项目
 
