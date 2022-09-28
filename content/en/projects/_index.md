@@ -45,11 +45,47 @@ Worked as a research assistant for Professor [Yong-Yeol Ahn](http://yongyeol.com
 
 ### Visualizing Spotify
 
+{{< columns >}}
+
+{{<figure-a src="/media/projects/spotify-vis.png" link="https://github.com/hongtaoh/spotify-viz/blob/master/What%20makes%20popular%20singers%20on%20spotify%20popular%3F%20.ipynb" >}}
+
+{{< column >}}
+
+This is a homework project for CS839 (Modeling User Interaction). I explored factors what lead to song popularity on Spotify. 
+
+[PDF](/files/spotify.pdf) | [Code](https://github.com/hongtaoh/spotify-viz/blob/master/What%20makes%20popular%20singers%20on%20spotify%20popular%3F%20.ipynb)
+
+{{< endcolumn >}}
+
 ## 2. Software
 
 ### Hugo-Ht
 
+{{< columns >}}
+
+{{<figure-a src="https://raw.githubusercontent.com/hongtaoh/hugo-ht/master/static/media/exampleSite.png" link="https://github.com/hongtaoh/hugo-ht" >}}
+
+{{< column >}}
+
+[Hugo-ht](https://github.com/hongtaoh/hugo-ht) is a Hugo Template for static website that I created. My homepage is based on this template. 
+
+[Source code](https://github.com/hongtaoh/hugo-ht) | [Example site](https://hugo-ht.hongtaoh.com/)
+
+{{< endcolumn >}}
+
 ### Hupyter
+
+{{< columns >}}
+
+{{<figure-a src="/media/projects/hupyter.png" link="https://github.com/hongtaoh/hupyter" >}}
+
+{{< column >}}
+
+[Hupyter](https://github.com/hongtaoh/hupyter) converts `.ipynb` files to Hugo blog posts. 
+
+[Source code](https://github.com/hongtaoh/hupyter) | [Example post](https://hongtaoh.com/en/2022/09/26/knn/)
+
+{{< endcolumn >}}
 
 ## 3. Tutorials
 ### How to Create Online Books
