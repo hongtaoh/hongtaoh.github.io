@@ -6,12 +6,10 @@ author: Hongtao Hao
 slug: corr2
 draft: false
 toc: false
-tags: stats
+tags: ML
 
 ---
 
-<!-- python hupyter.py notebooks/2022-08-22-correlation.ipynb en/blog
- -->
 Everyone seems to know correlation but they do not. At least I didn't. 
 
 To understand correlation, we need to first understand covariance. As the name suggests, covariance measures the extent to which two variables **covary**, i.e., vary together. But the questions are: what does "vary" mean, and how do we quantify "together"?
