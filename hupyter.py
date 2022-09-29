@@ -2,6 +2,7 @@ import sys
 import os
 import re
 import pathlib
+from pathlib import Path
 
 arg1 = sys.argv[1]
 arg2 = sys.argv[2]
@@ -35,8 +36,9 @@ if __name__ == '__main__':
 	txt = re.sub(r'`\$\$`([^$]*)`\$\$`', r'`$$\1$$`', txt)
 
 	# move files_folder to static folder
-	os.system(f'cp -r {files_folder}/* {target_static_folder}')
-	os.system(f'rm -rf {files_folder}')
+	if Path(files_folder).exists():
+		os.system(f'cp -r {files_folder}/* {target_static_folder}')
+		os.system(f'rm -rf {files_folder}')
 
 	# https://stackoverflow.com/a/43828391
 	md_image_links_raw = re.findall(r'!\[(.*?)\]\((.*?)\)', txt)

@@ -7,6 +7,10 @@ draft: false
 toc: true
 tags: 留学
 ---
+{{<block class="info">}}
+[湘云](https://xiangyun.rbind.io/)问我能不能把这篇投给[统计之都](https://cosx.org/)，我后来[投了](https://cosx.org/2022/09/my-phd-app/)，微信版在[这里](https://mp.weixin.qq.com/s/SbXVT4SJkFGDusJXA8ezsA)。
+{{<end>}}
+
 {{<block class="tip">}}
 相关博文：
 
