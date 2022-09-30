@@ -21,11 +21,14 @@ type : nolisting
 
 ```
 @article{hao2022thirty,
-  title={Thirty-two Years of IEEE VIS: Authors, Fields of Study and Citations},
   author={Hao, Hongtao and Cui, Yumian and Wang, Zhengxiang and Kim, Yea-Seul},
-  journal={IEEE Transactions on Visualization and Computer Graphics},
-  doi={10.1109/TVCG.2022.3209422}
+  journal={IEEE Transactions on Visualization and Computer Graphics}, 
+  title={Thirty-Two Years of IEEE VIS: Authors, Fields of Study and Citations}, 
   year={2022},
+  volume={},
+  number={},
+  pages={1-10},
+  doi={10.1109/TVCG.2022.3209422},
   publisher={IEEE}
 }
 ```
