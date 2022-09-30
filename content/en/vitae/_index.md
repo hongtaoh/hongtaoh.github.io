@@ -117,7 +117,7 @@ See [Research](/en/research)
 
 ## Working Experience
 - 2019 May, Journalist, *49<sup>th</sup> St.Gallen Symposium Magazine*, St. Gallen, Switzerland 
-  - Worked with 13 team members from seven countries and four continents, supervised by [Andrew Curry](https://www.andrewcurry.com/), with the output of a [56-page magazine](https://www.symposium.org/sites/default/files/2019-11/Magazine%2049th%20St.%20Gallen%20Symposium.pdf)
+  - Worked with 13 team members from seven countries and four continents, supervised by [Andrew Curry](https://www.andrewcurry.com/), with the output of a [56-page magazine](/files/sgs-mgz-2019-long.pdf)
   - Representative work of mine:
 
     - ["It's not just about spending more money."](https://www.symposium.org/articles/its-not-just-about-spending-more-money) (Interviewing Heng Swee Keat, Deputy Prime Minister of Singapore)
