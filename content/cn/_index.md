@@ -109,6 +109,8 @@ type : list-single
 
 - [谢益辉](https://yihui.org/)
 
+- [tianheg](https://github.com/tianheg)
+
 - [赵文轩](https://allanware.github.io/)
 
 - [黄湘云](https://xiangyun.rbind.io/)
