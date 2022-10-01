@@ -150,9 +150,9 @@ Class website for my students enrolled in *MSCH‑C100 Introduction to media* at
 
 I really like 3blue1brown's vidoes. I made notes on them:
 
-- [Essence of Linear Algebra](https://hongtaoh.com/en/2022/07/07/la/)
-- [Neural Networks](https://hongtaoh.com/en/2022/05/11/3blue1brown-nn/)
-- [Essence of Calculas]()
+- [Essence of Linear Algebra](/en/2022/07/07/la/)
+- [Neural Networks](/en/2022/05/11/3blue1brown-nn/)
+- [Essence of Calculas](/en/2022/09/30/clac/)
 
 {{< endcolumn >}}
 
