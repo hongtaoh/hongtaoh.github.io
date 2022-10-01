@@ -4,7 +4,7 @@ date: 2022-05-11T16:23:53-05:00
 author: "Hongtao Hao"
 slug: obsedian-mathjax-hugo-convert
 draft: false
-toc: false
+toc: true
 ---
 In Obsedian, you just use:
 
@@ -27,6 +27,8 @@ needs to become
 ```
 
 Then Obsedian and Hugo are the same. 
+
+## Mathjax
 
 So, how to convert MathJax in Obsedian to that in Hugo?
 
@@ -108,3 +110,37 @@ txt = re.sub(r'\]\]', ')', txt)
 with open('txt.md', 'w') as f:
     f.write(txt)
 ``` -->
+
+## Script
+
+This is the script:
+
+```py
+import re 
+
+# the input obsedian file name
+input_fname = 'calc.md'
+
+# output file name
+output_fname = 'txt.md'
+
+# image directory
+image_dir = '/media/enblog/calc-pics/'
+
+# reaf file
+f = open(input_fname, 'r')
+txt = f.read()
+
+# this line is from 4castle: https://stackoverflow.com/a/38645273
+txt = re.sub(r'\$([^$]*)\$', r'`$\1$`', txt)
+
+txt = re.sub(r'`\$\$`([^$]*)`\$\$`', r'`$$\1$$`', txt)
+
+# replace ![[ with ![](/image/
+txt = re.sub(r'!\[\[', f'![]({image_dir}', txt)
+# replace ]] with )
+txt = re.sub(r'\]\]', ')', txt)
+
+with open(output_fname, 'w') as f:
+    f.write(txt)
+```
