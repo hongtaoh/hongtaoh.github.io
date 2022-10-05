@@ -21,7 +21,7 @@ type : list-single
 - 不信邪：我不信出身农村的人没法有成就；我不信学文科的人学不好理工科；我不信本科不好的人不能继续上名校、在学业上有成就。
 - 极度自律，但同时也给自己很多条条框框。
 - 目标感和执行力强，我想得到的东西会拼了命去争取。
-- 擅长社交，一个一、二百人的会场，我可以和任何我想认识的人在短时间内交上朋友。
+<!-- - 擅长社交，一个一、二百人的会场，我可以和任何我想认识的人在短时间内交上朋友。 -->
 - 内心极其敏感。
 - 极度热心，很想帮助别人。但现在极力抑制自己这个倾向，不过分主动帮忙。
 - 胆小，极度害怕和任何人之间的冲突。我主要的恐惧源：
@@ -109,6 +109,8 @@ type : list-single
 
 - [谢益辉](https://yihui.org/)
 
+- [吴诗涛](https://shitao.netlify.app/)
+
 - [tianheg](https://github.com/tianheg)
 
 - [赵文轩](https://allanware.github.io/)
@@ -122,4 +124,4 @@ https://dlyang.me/ -->
 
 ## 关于本站
 
-本站结构采用 [Hugo](https://gohugo.io)。主题为在谢益辉 [Hugo Xmin](https://github.com/yihui/hugo-xmin) 基础上微改而来的 [Hugo-ht](https://github.com/hongtaoh/hugo-ht)。
+本站结构采用 [Hugo](https://gohugo.io)。主题为在谢益辉 [Hugo Xmin](https://github.com/yihui/hugo-xmin) 基础上“微改”而来的 [Hugo-ht](https://github.com/hongtaoh/hugo-ht)。
