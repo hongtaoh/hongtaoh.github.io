@@ -116,4 +116,4 @@ Luis Schuepbach 是当年杂志的负责人 (Magazine Project Manager)，他 201
 
 {{<figure src="/media/cnblog/sgs/mgz/greece.JPG" caption="波塞冬神庙">}}
 
-然后从雅典飞回美国，去 DC 参加 2019 年的 ICA 会议。会议完了之后，我又跑了很多地方，先去了纽约见了 2017 年在瑞士圣加仑论坛认识的 Rishi，然后去波士顿，见了 Jiska、睿哲、皓存。
+然后从雅典飞回美国，去 DC 参加 2019 年的 ICA 会议。会议完了之后，我又跑了很多地方，先去了纽约见了 2017 年在瑞士圣加仑论坛认识的 R 君，然后去波士顿，见了 J 君、K 君、Y 君。
