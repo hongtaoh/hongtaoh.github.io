@@ -98,7 +98,7 @@ NCA 显示[阿拉斯加州内没有传播学博士项目](https://www.natcom.org
 
 这个学院有两个系，[Strategic Communication](https://murrow.wsu.edu/academics/academic-departments/department-of-strategic-communication/) 和 [Journalism & Media Production](https://murrow.wsu.edu/academics/academic-departments/department-of-journalism-and-media-production/). 前者应该偏科研，后者偏实践。如果我没记错的话，这个学院的 MA 也谁给钱的。从学科设置来看，这里的研究应该偏重公关、广告和健康传播。
 
-申请[截止日期](https://gradschool.wsu.edu/apply/)貌似是 1月10号，不过你最好自己确认一下，出错了我可不管。
+申请[截止日期](https://gradschool.wsu.edu/apply/)貌似是 1月10号，不过你最好自己确认一下。
 
 ## Oregon
 
