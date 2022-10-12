@@ -103,7 +103,7 @@ type : list-single
 
 - [袁凡](https://yuanfan.rbind.io/)
 
-- [冯晓东](https://www.fxd.name/)
+<!-- - [冯晓东](https://www.fxd.name/) -->
 
 - [逄金吉](https://jinjipang.com/cn/)
 
