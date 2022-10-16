@@ -3,6 +3,7 @@ import os
 import re
 import pathlib
 from pathlib import Path
+import shutil
 
 arg1 = sys.argv[1]
 arg2 = sys.argv[2]
@@ -20,6 +21,12 @@ if __name__ == '__main__':
 	move_to = 'content/' + arg2 # where post is located
 	static_folder = 'static/' + arg2
 	target_static_folder = static_folder + '/' + files_folder_name # the target static folder
+	
+	# delete the target static folder because there might be old and useless files
+	# credit: https://stackoverflow.com/a/43765496
+	if os.path.exists(target_static_folder):
+		os.remove(target_static_folder)
+	# shutil.rmtree(target_static_folder, ignore_errors=True)
 
 	# create path if not existing
 	pathlib.Path(move_to).mkdir(parents=True, exist_ok=True) 
