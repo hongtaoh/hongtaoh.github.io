@@ -102,16 +102,39 @@ df<span style=color:#666>.</span>shape
 <li>Right now, each row lists a donation-receiving pair. But what we want is: for each year, what&rsquo;s the amount of donation and receiving this country has.</li>
 <li>Not all countries appeared in all years.</li>
 </ul>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># We first get the donation data</span>
-donation_data <span style=color:#666>=</span> []
-<span style=color:green;font-weight:700>for</span> group <span style=color:#a2f;font-weight:700>in</span> df<span style=color:#666>.</span>groupby([<span style=color:#ba2121>&#39;year&#39;</span>, <span style=color:#ba2121>&#39;donor&#39;</span>]):
-    <span style=color:#408080;font-style:italic># total amount of donation in that year for this country</span>
-    total_yearly_donation <span style=color:#666>=</span> <span style=color:green>sum</span>(group[<span style=color:#666>1</span>]<span style=color:#666>.</span>amount)
-    <span style=color:#408080;font-style:italic># year, country name, total</span>
-    donation_data<span style=color:#666>.</span>append(
-        (group[<span style=color:#666>0</span>][<span style=color:#666>0</span>], group[<span style=color:#666>0</span>][<span style=color:#666>1</span>], total_yearly_donation))
-donation_df <span style=color:#666>=</span> pd<span style=color:#666>.</span>DataFrame(
-    donation_data, columns<span style=color:#666>=</span>[<span style=color:#ba2121>&#39;year&#39;</span>,<span style=color:#ba2121>&#39;country&#39;</span>,<span style=color:#ba2121>&#39;donation&#39;</span>])
+<p>Let&rsquo;s first get donation and receiving data from the source data.</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>parse_donation_and_receiving</span>(df, var):
+    <span style=color:#ba2121>&#34;&#34;&#34;
+</span><span style=color:#ba2121>    To get donationn or receiving data from df
+</span><span style=color:#ba2121>    
+</span><span style=color:#ba2121>    Input:
+</span><span style=color:#ba2121>        - df: df
+</span><span style=color:#ba2121>        - var: either &#39;donor&#39; or &#39;recipient&#39;
+</span><span style=color:#ba2121>    
+</span><span style=color:#ba2121>    Return:
+</span><span style=color:#ba2121>        a dataframe
+</span><span style=color:#ba2121>    &#34;&#34;&#34;</span>
+    data <span style=color:#666>=</span> []
+    <span style=color:green;font-weight:700>for</span> group <span style=color:#a2f;font-weight:700>in</span> df<span style=color:#666>.</span>groupby([<span style=color:#ba2121>&#39;year&#39;</span>, var]):
+        <span style=color:#408080;font-style:italic># total amount of donation or receiving in that year for this country</span>
+        total_amount <span style=color:#666>=</span> group[<span style=color:#666>1</span>]<span style=color:#666>.</span>amount<span style=color:#666>.</span>sum()
+        <span style=color:#408080;font-style:italic># the amount is so big, we use the unit of billio (10**9)</span>
+        total_amount <span style=color:#666>=</span> total_amount <span style=color:#666>/</span> <span style=color:#666>10</span><span style=color:#666>**</span><span style=color:#666>9</span>
+        data<span style=color:#666>.</span>append((
+            <span style=color:#408080;font-style:italic># year:</span>
+            group[<span style=color:#666>0</span>][<span style=color:#666>0</span>],
+            <span style=color:#408080;font-style:italic># country:</span>
+            group[<span style=color:#666>0</span>][<span style=color:#666>1</span>],
+            <span style=color:#408080;font-style:italic># amount:</span>
+            total_amount
+        ))
+    var_name <span style=color:#666>=</span> <span style=color:#ba2121>&#39;donation&#39;</span> <span style=color:green;font-weight:700>if</span> var <span style=color:#666>==</span> <span style=color:#ba2121>&#39;donor&#39;</span> <span style=color:green;font-weight:700>else</span> <span style=color:#ba2121>&#39;received&#39;</span>
+    data_df <span style=color:#666>=</span> pd<span style=color:#666>.</span>DataFrame(
+        data, columns <span style=color:#666>=</span> [<span style=color:#ba2121>&#39;year&#39;</span>, <span style=color:#ba2121>&#39;country&#39;</span>, var_name]
+    )
+    <span style=color:green;font-weight:700>return</span> data_df
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># We first get the donation data</span>
+donation_df <span style=color:#666>=</span> parse_donation_and_receiving(df, <span style=color:#ba2121>&#39;donor&#39;</span>)
 donation_df<span style=color:#666>.</span>head()
 </code></pre></div><div>
 <style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
@@ -129,45 +152,37 @@ donation_df<span style=color:#666>.</span>head()
 <th>0</th>
 <td>1973</td>
 <td>Australia</td>
-<td>46285863.0</td>
+<td>0.046286</td>
 </tr>
 <tr>
 <th>1</th>
 <td>1973</td>
 <td>Belgium</td>
-<td>39251336.0</td>
+<td>0.039251</td>
 </tr>
 <tr>
 <th>2</th>
 <td>1973</td>
 <td>Canada</td>
-<td>437928427.0</td>
+<td>0.437928</td>
 </tr>
 <tr>
 <th>3</th>
 <td>1973</td>
 <td>France</td>
-<td>247189555.0</td>
+<td>0.247190</td>
 </tr>
 <tr>
 <th>4</th>
 <td>1973</td>
 <td>Germany</td>
-<td>562232384.0</td>
+<td>0.562232</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># Then we get the receiving data</span>
-receiving_data <span style=color:#666>=</span> []
-<span style=color:green;font-weight:700>for</span> group <span style=color:#a2f;font-weight:700>in</span> df<span style=color:#666>.</span>groupby([<span style=color:#ba2121>&#39;year&#39;</span>, <span style=color:#ba2121>&#39;recipient&#39;</span>]):
-    <span style=color:#408080;font-style:italic># total amount of receiving in that year for this country</span>
-    total_yearly_receiving <span style=color:#666>=</span> <span style=color:green>sum</span>(group[<span style=color:#666>1</span>]<span style=color:#666>.</span>amount)
-    <span style=color:#408080;font-style:italic># year, country name, total</span>
-    receiving_data<span style=color:#666>.</span>append(
-        (group[<span style=color:#666>0</span>][<span style=color:#666>0</span>], group[<span style=color:#666>0</span>][<span style=color:#666>1</span>], total_yearly_receiving))
-receiving_df <span style=color:#666>=</span> pd<span style=color:#666>.</span>DataFrame(
-    receiving_data, columns<span style=color:#666>=</span>[<span style=color:#ba2121>&#39;year&#39;</span>,<span style=color:#ba2121>&#39;country&#39;</span>,<span style=color:#ba2121>&#39;receiving&#39;</span>])
+receiving_df <span style=color:#666>=</span> parse_donation_and_receiving(df, <span style=color:#ba2121>&#39;recipient&#39;</span>)
 receiving_df<span style=color:#666>.</span>head()
 </code></pre></div><div>
 <style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
@@ -177,7 +192,7 @@ receiving_df<span style=color:#666>.</span>head()
 <th></th>
 <th>year</th>
 <th>country</th>
-<th>receiving</th>
+<th>received</th>
 </tr>
 </thead>
 <tbody>
@@ -185,31 +200,31 @@ receiving_df<span style=color:#666>.</span>head()
 <th>0</th>
 <td>1973</td>
 <td>Brazil</td>
-<td>3.120750e+08</td>
+<td>0.312075</td>
 </tr>
 <tr>
 <th>1</th>
 <td>1973</td>
 <td>Chile</td>
-<td>8.805608e+07</td>
+<td>0.088056</td>
 </tr>
 <tr>
 <th>2</th>
 <td>1973</td>
 <td>Colombia</td>
-<td>5.499448e+08</td>
+<td>0.549945</td>
 </tr>
 <tr>
 <th>3</th>
 <td>1973</td>
 <td>Cyprus</td>
-<td>9.613414e+06</td>
+<td>0.009613</td>
 </tr>
 <tr>
 <th>4</th>
 <td>1973</td>
 <td>India</td>
-<td>2.285257e+09</td>
+<td>2.285257</td>
 </tr>
 </tbody>
 </table>
@@ -222,12 +237,7 @@ all_cntry <span style=color:#666>=</span> <span style=color:green>list</span>(<s
 <span style=color:green>len</span>(all_cntry)
 </code></pre></div><pre><code>47
 </code></pre>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># We have so many countries. It&#39;s difficult to visualize them all in one plot</span>
-<span style=color:#408080;font-style:italic># So I am assigning groups to countries. </span>
-<span style=color:#408080;font-style:italic># Basically, I want to plot 4 countires in each figure</span>
-cntry_group_list <span style=color:#666>=</span> <span style=color:green>list</span>(np<span style=color:#666>.</span>arange(<span style=color:#666>1</span>,<span style=color:#666>13</span>)) <span style=color:#666>*</span> <span style=color:#666>4</span>
-<span style=color:green;font-weight:700>del</span> cntry_group_list[<span style=color:#666>-</span><span style=color:#666>1</span>]
-</code></pre></div><p>We have 47 unique countries, but the problem is, in some years, not all countries are present, for example, in <code>receiving_df</code>, only 10 countries were present in the year of 1973.</p>
+<p>We have 47 unique countries, but the problem is, in some years, not all countries are present, for example, in <code>receiving_df</code>, only 10 countries were present in the year of 1973.</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>receiving_df[receiving_df<span style=color:#666>.</span>year <span style=color:#666>==</span> <span style=color:#666>1973</span>]
 </code></pre></div><div>
 <style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
@@ -237,7 +247,7 @@ cntry_group_list <span style=color:#666>=</span> <span style=color:green>list</s
 <th></th>
 <th>year</th>
 <th>country</th>
-<th>receiving</th>
+<th>received</th>
 </tr>
 </thead>
 <tbody>
@@ -245,61 +255,61 @@ cntry_group_list <span style=color:#666>=</span> <span style=color:green>list</s
 <th>0</th>
 <td>1973</td>
 <td>Brazil</td>
-<td>3.120750e+08</td>
+<td>0.312075</td>
 </tr>
 <tr>
 <th>1</th>
 <td>1973</td>
 <td>Chile</td>
-<td>8.805608e+07</td>
+<td>0.088056</td>
 </tr>
 <tr>
 <th>2</th>
 <td>1973</td>
 <td>Colombia</td>
-<td>5.499448e+08</td>
+<td>0.549945</td>
 </tr>
 <tr>
 <th>3</th>
 <td>1973</td>
 <td>Cyprus</td>
-<td>9.613414e+06</td>
+<td>0.009613</td>
 </tr>
 <tr>
 <th>4</th>
 <td>1973</td>
 <td>India</td>
-<td>2.285257e+09</td>
+<td>2.285257</td>
 </tr>
 <tr>
 <th>5</th>
 <td>1973</td>
 <td>Korea</td>
-<td>1.363707e+09</td>
+<td>1.363707</td>
 </tr>
 <tr>
 <th>6</th>
 <td>1973</td>
 <td>Kuwait</td>
-<td>3.254830e+05</td>
+<td>0.000325</td>
 </tr>
 <tr>
 <th>7</th>
 <td>1973</td>
 <td>Saudi Arabia</td>
-<td>6.509700e+04</td>
+<td>0.000065</td>
 </tr>
 <tr>
 <th>8</th>
 <td>1973</td>
 <td>Thailand</td>
-<td>2.063634e+08</td>
+<td>0.206363</td>
 </tr>
 <tr>
 <th>9</th>
 <td>1973</td>
 <td>United Arab Emirates</td>
-<td>6.509700e+04</td>
+<td>0.000065</td>
 </tr>
 </tbody>
 </table>
@@ -322,100 +332,116 @@ donation_df[donation_df<span style=color:#666>.</span>year <span style=color:#66
 <th>0</th>
 <td>1973</td>
 <td>Australia</td>
-<td>4.628586e+07</td>
+<td>0.046286</td>
 </tr>
 <tr>
 <th>1</th>
 <td>1973</td>
 <td>Belgium</td>
-<td>3.925134e+07</td>
+<td>0.039251</td>
 </tr>
 <tr>
 <th>2</th>
 <td>1973</td>
 <td>Canada</td>
-<td>4.379284e+08</td>
+<td>0.437928</td>
 </tr>
 <tr>
 <th>3</th>
 <td>1973</td>
 <td>France</td>
-<td>2.471896e+08</td>
+<td>0.247190</td>
 </tr>
 <tr>
 <th>4</th>
 <td>1973</td>
 <td>Germany</td>
-<td>5.622324e+08</td>
+<td>0.562232</td>
 </tr>
 <tr>
 <th>5</th>
 <td>1973</td>
 <td>Italy</td>
-<td>1.667191e+08</td>
+<td>0.166719</td>
 </tr>
 <tr>
 <th>6</th>
 <td>1973</td>
 <td>Japan</td>
-<td>9.389659e+08</td>
+<td>0.938966</td>
 </tr>
 <tr>
 <th>7</th>
 <td>1973</td>
 <td>Netherlands</td>
-<td>1.627509e+08</td>
+<td>0.162751</td>
 </tr>
 <tr>
 <th>8</th>
 <td>1973</td>
 <td>Norway</td>
-<td>3.587485e+07</td>
+<td>0.035875</td>
 </tr>
 <tr>
 <th>9</th>
 <td>1973</td>
 <td>Sweden</td>
-<td>1.683693e+08</td>
+<td>0.168369</td>
 </tr>
 <tr>
 <th>10</th>
 <td>1973</td>
 <td>Switzerland</td>
-<td>1.406094e+07</td>
+<td>0.014061</td>
 </tr>
 <tr>
 <th>11</th>
 <td>1973</td>
 <td>United Kingdom</td>
-<td>4.425792e+08</td>
+<td>0.442579</td>
 </tr>
 <tr>
 <th>12</th>
 <td>1973</td>
 <td>United States</td>
-<td>1.553264e+09</td>
+<td>1.553264</td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>You might ask: what will be the issue if not all countries are in each year. Good question! The issue is that if we do not have data for all countries each year, we are not able to get the difference between donation and receiving for each country in each year very easily. To do that, we need to &ldquo;normalize&rdquo; the time. If a country does not appear in a year, that means it does not recieve (or donate) any money in that year.</p>
 <p>This is how I solved the problem:</p>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>donation_dfs <span style=color:#666>=</span> []
-<span style=color:green;font-weight:700>for</span> group <span style=color:#a2f;font-weight:700>in</span> donation_df<span style=color:#666>.</span>groupby(<span style=color:#ba2121>&#39;year&#39;</span>):
-    year <span style=color:#666>=</span> group[<span style=color:#666>0</span>]
-    present_cntry <span style=color:#666>=</span> group[<span style=color:#666>1</span>]<span style=color:#666>.</span>country<span style=color:#666>.</span>tolist()
-    absent_cntry <span style=color:#666>=</span> [x <span style=color:green;font-weight:700>for</span> x <span style=color:#a2f;font-weight:700>in</span> all_cntry <span style=color:green;font-weight:700>if</span> x <span style=color:#a2f;font-weight:700>not</span> <span style=color:#a2f;font-weight:700>in</span> present_cntry]
-    absent_df <span style=color:#666>=</span> pd<span style=color:#666>.</span>DataFrame({
-        <span style=color:#ba2121>&#39;year&#39;</span>: year,
-        <span style=color:#ba2121>&#39;country&#39;</span>: absent_cntry,
-        <span style=color:#ba2121>&#39;donation&#39;</span>: <span style=color:#666>0</span>
-    })
-    dff <span style=color:#666>=</span> pd<span style=color:#666>.</span>concat([group[<span style=color:#666>1</span>], absent_df], ignore_index <span style=color:#666>=</span> <span style=color:green;font-weight:700>True</span>)
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>normalize_time</span>(data, all_cntry, var_name):
+    <span style=color:#ba2121>&#34;&#34;&#34;normlize time for donation_df and receiving_df
+</span><span style=color:#ba2121>    
+</span><span style=color:#ba2121>    Input: 
+</span><span style=color:#ba2121>        - data: either donation_df or receiving_df
+</span><span style=color:#ba2121>        - all_cntry
+</span><span style=color:#ba2121>        - var_name: either &#39;donation&#39; or &#39;received&#39;
+</span><span style=color:#ba2121>    
+</span><span style=color:#ba2121>    Output:
+</span><span style=color:#ba2121>        - a dataframe
+</span><span style=color:#ba2121>    &#34;&#34;&#34;</span>
+    dfs <span style=color:#666>=</span> []
+    <span style=color:green;font-weight:700>for</span> group <span style=color:#a2f;font-weight:700>in</span> data<span style=color:#666>.</span>groupby(<span style=color:#ba2121>&#39;year&#39;</span>):
+        year <span style=color:#666>=</span> group[<span style=color:#666>0</span>]
+        present_cntry <span style=color:#666>=</span> group[<span style=color:#666>1</span>]<span style=color:#666>.</span>country<span style=color:#666>.</span>tolist()
+        absent_cntry <span style=color:#666>=</span> [x <span style=color:green;font-weight:700>for</span> x <span style=color:#a2f;font-weight:700>in</span> all_cntry <span style=color:green;font-weight:700>if</span> x <span style=color:#a2f;font-weight:700>not</span> <span style=color:#a2f;font-weight:700>in</span> present_cntry]
+        absent_df <span style=color:#666>=</span> pd<span style=color:#666>.</span>DataFrame({
+            <span style=color:#ba2121>&#39;year&#39;</span>: year,
+            <span style=color:#ba2121>&#39;country&#39;</span>: absent_cntry,
+            var_name: <span style=color:#666>0</span>
+        })
+        dff <span style=color:#666>=</span> pd<span style=color:#666>.</span>concat([group[<span style=color:#666>1</span>], absent_df], ignore_index <span style=color:#666>=</span> <span style=color:green;font-weight:700>True</span>)
+        
+        <span style=color:#408080;font-style:italic># by sorting the country, we make sure that rows in the output</span>
+        <span style=color:#408080;font-style:italic># donation and receiving dataframes correspond to each other</span>
+        dff<span style=color:#666>.</span>sort_values(by<span style=color:#666>=</span><span style=color:#ba2121>&#39;country&#39;</span>, ascending<span style=color:#666>=</span><span style=color:green;font-weight:700>True</span>, inplace<span style=color:#666>=</span><span style=color:green;font-weight:700>True</span>)
+        dfs<span style=color:#666>.</span>append(dff)
     
-    dff<span style=color:#666>.</span>sort_values(by<span style=color:#666>=</span><span style=color:#ba2121>&#39;country&#39;</span>, ascending<span style=color:#666>=</span><span style=color:green;font-weight:700>True</span>, inplace<span style=color:#666>=</span><span style=color:green;font-weight:700>True</span>)
-    dff[<span style=color:#ba2121>&#39;group&#39;</span>] <span style=color:#666>=</span> cntry_group_list
-    donation_dfs<span style=color:#666>.</span>append(dff)
-donation <span style=color:#666>=</span> pd<span style=color:#666>.</span>concat(donation_dfs, ignore_index <span style=color:#666>=</span> <span style=color:green;font-weight:700>True</span>)
+    data_df <span style=color:#666>=</span> pd<span style=color:#666>.</span>concat(dfs, ignore_index <span style=color:#666>=</span> <span style=color:green;font-weight:700>True</span>)
+    <span style=color:green;font-weight:700>return</span> data_df
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>donation <span style=color:#666>=</span> normalize_time(donation_df, all_cntry, var_name <span style=color:#666>=</span> <span style=color:#ba2121>&#39;donation&#39;</span>)
 donation<span style=color:#666>.</span>head()
 </code></pre></div><div>
 <style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
@@ -426,7 +452,6 @@ donation<span style=color:#666>.</span>head()
 <th>year</th>
 <th>country</th>
 <th>donation</th>
-<th>group</th>
 </tr>
 </thead>
 <tbody>
@@ -434,55 +459,36 @@ donation<span style=color:#666>.</span>head()
 <th>0</th>
 <td>1973</td>
 <td>Australia</td>
-<td>46285863.0</td>
-<td>1</td>
+<td>0.046286</td>
 </tr>
 <tr>
 <th>1</th>
 <td>1973</td>
 <td>Austria</td>
-<td>0.0</td>
-<td>2</td>
+<td>0.000000</td>
 </tr>
 <tr>
 <th>2</th>
 <td>1973</td>
 <td>Belgium</td>
-<td>39251336.0</td>
-<td>3</td>
+<td>0.039251</td>
 </tr>
 <tr>
 <th>3</th>
 <td>1973</td>
 <td>Brazil</td>
-<td>0.0</td>
-<td>4</td>
+<td>0.000000</td>
 </tr>
 <tr>
 <th>4</th>
 <td>1973</td>
 <td>Canada</td>
-<td>437928427.0</td>
-<td>5</td>
+<td>0.437928</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>receiving_dfs <span style=color:#666>=</span> []
-<span style=color:green;font-weight:700>for</span> group <span style=color:#a2f;font-weight:700>in</span> receiving_df<span style=color:#666>.</span>groupby(<span style=color:#ba2121>&#39;year&#39;</span>):
-    year <span style=color:#666>=</span> group[<span style=color:#666>0</span>]
-    present_cntry <span style=color:#666>=</span> group[<span style=color:#666>1</span>]<span style=color:#666>.</span>country<span style=color:#666>.</span>tolist()
-    absent_cntry <span style=color:#666>=</span> [x <span style=color:green;font-weight:700>for</span> x <span style=color:#a2f;font-weight:700>in</span> all_cntry <span style=color:green;font-weight:700>if</span> x <span style=color:#a2f;font-weight:700>not</span> <span style=color:#a2f;font-weight:700>in</span> present_cntry]
-    absent_df <span style=color:#666>=</span> pd<span style=color:#666>.</span>DataFrame({
-        <span style=color:#ba2121>&#39;year&#39;</span>: year,
-        <span style=color:#ba2121>&#39;country&#39;</span>: absent_cntry,
-        <span style=color:#ba2121>&#39;receiving&#39;</span>: <span style=color:#666>0</span>
-    })
-    dff <span style=color:#666>=</span> pd<span style=color:#666>.</span>concat([group[<span style=color:#666>1</span>], absent_df], ignore_index <span style=color:#666>=</span> <span style=color:green;font-weight:700>True</span>)
-    dff<span style=color:#666>.</span>sort_values(by<span style=color:#666>=</span><span style=color:#ba2121>&#39;country&#39;</span>, ascending<span style=color:#666>=</span><span style=color:green;font-weight:700>True</span>, inplace<span style=color:#666>=</span><span style=color:green;font-weight:700>True</span>)
-    dff[<span style=color:#ba2121>&#39;group&#39;</span>] <span style=color:#666>=</span> cntry_group_list
-    receiving_dfs<span style=color:#666>.</span>append(dff)
-receiving <span style=color:#666>=</span> pd<span style=color:#666>.</span>concat(receiving_dfs, ignore_index <span style=color:#666>=</span> <span style=color:green;font-weight:700>True</span>)
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>receiving <span style=color:#666>=</span> normalize_time(receiving_df, all_cntry, var_name <span style=color:#666>=</span> <span style=color:#ba2121>&#39;received&#39;</span>)
 receiving<span style=color:#666>.</span>head()
 </code></pre></div><div>
 <style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
@@ -492,8 +498,7 @@ receiving<span style=color:#666>.</span>head()
 <th></th>
 <th>year</th>
 <th>country</th>
-<th>receiving</th>
-<th>group</th>
+<th>received</th>
 </tr>
 </thead>
 <tbody>
@@ -501,36 +506,31 @@ receiving<span style=color:#666>.</span>head()
 <th>0</th>
 <td>1973</td>
 <td>Australia</td>
-<td>0.0</td>
-<td>1</td>
+<td>0.000000</td>
 </tr>
 <tr>
 <th>1</th>
 <td>1973</td>
 <td>Austria</td>
-<td>0.0</td>
-<td>2</td>
+<td>0.000000</td>
 </tr>
 <tr>
 <th>2</th>
 <td>1973</td>
 <td>Belgium</td>
-<td>0.0</td>
-<td>3</td>
+<td>0.000000</td>
 </tr>
 <tr>
 <th>3</th>
 <td>1973</td>
 <td>Brazil</td>
-<td>312075045.0</td>
-<td>4</td>
+<td>0.312075</td>
 </tr>
 <tr>
 <th>4</th>
 <td>1973</td>
 <td>Canada</td>
-<td>0.0</td>
-<td>5</td>
+<td>0.000000</td>
 </tr>
 </tbody>
 </table>
@@ -543,8 +543,8 @@ r_c <span style=color:#666>==</span> d_c
 </code></pre>
 <p>Then we combine the two datasets and calculate the difference:</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>all_df <span style=color:#666>=</span> donation
-all_df[<span style=color:#ba2121>&#39;receiving&#39;</span>] <span style=color:#666>=</span> receiving[<span style=color:#ba2121>&#39;receiving&#39;</span>]
-all_df[<span style=color:#ba2121>&#39;d_minus_r&#39;</span>] <span style=color:#666>=</span> all_df[<span style=color:#ba2121>&#39;donation&#39;</span>] <span style=color:#666>-</span> all_df[<span style=color:#ba2121>&#39;receiving&#39;</span>]
+all_df[<span style=color:#ba2121>&#39;received&#39;</span>] <span style=color:#666>=</span> receiving[<span style=color:#ba2121>&#39;received&#39;</span>]
+all_df[<span style=color:#ba2121>&#39;d_minus_r&#39;</span>] <span style=color:#666>=</span> all_df[<span style=color:#ba2121>&#39;donation&#39;</span>] <span style=color:#666>-</span> all_df[<span style=color:#ba2121>&#39;received&#39;</span>]
 all_df<span style=color:#666>.</span>head()
 </code></pre></div><div>
 <style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
@@ -555,8 +555,7 @@ all_df<span style=color:#666>.</span>head()
 <th>year</th>
 <th>country</th>
 <th>donation</th>
-<th>group</th>
-<th>receiving</th>
+<th>received</th>
 <th>d_minus_r</th>
 </tr>
 </thead>
@@ -565,71 +564,83 @@ all_df<span style=color:#666>.</span>head()
 <th>0</th>
 <td>1973</td>
 <td>Australia</td>
-<td>46285863.0</td>
-<td>1</td>
-<td>0.0</td>
-<td>46285863.0</td>
+<td>0.046286</td>
+<td>0.000000</td>
+<td>0.046286</td>
 </tr>
 <tr>
 <th>1</th>
 <td>1973</td>
 <td>Austria</td>
-<td>0.0</td>
-<td>2</td>
-<td>0.0</td>
-<td>0.0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
 </tr>
 <tr>
 <th>2</th>
 <td>1973</td>
 <td>Belgium</td>
-<td>39251336.0</td>
-<td>3</td>
-<td>0.0</td>
-<td>39251336.0</td>
+<td>0.039251</td>
+<td>0.000000</td>
+<td>0.039251</td>
 </tr>
 <tr>
 <th>3</th>
 <td>1973</td>
 <td>Brazil</td>
-<td>0.0</td>
-<td>4</td>
-<td>312075045.0</td>
-<td>-312075045.0</td>
+<td>0.000000</td>
+<td>0.312075</td>
+<td>-0.312075</td>
 </tr>
 <tr>
 <th>4</th>
 <td>1973</td>
 <td>Canada</td>
-<td>437928427.0</td>
-<td>5</td>
-<td>0.0</td>
-<td>437928427.0</td>
+<td>0.437928</td>
+<td>0.000000</td>
+<td>0.437928</td>
 </tr>
 </tbody>
 </table>
 </div>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>all_df<span style=color:#666>.</span>shape
+</code></pre></div><pre><code>(1927, 5)
+</code></pre>
 <p>To make the plot, we need to transform the format of year:</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>all_df[<span style=color:#ba2121>&#39;year&#39;</span>] <span style=color:#666>=</span> pd<span style=color:#666>.</span>to_datetime(all_df[<span style=color:#ba2121>&#39;year&#39;</span>], <span style=color:green>format</span><span style=color:#666>=</span><span style=color:#ba2121>&#39;%Y&#39;</span>)
-</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># We only plot group 1, for simplicity</span>
-group1 <span style=color:#666>=</span> all_df[all_df<span style=color:#666>.</span>group <span style=color:#666>==</span> <span style=color:#666>1</span>]
-</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>alt<span style=color:#666>.</span>Chart(group1)<span style=color:#666>.</span>mark_line()<span style=color:#666>.</span>encode(
-    x<span style=color:#666>=</span><span style=color:#ba2121>&#39;year:T&#39;</span>,
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>alt<span style=color:#666>.</span>Chart(all_df)<span style=color:#666>.</span>mark_line()<span style=color:#666>.</span>encode(
+    x <span style=color:#666>=</span> alt<span style=color:#666>.</span>X(
+        <span style=color:#ba2121>&#39;year&#39;</span>,
+        title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Year&#39;</span>
+    ),
     y <span style=color:#666>=</span> alt<span style=color:#666>.</span>Y(
         <span style=color:#ba2121>&#39;d_minus_r:Q&#39;</span>,
-        title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Donation minus receiving&#39;</span>
+        title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Donation - Received&#39;</span>,
+        axis<span style=color:#666>=</span>alt<span style=color:#666>.</span>Axis(
+            titleColor<span style=color:#666>=</span><span style=color:#ba2121>&#39;#5276A7&#39;</span>,
+            labelExpr <span style=color:#666>=</span> <span style=color:#ba2121>&#39;datum.value + &#34;B `$&#34;&#39;</span>
+        ),
     ),
-    color<span style=color:#666>=</span><span style=color:#ba2121>&#39;country:N&#39;</span>,
-    strokeDash<span style=color:#666>=</span><span style=color:#ba2121>&#39;country:N&#39;</span>
+    facet <span style=color:#666>=</span> alt<span style=color:#666>.</span>Facet(
+        <span style=color:#ba2121>&#34;country:N&#34;</span>,
+        columns <span style=color:#666>=</span> <span style=color:#666>8</span>,
+        title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Country/Region&#39;</span>,
+        header <span style=color:#666>=</span> alt<span style=color:#666>.</span>Header(labelFontSize <span style=color:#666>=</span> <span style=color:#666>12</span>)
+    )
+)<span style=color:#666>.</span>properties(
+    width <span style=color:#666>=</span> <span style=color:#666>120</span>,
+    height <span style=color:#666>=</span> <span style=color:#666>110</span>,
+)<span style=color:#666>.</span>configure_header(
+    titleColor<span style=color:#666>=</span><span style=color:#ba2121>&#39;#5276A7&#39;</span>,
+    titleFontSize<span style=color:#666>=</span><span style=color:#666>16</span>,
+<span style=color:#408080;font-style:italic>#     labelColor=&#39;red&#39;,</span>
+    labelFontSize<span style=color:#666>=</span><span style=color:#666>14</span>
 )
-</code></pre></div>
-<p><img src=/en/blog/2022-10-05-wrangling_files/diff_country_year.png alt></p>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(<span style=color:#666>10</span>,<span style=color:#666>8</span>))
-ax <span style=color:#666>=</span> sns<span style=color:#666>.</span>lineplot(x<span style=color:#666>=</span><span style=color:#ba2121>&#39;year&#39;</span>, y<span style=color:#666>=</span><span style=color:#ba2121>&#39;d_minus_r&#39;</span>, hue<span style=color:#666>=</span><span style=color:#ba2121>&#39;country&#39;</span>, data <span style=color:#666>=</span> group1)
-ax<span style=color:#666>.</span>set(ylabel<span style=color:#666>=</span><span style=color:#ba2121>&#39;Donation minus receiving&#39;</span>)
-</code></pre></div><pre><code>[Text(0, 0.5, 'Donation minus receiving')]
-</code></pre>
-<p><img src=/en/blog/2022-10-05-wrangling_files/2022-10-05-wrangling_30_1.png alt=png></p>
+</code></pre></div><figure class=fullwidth itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/en/blog/2022-10-05-wrangling_files/aid-small-multiple.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/en/blog/2022-10-05-wrangling_files/aid-small-multiple.png>
+</a>
+</figure>
 <h2 id=task-2>Task 2<a href=#task-2 class=header-anchor arialabel=Anchor> # </a></h2>
 <p>The second task is: find the top 10 coalesced purposes (according to the amount of donation) and for these ten purposes, show how their amount changes by time.</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># First, find the top ten purposes</span>
@@ -758,15 +769,67 @@ purpose<span style=color:#666>.</span>head()
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>purpose<span style=color:#666>.</span>shape
 </code></pre></div><pre><code>(338, 3)
 </code></pre>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># make the plot</span>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># change amount to the unit of billion</span>
+purpose[<span style=color:#ba2121>&#39;amount&#39;</span>] <span style=color:#666>=</span> purpose[<span style=color:#ba2121>&#39;amount&#39;</span>] <span style=color:#666>/</span> <span style=color:#666>10</span><span style=color:#666>**</span><span style=color:#666>9</span>
+
+<span style=color:#408080;font-style:italic># # change the format to be year</span>
+purpose[<span style=color:#ba2121>&#39;year&#39;</span>] <span style=color:#666>=</span> pd<span style=color:#666>.</span>to_datetime(purpose[<span style=color:#ba2121>&#39;year&#39;</span>], <span style=color:green>format</span><span style=color:#666>=</span><span style=color:#ba2121>&#39;%Y&#39;</span>)
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green>max</span>(purpose<span style=color:#666>.</span>amount)
+</code></pre></div><pre><code>8.344866729
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># to change the purpose name</span>
+purpose_renamer_dic <span style=color:#666>=</span> {<span style=color:#ba2121>&#39;Air transport&#39;</span>: <span style=color:#ba2121>&#39;Air Transport&#39;</span>,
+ <span style=color:#ba2121>&#39;Rail transport&#39;</span>: <span style=color:#ba2121>&#39;Rail Transport&#39;</span>,
+ <span style=color:#ba2121>&#39;Industrial development&#39;</span>: <span style=color:#ba2121>&#39;Industrial Development&#39;</span>,
+ <span style=color:#ba2121>&#39;Power generation/non-renewable sources&#39;</span>: <span style=color:#ba2121>&#39;Power: Non-renewable&#39;</span>,
+ <span style=color:#ba2121>&#39;RESCHEDULING AND REFINANCING&#39;</span>: <span style=color:#ba2121>&#39;Rescheduling &amp; Refinancing&#39;</span>,
+ <span style=color:#ba2121>&#39;Import support (capital goods)&#39;</span>: <span style=color:#ba2121>&#39;Import Support&#39;</span>,
+ <span style=color:#ba2121>&#39;Social/ welfare services&#39;</span>: <span style=color:#ba2121>&#39;Welfare Services&#39;</span>,
+ <span style=color:#ba2121>&#39;Telecommunications&#39;</span>: <span style=color:#ba2121>&#39;Telecommunications&#39;</span>,
+ <span style=color:#ba2121>&#39;Power generation/renewable sources&#39;</span>: <span style=color:#ba2121>&#39;Power: Renewable&#39;</span>,
+ <span style=color:#ba2121>&#39;Sectors not specified&#39;</span>: <span style=color:#ba2121>&#39;Not Specified&#39;</span>
+ }
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>purpose<span style=color:#666>.</span>replace(purpose_renamer_dic, inplace <span style=color:#666>=</span> <span style=color:green;font-weight:700>True</span>)
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># make the plot</span>
 alt<span style=color:#666>.</span>Chart(purpose)<span style=color:#666>.</span>mark_line()<span style=color:#666>.</span>encode(
     x <span style=color:#666>=</span> <span style=color:#ba2121>&#39;year&#39;</span>,
     y <span style=color:#666>=</span> <span style=color:#ba2121>&#39;amount&#39;</span>,
     color <span style=color:#666>=</span> <span style=color:#ba2121>&#39;purpose_name&#39;</span>,
     strokeDash <span style=color:#666>=</span> <span style=color:#ba2121>&#39;purpose_name&#39;</span>
 )
-</code></pre></div>
-<p><img src=/en/blog/2022-10-05-wrangling_files/purpose_by_year.png alt></p>
+</code></pre></div><figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/en/blog/2022-10-05-wrangling_files/purpose_by_year.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/en/blog/2022-10-05-wrangling_files/purpose_by_year.png>
+</a>
+</figure>
+<p>The problem with this chart is that it is so messy. We can visualize it in another way:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>alt<span style=color:#666>.</span>Chart(purpose)<span style=color:#666>.</span>mark_rect()<span style=color:#666>.</span>encode(
+    x <span style=color:#666>=</span> alt<span style=color:#666>.</span>X(
+        <span style=color:#ba2121>&#39;year(year)&#39;</span>,
+        title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Year&#39;</span>
+    ),
+    y <span style=color:#666>=</span> alt<span style=color:#666>.</span>Y(
+        <span style=color:#ba2121>&#39;purpose_name:N&#39;</span>,
+        title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Coalesced Purposes of Donation&#39;</span>,
+        sort<span style=color:#666>=</span>alt<span style=color:#666>.</span>EncodingSortField(field<span style=color:#666>=</span><span style=color:#ba2121>&#39;amount&#39;</span>, op<span style=color:#666>=</span><span style=color:#ba2121>&#39;sum&#39;</span>, order<span style=color:#666>=</span><span style=color:#ba2121>&#39;descending&#39;</span>)
+    ),
+    color <span style=color:#666>=</span> alt<span style=color:#666>.</span>Color(
+        <span style=color:#ba2121>&#39;amount:Q&#39;</span>,
+        title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Amount (in Billion $`)&#39;</span>,
+    )
+)<span style=color:#666>.</span>properties(
+    width <span style=color:#666>=</span> <span style=color:#666>720</span>,
+    height <span style=color:#666>=</span> <span style=color:#666>300</span>,
+    title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Top Ten Coalesced Purposes by Total Donation Amount (1973-2013)&#39;</span>,
+)<span style=color:#666>.</span>configure_axis(
+    labelFontSize<span style=color:#666>=</span><span style=color:#666>11</span>,
+    titleFontSize<span style=color:#666>=</span><span style=color:#666>12</span>
+)
+</code></pre></div><figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/en/blog/2022-10-05-wrangling_files/aid-heatmap.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/en/blog/2022-10-05-wrangling_files/aid-heatmap.png>
+</a>
+</figure>
 <a href=https://hongtaoh.com/tags/ds/>#DS</a>
 <p style=color:#777>Last modified on 2022-10-16</p>
 </div>
