@@ -637,6 +637,163 @@ all_df<span style=color:#666>.</span>head()
     labelFontSize<span style=color:#666>=</span><span style=color:#666>14</span>
 )
 </code></pre></div><figure class=fullwidth itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/en/blog/2022-10-05-wrangling_files/aid-small-multiple-diffonly.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/en/blog/2022-10-05-wrangling_files/aid-small-multiple-diffonly.png>
+</a>
+</figure>
+<p>The problem with this plot is that with it, we are not able to see the actual donation and receiving. We can achieve this in the following way.</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>all_df_melted <span style=color:#666>=</span> pd<span style=color:#666>.</span>melt(all_df, 
+        id_vars<span style=color:#666>=</span>[<span style=color:#ba2121>&#39;year&#39;</span>, <span style=color:#ba2121>&#39;country&#39;</span>], 
+        value_vars<span style=color:#666>=</span>[<span style=color:#ba2121>&#39;donation&#39;</span>, <span style=color:#ba2121>&#39;received&#39;</span>],
+        var_name <span style=color:#666>=</span> <span style=color:#ba2121>&#39;category&#39;</span>,
+        value_name <span style=color:#666>=</span> <span style=color:#ba2121>&#39;amount&#39;</span>
+       )
+all_df_melted<span style=color:#666>.</span>replace({
+    <span style=color:#ba2121>&#39;donation&#39;</span>: <span style=color:#ba2121>&#39;Donation&#39;</span>,
+    <span style=color:#ba2121>&#39;received&#39;</span>: <span style=color:#ba2121>&#39;Received&#39;</span>
+}, inplace <span style=color:#666>=</span> <span style=color:green;font-weight:700>True</span>)
+all_df_melted<span style=color:#666>.</span>rename(
+    columns <span style=color:#666>=</span> {
+        <span style=color:#ba2121>&#39;category&#39;</span>: <span style=color:#ba2121>&#39;Category&#39;</span>
+    }, inplace <span style=color:#666>=</span> <span style=color:green;font-weight:700>True</span>)
+all_df_melted<span style=color:#666>.</span>head()
+</code></pre></div><div>
+<style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
+<table border=1 class=dataframe>
+<thead>
+<tr style=text-align:right>
+<th></th>
+<th>year</th>
+<th>country</th>
+<th>Category</th>
+<th>amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1973-01-01</td>
+<td>Australia</td>
+<td>Donation</td>
+<td>0.046286</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1973-01-01</td>
+<td>Austria</td>
+<td>Donation</td>
+<td>0.000000</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1973-01-01</td>
+<td>Belgium</td>
+<td>Donation</td>
+<td>0.039251</td>
+</tr>
+<tr>
+<th>3</th>
+<td>1973-01-01</td>
+<td>Brazil</td>
+<td>Donation</td>
+<td>0.000000</td>
+</tr>
+<tr>
+<th>4</th>
+<td>1973-01-01</td>
+<td>Canada</td>
+<td>Donation</td>
+<td>0.437928</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This is important: because we are going to plot both donaiton and received amount each year for each country, it is important to replace 0 with NaN. Because the figures will be very small, if we do not change 0 to NaN, then we will consider 0 as small amount of donation or received amount, which is misleading.</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>all_df_melted[<span style=color:#ba2121>&#39;amount&#39;</span>] <span style=color:#666>=</span> all_df_melted[<span style=color:#ba2121>&#39;amount&#39;</span>]<span style=color:#666>.</span>replace(<span style=color:#666>0</span>, np<span style=color:#666>.</span>nan)
+all_df_melted<span style=color:#666>.</span>head()
+</code></pre></div><div>
+<style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
+<table border=1 class=dataframe>
+<thead>
+<tr style=text-align:right>
+<th></th>
+<th>year</th>
+<th>country</th>
+<th>Category</th>
+<th>amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1973-01-01</td>
+<td>Australia</td>
+<td>Donation</td>
+<td>0.046286</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1973-01-01</td>
+<td>Austria</td>
+<td>Donation</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1973-01-01</td>
+<td>Belgium</td>
+<td>Donation</td>
+<td>0.039251</td>
+</tr>
+<tr>
+<th>3</th>
+<td>1973-01-01</td>
+<td>Brazil</td>
+<td>Donation</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>4</th>
+<td>1973-01-01</td>
+<td>Canada</td>
+<td>Donation</td>
+<td>0.437928</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>alt<span style=color:#666>.</span>Chart(all_df_melted)<span style=color:#666>.</span>mark_line()<span style=color:#666>.</span>encode(
+    x <span style=color:#666>=</span> alt<span style=color:#666>.</span>X(
+        <span style=color:#ba2121>&#39;year&#39;</span>,
+        title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Year&#39;</span>
+    ),
+    y <span style=color:#666>=</span> alt<span style=color:#666>.</span>Y(
+        <span style=color:#ba2121>&#39;amount:Q&#39;</span>,
+        title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Amount&#39;</span>,
+        axis<span style=color:#666>=</span>alt<span style=color:#666>.</span>Axis(
+            titleColor<span style=color:#666>=</span><span style=color:#ba2121>&#39;#5276A7&#39;</span>,
+            labelExpr <span style=color:#666>=</span> <span style=color:#ba2121>&#39;datum.value + &#34;B $`&#34;&#39;</span>
+        ),
+    ),
+    color <span style=color:#666>=</span> alt<span style=color:#666>.</span>Color(
+        <span style=color:#ba2121>&#39;Category:N&#39;</span>,
+    ),
+    facet <span style=color:#666>=</span> alt<span style=color:#666>.</span>Facet(
+        <span style=color:#ba2121>&#34;country:N&#34;</span>,
+        columns <span style=color:#666>=</span> <span style=color:#666>8</span>,
+        title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Country/Region&#39;</span>,
+        header <span style=color:#666>=</span> alt<span style=color:#666>.</span>Header(labelFontSize <span style=color:#666>=</span> <span style=color:#666>12</span>)
+    )
+)<span style=color:#666>.</span>properties(
+    width <span style=color:#666>=</span> <span style=color:#666>120</span>,
+    height <span style=color:#666>=</span> <span style=color:#666>110</span>,
+)<span style=color:#666>.</span>configure_header(
+    titleColor<span style=color:#666>=</span><span style=color:#ba2121>&#39;#5276A7&#39;</span>,
+    titleFontSize<span style=color:#666>=</span><span style=color:#666>16</span>,
+<span style=color:#408080;font-style:italic>#     labelColor=&#39;red&#39;,</span>
+    labelFontSize<span style=color:#666>=</span><span style=color:#666>14</span>
+)
+</code></pre></div><figure class=fullwidth itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
 <a href=/en/blog/2022-10-05-wrangling_files/aid-small-multiple.png itemprop=contentUrl>
 <img itemprop=thumbnail src=/en/blog/2022-10-05-wrangling_files/aid-small-multiple.png>
 </a>
