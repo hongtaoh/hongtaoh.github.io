@@ -827,6 +827,213 @@ alt.Chart(all_df).mark_line().encode(
 ```
 
 
+
+{{<figure src="/en/blog/2022-10-05-wrangling_files/aid-small-multiple-diffonly.png" class="fullwidth">}}
+
+The problem with this plot is that with it, we are not able to see the actual donation and receiving. We can achieve this in the following way. 
+
+
+```python
+all_df_melted = pd.melt(all_df, 
+        id_vars=['year', 'country'], 
+        value_vars=['donation', 'received'],
+        var_name = 'category',
+        value_name = 'amount'
+       )
+all_df_melted.replace({
+    'donation': 'Donation',
+    'received': 'Received'
+}, inplace = True)
+all_df_melted.rename(
+    columns = {
+        'category': 'Category'
+    }, inplace = True)
+all_df_melted.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>country</th>
+      <th>Category</th>
+      <th>amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1973-01-01</td>
+      <td>Australia</td>
+      <td>Donation</td>
+      <td>0.046286</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1973-01-01</td>
+      <td>Austria</td>
+      <td>Donation</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1973-01-01</td>
+      <td>Belgium</td>
+      <td>Donation</td>
+      <td>0.039251</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1973-01-01</td>
+      <td>Brazil</td>
+      <td>Donation</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1973-01-01</td>
+      <td>Canada</td>
+      <td>Donation</td>
+      <td>0.437928</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+This is important: because we are going to plot both donaiton and received amount each year for each country, it is important to replace 0 with NaN. Because the figures will be very small, if we do not change 0 to NaN, then we will consider 0 as small amount of donation or received amount, which is misleading. 
+
+
+```python
+all_df_melted['amount'] = all_df_melted['amount'].replace(0, np.nan)
+all_df_melted.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>country</th>
+      <th>Category</th>
+      <th>amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1973-01-01</td>
+      <td>Australia</td>
+      <td>Donation</td>
+      <td>0.046286</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1973-01-01</td>
+      <td>Austria</td>
+      <td>Donation</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1973-01-01</td>
+      <td>Belgium</td>
+      <td>Donation</td>
+      <td>0.039251</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1973-01-01</td>
+      <td>Brazil</td>
+      <td>Donation</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1973-01-01</td>
+      <td>Canada</td>
+      <td>Donation</td>
+      <td>0.437928</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+alt.Chart(all_df_melted).mark_line().encode(
+    x = alt.X(
+        'year',
+        title = 'Year'
+    ),
+    y = alt.Y(
+        'amount:Q',
+        title = 'Amount',
+        axis=alt.Axis(
+            titleColor='#5276A7',
+            labelExpr = 'datum.value + "B $`"'
+        ),
+    ),
+    color = alt.Color(
+        'Category:N',
+    ),
+    facet = alt.Facet(
+        "country:N",
+        columns = 8,
+        title = 'Country/Region',
+        header = alt.Header(labelFontSize = 12)
+    )
+).properties(
+    width = 120,
+    height = 110,
+).configure_header(
+    titleColor='#5276A7',
+    titleFontSize=16,
+#     labelColor='red',
+    labelFontSize=14
+)
+```
+
+
+
 {{<figure src="/en/blog/2022-10-05-wrangling_files/aid-small-multiple.png" class="fullwidth">}}
 
 ## Task 2
@@ -1084,6 +1291,7 @@ alt.Chart(purpose).mark_line().encode(
 ```
 
 
+
 {{<figure src="/en/blog/2022-10-05-wrangling_files/purpose_by_year.png">}}
 
 The problem with this chart is that it is so messy. We can visualize it in another way:
@@ -1113,5 +1321,6 @@ alt.Chart(purpose).mark_rect().encode(
     titleFontSize=12
 )
 ```
+
 
 {{<figure src="/en/blog/2022-10-05-wrangling_files/aid-heatmap.png">}}
