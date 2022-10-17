@@ -39,7 +39,7 @@ tags: 留学
   1. [PDF](https://raw.githubusercontent.com/hongtaoh/cv_emulate/master/twoColumnCV/twoColumnCV.pdf), [源代码](https://github.com/hongtaoh/cv_emulate/tree/master/twoColumnCV)
   2. [PDF](https://raw.githubusercontent.com/hongtaoh/cv_emulate/master/oneColumn/Hongtao_CV_1col.pdf), [源代码](https://github.com/hongtaoh/cv_emulate/tree/master/oneColumn)
 
-把源代码那几个文件一股脑上传到一个 Overleaf 项目，应该就能导出一摸一样的 PDF。
+把源代码那几个文件一股脑上传到一个 Overleaf 项目，应该就能导出一摸一样的 PDF。需要注意的是，第二个你需要用 LuaLaTeX 编译器。在 overleaf 上，点击 menu，然后在 compiler 中选择 LuaLaTeX。
 
 还有一个我虽然在申请时没用到，但也许有人会喜欢的版本：[PDF](https://raw.githubusercontent.com/hongtaoh/cv_emulate/master/My_Awesome_CV/My_Awesome_CV.pdf)，[源代码](https://github.com/hongtaoh/cv_emulate/tree/master/My_Awesome_CV)
 {{<end>}}
