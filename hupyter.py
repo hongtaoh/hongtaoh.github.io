@@ -24,8 +24,8 @@ if __name__ == '__main__':
 	
 	# delete the target static folder because there might be old and useless files
 	# credit: https://stackoverflow.com/a/43765496
-	if os.path.exists(target_static_folder):
-		os.remove(target_static_folder)
+	# if os.path.exists(target_static_folder):
+	# 	shutil.rmtree(target_static_folder)
 	# shutil.rmtree(target_static_folder, ignore_errors=True)
 
 	# create path if not existing
