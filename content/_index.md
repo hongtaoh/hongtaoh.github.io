@@ -8,8 +8,9 @@ I graduated with a Master's degree in Media Arts and Sciences from [the Media Sc
 
 <!-- , working with Professor [Yea-Seul Kim](https://pages.cs.wisc.edu/~yeaseulkim/). -->
 
-- [CV](/files/hongtao_hao_cv.pdf) 
-- [Google Scholar](https://scholar.google.com/citations?user=VO6EfSzAAG0C&hl=en&oi=sra)
+<!-- - [CV](/files/hongtao_hao_cv.pdf) 
+- [Google Scholar](https://scholar.google.com/citations?user=VO6EfSzAAG0C&hl=en&oi=sra) -->
+
 <!-- - [GitHub](https://github.com/hongtaoh/) -->
 
 
