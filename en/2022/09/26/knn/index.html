@@ -157,7 +157,7 @@ sns<span style=color:#666>.</span>barplot(data <span style=color:#666>=</span> l
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic>## example 1:</span>
 eg1 <span style=color:#666>=</span> x_test[<span style=color:#666>1</span>]
 plt<span style=color:#666>.</span>imshow(eg1<span style=color:#666>.</span>reshape(<span style=color:#666>28</span>, <span style=color:#666>28</span>), cmap<span style=color:#666>=</span><span style=color:#ba2121>&#39;gray&#39;</span>)
-</code></pre></div><pre><code>&lt;matplotlib.image.AxesImage at 0x1244190f0&gt;
+</code></pre></div><pre><code>&lt;matplotlib.image.AxesImage at 0x1154f0a60&gt;
 </code></pre>
 <p><img src=/en/blog/2022-09-26-knn_files/2022-09-26-knn_29_1.png alt=png></p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># Let&#39;s say k = 3</span>
@@ -182,7 +182,7 @@ knn_results
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># example 2</span>
 eg2 <span style=color:#666>=</span> x_test[<span style=color:#666>90</span>]
 plt<span style=color:#666>.</span>imshow(eg2<span style=color:#666>.</span>reshape(<span style=color:#666>28</span>, <span style=color:#666>28</span>), cmap<span style=color:#666>=</span><span style=color:#ba2121>&#39;gray&#39;</span>)
-</code></pre></div><pre><code>&lt;matplotlib.image.AxesImage at 0x122a3c9a0&gt;
+</code></pre></div><pre><code>&lt;matplotlib.image.AxesImage at 0x113e23730&gt;
 </code></pre>
 <p><img src=/en/blog/2022-09-26-knn_files/2022-09-26-knn_35_1.png alt=png></p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># Let&#39;s say k = 3</span>
@@ -216,7 +216,7 @@ sns<span style=color:#666>.</span>stripplot(x<span style=color:#666>=</span> d1,
 ax<span style=color:#666>.</span>axvline(<span style=color:#666>0.4</span>, ls<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, c<span style=color:#666>=</span><span style=color:#ba2121>&#39;black&#39;</span>)
 ax<span style=color:#666>.</span>axvline(<span style=color:#666>0.35</span>, ls<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, c<span style=color:#666>=</span><span style=color:#ba2121>&#39;red&#39;</span>)
 ax<span style=color:#666>.</span>axvline(<span style=color:#666>0.45</span>, ls<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, c<span style=color:#666>=</span><span style=color:#ba2121>&#39;red&#39;</span>)
-</code></pre></div><pre><code>&lt;matplotlib.lines.Line2D at 0x122401090&gt;
+</code></pre></div><pre><code>&lt;matplotlib.lines.Line2D at 0x1143271f0&gt;
 </code></pre>
 <p><img src=/en/blog/2022-09-26-knn_files/2022-09-26-knn_42_1.png alt=png></p>
 <p>Because we assume that values of the feature are uniformly distrbitued, and we want 100 nearest neighbors, it is easy to understand that we want points falling into this interval <code>[0.35, 0.45]</code></p>
@@ -224,9 +224,10 @@ ax<span style=color:#666>.</span>axvline(<span style=color:#666>0.45</span>, ls<
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>d2 <span style=color:#666>=</span> np<span style=color:#666>.</span>random<span style=color:#666>.</span>RandomState(seed <span style=color:#666>=</span> <span style=color:#666>22</span>)<span style=color:#666>.</span>uniform(low<span style=color:#666>=</span><span style=color:#666>0</span>, high<span style=color:#666>=</span><span style=color:#666>1</span>, size <span style=color:#666>=</span><span style=color:#666>1000</span>)
 x1 <span style=color:#666>=</span> <span style=color:#666>0.4</span>
 x2 <span style=color:#666>=</span> <span style=color:#666>0.6</span>
-</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>fig, ax <span style=color:#666>=</span> plt<span style=color:#666>.</span>subplots()
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>fig, ax <span style=color:#666>=</span> plt<span style=color:#666>.</span>subplots(figsize <span style=color:#666>=</span> (<span style=color:#666>8</span>, <span style=color:#666>8</span>))
 ax<span style=color:#666>.</span>scatter(d1, d2, alpha <span style=color:#666>=</span> <span style=color:#666>0.5</span>)
 ax<span style=color:#666>.</span>axvline(x1, ls<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, c<span style=color:#666>=</span><span style=color:#ba2121>&#39;black&#39;</span>)
+ax<span style=color:#666>.</span>axhline(x2, ls<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, c<span style=color:#666>=</span><span style=color:#ba2121>&#39;black&#39;</span>)
 <span style=color:#408080;font-style:italic># width of each side</span>
 w <span style=color:#666>=</span> np<span style=color:#666>.</span>sqrt(<span style=color:#666>100</span><span style=color:#666>/</span><span style=color:#666>1000</span>)<span style=color:#666>/</span><span style=color:#666>2</span>
 <span style=color:#408080;font-style:italic># thanks to https://stackoverflow.com/a/72793114 for the following codes</span>
@@ -248,7 +249,7 @@ plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#39;X2&#39;<
 </code></pre>
 <p>That is extremely large, right? Because each feature is only between 0 and 1. This means that if we have 100 features, then the 100 nearest neighbors are very dissimilar to our tesing example.</p>
 <a href=https://hongtaoh.com/tags/ml/>#ML</a>
-<p style=color:#777>Last modified on 2022-10-17</p>
+<p style=color:#777>Last modified on 2022-10-22</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>
