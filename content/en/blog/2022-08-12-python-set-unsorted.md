@@ -19,5 +19,7 @@ set(a)
 If you run the codes twice (in two different notebooks or scripts), the results are different. To solve this problem:
 
 ```py
-list(set(a)).sort()
+ls = list(set(a))
+ls.sort()
+ls
 ```
