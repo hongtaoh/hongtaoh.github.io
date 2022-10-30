@@ -69,7 +69,7 @@ All the images came from <a href=https://www.3blue1brown.com/topics/neural-netwo
 </div></p>
 <h2 id=lesson-1-what-is-a-neural-network>Lesson 1: what is a neural network<a href=#lesson-1-what-is-a-neural-network class=header-anchor arialabel=Anchor> # </a></h2>
 <p>It is easy for our brain to recognize handwritten digits, but when you are asked to write a program and let the computers be able to do the same thing, you&rsquo;ll find it super difficult.</p>
-<p>Neural network has two elements: neurons and the links between them.</p>
+<p>Neural networks have two elements: neurons and the links between them.</p>
 <p>Think of a neuron as something that holds a number between 0 and 1.</p>
 <p><img src=/media/enblog/nn/neuron.png alt></p>
 <p>The first step is that we have <code>$28 \times 28 = 784$</code> neurons, each holding a number that represents the grayscale value of a corresponding pixel: 0 means black and 1 means white. This number is called an &ldquo;activation&rdquo;.</p>
@@ -120,7 +120,7 @@ Why? Why do we have to make the weighted sum to be between 0 and 1? Why can&rsqu
 <p>These weights and biases are parameters we are able to tweak. <strong>Learning is all about finding the appropriate weights and biases</strong>.</p>
 <p><img src=/media/enblog/nn/13k-weights-and-biases.png alt></p>
 <h4 id=recap>Recap<a href=#recap class=header-anchor arialabel=Anchor> # </a></h4>
-<p>To recap, each neuron in one layer is connected to each neuron in the next layer. The weights represents the strength of each connection, and the bias represents whether a neuron in the next layer tends to be active or inactive.</p>
+<p>To recap, each neuron in one layer is connected to each neuron in the next layer. The weights represent the strength of each connection, and the bias represents whether a neuron in the next layer tends to be active or inactive.</p>
 <p><img src=/media/enblog/nn/recap-weights-bias.png alt></p>
 <h3 id=mathematical-representation>Mathematical representation<a href=#mathematical-representation class=header-anchor arialabel=Anchor> # </a></h3>
 <p>The way we calculate the activation of each neuron in the 2nd layer is that we calculate the weighted sum of all neurons in the 1st layer, then consider the bias, and then apply Sigmoid function to this result. But how can we represent this procedure mathematically?</p>
@@ -213,7 +213,7 @@ on <a href=https://colah.github.io/ target=_blank rel="noreferrer noopener">cola
 <p>These averaged desired changes are very close to the vector of gradients we talked about earlier. We can at least consider them as something proportional to the gradients.</p>
 <p><img src=/media/enblog/nn/desired-changes-as-gradients.png alt></p>
 <p>It is computationally expensive to add up the impact of each training example. To make the process more efficient, we normally randomly shuffle our training dataset, and devide them into mini-batches. For example, if the whole training data consists of 10K examples, we can have 100 mini-batches each containing 100 training examples. For each mini-batch, we calculate the average desired changes for each weight and bias. The results won&rsquo;t be perfect, but each mini-batch gives us a rough sense of what the final gradients should be. This makes it easier for computers. This technique is called <strong>Stochastic gradient descent</strong>.</p>
-<p style=color:#777>Last modified on 2022-10-22</p>
+<p style=color:#777>Last modified on 2022-10-30</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>

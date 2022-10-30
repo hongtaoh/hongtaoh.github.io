@@ -38,18 +38,35 @@
 </header>
 <main class=content role=main>
 <div style=text-align:center>
-<h1>It Is Better to Mute Yourself the Moment You Finish Your Question on Zoom</h1>
+<h1>How to Take the Derivative of the Sigmoid Function</h1>
 <p>Hongtao Hao
-/ 2021-07-15 </p>
+/ 2022-10-30 </p>
 <hr>
 </div>
 <span class=article-toolbar>
-<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2021-07-15-zoom-mute-listening.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2022-10-30-sigmoid-derivative.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
 </a>
 </span>
 <div class="body-text list-text">
-<p>The weirdest Zoom meeting I have ever attended is one in which a person laughs and makes sounds like &ldquo;hum, hum&rdquo; when the presenter is answering her question.</p>
-<p>It&rsquo;s a much better idea to mute yourself the moment you finish asking a question, and then to quietly listen to the response.</p>
+<p>Given that we have the sigmoid function:</p>
+<p><code>$$\sigma(x) = \frac{1}{1 + e^{-x}}$$</code></p>
+<p>What is its derivative?</p>
+<p>It can be rewritten as</p>
+<p><code>$$\sigma (x) = (1 + e^{-x})^{-1}$$</code></p>
+<p>Say that we have:</p>
+<p><code>$$m(x) = -x$$</code></p>
+<p><code>$$t(m) = e^{m}$$</code></p>
+<p><code>$$h(t) = 1 + t$$</code></p>
+<p><code>$$g(h) = h^{-1}$$</code>
+Then, we have</p>
+<p><code>$$\sigma(x) = g(h)$$</code>
+So:</p>
+<p><code>$$\begin{aligned} \frac{d\sigma}{dx} & = \frac{dg}{dh}\cdot \frac{dh}{dt}\cdot \frac{dt}{dm}\cdot \frac{dm}{dx} \\ &= (-h^{-2})\times 1\times e^{m}\times(-1) \\& = h^{-2}\cdot e^{m} \\ &=e^{-x}\cdot (1+t)^{-2} \\ &= e^{-x}\cdot(1+e^{m})^{-2} \\ &= e^{-x}\cdot (1+e^{-x})^{-2} \\ &= \frac{e^{-x}}{(1 + e^{-x})^{2}}\end{aligned}$$</code></p>
+<p>If you play with it, you will know that</p>
+<p><code>$$\frac{d\sigma}{dx} = \frac{e^{-x}}{(1 + e^{-x})^{2}} = \sigma(x)\cdot (1 - \sigma(x))$$</code></p>
+<p>This post is inspired and based upon <a href=https://medium.com/@DannyDenenberg/derivative-of-the-sigmoid-function-774446dfa462 target=_blank rel="noreferrer noopener"><em>Taking the derivative of the simgoid function</em></a>
+by Danny Denenberg.</p>
+<a href=https://hongtaoh.com/tags/ml/>#ML</a>
 <p style=color:#777>Last modified on 2022-10-30</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
