@@ -1,0 +1,150 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/>Home</a></li>
+<li><a href=/en/vitae/>Vitae</a></li>
+<li><a href=/en/projects/>Projects</a></li>
+<li><a href=/en/research/>Research</a></li>
+<li><a href=/en/blog/>Blog</a></li>
+<li><a href=/en/apad/>APAD</a></li>
+<li><a href=/cn/blog/>中文</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>How to Take the Derivative of the Softmax Function</h1>
+<p>Hongtao Hao
+/ 2022-11-03 </p>
+<hr>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2022-11-03-softmax.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
+</a>
+</span>
+<aside class=toc>
+Table of Contents:
+<nav id=TableOfContents>
+<ul>
+<li><a href=#pre-requisite-knowledge>Pre-requisite knowledge</a>
+<ul>
+<li><a href=#quotient-rule>Quotient Rule</a></li>
+<li><a href=#sum-rule>Sum rule</a></li>
+<li><a href=#e>E</a></li>
+<li><a href=#sum>Sum</a></li>
+</ul>
+</li>
+<li><a href=#derivation>Derivation</a></li>
+<li><a href=#conclusion>Conclusion</a></li>
+</ul>
+</nav>
+</aside>
+<div class="body-text list-text">
+<p><div class=note>
+This blog post is inspired by <a href="https://www.youtube.com/watch?v=09c7bkxpv9I" target=_blank rel="noreferrer noopener">MLDawn&rsquo;s video</a>
+on the same topic.
+</div></p>
+<p>Suppose we have a vector: <code>$[z_1, z_2, z_3]$</code>. Softmax function is in the form of:</p>
+<p><code>$$S(z_1) = \frac{e^{z_1}}{e^{z_1} + e^{z_2} + e^{z_3}}$$</code></p>
+<p><code>$$S(z_2) = \frac{e^{z_2}}{e^{z_1} + e^{z_2} + e^{z_3}}$$</code></p>
+<p><code>$$S(z_3) = \frac{e^{z_3}}{e^{z_1} + e^{z_2} + e^{z_3}}$$</code></p>
+<p>Now, we want to take the derivative of <code>$S(z_1)$</code>. Let&rsquo;s do it now.</p>
+<p>It should be noted that in the calculation of <code>$S(z_1)$</code>, there are three variables: <code>$z_1$</code>, <code>$z_2$</code> and <code>$z_3$</code>. Therefore, when we talk about the derivative of <code>$S(z_1)$</code>, we need to specify the derivative with respect to which varible.</p>
+<p>In the following, we will derive the derivative of <code>$S(z_1)$</code>. To understand the steps, we need to first understand the following.</p>
+<h2 id=pre-requisite-knowledge>Pre-requisite knowledge<a href=#pre-requisite-knowledge class=header-anchor arialabel=Anchor> # </a></h2>
+<h3 id=quotient-rule>Quotient Rule<a href=#quotient-rule class=header-anchor arialabel=Anchor> # </a></h3>
+<p>The quotient rule goes like this. If we have</p>
+<p><code>$$f(x) = \frac{g(x)}{h(x)}$$</code></p>
+<p>Then the derivative of <code>$f(x)$</code> is:</p>
+<p><code>$$f^\prime(x) = \frac{df}{dx} = \frac{g^\prime(x)\cdot h(x) - g(x)\cdot h^\prime(x)}{(h(x))^2}$$</code></p>
+<p>I know you may wonder why. I can derive it from the product rule. Let&rsquo;s say</p>
+<p><code>$$t(x) = \frac{1}{h(x)}$$</code></p>
+<p>We have</p>
+<p><code>$$f(x) = \frac{g(x)}{h(x)} = g(x)\cdot t(x)$$</code></p>
+<p>According to product rule, we have:</p>
+<p><code>$$f^\prime(x) = g(x)\cdot t^\prime(x) + g^\prime(x)\cdot t(x)$$</code></p>
+<p>How to get <code>$t^\prime(x)$</code>? This has to do with the chain rule.</p>
+<p>Let&rsquo;s say we have</p>
+<p><code>$$t(m) = m^{-1}$$</code></p>
+<p>and</p>
+<p><code>$$m = h(x)$$</code></p>
+<p>So</p>
+<p><code>$$\begin{aligned} t^\prime(x) &= \frac{dt}{dx} \\ & = \frac{dt}{dm}\cdot \frac{dm}{dx} \\ &= -m^{-2}\cdot h^\prime(x) \\ &= -(h(x))^{-2}\cdot h^\prime(x)\end{aligned}$$</code></p>
+<p>So we have:</p>
+<p><code>$$\begin{aligned} f^\prime(x) &= g(x)\cdot t^\prime(x) + g^\prime(x)\cdot t(x) \\&= g(x)(-(h(x))^{-2}h(x)) + g^\prime(x)(h(x))^{-1} \\ &= \frac{-g(x)h^\prime(x)}{(h(x))^2} + \frac{g^\prime(x)}{h(x)} \\ &= \frac{g^\prime(x)h(x) - g(x)h^\prime(x)}{(h(x))^2} \end{aligned}$$</code></p>
+<h3 id=sum-rule>Sum rule<a href=#sum-rule class=header-anchor arialabel=Anchor> # </a></h3>
+<p>If we have</p>
+<p><code>$$f(x) = g(x) + h(x)$$</code></p>
+<p>Then,</p>
+<p><code>$$f^\prime(x) = g^\prime(x) + h^\prime(x)$$</code></p>
+<h3 id=e>E<a href=#e class=header-anchor arialabel=Anchor> # </a></h3>
+<p>You also need to know that the derivative of <code>$e^x$</code> is <code>$e^x$</code> itself.</p>
+<h3 id=sum>Sum<a href=#sum class=header-anchor arialabel=Anchor> # </a></h3>
+<p>You also need to know that</p>
+<p><code>$$\sum^{i = 1}_{N} S(z_i) = 1$$</code></p>
+<h2 id=derivation>Derivation<a href=#derivation class=header-anchor arialabel=Anchor> # </a></h2>
+<p>Armed with the above knowledge, we can calcuate the derivative of softmax functions. Let us say we want to take the derivative of <code>$S(z_1)$</code> with respect to <code>$z_1$</code>:</p>
+<p><code>$$\begin{aligned} \frac{\partial S(z_1)}{\partial z_1} & = \frac{\partial}{\partial z_1} (\frac{e^{z_1}}{e^{z_1} + e^{z_2} + e^{z_3}}) \\ &= \frac{(e^{z_1})^\prime \cdot (e^{z_1} + e^{z_2} + e^{z_3}) - e^{z_1} \cdot (e^{z_1} + e^{z_2} + e^{z_3})^\prime}{(e^{z_1} + e^{z_2} + e^{z_3})^2} \\ & = \frac{e^{z_1}\cdot (e^{z_1} + e^{z_2} + e^{z_3}) - e^{z_1} \cdot (e^{z_1} + 0 + 0)}{(e^{z_1} + e^{z_2} + e^{z_3})^2} \\ & = \frac{e^{z_1} (\sum - e^{z_1})}{\sum^2} \\ & = \frac{e^{z_1}}{\sum} \cdot \frac{\sum - e^{z_1}}{\sum} \\ & = S(z_1) (1 - S(z_1)) \end{aligned}$$</code></p>
+<p>Then, what about the derivative of <code>$S(z_1)$</code> with respect to <code>$z_2$</code>?</p>
+<p><code>$$\begin{aligned} \frac{\partial S(z_1)}{\partial z_2} & = \frac{\partial}{\partial z_1} (\frac{e^{z_1}}{e^{z_1} + e^{z_2} + e^{z_3}}) \\ &= \frac{(e^{z_1})^\prime \cdot (e^{z_1} + e^{z_2} + e^{z_3}) - e^{z_1} \cdot (e^{z_1} + e^{z_2} + e^{z_3})^\prime}{(e^{z_1} + e^{z_2} + e^{z_3})^2} \\ & = \frac{0 \cdot (e^{z_1} + e^{z_2} + e^{z_3}) - e^{z_1} \cdot (0 + e^{z_2} + 0 )}{(e^{z_1} + e^{z_2} + e^{z_3})^2} \\ & = \frac{- e^{z_1} \cdot e^{z_2}}{\sum^2} \\ & = - \frac{e^{z_1}}{\sum} \cdot \frac{e^{z_2}}{\sum} \\ & = - S(z_1) S(z_2) \end{aligned}$$</code></p>
+<h2 id=conclusion>Conclusion<a href=#conclusion class=header-anchor arialabel=Anchor> # </a></h2>
+<p>With the above, we can say that for</p>
+<p><code>$$S(z_i) = \frac{e^{z_i}}{\sum^{N}_{j = 1} e^{z_j}}$$</code></p>
+<p>It derivative</p>
+<p><code>$$\frac{\partial S(z_i)}{\partial z_j}$$</code></p>
+<p>When <code>$i = j$</code>:</p>
+<p><code>$$\frac{\partial S(z_i)}{\partial z_j} = S(z_i)(1 - S(z_i))$$</code></p>
+<p>If <code>$i \neq j$</code>:</p>
+<p><code>$$\frac{\partial S(z_i)}{\partial z_j} = - S(z_i)S(z_j)$$</code></p>
+<a href=https://hongtaoh.com/tags/ml/>#ML</a>
+<p style=color:#777>Last modified on 2022-11-03</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<script src=https://utteranc.es/client.js repo=hongtaoh/hongtaoh.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">
+Subscribe </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>
+License
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+Hongtao Hao
+2020-2022
+</div>
+</footer>

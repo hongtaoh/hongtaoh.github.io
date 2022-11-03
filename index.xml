@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/</link><description>Recent content on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Take the Derivative of the Sigmoid Function</title><link>https://hongtaoh.com/en/2022/10/30/sigmoid-derivative/</link><pubDate>Sun, 30 Oct 2022 12:26:07 -0500</pubDate><guid>https://hongtaoh.com/en/2022/10/30/sigmoid-derivative/</guid><description>Given that we have the sigmoid function:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/</link><description>Recent content on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Take the Derivative of the Softmax Function</title><link>https://hongtaoh.com/en/2022/11/03/softmax-derivative/</link><pubDate>Thu, 03 Nov 2022 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/en/2022/11/03/softmax-derivative/</guid><description>This blog post is inspired by MLDawn&amp;rsquo;s video on the same topic.
+Suppose we have a vector: $[z_1, z_2, z_3]$. Softmax function is in the form of:
+$$S(z_1) = \frac{e^{z_1}}{e^{z_1} + e^{z_2} + e^{z_3}}$$
+$$S(z_2) = \frac{e^{z_2}}{e^{z_1} + e^{z_2} + e^{z_3}}$$
+$$S(z_3) = \frac{e^{z_3}}{e^{z_1} + e^{z_2} + e^{z_3}}$$
+Now, we want to take the derivative of $S(z_1)$. Let&amp;rsquo;s do it now.
+It should be noted that in the calculation of $S(z_1)$, there are three variables: $z_1$, $z_2$ and $z_3$.</description></item><item><title>How to Take the Derivative of the Sigmoid Function</title><link>https://hongtaoh.com/en/2022/10/30/sigmoid-derivative/</link><pubDate>Sun, 30 Oct 2022 12:26:07 -0500</pubDate><guid>https://hongtaoh.com/en/2022/10/30/sigmoid-derivative/</guid><description>Given that we have the sigmoid function:
 $$\sigma(x) = \frac{1}{1 + e^{-x}}$$
 What is its derivative?
 It can be rewritten as
@@ -489,7 +495,8 @@ don&amp;rsquo;t try to find the next &amp;ldquo;big block of time.</description>
 问题是你抱怨解决不了任何问题，反而让你感到很无力，不是吗？
 你可以试着改变自己的态度。碰到难题时，你只有两个积极的选择：改变，或者接受。课程难，你可以跟任课老师反应、自己多花时间，也可以坦然接受自己挂科的可能，这两种选择都是积极的，但抱怨是消极的。如果你觉得自己的命运差，要么去改变，比如去看《了凡四训》，积极行善，不做恶事，努力改命。要么你就坦然接受自己的厄运，这两种方法都可以，都是积极的，但你抱怨是没用的。
 不管是积极改变，还是在心中坦然接受一切，你都掌握了对生命的主动权，而不是把这个主动权拱手让出去。
-我觉得改变的基础是接纳。我们遇到烦恼，总会觉得这不是自己的原因，而是因为命运不公，因为别人不好，因为运气差，因为领导不英明，因为父母不富裕，总而言之，自己不应该为此负责。但我记得杨定一有一本书中讲到，你生命中任何一件事情发生，这背后的推动力像洪水一般，根本不是任何人能阻挡的，你只能被这股洪水卷着走。这种看法看似消极，其实是积极的，关键是你要对这股洪水承担起责任。每一件事情发生都是有原因的，而且这个原因只跟你自己有关。</description></item><item><title>微信注销录</title><link>https://hongtaoh.com/cn/2021/12/05/wechat/</link><pubDate>Sun, 05 Dec 2021 16:16:30 -0600</pubDate><guid>https://hongtaoh.com/cn/2021/12/05/wechat/</guid><description>2021 年 9 月 20 号的晚上，我在微信注销流程中，按下了最终的确认按钮。那天晚上麦迪逊有飓风，窗外风声大作。确认注销后，我在心里长长地呼出了一口气。不过这颗石头最终落地，还要等两个月：点击确认后至少 60 天不登陆才能彻底注销。60 天内一旦登陆，会收到这期间所有你漏看的消息，注销也随之作废，只能重新申请注销。现在距 9 月 20 号已经超过 60 天了，我没登陆过，我的微信应该是彻底销户了。
+我觉得改变的基础是接纳。我们遇到烦恼，总会觉得这不是自己的原因，而是因为命运不公，因为别人不好，因为运气差，因为领导不英明，因为父母不富裕，总而言之，自己不应该为此负责。但我记得杨定一有一本书中讲到，你生命中任何一件事情发生，这背后的推动力像洪水一般，根本不是任何人能阻挡的，你只能被这股洪水卷着走。这种看法看似消极，其实是积极的，关键是你要对这股洪水承担起责任。每一件事情发生都是有原因的，而且这个原因只跟你自己有关。</description></item><item><title>微信注销录</title><link>https://hongtaoh.com/cn/2021/12/05/wechat/</link><pubDate>Sun, 05 Dec 2021 16:16:30 -0600</pubDate><guid>https://hongtaoh.com/cn/2021/12/05/wechat/</guid><description>不用微信的一年中，前半年一切都顺利，但之后我在人际关系上碰到非常多的挑战，我发现我在人际关系上有很多需要学习的地方。2022 年夏天开始重新开始用微信。
+2021 年 9 月 20 号的晚上，我在微信注销流程中，按下了最终的确认按钮。那天晚上麦迪逊有飓风，窗外风声大作。确认注销后，我在心里长长地呼出了一口气。不过这颗石头最终落地，还要等两个月：点击确认后至少 60 天不登陆才能彻底注销。60 天内一旦登陆，会收到这期间所有你漏看的消息，注销也随之作废，只能重新申请注销。现在距 9 月 20 号已经超过 60 天了，我没登陆过，我的微信应该是彻底销户了。
 注销微信并非我的一时兴起。早在 2019 年底我就在考虑不用微信。2020 年上半年，我花了大量的精力，一个一个单独联系微信上 800 多位好友 ，要了别人的邮箱和电话。有好多天，我都是凌晨 3 点多起床开始联系别人，这样可以在国内好友睡觉前多联系几个人。那段时间，我对微信恨之入骨，一心想着除之而后快。
 那段时间我不仅在为微信注销做准备，还把其他社交媒体陆续都删除了：知乎、豆瓣、微博、WhatsApp、LinkedIn、Facebook、Messanger、Instagram、Twitter。
 2020 年 7 月底，上面提到的媒体账号我全部注销，只剩下微信。我那时已经把微信上几乎每一个人都联系到了，做了一份四十多页、五万多字的文档。望着这份文档，我叹息道，我就是一天联系三个人，每天不重样，一年我都联系不完！我根本不可能联系这么多人！
@@ -961,7 +968,7 @@ d3.format(&amp;#34;.0%&amp;#34;)(0.015) // &amp;#34;2%&amp;#34; d3.format(&amp;#
 第二章：热情并不多见 Al Merrick 说的那句话正是我想说的：
 I set goals for myself at being the best at whatever I did. 我给自己定的目标是成为我所在领域最牛的那个人。
 当你不知道你要干什么的时候，就把你能做的做到没法再好。
-不要觉得你有待发觉的热情。
+不要觉得你有待发掘的热情。
 你在你的工作岗位呆的时间越长，工作越熟练、技能越高，你越有成就感，越可能热爱这份工作。
 不要觉得找到你的热情你就会永远快乐下去。相反，当你在工作中变得熟练了，快乐了，你才知道这是你的热情所在。
 第三章: 热情是危险的 不要对工作有太高的期待。不要觉得它会给你带来终身幸福，不要期待它能帮你实现人生价值、让你灵魂成长。它就只是份工作而已。
