@@ -10,14 +10,782 @@ I am applying for PhD positions for 2021 Fall. To be fair for other applicants, 
 I was inspired by the story of [*This scientist read a paper every day for 899 days. Here’s what she learned*](https://www.natureindex.com/news-blog/this-scientist-read-research-academic-paper-every-day-what-she-learned), so I decided to try it myself: Dedicating half an hour everyday to reading papers. Let's see for how long I can keep doing it. 
 {{<end>}}
 
-2022: [2022-01](/en/apad/#2022-01), [2022-02](/en/apad/#2022-02), [2022-03](/en/apad/#2022-03), [2022-04](/en/apad/#2022-04), [2022-05](/en/apad/#2022-05), [2022-06](/en/apad/#2022-06), [2022-07](/en/apad/#2022-07)
+{{<block class="reminder">}}
+
+I thought about giving APAD up in September - October of 2022. So I did not read papers regularly from 09/13 to 10/21. I also did not read papers from 05/31 to 06/06, and also on 2022-06-08. I will slowly make them up. 
+
+{{<end>}}
+
+2022: [2022-01](/en/apad/#2022-01), [2022-02](/en/apad/#2022-02), [2022-03](/en/apad/#2022-03), [2022-04](/en/apad/#2022-04), [2022-05](/en/apad/#2022-05), [2022-06](/en/apad/#2022-06), [2022-07](/en/apad/#2022-07), [2022-08](/en/apad/#2022-08), [2022-09](/en/apad/#2022-09), [2022-10](/en/apad/#2022-10)
 
 2021: [2021-12](/en/apad/#2021-12), [2021-11](/en/apad/#2021-11), [2021-10](/en/apad/#2021-10), [2021-09](/en/apad/#2021-09), [2021-08](/en/apad/#2021-08), [2021-07](/en/apad/#2021-07), [2021-06](/en/apad/#2021-06), [2021-05](/en/apad/#2021-05), [2021-04](/en/apad/#2021-04), [2021-03](/en/apad/#2021-03), [2021-02](/en/apad/#2021-02), [2021-01](/en/apad/#2021-01)
 
 2020: [2020-12](/en/apad/#2020-12), [2020-11](/en/apad/#2020-11), [2020-10](/en/apad/#2020-10), [2020-09](/en/apad/#2020-09)
 
 ---
+## 2022-11-09
+
+1. De Vocht, L., Softic, S., Dimou, A., Verborgh, R., Mannens, E., Ebner, M., & Van de Walle, R. (2015, May). [Visualizing collaborations and online social interactions at scientific conferences for scholarly networking](http://www2015.thewebconf.org/documents/proceedings/companion/p1053.pdf). In Proceedings of the 24th International Conference on World Wide Web (pp. 1053-1054).
+
+The authors designed an interactive visualization that displays collaboration and online interactions among scholars.
+
+2. Mashhadi, A., Zolyomi, A., & Quedado, J. (2022, April). [A Case Study of Integrating Fairness Visualization Tools in Machine Learning Education](https://dl.acm.org/doi/pdf/10.1145/3491101.3503568). In CHI Conference on Human Factors in Computing Systems Extended Abstracts (pp. 1-7).
+
+In this paper, the authors used six open-source fairness visualization tools to study how these tools help students understand algorithm biases.
+
+3. Moere, A. V., & Purchase, H. (2011). [On the role of design in information visualization](https://journals.sagepub.com/doi/pdf/10.1177/1473871611415996). Information Visualization, 10(4), 356-371.
+
+This is a very interesting article. The authors argued that information visualizations have "utility", "soundness", and "attractiveness". Academics tend to focus on the former two and overlook "attractiveness". This paper argues that "attractiveness" should be considered as a viable dimension in teaching, evaluating, conducting vis research.
+
+## 2022-11-08
+
+1. Chakrabarti, A., Ahmad, F., & Quix, C. (2021). [Towards a Rule-based Visualization Recommendation System](https://www.scitepress.org/Papers/2021/106771/106771.pdf). In KDIR (pp. 57-68).
+
+I like this paper. The authors proposed a visualization recommendation system that is based on rules. Specifically, these rules are based on data abstraction and task abstraction. After identifying the data that users have and the tasks users want to perform, the system will recommend appropriate visualizations.
+
+They have the following tasks:
+
+- Distribution
+  - Extrema
+  - Mean/median/mode
+  - range
+  - characterize distribution
+
+- Part-to-Whole
+  - Categorical filter
+  - Categorical analysis
+
+- Change over time
+  - Trend
+  - Sort
+
+- Comparison
+  - Sort
+  - Filter
+  - Trend
+
+- Relationship
+  - Retrieve value
+  - Cluster
+  - Correlation
+  - Anomalies
+
+2. Valiati, E. R., Pimenta, M. S., & Freitas, C. M. (2006, May). [A taxonomy of tasks for guiding the evaluation of multidimensional visualizations](http://beliv.cs.univie.ac.at/papers/beliv2006/a15-valiati.pdf). In Proceedings of the 2006 AVI workshop on Beyond time and errors: novel evaluation methods for information visualization (pp. 1-6).
+
+The authors come up with a list of tasks that are related to multidimensional data. This list is based on previous task taxonomies and also the tasks users performed during exploring a multidimensional data set.
+
+
+## 2022-11-07
+
+1. Chen, X., Lo, L. Y. H., & Qu, H. (2020). [SirenLess: reveal the intention behind news](https://arxiv.org/pdf/2001.02731). arXiv preprint arXiv:2001.02731.
+
+In this paper, the authors designed a dashboard to visualize the linguistic features of news articles. The aim is to identify misleading news pieces.
+
+2. Voigt, H., Alaçam, Ö., Meuschke, M., Lawonn, K., & Zarrieß, S. (2022, July). The Why and The How: A Survey on Natural Language Interaction in Visualization. In Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (pp. 348-374).
+
+This paper reviews research that uses nlp in visualization. Specifically, they grouped these papers based on the tasks involved. These tasks are:
+
+- Presentation
+  - visual storytelling
+  - explanation generation
+
+- Discover
+  - keyword search
+  - querying
+  - question answering
+  - browsing
+
+- Enjoy
+  - augmentation
+  - vis description generation
+
+- Produce
+  - annotation
+  - documentation
+  - visualization creation
+
+These tasks are about why users interact with visualizations using natural language. Then the authors explored how natural language is used.
+
+2. Heer, J., Bostock, M., & Ogievetsky, V. (2010). A tour through the visualization zoo. Communications of the ACM, 53(6), 59-67.
+
+This is a must read in visualization. The authors introduced some of the cool new visualization techniques:
+ - stacked graph
+ - small multiples
+ - parallel coordinates
+ - node-link diagram
+ - intended tree layout
+ - tree layout
+ - sunburst
+ - network
+ - nested circles
+ - arc diagram
+
+## 2022-11-06 (Completed on 2022-11-07)
+
+1. Sacha, D., Sedlmair, M., Zhang, L., Lee, J. A., Peltonen, J., Weiskopf, D., ... & Keim, D. A. (2017). What you see is what you can change: Human-centered machine learning by interactive visualization. Neurocomputing, 268, 164-175.
+
+This paper proposes a conceptual framework of how visualization can be integrated into machine learning. This conceptual pipeline consists of five steps:
+   - Data
+   - Preprocessing, e.g., transformation, weights
+   - Machine learning model selection
+   - Visualization
+   - Analysis (Execution and Evaluation)
+
+2. Hu, K., Bakker, M. A., Li, S., Kraska, T., & Hidalgo, C. (2019, May). Vizml: A machine learning approach to visualization recommendation. In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (pp. 1-12).
+
+This is a really cool paper. The authors analyzed one million visualizations. They trained a deep neural network on dataset-visualization pairs. The model achieved high accuracy in terms of predicting the appropriate visualization. This VizML approach can be used as a visualization recommendation tool.
+
+## 2022-11-05 (Completed on 2022-11-06)
+
+1. Bui, A. A., Aberle, D. R., & Kangarloo, H. (2007). TimeLine: visualizing integrated patient records. IEEE Transactions on Information Technology in Biomedicine, 11(4), 462-473.
+
+I like this study. The authors designed a visualization system to present patients' medical records. I believe it can be widely used in healthcare and can improve people's lives.
+
+2. Text Visualization Techniques: Taxonomy, Visual Survey, and Community Insights
+
+I like this paper so much. The authors reviewed many text visualization papers and analyzed the techniques used and tasks involved. The authors even analyzed the co-authorship, which is really cool! Most importantly, they designed a really cool interactive system: https://textvis.lnu.se/
+
+## 2022-11-04 (Completed on 2022-11-05)
+
+1. Subramanian, S. S., Pushparaj, P., Liu, Z., & Lu, A. (2019, October). Explainable Visualization of Collaborative Vandal Behaviors in Wikipedia. In 2019 IEEE Symposium on Visualization for Cyber Security (VizSec) (pp. 1-5). IEEE.
+
+This article is about visualization designs to show vandal behavior in editing Wikipedia pages.
+
+2. Narechania, A., Karduni, A., Wesslen, R., & Wall, E. (2021). VITALITY: [Promoting Serendipitous Discovery of Academic Literature with Transformers & Visual Analytics](https://sites.cc.gatech.edu/~anarechania3/docs/publications/vitality_vis_2021.pdf). IEEE Transactions on Visualization and Computer Graphics, 28(1), 486-496.
+
+This is a cool project. The authors created a visualization system that helps scholars find related papers. One drawback I found in this system is that it is too complicated.
+
+## 2022-11-03 (Completed on 2022-11-04)
+
+1. Chinchilla-Rodríguez, Z., Vargas-Quesada, B., Hassan-Montero, Y., González-Molina, A., & Moya-Anegóna, F. (2010). New approach to the visualization of international scientific collaboration. Information visualization, 9(4), 277-287.
+
+The authors proposed a new method to visualize international academic collaboration.
+
+2. Li, J., Chen, X., Hovy, E., & Jurafsky, D. (2015). Visualizing and understanding neural models in nlp. arXiv preprint arXiv:1506.01066.
+
+I couldn't fully understand the paper but I know it is using visualization to understand neural language models.
+
+3. Sievert, C., & Shirley, K. (2014, June). [LDAvis: A method for visualizing and interpreting topics](https://aclanthology.org/W14-3110.pdf). In Proceedings of the workshop on interactive language learning, visualization, and interfaces (pp. 63-70).
+
+This is another visualization tool that amplifies research. It aids people to do topic modeling.
+
+## 2022-11-02 (Completed on 2022-11-04)
+
+1. Jordan, M. I., & Mitchell, T. M. (2015). Machine learning: Trends, perspectives, and prospects. Science, 349(6245), 255-260.
+
+This paper is a brief introduction to the developments in machine learning.
+
+2. Vig, J. (2019). [A multiscale visualization of attention in the transformer model](https://arxiv.org/pdf/1906.05714). arXiv preprint arXiv:1906.05714.
+
+This is really cool work. The author created a visualization tool (to be used with Jupyter Notebook) for language models.
+
+## 2022-11-01 (Completed on 2022-11-03)
+
+1. Ralph, P. (2018). Toward methodological guidelines for process theories and taxonomies in software engineering. IEEE Transactions on Software Engineering, 45(7), 712-735.
+
+To be honest, I was not able to fully comprehend this paper. It is too abstract for me. I know it is talking about theories for software engineering.
+
+# 2022-10
+
+## 2022-10-31 (Completed on 2022-11-02)
+
+I read news on science.org. I read about the space travel that scientists are pushing NASA to work on, and also the ancient Maya stargazers.
+
+## 2022-10-30 (Completed on 2022-10-31)
+
+1. Lerman, K., Yu, Y., Morstatter, F., & Pujara, J. (2022). Gendered citation patterns among the scientific elite. Proceedings of the National Academy of Sciences, 119(40), e2206070119.
+
+I really like this paper. The authors analyzed the gender disparities in NAS members. They find that there are significant gender differences in the citation networks among these NAS members. These differences are so strong that we can predict a member's gender based on the citation network. There are no significant structural differences in the citation network based on the prestige of the affiliations that members work in.\
+
+## 2022-10-29
+
+Gleicher, M., Albers, D., Walker, R., Jusufi, I., Hansen, C. D., & Roberts, J. C. (2011). Visual comparison for information visualization. Information Visualization, 10(4), 289-309.
+
+This paper explores methods for visual comparisons: juxtaposition, superposition, and explicit representation.
+
+
+## 2022-10-28
+
+1. Chen, X., Li, Z., Setlur, S., & Xu, W. (2022). Exploring racial and gender disparities in voice biometrics. Scientific Reports, 12(1), 1-12.
+
+This paper talks about neural network enabled voice biometrics. It shows that there are racial and gender differences in accuracy.
+
+2. Wapman, K. H., Zhang, S., Clauset, A., & Larremore, D. B. (2022). Quantifying hierarchy and dynamics in US faculty hiring and retention. Nature, 610(7930), 120-127.
+
+This is a cool project. The authors analyzed the US faculty hiring. The study finds that a few US universities produced a lot of faculty members. It also finds that self-hiring is more prevalent than we previously thought.
+
+## 2022-10-27
+
+1. Wang, Y., Peng, T. Q., Lu, H., Wang, H., Xie, X., Qu, H., & Wu, Y. (2021). Seek for success: a visualization approach for understanding the dynamics of academic careers. IEEE Transactions on Visualization and Computer Graphics, 28(1), 475-485.
+
+This is a cool paper. The authors designed a visualization system to show scholars' academic careers.
+
+2. Zhang, Y., Sun, Y., Gaggiano, J. D., Kumar, N., Andris, C., & Parker, A. G. (2022). Visualization Design Practices in a Crisis: Behind the Scenes with COVID-19 Dashboard Creators. IEEE Transactions on Visualization and Computer Graphics.
+
+This paper talks about how designers designed the COVID-19 dashboards. The finding is that the design is shaped by a lot of factors: public engagement, policy, tools, etc.
+
+3. Araújo, T., Chagas, P., Alves, J., Santos, C., Sousa Santos, B., & Serique Meiguins, B. (2020). A real-world approach on the problem of chart recognition using classification, detection and perspective correction. Sensors, 20(16), 4370.
+
+This is a cool project as well. They used neural networks to detect and classify charts in real-world settings like textbooks.
+
+4. Li, R., & Chen, J. (2018, October). [Toward a deep understanding of what makes a scientific visualization memorable](https://ieeexplore.ieee.org/iel7/8820269/8823585/08823764.pdf). In 2018 IEEE Scientific Visualization Conference (SciVis) (pp. 26-31). IEEE.
+
+This paper ran experiments to see what makes a scientific visualization more memorable than others.
+
+5. Guo, Z., Tao, J., Chen, S., Chawla, N., & Wang, C. (2022). [SD^ 2: Slicing and Dicing Scholarly Data for Interactive Evaluation of Academic Performance](https://ieeexplore.ieee.org/iel7/2945/4359476/09747941.pdf). IEEE Transactions on Visualization and Computer Graphics.
+
+This paper designed a system to show scholars’ academic performance.
+
+## 2022-10-26
+
+1. Wongsuphasawat, K., Smilkov, D., Wexler, J., Wilson, J., Mane, D., Fritz, D., ... & Wattenberg, M. (2017). [Visualizing dataflow graphs of deep learning models in tensorflow](https://cse.unl.edu/~ihowell/Documents/Wongsuphasawat%20et%20al:%20Visualizing%20Dataflow%20Graphs%20of%20Deep%20Learning%20Models%20in%20TensorFlow.pdf). IEEE transactions on visualization and computer graphics, 24(1), 1-12.
+
+I could not fully understand this paper. I know it is visualizing a convolutional neural network.
+
+2. [Prime mover Starship will be the biggest rocket ever. Are space scientists ready to take advantage of it?](https://www.science.org/content/article/space-scientists-ready-starship-biggest-rocket-ever)
+
+This is indeed impressive. I do not know what will happen if SpaceX can launch Starship daily with such a low price.
+
+## 2022-10-25
+
+Andry, T., Hurter, C., Lambotte, F., Fastrez, P., & Telea, A. (2021, May). [Interpreting the Effect of Embellishment on Chart Visualizations](https://dl.acm.org/doi/pdf/10.1145/3411764.3445739). In Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (pp. 1-15).
+
+This is an interesting study. The authors analyzed the effect of embellishment on charts. The finding is that it has positive effects.
+
+## 2022-10-24
+
+1. Wang, Q., Chen, Z., Wang, Y., & Qu, H. (2021). [A Survey on ML4VIS: Applying MachineLearning Advances to Data Visualization](https://ieeexplore.ieee.org/abstract/document/9523770/). IEEE Transactions on Visualization and Computer Graphics.
+
+This is a survey paper on the application of ML in VIS. It aims to answer two questions: which VIS processes can be assisted by ML, and how ML can help solve VIS problems.
+
+It identifies seven VIS processes that can be assisted by VIS: Data Processing4VIS, Data-VIS mapping, insight communication, style imitation, VIS interaction, VIS rendering, and User profiling.
+
+2. Shen, L., Shen, E., Luo, Y., Yang, X., Hu, X., Zhang, X., ... & Wang, J. (2021). [Towards natural language interfaces for data visualization: A survey](https://arxiv.org/pdf/2109.03506). arXiv preprint arXiv:2109.03506.
+
+This is a survey paper about how to use natural language interfaces in visualization.
+
+3. Wang, Y., Hou, Z., Shen, L., Wu, T., Wang, J., Huang, H., ... & Zhang, D. (2022). [Towards Natural Language-Based Visualization Authoring](https://www.microsoft.com/en-us/research/uploads/prod/2022/08/vistalk.pdf). IEEE Transactions on Visualization and Computer Graphics.
+
+In this paper, the authors developed natural language based visualization interfaces, i.e., people can ask machines to make visualizations based on their natural language inputs.
+
+## 2022-10-23
+
+1. Henry, N., Goodell, H., Elmqvist, N., & Fekete, J. D. (2007). 20 years of four HCI conferences: A visual exploration. International Journal of Human-Computer Interaction, 23(3), 239-285.
+
+The authors did a comprehensive scientometric analysis of HCI conferences: CHI, InfoVis, UIST, and AVI.
+
+2. Cui, W., Liu, S., Tan, L., Shi, C., Song, Y., Gao, Z., ... & Tong, X. (2011). Textflow: Towards better understanding of evolving topics in text. IEEE transactions on visualization and computer graphics, 17(12), 2412-2421.
+
+This paper designed a method to visualize the evolution of topics.
+
+3. Ngo, Q. Q., Dennig, F. L., Keim, D. A., & Sedlmair, M. (2022). [Machine learning meets visualization–Experiences and lessons learned](https://www.degruyter.com/document/doi/10.1515/itit-2022-0034/html). it-Information Technology, 64(4-5), 169-180.
+
+This paper reviews how machine learning can help visualization research and how visualization helps ML research.
+
+## 2022-10-22
+
+1. Yu, Y., Cheung, P. Y., Ahn, Y. Y., & Dhillon, P. (2022). [Unique in what sense? Heterogeneous relationships between multiple types of uniqueness and popularity in music](https://arxiv.org/pdf/2207.12943). arXiv preprint arXiv:2207.12943.
+
+This study looks at the relationship between song novelty and popularity. It found that in general song novelty and popularity are negatively related to each other; there are some nuances, though.
+
+2. Wexler, J., Pushkarna, M., Bolukbasi, T., Wattenberg, M., Viégas, F., & Wilson, J. (2019). The what-if tool: Interactive probing of machine learning models. IEEE transactions on visualization and computer graphics, 26(1), 56-65.
+
+I don't quite understand this paper. It requires significant knowledge about machine learning. I know the gist of it. It is proposing a 'what-if' visualization tool for machine learning.
+
+3. Yu, Y., Hao, Y., & Dhillon, P. (2022). [Unpacking Gender Stereotypes in Film Dialogue](https://pdhillon.com/papers/SocInfo22.pdf). In International Conference on Social Informatics (pp. 398-405). Springer, Cham.
+
+The authors studied gender differences in movie dialogues. They studied these differences: degree of assertion, degree of confirmation, valence of emotions, and the topic. They found that the valence of emotions show the greatest gender differences.
+
+4. Meng, Y., Wu, W., Wang, F., Li, X., Nie, P., Yin, F., ... & Li, J. (2019). [Glyce: Glyph-vectors for chinese character representations](https://proceedings.neurips.cc/paper/2019/file/452bf208bf901322968557227b8f6efe-Paper.pdf). Advances in Neural Information Processing Systems, 32.
+
+This paper uses CNN to represent Chinese characters. This method outperforms ID based ones.
+
+# 2022-09
+
+## 2022-09-12 (Completed on 2022-10-03)
+
+1. Antoniak, M., & Mimno, D. (2021, August). [Bad seeds: Evaluating lexical methods for bias measurement](https://aclanthology.org/2021.acl-long.148.pdf). In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) (pp. 1889-1904).
+
+This paper assessed the seeds used in bias measurements. The authors find that the encoding of biases and linguistic features in the seeds affects bias measurements.
+
+2. Antoniak, M., Mimno, D., & Levy, K. (2019). [Narrative paths and negotiation of power in birth stories](https://dl.acm.org/doi/abs/10.1145/3359190). Proceedings of the ACM on Human-Computer Interaction, 3(CSCW), 1-27.
+
+This is a unique study. The authors analyzed over 2K birth stories computationally.
+
+3. Antoniak, M., & Mimno, D. (2018). [Evaluating the stability of embedding-based word similarities](https://direct.mit.edu/tacl/article-abstract/doi/10.1162/tacl_a_00008/43418). Transactions of the Association for Computational Linguistics, 6, 107-119.
+
+This study finds that word embeddings are sensitive to variations in the source texts. This affects small corpora the most. The authors suggest calculating the average distance over many bootstrap samples.
+
+## 2022-09-11 (Completed on 2022-10-01)
+
+1. Battle, L., Feng, D., & Webber, K. (2021). [Exploring visualization implementation challenges faced by D3 users online](https://arxiv.org/pdf/2108.02299). arXiv preprint arXiv:2108.02299.
+
+I really like this study. The authors analyzed the posts on Stack Overflow about D3.js. They analyzed these posts from two angles: compatibility (how D3 integrates with other tools) and debugging.
+
+I took a look at their [codebook](https://osf.io/8r79d). They must have done substantial work behind the scenes.
+
+2. Yu, Y., Cheung, P. Y., Ahn, Y. Y., & Dhillon, P. (2022). [Unique in what sense? Heterogeneous relationships between multiple types of uniqueness and popularity in music](https://arxiv.org/pdf/2207.12943.pdf). arXiv preprint arXiv:2207.12943.
+
+In this paper, the authors analyzed the relationship between song novelty and popularity and found a negative relationship.
+
+## 2022-09-10 (Completed on 2022-09-22)
+
+1. [Socially situated artificial intelligence enables learning from human interaction](https://www.pnas.org/doi/pdf/10.1073/pnas.2115730119)
+
+This is innovative work. Humans learn from interacting with other humans. Shouldn't AI do the same? The authors proposed the concept of "socially situated artificial intelligence". They let AI interact with humans on social media through AI posting questions about images using human language and human responding (or not responding) as comments. They treated it as an iterative reinforcement learning problem. The field experiment lasted for eight months and reached 236K social media users. The results show that this method is better than the baseline.
+
+2. [AlphaFold developers win US$3-million Breakthrough Prize](https://www.nature.com/articles/d41586-022-02999-9)
+
+AlphaFold is indeed a breakthrough.
+
+## 2022-09-09 (Completed on 2022-09-21)
+
+1. [Beyond deep learning](https://www.pnas.org/doi/pdf/10.1073/pnas.2214148119)
+
+This is a nice piece. The author talks about the trend that AI researchers blend deep learning with classic AI methods.
+
+It introduces "intuitive physics", for example, two objects cannot be at the same place at the same time; things will fall if it is not supported by something. I feel that this is similar to "Common knowledge."
+
+2. [What are the limits of deep learning?](https://www.pnas.org/doi/pdf/10.1073/pnas.1821594116)
+
+Deep learning systems may distinguish between sofas and chairs but they won't know that these objects are for people to sit on.
+
+## 2022-09-08 (Completed on 2022-09-20)
+
+1. Rind, A., Aigner, W., Wagner, M., Miksch, S., & Lammarsch, T. (2016). [Task cube: A three-dimensional conceptual space of user tasks in visualization design and evaluation](https://journals.sagepub.com/doi/pdf/10.1177/1473871615621602). Information Visualization, 15(4), 288-300.
+
+This is a cool project. The authors posited that visualization tasks can be seen as residing in a three dimensional space: Abstraction (from abstract to concrete), Composition (from low-level to high-level), and Perspective (objectives versus actions). The first two are continuous whereas the last one is dichotomous.
+
+Then the authors reviewed task related literature and examined the relationship between them and the model proposed here.
+
+2. [Scientists are using AI to dream up revolutionary new proteins](https://www.nature.com/articles/d41586-022-02947-7)
+
+I saw that AI will be more widely used in biological science.
+
+3. [NASA’s Mars rover makes ‘fantastic’ find in search for past life](https://www.nature.com/articles/d41586-022-02968-2)
+
+I believe there must be many stories on Mars in the past.
+
+## 2022-09-07 (Completed on 2022-09-19)
+
+1. Dodge, J., Sap, M., Marasović, A., Agnew, W., Ilharco, G., Groeneveld, D., ... & Gardner, M. (2021). [Documenting large webtext corpora: A case study on the colossal clean crawled corpus](https://arxiv.org/pdf/2104.08758). arXiv preprint arXiv:2104.08758.
+
+This paper provides a descriptive analysis of the texts in the Colossal Clean Crawled Corpus.
+
+2. McColeman, C. M., Yang, F., Brady, T. F., & Franconeri, S. (2021). [Rethinking the ranks of visual channels](https://ieeexplore.ieee.org/iel7/2945/4359476/09557878.pdf). IEEE Transactions on Visualization and Computer Graphics, 28(1), 707-717.
+
+I like this study a lot. The current ranking of visual channels is based on the task of comparing two values. However, this task is not that important in real settings. The authors instead used the task of reproducing a chart right after seeing it. The results show that even if there are only two marks in the chart, the existing ranking does not hold. Also, the ranking changes as there are more marks in the chart.
+
+## 2022-09-06 (Completed on 2022-09-19)
+
+1. Hassani, K., & Lee, W. S. (2016). [Visualizing natural language descriptions: A survey](https://dl.acm.org/doi/pdf/10.1145/2932710). ACM Computing Surveys (CSUR), 49(1), 1-34.
+
+This is a cool survey. The authors reviewed past research on creating visualizations based on natural language. I am amazed by the creativity and vividness of those creations.
+
+2. Talbot, J., Lee, B., Kapoor, A., & Tan, D. S. (2009, April). [EnsembleMatrix: interactive visualization to support machine learning with multiple classifiers](https://dl.acm.org/doi/pdf/10.1145/1518701.1518895). In Proceedings of the SIGCHI conference on human factors in computing systems (pp. 1283-1292).
+
+The authors introduced an interactive visualization system for confusion matrix in multiple classification tasks. They did a user study and found that it is helpful to users.
+
+## 2022-09-05 (Completed on 2022-09-16)
+
+1. Buolamwini, J., & Gebru, T. (2018, January). [Gender shades: Intersectional accuracy disparities in commercial gender classification](http://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf). In Conference on fairness, accountability and transparency (pp. 77-91). PMLR.
+
+This is a cool paper. The authors analyzed the accuracy of gender prediction of three commercial gender prediction systems and found that prediction is worse for females, and darker faces. It is the worst for darker female faces.
+
+2. [A causal test of the strength of weak ties](https://www.science.org/doi/10.1126/science.abl4476)
+
+This study tested the strength of weak ties empirically using 20 million people's data from LinkedIn. They varied the prevalence of weak ties in their recommender system (People You May Know). They tested whether weak ties are related to job mobility. The results supported the weak tie theory but with three major revisions. First, the relationship between the strength of weak ties and job transmission shows an inverted U shape. Second, moderately weak ties and the weakest ties created the most job mobility. Third, the strength of weak ties is dependent on the type of the industry. Weak ties created job mobility in digital industries but not so much in other industries.
+
+3. [Weak ties, failed tries, and success](https://www.science.org/doi/10.1126/science.abl4476)
+
+This study introduces the above work. I guess Wang Uzzi is among the reviewers of it. From reading it, I started thinking about one question I had when reading the above work: it is interesting that people are willing to help almost strangers. I say "almost" because, for example, you only have one friend in common and you are unfamiliar with each other. This is fascinating for me. This somehow shows that the society is not as "cold" as we thought.
+
+4. [As a Ukrainian working abroad, the war made me rethink my definition of ‘home’](https://www.science.org/content/article/ukrainian-working-abroad-i-m-re-embracing-my-heritage-amid-war)
+
+I didn't know Ukraine is so beautiful and culturally rich.
+
+## 2022-09-04 (Completed on 2022-09-06)
+
+1. Horton, R. (2003). Medical journals: evidence of bias against the diseases of poverty. The Lancet, 361(9359), 712-712.
+
+There is an ethnic bias in medical journals in terms of the make-up of editorial boards and also who are reported in these journals.
+
+2. Ma, K. L. (2007). [Machine learning to boost the next generation of visualization technology](https://ieeexplore.ieee.org/abstract/document/4302576/). IEEE Computer Graphics and Applications, 27(5), 6-9.
+
+This paper argues that machine learning can drive the innovations in visualization research.
+
+## 2022-09-03 (Completed on 2022-09-05)
+
+1. Stokes, C., Setlur, V., Cogley, B., Satyanarayan, A., & Hearst, M. (2022). [Striking a Balance: Reader Takeaways and Preferences when Integrating Text and Charts](https://arxiv.org/pdf/2208.01780). arXiv preprint arXiv:2208.01780.
+
+This is a unique study. The authors looked at whether annotations and texts in line charts are preferred by viewers. It turns out that viewers love a large number of annotations over few annotations or texts alone.
+
+2. Stanfill, M. (2012). [Finding birds of a feather: Multiple memberships and diversity without divisiveness in communication research](https://academic.oup.com/ct/article-abstract/22/1/1/4085746). Communication Theory, 22(1), 1-24.
+
+This article argues that instead of looking of Communication from the aspect of topics alone in terms of deciding whether the field is fragmented, it might be better to look at these three aspects:
+  1. Methodology: How to measure the world
+  2. Ontology/epistemology: "What is real and what can we know about it"
+  3. Axiology: Ethical obligations
+
+3. Chan, C. H., & Grill, C. (2022). [The highs in communication research: Research topics with high supply, high popularity, and high prestige in high-impact journals](https://journals.sagepub.com/doi/abs/10.1177/0093650220944790). Communication Research, 49(5), 599-626.
+
+This study looks at popular topics in popular communication journals and analyzes the citation network.
+
+## 2022-09-02 (Completed on 2022-09-03)
+
+1. Finished [The next decade in ai: four steps towards robust artificial intelligence](https://arxiv.org/pdf/2002.06177)
+
+The author argues that deep learning is not generalizable and therefore not trusted. He proposed a mixed method: combining classical AI and deep learning. The author believes that reasoning and knowledge should be the priority if we are going to move forward in AI.
+
+One possible step is to derive cognitive models or world models from texts.
+
+2. Ioannidis, J. P., Bendavid, E., Salholz-Hillel, M., Boyack, K. W., & Baas, J. (2022). [Massive covidization of research citations and the citation elite](https://www.pnas.org/doi/full/10.1073/pnas.2204074119). Proceedings of the National Academy of Sciences, 119(28), e2204074119.
+
+Covid research seems to have been very popular.
+
+3. Saad-Falcon, J., Shaikh, O., Wang, Z. J., Wright, A. P., Richardson, S., & Chau, D. H. (2020). [PeopleMap: Visualization Tool for Mapping Out Researchers using Natural Language Processing](https://arxiv.org/pdf/2006.06105). arXiv preprint arXiv:2006.06105.
+
+This is a cool project. The aim of this paper is to project researchers into a 2D plane based on their research interests and publications.
+
+## 2022-09-01 (Completed on 2022-09-03)
+
+Continued with [The next decade in ai: four steps towards robust artificial intelligence](https://arxiv.org/pdf/2002.06177)
+
+# 2022-08
+
+## 2022-08-31 (Completed on 2022-09-03)
+
+Marcus, G. (2020). [The next decade in ai: four steps towards robust artificial intelligence](https://arxiv.org/pdf/2002.06177). arXiv preprint arXiv:2002.06177.
+
+PP. 1-17
+
+## 2022-08-30 (Completed on 2022-09-01)
+
+1. Chatzimparmpas, A., Martins, R. M., Jusufi, I., & Kerren, A. (2020). [A survey of surveys on the use of visualization for interpreting machine learning models](https://journals.sagepub.com/doi/abs/10.1177/1473871620904671). Information Visualization, 19(3), 207-233.
+
+This is a cool paper. The authors analyzed the survey papers on the use of visual analytics for machine learning interpretation.
+
+2. Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021, March). [On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?🦜](https://dl.acm.org/doi/abs/10.1145/3442188.3445922). In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (pp. 610-623).
+
+This paper talks about the trend of and the associated risks of ever growing language models. Solutions were also proposed. For example, researchers should first evaluate environmental and financial cost.
+
+3. Li, W., Zhang, S., Zheng, Z., Cranmer, S. J., & Clauset, A. (2022). [Untangling the network effects of productivity and prominence among scientists](https://www.nature.com/articles/s41467-022-32604-6). Nature communications, 13(1), 1-11.
+
+This is important work. The results show that collaboration networks can be viewed as a social capital that is distributed in an unequal and gendered way. The study shows that gender differences in productivity and prominence in mid-age researchers can be explained by the collaboration networks. The results also show that collaborating with senior authors is correlated with higher productivity and prominence of the junior authors.
+
+## 2022-08-29 (Completed on 2022-08-31)
+
+1. Schloss, K. B., Leggon, Z., & Lessard, L. (2020). [Semantic discriminability for visual communication](https://ieeexplore.ieee.org/abstract/document/9239918/). Ieee transactions on visualization and computer graphics, 27(2), 1022-1031.
+
+This study is very unique. The authors show participants a series of bar charts. Each bar chart contains two bars of different colors. Participants were told that these two bars represent two fruits. However, the bars are not labeled. Participants were asked to indicate which bar indicates which fruit. The purpose is to see the effect of colors on people’s interpretation of the visualization.
+
+2. Waldner, M., Diehl, A., Gračanin, D., Splechtna, R., Delrieux, C., & Matković, K. (2019). [A comparison of radial and linear charts for visualizing daily patterns](https://ieeexplore.ieee.org/abstract/document/8807238/). IEEE transactions on visualization and computer graphics, 26(1), 1033-1042.
+
+This study looked at whether click-like radial charts are better than line and bar charts in visualizing daily patterns.
+
+## 2022-08-28 (Completed on 2022-08-31)
+
+Schöffel, S., Schwank, J., & Ebert, A. (2016, July). [A user study on multivariate edge visualizations for graph-based visual analysis tasks](https://ieeexplore.ieee.org/abstract/document/7557922/). In 2016 20th International Conference Information Visualisation (IV) (pp. 165-170). IEEE.
+
+To me, this study looks very strange. They designed two very strange ways of presenting bar charts and examined, through human subjects, which way is better.
+
+## 2022-08-27 (Completed on 2022-08-30)
+
+1. Günther, E., & Domahidi, E. (2017). [What communication scholars write about: An analysis of 80 years of research in high-impact journals](https://ijoc.org/index.php/ijoc/article/view/6989). International journal of communication, 11, 21.
+
+This is an interesting work. The authors did topic modeling on 15K papers from the 1930s published in 19 major communication journals. They analyzed the temporal trend. They find that, unsurprisingly, the internet and new media is becoming a hot topic.
+
+2. Hwang, J. D., Bhagavatula, C., Le Bras, R., Da, J., Sakaguchi, K., Bosselut, A., & Choi, Y. (2021). [On symbolic and neural commonsense knowledge graphs](https://www.aaai.org/AAAI21Papers/AAAI-9078.HwangJ.pdf).
+
+This study proposes an evaluation framework that tests the utility of knowledge graphs based on how effectively we can learn implicit knowledge from them.
+
+## 2022-08-26 (Completed on 2022-08-30)
+
+1. Yang, W., Ye, X., Zhang, X., Xiao, L., Xia, J., Wang, Z., ... & Liu, S. (2022). [Diagnosing Ensemble Few-Shot Classifiers](https://arxiv.org/pdf/2206.04372). arXiv preprint arXiv:2206.04372.
+
+The authors designed a visualization system that aids few-shot learning.
+
+2. Finished [On the principles of Parsimony and Self-consistency for the emergence of intelligence](https://link.springer.com/article/10.1631/FITEE.2200297)
+
+I couldn't really understand this paper. I only know the two basic principles of intelligence: parsimony and self-consistency.
+
+
+## 2022-08-25 (Completed on 2022-08-29)
+
+1. Li, Z., Wang, X., Yang, W., Wu, J., Zhang, Z., Liu, Z., ... & Liu, S. (2022). [A unified understanding of deep NLP models for text classification](https://ieeexplore.ieee.org/abstract/document/9801603/). IEEE Transactions on Visualization and Computer Graphics.
+
+I was not able to fully understand this article since I am not an expert on NLP. I got the gist of this paper: the authors designed a visualization system that can help NLP researchers get a deeper understanding of the NLP language models.
+
+2. Yuan, J., Chen, C., Yang, W., Liu, M., Xia, J., & Liu, S. (2021). [A survey of visual analytics techniques for machine learning](https://link.springer.com/article/10.1007/s41095-020-0191-7). Computational Visual Media, 7(1), 3-36.
+
+In this paper, the authors reviewed papers which use visual analytics to help machine learning. They classified these papers into three categories: before, during, and after ML model building.
+
+## 2022-08-24 (Completed on 2022-08-29)
+
+Quadri, G. J., & Rosen, P. (2021). [A survey of perception-based visualization studies by task](https://ieeexplore.ieee.org/abstract/document/9492011/). IEEE Transactions on Visualization and Computer Graphics.
+
+This is an ambitious study. This survey is centered around ten low-level tasks related to visualizations. For each task, the authors reviewed how different visual encodings, e.g., position, color, length, area, etc, may aid this task and how different types of chart facilitate this task.
+
+BTW, the interactive system build in this study is really cool: [https://usfdatavisualization.github.io/VisPerceptionSurvey/](https://usfdatavisualization.github.io/VisPerceptionSurvey/)
+
+## 2022-08-23 (Completed on 2022-08-28)
+
+1. Chuang, J., Manning, C. D., & Heer, J. (2012, May). [Termite: Visualization techniques for assessing textual topic models](https://dl.acm.org/doi/abs/10.1145/2254556.2254572). In Proceedings of the international working conference on advanced visual interfaces (pp. 74-77).
+
+This is a cool project. The authors created Teermite, a visualization system that aids topic modeling.
+
+2. Ma, Y., Tsao, D., & Shum, H. Y. (2022). [On the principles of Parsimony and Self-consistency for the emergence of intelligence](https://link.springer.com/article/10.1631/FITEE.2200297). Frontiers of Information Technology & Electronic Engineering, 1-26.
+
+pp. 1-4
+
+## 2022-08-22 (Completed on 2022-08-28)
+
+1. Chuang, J., Ramage, D., Manning, C., & Heer, J. (2012, May). [Interpretation and trust: Designing model-driven visualizations for text analysis](https://dl.acm.org/doi/abs/10.1145/2207676.2207738). In Proceedings of the SIGCHI conference on human factors in computing systems (pp. 443-452).
+
+This is an influential project. The authors proposed a text visualization system. Specifically, they designed a system that shows over 9K PhD dissertations at Stanford University. This system aims to help people understand and validate the output of different data-driven text models.
+
+2. Chuang, J., Manning, C. D., & Heer, J. (2012). [“Without the clutter of unimportant words” Descriptive keyphrases for text visualization](https://dl.acm.org/doi/abs/10.1145/2362364.2362367). ACM Transactions on Computer-Human Interaction (TOCHI), 19(3), 1-29.
+
+This is a very interesting study. The authors asked human judges to produce keyphrases for texts. Then, the authors analyzed the statistical and linguistic features of these chosen key terms and decided which features predict the quality of the keyphrases. With this model, they can produce high quality keyphrases automatically for any texts.
+
+## 2022-08-21 (Completed on 2022-08-27)
+
+1. Paik, H., & Marzban, C. (1995). [Predicting television extreme viewers and non-viewers: a neural network analysis](https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1468-2958.1995.tb00369.x). Human Communication Research, 22(2), 284-306.
+
+This is a very surprising study for me. It is surprising because I didn't know neural networks were used in social science, or in Communication, as early as in the 1990s!
+
+I really liked the abstract of this paper. In fact, its abstract is the best among all papers I've seen! The aim of this paper is to predict what variables predict television nonviewers and what predict extreme viewers. The data was from the General Social Surveys from three years: 1988, 1989, and 1990. The authors performed prediction using neural networks and also a discriminant analysis. The results show that neural networks outperform discriminant analyses.
+
+The analysis results show that demographics were strong predictors of nonviewers and family related and lifestyle related variables were strong predictors of extreme viewers.
+
+2. Vorderer, P. (2016). [Communication and the good life: Why and how our discipline should make a difference](https://academic.oup.com/joc/article-pdf/66/1/1/22320522/jjnlcom0001.pdf). Journal of Communication, 66(1), 1-12.
+
+This is an inspiring piece. With current technologies, we are connected with people anywhere and anytime. But the author askes, is this good? It might not be good. It might be an illusion that we are in contact with so many people; only few of them really care about you. You are in fact alone in the world.
+
+The authors also talked about these three points: 1) We embrace new technologies; 2) We get a lot from technologies and might be happy with it (otherwise, why are we still using it); 3) However, research shows that productivity, mindfulness and sleep quality improve when we do not use smartphones anytime and anywhere.
+
+This seems to be a puzzle.
+
+Inspired by this work, I am thinking of studying whether machine learning is doing any good to our lives.
+
+## 2022-08-20 (Completed on 2022-08-27)
+
+1. McFarland, D. A., Ramage, D., Chuang, J., Heer, J., Manning, C. D., & Jurafsky, D. (2013). [Differentiating language usage through topic models](https://www.sciencedirect.com/science/article/pii/S0304422X13000442). Poetics, 41(6), 607-625.
+
+This paper talks about how they used several different methods of topic modeling in their projects, and how they validated the results.
+
+2. Su, M., Peng, H., & Li, S. (2021). [A visualized bibliometric analysis of mapping research trends of machine learning in engineering (MLE)](https://www.sciencedirect.com/science/article/pii/S095741742101109X). Expert Systems with Applications, 186, 115728.
+
+This paper did a scientometric analysis of papers in the field of machine learning in engineering. The data was from the Web of Science.
+
+## 2022-08-19 (Completed on 2022-08-26)
+
+Ha, D., & Schmidhuber, J. (2018). [Recurrent world models facilitate policy evolution](https://proceedings.neurips.cc/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf). Advances in neural information processing systems, 31.
+
+I read the [interactive version](https://worldmodels.github.io/) of this paper but I still found it difficult to really understand.
+
+
+## 2022-08-18 (Completed on 2022-08-26)
+
+Ha, D. (2017). [A visual guide to evolution strategies](https://blog.otoro.net/2017/10/29/visual-evolution-strategies/). blog. otoro. net.
+
+This is a fun paper. It introduces several different evolution algorithms. The author tested these algorithms on the MNIST dataset and it seems the result is very good.
+
+
+## 2022-08-17 (Completed on 2022-08-25)
+
+1. Finished [Breiman, L. (2001)](https://projecteuclid.org/journals/statistical-science/volume-16/issue-3/Statistical-Modeling--The-Two-Cultures-with-comments-and-a/10.1214/ss/1009213726.pdf)
+
+This paper compares two ways of prediction: relying on presumed models, or building models from data. The authors also introduced decision trees, random forests, and support vector machines.
+
+The authors argue that although machine learning methods are black boxes which are not interpretable, it does not mean that they are inferior to interpretable data models which are less accurate. He believes that the point is not interpretability, but rather getting accurate information, or prediction.
+
+He warns that a large amount of data is being produced daily, and statistics has to use other tools to solve problems people face rather than sticking to only familiar tools such as data modeling.
+
+2. Matuszek, C., Witbrock, M., Kahlert, R. C., Cabral, J., Schneider, D., Shah, P., & Lenat, D. (2005). [Searching for common sense: Populating cyc from the web](https://www.aaai.org/Papers/AAAI/2005/AAAI05-227.pdf).
+
+This paper talked about how to use Google to facilitate adding common sense to the database of CYC.
+
+## 2022-08-16 (Completed on 2022-08-24)
+
+Breiman, L. (2001). [Statistical modeling: The two cultures (with comments and a rejoinder by the author)](https://projecteuclid.org/journals/statistical-science/volume-16/issue-3/Statistical-Modeling--The-Two-Cultures-with-comments-and-a/10.1214/ss/1009213726.pdf). Statistical science, 16(3), 199-231.
+
+PP. 1-10
+
+## 2022-08-15 (Completed on 2022-08-24)
+
+Minaee, S., Kalchbrenner, N., Cambria, E., Nikzad, N., Chenaghlu, M., & Gao, J. (2021). [Deep learning--based text classification: a comprehensive review](https://dl.acm.org/doi/pdf/10.1145/3439726). ACM Computing Surveys (CSUR), 54(3), 1-40.
+
+This is a very impressive review. The authors reviewed the popular models and introduced popular datasets for text classification.
+
+## 2022-08-14 (Completed on 2022-08-23)
+
+1. Jha, R., Jbara, A. A., Qazvinian, V., & Radev, D. R. (2017). [NLP-driven citation analysis for scientometrics](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/564A5B305B1F893EC6363C24CBCCC612/S1351324915000443a.pdf/div-class-title-nlp-driven-citation-analysis-for-scientometrics-div.pdf). Natural Language Engineering, 23(1), 93-130.
+
+This is a fun paper. The authors talk about the citation purpose and citation polarity (i.e., neutral, positive and negative). The authors identified six citation purposes: criticism, comparison, use, substantiating, basis, and neutral. They talked about how to use NLP techniques to label citation purposes and citation polarity.
+
+## 2022-08-13 (Completed on 2022-08-20)
+
+Wolchover, N. (2020). [Artificial Intelligence Will Do What We Ask. That’s a Problem.](https://www.quantamagazine.org/artificial-intelligence-will-do-what-we-ask-thats-a-problem-20200130/)
+
+This is a powerful article. It introduces the ideas by Stuart Russel, a CS professor at UC Berkeley. He worries that if machines are only programmed to maximize a certain goal, then the world will be in trouble. He proposed three "principles of beneficial machines":
+
+1. Machines should be programmed to maximize human preferences.
+2. Machines are uncertain about what human preferences are.
+3. Machines should learn from human behavior about human preferences.
+
+Russel also believes that the "off-switch" problem is at the core of our control over machines. If we are unable to switch a machine off when it is maximizing its goals, we would be in trouble.
+
+There are also some problems with the three principles above:
+
+1. Humans don't know what their preferences are. Even if they do, their actions do not necessarily align with those preferences.
+2. Humans' preferences change.
+3. Good people have preferences. Bad people do as well. What if machines learn from bad people?
+
+## 2022-08-12 (Completed on 2022-08-19)
+
+1. Walter, N., Cody, M. J., & Ball-Rokeach, S. J. (2018). The ebb and flow of communication research: Seven decades of publication trends and research priorities. Journal of communication, 68(2), 424-440.
+
+This is a fun project. The authors analyzed the research topics and also authors. They identified the research topic trends and found that most authors from 1951 to 2016 were from the United States (83%) and academia (94%).
+
+2. Ephrat, A., & Peleg, S. (2017, March). [Vid2speech: speech reconstruction from silent video](https://ieeexplore.ieee.org/iel7/7943262/7951776/07953127.pdf). In 2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 5095-5099). IEEE.
+
+I was amazed by this paper. It shows that to reconstruct speech based on silent videos, it is important to analyze facial visuals. Only focusing on the mouth areas will decrease the accuracy. The performance of this paper seems to be much higher than the previous ones. I am wondering why it is not widely cited. Maybe other important results were published after this paper, making this paper not so important.  
+
+## 2022-08-11 (Completed on 2022-08-17)
+
+1. McCarthy, J., & Hayes, P. J. (1981). [Some philosophical problems from the standpoint of artificial intelligence](http://www-formal.stanford.edu/jmc/mcchay69.pdf). In Readings in artificial intelligence (pp. 431-450). Morgan Kaufmann.
+
+I didn't read the whole paper. It is a very influential paper. It talked about the philosophical questions confronting AI. Maybe I'll revisit this paper.
+
+2. Kim, M., Yoon, J., Jung, W. S., & Kim, H. (2022). [Quantifying the topic disparity of scientific articles](https://arxiv.org/pdf/2202.03805). arXiv preprint arXiv:2202.03805.
+
+This is an interesting paper. The authors looked at how the conventionality of the paper is correlated with the citations that it receives. They measured the conventionality of a paper as the cosine distance of this paper and its discipline on a vector space. They found that less conventional papers receive fewer citations.
+
+## 2022-08-10 (Completed on 2022-08-16)
+
+1. Markowitz, D. M., Song, H., & Taylor, S. H. (2021). [Tracing the adoption and effects of open science in communication research](https://academic.oup.com/joc/article-abstract/71/5/739/6354844). Journal of Communication, 71(5), 739-763.
+
+This paper examines the open science practices in the field of Communication. The authors found that there is still much work to be done.
+
+2. Jin, Z., Chauhan, G., Tse, B., Sachan, M., & Mihalcea, R. (2021). [How good is NLP? a sober look at NLP tasks through the lens of social impact](https://arxiv.org/abs/2106.02359). arXiv preprint arXiv:2106.02359.
+
+This paper is different from most NLP papers. It talked about how to estimate the contribution of NLP papers for social good. It proposed a framework to do such a job.
+
+3. Fox, J., Pearce, K. E., Massanari, A. L., Riles, J. M., Szulc, Ł., Ranjit, Y. S., ... & L. Gonzales, A. (2021). Open science, closed doors? Countering marginalization through an agenda for ethical, inclusive research in communication. Journal of Communication, 71(5), 764-784.
+
+This paper talked about the counteractive effects of open science and discussed possible solutions.
+
+4. de Oliveira, T. M., Marques, F. P. J., Veloso Leão, A., de Albuquerque, A., Prado, J. L. A., Grohmann, R., ... & Guazina, L. S. (2021). [Towards an inclusive agenda of open science for communication research: A Latin American approach](https://academic.oup.com/joc/article-abstract/71/5/785/6359522). Journal of Communication, 71(5), 785-802.
+
+This article talked about open science from the perspective of Latin American scholars. The authors state that open science is now understood in two ways: replication, and inclusion. For the first interpretation, the authors argue that standardizing the scientific writing process may overlook the diversities in the world. The authors then provided the viewpoints of Latin American scholars' on open science.
+
+## 2022-08-09 (Completed on 2022-08-15)
+
+1. Gurcan, F., Cagiltay, N. E., & Cagiltay, K. (2021). [Mapping human–computer interaction research themes and trends from its existence to today: A topic modeling-based review of past 60 years](https://www.tandfonline.com/doi/abs/10.1080/10447318.2020.1819668). International Journal of Human–Computer Interaction, 37(3), 267-280.
+
+In this paper, the authors analyzed the trends of HCI topics by topic modeling HCI papers in the past six decades. They found that Brain-Computer Interface is emerging fast, and that human-robot interaction and Mobile are middle-aged topics which are also accelerating.
+
+2. Schlesinger, A., O'Hara, K. P., & Taylor, A. S. (2018, April). [Let's talk about race: Identity, chatbots, and AI](https://dl.acm.org/doi/abs/10.1145/3173574.3173889). In Proceedings of the 2018 chi conference on human factors in computing systems (pp. 1-14).
+
+This is a very different paper. It talks about how to solve the problem of racism in chat bots. The story of Microsoft's Tay showed that chatbots can be manipulated. The easy way to protect chatbots from racism is using a blacklist of words. However, this is not the ultimate solution. For example, "Pakistan'' might be included in the blacklist. However, doing so will make lives inconvenient for Pakistanis. This paper talked about how to solve this problem utilizing NLP, machine learning and deep learning technology.
+
+## 2022-08-08 (Completed on 2022-08-11)
+
+Hermann, K. M., Hill, F., Green, S., Wang, F., Faulkner, R., Soyer, H., ... & Blunsom, P. (2017). Grounded language learning in a simulated 3d world. arXiv preprint arXiv:1706.06551.
+
+This is a very cool project. The authors build artificial agents to learn human language in a 3D space. I feel this is a future direction as unless AI can relate human language to the real world, we are not able to fully trust the decisions made by AI.
+
+## 2022-08-07 (Completed on 2022-08-09)
+
+1. Finished [Machine behaviour](https://www.nature.com/articles/s41586-019-1138-y)
+
+There is a conference called [ACM FAccT (ACM Conference on Fairness, Accountability, and Transparency)](https://facctconference.org/). It seems to be really cool.
+
+We can study human behavior, and by the same token, we can study machine behavior. AI agents are ubiquitous, and are impacting our day-to-day lives, for everyone of us. The authors came up with three motivations behind the new field called machine behavior that they are proposing:
+
+  1. AI agents are becoming ubiquitous.
+  2. It's hard to predict what outcomes AI agents generate. AI models are becoming increasingly complex. Even if the algorithms are simple, its outcome may still be complicated. Also, many algorithms in use today are proprietary and not available to the public, making it harder for us to know what outcomes these models will generate.
+  3. Algorithms are impacting our lives. We need to study their effects on humanity.
+
+What topics or dimensions should we study in the field of machine behavior?
+  1. Mechanisms behind the behavior. For this, we need more interpretability.
+  2. How the behavior might change. For example, new data is fed, or the model updates itself from interacting with the world (like reinforcement learning).
+  3. Functions: what functions do these algorithms fulfill for human creators, for example, companies? These help us understand why some algorithms prevail while others fade away.
+
+2. Schlesinger, A., Edwards, W. K., & Grinter, R. E. (2017, May). [Intersectional HCI: Engaging identity through gender, race, and class](https://dl.acm.org/doi/pdf/10.1145/3025453.3025766). In Proceedings of the 2017 CHI conference on human factors in computing systems (pp. 5412-5427).
+
+This paper talks about intersectionality in CHI proceedings. The authors found around 150 past CHI papers about this topic. The findings of this research are: 1) researchers tend to focus on one aspect of user identity rather than intersectionality; 2) research on race is relatively less than that on gender and class.
+
+## 2022-08-06
+
+Rahwan, I., Cebrian, M., Obradovich, N., Bongard, J., Bonnefon, J. F., Breazeal, C., ... & Wellman, M. (2019). [Machine behaviour](https://www.nature.com/articles/s41586-019-1138-y). Nature, 568(7753), 477-486.
+
+PP. 1-5
+
+## 2022-08-05 (Completed on 2022-08-06)
+
+Rajpurkar, P., Zhang, J., Lopyrev, K., & Liang, P. (2016). [Squad: 100,000+ questions for machine comprehension of text](https://arxiv.org/pdf/1606.05250). arXiv preprint arXiv:1606.05250.
+
+This is indeed meaningful and impactful work.
+
+Why is the Stanford QA needed? To train data-intensive models, we need a large amount of high-quality data. However, the existing datasets are either large but low-quality or high-quality but small.
+
+The team collected English articles from Wikipedia and asked crowd workers to read a passage in four minutes and come up with five questions. They can ask hard questions and are encouraged to use their words in the question. The answer for each question must be directly from the article (in fact, the crowd workers are asked to highlight the answer from the article). Each answer does not have to be a single word; it can be a long phrase.
+
+In order to make it more robust, for development and testing dataset, the team asked other crowd workers to select the shortest span that can answer the question. That is to say, for the development and testing dataset, some workers previously have already proposed questions and provided answers. Now, the authors asked other workers to provide possibly shorter answers. This is because in testing, if the machine chooses a shorter span (compared to the first answer) which is actually correctly answering the question, it will also be labeled as correct.
+
+Based on the data, the authors came up with a logistic regression which has a F1 score of 50%. The human performance is 86.8% (F1 score).
+
+## 2022-08-04
+
+Heimerl, F., & Gleicher, M. (2018, June). [Interactive analysis of word vector embeddings](https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.13417). In Computer Graphics Forum (Vol. 37, No. 3, pp. 253-265).
+
+This is a cool paper. I didn't understand every detail of it but I know what it is doing. It is basically creating a design space for tasks associated with word embeddings. They came up with three visualization designs that address common word embedding tasks.
+
+## 2022-08-03
+
+Gunaratne, S. A. (2009). [Globalization: A non-Western perspective: The bias of social science/communication oligopoly](https://academic.oup.com/ccc/article/2/1/60/4067408). Communication, Culture & Critique, 2(1), 60-82.
+
+This is indeed a very unique paper. The authors argue that today's social science is dominated by Western philosophy. Eastern thoughts, specifically those of Buddhist and Taoism, are largely ignored. The author argues that as the world powers are shifting from Europe and the US to Asia (China, Japan and India), it might be helpful to think about how social science can be done with an Eastern mind.
+
+## 2022-08-02
+
+1. Heer, J., & Bostock, M. (2010, April). [Crowdsourcing graphical perception: using mechanical turk to assess visualization design](https://dl.acm.org/doi/pdf/10.1145/1753326.1753357). In Proceedings of the SIGCHI conference on human factors in computing systems (pp. 203-212).
+
+The main aim of this project is to test whether MTurk is a viable platform to conduct experiments. The authors replicated seminal experiments by Cleveland & McGill (1984) and also conducted other experiments. They found that the results by Turkers are reliable and believe that using MTurk can lower the cost and time required for conducting experiments.
+
+2. Mohammad, S. (2020, May). [Nlp scholar: A dataset for examining the state of nlp research](https://aclanthology.org/2020.lrec-1.109/). In Proceedings of the 12th Language Resources and Evaluation Conference (pp. 868-877).
+
+I really like this study. It extracts around 40K NLP paper information from ACL and then combines the data with Google Scholar. This dataset is very useful for scientometric analysis on NLP.
+
+## 2022-08-01
+
+Talbot, J., Setlur, V., & Anand, A. (2014). [Four experiments on the perception of bar charts](https://ieeexplore.ieee.org/iel7/2945/6935054/06876021.pdf). IEEE transactions on visualization and computer graphics, 20(12), 2152-2160.
+
+This study in some sense replicated the experiments about bar charts in the classical study by Cleveland and McGill (1984). In the original study by Cleveland and McGill (1984), there are five bar chart types: adjacent bars, separated bars, aligned stacked bars, unaligned stacked bars, and divided bars. Adjacent bars lead to the least errors in bar height comparison tasks and divided bars lead to the highest errors.
+
+However, Cleveland and McGill (1984) did not study why so. In the current study, the authors wanted to examine the mechanisms behind all these. The results generally confirmed the accuracy ranking in Cleveland and McGill (1984). The authors provided explanations of the error sources. For example, they found that separation between bars makes the comparisons difficult.
+
+The authors argue that even for simple charts like bar charts, we still do not understand them fully.
+
 # 2022-07
+
+## 2022-07-31
+
+Cleveland, W. S., & McGill, R. (1984). [Graphical perception: Theory, experimentation, and application to the development of graphical methods](https://www.jstor.org/stable/pdf/2288400.pdf). Journal of the American statistical association, 79(387), 531-554.
+
+This is a canonical study.
+
+The idea of this paper is this: rather than designing visualizations based on common sense or intuition, we need to design them based on scientific theories. The authors proposed ten *elementary perceptual tasks* as shown in Fig. 1. Some examples: (1) position along a common scale, (2) positions along nonaligned scales, (3) length, direction, angle, (4) area, (5) volume, curvature, and (6) shading, color saturation. The tasks are ordered such that the first leads to the most accurate perception. The authors suggest that when we design charts, it is better to use tasks that lead to more accurate perceptions.
+
+## 2022-07-30
+
+Skau, D., Harrison, L., & Kosara, R. (2015, June). [An evaluation of the impact of visual embellishments in bar charts](https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.12634). In Computer Graphics Forum (Vol. 34, No. 3, pp. 221-230).
+
+This is a cool study. THe authors studied the visual embellishments of bar charts. They identified six types of embellishments: rounded tops, triangle bars, capped bars, overlapping triangle bars, quadratically increasing area bars, and bars extending below zero. They compared these designs with the baseline bar chart.
+
+To compare the effectiveness, they recruited 100 users from MTurk. These Turkers completed two tasks: identify absolute values of a bar, and estimate the percentage of bar to another one. The results show that these embellishments hinder, rather than help, users understand data presented in the bar charts.
 
 ## 2022-07-29
 
@@ -37,7 +805,7 @@ They found that this CheckList is able to identify bugs even in models that have
 
 Srinivasan, A., Brehmer, M., Lee, B., & Drucker, S. M. (2018, April). [What's the difference? evaluating variations of multi-series bar charts for visual comparison tasks](https://dl.acm.org/doi/pdf/10.1145/3173574.3173878). In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (pp. 1-12).
 
-This study compares four designs for grouped bar charts for comparison tasks. The four designs are: a simple grouped bar chart; grouped bar chart with juxtaposed differences; single bar chart with juxtaposed differences; difference charts. The results show that bar charts with juxtaposed differences are better for comparison tasks.
+This study compares four designs of grouped bar charts for comparison tasks. The four designs are: a simple grouped bar chart; grouped bar chart with juxtaposed differences; single bar chart with juxtaposed differences; difference charts. The results show that bar charts with juxtaposed differences are better for comparison tasks.
 
 ## 2022-07-27
 
