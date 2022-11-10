@@ -37,6 +37,10 @@ In this paper, the authors used six open-source fairness visualization tools to 
 
 This is a very interesting article. The authors argued that information visualizations have "utility", "soundness", and "attractiveness". Academics tend to focus on the former two and overlook "attractiveness". This paper argues that "attractiveness" should be considered as a viable dimension in teaching, evaluating, conducting vis research.
 
+{{<block class="reminder">}}
+This paper made me wonder: What makes a scientific paper look good?
+{{<end>}}
+
 ## 2022-11-08
 
 1. Chakrabarti, A., Ahmad, F., & Quix, C. (2021). [Towards a Rule-based Visualization Recommendation System](https://www.scitepress.org/Papers/2021/106771/106771.pdf). In KDIR (pp. 57-68).
