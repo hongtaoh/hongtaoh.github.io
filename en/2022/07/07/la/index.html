@@ -370,7 +370,7 @@ and <a href=https://www.youtube.com/channel/UCgsxPlpl1lwGQXQ3cqAtOlg target=_bla
 <p><img src=/media/enblog/la/counterclockwise-90-rotation.png alt></p>
 <p>Then, the inverse of <code>$A$</code>, denoted as <code>$A^{-1}$</code> is a clockwise 90 degree rotation:</p>
 <p><img src=/media/enblog/la/clockwise-90-rotation.png alt></p>
-<p>Therefore, for any vector <code>$\vec{m}$</code>, if we first apply <code>$A$</code> and then <code>$A^{-1}$</code>, then <code>$\vec{m}$</code> reamins in place. &ldquo;Applying <code>$A$</code> and then <code>$A^{-1}$</code>&rdquo; is two transformation, whose result can be seen as one single linear transformation: <code>$AA^{-1} = \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$</code>. We call this as an &ldquo;<strong>identity transformation</strong>&rdquo;. When we apply an identity transformation to a vector, this vector remains in place.</p>
+<p>Therefore, for any vector <code>$\vec{m}$</code>, if we first apply <code>$A$</code> and then <code>$A^{-1}$</code>, then <code>$\vec{m}$</code> reamins in place. &ldquo;Applying <code>$A$</code> and then <code>$A^{-1}$</code>&rdquo; is two transformations, whose result can be seen as one single linear transformation: <code>$AA^{-1} = \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$</code>. We call this as an &ldquo;<strong>identity transformation</strong>&rdquo;. When we apply an identity transformation to a vector, this vector remains in place.</p>
 <p>If <code>$det(A) \neq 0$</code>, then we can find one <strong>and only one</strong> inverse transformation, i.e., <code>$A^{-1}$</code>. Once we find it, we can apply it to <code>$\vec{v}$</code>, which also means we apply it to <code>$A\vec{x}$</code> because we have <code>$A\vec{x} = \vec{v}$</code>:</p>
 <p><code>$$A^{-1}A\vec{x} = A^{-1}\vec{v}$$</code></p>
 <p>Because <code>$AA^{-1} = \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$</code> is the identity transformation, we have <code>$AA^{-1}\vec{x} = \vec{x}$</code>; therefore, we have:</p>
@@ -561,7 +561,7 @@ The most important idea behind Cramer&rsquo;s rule is the determinant. The input
 Suppose <code>$\vec{v} = \begin{bmatrix} x\\ y \end{bmatrix}$</code>, we have:</p>
 <p><code>$$x\begin{bmatrix} -2\\ 1 \end{bmatrix} + y \begin{bmatrix} 2\\ -1 \end{bmatrix} = \begin{bmatrix} -2x + 2y\\ x-y \end{bmatrix} = \begin{bmatrix} 0\\ 0 \end{bmatrix} $$</code></p>
 <p>So eigenvectors are along this line: <code>$y=x$</code>. The same procedure can be applied to compute the eigenvectors for when <code>$\lambda = 1$</code>.</p>
-<p style=color:#777>Last modified on 2022-11-16</p>
+<p style=color:#777>Last modified on 2022-11-17</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>
