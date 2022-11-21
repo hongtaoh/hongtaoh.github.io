@@ -161,7 +161,7 @@ Table of Contents:
 ，比如 git bash, 输入：</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:green>cd</span> 你刚才复制的路径
 </code></pre></div><p>这部分以下的内容都是在终端中进行，不管是 Windows 还是 Mac，输入的内容一样。</p>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new site quickstart <span style=color:#408080;font-style:italic># quickstart 可以换成任何你想用的名称</span>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new site quickstart 
 </code></pre></div><p>终端请暂时不要关闭。</p>
 <h2 id=网站主题>网站主题<a href=#网站主题 class=header-anchor arialabel=Anchor> # </a></h2>
 <p>想看所有的主题，请移步 <a href=https://themes.gohugo.io/ target=_blank rel="noreferrer noopener">Hugo Themes</a>
@@ -188,8 +188,8 @@ cp -r themes/hugo-ht/archetypes . <span style=color:#408080;font-style:italic># 
 </code></pre></div><p>打开终端显示的 <a href=http://localhost:1313/ target=_blank rel="noreferrer noopener">http://localhost:1313/</a>
 ，不出意外的话你能看到和 <a href=https://hugo-ht.hongtaoh.com/ target=_blank rel="noreferrer noopener">https://hugo-ht.hongtaoh.com/</a>
 一模一样的个人网站。</p>
-<p>如果没有什么问题，在终端输入 Ctrl+C 停止预览。</p>
-<p>清闲确保你已经把预览关闭，之后再往下继续。</p>
+<p>如果没有什么问题，在终端输入 Ctrl+C 停止预览，但终端没必要关闭。</p>
+<p>请先确保你已经把预览关闭，之后再往下继续。</p>
 <h2 id=新建-github-仓库>新建 GitHub 仓库<a href=#新建-github-仓库 class=header-anchor arialabel=Anchor> # </a></h2>
 <p>登陆 GitHub, 点击头像左侧的加号，再点击&rsquo;new repository'。</p>
 <figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
@@ -209,8 +209,9 @@ cp -r themes/hugo-ht/archetypes . <span style=color:#408080;font-style:italic># 
 <h4>新建仓库设置</h4>
 </figcaption>
 </figure>
-<p><div class=info>
-如果你觉得下面的太麻烦或者你有 Blogdown 写的帖子，可以选择用 Netlify 而不是 GitHub Pages。用 Netlify 的教程看<a href=/cn/2020/01/04/hugo-netlify-deploy/>这里</a>
+<div class=info>
+<p>这一点很重要！！</p>
+<p>下面比较麻烦，如果你做得不成功，可以把上面的重做一下，然后用 Netlify 而不是 GitHub Pages。用 Netlify 的教程看<a href=/cn/2020/01/04/hugo-netlify-deploy/>这里</a>
 。
 </div></p>
 <h2 id=密钥设置>密钥设置<a href=#密钥设置 class=header-anchor arialabel=Anchor> # </a></h2>
@@ -225,7 +226,7 @@ touch .github/workflows/gh-pages.yml
 <p>把鼠标放在目前的终端页面。然后：</p>
 <ul>
 <li>
-<p>苹果电脑：Cmd+N</p>
+<p>苹果电脑：Command+N (同时按 Command 键和 N)</p>
 </li>
 <li>
 <p>微软系统：鼠标放在 git bash 最上端（白色标题位置），右键，选择 New</p>
@@ -258,7 +259,7 @@ mkdir ~/.ssh/ <span style=color:#666>&amp;&amp;</span> <span style=color:green>c
 ssh-keygen -t rsa -b <span style=color:#666>4096</span> -C <span style=color:#ba2121>&#34;</span><span style=color:green;font-weight:700>$(</span>git config user.email<span style=color:green;font-weight:700>)</span><span style=color:#ba2121>&#34;</span> -f gh-pages -N <span style=color:#ba2121>&#34;&#34;</span>
 start ~/.ssh
 </code></pre></div><p>回车。此时，你会看到两个新增的文件：gh-pages 和 gh-pages.pub</p>
-<p>紧接着</p>
+<p>紧接着，在目前的 terminal 页面</p>
 <p>苹果电脑输入：<code>pbcopy &lt; ~/.ssh/gh-pages.pub</code></p>
 <p>微软系统输入：<code>clip &lt; ~/.ssh/gh-pages.pub</code></p>
 <p>现在，请回到 GitHub 你新建的仓库。把屏幕拉宽，点击 Settings -> 点击 Deploy keys -> 点击 Add deploy key。把鼠标放在 key 下面的文本框，苹果电脑按 Command+V，微软系统按 Control+V。在 Allow write access 那里打勾，在 Title 随便写点东西，比如“个人网站部署”，然后点击 Add key。</p>
@@ -521,7 +522,7 @@ open content/cn/hobby/_index.md -a TextEdit
 </span><span style=color:#bbb>          </span><span style=color:green;font-weight:700>cname</span>:<span style=color:#bbb> </span>example.com<span style=color:#bbb>
 </span></code></pre></div>
 <a href=https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/>#编程</a>
-<p style=color:#777>最后一次修改于 2022-11-18</p>
+<p style=color:#777>最后一次修改于 2022-11-21</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>

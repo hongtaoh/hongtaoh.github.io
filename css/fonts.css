@@ -16,5 +16,5 @@ code {
   font-family: 'Noto Serif SC';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/Noto_Serif_SC/NotoSerifSC-Medium.otf')
 }
