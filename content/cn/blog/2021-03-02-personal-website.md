@@ -112,7 +112,7 @@ cd 你刚才复制的路径
 这部分以下的内容都是在终端中进行，不管是 Windows 还是 Mac，输入的内容一样。
 
 ```bash
-hugo new site quickstart # quickstart 可以换成任何你想用的名称
+hugo new site quickstart 
 ```
 
 终端请暂时不要关闭。
@@ -147,9 +147,9 @@ hugo server -D # 这里的 D 是 draft 的意思
 
 打开终端显示的 [http://localhost:1313/](http://localhost:1313/)，不出意外的话你能看到和 [https://hugo-ht.hongtaoh.com/](https://hugo-ht.hongtaoh.com/) 一模一样的个人网站。
 
-如果没有什么问题，在终端输入 Ctrl+C 停止预览。
+如果没有什么问题，在终端输入 Ctrl+C 停止预览，但终端没必要关闭。
 
-清闲确保你已经把预览关闭，之后再往下继续。
+请先确保你已经把预览关闭，之后再往下继续。
 
 ## 新建 GitHub 仓库
 
@@ -162,7 +162,10 @@ hugo server -D # 这里的 D 是 draft 的意思
 {{<figure src="/media/cnblog/username.github.io.png" title="新建仓库设置">}}
 
 {{<block class="info">}}
-如果你觉得下面的太麻烦或者你有 Blogdown 写的帖子，可以选择用 Netlify 而不是 GitHub Pages。用 Netlify 的教程看[这里](/cn/2020/01/04/hugo-netlify-deploy/)。
+
+这一点很重要！！
+
+下面比较麻烦，如果你做得不成功，可以把上面的重做一下，然后用 Netlify 而不是 GitHub Pages。用 Netlify 的教程看[这里](/cn/2020/01/04/hugo-netlify-deploy/)。
 {{<end>}}
 
 ## 密钥设置
@@ -184,7 +187,7 @@ touch .github/workflows/gh-pages.yml
 
 把鼠标放在目前的终端页面。然后：
 
-- 苹果电脑：Cmd+N
+- 苹果电脑：Command+N (同时按 Command 键和 N)
 
 - 微软系统：鼠标放在 git bash 最上端（白色标题位置），右键，选择 New
 
@@ -225,7 +228,7 @@ start ~/.ssh
 
 回车。此时，你会看到两个新增的文件：gh-pages 和 gh-pages.pub
 
-紧接着
+紧接着，在目前的 terminal 页面
 
 苹果电脑输入：`pbcopy < ~/.ssh/gh-pages.pub`
 
