@@ -13,6 +13,15 @@ tags: 留学
 
 {{<end>}}
 
+其他朋友总结的：
+
+{{<block class="note">}}
+
+- 张晶同学总结的[政治传播项目与老师](https://kristenjz.github.io/cn/2022/05/18/arwu-top50-political-comm-faculty/)
+
+{{<end>}}
+
+
 {{<block class="tip">}}
 相关博文：
 
