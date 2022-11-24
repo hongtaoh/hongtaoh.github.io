@@ -1042,11 +1042,11 @@ Namecheap 上操作 Verification TXT Record Namecheap 上操作 MX Record DKIM+A
 如果你在这篇帖子中看到了错误，请点击本文目录上的按钮，复克 (fork) 我的个人网站之后就可以提交你的修改建议了。十分感谢！
 你也可以参考这篇：手把手带你搭建个人博客(基础版) ，作者庄亮亮。
 本教程旨在手把手帮你搭建属于你的个人网站。建站工具是Hugo + GitHub 。两个都是免费的。完成后，你的个人网站网址是：https://github用户名.github.io。
-前期准备 如果你是彻彻底底的零基础：没有 GitHub 账号、不知道 HTML 和 CSS 为何物、没用过 Git，甚至连 Markdown 都不知道是什么，强烈建议你先把这份教程 的前三章认真读一下。读完后，你需要：
+参考这篇帖子把个人网站建起来的朋友：
+张晶 前期准备 如果你是彻彻底底的零基础：没有 GitHub 账号、不知道 HTML 和 CSS 为何物、没用过 Git，甚至连 Markdown 都不知道是什么，强烈建议你先把这份教程 的前三章认真读一下。读完后，你需要：
 注册了 GitHub 账号
 下载了文本编辑器 安装 Git
-苹果系统：打开 Terminal, 输入 xcode-select --install，这是为了下载 Xcode Command Line Tools 。然后在 Terminal 输入 git --version。更多 Git 下载办法请参考 git 官方介绍 。 Windows 系统请参考这里 掌握了 Markdown 的基础语法
-以下提到「终端」，可以理解为苹果电脑上的 Terminal / 微软系统上的 Git Bash。</description></item><item><title>锻炼与读书：两个不可少的时间项目</title><link>https://hongtaoh.com/cn/2021/02/26/read-and-exercise/</link><pubDate>Fri, 26 Feb 2021 15:55:46 -0500</pubDate><guid>https://hongtaoh.com/cn/2021/02/26/read-and-exercise/</guid><description>如何利用时间，人生就会给你怎样的结果。
+苹果系统：打开 Terminal, 输入 xcode-select --install，这是为了下载 Xcode Command Line Tools 。然后在 Terminal 输入 git --version。更多 Git 下载办法请参考 git 官方介绍 。 Windows 系统请参考这里 掌握了 Markdown 的基础语法</description></item><item><title>锻炼与读书：两个不可少的时间项目</title><link>https://hongtaoh.com/cn/2021/02/26/read-and-exercise/</link><pubDate>Fri, 26 Feb 2021 15:55:46 -0500</pubDate><guid>https://hongtaoh.com/cn/2021/02/26/read-and-exercise/</guid><description>如何利用时间，人生就会给你怎样的结果。
 人生的幸福我觉得有两个很重要的基石：身体、脑子（智慧）。当后者强大到一定的程度时，前者可以忽略。对我们这样的普通人来说，身体还是要重视。道理很简单，没有好的身体，就没办法充满精力地去做事，也无法充满愉悦地体验人生，因为大部分时间都在病痛中。我年龄越大（马上奔三），越觉得智慧实在是太重要了。当人没有智慧的时候，就像一头被蒙上眼睛的大象，随时可能有危险。《少有人走的路》开头有一段话：
 解决人生问题的首要方案，乃是自律。没有自律，你不可能解决任何麻烦和困难。少部分的自律能让你解决一些问题。彻底的自律能让你解决所有的难题。
 我想把「自律」换成「智慧」：
@@ -1099,7 +1099,8 @@ Namecheap 上操作 Verification TXT Record Namecheap 上操作 MX Record DKIM+A
 那我是怎么提高听力的呢？做考试题啊。备战高考期间，我中午吃完饭就会听高考听力。我只是听，不看文本。熟练了之后，就弄成 1.5 倍速甚至更快的速度来巩固、练习。同样的，专四、专八也是这么过来的。我的听力最应该感谢的是托福。备考托福期间，我非常认真地听了大概 15 套题的听力。每套题 6 篇听力，总共是 90 篇了，对我的帮助非常大。
 备考托福期间我怎么练习听力呢？不看文本，也不管题目是什么，就单纯把听力拿出来反反复复地听。一句听懂了才听下一句。如果一句话实在是听不懂，就把听不懂的某个词或者句子根据发音硬拼出来，最后如果确定除了这些之外我都听懂了，我再拿听力文本看一下，看看到底是哪里我没听懂。这么练习对我的帮助非常大。来美国后我能非常快速地适应这里的环境，并且听力能很快地提升，都是备考托福期间打下的底子。
 所以，我给大家的建议是，不要去听什么 BBC、CNN、VOA, 你就把你考试题做好就行了，没必要舍本逐末。我觉得考高分就是一个很好的英语学习助推力。而考高分最快速、最直接的方法就是研究考试题。李阳疯狂英语有一个很核心的理念：考试题就是最好的英语学习资料。这句话我再同意不过。</description></item><item><title>美国传播学博士项目一览</title><link>https://hongtaoh.com/cn/2021/01/10/us-comm-phd/</link><pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2021/01/10/us-comm-phd/</guid><description>为便于大家修改，此文的最新版在 GitHub 上： hongtaoh/us-comm-phd 。以下内容不再更新。
-相关博文：
+其他朋友总结的：
+张晶同学总结的政治传播项目与老师 相关博文：
 我在美国读传播学硕士的两年 美国提供全奖的新闻传播学硕士项目（不完全统计) 去读美国的传播学博士几条路 我的美国博士申请之路 美国的信息学院(不完全统计) 2020年西北大学 MTS 博士项目校园面试的经历与体会 Computational Social Science: Graduate Programs and Researchers Academic CVs that you can emulate 图片来源: wallpapercave.com 我会大致按照美国地图的顺序来介绍各州内的传播学博士项目。由北向南，由西向东。
 主要参考：
 NCA&amp;rsquo;s Doctoral Program Guide ShanghaiRanking&amp;rsquo;s Global Ranking of Academic Subjects 2020 — Communication 没有博士点的州 Alaska Montana Idaho Nevada Wyoming South Dakota Arkansas Rhode Island New Hampshire Vermont Alaska NCA 显示阿拉斯加州内没有传播学博士项目 。我试着在浏览器搜了下，只找到了 University of Alaska Fairbanks 下的 Department of Communication and Journalism 。这个学院有一个硕士项目，可以给硕士生助教全奖 。官网上只列出了6位助教 ，其中有一位中国女生。</description></item><item><title>如何开始做一件事</title><link>https://hongtaoh.com/cn/2021/01/03/how-to-start/</link><pubDate>Sun, 03 Jan 2021 10:29:42 -0500</pubDate><guid>https://hongtaoh.com/cn/2021/01/03/how-to-start/</guid><description>前几天和一位朋友告诉我她新的一年想写点东西，她虽然喜欢，但一直没开始。这让我想到我 2020 年的一些体会，就来分享一下。
