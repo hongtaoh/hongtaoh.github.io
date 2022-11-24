@@ -21,6 +21,12 @@ aliases:
 
 本教程旨在手把手帮你搭建属于你的个人网站。建站工具是[Hugo](https://gohugo.io/) + [GitHub](https://github.com/)。两个都是免费的。完成后，你的个人网站网址是：`https://github用户名.github.io`。
 
+{{<block class="info">}}
+参考这篇帖子把个人网站建起来的朋友：
+
+- [张晶](https://kristenjz.github.io/)
+{{<end>}}
+
 ## 前期准备
 
 如果你是彻彻底底的零基础：没有 GitHub 账号、不知道 HTML 和 CSS 为何物、没用过 Git，甚至连 Markdown 都不知道是什么，强烈建议你先把[这份教程](https://intro2code.hongtaoh.com/)的前三章认真读一下。读完后，你需要：

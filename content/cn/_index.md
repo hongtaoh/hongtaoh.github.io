@@ -110,6 +110,8 @@ type : list-single
 
 - [谢益辉](https://yihui.org/)
 
+- [张晶](https://kristenjz.github.io/)
+
 - [吴诗涛](https://shitao.netlify.app/)
 
 - [tianheg](https://github.com/tianheg)
