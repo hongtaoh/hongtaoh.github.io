@@ -22,9 +22,11 @@ aliases:
 本教程旨在手把手帮你搭建属于你的个人网站。建站工具是[Hugo](https://gohugo.io/) + [GitHub](https://github.com/)。两个都是免费的。完成后，你的个人网站网址是：`https://github用户名.github.io`。
 
 {{<block class="info">}}
-参考这篇帖子把个人网站建起来的朋友：
+如果你参考这篇帖子顺利把个人网站建起来，欢迎把名字贴在下面！可以在评论区里说，我会加上去。
 
 - [张晶](https://kristenjz.github.io/)
+- [毛月](https://ashleygua.github.io/)
+
 {{<end>}}
 
 ## 前期准备
@@ -55,9 +57,9 @@ aliases:
 brew install hugo 
 ```
 
-如果你没安装 brew, 先到 [Hugo releases](https://github.com/gohugoio/hugo/releases)，找到类似 `hugo_0.81.0_macOS-64bit.tar.gz` 的文件，点击下载，并解压。需要注意的是 Hugo 一直在更新，所以你到时候看到的版本号很可能已经不是 `0.81.0`。
+如果你没安装 brew, 先到 [Hugo releases](https://github.com/gohugoio/hugo/releases)，找到类似 ` hugo_0.107.0_darwin-universal.tar.gz ` 的文件，点击下载，并解压。
 
-下载完之后，打开 Terminal, 输入 `open -a Finder /usr/local/bin`，然后把 `hugo_0.81.0_macOS-64bit` 文件中的 `hugo` 文件拖到 `/usr/local/bin` 当中：
+下载完之后，打开 Terminal, 输入 `open -a Finder /usr/local/bin`，然后把 `hugo_0.81.0_macOS-64bit` 文件中的 `hugo` 拖到 `/usr/local/bin` 当中：
 
 ```
 └── local
@@ -65,7 +67,7 @@ brew install hugo
         └── hugo
 ```
 
-完成后，在 Terminal 中输入 `hugo version`, 如果显示 `Hugo Static Site Generator...` 证明安装成功。
+完成后，在 Terminal 中输入 `hugo version`, 如果显示 `hugo v0.107.0 .....` 则证明 Hugo 安装成功。
 
 {{<block class="info">}}
 如果你的苹果电脑比较新，而且你是用上面这种拖动的方法（而不是 brew hugo) 这种方式，那么 `hugo version` 可能会显示软件不安全，无法打开。这时候，你需要做的是在 Terminal 中输入 `open -a Finder /usr/local/bin`，然后找到 Hugo，接着右键 'Open'，选择同意，之后就没事了。
@@ -110,6 +112,10 @@ cd Desktop
 ```
 
 如果你用的是 Windows，打开你所选用的[终端](https://intro2code.hongtaoh.com/prep.html#terminal)，比如 git bash, 输入：
+
+{{<block class="info">}}
+如果这一步碰到问题，请参考 [Ashleygua 的建议](https://github.com/hongtaoh/hongtaoh.github.io/issues/10#issuecomment-1326088874)。
+{{<end>}}
 
 ```bash
 cd 你刚才复制的路径
@@ -552,6 +558,26 @@ open content/cn/hobby/_index.md -a TextEdit
 #### 新添加文件
 
 你可以直接把文件，比如 `myPDF.pdf` 放到 `static` 文件夹，这样的话，这个文件的地址就是 `https://USERNAME.github.io/myPDF.pdf`。当你的文件比较多时，建议你在 `static` 文件夹下新建一个子文件夹，比如 `files`，然后把文件统一放到 `files` 里，这样的话，地址就是 `https://USERNAME.github.io/files/myPDF.pdf`
+
+### 添加评论功能
+
+如果你想添加评论功能，最简单的办法是打开 `themes` -> `hugo-ht` -> `layouts` -> `partials` -> `footer.html`。把
+
+```
+{{ if not .IsSection }}
+<script src="https://utteranc.es/client.js"
+        repo="hongtaoh/hongtaoh.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+{{ end }}
+```
+
+恢复正常，然后把 `hongtaoh/hongtaoh.github.io` 替换成你自己的信息，其它不用动。
+
+然后，根据 [uterances 的教程](https://utteranc.es/)，打开[这里](https://github.com/apps/utterances), 点击 Configure，然后选择你的个人网站仓库即可。
 
 ### 自定义域名
 {{<block class="tip">}}
