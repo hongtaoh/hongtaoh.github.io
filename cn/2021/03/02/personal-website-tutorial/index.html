@@ -73,6 +73,7 @@ Table of Contents:
 <li><a href=#只用一种语言>只用一种语言</a></li>
 <li><a href=#中文为主英文为辅>中文为主，英文为辅</a></li>
 <li><a href=#新添加内容>新添加内容</a></li>
+<li><a href=#添加评论功能>添加评论功能</a></li>
 <li><a href=#自定义域名>自定义域名</a></li>
 </ul>
 </li>
@@ -92,11 +93,14 @@ Table of Contents:
 + <a href=https://github.com/ target=_blank rel="noreferrer noopener">GitHub</a>
 。两个都是免费的。完成后，你的个人网站网址是：<code>https://github用户名.github.io</code>。</p>
 <p><div class=info>
-参考这篇帖子把个人网站建起来的朋友：</p>
+如果你参考这篇帖子顺利把个人网站建起来，欢迎把名字贴在下面！可以在评论区里说，我会加上去。</p>
 <ul>
 <li><a href=https://kristenjz.github.io/ target=_blank rel="noreferrer noopener">张晶</a>
-</div></li>
+</li>
+<li><a href=https://ashleygua.github.io/ target=_blank rel="noreferrer noopener">毛月</a>
+</li>
 </ul>
+</div>
 <h2 id=前期准备>前期准备<a href=#前期准备 class=header-anchor arialabel=Anchor> # </a></h2>
 <p>如果你是彻彻底底的零基础：没有 GitHub 账号、不知道 HTML 和 CSS 为何物、没用过 Git，甚至连 Markdown 都不知道是什么，强烈建议你先把<a href=https://intro2code.hongtaoh.com/ target=_blank rel="noreferrer noopener">这份教程</a>
 的前三章认真读一下。读完后，你需要：</p>
@@ -130,12 +134,12 @@ Table of Contents:
 <p>如果你已经安装了 brew, 那么直接在 Terminal 中输入</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>brew install hugo 
 </code></pre></div><p>如果你没安装 brew, 先到 <a href=https://github.com/gohugoio/hugo/releases target=_blank rel="noreferrer noopener">Hugo releases</a>
-，找到类似 <code>hugo_0.81.0_macOS-64bit.tar.gz</code> 的文件，点击下载，并解压。需要注意的是 Hugo 一直在更新，所以你到时候看到的版本号很可能已经不是 <code>0.81.0</code>。</p>
-<p>下载完之后，打开 Terminal, 输入 <code>open -a Finder /usr/local/bin</code>，然后把 <code>hugo_0.81.0_macOS-64bit</code> 文件中的 <code>hugo</code> 文件拖到 <code>/usr/local/bin</code> 当中：</p>
+，找到类似 <code>hugo_0.107.0_darwin-universal.tar.gz</code> 的文件，点击下载，并解压。</p>
+<p>下载完之后，打开 Terminal, 输入 <code>open -a Finder /usr/local/bin</code>，然后把 <code>hugo_0.81.0_macOS-64bit</code> 文件中的 <code>hugo</code> 拖到 <code>/usr/local/bin</code> 当中：</p>
 <pre tabindex=0><code>└── local
     └── bin
         └── hugo
-</code></pre><p>完成后，在 Terminal 中输入 <code>hugo version</code>, 如果显示 <code>Hugo Static Site Generator...</code> 证明安装成功。</p>
+</code></pre><p>完成后，在 Terminal 中输入 <code>hugo version</code>, 如果显示 <code>hugo v0.107.0 .....</code> 则证明 Hugo 安装成功。</p>
 <p><div class=info>
 如果你的苹果电脑比较新，而且你是用上面这种拖动的方法（而不是 brew hugo) 这种方式，那么 <code>hugo version</code> 可能会显示软件不安全，无法打开。这时候，你需要做的是在 Terminal 中输入 <code>open -a Finder /usr/local/bin</code>，然后找到 Hugo，接着右键 &lsquo;Open&rsquo;，选择同意，之后就没事了。
 </div></p>
@@ -165,6 +169,10 @@ Table of Contents:
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:green>cd</span> Desktop
 </code></pre></div><p>如果你用的是 Windows，打开你所选用的<a href=https://intro2code.hongtaoh.com/prep.html#terminal target=_blank rel="noreferrer noopener">终端</a>
 ，比如 git bash, 输入：</p>
+<p><div class=info>
+如果这一步碰到问题，请参考 <a href=https://github.com/hongtaoh/hongtaoh.github.io/issues/10#issuecomment-1326088874 target=_blank rel="noreferrer noopener">Ashleygua 的建议</a>
+。
+</div></p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:green>cd</span> 你刚才复制的路径
 </code></pre></div><p>这部分以下的内容都是在终端中进行，不管是 Windows 还是 Mac，输入的内容一样。</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new site quickstart 
@@ -481,6 +489,21 @@ open content/cn/hobby/_index.md -a TextEdit
     weight = <span style=color:#666>4</span>
 </code></pre></div><h4 id=新添加文件>新添加文件<a href=#新添加文件 class=header-anchor arialabel=Anchor> # </a></h4>
 <p>你可以直接把文件，比如 <code>myPDF.pdf</code> 放到 <code>static</code> 文件夹，这样的话，这个文件的地址就是 <code>https://USERNAME.github.io/myPDF.pdf</code>。当你的文件比较多时，建议你在 <code>static</code> 文件夹下新建一个子文件夹，比如 <code>files</code>，然后把文件统一放到 <code>files</code> 里，这样的话，地址就是 <code>https://USERNAME.github.io/files/myPDF.pdf</code></p>
+<h3 id=添加评论功能>添加评论功能<a href=#添加评论功能 class=header-anchor arialabel=Anchor> # </a></h3>
+<p>如果你想添加评论功能，最简单的办法是打开 <code>themes</code> -> <code>hugo-ht</code> -> <code>layouts</code> -> <code>partials</code> -> <code>footer.html</code>。把</p>
+<pre tabindex=0><code>{{ if not .IsSection }}
+&lt;script src=&quot;https://utteranc.es/client.js&quot;
+        repo=&quot;hongtaoh/hongtaoh.github.io&quot;
+        issue-term=&quot;pathname&quot;
+        theme=&quot;github-light&quot;
+        crossorigin=&quot;anonymous&quot;
+        async&gt;
+&lt;/script&gt;
+{{ end }}
+</code></pre><p>恢复正常，然后把 <code>hongtaoh/hongtaoh.github.io</code> 替换成你自己的信息，其它不用动。</p>
+<p>然后，根据 <a href=https://utteranc.es/ target=_blank rel="noreferrer noopener">uterances 的教程</a>
+，打开<a href=https://github.com/apps/utterances target=_blank rel="noreferrer noopener">这里</a>
+, 点击 Configure，然后选择你的个人网站仓库即可。</p>
 <h3 id=自定义域名>自定义域名<a href=#自定义域名 class=header-anchor arialabel=Anchor> # </a></h3>
 <p><div class=tip>
 如果你对 USERNAME.github.io 这个免费域名很满意，就没必要自己再去买域名。
