@@ -1,0 +1,121 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/>Home</a></li>
+<li><a href=/en/vitae/>Vitae</a></li>
+<li><a href=/en/projects/>Projects</a></li>
+<li><a href=/en/research/>Research</a></li>
+<li><a href=/en/blog/>Blog</a></li>
+<li><a href=/en/apad/>APAD</a></li>
+<li><a href=/cn/blog/>中文</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>How to Take the Derivative of the Logarithm Function</h1>
+<p>Hongtao Hao
+/ 2022-11-28 </p>
+<hr>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2022-11-28-log-derivative.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
+</a>
+</span>
+<aside class=toc>
+Table of Contents:
+<nav id=TableOfContents>
+<ul>
+<li><a href=#derivative-of-exponential-function-and-the-definition-of-e>Derivative of exponential function and the definition of e</a></li>
+<li><a href=#direct-derivation>Direct derivation</a></li>
+<li><a href=#a-more-clever-method-inverse-function>A more clever method: inverse function.</a></li>
+</ul>
+</nav>
+</aside>
+<div class="body-text list-text">
+<p>What is the derivative of <code>$f(x) = log(x)$</code>? This post tries to prove that it is <code>$\frac{1}{x}$</code> when the log base is <code>$e$</code>.</p>
+<h2 id=derivative-of-exponential-function-and-the-definition-of-e>Derivative of exponential function and the definition of e<a href=#derivative-of-exponential-function-and-the-definition-of-e class=header-anchor arialabel=Anchor> # </a></h2>
+<p>Before talking about the derivative of log function, let us review the definition of <code>$e$</code>. It is related to the derivative of the exponential function, for example, <code>$f(x) = 2^x$</code>.</p>
+<p>According to the definition of derivative, we know that the derivative of <code>$f(x) = 2^x$</code> should be:</p>
+<p><code>$$\lim_{dx \to 0}\frac{2^{x+dx} - 2^x}{dx} = \lim_{dx \to 0}\frac{(2^{dx} - 1) \cdot 2^x}{dx}$$</code></p>
+<p>And we know that as <code>$dx$</code> approaches <code>$0$</code>, <code>$\frac{2^{dx} - 1}{dx}$</code> is approaching a constent (<code>$ln(2)$</code>). That is to say, the derivative of <code>$f(x) = 2^x$</code> is <code>$2^x$</code> itself multiplied by a constant.</p>
+<p>Then we wonder, is there a case where the drivatie of <code>$f(x) = t^x$</code> is itself? That is to say, when will the constant be <code>$1$</code>? And that is the definition of <code>$e$</code>! We stipulate that if the derivative of <code>$f(x) = t^x$</code> is <code>$t^x$</code> itself, then we denote that special <code>$t$</code> with <code>$e$</code>.</p>
+<p>Therefore, we have:</p>
+<p><code>$$\lim_{dx \to 0} \frac{e^{dx} - 1}{dx} = 1$$</code></p>
+<p>So, as <code>$dx$</code> approaches <code>$0$</code>, we have</p>
+<p><code>$$e^{dx} = dx + 1$$</code></p>
+<p>Therefore, we have</p>
+<p><code>$$\lim_{dx \to 0}(dx + 1)^{\frac{1}{dx}} = e$$</code></p>
+<p>If we replace <code>$dx$</code> with <code>$n$</code>, we have:</p>
+<p><code>$$\lim_{n \to 0}(n + 1)^{\frac{1}{n}} = e$$</code></p>
+<h2 id=direct-derivation>Direct derivation<a href=#direct-derivation class=header-anchor arialabel=Anchor> # </a></h2>
+<p>With this background information, we should be able to derive the derivative of the log function. We will take the natural log function as an example, i.e., we have <code>$f(x) = ln(x)$</code>.</p>
+<p><code>$$\begin{aligned} f^\prime(x) &= \lim_{dx \to 0}\frac{ln(x+dx) - ln(x)}{dx} \\ & = \lim_{dx \to 0}\frac{ln(\frac{x+dx}{dx})}{dx} \\ &= \lim_{dx \to 0}\frac{ln(1 + \frac{dx}{x})}{dx} \\ &= \lim_{dx \to 0}\frac{1}{dx}ln(1 + \frac{dx}{x}) \\ &= \lim_{dx \to 0}{ln(1 + \frac{dx}{x})}^{\frac{1}{dx}}\end{aligned}$$</code></p>
+<p>Nowt, it&rsquo;s becoming interesting. It looks similar to the definition of <code>$e$</code>, right? But not quite the same. Let&rsquo;s say we denote <code>$\frac{dx}{x}$</code> as <code>$m$</code>, then the above equation can be written as</p>
+<p><code>$$f^\prime(x) = {ln(m + 1)}^{\frac{x}{n}} = {ln(m + 1)}^{\frac{1}{m}\cdot \frac{1}{x}} = \frac{1}{x}{ln(m + 1)}^{\frac{1}{m}} $$</code></p>
+<p>You might jump and say that we can use the definition of <code>$e$</code> directly, but to do that, we need to prove that <code>$m$</code> here and the <code>$n$</code> in the difinition of <code>$e$</code> is the same.</p>
+<p>In the definition of <code>$e$</code></p>
+<p><code>$$\lim_{n \to 0}(n + 1)^{\frac{1}{n}} = e$$</code></p>
+<p>We have <code>$n$</code> which is approaching <code>$0$</code>, and <code>$\frac{1}{n}$</code> approaching positive infinity. Since <code>$m = \frac{dx}{x}$</code>, and <code>$dx$</code> is approaching <code>$0$</code>, so <code>$m$</code> is approaching <code>$0$</code> and <code>$\frac{1}{m} = \frac{x}{dx}$</code> is approaching positive infinity. Therefore, we can say with certainty that as <code>$dx$</code> approaches <code>$0$</code>, <code>${(m + 1)}^{\frac{1}{m}}$</code> is approaching <code>$e$</code>. Thus, <code>${ln(m + 1)}^{\frac{1}{m}}$</code> is approaching 1. Therefore, <code>$f^\prime(x)$</code> is approaching <code>$\frac{1}{x}$</code>, which means that <strong>the derivative of the natural log function is <code>$\frac{1}{x}$</code></strong>.</p>
+<h2 id=a-more-clever-method-inverse-function>A more clever method: inverse function.<a href=#a-more-clever-method-inverse-function class=header-anchor arialabel=Anchor> # </a></h2>
+<p>In case you are not familiar with the properties of the derivatives of inversion functions, let&rsquo;s have an example.</p>
+<p>Suppose we have <code>$y = x^2$</code>, so we have <code>$x = \sqrt{y}$</code>. We know that <code>$y^{\prime} = 2x$</code>. And that <code>$x^{\prime} = \frac{1}{2\sqrt{y}} = \frac{1}{2x}$</code>.</p>
+<p>We find that <code>$y^{\prime} \cdot x^{\prime} = 1$</code>.</p>
+<p>Now, let&rsquo;s say <code>$y = e^x$</code>, so we have <code>$x = ln(y)$</code>. Since <code>$y^{\prime} = e^x$</code>, we have</p>
+<p><code>$$x^{\prime} = \frac{1}{e^x} = \frac{1}{e^{ln(y)}} = \frac{1}{y}$$</code></p>
+<p>Therefore, if <code>$f(x) = ln(x)$</code>, we have</p>
+<p><code>$$f^{\prime}(x) = \frac{1}{x}$$</code></p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+</code></pre></div>
+<a href=https://hongtaoh.com/tags/ml/>#ML</a>
+<p style=color:#777>Last modified on 2022-11-28</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<script src=https://utteranc.es/client.js repo=hongtaoh/hongtaoh.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">
+Subscribe </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>
+License
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+Hongtao Hao
+2020-2022
+</div>
+</footer>
