@@ -73,8 +73,3 @@ Now, let's say `$y = e^x$`, so we have `$x = ln(y)$`. Since `$y^{\prime} = e^x$`
 Therefore, if `$f(x) = ln(x)$`, we have 
 
 `$$f^{\prime}(x) = \frac{1}{x}$$`
-
-
-```python
-
-```
