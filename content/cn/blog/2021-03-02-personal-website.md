@@ -254,7 +254,7 @@ start ~/.ssh
 
 微软系统输入：`clip < ~/.ssh/gh-pages`
 
-请再回到 GitHub 你新建的仓库。把屏幕拉宽，点击 Settings -> 点击 Secrets -> 点击 New repository secret。把鼠标放在 Value 下面的文本框，苹果电脑按 Command+V，微软系统按 Control+V。在 Name 那里填 ACTIONS_DEPLOY_KEY，然后点击 Add secret。
+请再回到 GitHub 你新建的仓库。把屏幕拉宽，点击 Settings -> 点击 Secrets -> Actions ->New repository secret。把鼠标放在 Value 下面的文本框，苹果电脑按 Command+V，微软系统按 Control+V。在 Name 那里填 ACTIONS_DEPLOY_KEY，然后点击 Add secret。
 
 现在可以把这个终端窗口关闭了。
 
