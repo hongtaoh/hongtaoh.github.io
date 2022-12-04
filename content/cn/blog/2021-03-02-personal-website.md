@@ -240,7 +240,7 @@ start ~/.ssh
 
 回车。此时，你会看到两个新增的文件：gh-pages 和 gh-pages.pub
 
-紧接着，在目前的 terminal 页面
+紧接着，在目前的 terminal (也就是你刚才新建的这个) 页面
 
 苹果电脑输入：`pbcopy < ~/.ssh/gh-pages.pub`
 
@@ -260,7 +260,7 @@ start ~/.ssh
 
 ## 设置 Personal Token
 
-首先，打开[这个链接](https://github.com/settings/tokens)。进去后，点击 Generate new token 按钮, 在随后出现的页面中，选择你觉得合适的有效期限（默认为 30 天），在 Select scopes 这里选中 workflow，在 Note 那里随便写点东西，然后将页面往下拖，点击 Generate token。
+首先，打开[这个链接](https://github.com/settings/tokens)。进去后，点击 Generate new token 按钮, 选 Generate new token (Classic)， 在随后出现的页面中，选择你觉得合适的有效期限（默认为 30 天），在 Select scopes 这里选中 workflow，在 Note 那里随便写点东西，然后将页面往下拖，点击 Generate token。
 
 生成之后，点击那一串字母后边的复制板，将 token 复制下来。
 
@@ -274,7 +274,7 @@ start ~/.ssh
 
 ## 添加 workflow
 
-回到最开始的那个终端。（如果你把之前的终端关了，也不要紧，cd 到你的 hugo 项目就好）。
+回到 quickstart 终端。（如果你把之前的终端关了，也不要紧，cd 到 quickstart 就好）。
 
 苹果系统输入：
 
