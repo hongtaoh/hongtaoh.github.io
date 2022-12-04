@@ -157,8 +157,7 @@ name: github pages
 on:
   push:
     branches:
-      - master  # Set a branch name to trigger deployment
-
+      - master  # Make sure it matches your branch name (master or Main?)
 jobs:
   deploy:
     runs-on: ubuntu-18.04
