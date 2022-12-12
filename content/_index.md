@@ -20,7 +20,7 @@ I graduated with a Master's degree in Media Arts and Sciences from [the Media Sc
 
 Inspired by [Akari Asai](https://akariasai.github.io/), I am happy to hold weekly virtual office hours to give advice on PhD application, personal website building, programming, or any other things you think I am capable of. You can make an appointment [on Calendly](https://calendly.com/hongtaoh/30min).
 
-受[浅井明里](https://akariasai.github.io/)启发，我决定每周会拿出一个小时来帮助别人，你可以问我关于留学申请、个人主页、学编程、英语学习、转专业或者其他你觉得我能帮到你的问题。你可以通过 Calendly [预约](https://calendly.com/hongtaoh/30min)。(2023 年 2 月 1 日之前不接受预约)
+受[浅井明里](https://akariasai.github.io/)启发，我决定每周会拿出一个小时来帮助别人，你可以问我关于留学申请、个人主页、学编程、英语学习、转专业或者其他你觉得我能帮到你的问题。你可以通过 Calendly [预约](https://calendly.com/hongtaoh/30min)。(2023-02-01 之前不接受预约)
 
 {{<end>}}
 
