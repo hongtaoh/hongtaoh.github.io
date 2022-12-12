@@ -1,0 +1,153 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/>Home</a></li>
+<li><a href=/en/vitae/>Vitae</a></li>
+<li><a href=/en/projects/>Projects</a></li>
+<li><a href=/en/research/>Research</a></li>
+<li><a href=/en/blog/>Blog</a></li>
+<li><a href=/en/apad/>APAD</a></li>
+<li><a href=/cn/blog/>中文</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>Understanding Non-Square Matrix Multiplication</h1>
+<p>Hongtao Hao
+/ 2022-12-12 </p>
+<hr>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2022-12-12-nonsquare-matrix-multip.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
+</a>
+</span>
+<div class="body-text list-text">
+<p>Through this tutorial, I want to explain how to compuate the multiplications of non-square matrix; for example, the result of multiplying a <code>$2 \times 5$</code> matrix by a <code>$5 \times 2$</code> matrix (<code>a</code> by <code>c</code> in the following example.)</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>numpy</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>np</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>a <span style=color:#666>=</span> np<span style=color:#666>.</span>array([[<span style=color:#666>1</span>, <span style=color:#666>2</span>,<span style=color:#666>7</span>,<span style=color:#666>9</span>,<span style=color:#666>10</span>], [<span style=color:#666>3</span>, <span style=color:#666>4</span>,<span style=color:#666>5</span>,<span style=color:#666>12</span>,<span style=color:#666>11</span>]])
+a
+</code></pre></div><pre><code>array([[ 1,  2,  7,  9, 10],
+       [ 3,  4,  5, 12, 11]])
+</code></pre>
+<p><code>a</code> is a <code>$2 \times 5$</code> matrix. It means the transformation from a 5d space to a 2d space. You can consider each column of <code>a</code> as the corresponding coordinates of each of the five axes (of the original <code>5d</code> space).</p>
+<p>Suppose we have a vector in a 5d space, i.e., a <code>$5 \times 1$</code> vector:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>b<span style=color:#666>=</span> np<span style=color:#666>.</span>array([<span style=color:#666>1</span>,<span style=color:#666>2</span>,<span style=color:#666>3</span>,<span style=color:#666>4</span>,<span style=color:#666>5</span>])<span style=color:#666>.</span>reshape(<span style=color:#666>-</span><span style=color:#666>1</span>, <span style=color:#666>1</span>)
+b
+</code></pre></div><pre><code>array([[1],
+       [2],
+       [3],
+       [4],
+       [5]])
+</code></pre>
+<p>Multiplying <code>a</code> by <code>b</code> means mapping <code>b</code> onto <code>a</code>. The resulting <code>$2 \times 1$</code> matrix is the result vector.</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>a <span style=color:#666>@</span> b
+</code></pre></div><pre><code>array([[112],
+       [129]])
+</code></pre>
+<h2 id=matrix-multiplication>Matrix multiplication<a href=#matrix-multiplication class=header-anchor arialabel=Anchor> # </a></h2>
+<p>Suppose we have a <code>$5 \times 2$</code> matrix:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>c <span style=color:#666>=</span> np<span style=color:#666>.</span>array([[<span style=color:#666>1</span>,<span style=color:#666>2</span>], [<span style=color:#666>3</span>,<span style=color:#666>4</span>], [<span style=color:#666>4</span>,<span style=color:#666>7</span>], [<span style=color:#666>9</span>,<span style=color:#666>10</span>], [<span style=color:#666>11</span>,<span style=color:#666>-</span><span style=color:#666>1</span>]])
+c
+</code></pre></div><pre><code>array([[ 1,  2],
+       [ 3,  4],
+       [ 4,  7],
+       [ 9, 10],
+       [11, -1]])
+</code></pre>
+<p><code>c</code> means transforming a <code>2d</code> space to <code>5d</code>. A <code>2d</code> space has two axes (<code>$\vec{x}$</code> and <code>$\vec{y}$</code>). The first column of <code>c</code> is the coordinates of <code>$\vec{x}$</code> in the new <code>5d</code> space, and the second column, <code>$\vec{y}$</code>.</p>
+<p>What does <code>$c \times a$</code> means? This matrix multiplication is the result of two space transformations: first <code>a</code> and then <code>c</code>. That is to say, it means we first transform a <code>5d</code> space to <code>2d</code> and then transform <code>2d</code> space to <code>5d</code>.</p>
+<p>To understand what <code>$c \times a$</code> means, let&rsquo;s first consider multiplying a <code>$2 \times 1$</code> matrix, i.e., a vector in two-dimensional space, by <code>c</code>:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>d <span style=color:#666>=</span> np<span style=color:#666>.</span>array([[<span style=color:#666>1</span>], [<span style=color:#666>2</span>]])
+d
+</code></pre></div><pre><code>array([[1],
+       [2]])
+</code></pre>
+<p><code>$\vec{d}$</code> means <code>$1 \vec{x} + 2 \vec{y}$</code>. Since in the new <code>5d</code> space, the coordinates of <code>$\vec{x}$</code> is <code>[1, 3, 4, 9, 11]</code> and the coordinates of <code>$\vec{y}$</code> is <code>[2, 4, 7, 10, -1]</code>, the result of <code>$c \times d$</code> will be:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>c <span style=color:#666>@</span> d
+</code></pre></div><pre><code>array([[ 5],
+       [11],
+       [18],
+       [29],
+       [ 9]])
+</code></pre>
+<p>That is the coordinates of <code>$\vec{d}$</code> in the new <code>5d</code> space.</p>
+<p>The calculation of <code>$c \times a$</code> is the same. You can view each column of <code>a</code> as a <code>$\vec{d}$</code>.</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>e <span style=color:#666>=</span> c <span style=color:#666>@</span> a
+e
+</code></pre></div><pre><code>array([[  7,  10,  17,  33,  32],
+       [ 15,  22,  41,  75,  74],
+       [ 25,  36,  63, 120, 117],
+       [ 39,  58, 113, 201, 200],
+       [  8,  18,  72,  87,  99]])
+</code></pre>
+<p>For any vector in a five-dimensional space, say <code>f = [1, 5, -9, 9, 8]</code>, multiplying it by <code>a</code> and then by <code>c</code> is the same as multiplying it by <code>e</code> directly.</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>f <span style=color:#666>=</span> np<span style=color:#666>.</span>array([[<span style=color:#666>1</span>], [<span style=color:#666>5</span>], [<span style=color:#666>-</span><span style=color:#666>9</span>], [<span style=color:#666>9</span>], [<span style=color:#666>8</span>]])
+g <span style=color:#666>=</span> a <span style=color:#666>@</span> f
+h <span style=color:#666>=</span> c <span style=color:#666>@</span> g
+h
+</code></pre></div><pre><code>array([[ 457],
+       [1023],
+       [1654],
+       [2721],
+       [1025]])
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>e <span style=color:#666>@</span> f
+</code></pre></div><pre><code>array([[ 457],
+       [1023],
+       [1654],
+       [2721],
+       [1025]])
+</code></pre>
+<a href=https://hongtaoh.com/tags/ml/>#ML</a>
+<p style=color:#777>Last modified on 2022-12-12</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<script src=https://utteranc.es/client.js repo=hongtaoh/hongtaoh.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">
+Subscribe </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>
+License
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+Hongtao Hao
+2020-2022
+</div>
+</footer>
