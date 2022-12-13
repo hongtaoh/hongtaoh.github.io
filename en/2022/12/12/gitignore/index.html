@@ -1,4 +1,5 @@
-<!doctype html><html lang=en-us>
+<a name=top></a><!doctype html>
+<html lang=en-us>
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
@@ -25,48 +26,42 @@
 <img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
 </a>
 <ul class=nav-links>
+<li><a href=/>Home</a></li>
+<li><a href=/en/vitae/>Vitae</a></li>
+<li><a href=/en/projects/>Projects</a></li>
+<li><a href=/en/research/>Research</a></li>
+<li><a href=/en/blog/>Blog</a></li>
+<li><a href=/en/apad/>APAD</a></li>
+<li><a href=/cn/blog/>中文</a></li>
 </ul>
 </nav>
 </header>
-<main class=content>
-<h1>#tutorial</h1>
-<div class=list-page>
-<ul>
-<h2 style=text-align:left>2022</h2>
-<p>
-<span class=date>
-2022-12-12
-</span>
-<a href=/en/2022/12/12/gitignore/>
-Gitignore: How to Ignore Everything in A Specific Folder
-</a>
-</p>
-<p>
-<span class=date>
-2022-08-28
-</span>
-<a href=/en/2022/08/28/hupyter/>
-Hupyter: Convert Jupyter Notebooks to Hugo Posts
-</a>
-</p>
-<p>
-<span class=date>
-2022-08-12
-</span>
-<a href=/en/2022/08/12/plot-r-funciton-curves/>
-How to Plot Curves for Functions in R
-</a>
-</p>
-<p>
-<span class=date>
-2022-08-12
-</span>
-<a href=/en/2022/08/12/python-set-unsorted/>
-Attention: Python Set is Changing From Time to Time
-</a>
-</p>
-</ul>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>Gitignore: How to Ignore Everything in A Specific Folder</h1>
+<p>Hongtao Hao
+/ 2022-12-12 </p>
+<hr>
 </div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2022-12-12-gitignore.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
+</a>
+</span>
+<div class="body-text list-text">
+<p>I was not able to fully master the directory specification in <code>.gitignore</code> but I do not have to. Sometimes, it&rsquo;s enough to have a <code>.gitignore</code> file that says: &ldquo;please ignore everything expect this <code>.gitignore</code> file&rdquo;.</p>
+<p>Change directory to the folder where you want to ignore, and then:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>touch .gitignore
+</code></pre></div><p>Press <code>Shift</code> + <code>Command</code> + <code>.</code>, then you&rsquo;ll be able to see <code>.gitignore</code> file. Open it, and write the following to it:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#408080;font-style:italic># ignore everything in the current dir</span>
+*
+
+<span style=color:#408080;font-style:italic># except this file</span>
+!.gitignore
+</code></pre></div>
+<a href=https://hongtaoh.com/tags/tutorial/>#tutorial</a>
+<p style=color:#777>Last modified on 2022-12-12</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>
 <footer class=footer>
 <script src=https://utteranc.es/client.js repo=hongtaoh/hongtaoh.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
@@ -74,7 +69,7 @@ Attention: Python Set is Changing From Time to Time
 <script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script type=text/javascript src=/js/center-img.js></script>
 <ul class=footer-links>
-<li><a href=/tags/blog/index.xml type=application/rss+xml title="RSS feed">
+<li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">
 Subscribe </a>
 </li>
 <li>
@@ -90,5 +85,3 @@ Hongtao Hao
 2020-2022
 </div>
 </footer>
-<div style=text-align:center;color:gray;margin-top:-20px;font-size:19px;margin-bottom:10px>
-</div>
