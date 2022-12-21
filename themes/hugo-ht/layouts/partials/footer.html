@@ -1,5 +1,5 @@
 <footer class="footer">
-{{ if not .IsSection }}
+{{ if and (not .IsSection) (not .IsHome) }}
 <script src="https://utteranc.es/client.js"
         repo="hongtaoh/hongtaoh.github.io"
         issue-term="pathname"
