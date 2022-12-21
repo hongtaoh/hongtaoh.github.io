@@ -32,13 +32,9 @@ en = "/en/:year/:month/:day/:slug/"
     url = "/en/blog/"
     weight = 5
 [[menu.en]]
-    name = "APAD"
-    url = "/en/apad/"
-    weight = 6
-[[menu.en]]
     name = "中文"
     url = "/cn/blog/"
-    weight = 7
+    weight = 6
 [[menu.cn]]
     name = "关于"
     url = "/cn/"
