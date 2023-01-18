@@ -11,6 +11,9 @@ enableRobotsTXT = true
 cn = "/cn/:year/:month/:day/:slug/"
 en = "/en/:year/:month/:day/:slug/"
 
+[frontmatter]
+  lastmod = ["lastmod", ":git", "date", "publishDate"]
+
 [[menu.en]]
     name = "Home"
     url = "/"
