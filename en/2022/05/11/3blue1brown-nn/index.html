@@ -211,7 +211,7 @@ on <a href=https://colah.github.io/ target=_blank rel="noreferrer noopener">cola
 <p>These averaged desired changes are very close to the vector of gradients we talked about earlier. We can at least consider them as something proportional to the gradients.</p>
 <p><img src=/media/enblog/nn/desired-changes-as-gradients.png alt></p>
 <p>It is computationally expensive to add up the impact of each training example. To make the process more efficient, we normally randomly shuffle our training dataset, and devide them into mini-batches. For example, if the whole training data consists of 10K examples, we can have 100 mini-batches each containing 100 training examples. For each mini-batch, we calculate the average desired changes for each weight and bias. The results won&rsquo;t be perfect, but each mini-batch gives us a rough sense of what the final gradients should be. This makes it easier for computers. This technique is called <strong>Stochastic gradient descent</strong>.</p>
-<p style=color:#777>Last modified on 2023-02-07</p>
+<p style=color:#777>Last modified on 2023-02-10</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>
