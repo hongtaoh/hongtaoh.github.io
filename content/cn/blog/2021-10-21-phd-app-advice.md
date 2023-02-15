@@ -12,6 +12,10 @@ tags: 留学
 {{<end>}}
 
 {{<block class="info">}}
+[金吉](https://jinjipang.com/) 拉着我做了[几期视频](https://space.bilibili.com/35365080/channel/seriesdetail?sid=2528097)放在了 B 站上。
+{{<end>}}
+
+{{<block class="info">}}
 对于硕、博士申请者，我强烈建议你[建一个网站](/cn/2021/06/17/homepage/)，并将其放到你的简历里。
 {{<end>}}
 
