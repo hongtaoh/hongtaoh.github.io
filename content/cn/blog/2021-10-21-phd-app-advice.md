@@ -12,6 +12,10 @@ tags: 留学
 {{<end>}}
 
 {{<block class="info">}}
+斯坦福大学的[徐轶青老师](https://yiqingxu.org/) 分享的 [如何申请北美社科类博士项目？](https://yiqingxu.org/articles/20170826_phd_application.pdf) 也许也会有帮助。
+{{<end>}}
+
+{{<block class="info">}}
 [金吉](https://jinjipang.com/) 拉着我做了[几期视频](https://space.bilibili.com/35365080/channel/seriesdetail?sid=2528097)放在了 B 站上。
 {{<end>}}
 
