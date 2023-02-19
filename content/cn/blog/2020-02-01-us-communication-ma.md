@@ -67,6 +67,10 @@ aliases:
 
 ## 我比较确定给硕士生全奖的项目
 
+{{<block class="tip">}}
+全奖包括三个部分：full tuition waiver + health insurance + monthly stipend。收到录取后，如果你不确定你拿到的是不是全奖，就邮件问一下学校，看他们给你的奖学金包不包含这三个部分。
+{{<end>}}
+
 就我所知，截至目前（2021 年 5 月）还给国际生提供全额奖学金的新闻传播学硕士项目有以下：
 
 - 亚利桑那大学 (Arizona University, The Department of Communication)
@@ -75,7 +79,7 @@ aliases:
 
 - 阿拉巴马大学 (University of Alabama, [College of Communication & Information Sciences](https://cis.ua.edu/masters-programs/)，有五个不同的硕士项目，Comm Studies 那个貌似可以给助教全奖，其他方向好像只有一部分学生有全奖。具体情况请自己问。)
 
-- 印第安纳大学(Indiana University, [The Media School](https://mediaschool.indiana.edu/)，M.A. 和 M.S. 大部分都会给助教全奖。)
+- 印第安纳大学(Indiana University, [The Media School](https://mediaschool.indiana.edu/)，M.A. 和 M.S. 大部分都会给助教全奖，但有一些只是给一次性的资助或者干脆什么都不给)
 
 - 犹他大学 (University of Utah, Department of Communication)
 
