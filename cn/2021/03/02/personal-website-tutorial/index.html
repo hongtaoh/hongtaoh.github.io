@@ -321,11 +321,12 @@ start ~/.ssh
 </span><span style=color:#bbb>        </span><span style=color:green;font-weight:700>with</span>:<span style=color:#bbb>
 </span><span style=color:#bbb>          </span><span style=color:green;font-weight:700>submodules</span>:<span style=color:#bbb> </span><span style=color:green;font-weight:700>true</span><span style=color:#bbb>  </span><span style=color:#408080;font-style:italic># Fetch Hugo themes (true OR recursive)</span><span style=color:#bbb>
 </span><span style=color:#bbb>          </span><span style=color:green;font-weight:700>fetch-depth</span>:<span style=color:#bbb> </span><span style=color:#666>0</span><span style=color:#bbb>    </span><span style=color:#408080;font-style:italic># Fetch all history for .GitInfo and .Lastmod</span><span style=color:#bbb>
+</span><span style=color:#bbb>          </span><span style=color:green;font-weight:700>token</span>:<span style=color:#bbb> </span>${{ secrets.PERSONAL_TOKEN }}<span style=color:#bbb>
 </span><span style=color:#bbb>
 </span><span style=color:#bbb>      </span>- <span style=color:green;font-weight:700>name</span>:<span style=color:#bbb> </span>Setup Hugo<span style=color:#bbb>
 </span><span style=color:#bbb>        </span><span style=color:green;font-weight:700>uses</span>:<span style=color:#bbb> </span>peaceiris/actions-hugo@v2<span style=color:#bbb>
 </span><span style=color:#bbb>        </span><span style=color:green;font-weight:700>with</span>:<span style=color:#bbb>
-</span><span style=color:#bbb>          </span><span style=color:green;font-weight:700>hugo-version</span>:<span style=color:#bbb> </span><span style=color:#ba2121>&#39;0.79.1&#39;</span><span style=color:#bbb>
+</span><span style=color:#bbb>          </span><span style=color:green;font-weight:700>hugo-version</span>:<span style=color:#bbb> </span><span style=color:#ba2121>&#39;0.79.1&#39;</span><span style=color:#bbb> </span><span style=color:#408080;font-style:italic># 请修改你的 hugo version</span><span style=color:#bbb>
 </span><span style=color:#bbb>
 </span><span style=color:#bbb>      </span>- <span style=color:green;font-weight:700>name</span>:<span style=color:#bbb> </span>Build<span style=color:#bbb>
 </span><span style=color:#bbb>        </span><span style=color:green;font-weight:700>run</span>:<span style=color:#bbb> </span>hugo --minify<span style=color:#bbb>
@@ -551,7 +552,7 @@ open content/cn/hobby/_index.md -a TextEdit
 </span><span style=color:#bbb>          </span><span style=color:green;font-weight:700>cname</span>:<span style=color:#bbb> </span>example.com<span style=color:#bbb>
 </span></code></pre></div>
 <a href=https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/>#编程</a>
-<p style=color:#777>最后一次修改于 2022-12-04</p>
+<p style=color:#777>最后一次修改于 2023-02-26</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>
