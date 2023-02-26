@@ -306,11 +306,12 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          token: ${{ secrets.PERSONAL_TOKEN }}
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.79.1'
+          hugo-version: '0.79.1' # 请修改你的 hugo version
 
       - name: Build
         run: hugo --minify
