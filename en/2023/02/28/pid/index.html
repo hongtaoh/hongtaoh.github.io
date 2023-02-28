@@ -1,0 +1,370 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/>Home</a></li>
+<li><a href=/en/projects/>Projects</a></li>
+<li><a href=/en/research/>Research</a></li>
+<li><a href=/en/blog/>Blog</a></li>
+<li><a href=/cn/blog/>中文</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>Proportional-Integral-Derivative Controller</h1>
+<p>Hongtao Hao
+/ 2023-02-28 </p>
+<hr>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2023-02-28-pid.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
+</a>
+</span>
+<aside class=toc>
+Table of Contents:
+<nav id=TableOfContents>
+<ul>
+<li><a href=#pid-for-constant-speed>PID for constant speed</a></li>
+<li><a href=#dynamic-speed-with-random-noise>Dynamic speed (with random noise)</a></li>
+</ul>
+</nav>
+</aside>
+<div class="body-text list-text">
+<p><div class=note>
+The material below is based on Professor <a href=https://directory.engr.wisc.edu/cee/Faculty/Li_Xiaopeng/ target=_blank rel="noreferrer noopener">Xiaopeng Li</a>
+&rsquo;s course of <em>CIV ENGR 679 Connected and Automated Transport</em>
+</div></p>
+<p><div class=reminder>
+This notebook is based on <a href=https://julialang.org/ target=_blank rel="noreferrer noopener">Julia</a>
+and rendered by <a href=https://github.com/hongtaoh/hupyter target=_blank rel="noreferrer noopener">Hupyter</a>
+.
+</div></p>
+<h1 id=pid-controller>PID controller<a href=#pid-controller class=header-anchor arialabel=Anchor> # </a></h1>
+<p>PID is short for &ldquo;Proportional-Integral-Derivative&rdquo;. What it does is that if you have a planned trajectory for a vehicle which is now at a specific location and have a specific initial speed, PID will allow this vehicle to get to the planned trajectory. You accomplish this through PID by tweaking the three parameters:</p>
+<ul>
+<li><code>$k_P$</code></li>
+<li><code>$k_I$</code></li>
+<li><code>$k_D$</code></li>
+</ul>
+<p>If you multiply <code>$k_P$</code> by the distance between the planned location and the actual location at any timestamp, you get <code>$a_P$</code>. If you multiply <code>$k_I$</code> by the difference between the integral of the planned location and that of the actual location at any timestamp, you get <code>$a_I$</code>. If you multiply <code>$k_D$</code> by the speed difference between the planned trajectory and the actual vehicle at any timestamp, you get <code>$a_D$</code>.</p>
+<p>If you add up <code>$a_P$</code>, <code>$a_I$</code>, and <code>$a_D$</code>, you get <code>$a$</code>, which is the acceleration for the actual vehicle.</p>
+<h2 id=pid-for-constant-speed>PID for constant speed<a href=#pid-for-constant-speed class=header-anchor arialabel=Anchor> # </a></h2>
+<blockquote>
+<p>The planned trajectory starts from location 0 at time 0. It is cruising at 30m/s speed for 50 seconds.The actual location is 3 at time 0 and the actual speed is 28m/s at time 0.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia><span style=color:green;font-weight:700>using</span> Plots, Distributions, Random
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia><span style=color:green;font-weight:700>function</span> get_data(t, k_p<span style=color:#666>=</span><span style=color:#666>2</span>, k_i<span style=color:#666>=</span><span style=color:#666>0</span>, k_d<span style=color:#666>=</span><span style=color:#666>1</span>)
+    <span style=color:#408080;font-style:italic># initial state</span>
+    <span style=color:#408080;font-style:italic># y for the planned vehicle, x for the actual vehicle</span>
+    
+    y <span style=color:#666>=</span> <span style=color:#666>0</span> <span style=color:#408080;font-style:italic># position</span>
+    int_y <span style=color:#666>=</span> <span style=color:#666>0</span> <span style=color:#408080;font-style:italic># integral of position</span>
+    y_dot <span style=color:#666>=</span> <span style=color:#666>30</span> <span style=color:#408080;font-style:italic># speed</span>
+    x <span style=color:#666>=</span> <span style=color:#666>3</span>
+    int_x <span style=color:#666>=</span> <span style=color:#666>0</span>
+    x_dot <span style=color:#666>=</span> <span style=color:#666>28</span>
+    
+    a_p <span style=color:#666>=</span> k_p <span style=color:#666>*</span> (y <span style=color:#666>-</span> x)
+    a_i <span style=color:#666>=</span> k_i <span style=color:#666>*</span> (int_y <span style=color:#666>-</span> int_x)
+    a_d <span style=color:#666>=</span> k_d <span style=color:#666>*</span> (y_dot <span style=color:#666>-</span> x_dot)
+    
+    a <span style=color:#666>=</span> a_p <span style=color:#666>+</span> a_i <span style=color:#666>+</span> a_d
+    
+    <span style=color:#408080;font-style:italic># if time is 0, return the initial state</span>
+    <span style=color:green;font-weight:700>if</span> t <span style=color:#666>==</span> <span style=color:#666>0</span>
+        <span style=color:green;font-weight:700>return</span> (y, x)
+    <span style=color:green;font-weight:700>else</span>
+        <span style=color:green;font-weight:700>for</span> i <span style=color:green;font-weight:700>in</span> time_delta<span style=color:#666>:</span>time_delta<span style=color:#19177c>:t</span>
+            <span style=color:#408080;font-style:italic># 0.2, 0.4, 0.6, ...</span>
+            x_dot_prev <span style=color:#666>=</span> x_dot
+            x_dot <span style=color:#666>+=</span> a <span style=color:#666>*</span> time_delta
+            <span style=color:#408080;font-style:italic># THIS IS USING APPROXIMATION!</span>
+            x <span style=color:#666>+=</span> <span style=color:#666>0.5</span><span style=color:#666>*</span>(x_dot_prev <span style=color:#666>+</span> x_dot) <span style=color:#666>*</span> time_delta
+            int_x <span style=color:#666>+=</span> x <span style=color:#666>*</span> time_delta
+
+            <span style=color:#408080;font-style:italic># update y</span>
+            y_dot <span style=color:#666>=</span> y_dot <span style=color:#408080;font-style:italic># constant speed at all time</span>
+            y <span style=color:#666>+=</span> y_dot <span style=color:#666>*</span> time_delta
+            int_y <span style=color:#666>+=</span> y <span style=color:#666>*</span> time_delta
+
+            <span style=color:#408080;font-style:italic># update a_p, a_i, a_d, and a for usage at next timestamp</span>
+            a_p <span style=color:#666>=</span> k_p <span style=color:#666>*</span> (y <span style=color:#666>-</span> x)
+            a_i <span style=color:#666>=</span> k_i <span style=color:#666>*</span> (int_y <span style=color:#666>-</span> int_x)
+            a_d <span style=color:#666>=</span> k_d <span style=color:#666>*</span> (y_dot <span style=color:#666>-</span> x_dot)
+            a <span style=color:#666>=</span> a_p <span style=color:#666>+</span> a_i <span style=color:#666>+</span> a_d
+        <span style=color:green;font-weight:700>end</span>
+        <span style=color:green;font-weight:700>return</span> (y, x)
+    <span style=color:green;font-weight:700>end</span>
+<span style=color:green;font-weight:700>end</span>
+</code></pre></div><pre><code>get_data (generic function with 5 methods)
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>time_delta <span style=color:#666>=</span> <span style=color:#666>0.2</span> 
+time_span <span style=color:#666>=</span> <span style=color:#666>0.0</span><span style=color:#666>:</span>time_delta<span style=color:#666>:</span><span style=color:#666>50</span>
+</code></pre></div><pre><code>0.0:0.2:50.0
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia><span style=color:green;font-weight:700>function</span> make_plot(data, title, label, xlabel, ylabel)
+    Plots<span style=color:#666>.</span>plot(time_span, data,
+    title<span style=color:#666>=</span>title,
+    label<span style=color:#666>=</span>label,
+    linewidth<span style=color:#666>=</span><span style=color:#666>0.5</span>,
+    markershape <span style=color:#666>=</span> <span style=color:#19177c>:auto</span>,
+    markersize <span style=color:#666>=</span> <span style=color:#666>2</span>,
+    linestyle <span style=color:#666>=</span> <span style=color:#19177c>:auto</span>,
+    mc<span style=color:#666>=</span> <span style=color:#19177c>:auto</span>,
+    xlabel <span style=color:#666>=</span> xlabel,
+    ylabel <span style=color:#666>=</span> ylabel,
+    legend<span style=color:#666>=</span><span style=color:#19177c>:bottom</span>
+    )
+<span style=color:green;font-weight:700>end</span>
+</code></pre></div><pre><code>make_plot (generic function with 1 method)
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>ys <span style=color:#666>=</span> [get_data(i, <span style=color:#666>2</span>, <span style=color:#666>0</span>, <span style=color:#666>1</span>)[<span style=color:#666>1</span>] <span style=color:green;font-weight:700>for</span> i <span style=color:green;font-weight:700>in</span> time_span]
+xs <span style=color:#666>=</span> [get_data(i, <span style=color:#666>2</span>, <span style=color:#666>0</span>, <span style=color:#666>1</span>)[<span style=color:#666>2</span>] <span style=color:green;font-weight:700>for</span> i <span style=color:green;font-weight:700>in</span> time_span]
+</code></pre></div><pre><code>251-element Vector{Real}:
+    3
+    8.52
+   13.915199999999999
+   19.253951999999998
+   24.59818752
+   29.999490355200003
+   35.496625508352004
+   41.114488996331524
+   46.8643352065278
+   52.745059206570446
+   58.74526263008063
+   64.84581249542273
+   71.02260938267628
+    ⋮
+ 1434.0000000008072
+ 1440.0000000013742
+ 1446.0000000017405
+ 1452.000000001909
+ 1458.000000001898
+ 1464.0000000017367
+ 1470.0000000014622
+ 1476.0000000011148
+ 1482.0000000007337
+ 1488.000000000355
+ 1494.0000000000084
+ 1499.9999999997167
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>make_plot(
+    [ys, xs],
+    <span style=color:#ba2121>&#34;planned and actual&#34;</span>,
+    [<span style=color:#ba2121>&#34;planned&#34;</span> <span style=color:#ba2121>&#34;actual&#34;</span>],
+    <span style=color:#ba2121>&#34;time&#34;</span>,
+    <span style=color:#ba2121>&#34;planned and actual&#34;</span>
+)
+
+savefig(<span style=color:#ba2121>&#34;/en/blog/2023-02-28-pid_files/pid-01.png&#34;</span>)
+</code></pre></div><p><img src=/en/blog/2023-02-28-pid_files/pid-01.png alt></p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>make_plot(
+    ys<span style=color:#666>-</span>xs,
+    <span style=color:#ba2121>&#34;planned - actual&#34;</span>,
+    <span style=color:#ba2121>&#34;planned - actual&#34;</span>,
+    <span style=color:#ba2121>&#34;time&#34;</span>,
+    <span style=color:#ba2121>&#34;planned - actual&#34;</span>
+)
+
+savefig(<span style=color:#ba2121>&#34;/en/blog/2023-02-28-pid_files/pid-02.png&#34;</span>)
+</code></pre></div><p><img src=/en/blog/2023-02-28-pid_files/pid-02.png alt></p>
+<h2 id=dynamic-speed-with-random-noise>Dynamic speed (with random noise)<a href=#dynamic-speed-with-random-noise class=header-anchor arialabel=Anchor> # </a></h2>
+<blockquote>
+<p>The planned trajectory starts from location 0 at time 0. It is cruising at 30m/s speed for the first 10 seconds, then decreasing to 10 m/s with deceleration <code>$-2𝑚/𝑠^2$</code> for 10 seconds and then accelerating to 30m/s with acceleration <code>$2𝑚/𝑠^2$</code> for 10 seconds, and then cruising at 30 m/s for 20 seconds.</p>
+</blockquote>
+<blockquote>
+<p>The actual location is 3 at time 0 and the actual speed is 28m/s at time 0.</p>
+</blockquote>
+<blockquote>
+<p>Assuming the acceleration cannot be precisely controlled, and always has a random error uniformly distributed over <code>$[-0.2, 0.2] m/s$</code></p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia><span style=color:green;font-weight:700>function</span> get_y_dot(t)
+    <span style=color:#ba2121>&#34;&#34;&#34;This function gets the speed of the planned vehicle
+</span><span style=color:#ba2121>    &#34;&#34;&#34;</span>
+    <span style=color:green;font-weight:700>if</span> t <span style=color:#666>&lt;=</span> <span style=color:#666>10</span>
+        y_dot <span style=color:#666>=</span> <span style=color:#666>30</span>
+    <span style=color:green;font-weight:700>elseif</span> t <span style=color:#666>&lt;=</span> <span style=color:#666>20</span>
+        y_dot <span style=color:#666>=</span> <span style=color:#666>30</span>
+        <span style=color:green;font-weight:700>for</span> i <span style=color:green;font-weight:700>in</span> <span style=color:#666>10</span><span style=color:#666>+</span>time_delta<span style=color:#666>:</span>time_delta<span style=color:#19177c>:t</span>
+            y_dot <span style=color:#666>+=</span> time_delta<span style=color:#666>*</span>(<span style=color:#666>-</span><span style=color:#666>2</span>)
+        <span style=color:green;font-weight:700>end</span>
+    <span style=color:green;font-weight:700>elseif</span> t <span style=color:#666>&lt;=</span> <span style=color:#666>30</span>
+        y_dot <span style=color:#666>=</span> <span style=color:#666>10</span>
+        <span style=color:green;font-weight:700>for</span> i <span style=color:green;font-weight:700>in</span> <span style=color:#666>20</span><span style=color:#666>+</span>time_delta<span style=color:#666>:</span>time_delta<span style=color:#19177c>:t</span>
+            y_dot <span style=color:#666>+=</span> time_delta<span style=color:#666>*</span><span style=color:#666>2</span>
+        <span style=color:green;font-weight:700>end</span>
+    <span style=color:green;font-weight:700>else</span>
+        y_dot <span style=color:#666>=</span> <span style=color:#666>30</span>
+    <span style=color:green;font-weight:700>end</span>
+    <span style=color:green;font-weight:700>return</span> y_dot
+<span style=color:green;font-weight:700>end</span>
+</code></pre></div><pre><code>get_y_dot (generic function with 1 method)
+</code></pre>
+<p>Tesing the function of <code>get_y_dot</code>:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>get_y_dot(<span style=color:#666>15</span>)
+</code></pre></div><pre><code>20.000000000000036
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>get_y_dot(<span style=color:#666>22</span>)
+</code></pre></div><pre><code>14.000000000000004
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia><span style=color:green;font-weight:700>function</span> get_data(t, k_p<span style=color:#666>=</span><span style=color:#666>2</span>, k_i<span style=color:#666>=</span><span style=color:#666>0</span>, k_d<span style=color:#666>=</span><span style=color:#666>1</span>, noise <span style=color:#666>=</span> <span style=color:green>true</span>)
+    <span style=color:#ba2121>&#34;&#34;&#34;This function returns the trajectory of the planned vehicle (y) 
+</span><span style=color:#ba2121>    and the actual vehicle (x)
+</span><span style=color:#ba2121>    
+</span><span style=color:#ba2121>    The key is that the initial acceleration of the actual vehicle can be calculated 
+</span><span style=color:#ba2121>    through the initial state and the set parameters. Using this acceleration at t=0,
+</span><span style=color:#ba2121>    we can calculate the velocity of the actual vehicle at the next timestamp. Then, 
+</span><span style=color:#ba2121>    using x_dot, we can calculate x and int_x.
+</span><span style=color:#ba2121>    
+</span><span style=color:#ba2121>    y_dot, y, and the int_y can be calculated easily. 
+</span><span style=color:#ba2121>    &#34;&#34;&#34;</span>
+    <span style=color:#408080;font-style:italic># initial state</span>
+    <span style=color:#408080;font-style:italic># y for the planned vehicle, x for the actual vehicle</span>
+    
+    y <span style=color:#666>=</span> <span style=color:#666>0</span> <span style=color:#408080;font-style:italic># position</span>
+    int_y <span style=color:#666>=</span> <span style=color:#666>0</span> <span style=color:#408080;font-style:italic># integral of position</span>
+    y_dot <span style=color:#666>=</span> <span style=color:#666>30</span> <span style=color:#408080;font-style:italic># speed</span>
+    x <span style=color:#666>=</span> <span style=color:#666>3</span>
+    int_x <span style=color:#666>=</span> <span style=color:#666>0</span>
+    x_dot <span style=color:#666>=</span> <span style=color:#666>28</span>
+    
+    a_p <span style=color:#666>=</span> k_p <span style=color:#666>*</span> (y <span style=color:#666>-</span> x)
+    a_i <span style=color:#666>=</span> k_i <span style=color:#666>*</span> (int_y <span style=color:#666>-</span> int_x)
+    a_d <span style=color:#666>=</span> k_d <span style=color:#666>*</span> (y_dot <span style=color:#666>-</span> x_dot)
+    <span style=color:green;font-weight:700>if</span> noise
+        a <span style=color:#666>=</span> a_p <span style=color:#666>+</span> a_i <span style=color:#666>+</span> a_d <span style=color:#666>+</span> rand(Uniform(<span style=color:#666>-</span><span style=color:#666>0.2</span>, <span style=color:#666>0.2</span>))
+    <span style=color:green;font-weight:700>else</span>
+        a <span style=color:#666>=</span> a_p <span style=color:#666>+</span> a_i <span style=color:#666>+</span> a_d
+    <span style=color:green;font-weight:700>end</span>
+    <span style=color:green;font-weight:700>if</span> t <span style=color:#666>==</span> <span style=color:#666>0</span>
+        <span style=color:green;font-weight:700>return</span> (y, x)
+    <span style=color:green;font-weight:700>else</span>
+        <span style=color:green;font-weight:700>for</span> i <span style=color:green;font-weight:700>in</span> time_delta<span style=color:#666>:</span>time_delta<span style=color:#19177c>:t</span>
+            x_dot_prev <span style=color:#666>=</span> x_dot
+            x_dot <span style=color:#666>+=</span> a <span style=color:#666>*</span> time_delta
+            <span style=color:#408080;font-style:italic># THIS IS USING APPROXIMATION!</span>
+            x <span style=color:#666>+=</span> <span style=color:#666>0.5</span><span style=color:#666>*</span>(x_dot_prev <span style=color:#666>+</span> x_dot) <span style=color:#666>*</span> time_delta
+            int_x <span style=color:#666>+=</span> x <span style=color:#666>*</span> time_delta
+
+            <span style=color:#408080;font-style:italic># update y</span>
+            y_dot <span style=color:#666>=</span> get_y_dot(i)
+            y <span style=color:#666>+=</span> y_dot <span style=color:#666>*</span> time_delta
+            int_y <span style=color:#666>+=</span> y <span style=color:#666>*</span> time_delta
+
+            <span style=color:#408080;font-style:italic># update a_p, a_i, a_d, and a for usage at next timestamp</span>
+            a_p <span style=color:#666>=</span> k_p <span style=color:#666>*</span> (y <span style=color:#666>-</span> x)
+            a_i <span style=color:#666>=</span> k_i <span style=color:#666>*</span> (int_y <span style=color:#666>-</span> int_x)
+            a_d <span style=color:#666>=</span> k_d <span style=color:#666>*</span> (y_dot <span style=color:#666>-</span> x_dot)
+            <span style=color:green;font-weight:700>if</span> noise
+                a <span style=color:#666>=</span> a_p <span style=color:#666>+</span> a_i <span style=color:#666>+</span> a_d <span style=color:#666>+</span> rand(Uniform(<span style=color:#666>-</span><span style=color:#666>0.2</span>, <span style=color:#666>0.2</span>))
+            <span style=color:green;font-weight:700>else</span>
+                a <span style=color:#666>=</span> a_p <span style=color:#666>+</span> a_i <span style=color:#666>+</span> a_d
+            <span style=color:green;font-weight:700>end</span>
+        <span style=color:green;font-weight:700>end</span>
+        <span style=color:green;font-weight:700>return</span> (y, x)
+    <span style=color:green;font-weight:700>end</span>
+<span style=color:green;font-weight:700>end</span>
+</code></pre></div><pre><code>get_data (generic function with 5 methods)
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>ys <span style=color:#666>=</span> [get_data(i, <span style=color:#666>2</span>, <span style=color:#666>0</span>, <span style=color:#666>1</span>)[<span style=color:#666>1</span>] <span style=color:green;font-weight:700>for</span> i <span style=color:green;font-weight:700>in</span> time_span]
+xs <span style=color:#666>=</span> [get_data(i, <span style=color:#666>2</span>, <span style=color:#666>0</span>, <span style=color:#666>1</span>)[<span style=color:#666>2</span>] <span style=color:green;font-weight:700>for</span> i <span style=color:green;font-weight:700>in</span> time_span]
+</code></pre></div><pre><code>251-element Vector{Real}:
+    3
+    8.518715767262622
+   13.906232802166503
+   19.268572854391913
+   24.6096425130715
+   30.02599498962064
+   35.45927678410515
+   41.09226062787909
+   46.86326171393311
+   52.7531619121299
+   58.74007729213587
+   64.88326196481631
+   71.03580647914927
+    ⋮
+ 1233.9981479653238
+ 1240.010372398277
+ 1246.0066976688347
+ 1252.0239301638433
+ 1258.0021171428577
+ 1264.008764132957
+ 1270.021276479265
+ 1275.9923591224674
+ 1282.033955662245
+ 1288.014337231835
+ 1293.9907637632514
+ 1299.9826222077306
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>make_plot(
+    [ys, xs],
+    <span style=color:#ba2121>&#34;planned and actual&#34;</span>,
+    [<span style=color:#ba2121>&#34;planned&#34;</span> <span style=color:#ba2121>&#34;actual&#34;</span>],
+    <span style=color:#ba2121>&#34;time&#34;</span>,
+    <span style=color:#ba2121>&#34;planned and actual&#34;</span>
+)
+
+savefig(<span style=color:#ba2121>&#34;/en/blog/2023-02-28-pid_files/pid-03.png&#34;</span>)
+</code></pre></div><p><img src=/en/blog/2023-02-28-pid_files/pid-03.png alt></p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>make_plot(
+    ys<span style=color:#666>-</span>xs,
+    <span style=color:#ba2121>&#34;planned - actual&#34;</span>,
+    <span style=color:#ba2121>&#34;planned - actual&#34;</span>,
+    <span style=color:#ba2121>&#34;time&#34;</span>,
+    <span style=color:#ba2121>&#34;planned - actual&#34;</span>
+)
+
+savefig(<span style=color:#ba2121>&#34;/en/blog/2023-02-28-pid_files/pid-04.png&#34;</span>)
+</code></pre></div><p><img src=/en/blog/2023-02-28-pid_files/pid-04.png alt></p>
+<a href=https://hongtaoh.com/tags/self-driving/>#self-driving</a>
+<p style=color:#777>Last modified on 2023-02-28</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<script src=https://utteranc.es/client.js repo=hongtaoh/hongtaoh.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">
+Subscribe </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>
+License
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+Hongtao Hao
+2020-2023
+</div>
+</footer>
