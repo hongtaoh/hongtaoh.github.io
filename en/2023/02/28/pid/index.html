@@ -51,6 +51,7 @@ Table of Contents:
 <ul>
 <li><a href=#pid-for-constant-speed>PID for constant speed</a></li>
 <li><a href=#dynamic-speed-with-random-noise>Dynamic speed (with random noise)</a></li>
+<li><a href=#questions>Questions</a></li>
 </ul>
 </nav>
 </aside>
@@ -60,8 +61,8 @@ The material below is based on Professor <a href=https://directory.engr.wisc.edu
 &rsquo;s course of <em>CIV ENGR 679 Connected and Automated Transport</em>
 </div></p>
 <p><div class=reminder>
-This notebook runs on <a href=https://julialang.org/ target=_blank rel="noreferrer noopener">Julia</a>
-and rendered by <a href=https://github.com/hongtaoh/hupyter target=_blank rel="noreferrer noopener">Hupyter</a>
+This notebook runs in <a href=https://julialang.org/ target=_blank rel="noreferrer noopener">Julia</a>
+and is rendered by <a href=https://github.com/hongtaoh/hupyter target=_blank rel="noreferrer noopener">Hupyter</a>
 .
 </div></p>
 <h1 id=pid-controller>PID controller<a href=#pid-controller class=header-anchor arialabel=Anchor> # </a></h1>
@@ -341,8 +342,17 @@ savefig(<span style=color:#ba2121>&#34;/en/blog/2023-02-28-pid_files/pid-03.png&
 
 savefig(<span style=color:#ba2121>&#34;/en/blog/2023-02-28-pid_files/pid-04.png&#34;</span>)
 </code></pre></div><p><img src=/en/blog/2023-02-28-pid_files/pid-04.png alt></p>
+<h2 id=questions>Questions<a href=#questions class=header-anchor arialabel=Anchor> # </a></h2>
+<ul>
+<li>In pid, the x/y_dot, and int_y/x is using approximation, can we get the exact form?</li>
+</ul>
+<p>It&rsquo;s very difficult to get the analytical form.</p>
+<ul>
+<li>How to get the optimal value</li>
+</ul>
+<p>It&rsquo;s also very difficult. It involves non-linear programming.</p>
 <a href=https://hongtaoh.com/tags/self-driving/>#self-driving</a>
-<p style=color:#777>Last modified on 2023-02-28</p>
+<p style=color:#777>Last modified on 2023-03-02</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>
