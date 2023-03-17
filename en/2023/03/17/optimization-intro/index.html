@@ -1,0 +1,140 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/>Home</a></li>
+<li><a href=/en/projects/>Projects</a></li>
+<li><a href=/en/research/>Research</a></li>
+<li><a href=/en/blog/>Blog</a></li>
+<li><a href=/cn/blog/>中文</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>Optimization: Introduction (TopBrass)</h1>
+<p>Hongtao Hao
+/ 2023-03-17 </p>
+<hr>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2023-03-17-topbrass.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
+</a>
+</span>
+<div class="body-text list-text">
+<p><div class=note>
+<strong>Images in this posst came from the slides of <a href=https://laurentlessard.com/teaching/524-intro-to-optimization/ target=_blank rel="noreferrer noopener">CS524 at UW-Madison</a>
+, 2023Spring</strong>
+</div></p>
+<p><div class=reminder>
+This notebook runs in <a href=https://julialang.org/ target=_blank rel="noreferrer noopener">Julia</a>
+and is rendered by <a href=https://github.com/hongtaoh/hupyter target=_blank rel="noreferrer noopener">Hupyter</a>
+.
+</div></p>
+<p>This post introduces basic linear optimizaiton through the example of TopBrass.</p>
+<h1 id=topbrass>TopBrass<a href=#topbrass class=header-anchor arialabel=Anchor> # </a></h1>
+<p>Top Brass Trophy Company makes large championship trophies for youth athletic leagues. At the moment, they are planning production for fall sports: football and soccer.
+Each football trophy has a wood base, an engraved plaque, a large brass football on top, and returns 12 USD in profit.</p>
+<p>Soccer trophies are similar except that a brass soccer ball is on top, and the unit profit is 9 USD.</p>
+<p>Since the football has an asymmetric shape, its base requires 4 board feet of wood; the soccer base requires only 2 board feet.</p>
+<p>There are 1000 brass footballs in stock, 1500 soccer balls, 1750 plaques, and 4800 board feet of wood. What trophies should be produced from these supplies to maximize total profit assuming that all that are made can be sold?</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia><span style=color:green;font-weight:700>using</span> HiGHS, JuMP
+</code></pre></div><p><img src=/en/blog/2023-03-17-topbrass_files/pic1.png alt></p>
+<p><img src=/en/blog/2023-03-17-topbrass_files/pic2.png alt></p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>m <span style=color:#666>=</span> Model(HiGHS<span style=color:#666>.</span>Optimizer)
+
+<span style=color:#a2f>@variable</span>(m, <span style=color:#666>0</span><span style=color:#666>&lt;=</span> f <span style=color:#666>&lt;=</span> <span style=color:#666>1000</span>)
+<span style=color:#a2f>@variable</span>(m, <span style=color:#666>0</span><span style=color:#666>&lt;=</span> s <span style=color:#666>&lt;=</span> <span style=color:#666>1500</span>)
+<span style=color:#a2f>@objective</span>(m, Max, <span style=color:#666>12</span><span style=color:#666>*</span>f <span style=color:#666>+</span> <span style=color:#666>9</span><span style=color:#666>*</span>s)
+<span style=color:#a2f>@constraint</span>(m, <span style=color:#666>4</span><span style=color:#666>*</span>f <span style=color:#666>+</span> <span style=color:#666>2</span><span style=color:#666>*</span>s <span style=color:#666>&lt;=</span> <span style=color:#666>4800</span>) <span style=color:#408080;font-style:italic># board feet of wood</span>
+<span style=color:#a2f>@constraint</span>(m, f <span style=color:#666>+</span> s <span style=color:#666>&lt;=</span> <span style=color:#666>1750</span>)
+</code></pre></div><p><code>$$ f + s \leq 1750.0 $$</code></p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>print(m)
+</code></pre></div><p><code>$$ \begin{aligned} \max\quad & 12 f + 9 s\\ \text{Subject to} \quad & 4 f + 2 s \leq 4800.0\\ & f + s \leq 1750.0\\ & f \geq 0.0\\ & s \geq 0.0\\ & f \leq 1000.0\\ & s \leq 1500.0\\ \end{aligned} $$</code></p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>println(m)
+</code></pre></div><pre><code>Max 12 f + 9 s
+Subject to
+ 4 f + 2 s ≤ 4800.0
+ f + s ≤ 1750.0
+ f ≥ 0.0
+ s ≥ 0.0
+ f ≤ 1000.0
+ s ≤ 1500.0
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>optimize!(m)
+</code></pre></div><pre><code>Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
+Copyright (c) 2022 ERGO-Code under MIT licence terms
+Presolving model
+2 rows, 2 cols, 4 nonzeros
+2 rows, 2 cols, 4 nonzeros
+Presolve : Reductions: rows 2(-0); columns 2(-0); elements 4(-0) - Not reduced
+Problem not reduced by presolve: solving the LP
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+          0     0.0000000000e+00 Ph1: 0(0) 0s
+          2     1.7700000000e+04 Pr: 0(0) 0s
+Model   status      : Optimal
+Simplex   iterations: 2
+Objective value     :  1.7700000000e+04
+HiGHS run time      :          0.02
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>println(<span style=color:#ba2121>&#34;The total number of football trophies is &#34;</span>, value(f))
+println(<span style=color:#ba2121>&#34;The total number of soccer trophies is &#34;</span>, value(s))
+println(<span style=color:#ba2121>&#34;The highest possible profit is \`$&#34;</span>, objective_value(m))
+</code></pre></div><pre><code>The total number of football trophies is 650.0
+The total number of soccer trophies is 1100.0
+The highest possible profit is $`17700.0
+</code></pre>
+<h2 id=geometry-meaning>Geometry meaning<a href=#geometry-meaning class=header-anchor arialabel=Anchor> # </a></h2>
+<p><img src=/en/blog/2023-03-17-topbrass_files/pic3.png alt></p>
+<a href=https://hongtaoh.com/tags/optimization/>#Optimization</a>
+<p style=color:#777>Last modified on 2023-03-17</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<script src=https://utteranc.es/client.js repo=hongtaoh/hongtaoh.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">
+Subscribe </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>
+License
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+Hongtao Hao
+2020-2023
+</div>
+</footer>

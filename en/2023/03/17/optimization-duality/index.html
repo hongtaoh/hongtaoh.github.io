@@ -1,0 +1,230 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/>Home</a></li>
+<li><a href=/en/projects/>Projects</a></li>
+<li><a href=/en/research/>Research</a></li>
+<li><a href=/en/blog/>Blog</a></li>
+<li><a href=/cn/blog/>中文</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>Optimization Duality Explained</h1>
+<p>Hongtao Hao
+/ 2023-03-17 </p>
+<hr>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2023-03-17-duality.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
+</a>
+</span>
+<div class="body-text list-text">
+<p><div class=note>
+Images in this posst came from the slides of <a href=https://laurentlessard.com/teaching/524-intro-to-optimization/ target=_blank rel="noreferrer noopener">CS524 at UW-Madison</a>
+, 2023Spring
+</div></p>
+<p><div class=reminder>
+This notebook runs in <a href=https://julialang.org/ target=_blank rel="noreferrer noopener">Julia</a>
+and is rendered by <a href=https://github.com/hongtaoh/hupyter target=_blank rel="noreferrer noopener">Hupyter</a>
+.
+</div></p>
+<h1 id=topbrass-revisited>TopBrass Revisited<a href=#topbrass-revisited class=header-anchor arialabel=Anchor> # </a></h1>
+<p>Back to the TopBrass problem:</p>
+<blockquote>
+<p>Top Brass Trophy Company makes large championship trophies for youth athletic leagues. At the moment, they are planning production for fall sports: football and soccer.
+Each football trophy has a wood base, an engraved plaque, a large brass football on top, and returns 12 USD in profit.</p>
+</blockquote>
+<blockquote>
+<p>Soccer trophies are similar except that a brass soccer ball is on top, and the unit profit is 9 USD.</p>
+</blockquote>
+<blockquote>
+<p>Since the football has an asymmetric shape, its base requires 4 board feet of wood; the soccer base requires only 2 board feet.</p>
+</blockquote>
+<blockquote>
+<p>There are 1000 brass footballs in stock, 1500 soccer balls, 1750 plaques, and 4800 board feet of wood. What trophies should be produced from these supplies to maximize total profit assuming that all that are made can be sold?</p>
+</blockquote>
+<p>This translates into the following optimization problem:</p>
+<pre tabindex=0><code>Max 12 f + 9 s
+Subject to
+ 4 f + 2 s ≤ 4800.0
+ f + s ≤ 1750.0
+ f ≥ 0.0
+ s ≥ 0.0
+ f ≤ 1000.0
+ s ≤ 1500.0
+</code></pre><p>What we want to do is to find the upper bound of <code>$12f + 9s$</code>. Given that <code>$f \le 1000$</code> and <code>$s \le 1500$</code>, we know that</p>
+<p><code>$$12f + 9s \le 12\cdot 1000 + 9\cdot 1500 = 25500$$</code></p>
+<p>But this is not the best upper bound. We can improve it:</p>
+<p><code>$$12f + 9s \le f + (4f + 2s) + 7 \cdot (f + s) \le 1000 + 4800 + 1750 \cdot 7 = 18050$$</code></p>
+<p>Again, it is not the best upper bound, and we can keep improving it. From <code>$f + s ≤ 1750$</code>, we know</p>
+<p><code>$$12f + 9s \le 12f + 12s \le 1750\times 9 = 15750$$</code></p>
+<p>Is this the optimal upper bound? Definitly not. But you get the idea that if we have <code>$\lambda_1$</code>, <code>$\lambda_2$</code>, <code>$\lambda_3$</code>, <code>$\lambda_4 \ge 0$</code>, then by choosing the best possible values of them, we can have the optimal upper bound for <code>$12f + 9s$</code>:</p>
+<p><code>$$12f + 9s \le \lambda_1(4f + 2s) + \lambda_2 (f + s) + \lambda_3 f + \lambda_4 s$$</code></p>
+<p>Based on the constraints we have, we know:</p>
+<p><code>$$12f + 9s \le 4800\lambda_1 + 1750 \lambda_2 + 1000 \lambda_3 + 1500 \lambda_4$$</code></p>
+<p>What we want is the lower bound of <code>$4800\lambda_1 + 1750 \lambda_2 + 1000 \lambda_3 + 1500 \lambda_4$</code>, i.e., <strong>we want to minimize it</strong>.</p>
+<p>Then, what are the new contraints?</p>
+<p>Based on</p>
+<p><code>$$12f + 9s \le \lambda_1(4f + 2s) + \lambda_2 (f + s) + \lambda_3 f + \lambda_4 s$$</code></p>
+<p>we know</p>
+<p><code>$$0 \le (4\lambda_1 + \lambda_2 + \lambda_3 - 12)f + (2\lambda_1 + \lambda_2 + \lambda_4 - 9)s$$</code></p>
+<p>We also know that both <code>$f$</code> and <code>$s$</code> are larger than or equal to <code>$0$</code>, but we do not know which one (<code>$f$</code> or <code>$s$</code>) is larger. Therefore, to make sure <code>$0 \le (4\lambda_1 + \lambda_2 + \lambda_3 - 12)f + (2\lambda_1 + \lambda_2 + \lambda_4 - 9)s$</code>, we can ensure that</p>
+<p><code>$$4\lambda_1 + \lambda_2 + \lambda_3 - 12 \ge 0$$</code></p>
+<p>and</p>
+<p><code>$$2\lambda_1 + \lambda_2 + \lambda_4 - 9 \ge 0$$</code></p>
+<p>Therefore, the original optimization problem is converted to:</p>
+<p>Minimize <code>$4800\lambda_1 + 1750 \lambda_2 + 1000 \lambda_3 + 1500 \lambda_4$</code></p>
+<p>Subject to:</p>
+<ul>
+<li><code>$4\lambda_1 + \lambda_2 + \lambda_3 \ge 12$</code></li>
+<li><code>$2\lambda_1 + \lambda_2 + \lambda_4 \ge 9$</code></li>
+<li><code>$\lambda_1$</code>, <code>$\lambda_2$</code>, <code>$\lambda_3$</code>, <code>$\lambda_4 \ge 0$</code></li>
+</ul>
+<p><img src=/en/blog/2023-03-17-duality_files/dual.png alt></p>
+<h1 id=using-matrix>Using matrix:<a href=#using-matrix class=header-anchor arialabel=Anchor> # </a></h1>
+<h2 id=primal-problem>Primal problem<a href=#primal-problem class=header-anchor arialabel=Anchor> # </a></h2>
+<p><code>$$ \begin{align*} \underset{f,s}{\text{maximize}}\qquad& \begin{bmatrix} 12 \\ 9 \end{bmatrix}^{T} \begin{bmatrix} f \\ s \end{bmatrix}\\ \text{subject to:}\qquad& \begin{bmatrix} 4 & 2 \\ 1 & 1 \\ 1 & 0 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} f \\ s \end{bmatrix} \le \begin{bmatrix} 4800 \\ 1750 \\ 1000 \\ 1500 \end{bmatrix}\\ & f, s \ge 0 \end{align*} $$</code></p>
+<h2 id=dual-problem>Dual problem<a href=#dual-problem class=header-anchor arialabel=Anchor> # </a></h2>
+<p><code>$$ \begin{align*} \underset{\lambda_1, \lambda_2, \lambda_3, \lambda_4}{\text{minimize}}\qquad& \begin{bmatrix} 4800 \\ 1750 \\ 1000 \\ 1500 \end{bmatrix}^{T} \begin{bmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \\ \lambda_4 \end{bmatrix}\\ \text{subject to:}\qquad& \begin{bmatrix} 4 & 1 & 1 & 0 \\ 2 & 1 & 0 & 1 \end{bmatrix} \begin{bmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \\ \lambda_4 \end{bmatrix} \ge \begin{bmatrix} 12 \\ 9 \end{bmatrix}\\ & \lambda_1, \lambda_2, \lambda_3, \lambda_4 \ge 0 \end{align*} $$</code></p>
+<h2 id=general-form>General form:<a href=#general-form class=header-anchor arialabel=Anchor> # </a></h2>
+<p><img src=/en/blog/2023-03-17-duality_files/dual-general.png alt></p>
+<h2 id=implementation>Implementation<a href=#implementation class=header-anchor arialabel=Anchor> # </a></h2>
+<h3 id=primal-problem-1>Primal problem<a href=#primal-problem-1 class=header-anchor arialabel=Anchor> # </a></h3>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia><span style=color:green;font-weight:700>using</span> HiGHS, JuMP
+
+m <span style=color:#666>=</span> Model(HiGHS<span style=color:#666>.</span>Optimizer)
+
+<span style=color:#a2f>@variable</span>(m, <span style=color:#666>0</span><span style=color:#666>&lt;=</span> f <span style=color:#666>&lt;=</span> <span style=color:#666>1000</span>)
+<span style=color:#a2f>@variable</span>(m, <span style=color:#666>0</span><span style=color:#666>&lt;=</span> s <span style=color:#666>&lt;=</span> <span style=color:#666>1500</span>)
+<span style=color:#a2f>@objective</span>(m, Max, <span style=color:#666>12</span><span style=color:#666>*</span>f <span style=color:#666>+</span> <span style=color:#666>9</span><span style=color:#666>*</span>s)
+<span style=color:#a2f>@constraint</span>(m, <span style=color:#666>4</span><span style=color:#666>*</span>f <span style=color:#666>+</span> <span style=color:#666>2</span><span style=color:#666>*</span>s <span style=color:#666>&lt;=</span> <span style=color:#666>4800</span>) <span style=color:#408080;font-style:italic># board feet of wood</span>
+<span style=color:#a2f>@constraint</span>(m, f <span style=color:#666>+</span> s <span style=color:#666>&lt;=</span> <span style=color:#666>1750</span>)
+
+optimize!(m)
+
+println(<span style=color:#ba2121>&#34;--------------------------------------------&#34;</span>)
+
+println(<span style=color:#ba2121>&#34;The total number of football trophies is &#34;</span>, <span style=color:#b00040>Int</span>(value(f)))
+println(<span style=color:#ba2121>&#34;The total number of soccer trophies is &#34;</span>, <span style=color:#b00040>Int</span>(value(s)))
+println(<span style=color:#ba2121>&#34;The highest possible profit is \`$&#34;</span>, objective_value(m))
+</code></pre></div><pre><code>Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
+Copyright (c) 2022 ERGO-Code under MIT licence terms
+Presolving model
+2 rows, 2 cols, 4 nonzeros
+2 rows, 2 cols, 4 nonzeros
+Presolve : Reductions: rows 2(-0); columns 2(-0); elements 4(-0) - Not reduced
+Problem not reduced by presolve: solving the LP
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+          0     0.0000000000e+00 Ph1: 0(0) 0s
+          2     1.7700000000e+04 Pr: 0(0) 0s
+Model   status      : Optimal
+Simplex   iterations: 2
+Objective value     :  1.7700000000e+04
+HiGHS run time      :          0.00
+--------------------------------------------
+The total number of football trophies is 650
+The total number of soccer trophies is 1100
+The highest possible profit is $`17700.0
+</code></pre>
+<h3 id=dual-problem-1>Dual problem<a href=#dual-problem-1 class=header-anchor arialabel=Anchor> # </a></h3>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>m <span style=color:#666>=</span> Model(HiGHS<span style=color:#666>.</span>Optimizer)
+vectorB <span style=color:#666>=</span> [<span style=color:#666>4800</span>, <span style=color:#666>1750</span>, <span style=color:#666>1000</span>, <span style=color:#666>1500</span>]
+vectorA <span style=color:#666>=</span> [<span style=color:#666>4</span> <span style=color:#666>2</span> ; <span style=color:#666>1</span> <span style=color:#666>1</span>; <span style=color:#666>1</span> <span style=color:#666>0</span>; <span style=color:#666>0</span> <span style=color:#666>1</span>]
+vectorC <span style=color:#666>=</span> [<span style=color:#666>12</span>, <span style=color:#666>9</span>]
+
+<span style=color:#a2f>@variable</span>(m, λ[<span style=color:#666>1</span><span style=color:#666>:</span><span style=color:#666>4</span>] <span style=color:#666>&gt;=</span> <span style=color:#666>0</span>)
+<span style=color:#a2f>@objective</span>(m, Min, vectorB<span style=color:#666>&#39;*</span>λ)
+<span style=color:#a2f>@constraint</span>(m, vectorA<span style=color:#666>&#39;*</span>λ <span style=color:#666>.&gt;=</span> vectorC)
+optimize!(m)
+
+println(<span style=color:#ba2121>&#34;--------------------------------------------&#34;</span>)
+println(<span style=color:#ba2121>&#34;Obective \`$&#34;</span>, objective_value(m))
+println(<span style=color:#ba2121>&#34;λ: &#34;</span>, value<span style=color:#666>.</span>(λ))
+</code></pre></div><pre><code>Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
+Copyright (c) 2022 ERGO-Code under MIT licence terms
+Presolving model
+2 rows, 4 cols, 6 nonzeros
+2 rows, 4 cols, 6 nonzeros
+Presolve : Reductions: rows 2(-0); columns 4(-0); elements 6(-0) - Not reduced
+Problem not reduced by presolve: solving the LP
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+          0     0.0000000000e+00 Pr: 2(21) 0s
+          3     1.7700000000e+04 Pr: 0(0) 0s
+Model   status      : Optimal
+Simplex   iterations: 3
+Objective value     :  1.7700000000e+04
+HiGHS run time      :          0.00
+--------------------------------------------
+Obective $`17700.0
+λ: [1.5, 6.0, 0.0, 0.0]
+</code></pre>
+<h1 id=sensitivity>Sensitivity<a href=#sensitivity class=header-anchor arialabel=Anchor> # </a></h1>
+<p>The dual has practical meanings. First, in our above example, the two problems have strong duality. That is to say, the maximum of <code>$12f + 9s$</code> is equal to the minimum of <code>$4800\lambda_1 + 1750 \lambda_2 + 1000 \lambda_3 + 1500 \lambda_4$</code>.</p>
+<p>Both can be regarded as the total profits. Then, what <code>$\lambda_1$</code> mean here? Since the units is USD, and we have 4800 board feet of wood, <code>$\lambda_1$</code> here indicates the price that wood is worth. It is called <strong>shadow price.</strong></p>
+<p>Through the results of the dual problem, we know <code>$\lambda_1 = 1.5$</code>. That means that each board feet of wood is worth 1.5 USD.</p>
+<p>What if someone now is selling wood at 1 dollar per board feet. Is that a good offer? Of course! You see, if we buy 400 feet of wood at that price, which cose 400 Dollars. What will be the increase in the profits?</p>
+<p>Because the solution to the primal is the same as that to the dual, then we know the total profits are still</p>
+<p><code>$$4800\lambda_1 + 1750 \lambda_2 + 1000 \lambda_3 + 1500 \lambda_4$$</code></p>
+<p>But since we have 400 more feet of wood, the profits would be</p>
+<p><code>$(4800 + 400)\lambda_1 + 1750 \lambda_2 + 1000 \lambda_3 + 1500 \lambda_4$</code></p>
+<p>And because <code>$\lambda_1 = 1.5$</code>, so the profits will go up by 600! It&rsquo;s a good deal, isn&rsquo;t it?</p>
+<h1 id=complementary-slackness>Complementary Slackness<a href=#complementary-slackness class=header-anchor arialabel=Anchor> # </a></h1>
+<p>In the solution to the dual problem, we noticed that</p>
+<pre tabindex=0><code>λ: [1.5, 6.0, 0.0, 0.0]
+</code></pre><p>We say that the contraints for wood and plague are becoming <em>tight</em> because <code>$\lambda_1$</code> and <code>$\lambda_2$</code> are non-zero. We say that the contraints for brass football and soccer ball have <em>slack</em>, because <code>$\lambda_3$</code> and <code>$\lambda_4$</code> are zero.</p>
+<a href=https://hongtaoh.com/tags/optimization/>#Optimization</a>
+<p style=color:#777>Last modified on 2023-03-17</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<script src=https://utteranc.es/client.js repo=hongtaoh/hongtaoh.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">
+Subscribe </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>
+License
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+Hongtao Hao
+2020-2023
+</div>
+</footer>

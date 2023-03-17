@@ -20,11 +20,11 @@ SOP 和 PS (Personal Statement) 的区别：如果一个学校只让交一个，
 斯坦福大学的徐轶青老师 分享的 如何申请北美社科类博士项目？ 也许也会有帮助。
 金吉 拉着我做了几期视频 放在了 B 站上。
 对于硕、博士申请者，我强烈建议你建一个网站 ，并将其放到你的简历里。
+我提供收费的 SOP 修改服务，一篇 SOP 600 人民币，修改到我们都觉得比较满意为止。如果多篇 SOP 内容差不多，从第二篇开始每篇多加 150 元。
 目标陈述，statement of purpose (sop): 1)一句话总结你想研究什么； 2）用1-2个段落概述一下你之前都做过什么。 3）用1-3个段落说明你博士期间想做什么； 4）1个段落说明你为什么已经为博士期间的科研计划做了准备，比如你上过的课、做过的项目、学过的技能，独特的背景，等等。这个段落的目的是为了说明“为什么上面提到的计划必须由我来做” 5）1个段落说明为什么“为什么上面提到的计划必须在你们学校完成”。 6）这个是非必须的：一个段落说明你未来的的职业计划 参考：我申请威斯康星计算机方向博士项目的目标陈述 。这份 SOP 我是用 RMarkdown 做的，你可以看我的源代码 。
 我申请 UC Davis Communication 的目标陈述在这里 。戴维斯录取我了，不过没去。
 另外，我申请 Upenn Annenberg 的 SOP 和源代码 你也可以参考，不过 Upenn 并没有要我。
-简历 CV: cv_emulate 。最好用 Latex 。最简单的方法是用 Overleaf . 我申请时用的简历：
-PDF , 源代码 PDF , 源代码 把源代码那几个文件一股脑上传到一个 Overleaf 项目，应该就能导出一摸一样的 PDF。需要注意的是，第二个你需要用 LuaLaTeX 编译器。在 overleaf 上，点击 menu，然后在 compiler 中选择 LuaLaTeX。</description></item><item><title>我在美国读传播学硕士的两年</title><link>https://hongtaoh.com/cn/2021/06/15/2y/</link><pubDate>Tue, 15 Jun 2021 10:42:58 -0400</pubDate><guid>https://hongtaoh.com/cn/2021/06/15/2y/</guid><description>如果你的名字出现在我的回忆中，但是想去除，请邮件联系我。如果侵扰到你的隐私，我感到很抱歉。
+简历 CV: cv_emulate 。最好用 Latex 。最简单的方法是用 Overleaf .</description></item><item><title>我在美国读传播学硕士的两年</title><link>https://hongtaoh.com/cn/2021/06/15/2y/</link><pubDate>Tue, 15 Jun 2021 10:42:58 -0400</pubDate><guid>https://hongtaoh.com/cn/2021/06/15/2y/</guid><description>如果你的名字出现在我的回忆中，但是想去除，请邮件联系我。如果侵扰到你的隐私，我感到很抱歉。
 If you find your name in this post and you want it to be removed, please contact me via email. I am deeply sorry for this inconvenience.
 如果你正好在 IU 读书，我非常推荐下面三门课：
 Yong-Yeol Ahn 老师开的 INFO-I590 Data Visualization 和 Network Science。
