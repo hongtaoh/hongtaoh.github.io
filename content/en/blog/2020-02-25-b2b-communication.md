@@ -6,7 +6,7 @@ author: Hongtao Hao
 toc: true
 ---
 
-{{<figure src="/media/b2b.png" title=" A conceptual description of how b2b communication works, image source from the internet; adapted by Hongtao Hao" width="700">}}
+{{<figure src="/media/b2b.png" title=" A conceptual description of how b2b communication works, images from the internet; adapted by Hongtao Hao" width="700">}}
 
 ## Where Does Brain-to-brain Communication Come From?
 “The Internet of Things” (IoT) captures people’s imagination. Experts envision that things in the future would be interconnected and freely share information with each other. For example, a car, through sensors, would be connected with tunnels and bridges it passes through and all other vehicles. Based on IoT technology and big data, an intelligent transportation system (ITS) could be built which promotes safety, efficiency, and conveniences[^1]. Thanks to IoT technology, someday our watches, TV sets, refrigerators, outfits and even our food would be equipped with sensors so that information can freely flow.
@@ -26,7 +26,7 @@ However, with science and technology advancing, it is possible that humans could
 ## Where Does B2B Communication Lead Us
 
 ### Speechless human communication
-The first change this brain-to-brain communication brings about might be that we will never use your phones, smart as they are, at least not for texting and calling. The intricate EEG helmets or caps in use this day would someday be reduced to a tiny wireless EEG chip attached to one’s head that could detect and encode brain waves. Receivers, wearing TMS coil (transcranial magnetic stimulation coil, which stimulates small regions of the brain) then decode the processed digital signals. Every wireless EEG chip and every reduced-and-improved TMS coil would have its own ID number or address code. When you want to ‘text’ or ‘dial’ someone, just start thinking about it and your thoughts then would be injected to another person’s mind. Words like ‘Can we need dinner together tonight?’, ‘when are you come home this evening?’ and ‘I would be late for ten minutes because of the traffic’ could be easily exchanged in a brain-to-brain communication system.
+The first change this brain-to-brain communication brings about might be that we will never use your phones, smart as they are, at least not for texting and calling. The intricate EEG helmets or caps in use this day would someday be reduced to a tiny wireless EEG chip attached to one’s head that could detect and encode brain waves. Receivers, wearing TMS coil (transcranial magnetic stimulation coil, which stimulates small regions of the brain) then decode the processed digital signals. Every wireless EEG chip and every reduced-and-improved TMS coil would have its own ID number or address code. When you want to ‘text’ or ‘dial’ someone, just start thinking about it and your thoughts then would be injected to another person’s mind. Words like ‘Can we have dinner together tonight?’, ‘when are you come home this evening?’ and ‘I would be late for ten minutes because of the traffic’ could be easily exchanged in a brain-to-brain communication system.
 
 
 ### Diminishing importance of languages
