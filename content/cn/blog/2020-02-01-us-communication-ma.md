@@ -79,8 +79,6 @@ aliases:
 
 - 阿拉巴马大学 (University of Alabama, [College of Communication & Information Sciences](https://cis.ua.edu/masters-programs/)，有五个不同的硕士项目，Comm Studies 那个貌似可以给助教全奖，其他方向好像只有一部分学生有全奖。具体情况请自己问。)
 
-- 印第安纳大学(Indiana University, [The Media School](https://mediaschool.indiana.edu/)，M.A. 和 M.S. 大部分都会给助教全奖，但有一些只是给一次性的资助或者干脆什么都不给)
-
 - 犹他大学 (University of Utah, Department of Communication)
 
 - 马凯特大学 (Marquette University, Diederich College of Communication)
@@ -130,6 +128,8 @@ aliases:
 ## 我不是十分确定的项目
 
 以下是一些可能会给全奖，但是我不是 100% 确定的项目，请自行确认：
+
+- 印第安纳大学(Indiana University, [The Media School](https://mediaschool.indiana.edu/)
 
 - 雪城大学 (Syracuse University, [Newhouse School of Public Communications](https://newhouse.syr.edu/), [media studies 硕士项目](https://newhouse.syr.edu/academics/media-studies/masters/)有关[funding 的介绍](https://newhouse.syr.edu/academics/media-studies/funding/)中提到也许会有 instructional associateships 和 research assistanships。)
 
