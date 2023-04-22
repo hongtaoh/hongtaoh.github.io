@@ -26,6 +26,7 @@ aliases:
 
 - [张晶](https://kristenjz.github.io/)
 - [毛月](https://ashleygua.github.io/)
+- [崔頔](https://cuidi1996.github.io/about/)
 
 {{<end>}}
 
