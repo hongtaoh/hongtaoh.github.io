@@ -183,7 +183,7 @@ And we suspect that they are related by a fourth-degree polynomial `$y = u_1x^4 
 
 
 ```julia
-using Plots, Gurobi, JuMP
+using Plots, Gurobi, JuMP, Polynomials
 ```
 
 
@@ -355,3 +355,38 @@ savefig("/en/blog/2023-03-22-least-square_files/least-squares-02.png")
 ```
 
 ![](/en/blog/2023-03-22-least-square_files/least-squares-02.png)
+
+When polynomials have much higher orders, it is best to use the `Polynomials` package rather than writting it manually like `f(x) = u[1]*x^4 + u[2]*x^3 + u[3]*x^2 + u[4]*x + u[5]`. In `Polynomials`, the power order increases, i.e., `f(x) = u[1]x + u[2]x^2 + u[3]x^3 ...`, so we need to reverse the order of `u`:
+
+
+```julia
+p = Polynomial(reverse(u))
+```
+
+
+
+
+4.3206730769230814 &#45; 3.3515882584477747&#8729;x &#43; 0.9697320046439619&#8729;x<sup>2</sup> &#45; 0.08461679037336926&#8729;x<sup>3</sup> &#43; 0.002320865086925458&#8729;x<sup>4</sup>
+
+
+
+
+```julia
+ys = p.(xs)
+Plots.scatter(x, y,
+    label="",
+    xlabel="x",
+    ylabel="y"
+)
+
+# note it is is (xs, ys) rather than (xs, p)
+Plots.plot!(xs, ys,
+    linecolor = "green",
+    linewidth = 2,
+    label = "fourth-degree polynomial fit line"
+)
+
+savefig("/en/blog/2023-03-22-least-square_files/least-squares-03.png")
+```
+
+![](/en/blog/2023-03-22-least-square_files/least-squares-03.png)
