@@ -276,7 +276,7 @@ plt.show()
 
 ![](/cn/blog/2023-03-28-logistic-regression_files/lr1.png)
 
-数字除以 255 就是我们想要的样子（虽然纬度不同)。
+数字除以 255 就是我们想要的样子（虽然维度不同)。
 
 上图[来源](https://observablehq.com/d/01f7c541e3f547f2)
 
