@@ -9,3 +9,5 @@ python hupyter.py notebooks/2023-03-17-topbrass.ipynb en/blog
 python hupyter.py notebooks/2023-03-22-least-square.ipynb en/blog
 
 python hupyter.py notebooks/2023-03-22-standard-form.ipynb en/blog
+
+python hupyter.py notebooks/2023-03-28-logistic-regression.ipynb cn/blog
