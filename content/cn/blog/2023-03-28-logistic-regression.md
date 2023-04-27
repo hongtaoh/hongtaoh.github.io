@@ -377,7 +377,7 @@ np.log(0.1)
 
 根据微积分运算法则，我们知道：
 
-`$$\frac{\partial L}{\partial w} = \frac{a - y}{a (1-a)}$$`
+`$$\frac{\partial L}{\partial a} = \frac{a - y}{a (1-a)}$$`
 
 (如果上面这个你不知道是为啥，请看[这里](/en/2022/11/28/log-derivative/))。
 
