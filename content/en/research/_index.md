@@ -15,7 +15,7 @@ type : nolisting
 
 **Thirty-Two Years of IEEE VIS: Authors, Fields of Study and Citations**. [Hongtao Hao](/), [Yumian Cui](https://yumian-cui.github.io/), [Zhengxiang Wang](https://jaaack-wang.eu.org/), [Yea-Seul Kim](https://pages.cs.wisc.edu/~yeaseulkim/). *IEEE transactions on visualization and computer graphics*, 2022
 
-[PDF](https://arxiv.org/pdf/2208.03772.pdf) | [Code](https://github.com/hongtaoh/32vis) | [Data](https://osf.io/zkvjm/) | [Website](https://32vis.hongtaoh.com/) | [Videos](/en/2023/04/27/vis-videos/)
+[PDF](https://arxiv.org/pdf/2208.03772.pdf) | [Code](https://github.com/hongtaoh/32vis) | [Data](https://osf.io/zkvjm/) | [Website](https://32vis.hongtaoh.com/) | [Videos](/en/2023/04/27/vis-videos/) | [Slides](/files/vis-pre.pdf)
 
 {{< endcolumn >}}
 
