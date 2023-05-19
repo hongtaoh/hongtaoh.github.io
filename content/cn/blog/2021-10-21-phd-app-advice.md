@@ -23,9 +23,9 @@ tags: 留学
 对于硕、博士申请者，我强烈建议你[建一个网站](/cn/2021/06/17/homepage/)，并将其放到你的简历里。
 {{<end>}}
 
-{{<block class="reminder">}}
+<!-- {{<block class="reminder">}}
 我提供收费的 SOP 修改服务，一篇 SOP 600 人民币，修改到我们都觉得比较满意为止。如果多篇 SOP 内容差不多，从第二篇开始每篇多加 150 元。
-{{<end>}}
+{{<end>}} -->
 
 1. 目标陈述，statement of purpose (sop): 
 
