@@ -1,0 +1,158 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/>Home</a></li>
+<li><a href=/en/projects/>Projects</a></li>
+<li><a href=/en/research/>Research</a></li>
+<li><a href=/en/blog/>Blog</a></li>
+<li><a href=/cn/blog/>中文</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>Controlled and Uncontrolled Form in React</h1>
+<p>Hongtao Hao
+/ 2023-06-10 </p>
+<hr>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2023-06-10-react-form.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
+</a>
+</span>
+<div class="body-text list-text">
+<p>There are two ways to create a form in React. One is controlled and the other is uncontrolled. The basic idea behind the controlled method is to use <code>useState</code> and <code>onChange</code> whereas uncontrolled method use <code>useRef</code>.</p>
+<h2 id=controlled>Controlled<a href=#controlled class=header-anchor arialabel=Anchor> # </a></h2>
+<p>Note that the following codes are just prototypes.</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:green;font-weight:700>import</span> React, { useState } from <span style=color:#ba2121>&#39;react&#39;</span>;
+<span style=color:green;font-weight:700>import</span> { Form, Button } from <span style=color:#ba2121>&#39;react-bootstrap&#39;</span>;
+
+<span style=color:green;font-weight:700>export</span> <span style=color:green;font-weight:700>default</span> <span style=color:green;font-weight:700>function</span> controlledForm() {
+	<span style=color:green;font-weight:700>const</span> [username, setUsername] <span style=color:#666>=</span> useState(<span style=color:#ba2121>&#34;&#34;</span>);
+	<span style=color:green;font-weight:700>const</span> [password, setPassword] <span style=color:#666>=</span> useState(<span style=color:#ba2121>&#34;&#34;</span>);
+
+	<span style=color:green;font-weight:700>const</span> handleClick <span style=color:#666>=</span> (e) =&gt; {
+		e.preventDefault();
+		fetch(<span style=color:#ba2121>&#34;https://yoururl.com/api/login&#34;</span>, {
+			method<span style=color:#666>:</span> <span style=color:#ba2121>&#34;POST&#34;</span>,
+			headers<span style=color:#666>:</span> {
+				<span style=color:#ba2121>&#34;Content-Type&#34;</span><span style=color:#666>:</span> <span style=color:#ba2121>&#34;application/json&#34;</span>
+			},
+			credentials<span style=color:#666>:</span> <span style=color:#ba2121>&#34;include&#34;</span>,
+			body<span style=color:#666>:</span> JSON.stringify({
+				<span style=color:#ba2121>&#34;username&#34;</span><span style=color:#666>:</span> username,
+				<span style=color:#ba2121>&#34;password&#34;</span><span style=color:#666>:</span> password
+			})
+		}).then(res =&gt; {
+			<span style=color:green;font-weight:700>if</span> (res.status <span style=color:#666>===</span> <span style=color:#666>200</span>) {
+				alert(<span style=color:#ba2121>&#34;Successfully logged in!&#34;</span>)
+			}
+			<span style=color:green;font-weight:700>return</span> res.json()
+		})
+	}
+
+	<span style=color:green;font-weight:700>return</span> <span style=color:#666>&lt;&gt;</span>
+	<span style=color:#666>&lt;</span>Form<span style=color:#666>&gt;</span>
+		<span style=color:#666>&lt;</span>Form.Label html<span style=color:#666>=</span><span style=color:#ba2121>&#34;username&#34;</span><span style=color:#666>&gt;</span>Username<span style=color:#666>&lt;</span><span>/Form.Label&gt;</span>
+		<span style=color:#666>&lt;</span>Form.Control value<span style=color:#666>=</span>{username} onChange<span style=color:#666>=</span>{e =&gt; setUsername(e.target.value)} <span style=color:#666>/&gt;</span>
+		<span style=color:#666>&lt;</span>br <span style=color:#666>/&gt;</span>
+		<span style=color:#666>&lt;</span>Form.Label html<span style=color:#666>=</span><span style=color:#ba2121>&#34;password&#34;</span><span style=color:#666>&gt;</span>Password<span style=color:#666>&lt;</span><span>/Form.Label&gt;</span>
+		<span style=color:#666>&lt;</span>Form.Control value<span style=color:#666>=</span>{password} onChange<span style=color:#666>=</span>{e =&gt; setPassword(e.target.value)} <span style=color:#666>/&gt;</span>
+		<span style=color:#666>&lt;</span>br <span style=color:#666>/&gt;</span>
+		<span style=color:#666>&lt;</span>Button onClick<span style=color:#666>=</span>{handleClick}<span style=color:#666>&gt;</span>Submit<span style=color:#666>!&lt;</span><span>/Button&gt;</span>
+	<span style=color:#666>&lt;</span><span>/Form&gt;</span>
+	<span style=color:#666>&lt;</span><span>/&gt;</span>
+}
+</code></pre></div><h2 id=uncontrolled>Uncontrolled<a href=#uncontrolled class=header-anchor arialabel=Anchor> # </a></h2>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:green;font-weight:700>import</span> React, { useRef } from <span style=color:#ba2121>&#39;react&#39;</span>;
+<span style=color:green;font-weight:700>import</span> { Form, Button } from <span style=color:#ba2121>&#39;react-bootstrap&#39;</span>;
+
+<span style=color:green;font-weight:700>export</span> <span style=color:green;font-weight:700>default</span> <span style=color:green;font-weight:700>function</span> controlledForm() {
+	<span style=color:green;font-weight:700>const</span> usernameRef <span style=color:#666>=</span> useRef(<span style=color:#ba2121>&#34;&#34;</span>)
+	<span style=color:green;font-weight:700>const</span> passwordRef <span style=color:#666>=</span> useRef(<span style=color:#ba2121>&#34;&#34;</span>);
+
+	<span style=color:green;font-weight:700>const</span> handleClick <span style=color:#666>=</span> (e) =&gt; {
+		e.preventDefault();
+		fetch(<span style=color:#ba2121>&#34;https://yoururl.com/api/login&#34;</span>, {
+			method<span style=color:#666>:</span> <span style=color:#ba2121>&#34;POST&#34;</span>,
+			headers<span style=color:#666>:</span> {
+				<span style=color:#ba2121>&#34;Content-Type&#34;</span><span style=color:#666>:</span> <span style=color:#ba2121>&#34;application/json&#34;</span>
+			},
+			credentials<span style=color:#666>:</span> <span style=color:#ba2121>&#34;include&#34;</span>,
+			body<span style=color:#666>:</span> JSON.stringify({
+				<span style=color:#ba2121>&#34;username&#34;</span><span style=color:#666>:</span> usernameRef.current.value,
+				<span style=color:#ba2121>&#34;password&#34;</span><span style=color:#666>:</span> passwordRef.current.value
+			})
+		}).then(res =&gt; {
+			<span style=color:green;font-weight:700>if</span> (res.status <span style=color:#666>===</span> <span style=color:#666>200</span>) {
+				alert(<span style=color:#ba2121>&#34;Successfully logged in!&#34;</span>)
+			}
+			<span style=color:green;font-weight:700>return</span> res.json()
+		})
+	}
+
+	<span style=color:green;font-weight:700>return</span> <span style=color:#666>&lt;&gt;</span>
+	<span style=color:#666>&lt;</span>Form<span style=color:#666>&gt;</span>
+		<span style=color:#666>&lt;</span>Form.Label html<span style=color:#666>=</span><span style=color:#ba2121>&#34;username&#34;</span><span style=color:#666>&gt;</span>Username<span style=color:#666>&lt;</span><span>/Form.Label&gt;</span>
+		<span style=color:#666>&lt;</span>Form.Control ref<span style=color:#666>=</span>{usernameRef} <span style=color:#666>/&gt;</span>
+		<span style=color:#666>&lt;</span>br <span style=color:#666>/&gt;</span>
+		<span style=color:#666>&lt;</span>Form.Label html<span style=color:#666>=</span><span style=color:#ba2121>&#34;password&#34;</span><span style=color:#666>&gt;</span>Password<span style=color:#666>&lt;</span><span>/Form.Label&gt;</span>
+		<span style=color:#666>&lt;</span>Form.Control ref<span style=color:#666>=</span>{passwordRef} <span style=color:#666>/&gt;</span>
+		<span style=color:#666>&lt;</span>br <span style=color:#666>/&gt;</span>
+		<span style=color:#666>&lt;</span>Button onClick<span style=color:#666>=</span>{handleClick}<span style=color:#666>&gt;</span>Submit<span style=color:#666>!&lt;</span><span>/Button&gt;</span>
+	<span style=color:#666>&lt;</span><span>/Form&gt;</span>
+	<span style=color:#666>&lt;</span><span>/&gt;</span>
+}
+</code></pre></div>
+<a href=https://hongtaoh.com/tags/front-end/>#front-end</a>
+<p style=color:#777>Last modified on 2023-06-10</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<script src=https://utteranc.es/client.js repo=hongtaoh/hongtaoh.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/en/blog/index.xml type=application/rss+xml title="RSS feed">
+Subscribe </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>
+License
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+Hongtao Hao
+2020-2023
+</div>
+</footer>
