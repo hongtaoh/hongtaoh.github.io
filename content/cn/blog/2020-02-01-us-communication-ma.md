@@ -129,7 +129,7 @@ aliases:
 
 以下是一些可能会给全奖，但是我不是 100% 确定的项目，请自行确认：
 
-- 印第安纳大学(Indiana University, [The Media School](https://mediaschool.indiana.edu/)
+- 印第安纳大学(Indiana University, [The Media School](https://mediaschool.indiana.edu/))
 
 - 雪城大学 (Syracuse University, [Newhouse School of Public Communications](https://newhouse.syr.edu/), [media studies 硕士项目](https://newhouse.syr.edu/academics/media-studies/masters/)有关[funding 的介绍](https://newhouse.syr.edu/academics/media-studies/funding/)中提到也许会有 instructional associateships 和 research assistanships。)
 
