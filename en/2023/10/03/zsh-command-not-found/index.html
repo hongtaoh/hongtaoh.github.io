@@ -36,20 +36,33 @@
 </header>
 <main class=content role=main>
 <div style=text-align:center>
-<h1>Plots Now Showing in Blogdown</h1>
+<h1>zsh: command not found: brew</h1>
 <p>Hongtao Hao
-/ 2022-07-14 </p>
+/ 2023-10-03 </p>
 <hr>
 </div>
 <span class=article-toolbar>
-<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2022-07-14-plots-now-showing-in-blogdown.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/en/blog/2023-10-03-brew.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title="Suggest an edit of this page"></i>
 </a>
 </span>
 <div class="body-text list-text">
-<p>The plots were not showing in a hugo post by Blogdown. Following <a href=https://conorneilson.com/post/generated-plots-not-showing-in-blogdown/ target=_blank rel="noreferrer noopener">Conor Neilson&rsquo;s suggestion</a>
-, I added this snippet at the start of my post and it solved the problem.</p>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-r data-lang=r>knitr<span style=color:#666>::</span>opts_chunk<span style=color:#666>$</span><span style=color:#00f>set</span>(echo <span style=color:#666>=</span> <span style=color:green;font-weight:700>TRUE</span>, fig.path <span style=color:#666>=</span> <span style=color:#ba2121>&#34;static&#34;</span>)
-</code></pre></div><p>Thank you so much Conor!</p>
+<p>I saw <a href=https://stackoverflow.com/a/65603434 target=_blank rel="noreferrer noopener">this post</a>
+on Stackoverflow. <a href=https://stackoverflow.com/a/70575716 target=_blank rel="noreferrer noopener">This answer</a>
+is mostly correct but it omits lots of details. For example, I don&rsquo;t have a <code>.zshrc</code> file in the begining, how do I create it first. After entering <code>export PATH="/opt/homebrew/bin:$PATH"</code>, how do I save and exit?</p>
+<p>This post is to help solve this problem.</p>
+<p>First of all, open your Terminal. If you don&rsquo;t have a <code>.zshrc</code> file, input</p>
+<pre tabindex=0><code>touch .zshrc
+</code></pre><p>Then, input</p>
+<pre tabindex=0><code>nano .zshrc
+</code></pre><p>After openning <code>.zshrc</code>, copy and past</p>
+<pre tabindex=0><code>export PATH=/opt/homebrew/bin:$PATH
+</code></pre><p>Then, press <code>control</code> + <code>O</code>, then press <code>Eenter</code>, then press <code>control</code> + <code>X</code>.</p>
+<p>Then, in terminal, input</p>
+<pre tabindex=0><code>source ~/.zshrc
+</code></pre><p>Then, you can check whether <code>brew</code> in your path variable by</p>
+<pre tabindex=0><code>brew version
+</code></pre>
+<a href=https://hongtaoh.com/tags/programming/>#Programming</a>
 <p style=color:#777>Last modified on 2023-10-03</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>

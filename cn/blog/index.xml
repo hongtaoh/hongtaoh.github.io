@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日志 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/cn/blog/</link><description>Recent content in 日志 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>修鞋老奶奶</title><link>https://hongtaoh.com/cn/2023/09/29/grandma/</link><pubDate>Fri, 29 Sep 2023 22:30:02 -0500</pubDate><guid>https://hongtaoh.com/cn/2023/09/29/grandma/</guid><description>不知道为什么，我忽然想起一位修鞋老奶奶。老奶奶是否还在人世，我不清楚，我估计大概率不在了。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日志 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/cn/blog/</link><description>Recent content in 日志 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>ZSH command not found 怎么解决</title><link>https://hongtaoh.com/cn/2023/10/03/zsh/</link><pubDate>Tue, 03 Oct 2023 17:50:47 -0500</pubDate><guid>https://hongtaoh.com/cn/2023/10/03/zsh/</guid><description>现在的苹果系统默认 zsh 终端。基本上下载一个程序都会出现问题，比如 homebrew，下载完之后出现
+zsh: command not found: brew 解决办法很简单。
+首先，我们看一下你是否已经有 .zshrc 这个文件：
+ls -la ~/.zshrc 如果显示的是
+-rw-r--r-- 1 username staff 78 Oct 3 17:49 /Users/username/.zshrc 而不是 &amp;ldquo;&amp;ldquo;No such file or directory.&amp;rdquo; 那说明你有这个文件。如果没有，在终端输入
+touch .zshrc 第二步，在终端输入
+echo 'export PATH=/opt/homebrew/bin:$PATH' &amp;gt;&amp;gt; ~/.zshrc source .zshrc 然后，在终端测试：
+brew --version 这个问题解决了。进一步，我想讲一下如何打开 .zshrc 这个文件。首先，我建议大家下载 Sublime Text 。
+根据官方教程上的指南 ，我们在终端输入：
+echo 'export PATH=&amp;quot;/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH&amp;quot;' &amp;gt;&amp;gt; ~/.zshrc 接下来，我们就能很轻易打开 .zshrc 了：
+subl .zshrc 这么做的好处是，你能很轻易进行编辑。如果用默认的 nano，编辑起来会是一场噩梦。</description></item><item><title>修鞋老奶奶</title><link>https://hongtaoh.com/cn/2023/09/29/grandma/</link><pubDate>Fri, 29 Sep 2023 22:30:02 -0500</pubDate><guid>https://hongtaoh.com/cn/2023/09/29/grandma/</guid><description>不知道为什么，我忽然想起一位修鞋老奶奶。老奶奶是否还在人世，我不清楚，我估计大概率不在了。
 那是我上小学的时候。她的修鞋铺在三个胡同的交叉口，就是一个三面墙一面门的小屋子。每次见到她，我印象中都是阴天。她都戴着一副老花镜，低头认真地修鞋。我也忘了每次找她修鞋要多少钱，可能几毛钱，也可能一两块钱。老奶奶并不是本地人，是从外县过来的。虽然过去十多年了，但我清楚地记着，她说她老公得了癌症。我忘了是不是见过这位爷爷。老奶奶就靠着修鞋补贴家用。记得有几次，我去她那里的时候，会安静地坐在她那个小屋子里，等她把我的鞋补好。
 我现在一想到她，有一种想哭的冲动。想哭的原因有很多，其中一个我自己都没有想到的原因是，我一想到她，就想到了那时候的我自己。我觉得我离过去的那个小男孩太远了。我渐渐不认得现在的自己。
 现在想到老奶奶，我就突然觉得，我现在遇到的烦恼和挫折在她面前都一文不值。她就像一副雕塑一样活着，扛着生活的重压。我不知道她凭着年迈的身体做活，还要照顾老伴，需要承受多大的压力。我也不知道她的孩子们会不会照顾她。如果她生病了怎么办。
