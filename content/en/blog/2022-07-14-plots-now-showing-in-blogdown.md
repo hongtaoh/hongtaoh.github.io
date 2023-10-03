@@ -10,7 +10,7 @@ tags:
 
 The plots were not showing in a hugo post by Blogdown. Following [Conor Neilson's suggestion](https://conorneilson.com/post/generated-plots-not-showing-in-blogdown/), I added this snippet at the start of my post and it solved the problem.
 
-```{r setup, echo=FALSE}
+```r
 knitr::opts_chunk$set(echo = TRUE, fig.path = "static")
 ```
 
