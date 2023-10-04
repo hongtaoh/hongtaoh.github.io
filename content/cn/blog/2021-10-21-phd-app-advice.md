@@ -8,6 +8,15 @@ toc: false
 tags: 留学
 ---
 {{<block class="info">}}
+
+我建议用以下两个工具来自己修改自己的 SOP:
+  
+  - ChatGPT
+  - [quillbot](https://quillbot.com/), 从 [土木坛子前辈的博客](https://tumutanzi.com/archives/16887) 中得知
+{{<end>}}
+
+
+{{<block class="info">}}
 博主张沥今分享了[她的博士申请经验](https://lijinzhang.com/post/2022-03-03-tutorial-phd-app/)，我觉得很值得参考。
 {{<end>}}
 
