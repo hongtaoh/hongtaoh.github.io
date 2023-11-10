@@ -17,7 +17,7 @@ tags: 留学
 
 
 {{<block class="info">}}
-博主张沥今分享了[她的博士申请经验](https://lijinzhang.com/post/2022-03-03-tutorial-phd-app/)，我觉得很值得参考。
+博主张沥今分享了[她的博士申请经验](https://github.com/zhanglj37/Tutorial-on-PhD-Application)，我觉得很值得参考。
 {{<end>}}
 
 {{<block class="info">}}
