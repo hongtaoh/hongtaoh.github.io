@@ -15,6 +15,11 @@ tags: 留学
   - [quillbot](https://quillbot.com/), 从 [土木坛子前辈的博客](https://tumutanzi.com/archives/16887) 中得知
 {{<end>}}
 
+{{<block class="info">}}
+我弄了一个讲座，关于 CV & SOP:
+  - [part 1](https://www.bilibili.com/video/BV1PC4y1S7Gg/)
+  - [part 2](https://www.bilibili.com/video/BV1Gw411W76h/)
+{{<end>}}
 
 {{<block class="info">}}
 博主张沥今分享了[她的博士申请经验](https://github.com/zhanglj37/Tutorial-on-PhD-Application)，我觉得很值得参考。
