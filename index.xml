@@ -989,13 +989,12 @@ Don&amp;rsquo;t avoid difficult conversations.</description></item><item><title>
 open -a Finder ~/Library/Jupyter/kernels You&amp;rsquo;ll see kernels -&amp;gt; julia-XX. For example, kernels -&amp;gt; julia-1.6. Open the julia-1.6, you&amp;rsquo;ll see kernel.json. Open it. As Bogumił recommended, add &amp;quot;COLUMNS&amp;quot;: &amp;quot;1000&amp;quot;, &amp;quot;LINES&amp;quot;: &amp;quot;100&amp;quot; to the env variable.
 Then, restart your Jupyter Notebook.
 Even after making the above changes, you can still change it in each individual Jupyter notebook.</description></item><item><title>美国博士申请的一些经验和我的申请材料</title><link>https://hongtaoh.com/cn/2021/10/21/us-phd-app-advice/</link><pubDate>Thu, 21 Oct 2021 20:54:58 -0500</pubDate><guid>https://hongtaoh.com/cn/2021/10/21/us-phd-app-advice/</guid><description>我建议用以下两个工具来自己修改自己的 SOP:
-ChatGPT quillbot , 从 土木坛子前辈的博客 中得知 博主张沥今分享了她的博士申请经验 ，我觉得很值得参考。
+ChatGPT quillbot , 从 土木坛子前辈的博客 中得知 我弄了一个讲座，关于 CV &amp;amp; SOP:
+part 1 part 2 博主张沥今分享了她的博士申请经验 ，我觉得很值得参考。
 斯坦福大学的徐轶青老师 分享的 如何申请北美社科类博士项目？ 也许也会有帮助。
 金吉 拉着我做了几期视频 放在了 B 站上。
 对于硕、博士申请者，我强烈建议你建一个网站 ，并将其放到你的简历里。
-我提供收费的 SOP 修改服务，一篇 SOP 600 人民币，修改到我们都觉得比较满意为止。如果多篇 SOP 内容差不多，从第二篇开始每篇多加 150 元。 -- 目标陈述，statement of purpose (sop): 1)一句话总结你想研究什么； 2）用1-2个段落概述一下你之前都做过什么。 3）用1-3个段落说明你博士期间想做什么； 4）1个段落说明你为什么已经为博士期间的科研计划做了准备，比如你上过的课、做过的项目、学过的技能，独特的背景，等等。这个段落的目的是为了说明“为什么上面提到的计划必须由我来做” 5）1个段落说明为什么“为什么上面提到的计划必须在你们学校完成”。 6）这个是非必须的：一个段落说明你未来的的职业计划 参考：我申请威斯康星计算机方向博士项目的目标陈述 。这份 SOP 我是用 RMarkdown 做的，你可以看我的源代码 。
-我申请 UC Davis Communication 的目标陈述在这里 。戴维斯录取我了，不过没去。
-另外，我申请 Upenn Annenberg 的 SOP 和源代码 你也可以参考，不过 Upenn 并没有要我。</description></item><item><title>Hugo 的帖子如何改改 URL 地址</title><link>https://hongtaoh.com/cn/2021/10/13/hugo-aliases/</link><pubDate>Wed, 13 Oct 2021 17:21:21 -0500</pubDate><guid>https://hongtaoh.com/cn/2021/10/13/hugo-aliases/</guid><description>要用到 Hugo Aliases 。
+我提供收费的 SOP 修改服务，一篇 SOP 600 人民币，修改到我们都觉得比较满意为止。如果多篇 SOP 内容差不多，从第二篇开始每篇多加 150 元。 -- 目标陈述，statement of purpose (sop): 1)一句话总结你想研究什么； 2）用1-2个段落概述一下你之前都做过什么。 3）用1-3个段落说明你博士期间想做什么； 4）1个段落说明你为什么已经为博士期间的科研计划做了准备，比如你上过的课、做过的项目、学过的技能，独特的背景，等等。这个段落的目的是为了说明“为什么上面提到的计划必须由我来做” 5）1个段落说明为什么“为什么上面提到的计划必须在你们学校完成”。 6）这个是非必须的：一个段落说明你未来的的职业计划 参考：我申请威斯康星计算机方向博士项目的目标陈述 。这份 SOP 我是用 RMarkdown 做的，你可以看我的源代码 。</description></item><item><title>Hugo 的帖子如何改改 URL 地址</title><link>https://hongtaoh.com/cn/2021/10/13/hugo-aliases/</link><pubDate>Wed, 13 Oct 2021 17:21:21 -0500</pubDate><guid>https://hongtaoh.com/cn/2021/10/13/hugo-aliases/</guid><description>要用到 Hugo Aliases 。
 比如，我有一篇帖子，之前的 slug 是 if-senior-high-again 我想改成 senior-high。那我那篇帖子的 YAML front matter 应该设置成：
 title:如果我的高中能再来一遍date:2020-04-19T10:57:52-04:00author:郝鸿涛slug:senior-highdraft:falsetoc:truealiases:- /cn/2020/04/19/if-senior-high-again/Aliases 具体的地址是你之前帖子的原 URL 去除你的网站地址。比如，我那篇帖子的原地址是 https://hongtaoh.com/cn/2020/04/19/if-senior-high-again/ ，去除我的网站地址 https://hongtaoh.com 后还剩下 /cn/2020/04/19/if-senior-high-again/，这就是我要在 aliases 中填的。更新后，当别人打开就地址，浏览器会自动跳转到新地址。你可以点开上面的链接自己看看效果。
 另外，Aliases 可以是多个。</description></item><item><title>西班牙语在美国</title><link>https://hongtaoh.com/cn/2021/10/13/spanishi-in-us/</link><pubDate>Wed, 13 Oct 2021 17:08:39 -0500</pubDate><guid>https://hongtaoh.com/cn/2021/10/13/spanishi-in-us/</guid><description>西班牙语在美国真的是很流行，几乎成了第二语言，或者说本来就是第二语言。2018 年底去佛罗里达，感觉那里说西班牙语的人比说英语的人要多。
