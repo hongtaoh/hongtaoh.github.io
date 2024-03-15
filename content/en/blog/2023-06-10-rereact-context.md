@@ -37,6 +37,7 @@ return (
 The third step is to use the context in child components. 
 
 ```js
+import { useState, useContext } from 'react';
 import UsernameContext from './UsernameContext'
 
 const [username, setUsername] = useContext(UsernameContext)
