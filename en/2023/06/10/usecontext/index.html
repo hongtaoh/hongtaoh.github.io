@@ -65,7 +65,8 @@
 	<span style=color:#666>&lt;</span><span>/UsernameContext.Provider&gt;</span>
 )
 </code></pre></div><p>The third step is to use the context in child components.</p>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:green;font-weight:700>import</span> UsernameContext from <span style=color:#ba2121>&#39;./UsernameContext&#39;</span>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:green;font-weight:700>import</span> { useState, useContext } from <span style=color:#ba2121>&#39;react&#39;</span>;
+<span style=color:green;font-weight:700>import</span> UsernameContext from <span style=color:#ba2121>&#39;./UsernameContext&#39;</span>
 
 <span style=color:green;font-weight:700>const</span> [username, setUsername] <span style=color:#666>=</span> useContext(UsernameContext)
 
@@ -73,7 +74,7 @@
 </span><span style=color:#408080;font-style:italic></span>
 </code></pre></div>
 <a href=https://hongtaoh.com/tags/react/>#react</a>
-<p style=color:#777>Last modified on 2023-06-10</p>
+<p style=color:#777>Last modified on 2024-03-15</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>
