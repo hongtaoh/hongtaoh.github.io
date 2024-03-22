@@ -1,0 +1,210 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/cn/>关于</a></li>
+<li><a href=/cn/blog/>日志</a></li>
+<li><a href=/>English</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>如何零基础免费搭建个人网站 (2024 更新版)</h1>
+<p>郝鸿涛
+/ 2024-03-22 </p>
+<hr>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2024-03-22-personal-website-tutorial.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title=编辑本页></i>
+</a>
+</span>
+<aside class=toc>
+Table of Contents:
+<nav id=TableOfContents>
+<ul>
+<li><a href=#新建-github-仓库>新建 GitHub 仓库</a></li>
+<li><a href=#vercel>Vercel</a></li>
+<li><a href=#后续>后续</a>
+<ul>
+<li><a href=#新加一篇博客>新加一篇博客</a></li>
+<li><a href=#修改-configtoml>修改 config.toml</a></li>
+<li><a href=#更新网站>更新网站</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</aside>
+<div class="body-text list-text">
+<p>这部分是我<a href=/cn/2021/03/02/personal-website-tutorial/>之前一篇教程的更新版</a>
+，因为之前的弄得有点复杂，其实不用那么复杂。</p>
+<p>首先，把之前教程「网站主题」之前的部分看完。之后的就不用看了。</p>
+<p>下面的部分你不想看文字可以直接看<a href=https://www.bilibili.com/video/BV1af421f7Tw/ target=_blank rel="noreferrer noopener">我做的一个视频</a>
+。</p>
+<style>.aspect-ratio{position:relative;width:100%;height:0;padding-bottom:75%}.aspect-ratio iframe{position:absolute;width:100%;height:100%;left:0;top:0}</style>
+<div align=center class=aspect-ratio>
+<iframe src="https://player.bilibili.com/player.html?aid=1201958871&&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling=no border=0 frameborder=no framespacing=0 allowfullscreen></iframe>
+</div>
+<h2 id=新建-github-仓库>新建 GitHub 仓库<a href=#新建-github-仓库 class=header-anchor arialabel=Anchor> # </a></h2>
+<figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/media/netlify/deploy-1.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/media/netlify/deploy-1.png>
+</a>
+<figcaption>
+<h4>新建 Github 仓库</h4>
+</figcaption>
+</figure>
+<p>登陆 GitHub, 点击头像左侧的加号，再点击&rsquo;new repository'。</p>
+<figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/media/cnblog/website-tutorial-new-git-repo.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/media/cnblog/website-tutorial-new-git-repo.png>
+</a>
+<figcaption>
+<h4>新建仓库设置</h4>
+</figcaption>
+</figure>
+<p>在 Repository name 这里随便输入你喜欢的名字，比如 mywebsite。其他都不要动，点击 Create repository。</p>
+<figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/media/cnblog/website-tutorial-new-git-repo-copy-url.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/media/cnblog/website-tutorial-new-git-repo-copy-url.png>
+</a>
+<figcaption>
+<h4>复制仓库 url</h4>
+</figcaption>
+</figure>
+<p>随后，点击复制 url。</p>
+<p>复制下面的代码，把 <code>YOURREPO</code> 换成你上面复制的 url，然后把所有代码粘贴到终端：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:green>cd</span> quickstart
+git init
+git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
+cp -r themes/hugo-ht/exampleSite/* .
+cp -r themes/hugo-ht/archetypes . 
+
+git remote add origin YOURREPO
+git add .
+git commit -m <span style=color:#ba2121>&#34;first commit&#34;</span>
+git branch -M main
+git push -u origin main
+</code></pre></div><p>然后按回车键。</p>
+<h2 id=vercel>Vercel<a href=#vercel class=header-anchor arialabel=Anchor> # </a></h2>
+<figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/media/cnblog/vercel-login.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/media/cnblog/vercel-login.png>
+</a>
+<figcaption>
+<h4>Vercel 登陆</h4>
+</figcaption>
+</figure>
+<p>登陆 <a href=https://vercel.com/ target=_blank rel="noreferrer noopener">https://vercel.com/</a>
+，点击 Continue with GitHub。</p>
+<figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/media/cnblog/vercel-add-new-project.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/media/cnblog/vercel-add-new-project.png>
+</a>
+<figcaption>
+<h4>Vercel 新建项目</h4>
+</figcaption>
+</figure>
+<p>选择 Add New -> Project.</p>
+<figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/media/cnblog/vercel-import-git-repo.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/media/cnblog/vercel-import-git-repo.png>
+</a>
+<figcaption>
+<h4>Vercel 导入项目</h4>
+</figcaption>
+</figure>
+<p>找到 mywebsite，选择 Import，然后在随后的页面中点击 Deploy。随后你就可以看到你的网站了。</p>
+<h2 id=后续>后续<a href=#后续 class=header-anchor arialabel=Anchor> # </a></h2>
+<h3 id=新加一篇博客>新加一篇博客<a href=#新加一篇博客 class=header-anchor arialabel=Anchor> # </a></h3>
+<p>先在终端 cd 到你的 Hugo 文件夹，然后在终端输入：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new cn/posts/2024-04-06-a-new-post.md
+</code></pre></div><p>2021-04-06 只是一个例子，你换成你当天的日期就好。a-new-post 也只是一个例子，换成你想用的名称就好。</p>
+<p>然后接着输入</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo server -D
+</code></pre></div><p>打开终端显示的 http://localhost:1313/ ，你可以看到最新的。</p>
+<p>如果没有什么问题，在终端输入 Ctrl+C 停止预览，但终端没必要关闭。</p>
+<h3 id=修改-configtoml>修改 config.toml<a href=#修改-configtoml class=header-anchor arialabel=Anchor> # </a></h3>
+<p>你 Hugo 文件夹根目录下的 config.toml 有几个地方需要你自己改：</p>
+<ul>
+<li>
+<p>baseURL: 替换成你网站的域名，应该是类似这种 <code>https://myblog-hongtao.vercel.app/</code>。</p>
+</li>
+<li>
+<p>GithubEdit: 把所有的 USERNAME 换成你的 GitHub 用户名，把所有的 REPONAME 换成 github用户名.mywebsite (如果你新建的仓库名不是 mywebsite，那你需要用你自己起的名字)</p>
+</li>
+<li>
+<p>Params.lang 部分 <code>Your Nam</code> 和「你的名字」换成你的大名。</p>
+</li>
+</ul>
+<h3 id=更新网站>更新网站<a href=#更新网站 class=header-anchor arialabel=Anchor> # </a></h3>
+<p>每次修改或添加新内容后，如果更新网站呢？</p>
+<p>更新的话是这样一个流程：</p>
+<p>我们用 <code>git add</code> 来让 git 知道我们这次要更新什么。如果你更新的是 README.md, 那就用 <code>git add README</code>。如果你更新的是中文的博客，那就用 <code>git add cn/posts</code>。如果你修改了很多内容，不想一个一个地加，可以用 <code>git add .</code>，意思是把全部的修改、新增内容上传。</p>
+<p>然后，要用到 <code>git commit -m "Message"</code>，比如：<code>git commit -m "新增一篇博客"</code>。</p>
+<p>最后是上传，用 <code>git push</code>。</p>
+<p>总结一下，每次更新网站时，首先 <code>cd</code> 到你的 Hugo 文件夹，然后运行：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git add . <span style=color:#408080;font-style:italic># 或者如 git add README.md</span>
+git commit -m <span style=color:#ba2121>&#34;请给自己留言&#34;</span>
+git push
+</code></pre></div><p>如果你连这都觉得麻烦，可以在 Hugo 文件夹根目录下用文本编辑器新建一个文件，命名为 <code>deploy.sh</code>，把以下内容复制粘贴到里面：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git add .
+<span style=color:#19177c>msg</span><span style=color:#666>=</span><span style=color:#ba2121>&#34;updating site on </span><span style=color:green;font-weight:700>$(</span>date<span style=color:green;font-weight:700>)</span><span style=color:#ba2121>&#34;</span> 
+git commit -m <span style=color:#ba2121>&#34;</span><span style=color:#19177c>$msg</span><span style=color:#ba2121>&#34;</span>
+git push
+</code></pre></div><p>这样，每次上传更新时，你只需要在 <code>cd</code> 了你的 Hugo 文件夹后运行</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>bash deploy.sh
+</code></pre></div>
+<p style=color:#777>最后一次修改于 2024-03-22</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<div class=content>
+<script src=https://giscus.app/client.js data-repo=hongtaoh/hongtaoh.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyNjM3NDMzMTY=" data-category=Announcements data-category-id=DIC_kwDOD7hnVM4CUKk6 data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en data-loading=lazy crossorigin=anonymous async></script>
+</br>
+</div>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/cn/blog/index.xml type=application/rss+xml title="RSS feed">
+订阅 </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank>
+版权
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+郝鸿涛
+2020-2023
+</div>
+</footer>

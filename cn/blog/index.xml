@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日志 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/cn/blog/</link><description>Recent content in 日志 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>读 Twelve Pillars</title><link>https://hongtaoh.com/cn/2023/11/16/%E8%AF%BB-twelve-pillars/</link><pubDate>Thu, 16 Nov 2023 08:47:01 -0600</pubDate><guid>https://hongtaoh.com/cn/2023/11/16/%E8%AF%BB-twelve-pillars/</guid><description>书籍：Twelve Pillars Work harder on yourself than on your job
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日志 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/cn/blog/</link><description>Recent content in 日志 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>如何零基础免费搭建个人网站 (2024 更新版)</title><link>https://hongtaoh.com/cn/2024/03/22/personal-website-tutorial/</link><pubDate>Fri, 22 Mar 2024 16:07:41 -0500</pubDate><guid>https://hongtaoh.com/cn/2024/03/22/personal-website-tutorial/</guid><description>这部分是我之前一篇教程的更新版 ，因为之前的弄得有点复杂，其实不用那么复杂。
+首先，把之前教程「网站主题」之前的部分看完。之后的就不用看了。
+下面的部分你不想看文字可以直接看我做的一个视频 。
+.aspect-ratio { position: relative; width: 100%; height: 0; padding-bottom: 75%; } .aspect-ratio iframe { position: absolute; width: 100%; height: 100%; left: 0; top: 0; } 新建 GitHub 仓库 新建 Github 仓库 登陆 GitHub, 点击头像左侧的加号，再点击&amp;rsquo;new repository'。
+新建仓库设置 在 Repository name 这里随便输入你喜欢的名字，比如 mywebsite。其他都不要动，点击 Create repository。
+复制仓库 url 随后，点击复制 url。
+复制下面的代码，把 YOURREPO 换成你上面复制的 url，然后把所有代码粘贴到终端：</description></item><item><title>读 Twelve Pillars</title><link>https://hongtaoh.com/cn/2023/11/16/%E8%AF%BB-twelve-pillars/</link><pubDate>Thu, 16 Nov 2023 08:47:01 -0600</pubDate><guid>https://hongtaoh.com/cn/2023/11/16/%E8%AF%BB-twelve-pillars/</guid><description>书籍：Twelve Pillars Work harder on yourself than on your job
 When you change, things change.
 身心灵健康 （身体、头脑、情绪、灵魂）
 Relationships
@@ -1346,7 +1352,7 @@ Namecheap 上操作 Verification TXT Record Namecheap 上操作 MX Record DKIM+A
 张晶 毛月 崔頔 前期准备 如果你是彻彻底底的零基础：没有 GitHub 账号、不知道 HTML 和 CSS 为何物、没用过 Git，甚至连 Markdown 都不知道是什么，强烈建议你先把这份教程 的前三章认真读一下。读完后，你需要：
 注册了 GitHub 账号
 下载了文本编辑器 安装 Git
-苹果系统：打开 Terminal, 输入 xcode-select --install，这是为了下载 Xcode Command Line Tools 。然后在 Terminal 输入 git --version。更多 Git 下载办法请参考 git 官方介绍 。 Windows 系统请参考这里 掌握了 Markdown 的基础语法</description></item><item><title>锻炼与读书：两个不可少的时间项目</title><link>https://hongtaoh.com/cn/2021/02/26/read-and-exercise/</link><pubDate>Fri, 26 Feb 2021 15:55:46 -0500</pubDate><guid>https://hongtaoh.com/cn/2021/02/26/read-and-exercise/</guid><description>如何利用时间，人生就会给你怎样的结果。
+苹果系统：打开 Terminal, 输入 xcode-select --install，这是为了下载 Xcode Command Line Tools 。然后在 Terminal 输入 git --version。更多 Git 下载办法请参考 git 官方介绍 。 Windows 系统请参考这里 掌握了 Markdown 的基础语法 以下提到「终端」，可以理解为苹果电脑上的 Terminal / 微软系统上的 Git Bash。</description></item><item><title>锻炼与读书：两个不可少的时间项目</title><link>https://hongtaoh.com/cn/2021/02/26/read-and-exercise/</link><pubDate>Fri, 26 Feb 2021 15:55:46 -0500</pubDate><guid>https://hongtaoh.com/cn/2021/02/26/read-and-exercise/</guid><description>如何利用时间，人生就会给你怎样的结果。
 人生的幸福我觉得有两个很重要的基石：身体、脑子（智慧）。当后者强大到一定的程度时，前者可以忽略。对我们这样的普通人来说，身体还是要重视。道理很简单，没有好的身体，就没办法充满精力地去做事，也无法充满愉悦地体验人生，因为大部分时间都在病痛中。我年龄越大（马上奔三），越觉得智慧实在是太重要了。当人没有智慧的时候，就像一头被蒙上眼睛的大象，随时可能有危险。《少有人走的路》开头有一段话：
 解决人生问题的首要方案，乃是自律。没有自律，你不可能解决任何麻烦和困难。少部分的自律能让你解决一些问题。彻底的自律能让你解决所有的难题。
 我想把「自律」换成「智慧」：
