@@ -193,7 +193,7 @@ plt<span style=color:#666>.</span>show()
 </code></pre></div><p><img src=/cn/blog/2024-03-23-discrete-distributions_files/2024-03-23-discrete-distributions_9_0.png alt=png></p>
 <p>有同学有可能会问，为什么一定是分成 60 份，我分成 10 亿份可以吗？你优秀，当然可以。</p>
 <p>我们假设一分钟分成 <code>$n$</code> 份，这个问题就变成一个这样的泊松分布：</p>
-<p><code>$$ \begin{equation} \begin{align*} P_k &= {n \choose k} \left(\frac{\lambda}{n} \right)^k \left(1 - \frac{\lambda}{n} \right)^{(n - k)} \\ &= \frac{n!}{(n-k)! k!} \cdot \frac{\lambda^k}{n^k}\cdot \frac{\left(1 - \frac{\lambda}{n} \right)^n}{\left(1 - \frac{\lambda}{n} \right)^k} \\ \end{align*} \tag{1} \end{equation} $$</code></p>
+<p><code>$$ \begin{align*} P_k &= {n \choose k} \left(\frac{\lambda}{n} \right)^k \left(1 - \frac{\lambda}{n} \right)^{(n - k)} \\ &= \frac{n!}{(n-k)! k!} \cdot \frac{\lambda^k}{n^k}\cdot \frac{\left(1 - \frac{\lambda}{n} \right)^n}{\left(1 - \frac{\lambda}{n} \right)^k} \\ \end{align*} \tag{1} $$</code></p>
 <p>当 <code>$n \to \infty$</code> 时</p>
 <p><code>$$\frac{n!}{(n-k)!} \to n^k$$</code></p>
 <p>上面这个你带入 <code>$n = 10, k = 2$</code> 就大致可以理解了。</p>
@@ -201,7 +201,7 @@ plt<span style=color:#666>.</span>show()
 <p>根据 <code>$e$</code> 的定义：</p>
 <p><code>$$\left(1 - \frac{\lambda}{n} \right)^n \to e^{-\lambda}$$</code></p>
 <p>将上述极值带入公示一：</p>
-<p><code>$$ \begin{equation} \begin{align*} P(X = k) &= \frac{n^k}{n^k}\cdot \frac{\lambda^k}{k!} \cdot \frac{e^{-\lambda}}{1}\\ &= \frac{\lambda^k \cdot e^{-\lambda}}{k!} \end{align*} \tag{1} \end{equation} $$</code></p>
+<p><code>$$ \begin{align*} P(X = k) &= \frac{n^k}{n^k}\cdot \frac{\lambda^k}{k!} \cdot \frac{e^{-\lambda}}{1}\\ &= \frac{\lambda^k \cdot e^{-\lambda}}{k!} \end{align*} \tag{2} $$</code></p>
 <h3 id=泊松分布的用处>泊松分布的用处<a href=#泊松分布的用处 class=header-anchor arialabel=Anchor> # </a></h3>
 <p>泊松分布有什么用呢？可以用来估计 Binomial distribution 的值，特别是当 <code>$n$</code> 特别大且 <code>$p$</code> 非常小时。</p>
 <blockquote>
