@@ -206,12 +206,10 @@ plt.show()
 我们假设一分钟分成 `$n$` 份，这个问题就变成一个这样的泊松分布：
 
 `$$
-\begin{equation}
 \begin{align*}
 P_k &= {n \choose k} \left(\frac{\lambda}{n} \right)^k \left(1 - \frac{\lambda}{n} \right)^{(n - k)} \\
        &= \frac{n!}{(n-k)! k!} \cdot \frac{\lambda^k}{n^k}\cdot \frac{\left(1 - \frac{\lambda}{n} \right)^n}{\left(1 - \frac{\lambda}{n} \right)^k} \\
 \end{align*} \tag{1}
-\end{equation}
 $$`
 
 当 `$n \to \infty$` 时
@@ -229,12 +227,10 @@ $$`
 将上述极值带入公示一：
 
 `$$
-\begin{equation}
 \begin{align*}
 P(X = k) &= \frac{n^k}{n^k}\cdot \frac{\lambda^k}{k!} \cdot \frac{e^{-\lambda}}{1}\\
-       &= \frac{\lambda^k \cdot e^{-\lambda}}{k!}
-\end{align*} \tag{1}
-\end{equation}
+       &= \frac{\lambda^k \cdot e^{-\lambda}}{k!} 
+\end{align*} \tag{2}
 $$`
 
 
