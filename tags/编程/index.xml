@@ -43,7 +43,8 @@ Add email domain -- 接下来是 DNS Setup，这是最关键的一步。
 DNS Setup Instructions 如果你用的是 Namecheap, 那么新加一个 TXT Record, 然后在 Host 那里填 @。TTL 选择 Automatic。MX Record 的 Host 也是 @。
 Namecheap 上操作 Verification TXT Record Namecheap 上操作 MX Record DKIM+ARC Key Records 这一项，在Namecheap 上新建一个新建 CNAME 后，其项目中的 Host 和 Target 分别是 Migadu 上面写的 Name 和 Value (Destination)。灰色的部分是不需要填的。</description></item><item><title>iPhone 无法下载和更新 APP</title><link>https://hongtaoh.com/cn/2021/04/10/iphone-app/</link><pubDate>Sat, 10 Apr 2021 14:33:47 -0400</pubDate><guid>https://hongtaoh.com/cn/2021/04/10/iphone-app/</guid><description>昨天开始我的 iPhone 没法更新和下载应用。我一开始以为是系统没更新的缘故，我点击了更新，但是没法更新。后来我又以为是容量不够，删除了几个应用后，容量够了，但还是没法下载其他应用。
 正准备摔手机的时候（开个玩笑，我摔不起。），查到了 iphone无法更新和下载APP 这个帖子。Xu_Bon 版主的第 7 个方法对我起了作用：设置 &amp;gt; 通用 &amp;gt; 还原 &amp;gt; 还原网络设置。然后手机自动关机。开机后就可以下载和更新了。
-世界又好了。</description></item><item><title>如何零基础免费搭建个人网站</title><link>https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/</link><pubDate>Tue, 02 Mar 2021 12:03:38 -0500</pubDate><guid>https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/</guid><description>四、五年前我非常希望有一篇真正有用的教编程小白免费建个人网站的教程。我看到的基本上都是非常笼统的文章，没有非常细节的。我也理解，因为要写得很细，就要花很多时间，也很麻烦。我很想帮助别人建博客，就不嫌麻烦地写下了这篇教程。
+世界又好了。</description></item><item><title>如何零基础免费搭建个人网站</title><link>https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/</link><pubDate>Tue, 02 Mar 2021 12:03:38 -0500</pubDate><guid>https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/</guid><description>这篇教程稍微有些过时，而且对很多人来说可能过于复杂。我重新做了一份：如何零基础免费搭建个人网站 (2024 更新版)
+四、五年前我非常希望有一篇真正有用的教编程小白免费建个人网站的教程。我看到的基本上都是非常笼统的文章，没有非常细节的。我也理解，因为要写得很细，就要花很多时间，也很麻烦。我很想帮助别人建博客，就不嫌麻烦地写下了这篇教程。
 如果你在这篇帖子中看到了错误，请点击本文目录上的按钮，复克 (fork) 我的个人网站之后就可以提交你的修改建议了。十分感谢！
 你也可以参考这篇：手把手带你搭建个人博客(基础版) ，作者庄亮亮。
 本教程旨在手把手帮你搭建属于你的个人网站。建站工具是Hugo + GitHub 。两个都是免费的。完成后，你的个人网站网址是：https://github用户名.github.io。
