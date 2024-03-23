@@ -1,0 +1,136 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/cn/>关于</a></li>
+<li><a href=/cn/blog/>日志</a></li>
+<li><a href=/>English</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>关于自然指数的知识</h1>
+<p>郝鸿涛
+/ 2024-03-23 </p>
+<hr>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2024-03-23-e.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title=编辑本页></i>
+</a>
+</span>
+<aside class=toc>
+Table of Contents:
+<nav id=TableOfContents>
+<ul>
+<li><a href=#指数函数的导数>指数函数的导数</a></li>
+<li><a href=#重新看数字-e-的定义>重新看数字 e 的定义</a></li>
+</ul>
+</nav>
+</aside>
+<div class="body-text list-text">
+<h2 id=指数函数的导数>指数函数的导数<a href=#指数函数的导数 class=header-anchor arialabel=Anchor> # </a></h2>
+<p><code>$2^x$</code> 的导数是什么？</p>
+<p>我们这样算：</p>
+<p><code>$$\lim_{dx \to 0} \frac{2^{x + dx} - 2^x}{dx} = \frac{2^{dx} - 1}{dx} \cdot 2^x$$</code></p>
+<p>我们带入一个非常小的 <code>$dx$</code> 看看：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>derivative_const</span>(dx):
+    <span style=color:green;font-weight:700>return</span> (<span style=color:#666>2</span><span style=color:#666>**</span>dx <span style=color:#666>-</span> <span style=color:#666>1</span>)<span style=color:#666>/</span>dx 
+
+derivative_const(<span style=color:#666>0.001</span>), derivative_const(<span style=color:#666>0.0001</span>), derivative_const(<span style=color:#666>0.0000001</span>)
+</code></pre></div><pre><code>(0.6933874625807412, 0.6931712037649973, 0.6931472040783149)
+</code></pre>
+<p>我们看到，当 <code>$dx$</code> 越来越小， <code>$\frac{2^{dx} - 1}{dx}$</code> 越来越趋近于一个数。同样的情况也发生在：</p>
+<p><code>$$\lim_{dx \to 0} \frac{8^{x + dx} - 8^x}{dx} = \frac{8^{dx} - 1}{dx} \cdot 8^x$$</code></p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:green;font-weight:700>def</span> <span style=color:#00f>derivative_const</span>(dx):
+    <span style=color:green;font-weight:700>return</span> (<span style=color:#666>8</span><span style=color:#666>**</span>dx <span style=color:#666>-</span> <span style=color:#666>1</span>)<span style=color:#666>/</span>dx 
+
+derivative_const(<span style=color:#666>0.001</span>), derivative_const(<span style=color:#666>0.0001</span>), derivative_const(<span style=color:#666>0.0000001</span>)
+</code></pre></div><pre><code>(2.0816050796328422, 2.0796577605231015, 2.079441758784384)
+</code></pre>
+<p>我们定义 <code>$e$</code>:</p>
+<p><code>$$\lim_{dx \to 0} \frac{e^{dx} - 1}{dx} = 1$$</code></p>
+<p>所以 <code>$e^x$</code> 的导数为其本身 <code>$e^x$</code>。</p>
+<p>我们用 <code>$e$</code> 来表示 <code>$2^x$</code> 的导数：</p>
+<p>因为 <code>$e^{ln(2)} = 2$</code>，所以</p>
+<p><code>$$2^x = e^{ln(2)\cdot x}$$</code></p>
+<p>根据 Chain rule，我们知道 <code>$y = e^{cx}$</code> 的导数为 <code>$e^{cx}\cdot c$</code></p>
+<p>所以</p>
+<p><code>$2^x = e^{ln(2)\cdot x}$</code> 的导数为</p>
+<p><code>$$ln(2) \cdot e^{ln(2)\cdot x} = ln(2)\cdot 2^x$$</code></p>
+<p>推而广之，我们知道 <code>$y = c^x$</code> 的导数为 <code>$ln(c)\cdot c^x$</code></p>
+<h2 id=重新看数字-e-的定义>重新看数字 e 的定义<a href=#重新看数字-e-的定义 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>数字 e 可以定义为满足以下条件的数：
+<code>$$ \lim_{{dx \to 0}} \frac{{e^{dx} - 1}}{{dx}} = 1 $$</code></p>
+<p>可以重写为
+<code>$$ \lim_{{dx \to 0}} e^{dx} = 1 + dx $$</code></p>
+<p>因此
+<code>$$ e^{dx \cdot \frac{1}{{dx}}} = (1 + dx)^{\frac{1}{{dx}}} $$</code></p>
+<p>所以按定义
+<code>$$ e = \lim_{{dx \to 0}} (1 + dx)^{\frac{1}{{dx}}} $$</code></p>
+<p>类比地，对于任意正整数 ( n )，我们有
+<code>$$ \lim_{{n \to \infty}} \left(1 + \frac{1}{n}\right)^n = e $$</code></p>
+<p>或者</p>
+<p><code>$$ \lim_{{n \to \infty}} \left(1 + n\right)^\frac{1}{n} = e $$</code></p>
+<p>对于任意实数 ( x )，我们有</p>
+<p><code>$$ \lim_{{n \to \infty}} \left(1 + n\right)^\frac{x}{n} = e^x $$</code></p>
+<p>若 <code>$\frac{x}{n} = t$</code></p>
+<p>有</p>
+<p><code>$$ \lim_{{n \to \infty}} \left(1 + \frac{x}{t}\right)^t = e^x $$</code></p>
+<p>把 <code>$t$</code> 用 <code>$n$</code> 表示可能更加易于记忆：</p>
+<p><code>$$ \lim_{{n \to \infty}} \left(1 + \frac{x}{n}\right)^n = e^x $$</code></p>
+<a href=https://hongtaoh.comtags/%E7%BB%9F%E8%AE%A1/>#统计</a>
+<p style=color:#777>最后一次修改于 2024-03-23</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<div class=content>
+<script src=https://giscus.app/client.js data-repo=hongtaoh/hongtaoh.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyNjM3NDMzMTY=" data-category=Announcements data-category-id=DIC_kwDOD7hnVM4CUKk6 data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en data-loading=lazy crossorigin=anonymous async></script>
+</br>
+</div>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/cn/blog/index.xml type=application/rss+xml title="RSS feed">
+订阅 </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank>
+版权
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+郝鸿涛
+2020-2024
+</div>
+</footer>

@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/</link><description>Recent content on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/index.xml" rel="self" type="application/rss+xml"/><item><title>如何零基础免费搭建个人网站 (2024 更新版)</title><link>https://hongtaoh.com/cn/2024/03/22/personal-website-tutorial/</link><pubDate>Fri, 22 Mar 2024 16:07:41 -0500</pubDate><guid>https://hongtaoh.com/cn/2024/03/22/personal-website-tutorial/</guid><description>这部分是我之前一篇教程的更新版 ，因为之前的弄得有点复杂，其实不用那么复杂。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/</link><description>Recent content on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/index.xml" rel="self" type="application/rss+xml"/><item><title>三大离散分布</title><link>https://hongtaoh.com/cn/2024/03/23/discrete-distributions/</link><pubDate>Sat, 23 Mar 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/03/23/discrete-distributions/</guid><description>ChatGPT 画的，凑活着用。
+import matplotlib.pyplot as plt import pandas as pd import numpy as np from scipy.stats import binom Bernouli Distribution 伯努利方程描述的是「一次」「只有」「两个」可能结果之实验的结果概率。最经典的莫过于抛一次硬币，不考虑硬币立起来的情况的话，我们只有两个可能结果：正面朝上或者背面朝上。假设硬币正面朝上 ($x=1$) 的概率是 $p (0 &amp;lt;= p &amp;lt;= 1)$，那我们随机抛一次这枚硬币这一事件结果的「概率质量函数」(Probability mass function, PMF) 为：
+\begin{equation} P(X = x) = \begin{cases} p &amp;amp; \text{if } x = 1, \
+1 - p &amp;amp; \text{if } x = 0. \end{cases} \end{equation}
+上述描述参考 Brilliant.org 上的解释。
+画图的话：
+p = 0.7 # p when x = 1 bernoulli_values = [0, 1] probs = [1-p, p] plt.</description></item><item><title>关于自然指数的知识</title><link>https://hongtaoh.com/cn/2024/03/23/e/</link><pubDate>Sat, 23 Mar 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/03/23/e/</guid><description>指数函数的导数 $2^x$ 的导数是什么？
+我们这样算：
+$$\lim_{dx \to 0} \frac{2^{x + dx} - 2^x}{dx} = \frac{2^{dx} - 1}{dx} \cdot 2^x$$
+我们带入一个非常小的 $dx$ 看看：
+def derivative_const(dx): return (2**dx - 1)/dx derivative_const(0.001), derivative_const(0.0001), derivative_const(0.0000001) (0.6933874625807412, 0.6931712037649973, 0.6931472040783149) 我们看到，当 $dx$ 越来越小， $\frac{2^{dx} - 1}{dx}$ 越来越趋近于一个数。同样的情况也发生在：
+$$\lim_{dx \to 0} \frac{8^{x + dx} - 8^x}{dx} = \frac{8^{dx} - 1}{dx} \cdot 8^x$$
+def derivative_const(dx): return (8**dx - 1)/dx derivative_const(0.001), derivative_const(0.0001), derivative_const(0.0000001) (2.0816050796328422, 2.0796577605231015, 2.079441758784384) 我们定义 $e$:</description></item><item><title>如何零基础免费搭建个人网站 (2024 更新版)</title><link>https://hongtaoh.com/cn/2024/03/22/personal-website-tutorial/</link><pubDate>Fri, 22 Mar 2024 16:07:41 -0500</pubDate><guid>https://hongtaoh.com/cn/2024/03/22/personal-website-tutorial/</guid><description>这部分是我之前一篇教程的更新版 ，因为之前的弄得有点复杂，其实不用那么复杂。
 首先，把之前教程「网站主题」之前的部分看完。之后的就不用看了。
 下面的部分你不想看文字可以直接看我做的一个视频 。
 .aspect-ratio { position: relative; width: 100%; height: 0; padding-bottom: 75%; } .aspect-ratio iframe { position: absolute; width: 100%; height: 100%; left: 0; top: 0; } 新建 GitHub 仓库 新建 Github 仓库 登陆 GitHub, 点击头像左侧的加号，再点击&amp;rsquo;new repository'。
