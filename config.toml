@@ -1,4 +1,4 @@
-baseURL = "https://hongtaoh.com/"
+baseURL = "https://hongtaoh.com"
 languageCode = "en-us"
 title = '郝鸿涛：Hongtao Hao'
 theme = "hugo-ht"
