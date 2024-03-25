@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日志 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/cn/blog/</link><description>Recent content in 日志 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>三大离散分布</title><link>https://hongtaoh.com/cn/2024/03/23/discrete-distributions/</link><pubDate>Sat, 23 Mar 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/03/23/discrete-distributions/</guid><description>ChatGPT 画的，凑活着用。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日志 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/cn/blog/</link><description>Recent content in 日志 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>读《见识》</title><link>https://hongtaoh.com/cn/2024/03/25/experience/</link><pubDate>Mon, 25 Mar 2024 13:16:28 -0500</pubDate><guid>https://hongtaoh.com/cn/2024/03/25/experience/</guid><description>区块链
+跟踪经济
+深入传统产业，探索如何将智能运用到其中
+公司要确定好自己的最优化函数，这样员工才知道往哪个方向努力
+公司创始初期，要记得给早期员工股票，调动积极性
+想要以小博大就要有颠覆性的技术作支撑，也就是杀手锏
+大科技公司不一定就有很多专利。专业数量也不代表着一个公司的创新力
+确立一个战略，然后不断精进
+谷歌员工每个季度定目标。我是否可以每天定目标？我发现当我知道我每天要干什么的时候效率就非常高
+基层员工要把自己当成老板，而老板要了解下属工作的细节
+不要为了钱而舍弃健康、家人、友情和幸福。多陪孩子而不是多赚钱
+钱的本质是可以调动的自然资源和人力资源（也就是别人的时间）
+过去的过去了。未来还没有来。钱应该用来提高现在的生活质量，而不是未来。
+得到任何东西都是有代价的。
+要有自己独特的能力
+不管多少钱都可以很快通过投资和投机败光
+当你考虑收益的时候也要考虑风险
+投资成功不在于把握住多少机会，而在于少犯错误
+幸福感的本源：基因传承、影响力
+找一个对自己好的人
+夫妻优先于子女，更优先于双方父母
+有哪些事情是这个世界离开你不行的？那就是你的使命
+选择过多真的不一定是一件好事
+人生要做减法 你不可能什么都得到
+泰山崩于前而面不改色
+生活。不只是学习
+时间是你的朋友 而时机不是
+读一下《富兰克林自传》
+《从一到无穷大》
+《数学之美》
+《曾文正公家书》
+动力和创新力应该来自于底层，高层负责刹车。
+不应该从富有变成穷光蛋。少犯错误比多几次成功更重要
+智慧的核心是对人性的理解。
+最好的投资是自己的工作和事业。</description></item><item><title>三大离散分布</title><link>https://hongtaoh.com/cn/2024/03/23/discrete-distributions/</link><pubDate>Sat, 23 Mar 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/03/23/discrete-distributions/</guid><description>ChatGPT 画的，凑活着用。
 import matplotlib.pyplot as plt import pandas as pd import numpy as np from scipy.stats import binom Bernouli Distribution 伯努利方程描述的是「一次」「只有」「两个」可能结果之实验的结果概率。最经典的莫过于抛一次硬币，不考虑硬币立起来的情况的话，我们只有两个可能结果：正面朝上或者背面朝上。假设硬币正面朝上 ($x=1$) 的概率是 $p (0 &amp;lt;= p &amp;lt;= 1)$，那我们随机抛一次这枚硬币这一事件结果的「概率质量函数」(Probability mass function, PMF) 为：
 \begin{equation} P(X = x) = \begin{cases} p &amp;amp; \text{if } x = 1, \
 1 - p &amp;amp; \text{if } x = 0. \end{cases} \end{equation}
