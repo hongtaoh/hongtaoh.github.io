@@ -103,6 +103,7 @@ git init
 git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
 cp -r themes/hugo-ht/exampleSite/* .
 cp -r themes/hugo-ht/archetypes . 
+rm hugo.toml
 
 git remote add origin YOURREPO
 git add .
@@ -179,7 +180,7 @@ git push
 </code></pre></div><p>这样，每次上传更新时，你只需要在 <code>cd</code> 了你的 Hugo 文件夹后运行</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>bash deploy.sh
 </code></pre></div>
-<p style=color:#777>最后一次修改于 2024-03-22</p>
+<p style=color:#777>最后一次修改于 2024-04-04</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>
