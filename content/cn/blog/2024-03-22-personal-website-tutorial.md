@@ -37,6 +37,7 @@ git init
 git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
 cp -r themes/hugo-ht/exampleSite/* .
 cp -r themes/hugo-ht/archetypes . 
+rm hugo.toml
 
 git remote add origin YOURREPO
 git add .
