@@ -26,14 +26,10 @@ from scipy.stats import binom
 
 伯努利方程描述的是「一次」「只有」「两个」可能结果之实验的结果概率。最经典的莫过于抛一次硬币，不考虑硬币立起来的情况的话，我们只有两个可能结果：正面朝上或者背面朝上。假设硬币正面朝上 (`$x=1$`) 的概率是 `$p (0 <= p <= 1)$`，那我们随机抛一次这枚硬币这一事件结果的「概率质量函数」(Probability mass function, PMF) 为：
 
-\begin{equation}
-P(X = x) = \begin{cases}
-p & \text{if } x = 1, \\
-1 - p & \text{if } x = 0.
-\end{cases}
-\end{equation}
+`$$f(k; p) = p^k (1 - p)^{1-k} \text{ for } k \in \{0,1\}$$`
 
-上述描述参考 [Brilliant.org](https://brilliant.org/wiki/bernoulli-distribution/) 上的解释。
+
+上述描述参考 [Brilliant.org](https://brilliant.org/wiki/bernoulli-distribution/) 及 [维基百科](https://en.wikipedia.org/wiki/Bernoulli_distribution)。
 
 画图的话：
 
