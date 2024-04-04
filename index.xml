@@ -34,11 +34,10 @@
 智慧的核心是对人性的理解。
 最好的投资是自己的工作和事业。</description></item><item><title>三大离散分布</title><link>https://hongtaoh.com/cn/2024/03/23/discrete-distributions/</link><pubDate>Sat, 23 Mar 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/03/23/discrete-distributions/</guid><description>ChatGPT 画的，凑活着用。
 import matplotlib.pyplot as plt import pandas as pd import numpy as np from scipy.stats import binom Bernouli Distribution 伯努利方程描述的是「一次」「只有」「两个」可能结果之实验的结果概率。最经典的莫过于抛一次硬币，不考虑硬币立起来的情况的话，我们只有两个可能结果：正面朝上或者背面朝上。假设硬币正面朝上 ($x=1$) 的概率是 $p (0 &amp;lt;= p &amp;lt;= 1)$，那我们随机抛一次这枚硬币这一事件结果的「概率质量函数」(Probability mass function, PMF) 为：
-\begin{equation} P(X = x) = \begin{cases} p &amp;amp; \text{if } x = 1, \
-1 - p &amp;amp; \text{if } x = 0. \end{cases} \end{equation}
-上述描述参考 Brilliant.org 上的解释。
+$$f(k; p) = p^k (1 - p)^{1-k} \text{ for } k \in \{0,1\}$$
+上述描述参考 Brilliant.org 及 维基百科 。
 画图的话：
-p = 0.7 # p when x = 1 bernoulli_values = [0, 1] probs = [1-p, p] plt.</description></item><item><title>关于自然指数的知识</title><link>https://hongtaoh.com/cn/2024/03/23/e/</link><pubDate>Sat, 23 Mar 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/03/23/e/</guid><description>指数函数的导数 $2^x$ 的导数是什么？
+p = 0.7 # p when x = 1 bernoulli_values = [0, 1] probs = [1-p, p] plt.bar(bernoulli_values, probs, tick_label = [&amp;#39;Failure (0)&amp;#39;, &amp;#39;Success (1)&amp;#39;]) plt.</description></item><item><title>关于自然指数的知识</title><link>https://hongtaoh.com/cn/2024/03/23/e/</link><pubDate>Sat, 23 Mar 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/03/23/e/</guid><description>指数函数的导数 $2^x$ 的导数是什么？
 我们这样算：
 $$\lim_{dx \to 0} \frac{2^{x + dx} - 2^x}{dx} = \frac{2^{dx} - 1}{dx} \cdot 2^x$$
 我们带入一个非常小的 $dx$ 看看：
