@@ -52,7 +52,7 @@ Table of Contents:
 <li><a href=#后续>后续</a>
 <ul>
 <li><a href=#新加一篇博客>新加一篇博客</a></li>
-<li><a href=#修改-hugotoml>修改 hugo.toml</a></li>
+<li><a href=#修改-configtoml>修改 config.toml</a></li>
 <li><a href=#更新网站>更新网站</a></li>
 <li><a href=#添加评论>添加评论</a></li>
 </ul>
@@ -105,6 +105,7 @@ git init
 git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
 cp -r themes/hugo-ht/exampleSite/* .
 cp -r themes/hugo-ht/archetypes . 
+rm hugo.toml
 </code></pre></div><p>回到 quickstart 文件夹，你会看到一个文件为 <code>vercel.json</code> (受 <a href=https://discourse.gohugo.io/t/vercel-tips/34766 target=_blank rel="noreferrer noopener">Rick Cogley 帖子</a>
 启发)。打开它，并把 <code>HUGO_VERSION</code> 改成你的 hugo version。</p>
 <p>hugo version 怎么查？在终端输入 <code>hugo version</code> 即可。比如，我输完后，结果为</p>
@@ -154,8 +155,8 @@ git push -u origin main
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo server -D
 </code></pre></div><p>打开终端显示的 http://localhost:1313/ ，你可以看到最新的。</p>
 <p>如果没有什么问题，在终端输入 Ctrl+C 停止预览，但终端没必要关闭。</p>
-<h3 id=修改-hugotoml>修改 hugo.toml<a href=#修改-hugotoml class=header-anchor arialabel=Anchor> # </a></h3>
-<p>你 Hugo 文件夹根目录下的 hugo.toml 有几个地方需要你自己改：</p>
+<h3 id=修改-configtoml>修改 config.toml<a href=#修改-configtoml class=header-anchor arialabel=Anchor> # </a></h3>
+<p>你 Hugo 文件夹根目录下的 config.toml 有几个地方需要你自己改：</p>
 <ul>
 <li>
 <p>baseURL: 替换成你网站的域名，应该是类似这种 <code>https://myblog-hongtao.vercel.app/</code>。</p>
