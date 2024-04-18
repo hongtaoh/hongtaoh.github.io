@@ -3,6 +3,28 @@ title: Research
 type : nolisting
 ---
 
+## IUI 2024 Companion
+
+{{< columns >}}
+
+{{<figure-a src="/media/research/iui-2024.png" link="https://dl.acm.org/doi/abs/10.1145/3640544.3645228" >}}
+
+{{< column >}}
+
+**[Can LLMs Infer Domain Knowledge from Code Exemplars? A Preliminary Study](https://dl.acm.org/doi/abs/10.1145/3640544.3645228)**. [Jiajing Guo](https://www.jiajingguo.org/), [Vikram Mohanty](https://vikrammohanty.com/), [Hongtao Hao](/), [Liang Gou](https://www.linkedin.com/in/lianggou/), [Liu Ren](https://www.liu-ren.com/). *Companion Proceedings of the 29th International Conference on Intelligent User Interfaces*, 2024
+
+{{< endcolumn >}}
+
+```
+@inproceedings{guo2024can,
+  title={Can LLMs Infer Domain Knowledge from Code Exemplars? A Preliminary Study},
+  author={Guo, Jiajing and Mohanty, Vikram and Hao, Hongtao and Gou, Liang and Ren, Liu},
+  booktitle={Companion Proceedings of the 29th International Conference on Intelligent User Interfaces},
+  pages={95--100},
+  year={2024}
+}
+
+```
 
 ## IEEEVIS 2022
 
