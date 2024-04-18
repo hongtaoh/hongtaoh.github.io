@@ -9,7 +9,9 @@ tags:
 ---
 这部分是我[之前一篇教程的更新版](/cn/2021/03/02/personal-website-tutorial/)，因为之前的弄得有点复杂，其实不用那么复杂。
 
-首先，把之前教程「网站主题」之前的部分看完。之后的就不用看了。
+首先，把之前教程「网站主题」(不含) 之前的部分看完。之后的就不用看了。
+
+看完并跟着做完之后，你应该已经在桌面或者其他路径建立了一个 hugo 文件夹：`quickstart`。
 
 下面的部分你不想看文字可以直接看[我做的一个视频](https://www.bilibili.com/video/BV1af421f7Tw/)。
 
@@ -29,7 +31,7 @@ tags:
 
 随后，点击复制 url。
 
-复制下面的代码，把 `YOURREPO` 换成你上面复制的 url，然后把所有代码粘贴到终端：
+复制下面的代码，粘贴到终端，然后点回车键。
 
 ```bash
 cd quickstart
@@ -37,16 +39,27 @@ git init
 git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
 cp -r themes/hugo-ht/exampleSite/* .
 cp -r themes/hugo-ht/archetypes . 
-rm hugo.toml
+```
 
+回到 quickstart 文件夹，你会看到一个文件为 `vercel.json` (受 [Rick Cogley 帖子](https://discourse.gohugo.io/t/vercel-tips/34766) 启发)。打开它，并把 `HUGO_VERSION` 改成你的 hugo version。
+
+hugo version 怎么查？在终端输入 `hugo version` 即可。比如，我输完后，结果为
+
+```bash
+hugo v0.119.0-b84644c008e0dc2c4b67bd69cccf87a41a03937e+extended darwin/arm64 BuildDate=2023-09-24T15:20:17Z VendorInfo=brew
+```
+
+那 `HUGO_VERSION` 就是 `0.119.0`。
+
+然后回到终端，复制下面的代码（记得把 `YOURREPO` 换成你上面复制的 url），把所有代码粘贴到终端，然后点回车。
+
+```bash
 git remote add origin YOURREPO
 git add .
 git commit -m "first commit"
 git branch -M main
 git push -u origin main
 ```
-
-然后按回车键。
 
 ## Vercel
 
@@ -83,15 +96,15 @@ hugo server -D
 
 如果没有什么问题，在终端输入 Ctrl+C 停止预览，但终端没必要关闭。
 
-### 修改 config.toml
+### 修改 hugo.toml
 
-你 Hugo 文件夹根目录下的 config.toml 有几个地方需要你自己改：
+你 Hugo 文件夹根目录下的 hugo.toml 有几个地方需要你自己改：
 
 - baseURL: 替换成你网站的域名，应该是类似这种 `https://myblog-hongtao.vercel.app/`。
 
-- GithubEdit: 把所有的 USERNAME 换成你的 GitHub 用户名，把所有的 REPONAME 换成 github用户名.mywebsite (如果你新建的仓库名不是 mywebsite，那你需要用你自己起的名字)
+- GithubEdit: 把所有的 USERNAME 换成你的 GitHub 用户名，把所有的 REPONAME 换成 仓库名，我这里是 mywebsite (如果你新建的仓库名不是 mywebsite，那你需要用你自己起的名字)
 
-- Params.lang 部分 `Your Nam` 和「你的名字」换成你的大名。
+- Params.lang.author 部分 `Your Name` 和「你的名字」换成你的大名。
 
 ### 更新网站
 
@@ -127,5 +140,28 @@ git push
 ```bash
 bash deploy.sh
 ```
+
+### 添加评论
+
+推荐使用 [giscus](https://giscus.app/zh-CN)。首先[把它安装到你的 github 账户](https://github.com/apps/giscus)。然后我们要确保目前的仓库（也就是 mywebsite）开启了 Discussion 功能。如果开启，请看[这里](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository#enabling-or-disabling-github-discussions-for-your-repository)。
+
+{{<figure src="https://docs.github.com/assets/cb-58111/mw-1440/images/help/discussions/public-repo-settings-global-nav-update.webp" title="开启 GitHub Discussions">}}
+
+在 mywebsite 这个仓库，点开 Settings，下滑找到 Discussions，确保已经选择。旁边的 Set up Discussions 可不用点。
+
+{{<figure src="/media/cnblog/github-discussions.png" title="开启 GitHub Discussions">}}
+
+然后，回到 [https://giscus.app/zh-CN](https://giscus.app/zh-CN)，在仓库下面输入 `USERNAME/REPONAME`，我这里是 `hongtaoh/mywebsite`。
+
+往下拉，Discussion 分类，选择 Announcements。特性那里，我建议勾选 1 (reaction)、3 (将评论框放在评论上方)、4 (懒加载) 项：
+
+{{<figure src="/media/cnblog/giscus.png" title="giscus 设置">}}
+
+把「启用 giscuss」部分的代码复制。随后，打开 `themes/hugo-ht/layouts/partials/comments.html`， 替代其中的 `<script></script>` 代码部分。
+
+评论系统就可以看见了。
+
+
+
 
 
