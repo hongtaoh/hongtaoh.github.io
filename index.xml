@@ -57,12 +57,12 @@ $$\lim_{dx \to 0} \frac{2^{x + dx} - 2^x}{dx} = \frac{2^{dx} - 1}{dx} \cdot 2^x$
 def derivative_const(dx): return (2**dx - 1)/dx derivative_const(0.001), derivative_const(0.0001), derivative_const(0.0000001) (0.6933874625807412, 0.6931712037649973, 0.6931472040783149) 我们看到，当 $dx$ 越来越小， $\frac{2^{dx} - 1}{dx}$ 越来越趋近于一个数。同样的情况也发生在：
 $$\lim_{dx \to 0} \frac{8^{x + dx} - 8^x}{dx} = \frac{8^{dx} - 1}{dx} \cdot 8^x$$
 def derivative_const(dx): return (8**dx - 1)/dx derivative_const(0.001), derivative_const(0.0001), derivative_const(0.0000001) (2.0816050796328422, 2.0796577605231015, 2.079441758784384) 我们定义 $e$:</description></item><item><title>如何零基础免费搭建个人网站 (2024 更新版)</title><link>https://hongtaoh.com/cn/2024/03/22/personal-website-tutorial/</link><pubDate>Fri, 22 Mar 2024 16:07:41 -0500</pubDate><guid>https://hongtaoh.com/cn/2024/03/22/personal-website-tutorial/</guid><description>这部分是我之前一篇教程的更新版 ，因为之前的弄得有点复杂，其实不用那么复杂。
-首先，把之前教程「网站主题」之前的部分看完。之后的就不用看了。
+首先，把之前教程「网站主题」(不含) 之前的部分看完。之后的就不用看了。
+看完并跟着做完之后，你应该已经在桌面或者其他路径建立了一个 hugo 文件夹：quickstart。
 下面的部分你不想看文字可以直接看我做的一个视频 。
 .aspect-ratio { position: relative; width: 100%; height: 0; padding-bottom: 75%; } .aspect-ratio iframe { position: absolute; width: 100%; height: 100%; left: 0; top: 0; } 新建 GitHub 仓库 新建 Github 仓库 登陆 GitHub, 点击头像左侧的加号，再点击&amp;rsquo;new repository'。
 新建仓库设置 在 Repository name 这里随便输入你喜欢的名字，比如 mywebsite。其他都不要动，点击 Create repository。
-复制仓库 url 随后，点击复制 url。
-复制下面的代码，把 YOURREPO 换成你上面复制的 url，然后把所有代码粘贴到终端：</description></item><item><title>Bayesian Statistics</title><link>https://hongtaoh.com/en/2024/03/17/bayesian/</link><pubDate>Sun, 17 Mar 2024 17:14:02 -0500</pubDate><guid>https://hongtaoh.com/en/2024/03/17/bayesian/</guid><description> An introduction to Bayesian thinking Think Bayes 2</description></item><item><title>读 Twelve Pillars</title><link>https://hongtaoh.com/cn/2023/11/16/%E8%AF%BB-twelve-pillars/</link><pubDate>Thu, 16 Nov 2023 08:47:01 -0600</pubDate><guid>https://hongtaoh.com/cn/2023/11/16/%E8%AF%BB-twelve-pillars/</guid><description>书籍：Twelve Pillars Work harder on yourself than on your job
+复制仓库 url 随后，点击复制 url。</description></item><item><title>Bayesian Statistics</title><link>https://hongtaoh.com/en/2024/03/17/bayesian/</link><pubDate>Sun, 17 Mar 2024 17:14:02 -0500</pubDate><guid>https://hongtaoh.com/en/2024/03/17/bayesian/</guid><description> An introduction to Bayesian thinking Think Bayes 2</description></item><item><title>读 Twelve Pillars</title><link>https://hongtaoh.com/cn/2023/11/16/%E8%AF%BB-twelve-pillars/</link><pubDate>Thu, 16 Nov 2023 08:47:01 -0600</pubDate><guid>https://hongtaoh.com/cn/2023/11/16/%E8%AF%BB-twelve-pillars/</guid><description>书籍：Twelve Pillars Work harder on yourself than on your job
 When you change, things change.
 身心灵健康 （身体、头脑、情绪、灵魂）
 Relationships

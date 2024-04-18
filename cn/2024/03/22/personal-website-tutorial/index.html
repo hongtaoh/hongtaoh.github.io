@@ -52,8 +52,9 @@ Table of Contents:
 <li><a href=#后续>后续</a>
 <ul>
 <li><a href=#新加一篇博客>新加一篇博客</a></li>
-<li><a href=#修改-configtoml>修改 config.toml</a></li>
+<li><a href=#修改-hugotoml>修改 hugo.toml</a></li>
 <li><a href=#更新网站>更新网站</a></li>
+<li><a href=#添加评论>添加评论</a></li>
 </ul>
 </li>
 </ul>
@@ -62,7 +63,8 @@ Table of Contents:
 <div class="body-text list-text">
 <p>这部分是我<a href=/cn/2021/03/02/personal-website-tutorial/>之前一篇教程的更新版</a>
 ，因为之前的弄得有点复杂，其实不用那么复杂。</p>
-<p>首先，把之前教程「网站主题」之前的部分看完。之后的就不用看了。</p>
+<p>首先，把之前教程「网站主题」(不含) 之前的部分看完。之后的就不用看了。</p>
+<p>看完并跟着做完之后，你应该已经在桌面或者其他路径建立了一个 hugo 文件夹：<code>quickstart</code>。</p>
 <p>下面的部分你不想看文字可以直接看<a href=https://www.bilibili.com/video/BV1af421f7Tw/ target=_blank rel="noreferrer noopener">我做的一个视频</a>
 。</p>
 <style>.aspect-ratio{position:relative;width:100%;height:0;padding-bottom:75%}.aspect-ratio iframe{position:absolute;width:100%;height:100%;left:0;top:0}</style>
@@ -97,21 +99,24 @@ Table of Contents:
 </figcaption>
 </figure>
 <p>随后，点击复制 url。</p>
-<p>复制下面的代码，把 <code>YOURREPO</code> 换成你上面复制的 url，然后把所有代码粘贴到终端：</p>
+<p>复制下面的代码，粘贴到终端，然后点回车键。</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:green>cd</span> quickstart
 git init
 git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
 cp -r themes/hugo-ht/exampleSite/* .
 cp -r themes/hugo-ht/archetypes . 
-rm hugo.toml
-
-git remote add origin YOURREPO
+</code></pre></div><p>回到 quickstart 文件夹，你会看到一个文件为 <code>vercel.json</code> (受 <a href=https://discourse.gohugo.io/t/vercel-tips/34766 target=_blank rel="noreferrer noopener">Rick Cogley 帖子</a>
+启发)。打开它，并把 <code>HUGO_VERSION</code> 改成你的 hugo version。</p>
+<p>hugo version 怎么查？在终端输入 <code>hugo version</code> 即可。比如，我输完后，结果为</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo v0.119.0-b84644c008e0dc2c4b67bd69cccf87a41a03937e+extended darwin/arm64 <span style=color:#19177c>BuildDate</span><span style=color:#666>=</span>2023-09-24T15:20:17Z <span style=color:#19177c>VendorInfo</span><span style=color:#666>=</span>brew
+</code></pre></div><p>那 <code>HUGO_VERSION</code> 就是 <code>0.119.0</code>。</p>
+<p>然后回到终端，复制下面的代码（记得把 <code>YOURREPO</code> 换成你上面复制的 url），把所有代码粘贴到终端，然后点回车。</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git remote add origin YOURREPO
 git add .
 git commit -m <span style=color:#ba2121>&#34;first commit&#34;</span>
 git branch -M main
 git push -u origin main
-</code></pre></div><p>然后按回车键。</p>
-<h2 id=vercel>Vercel<a href=#vercel class=header-anchor arialabel=Anchor> # </a></h2>
+</code></pre></div><h2 id=vercel>Vercel<a href=#vercel class=header-anchor arialabel=Anchor> # </a></h2>
 <figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
 <a href=/media/cnblog/vercel-login.png itemprop=contentUrl>
 <img itemprop=thumbnail src=/media/cnblog/vercel-login.png>
@@ -149,17 +154,17 @@ git push -u origin main
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo server -D
 </code></pre></div><p>打开终端显示的 http://localhost:1313/ ，你可以看到最新的。</p>
 <p>如果没有什么问题，在终端输入 Ctrl+C 停止预览，但终端没必要关闭。</p>
-<h3 id=修改-configtoml>修改 config.toml<a href=#修改-configtoml class=header-anchor arialabel=Anchor> # </a></h3>
-<p>你 Hugo 文件夹根目录下的 config.toml 有几个地方需要你自己改：</p>
+<h3 id=修改-hugotoml>修改 hugo.toml<a href=#修改-hugotoml class=header-anchor arialabel=Anchor> # </a></h3>
+<p>你 Hugo 文件夹根目录下的 hugo.toml 有几个地方需要你自己改：</p>
 <ul>
 <li>
 <p>baseURL: 替换成你网站的域名，应该是类似这种 <code>https://myblog-hongtao.vercel.app/</code>。</p>
 </li>
 <li>
-<p>GithubEdit: 把所有的 USERNAME 换成你的 GitHub 用户名，把所有的 REPONAME 换成 github用户名.mywebsite (如果你新建的仓库名不是 mywebsite，那你需要用你自己起的名字)</p>
+<p>GithubEdit: 把所有的 USERNAME 换成你的 GitHub 用户名，把所有的 REPONAME 换成 仓库名，我这里是 mywebsite (如果你新建的仓库名不是 mywebsite，那你需要用你自己起的名字)</p>
 </li>
 <li>
-<p>Params.lang 部分 <code>Your Nam</code> 和「你的名字」换成你的大名。</p>
+<p>Params.lang.author 部分 <code>Your Name</code> 和「你的名字」换成你的大名。</p>
 </li>
 </ul>
 <h3 id=更新网站>更新网站<a href=#更新网站 class=header-anchor arialabel=Anchor> # </a></h3>
@@ -179,8 +184,42 @@ git commit -m <span style=color:#ba2121>&#34;</span><span style=color:#19177c>$m
 git push
 </code></pre></div><p>这样，每次上传更新时，你只需要在 <code>cd</code> 了你的 Hugo 文件夹后运行</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>bash deploy.sh
-</code></pre></div>
-<p style=color:#777>最后一次修改于 2024-04-04</p>
+</code></pre></div><h3 id=添加评论>添加评论<a href=#添加评论 class=header-anchor arialabel=Anchor> # </a></h3>
+<p>推荐使用 <a href=https://giscus.app/zh-CN target=_blank rel="noreferrer noopener">giscus</a>
+。首先<a href=https://github.com/apps/giscus target=_blank rel="noreferrer noopener">把它安装到你的 github 账户</a>
+。然后我们要确保目前的仓库（也就是 mywebsite）开启了 Discussion 功能。如果开启，请看<a href=https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository#enabling-or-disabling-github-discussions-for-your-repository target=_blank rel="noreferrer noopener">这里</a>
+。</p>
+<figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=https://docs.github.com/assets/cb-58111/mw-1440/images/help/discussions/public-repo-settings-global-nav-update.webp itemprop=contentUrl>
+<img itemprop=thumbnail src=https://docs.github.com/assets/cb-58111/mw-1440/images/help/discussions/public-repo-settings-global-nav-update.webp>
+</a>
+<figcaption>
+<h4>开启 GitHub Discussions</h4>
+</figcaption>
+</figure>
+<p>在 mywebsite 这个仓库，点开 Settings，下滑找到 Discussions，确保已经选择。旁边的 Set up Discussions 可不用点。</p>
+<figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/media/cnblog/github-discussions.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/media/cnblog/github-discussions.png>
+</a>
+<figcaption>
+<h4>开启 GitHub Discussions</h4>
+</figcaption>
+</figure>
+<p>然后，回到 <a href=https://giscus.app/zh-CN target=_blank rel="noreferrer noopener">https://giscus.app/zh-CN</a>
+，在仓库下面输入 <code>USERNAME/REPONAME</code>，我这里是 <code>hongtaoh/mywebsite</code>。</p>
+<p>往下拉，Discussion 分类，选择 Announcements。特性那里，我建议勾选 1 (reaction)、3 (将评论框放在评论上方)、4 (懒加载) 项：</p>
+<figure itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject>
+<a href=/media/cnblog/giscus.png itemprop=contentUrl>
+<img itemprop=thumbnail src=/media/cnblog/giscus.png>
+</a>
+<figcaption>
+<h4>giscus 设置</h4>
+</figcaption>
+</figure>
+<p>把「启用 giscuss」部分的代码复制。随后，打开 <code>themes/hugo-ht/layouts/partials/comments.html</code>， 替代其中的 <code>&lt;script>&lt;/script></code> 代码部分。</p>
+<p>评论系统就可以看见了。</p>
+<p style=color:#777>最后一次修改于 2024-04-18</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>
