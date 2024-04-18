@@ -39,6 +39,7 @@ git init
 git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
 cp -r themes/hugo-ht/exampleSite/* .
 cp -r themes/hugo-ht/archetypes . 
+rm hugo.toml
 ```
 
 回到 quickstart 文件夹，你会看到一个文件为 `vercel.json` (受 [Rick Cogley 帖子](https://discourse.gohugo.io/t/vercel-tips/34766) 启发)。打开它，并把 `HUGO_VERSION` 改成你的 hugo version。
@@ -96,9 +97,9 @@ hugo server -D
 
 如果没有什么问题，在终端输入 Ctrl+C 停止预览，但终端没必要关闭。
 
-### 修改 hugo.toml
+### 修改 config.toml
 
-你 Hugo 文件夹根目录下的 hugo.toml 有几个地方需要你自己改：
+你 Hugo 文件夹根目录下的 config.toml 有几个地方需要你自己改：
 
 - baseURL: 替换成你网站的域名，应该是类似这种 `https://myblog-hongtao.vercel.app/`。
 
