@@ -40,6 +40,7 @@ git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
 cp -r themes/hugo-ht/exampleSite/* .
 cp -r themes/hugo-ht/archetypes . 
 rm hugo.toml
+rm themes/hugo-ht/.git
 ```
 
 回到 quickstart 文件夹，你会看到一个文件为 `vercel.json` (受 [Rick Cogley 帖子](https://discourse.gohugo.io/t/vercel-tips/34766) 启发)。打开它，并把 `HUGO_VERSION` 改成你的 hugo version。
@@ -141,6 +142,24 @@ git push
 ```bash
 bash deploy.sh
 ```
+
+### 修改博客语言
+
+你首先需要把 `themes/hugo-ht` 这个文件夹改名，比如，`themes/hugo-ht-theme`，然后 `config.toml` 中改成
+
+```toml
+theme = "hugo-ht-theme"
+```
+
+这是为了防止 Vercel 不更接下来我们要改的部分。
+
+#### 只用一种语言
+
+看[这里](/cn/2021/03/02/personal-website-tutorial/#只用一种语言)
+
+#### 中文为主，英文为辅
+
+看[这里](/cn/2021/03/02/personal-website-tutorial/#中文为主英文为辅)
 
 ### 添加评论
 
