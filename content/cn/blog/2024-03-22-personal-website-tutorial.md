@@ -7,6 +7,10 @@ draft: false
 toc: true
 tags: 
 ---
+{{<block class="reminder">}}
+按照这个教程建好后，你的 GitHub 仓库会大致是：[https://github.com/hongtaoh/mywebsite](https://github.com/hongtaoh/mywebsite)。建好的网站会是这样：[https://hugo-ht.vercel.app/](https://hugo-ht.vercel.app/)。
+{{<end>}}
+
 这部分是我[之前一篇教程的更新版](/cn/2021/03/02/personal-website-tutorial/)，因为之前的弄得有点复杂，其实不用那么复杂。
 
 首先，把之前教程「网站主题」(不含) 之前的部分看完。之后的就不用看了。
@@ -151,7 +155,7 @@ bash deploy.sh
 theme = "hugo-ht-theme"
 ```
 
-这是为了防止 Vercel 不更接下来我们要改的部分。
+这是为了防止 Vercel 不更新接下来我们要改的部分。
 
 #### 只用一种语言
 
