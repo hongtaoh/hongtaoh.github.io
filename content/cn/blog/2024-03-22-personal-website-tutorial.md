@@ -163,7 +163,7 @@ theme = "hugo-ht-theme"
 
 ### 添加评论
 
-推荐使用 [giscus](https://giscus.app/zh-CN)。首先[把它安装到你的 github 账户](https://github.com/apps/giscus)。然后我们要确保目前的仓库（也就是 mywebsite）开启了 Discussion 功能。如果开启，请看[这里](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository#enabling-or-disabling-github-discussions-for-your-repository)。
+推荐使用 [giscus](https://giscus.app/zh-CN)。首先[把它安装到你的 github 账户](https://github.com/apps/giscus)。然后我们要确保目前的仓库（也就是 mywebsite）开启了 Discussion 功能。如何开启，请看[这里](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository#enabling-or-disabling-github-discussions-for-your-repository)。
 
 {{<figure src="https://docs.github.com/assets/cb-58111/mw-1440/images/help/discussions/public-repo-settings-global-nav-update.webp" title="开启 GitHub Discussions">}}
 
