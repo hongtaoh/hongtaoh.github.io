@@ -54,6 +54,7 @@ Table of Contents:
 <li><a href=#新加一篇博客>新加一篇博客</a></li>
 <li><a href=#修改-configtoml>修改 config.toml</a></li>
 <li><a href=#更新网站>更新网站</a></li>
+<li><a href=#修改博客语言>修改博客语言</a></li>
 <li><a href=#添加评论>添加评论</a></li>
 </ul>
 </li>
@@ -106,6 +107,7 @@ git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
 cp -r themes/hugo-ht/exampleSite/* .
 cp -r themes/hugo-ht/archetypes . 
 rm hugo.toml
+rm themes/hugo-ht/.git
 </code></pre></div><p>回到 quickstart 文件夹，你会看到一个文件为 <code>vercel.json</code> (受 <a href=https://discourse.gohugo.io/t/vercel-tips/34766 target=_blank rel="noreferrer noopener">Rick Cogley 帖子</a>
 启发)。打开它，并把 <code>HUGO_VERSION</code> 改成你的 hugo version。</p>
 <p>hugo version 怎么查？在终端输入 <code>hugo version</code> 即可。比如，我输完后，结果为</p>
@@ -185,7 +187,17 @@ git commit -m <span style=color:#ba2121>&#34;</span><span style=color:#19177c>$m
 git push
 </code></pre></div><p>这样，每次上传更新时，你只需要在 <code>cd</code> 了你的 Hugo 文件夹后运行</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>bash deploy.sh
-</code></pre></div><h3 id=添加评论>添加评论<a href=#添加评论 class=header-anchor arialabel=Anchor> # </a></h3>
+</code></pre></div><h3 id=修改博客语言>修改博客语言<a href=#修改博客语言 class=header-anchor arialabel=Anchor> # </a></h3>
+<p>你首先需要把 <code>themes/hugo-ht</code> 这个文件夹改名，比如，<code>themes/hugo-ht-theme</code>，然后 <code>config.toml</code> 中改成</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>theme = <span style=color:#ba2121>&#34;hugo-ht-theme&#34;</span>
+</code></pre></div><p>这是为了防止 Vercel 不更接下来我们要改的部分。</p>
+<h4 id=只用一种语言>只用一种语言<a href=#只用一种语言 class=header-anchor arialabel=Anchor> # </a></h4>
+<p>看<a href=/cn/2021/03/02/personal-website-tutorial/#%e5%8f%aa%e7%94%a8%e4%b8%80%e7%a7%8d%e8%af%ad%e8%a8%80>这里</a>
+</p>
+<h4 id=中文为主英文为辅>中文为主，英文为辅<a href=#中文为主英文为辅 class=header-anchor arialabel=Anchor> # </a></h4>
+<p>看<a href=/cn/2021/03/02/personal-website-tutorial/#%e4%b8%ad%e6%96%87%e4%b8%ba%e4%b8%bb%e8%8b%b1%e6%96%87%e4%b8%ba%e8%be%85>这里</a>
+</p>
+<h3 id=添加评论>添加评论<a href=#添加评论 class=header-anchor arialabel=Anchor> # </a></h3>
 <p>推荐使用 <a href=https://giscus.app/zh-CN target=_blank rel="noreferrer noopener">giscus</a>
 。首先<a href=https://github.com/apps/giscus target=_blank rel="noreferrer noopener">把它安装到你的 github 账户</a>
 。然后我们要确保目前的仓库（也就是 mywebsite）开启了 Discussion 功能。如果开启，请看<a href=https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository#enabling-or-disabling-github-discussions-for-your-repository target=_blank rel="noreferrer noopener">这里</a>
