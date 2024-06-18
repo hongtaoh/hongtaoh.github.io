@@ -3,6 +3,31 @@ title: Research
 type : nolisting
 ---
 
+[Google Scholar](https://scholar.google.com/citations?user=VO6EfSzAAG0C&hl=en)
+
+## Journal of Communication 
+
+{{< columns >}}
+
+{{<figure-a src="/media/research/joc_02.jpeg" link="https://academic.oup.com/joc/advance-article/doi/10.1093/joc/jqae019/7687236" >}}
+
+{{< column >}}
+
+**[Addressing Whiteness in communication scholar composition and collaboration across seven decades of ICA journals (1951–2022)](https://academic.oup.com/joc/advance-article/doi/10.1093/joc/jqae019/7687236)**. [Haley Hatfield](https://haleyrhatfield.com/), [Hongtao Hao](/), [Matthew Klein](https://www.linkedin.com/in/matthew-klein-ma), [Jing Zhang](https://kristenjz.com/), Yijie Fu, [Jaemin Kim](https://jaemin-kim.notion.site/), Jongmin Lee, [Sun Joo (Grace) Ahn](https://grady.uga.edu/faculty/sun-joo-grace-ahn/). *Journal of Communication*, 2024
+
+{{< endcolumn >}}
+
+```
+@article{hatfield2024addressing,
+  title={Addressing Whiteness in communication scholar composition and collaboration across seven decades of ICA journals (1951--2022)},
+  author={Hatfield, Haley R and Hao, Hongtao and Klein, Matthew and Zhang, Jing and Fu, Yijie and Kim, Jaemin and Lee, Jongmin and Ahn, Sun Joo},
+  journal={Journal of Communication},
+  pages={jqae019},
+  year={2024},
+  publisher={Oxford University Press}
+}
+```
+
 ## IUI 2024 Companion
 
 {{< columns >}}
@@ -24,6 +49,28 @@ type : nolisting
   year={2024}
 }
 
+```
+
+## CHI (Extended Abstract)
+
+{{< columns >}}
+
+{{<figure-a src="/media/research/chi_ea.png" link="https://dl.acm.org/doi/full/10.1145/3613905.3651042" >}}
+
+{{< column >}}
+
+**[Investigating Interaction Modes and User Agency in Human-LLM Collaboration for Domain-Specific Data Analysis](https://dl.acm.org/doi/full/10.1145/3613905.3651042)**. [Jiajing Guo](https://www.jiajingguo.org/), [Vikram Mohanty](https://vikrammohanty.com/), [Jorge H Piazentin Ono](https://scholar.google.com/citations?user=h21TM74AAAAJ), [Hongtao Hao](/), [Liang Gou](https://www.linkedin.com/in/lianggou/), [Liu Ren](https://www.liu-ren.com/). *Extended Abstracts of the CHI Conference on Human Factors in Computing Systems*, pp. 1-9. 2024.
+
+{{< endcolumn >}}
+
+```
+@inproceedings{guo2024investigating,
+  title={Investigating Interaction Modes and User Agency in Human-LLM Collaboration for Domain-Specific Data Analysis},
+  author={Guo, Jiajing and Mohanty, Vikram and Piazentin Ono, Jorge H and Hao, Hongtao and Gou, Liang and Ren, Liu},
+  booktitle={Extended Abstracts of the CHI Conference on Human Factors in Computing Systems},
+  pages={1--9},
+  year={2024}
+}
 ```
 
 ## IEEEVIS 2022
