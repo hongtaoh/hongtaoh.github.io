@@ -1,0 +1,336 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/cn/>关于</a></li>
+<li><a href=/cn/blog/>日志</a></li>
+<li><a href=/>English</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>K-means 算法讲解</h1>
+<p>郝鸿涛
+/ 2024-07-06 </p>
+<hr>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2024-07-05-k-means.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title=编辑本页></i>
+</a>
+</span>
+<aside class=toc>
+Table of Contents:
+<nav id=TableOfContents>
+<ul>
+<li><a href=#算法讲解>算法讲解</a></li>
+<li><a href=#写初步代码>写初步代码</a></li>
+<li><a href=#普适性代码>普适性代码</a></li>
+<li><a href=#制作动画>制作动画</a></li>
+</ul>
+</nav>
+</aside>
+<div class="body-text list-text">
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>numpy</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>np</span> 
+<span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>pandas</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>pd</span>
+<span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>matplotlib.pyplot</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>plt</span> 
+<span style=color:green;font-weight:700>from</span> <span style=color:#00f;font-weight:700>matplotlib.animation</span> <span style=color:green;font-weight:700>import</span> FuncAnimation, FFMpegWriter
+</code></pre></div><h2 id=算法讲解>算法讲解<a href=#算法讲解 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>K-means 的作用是将数据分类。下面我们用最简单的例子来举例，然后一步步手动写出该算法 (不调用出 pandas, numpy 和 matploblib 之外的任何包)。</p>
+<p>下面我们有 200 个随机的二维数据点：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>data <span style=color:#666>=</span> np<span style=color:#666>.</span>random<span style=color:#666>.</span>rand(<span style=color:#666>200</span>, <span style=color:#666>2</span>)
+plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(<span style=color:#666>6</span>,<span style=color:#666>4</span>))
+plt<span style=color:#666>.</span>scatter(data[:, <span style=color:#666>0</span>], data[:, <span style=color:#666>1</span>], c<span style=color:#666>=</span><span style=color:#ba2121>&#34;blue&#34;</span>, marker<span style=color:#666>=</span><span style=color:#ba2121>&#34;o&#34;</span>)
+plt<span style=color:#666>.</span>title(<span style=color:#ba2121>&#34;Random data points&#34;</span>)
+plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#34;X&#34;</span>)
+plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#34;Y&#34;</span>)
+plt<span style=color:#666>.</span>show()
+</code></pre></div><p><img src=/cn/blog/2024-07-05-k-means_files/2024-07-05-k-means_3_0.png alt=png></p>
+<p>我们的任务是将上面的 200 个点划分为 <code>$k$</code> 类。K-means 的算法步骤为下：</p>
+<ol>
+<li>随机选取 <code>$k$</code> 个点作为最初始的中心点 (centroid)</li>
+<li>对 200 个点中的每个点 <code>$i$</code>，计算该点与每个中心点 (centroid) 的距离。如果距离第一个中心点最近，那 <code>$i$</code> 归为第一类，以此类推。</li>
+<li>对每一个类中的所有点，取平均值，得到新的 <code>$k$</code> 个中心点。</li>
+<li>重复第二步与第三步，直到中心点无法继续更新（或者满足你自定义的条件，比如，新的中心点与之前的距离非常近）</li>
+</ol>
+<h2 id=写初步代码>写初步代码<a href=#写初步代码 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>下面，我们按照上面的步骤简单写一下 K-means。</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># 数据维度，我们这里是二维的，也就是只有 x, y</span>
+n <span style=color:#666>=</span> <span style=color:#666>2</span>
+<span style=color:#408080;font-style:italic># 将数据分为多少个类</span>
+k <span style=color:#666>=</span> <span style=color:#666>2</span>
+<span style=color:#408080;font-style:italic># 最初的随机中心点</span>
+initial_centroids <span style=color:#666>=</span> np<span style=color:#666>.</span>random<span style=color:#666>.</span>rand(k, n)
+<span style=color:#408080;font-style:italic># 初始化 clusters。clusters 为一个 list，该 list 包含 k 个子 list。每个子 list 是一个类</span>
+<span style=color:#408080;font-style:italic># 其里面的元素为划为该类的数据点</span>
+clusters <span style=color:#666>=</span> [[] <span style=color:green;font-weight:700>for</span> _ <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(k)]
+<span style=color:#408080;font-style:italic># 对于每一个点</span>
+<span style=color:green;font-weight:700>for</span> d <span style=color:#a2f;font-weight:700>in</span> data:
+    <span style=color:#408080;font-style:italic># 计算该点与每一个中心点的距离</span>
+    distances <span style=color:#666>=</span> [np<span style=color:#666>.</span>linalg<span style=color:#666>.</span>norm(d <span style=color:#666>-</span> initial_centroids[c]) <span style=color:green;font-weight:700>for</span> c <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(k)]
+    <span style=color:#408080;font-style:italic># 看看距离哪一个中心点更近</span>
+    min_distances_idx <span style=color:#666>=</span> np<span style=color:#666>.</span>argmin(distances)
+    <span style=color:#408080;font-style:italic># 将该点放进距离较近的中心点 (centroid) 所在的类别 (cluster)</span>
+    clusters[min_distances_idx]<span style=color:#666>.</span>append(d)
+<span style=color:#408080;font-style:italic># 更新了 clusters  之后，我们继续更新 centroids。此时，两个 centroids 分别是各自所在 cluster 的中心，</span>
+<span style=color:#408080;font-style:italic># 也就是 mean</span>
+<span style=color:#408080;font-style:italic># axis = 0, by column</span>
+updated_centroids <span style=color:#666>=</span> np<span style=color:#666>.</span>array([np<span style=color:#666>.</span>mean(clusters[c], axis <span style=color:#666>=</span> <span style=color:#666>0</span>) <span style=color:green;font-weight:700>for</span> c <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(k)])
+</code></pre></div><p>好，我们已经更新了 clusters 和 centroids，让我们来看看现在的情况如何：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>colors <span style=color:#666>=</span> [<span style=color:#ba2121>&#39;b&#39;</span>, <span style=color:#ba2121>&#39;orange&#39;</span>, <span style=color:#ba2121>&#39;g&#39;</span>, <span style=color:#ba2121>&#39;r&#39;</span>, <span style=color:#ba2121>&#39;y&#39;</span>, <span style=color:#ba2121>&#39;c&#39;</span>, <span style=color:#ba2121>&#39;m&#39;</span>]
+plt<span style=color:#666>.</span>figure(figsize <span style=color:#666>=</span> (<span style=color:#666>6</span>, <span style=color:#666>4</span>))
+<span style=color:green;font-weight:700>for</span> i, cluster <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>enumerate</span>(clusters):
+    cluster <span style=color:#666>=</span> np<span style=color:#666>.</span>array(cluster)
+    plt<span style=color:#666>.</span>scatter(cluster[:, <span style=color:#666>0</span>], cluster[:, <span style=color:#666>1</span>], c <span style=color:#666>=</span> colors[i], label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;Cluster </span><span style=color:#b68;font-weight:700>{</span>i<span style=color:#666>+</span><span style=color:#666>1</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#34;</span>)
+plt<span style=color:#666>.</span>scatter(
+    initial_centroids[:, <span style=color:#666>0</span>], 
+    initial_centroids[:, <span style=color:#666>1</span>],
+    c<span style=color:#666>=</span><span style=color:#ba2121>&#39;k&#39;</span>,
+    marker<span style=color:#666>=</span><span style=color:#ba2121>&#39;x&#39;</span>,
+    s <span style=color:#666>=</span> <span style=color:#666>100</span>,
+    label<span style=color:#666>=</span><span style=color:#ba2121>&#34;Initial Centroids&#34;</span>
+)
+plt<span style=color:#666>.</span>scatter(
+    updated_centroids[:, <span style=color:#666>0</span>], 
+    updated_centroids[:, <span style=color:#666>1</span>],
+    c<span style=color:#666>=</span><span style=color:#ba2121>&#39;purple&#39;</span>,
+    marker<span style=color:#666>=</span><span style=color:#ba2121>&#39;o&#39;</span>,
+    s <span style=color:#666>=</span> <span style=color:#666>100</span>,
+    label<span style=color:#666>=</span><span style=color:#ba2121>&#34;Current Centroids&#34;</span>
+)
+plt<span style=color:#666>.</span>title(<span style=color:#ba2121>&#34;K-means Clustering (Iteration: 1)&#34;</span>)
+plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#34;Feature 1&#34;</span>)
+plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#34;Feature 2&#34;</span>)
+plt<span style=color:#666>.</span>legend()
+plt<span style=color:#666>.</span>show()
+
+</code></pre></div><p><img src=/cn/blog/2024-07-05-k-means_files/2024-07-05-k-means_7_0.png alt=png></p>
+<p>我们继续：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># 需要重新初始化 clusters</span>
+clusters <span style=color:#666>=</span> [[] <span style=color:green;font-weight:700>for</span> _ <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(k)]
+<span style=color:#408080;font-style:italic># 对于每一个点</span>
+<span style=color:green;font-weight:700>for</span> d <span style=color:#a2f;font-weight:700>in</span> data:
+    <span style=color:#408080;font-style:italic># 计算该点与每一个中心点的距离</span>
+    distances <span style=color:#666>=</span> [np<span style=color:#666>.</span>linalg<span style=color:#666>.</span>norm(d <span style=color:#666>-</span> updated_centroids[c]) <span style=color:green;font-weight:700>for</span> c <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(k)]
+    <span style=color:#408080;font-style:italic># 看看距离哪一个中心点更近</span>
+    min_distances_idx <span style=color:#666>=</span> np<span style=color:#666>.</span>argmin(distances)
+    <span style=color:#408080;font-style:italic># 将该点放进距离较近的中心点 (centroid) 所在的类别 (cluster)</span>
+    clusters[min_distances_idx]<span style=color:#666>.</span>append(d)
+<span style=color:#408080;font-style:italic># 更新了 clusters  之后，我们继续更新 centroids。此时，两个 centroids 分别是各自所在 cluster 的中心，</span>
+<span style=color:#408080;font-style:italic># 也就是 mean</span>
+<span style=color:#408080;font-style:italic># axis = 0, by column</span>
+updated_centroids <span style=color:#666>=</span> np<span style=color:#666>.</span>array([np<span style=color:#666>.</span>mean(clusters[c], axis <span style=color:#666>=</span> <span style=color:#666>0</span>) <span style=color:green;font-weight:700>for</span> c <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(k)])
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>colors <span style=color:#666>=</span> [<span style=color:#ba2121>&#39;b&#39;</span>, <span style=color:#ba2121>&#39;orange&#39;</span>, <span style=color:#ba2121>&#39;g&#39;</span>, <span style=color:#ba2121>&#39;r&#39;</span>, <span style=color:#ba2121>&#39;y&#39;</span>, <span style=color:#ba2121>&#39;c&#39;</span>, <span style=color:#ba2121>&#39;m&#39;</span>]
+plt<span style=color:#666>.</span>figure(figsize <span style=color:#666>=</span> (<span style=color:#666>6</span>, <span style=color:#666>4</span>))
+<span style=color:green;font-weight:700>for</span> i, cluster <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>enumerate</span>(clusters):
+    cluster <span style=color:#666>=</span> np<span style=color:#666>.</span>array(cluster)
+    plt<span style=color:#666>.</span>scatter(cluster[:, <span style=color:#666>0</span>], cluster[:, <span style=color:#666>1</span>], c <span style=color:#666>=</span> colors[i], label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;Cluster </span><span style=color:#b68;font-weight:700>{</span>i<span style=color:#666>+</span><span style=color:#666>1</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#34;</span>)
+plt<span style=color:#666>.</span>scatter(
+    updated_centroids[:, <span style=color:#666>0</span>], 
+    updated_centroids[:, <span style=color:#666>1</span>],
+    c<span style=color:#666>=</span><span style=color:#ba2121>&#39;purple&#39;</span>,
+    marker<span style=color:#666>=</span><span style=color:#ba2121>&#39;o&#39;</span>,
+    s <span style=color:#666>=</span> <span style=color:#666>100</span>,
+    label<span style=color:#666>=</span><span style=color:#ba2121>&#34;Current Centroids&#34;</span>
+)
+plt<span style=color:#666>.</span>title(<span style=color:#ba2121>&#34;K-means Clustering (Iteration: 2)&#34;</span>)
+plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#34;Feature 1&#34;</span>)
+plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#34;Feature 2&#34;</span>)
+plt<span style=color:#666>.</span>legend()
+plt<span style=color:#666>.</span>show()
+</code></pre></div><p><img src=/cn/blog/2024-07-05-k-means_files/2024-07-05-k-means_10_0.png alt=png></p>
+<p>好，我们就不继续一步步做了。上面代码的问题是，每一步都需要重新写代码，这样不行。我们需要实现自动化。</p>
+<h2 id=普适性代码>普适性代码<a href=#普适性代码 class=header-anchor arialabel=Anchor> # </a></h2>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>kmeans_clustering</span>(data, centroids):
+    <span style=color:#ba2121>&#34;&#34;&#34;
+</span><span style=color:#ba2121>    Inputs:
+</span><span style=color:#ba2121>      - data: data points to cluster 
+</span><span style=color:#ba2121>      - centroids: previous centroids
+</span><span style=color:#ba2121>    
+</span><span style=color:#ba2121>    Outputs:
+</span><span style=color:#ba2121>      - updated_centoids:
+</span><span style=color:#ba2121>      - clusters: a list. 
+</span><span style=color:#ba2121>        Each list contains all arrays which are data points classified into this cluster
+</span><span style=color:#ba2121>    &#34;&#34;&#34;</span>
+    <span style=color:#408080;font-style:italic># num of clusters</span>
+    k <span style=color:#666>=</span> <span style=color:green>len</span>(centroids)
+    <span style=color:#408080;font-style:italic># initialize empty clusters</span>
+    clusters <span style=color:#666>=</span> [[] <span style=color:green;font-weight:700>for</span> _ <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(k)]
+    <span style=color:#408080;font-style:italic># for each data point</span>
+    <span style=color:green;font-weight:700>for</span> d <span style=color:#a2f;font-weight:700>in</span> data:
+        <span style=color:#408080;font-style:italic># calcuate distance from each centroid to this data point</span>
+        distances <span style=color:#666>=</span> [np<span style=color:#666>.</span>linalg<span style=color:#666>.</span>norm(d <span style=color:#666>-</span> centroids[c]) <span style=color:green;font-weight:700>for</span> c <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(k)]
+        <span style=color:#408080;font-style:italic># the index of centroid that is the closest to this data point</span>
+        min_distance_idx <span style=color:#666>=</span> np<span style=color:#666>.</span>argmin(distances)
+        <span style=color:#408080;font-style:italic># add this data point to the associated cluster</span>
+        clusters[min_distance_idx]<span style=color:#666>.</span>append(d)
+    <span style=color:#408080;font-style:italic># update centroids by calculating mean of each cluster</span>
+    updated_centroids <span style=color:#666>=</span> np<span style=color:#666>.</span>array([np<span style=color:#666>.</span>mean(clusters[c], axis <span style=color:#666>=</span> <span style=color:#666>0</span>) <span style=color:green;font-weight:700>for</span> c <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(k)])
+    <span style=color:green;font-weight:700>return</span> updated_centroids, clusters
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>make_plot</span>(clusters, centroids, iteration):
+    <span style=color:#408080;font-style:italic># Plotting the results</span>
+    colors <span style=color:#666>=</span> [<span style=color:#ba2121>&#39;b&#39;</span>, <span style=color:#ba2121>&#39;g&#39;</span>, <span style=color:#ba2121>&#39;r&#39;</span>, <span style=color:#ba2121>&#39;y&#39;</span>, <span style=color:#ba2121>&#39;c&#39;</span>, <span style=color:#ba2121>&#39;m&#39;</span>]
+    plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(<span style=color:#666>6</span>, <span style=color:#666>4</span>))
+    <span style=color:green;font-weight:700>for</span> i, cluster <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>enumerate</span>(clusters):
+        cluster <span style=color:#666>=</span> np<span style=color:#666>.</span>array(cluster)
+        <span style=color:green;font-weight:700>if</span> <span style=color:green>len</span>(cluster) <span style=color:#666>&gt;</span> <span style=color:#666>0</span>:
+            plt<span style=color:#666>.</span>scatter(cluster[:, <span style=color:#666>0</span>], cluster[:, <span style=color:#666>1</span>], 
+                        c<span style=color:#666>=</span>colors[i], label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Cluster </span><span style=color:#b68;font-weight:700>{</span>i<span style=color:#666>+</span><span style=color:#666>1</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#39;</span>)
+
+    <span style=color:#408080;font-style:italic># plt.scatter(initial_centroids[:, 0], initial_centroids[:, 1], c=&#39;k&#39;, marker=&#39;x&#39;, s=100, label=&#39;Initial Centroids&#39;)</span>
+    plt<span style=color:#666>.</span>scatter(centroids[:, <span style=color:#666>0</span>], centroids[:, <span style=color:#666>1</span>], c<span style=color:#666>=</span><span style=color:#ba2121>&#39;k&#39;</span>, 
+                marker<span style=color:#666>=</span><span style=color:#ba2121>&#39;o&#39;</span>, s<span style=color:#666>=</span><span style=color:#666>100</span>, label<span style=color:#666>=</span><span style=color:#ba2121>&#39;Centroids&#39;</span>)
+    plt<span style=color:#666>.</span>title(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;K-means Clustering (Iteration: </span><span style=color:#b68;font-weight:700>{</span>iteration<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>)&#39;</span>)
+    plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#39;Feature 1&#39;</span>)
+    plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#39;Feature 2&#39;</span>)
+    plt<span style=color:#666>.</span>legend()
+    plt<span style=color:#666>.</span>show()
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># num of dimensions</span>
+n <span style=color:#666>=</span> <span style=color:#666>2</span>
+<span style=color:#408080;font-style:italic># num of clusters</span>
+k <span style=color:#666>=</span> <span style=color:#666>2</span>
+<span style=color:#408080;font-style:italic># Convergence criteria</span>
+threshold <span style=color:#666>=</span> <span style=color:#666>1e-2</span>
+<span style=color:#408080;font-style:italic># generate random data </span>
+data <span style=color:#666>=</span> np<span style=color:#666>.</span>random<span style=color:#666>.</span>rand(<span style=color:#666>200</span>, n)
+<span style=color:#408080;font-style:italic># random centroids as an initial stage; a k by n matrix</span>
+initial_centroids <span style=color:#666>=</span> np<span style=color:#666>.</span>random<span style=color:#666>.</span>rand(k, n) 
+<span style=color:#408080;font-style:italic># update centroids and clusters using our previous function</span>
+updated_centroids, clusters <span style=color:#666>=</span> kmeans_clustering(data, initial_centroids)
+<span style=color:#408080;font-style:italic># num of iterations</span>
+iteration <span style=color:#666>=</span> <span style=color:#666>0</span>
+centroids <span style=color:#666>=</span> initial_centroids
+<span style=color:#408080;font-style:italic># plot the initial state</span>
+make_plot([data], centroids, iteration)
+
+<span style=color:#408080;font-style:italic># np.max(np.linalg.norm(updated_centroids - centroids, axis=1))</span>
+<span style=color:#408080;font-style:italic># this calculates the max shift among centroid shifts</span>
+<span style=color:green;font-weight:700>while</span> np<span style=color:#666>.</span>max(np<span style=color:#666>.</span>linalg<span style=color:#666>.</span>norm(updated_centroids <span style=color:#666>-</span> centroids, axis<span style=color:#666>=</span><span style=color:#666>1</span>)) <span style=color:#666>&gt;</span> threshold:
+    iteration <span style=color:#666>+=</span> <span style=color:#666>1</span>
+    make_plot(clusters, updated_centroids, iteration)
+    <span style=color:#408080;font-style:italic># updated centroids </span>
+    centroids <span style=color:#666>=</span> updated_centroids
+    updated_centroids, clusters <span style=color:#666>=</span> kmeans_clustering(data, centroids)
+</code></pre></div><p><img src=/cn/blog/2024-07-05-k-means_files/2024-07-05-k-means_14_0.png alt=png></p>
+<p><img src=/cn/blog/2024-07-05-k-means_files/2024-07-05-k-means_14_1.png alt=png></p>
+<p><img src=/cn/blog/2024-07-05-k-means_files/2024-07-05-k-means_14_2.png alt=png></p>
+<p><img src=/cn/blog/2024-07-05-k-means_files/2024-07-05-k-means_14_3.png alt=png></p>
+<h2 id=制作动画>制作动画<a href=#制作动画 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>上面的代码我们可以把每一步画出来，我们试试制作一个动画。</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>fig, ax <span style=color:#666>=</span> plt<span style=color:#666>.</span>subplots(figsize <span style=color:#666>=</span> (<span style=color:#666>6</span>, <span style=color:#666>4</span>))
+<span style=color:#408080;font-style:italic># Convergence criteria</span>
+threshold <span style=color:#666>=</span> <span style=color:#666>1e-3</span>
+<span style=color:#408080;font-style:italic># generate random data </span>
+data <span style=color:#666>=</span> np<span style=color:#666>.</span>random<span style=color:#666>.</span>rand(<span style=color:#666>200</span>, n)
+<span style=color:#408080;font-style:italic># random centroids as an initial stage; a k by n matrix</span>
+initial_centroids <span style=color:#666>=</span> np<span style=color:#666>.</span>random<span style=color:#666>.</span>rand(k, n) 
+centroids <span style=color:#666>=</span> initial_centroids<span style=color:#666>.</span>copy()
+
+<span style=color:green;font-weight:700>def</span> <span style=color:#00f>update</span>(frame):
+    <span style=color:green;font-weight:700>global</span> centroids
+    ax<span style=color:#666>.</span>clear()
+    ax<span style=color:#666>.</span>set_title(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;K-means Clutering (Iteration: </span><span style=color:#b68;font-weight:700>{</span>frame<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>)&#34;</span>)
+    ax<span style=color:#666>.</span>set_xlabel(<span style=color:#ba2121>&#34;Feature 1&#34;</span>)
+    ax<span style=color:#666>.</span>set_ylabel(<span style=color:#ba2121>&#34;Feature 2&#34;</span>)
+    ax<span style=color:#666>.</span>set_xlim(<span style=color:#666>0</span>,<span style=color:#666>1</span>)
+    ax<span style=color:#666>.</span>set_ylim(<span style=color:#666>0</span>,<span style=color:#666>1</span>)
+
+    <span style=color:#408080;font-style:italic># plot nitial stage where there are two random centroids</span>
+    <span style=color:green;font-weight:700>if</span> frame <span style=color:#666>==</span> <span style=color:#666>0</span>:
+        ax<span style=color:#666>.</span>scatter(data[:, <span style=color:#666>0</span>], data[:, <span style=color:#666>1</span>], c<span style=color:#666>=</span><span style=color:#ba2121>&#34;gray&#34;</span>, label<span style=color:#666>=</span><span style=color:#ba2121>&#34;Data Points&#34;</span>)
+        ax<span style=color:#666>.</span>scatter(centroids[:, <span style=color:#666>0</span>], centroids[:, <span style=color:#666>1</span>],
+                   c<span style=color:#666>=</span><span style=color:#ba2121>&#39;k&#39;</span>, marker<span style=color:#666>=</span><span style=color:#ba2121>&#39;x&#39;</span>, s<span style=color:#666>=</span><span style=color:#666>100</span>, label<span style=color:#666>=</span><span style=color:#ba2121>&#39;Initial Centroids&#39;</span>
+        )
+        ax<span style=color:#666>.</span>legend()
+        <span style=color:green;font-weight:700>return</span>
+    
+    <span style=color:#408080;font-style:italic># update centroids and clusters using our previous function</span>
+    updated_centroids, clusters <span style=color:#666>=</span> kmeans_clustering(data, centroids)
+
+    <span style=color:#408080;font-style:italic># make plot</span>
+    colors <span style=color:#666>=</span> [<span style=color:#ba2121>&#39;b&#39;</span>, <span style=color:#ba2121>&#39;g&#39;</span>, <span style=color:#ba2121>&#39;r&#39;</span>, <span style=color:#ba2121>&#39;y&#39;</span>, <span style=color:#ba2121>&#39;c&#39;</span>, <span style=color:#ba2121>&#39;m&#39;</span>]
+    <span style=color:green;font-weight:700>for</span> j, cluster <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>enumerate</span>(clusters):
+        cluster <span style=color:#666>=</span> np<span style=color:#666>.</span>array(cluster)
+        <span style=color:green;font-weight:700>if</span> <span style=color:green>len</span>(cluster) <span style=color:#666>&gt;</span> <span style=color:#666>0</span>:
+            ax<span style=color:#666>.</span>scatter(cluster[:, <span style=color:#666>0</span>], cluster[:, <span style=color:#666>1</span>], c<span style=color:#666>=</span>colors[j <span style=color:#666>%</span> <span style=color:green>len</span>(colors)], label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Cluster </span><span style=color:#b68;font-weight:700>{</span>j<span style=color:#666>+</span><span style=color:#666>1</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#39;</span>)
+    <span style=color:#408080;font-style:italic># plot centroids</span>
+    ax<span style=color:#666>.</span>scatter(updated_centroids[:, <span style=color:#666>0</span>], updated_centroids[:, <span style=color:#666>1</span>], c<span style=color:#666>=</span><span style=color:#ba2121>&#39;k&#39;</span>, 
+                marker<span style=color:#666>=</span><span style=color:#ba2121>&#39;o&#39;</span>, s<span style=color:#666>=</span><span style=color:#666>100</span>, label<span style=color:#666>=</span><span style=color:#ba2121>&#39;Centroids&#39;</span>)
+    ax<span style=color:#666>.</span>legend()
+
+    <span style=color:#408080;font-style:italic># Check for convergence</span>
+    max_centroid_change <span style=color:#666>=</span> np<span style=color:#666>.</span>max(np<span style=color:#666>.</span>linalg<span style=color:#666>.</span>norm(updated_centroids <span style=color:#666>-</span> centroids, axis<span style=color:#666>=</span><span style=color:#666>1</span>))
+    <span style=color:green;font-weight:700>if</span> max_centroid_change <span style=color:#666>&lt;</span> threshold:
+        anim<span style=color:#666>.</span>event_source<span style=color:#666>.</span>stop()
+        <span style=color:green;font-weight:700>return</span>
+
+    <span style=color:#408080;font-style:italic># Update centroids</span>
+    centroids <span style=color:#666>=</span> updated_centroids
+
+<span style=color:#408080;font-style:italic># Create the animation</span>
+anim <span style=color:#666>=</span> FuncAnimation(fig, update, frames<span style=color:#666>=</span>np<span style=color:#666>.</span>arange(<span style=color:#666>20</span>), interval<span style=color:#666>=</span><span style=color:#666>1000</span>, repeat<span style=color:#666>=</span><span style=color:green;font-weight:700>False</span>)
+
+writer <span style=color:#666>=</span> FFMpegWriter(fps<span style=color:#666>=</span><span style=color:#666>1</span>)  <span style=color:#408080;font-style:italic># Adjust fps as needed</span>
+anim<span style=color:#666>.</span>save(<span style=color:#ba2121>&#34;/cn/blog/2024-07-05-k-means_files/kmeans_clustering.mp4&#34;</span>, writer<span style=color:#666>=</span>writer)
+
+<span style=color:#408080;font-style:italic># Show the animation</span>
+<span style=color:#408080;font-style:italic># plt.show()</span>
+</code></pre></div><div class=container>
+<div id=player-wrapper></div>
+</div>
+<script type=text/javascript src=https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js></script>
+<script>var playerElement=document.getElementById("player-wrapper"),player=new Clappr.Player({source:"/cn/blog/2024-07-05-k-means_files/kmeans_clustering.mp4",mute:!0,height:360,width:640});player.attachTo(playerElement)</script>
+<a href=https://hongtaoh.com/tags/ml/>#ML</a>
+<p style=color:#777>最后一次修改于 2024-07-07</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<div class=content>
+<script src=https://giscus.app/client.js data-repo=hongtaoh/hongtaoh.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyNjM3NDMzMTY=" data-category=Announcements data-category-id=DIC_kwDOD7hnVM4CUKk6 data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en data-loading=lazy crossorigin=anonymous async></script>
+</br>
+</div>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/cn/blog/index.xml type=application/rss+xml title="RSS feed">
+订阅 </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank>
+版权
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+郝鸿涛
+2020-2024
+</div>
+</footer>
