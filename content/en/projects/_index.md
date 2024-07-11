@@ -2,7 +2,36 @@
 title: Projects
 type : nolisting
 ---
-## 1. Data Visualizations
+## Machine Learning Blogs
+
+- Unsupervised Learning
+    - [K-means Clustering](/cn/2024/07/05/k-means/)
+    - Principal Component Analysis
+    - [Hierarchical Clustering](/en/2022/08/24/hier_cluster/)
+
+- Supervised Learning
+    - Classification:
+        - [K-Narest Neighbors (KNN)](/en/2022/09/26/knn/)
+        - Decision Tree
+
+    - Regression
+        - Linear Regression
+        - [Logisitc Regression](/cn/2023/04/24/lr/)
+
+- Neural Networks 
+    - Perceptron
+    - [Multi-layer Perceptron (MLP)](/cn/2023/04/26/nn/) (often referred to as a simple neural network)
+    - Convolutional Neural Network (CNN)
+    - Recurrent Neural Network (RNN)
+    - Long Short-Term Memory (LSTM)
+
+- Reinforcement Learning
+
+- SVM
+    - Linear SVM
+    - Non-linear SVM (using kernels)
+
+## Data Visualizations
 
 ### Modeling & Visualizing American Time Usage Survey [(ATUS)](https://www.bls.gov/TUS/)
 
@@ -72,7 +101,7 @@ This is a homework project for CS839 (Modeling User Interaction). I explored fac
 
 {{< endcolumn >}}
 
-## 2. Software
+## Software
 
 ### Hugo-Ht
 
@@ -102,7 +131,7 @@ This is a homework project for CS839 (Modeling User Interaction). I explored fac
 
 {{< endcolumn >}}
 
-## 3. Tutorials
+## Tutorials
 ### How to Create Online Books
 
 {{< columns >}}
@@ -210,7 +239,7 @@ A simple tutorial website to help beginners like me learn D3.js. It is a side pr
 
 {{< endcolumn >}}
 
-## 4. Websites
+## Websites
 ### International Journalism Class at RUC
 {{< columns >}}
 
