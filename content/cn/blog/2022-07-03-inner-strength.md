@@ -3,7 +3,7 @@ title: "内心的力量"
 date: 2022-07-03T21:58:49-05:00
 author: "郝鸿涛"
 slug: inner-strength
-draft: false
+draft: true
 toc: false
 tags: 感悟
 ---
