@@ -3,7 +3,7 @@ title: "曼谷看病记"
 date: 2024-05-06T10:27:06+07:00
 author: "郝鸿涛"
 slug: th-hospital
-draft: false
+draft: true
 toc: false
 tags: 旅行
 ---

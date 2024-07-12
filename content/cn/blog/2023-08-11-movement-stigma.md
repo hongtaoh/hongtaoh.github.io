@@ -3,7 +3,7 @@ title: "舞动的羞耻感"
 date: 2023-08-11T21:21:18-07:00
 author: "郝鸿涛"
 slug: stigma
-draft: false
+draft: true
 toc: false
 tags: 感悟
 ---
