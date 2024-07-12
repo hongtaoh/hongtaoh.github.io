@@ -3,7 +3,7 @@ title: Research
 type : nolisting
 ---
 
-[Google Scholar](https://scholar.google.com/citations?user=VO6EfSzAAG0C&hl=en)
+<!-- [Google Scholar](https://scholar.google.com/citations?user=VO6EfSzAAG0C&hl=en) -->
 
 ## Journal of Communication 
 
