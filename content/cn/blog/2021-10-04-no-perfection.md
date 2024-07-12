@@ -3,7 +3,7 @@ title: "千万不要追求完美"
 date: 2021-10-04T09:01:23-05:00
 author: "郝鸿涛"
 slug: no-perfection
-draft: false
+draft: true
 toc: false
 tags: 感悟
 ---

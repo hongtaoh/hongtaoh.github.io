@@ -3,7 +3,7 @@ title: "要找到自己核心价值和核心竞争力"
 date: 2021-10-04T09:02:06-05:00
 author: "郝鸿涛"
 slug: core-strength
-draft: false
+draft: true
 toc: true
 tags: 感悟
 ---

@@ -3,7 +3,7 @@ title: "人的异化"
 date: 2021-10-04T09:01:04-05:00
 author: "郝鸿涛"
 slug: alienation
-draft: false
+draft: true
 toc: false
 tags: 思考
 ---

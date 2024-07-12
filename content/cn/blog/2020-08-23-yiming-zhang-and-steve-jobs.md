@@ -3,7 +3,7 @@ title: 乔布斯和张一鸣
 date: 2020-08-23T09:15:37-04:00
 author: 郝鸿涛
 slug: zhang-and-jobs
-draft: false
+draft: true
 toc: false
 tags: 思考
 ---

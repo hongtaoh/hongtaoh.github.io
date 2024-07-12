@@ -3,7 +3,7 @@ title: 自信的三个层次
 date: 2020-08-11T16:48:11-04:00
 author: 郝鸿涛
 slug: confidence-hierarchy
-draft: false
+draft: true
 toc: true
 tags: 感悟
 ---

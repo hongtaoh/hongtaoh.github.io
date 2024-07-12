@@ -3,7 +3,7 @@ title: "反省与坚持"
 date: 2021-06-17T10:52:17-04:00
 author: "郝鸿涛"
 slug: reflection-perservere
-draft: false
+draft: true
 toc: false
 tags: 感悟
 ---

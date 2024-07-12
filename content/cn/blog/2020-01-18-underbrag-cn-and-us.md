@@ -3,7 +3,7 @@ title: 中美自黑文化的差异
 date: 2020-01-18T11:19:33-05:00
 author: 郝鸿涛
 slug: underbrag-cn-and-usa
-draft: false
+draft: true
 tags: 思考
 ---
 
