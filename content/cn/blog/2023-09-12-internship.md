@@ -3,7 +3,7 @@ title: "难忘的实习三个月"
 date: 2023-09-12T21:32:48-05:00
 author: "郝鸿涛"
 slug: internship
-draft: false
+draft: true
 toc: false
 tags: 经历
 ---

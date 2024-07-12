@@ -3,7 +3,7 @@ title: "要么改变，要么接受，不要抱怨"
 date: 2021-12-13T19:53:47-06:00
 author: "郝鸿涛"
 slug: no-grumble
-draft: false
+draft: true
 toc: false
 tags: 感悟
 ---
