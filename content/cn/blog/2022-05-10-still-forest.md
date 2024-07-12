@@ -3,7 +3,7 @@ title: "读《宁静的水池》"
 date: 2022-05-10T20:58:09-05:00
 author: "郝鸿涛"
 slug: still-forest-pool
-draft: false
+draft: true
 toc: false
 tags: 读书
 ---
