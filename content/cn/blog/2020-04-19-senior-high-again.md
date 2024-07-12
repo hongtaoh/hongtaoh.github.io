@@ -3,7 +3,7 @@ title: 如果我的高中能再来一遍
 date: 2020-04-19T10:57:52-04:00
 author: 郝鸿涛
 slug: senior-high
-draft: false
+draft: true
 toc: true
 tags: 感悟
 aliases:
