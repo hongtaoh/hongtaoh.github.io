@@ -5,6 +5,7 @@ date: '2020-01-06'
 slug: fltrp-reading-contest
 categories: []
 tags: 经历
+draft: true
 ---
 {{<figure src="/media/champion.JPG" title="获奖时刻">}}
 
