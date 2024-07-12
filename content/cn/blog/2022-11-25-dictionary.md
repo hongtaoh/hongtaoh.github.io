@@ -3,7 +3,7 @@ title: "把教材当成字典"
 date: 2022-11-25T13:00:04-06:00
 author: "郝鸿涛"
 slug: textbook-dict
-draft: false
+draft: true
 toc: false
 tags: 感悟
 ---
