@@ -3,7 +3,7 @@ title: "2019 年夏天的纽约游记"
 date: 2022-01-01T18:52:53-06:00
 author: "郝鸿涛"
 slug: nyc
-draft: false
+draft: true
 toc: false
 tags: 经历
 ---
