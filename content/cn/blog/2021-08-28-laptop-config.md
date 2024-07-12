@@ -3,7 +3,7 @@ title: "你的电脑真的需要那么高的配置吗？"
 date: 2021-08-28T11:06:12-05:00
 author: "郝鸿涛"
 slug: laptop-configuration
-draft: false
+draft: true
 toc: false
 tags: 思考
 ---

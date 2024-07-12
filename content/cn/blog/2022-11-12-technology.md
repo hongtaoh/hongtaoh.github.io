@@ -3,7 +3,7 @@ title: "科技发展是最重要的事吗？"
 date: 2022-11-12T20:45:15-06:00
 author: "郝鸿涛"
 slug: technology
-draft: false
+draft: true
 toc: false
 tags: 思考
 ---
