@@ -2,7 +2,9 @@
 title: Projects
 type : nolisting
 ---
-## Machine Learning Blogs
+## Tutorials
+
+### Machine Learning Tutorials
 
 - Unsupervised Learning
     - [K-means Clustering](/cn/2024/07/05/k-means/)
@@ -30,6 +32,119 @@ type : nolisting
 - SVM
     - Linear SVM
     - Non-linear SVM (using kernels)
+
+### Statistics
+- Bayesian Statistics
+    - [GitHub Repo](https://github.com/hongtaoh/bayes-book)
+    - [Website](https://bayes-book.vercel.app/intro.html)
+
+- [Event-Based Method](https://ebm-book2.vercel.app/)
+
+### [Web Scraping](https://github.com/hongtaoh/webscraping-tutorial)
+
+### [Snakemake](https://github.com/hongtaoh/snakemake-tutorial)
+
+### How to Create Online Books
+
+{{< columns >}}
+
+{{<figure-a src="/media/projects/onlinebook-portfolio.png" link="https://onlinebook.hongtaoh.com/portfolio/" >}}
+
+{{< column >}}
+
+I gave a talk at [YY Lab](http://yongyeol.com/) on how to create onlinebooks. 
+
+[Website](https://onlinebook.hongtaoh.com/portfolio/) | [Code](https://github.com/hongtaoh/onlinebook) | [Slides](https://onlinebook.hongtaoh.com/slides/onlinebook.html#1)
+
+{{< endcolumn >}}
+
+
+### Notes on Network Science
+{{< columns >}}
+
+{{<figure-a src="/media/projects/bfsD2.png" link="https://netsci.hongtaoh.com/" >}}
+
+{{< column >}}
+
+My notes while auditing Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s online course of [*INFO I606 Network Science*](https://github.com/yy/netsci-course)
+
+[Website](https://netsci.hongtaoh.com/) | [Code](https://github.com/hongtaoh/netsci-notes) | [PDF](https://netsci.hongtaoh.com/netsci.pdf)
+
+{{< endcolumn >}}
+
+### C101 With Hongtao
+{{< columns >}}
+
+{{<figure-a src="/media/projects/c101.png" link="https://c101.hongtaoh.com/" >}}
+
+- [Students feedback](https://c101.hongtaoh.com/feedback/)
+- [Slides](https://c101.hongtaoh.com/slides/)
+- [Lecture videos](https://c101.hongtaoh.com/videos/)
+
+{{< column >}}
+
+Class website for my students enrolled in *MSCH‑C100 Introduction to media* at Indiana University Bloomington, 2020 Spring.
+
+> "Hongtao was an excellent discussion leader and AI (Associate Instructor). He made the class enjoyable and helped me understand the assignments and was very clear in doing so. His website for our discussion was very helpful and amazing." 
+
+[Website](https://c101.hongtaoh.com/) | [Code](https://github.com/hongtaoh/c101)
+
+{{< endcolumn >}}
+
+### Understanding 3blue1brown's Videos
+
+{{< columns >}}
+
+{{<figure-a src="https://hongtaoh.com/media/enblog/la/vectors-triangle.png" link="/en/blog/" >}}
+
+{{< column >}}
+
+I really like 3blue1brown's vidoes. I made notes on them:
+
+- [Essence of Linear Algebra](/en/2022/07/07/la/)
+- [Neural Networks](/en/2022/05/11/3blue1brown-nn/)
+- [Essence of Calculas](/en/2022/09/30/clac/)
+
+{{< endcolumn >}}
+
+<!-- ### Blog Posts of "How to" Series
+{{< columns >}}
+
+{{<figure-a src="https://hongtaoh.com/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/input-output-mapping-1.png" link="/en/blog/" >}}
+
+{{< column >}}
+
+Tutorial posts on a variety of topics. Representatives:
+
+- [How to Understand `D3.js` Continuous Scales](/en/2020/09/07/d3-scales/)
+- [How to Build a Website Using Hugo](/en/2020/06/05/get-started-with-hugo/)
+- [How to Use Legacy Jupyterbook](/en/2020/07/25/legacy-jupyterbook/)
+- [How to Plot a Network's Degree Distribution](/en/2020/08/19/plot-degree-distribution-using-igraph/)
+- [How to Print Directory Trees on Mac](/en/2020/08/31/mac-directory-tree/)
+- [How to Make a Pull Request on GitHub](/en/2020/10/05/github-pull-request/)
+- [How to Embed an Observable Notebook](/en/2020/11/02/observable-hugo-embed/)
+- [How to Distinguish Between `If` and `While`](/en/2020/10/13/if-while/)
+- [How to Create Custom Blocks in Hugo](/en/2020/11/03/custom-blocks-hugo/)
+- [How to Use Different Fonts on Overleaf](/en/2020/11/13/overleaf-latex-fonts/)
+
+{{< endcolumn >}} -->
+
+### D3Book Companion
+{{< columns >}}
+
+{{<figure-a src="/media/projects/d3book-5.png" link="https://d3book.hongtaoh.com/" >}}
+
+
+<!-- Image adapted from [here](https://banner2.cleanpng.com/20180329/faq/kisspng-book-clip-art-open-book-5abd5bdd75f3c8.2387098515223592614831.jpg)
+ -->
+
+{{< column >}}
+
+A simple tutorial website to help beginners like me learn D3.js. It is a side product of my [40 Days of Learning D3 Challenge](https://observablehq.com/collection/@hongtaoh/45-days-of-learning-d3).
+
+[Website](https://d3book.hongtaoh.com/) | [Code](https://github.com/hongtaoh/d3book) | [PDF](https://d3book.hongtaoh.com/d3book.pdf)
+
+{{< endcolumn >}}
 
 ## Data Visualizations
 
@@ -131,113 +246,7 @@ This is a homework project for CS839 (Modeling User Interaction). I explored fac
 
 {{< endcolumn >}}
 
-## Tutorials
-### How to Create Online Books
 
-{{< columns >}}
-
-{{<figure-a src="/media/projects/onlinebook-portfolio.png" link="https://onlinebook.hongtaoh.com/portfolio/" >}}
-
-{{< column >}}
-
-I gave a talk at [YY Lab](http://yongyeol.com/) on how to create onlinebooks. 
-
-[Website](https://onlinebook.hongtaoh.com/portfolio/) | [Code](https://github.com/hongtaoh/onlinebook) | [Slides](https://onlinebook.hongtaoh.com/slides/onlinebook.html#1)
-
-{{< endcolumn >}}
-
-### Web Scraping
-
-### Snakemake 
-
-### Machine Learning Tutorials
-
-### Notes on Network Science
-{{< columns >}}
-
-{{<figure-a src="/media/projects/bfsD2.png" link="https://netsci.hongtaoh.com/" >}}
-
-{{< column >}}
-
-My notes while auditing Professor [Yong-Yeol Ahn](http://yongyeol.com/)’s online course of [*INFO I606 Network Science*](https://github.com/yy/netsci-course)
-
-[Website](https://netsci.hongtaoh.com/) | [Code](https://github.com/hongtaoh/netsci-notes) | [PDF](https://netsci.hongtaoh.com/netsci.pdf)
-
-{{< endcolumn >}}
-
-### C101 With Hongtao
-{{< columns >}}
-
-{{<figure-a src="/media/projects/c101.png" link="https://c101.hongtaoh.com/" >}}
-
-- [Students feedback](https://c101.hongtaoh.com/feedback/)
-- [Slides](https://c101.hongtaoh.com/slides/)
-- [Lecture videos](https://c101.hongtaoh.com/videos/)
-
-{{< column >}}
-
-Class website for my students enrolled in *MSCH‑C100 Introduction to media* at Indiana University Bloomington, 2020 Spring.
-
-> "Hongtao was an excellent discussion leader and AI (Associate Instructor). He made the class enjoyable and helped me understand the assignments and was very clear in doing so. His website for our discussion was very helpful and amazing." 
-
-[Website](https://c101.hongtaoh.com/) | [Code](https://github.com/hongtaoh/c101)
-
-{{< endcolumn >}}
-
-### Understanding 3blue1brown's Videos
-
-{{< columns >}}
-
-{{<figure-a src="https://hongtaoh.com/media/enblog/la/vectors-triangle.png" link="/en/blog/" >}}
-
-{{< column >}}
-
-I really like 3blue1brown's vidoes. I made notes on them:
-
-- [Essence of Linear Algebra](/en/2022/07/07/la/)
-- [Neural Networks](/en/2022/05/11/3blue1brown-nn/)
-- [Essence of Calculas](/en/2022/09/30/clac/)
-
-{{< endcolumn >}}
-
-<!-- ### Blog Posts of "How to" Series
-{{< columns >}}
-
-{{<figure-a src="https://hongtaoh.com/en/blog/2020-09-07-how-to-understand-d3-scales_files/figure-html/input-output-mapping-1.png" link="/en/blog/" >}}
-
-{{< column >}}
-
-Tutorial posts on a variety of topics. Representatives:
-
-- [How to Understand `D3.js` Continuous Scales](/en/2020/09/07/d3-scales/)
-- [How to Build a Website Using Hugo](/en/2020/06/05/get-started-with-hugo/)
-- [How to Use Legacy Jupyterbook](/en/2020/07/25/legacy-jupyterbook/)
-- [How to Plot a Network's Degree Distribution](/en/2020/08/19/plot-degree-distribution-using-igraph/)
-- [How to Print Directory Trees on Mac](/en/2020/08/31/mac-directory-tree/)
-- [How to Make a Pull Request on GitHub](/en/2020/10/05/github-pull-request/)
-- [How to Embed an Observable Notebook](/en/2020/11/02/observable-hugo-embed/)
-- [How to Distinguish Between `If` and `While`](/en/2020/10/13/if-while/)
-- [How to Create Custom Blocks in Hugo](/en/2020/11/03/custom-blocks-hugo/)
-- [How to Use Different Fonts on Overleaf](/en/2020/11/13/overleaf-latex-fonts/)
-
-{{< endcolumn >}} -->
-
-### D3Book Companion
-{{< columns >}}
-
-{{<figure-a src="/media/projects/d3book-5.png" link="https://d3book.hongtaoh.com/" >}}
-
-
-<!-- Image adapted from [here](https://banner2.cleanpng.com/20180329/faq/kisspng-book-clip-art-open-book-5abd5bdd75f3c8.2387098515223592614831.jpg)
- -->
-
-{{< column >}}
-
-A simple tutorial website to help beginners like me learn D3.js. It is a side product of my [40 Days of Learning D3 Challenge](https://observablehq.com/collection/@hongtaoh/45-days-of-learning-d3).
-
-[Website](https://d3book.hongtaoh.com/) | [Code](https://github.com/hongtaoh/d3book) | [PDF](https://d3book.hongtaoh.com/d3book.pdf)
-
-{{< endcolumn >}}
 
 ## Websites
 ### International Journalism Class at RUC
