@@ -85,7 +85,7 @@ aliases:
 
 - 德州理工 (Texas Tech University, [College of Media & Communication](https://www.depts.ttu.edu/comc/graduate/), 具体请看 [M.A. Scholarship & Financial Aid Info](https://www.depts.ttu.edu/comc/graduate/ma/scholarship-and-financial-info/))
 
-- 麻省理工，比较媒体研究硕士项目 (MIT, [Comparative Media Studies](https://cms.mit.edu/)，应该是会给全奖的 [Research Assistanships](https://cms.mit.edu/costs-and-financial-aid/), 毕竟麻省理工有钱。但是这个项目申请时只承认雅思，不认托福。)
+- 麻省理工，比较媒体研究硕士项目 (MIT, [Comparative Media Studies](https://cms.mit.edu/)，应该是会给全奖的 [Research Assistanships](https://cms.mit.edu/costs-and-financial-aid/), 毕竟麻省理工有钱。但是这个项目申请时只承认雅思，不认托福。(此项目已经停止)
 
 - 明尼苏达大学新闻与大众传播学院 (University of Minnesota, [Hubbard School of Journalism & Mass Communication](https://hsjmc.umn.edu/))
 
