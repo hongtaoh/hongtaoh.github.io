@@ -5,7 +5,7 @@ author: "郝鸿涛"
 slug: sam-altman-productivity
 draft: false
 toc: false
-tags: 
+tags: 读书
 ---
 复利。当你效率提升，复利的作用是无限的。
 
