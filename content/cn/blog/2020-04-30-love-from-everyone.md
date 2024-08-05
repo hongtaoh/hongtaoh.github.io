@@ -3,7 +3,7 @@ title: 人人献出一点爱，让尘肺病不在
 date: 2020-04-30T11:28:02-04:00
 author: 郝鸿涛
 slug: love-from-everyone-conquers-neumoconiosis
-draft: true
+draft: false
 toc: true
 tags: 稿件
 ---

@@ -3,7 +3,7 @@ title: "如何开始做一件事"
 date: 2021-01-03T10:29:42-05:00
 author: 郝鸿涛
 slug: how-to-start
-draft: true
+draft: false
 toc: false
 tags: 感悟
 ---
