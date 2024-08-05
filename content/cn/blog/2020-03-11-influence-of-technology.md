@@ -3,7 +3,7 @@ title: 你会被科技淘汰掉吗？
 date: 2020-03-11T09:53:37-04:00
 author: 郝鸿涛
 slug: influence-of-technology
-draft: true
+draft: false
 tags: 思考
 ---
 

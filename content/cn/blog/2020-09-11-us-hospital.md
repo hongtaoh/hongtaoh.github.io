@@ -3,7 +3,7 @@ title: 美国看病记
 date: 2020-09-11T14:20:25-04:00
 author: 郝鸿涛
 slug: us-hospital
-draft: true
+draft: false
 toc: false
 tags: 经历
 ---
