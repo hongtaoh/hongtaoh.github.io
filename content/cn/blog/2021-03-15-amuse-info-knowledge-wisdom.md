@@ -3,7 +3,7 @@ title: "娱乐、信息、知识、智慧"
 date: 2021-03-15T07:48:45-04:00
 author: "郝鸿涛"
 slug: amusement-info-knowledge-wisdom
-draft: true
+draft: false
 toc: false
 tags: 感悟
 ---

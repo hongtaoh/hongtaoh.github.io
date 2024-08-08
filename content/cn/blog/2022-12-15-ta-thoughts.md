@@ -3,7 +3,7 @@ title: "从批改作业中我学到的东西"
 date: 2022-12-15T17:39:54-06:00
 author: "郝鸿涛"
 slug: ta-grading
-draft: true
+draft: false
 toc: true
 tags: 感悟
 ---

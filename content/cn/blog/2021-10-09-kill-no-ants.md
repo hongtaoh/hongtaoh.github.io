@@ -3,7 +3,7 @@ title: "如何在不杀蚂蚁的情况下让他们搬家"
 date: 2021-10-09T21:22:06-05:00
 author: "郝鸿涛"
 slug: kill-no-ants
-draft: true
+draft: false
 toc: false
 tags: 经验
 ---

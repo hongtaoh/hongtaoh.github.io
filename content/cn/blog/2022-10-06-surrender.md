@@ -3,7 +3,7 @@ title: "两种放下"
 date: 2022-10-06T10:25:51-05:00
 author: "郝鸿涛"
 slug: surrender
-draft: true
+draft: false
 toc: false
 tags: 感悟
 ---

@@ -3,7 +3,7 @@ title: "十日内观体验"
 date: 2021-05-16T16:37:26-04:00
 author: "郝鸿涛"
 slug: vipassana
-draft: true
+draft: false
 toc: false
 tags: 经历
 ---

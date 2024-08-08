@@ -3,7 +3,7 @@ title: "我没有朋友"
 date: 2023-10-28T09:55:09-05:00
 author: "郝鸿涛"
 slug: no-friends
-draft: true
+draft: false
 toc: false
 tags: 思考
 ---

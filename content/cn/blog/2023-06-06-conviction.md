@@ -3,7 +3,7 @@ title: "信念"
 date: 2023-06-06T16:10:22-07:00
 author: "郝鸿涛"
 slug: conviction
-draft: true
+draft: false
 toc: false
 tags: 思考
 ---

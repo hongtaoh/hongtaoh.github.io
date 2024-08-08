@@ -3,7 +3,7 @@ title: "人际关系上的一些感悟和思考"
 date: 2023-03-03T21:11:17-06:00
 author: "郝鸿涛"
 slug: interpersonal
-draft: true
+draft: false
 toc: false
 tags: 感悟
 ---

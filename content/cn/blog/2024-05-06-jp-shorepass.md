@@ -3,7 +3,7 @@ title: "关于日本 Shorepass"
 date: 2024-05-06T10:16:41+07:00
 author: "郝鸿涛"
 slug: jp-shorepass
-draft: true
+draft: false
 toc: false
 tags: 旅行
 ---

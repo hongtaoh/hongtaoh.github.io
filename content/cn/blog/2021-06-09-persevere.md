@@ -3,7 +3,7 @@ title: "2021 年全国新高考Ⅰ卷作文：有恒"
 date: 2021-06-09T09:35:42-04:00
 author: "郝鸿涛"
 slug: persevere
-draft: true
+draft: false
 toc: false
 tags: 稿件
 ---

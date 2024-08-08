@@ -2,7 +2,7 @@
 title: "读 Twelve Pillars"
 date: 2023-11-16T08:47:01-06:00
 author: "郝鸿涛"
-slug:
+slug: 12-pillars
 draft: false
 toc: false
 tags: 

@@ -3,7 +3,7 @@ title: "不抱怨"
 date: 2023-11-06T17:27:42-06:00
 author: "郝鸿涛"
 slug: no-complaint
-draft: true
+draft: false
 toc: false
 tags: 感悟
 ---

@@ -3,7 +3,7 @@ title: "中国银行手机银行如何跨境汇款"
 date: 2021-06-06T10:21:38-04:00
 author: "郝鸿涛"
 slug: boc-money-transfer
-draft: true
+draft: false
 toc: false
 tags: 经验
 ---

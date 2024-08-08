@@ -3,7 +3,7 @@ title: "比较与焦虑"
 date: 2021-05-18T10:16:03-04:00
 author: "郝鸿涛"
 slug: social-comparison
-draft: true
+draft: false
 toc: false
 tags: 思考
 ---
