@@ -3,7 +3,7 @@ title: "父母的意识对孩子未来的重要性"
 date: 2021-10-09T21:41:48-05:00
 author: "郝鸿涛"
 slug: parents-consciousness
-draft: true
+draft: false
 toc: false
 tags: 思考
 ---

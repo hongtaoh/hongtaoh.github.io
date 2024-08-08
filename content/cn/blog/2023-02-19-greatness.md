@@ -3,7 +3,7 @@ title: "和优秀的人在一起有哪些收获"
 date: 2023-02-19T20:53:04-06:00
 author: "郝鸿涛"
 slug: greatness
-draft: true
+draft: false
 toc: false
 tags: 感悟
 ---

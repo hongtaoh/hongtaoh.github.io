@@ -3,7 +3,7 @@ title: "谈谈洗脑"
 date: 2022-10-06T10:26:25-05:00
 author: "郝鸿涛"
 slug: brainwashing
-draft: true
+draft: false
 toc: false
 tags: 思考
 ---

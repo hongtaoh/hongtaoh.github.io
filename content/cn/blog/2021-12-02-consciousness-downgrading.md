@@ -3,7 +3,7 @@ title: "意识降维"
 date: 2021-12-02T19:58:03-06:00
 author: "郝鸿涛"
 slug: consciousness-downgrading
-draft: true
+draft: false
 toc: false
 tags: 思考
 ---

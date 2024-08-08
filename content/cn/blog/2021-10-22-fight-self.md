@@ -3,7 +3,7 @@ title: "不与人斗与己斗"
 date: 2021-10-22T10:19:07-05:00
 author: "郝鸿涛"
 slug: fight-self
-draft: true
+draft: false
 toc: false
 tags: 感悟
 ---

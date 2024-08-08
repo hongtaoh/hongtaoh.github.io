@@ -3,7 +3,7 @@ title: "对断舍离的反思"
 date: 2021-10-22T09:04:29-05:00
 author: "郝鸿涛"
 slug: question-danshari
-draft: true
+draft: false
 toc: false
 tags: 思考
 ---

@@ -3,7 +3,7 @@ title: "读《原则》"
 date: 2021-11-20T19:29:46-06:00
 author: "郝鸿涛"
 slug: principles
-draft: true
+draft: false
 toc: true
 tags: 读书
 ---

@@ -3,7 +3,7 @@ title: "如何读论文"
 date: 2021-05-13T08:27:30-04:00
 author: "郝鸿涛"
 slug: read-a-paper
-draft: true
+draft: false
 toc: false
 tags: 科研
 ---

@@ -3,7 +3,7 @@ title: "Selenium 爬虫如何在新窗口保持登陆"
 date: 2024-04-04T16:31:19-05:00
 author: "郝鸿涛"
 slug: selenium-keep-logged-in
-draft: true
+draft: false
 toc: false
 tags: 编程
 ---

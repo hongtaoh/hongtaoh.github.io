@@ -3,7 +3,7 @@ title: "微信注销录 (我后来重新开始用微信)"
 date: 2021-12-05T16:16:30-06:00
 author: "郝鸿涛"
 slug: wechat
-draft: true
+draft: false
 toc: false
 tags: 经历
 ---
