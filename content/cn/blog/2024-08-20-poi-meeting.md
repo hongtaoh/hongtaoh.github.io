@@ -15,7 +15,7 @@ tags: 留学
 
 1. How do you see your research in the next five years?
 2. What's your advising style? Which kind of students do you like?
-3. How to be a successful PhD student/research under your supervision?
+3. How to be a successful PhD student/researcher under your supervision?
 4. Any suggestions to my future research topics that I mentioned previously?
 5. I read your paper X and you mentioned Y. I found that interesting but why you stopped doing research on that?
 6. How do you like the city X (where the university is located)?
