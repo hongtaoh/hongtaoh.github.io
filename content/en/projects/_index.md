@@ -20,12 +20,12 @@ type : nolisting
         - Linear Regression
         - [Logisitc Regression](/cn/2023/04/24/lr/)
 
-- Neural Networks 
-    - Perceptron
-    - [Multi-layer Perceptron (MLP)](/cn/2023/04/26/nn/) (often referred to as a simple neural network)
-    - Convolutional Neural Network (CNN)
-    - Recurrent Neural Network (RNN)
-    - Long Short-Term Memory (LSTM)
+    - Neural Networks 
+        - Perceptron
+        - [Multi-layer Perceptron (MLP)](/cn/2023/04/26/nn/) (often referred to as a simple neural network)
+        - Convolutional Neural Network (CNN)
+        - Recurrent Neural Network (RNN)
+        - Long Short-Term Memory (LSTM)
 
 - Reinforcement Learning
 
