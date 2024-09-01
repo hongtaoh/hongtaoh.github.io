@@ -1,0 +1,161 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/cn/>关于</a></li>
+<li><a href=/cn/blog/>日志</a></li>
+<li><a href=/>English</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>FastAPI 入门教程</h1>
+<p>郝鸿涛
+/ 2024-09-01 </p>
+<hr>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2024-09-01-fastapi.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title=编辑本页></i>
+</a>
+</span>
+<div class="body-text list-text">
+<p><a href=https://fastapi.tiangolo.com/ target=_blank rel="noreferrer noopener">FastAPI</a>
+是由 <a href=https://github.com/tiangolo target=_blank rel="noreferrer noopener">Sebastián Ramírez</a>
+领衔开发的一款开发 Web API 的框架。以下内容基于 <a href=https://www.python-engineer.com/posts/fastapi-introduction/ target=_blank rel="noreferrer noopener">Patrick Loeber 写的教程</a>
+以及 <a href=https://fastapi.tiangolo.com/tutorial/first-steps/ target=_blank rel="noreferrer noopener">FastAPI 官方教程</a>
+。</p>
+<p>首先，我假设你已经安装了 conda 或者 miniconda。假设你现在有一个文件夹 <code>fastapi</code>，第一步是建一个虚拟环境：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:green>cd</span> fastapi
+conda create --name fastapi <span style=color:#19177c>python</span><span style=color:#666>=</span>3.11
+</code></pre></div><p>虚拟环境设置好之后，启动它并安装 FastAPI：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>conda activate fastapi
+conda install fastapi
+</code></pre></div><p>在 <code>fastapi</code> 项目里创建 <code>main.py</code>:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>from</span> <span style=color:#00f;font-weight:700>fastapi</span> <span style=color:green;font-weight:700>import</span> FastAPI
+<span style=color:green;font-weight:700>from</span> <span style=color:#00f;font-weight:700>typing</span> <span style=color:green;font-weight:700>import</span> Optional 
+
+app <span style=color:#666>=</span> FastAPI()
+
+<span style=color:#a2f>@app</span><span style=color:#666>.</span>get(<span style=color:#ba2121>&#34;/&#34;</span>)
+<span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>root</span>():
+    <span style=color:green;font-weight:700>return</span> {<span style=color:#ba2121>&#34;message&#34;</span>: <span style=color:#ba2121>&#34;Hello World&#34;</span>}
+
+<span style=color:#a2f>@app</span><span style=color:#666>.</span>get(<span style=color:#ba2121>&#34;/items/</span><span style=color:#b68;font-weight:700>{item_id}</span><span style=color:#ba2121>&#34;</span>)
+<span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>read_item</span>(item_id: <span style=color:green>int</span>, q:Optional[<span style=color:green>str</span>] <span style=color:#666>=</span> <span style=color:green;font-weight:700>None</span>):
+    <span style=color:green;font-weight:700>return</span> {<span style=color:#ba2121>&#34;item_id&#34;</span>: item_id, <span style=color:#ba2121>&#34;q&#34;</span>: q}
+
+<span style=color:#408080;font-style:italic># order matterrs</span>
+
+<span style=color:#a2f>@app</span><span style=color:#666>.</span>get(<span style=color:#ba2121>&#34;/users/me&#34;</span>)
+<span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>read_user_me</span>():
+    <span style=color:green;font-weight:700>return</span> {<span style=color:#ba2121>&#34;user_id&#34;</span>: <span style=color:#ba2121>&#34;the current user&#34;</span>}
+
+<span style=color:#a2f>@app</span><span style=color:#666>.</span>get(<span style=color:#ba2121>&#34;/users/</span><span style=color:#b68;font-weight:700>{user_id}</span><span style=color:#ba2121>&#34;</span>)
+<span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>read_user</span>(user_id: <span style=color:green>str</span>):
+    <span style=color:green;font-weight:700>return</span> {<span style=color:#ba2121>&#34;user_id&#34;</span>: user_id}
+
+<span style=color:#408080;font-style:italic># if you redefin a path operation, only the first one will be used. </span>
+<span style=color:#a2f>@app</span><span style=color:#666>.</span>get(<span style=color:#ba2121>&#34;/users&#34;</span>)
+<span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>read_users</span>():
+    <span style=color:green;font-weight:700>return</span> [<span style=color:#ba2121>&#34;Rick&#34;</span>, <span style=color:#ba2121>&#34;Morty&#34;</span>]
+
+<span style=color:#a2f>@app</span><span style=color:#666>.</span>get(<span style=color:#ba2121>&#34;/users&#34;</span>)
+<span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>read_users2</span>():
+    <span style=color:green;font-weight:700>return</span> [<span style=color:#ba2121>&#34;Bean&#34;</span>, <span style=color:#ba2121>&#34;Elfo&#34;</span>]
+</code></pre></div><p>然后在终端继续输入：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>fastapi dev main.py
+</code></pre></div><p>打开 <a href=http://127.0.0.1:8000 target=_blank rel="noreferrer noopener">http://127.0.0.1:8000</a>
+。这就是我们的 API 了。首先映入眼帘的是 <code>message: "Hello World"</code>。</p>
+<p>然后你依次试试以下地址：</p>
+<ul>
+<li><a href=http://127.0.0.1:8000/items/4 target=_blank rel="noreferrer noopener">http://127.0.0.1:8000/items/4</a>
+</li>
+<li><a href="http://127.0.0.1:8000/items/4?q=sit" target=_blank rel="noreferrer noopener">http://127.0.0.1:8000/items/4?q=sit</a>
+</li>
+<li><a href=http://127.0.0.1:8000/users/me target=_blank rel="noreferrer noopener">http://127.0.0.1:8000/users/me</a>
+</li>
+<li><a href=http://127.0.0.1:8000/users/sit target=_blank rel="noreferrer noopener">http://127.0.0.1:8000/users/sit</a>
+</li>
+<li><a href=http://127.0.0.1:8000/users target=_blank rel="noreferrer noopener">http://127.0.0.1:8000/users</a>
+</li>
+</ul>
+<p>这里有几个点需要说明：</p>
+<p>如果你把</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py><span style=color:#a2f>@app</span><span style=color:#666>.</span>get(<span style=color:#ba2121>&#34;/users/me&#34;</span>)
+<span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>read_user_me</span>():
+    <span style=color:green;font-weight:700>return</span> {<span style=color:#ba2121>&#34;user_id&#34;</span>: <span style=color:#ba2121>&#34;the current user&#34;</span>}
+
+<span style=color:#a2f>@app</span><span style=color:#666>.</span>get(<span style=color:#ba2121>&#34;/users/</span><span style=color:#b68;font-weight:700>{user_id}</span><span style=color:#ba2121>&#34;</span>)
+<span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>read_user</span>(user_id: <span style=color:green>str</span>):
+    <span style=color:green;font-weight:700>return</span> {<span style=color:#ba2121>&#34;user_id&#34;</span>: user_id}
+</code></pre></div><p>顺序换成</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py><span style=color:#a2f>@app</span><span style=color:#666>.</span>get(<span style=color:#ba2121>&#34;/users/</span><span style=color:#b68;font-weight:700>{user_id}</span><span style=color:#ba2121>&#34;</span>)
+<span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>read_user</span>(user_id: <span style=color:green>str</span>):
+    <span style=color:green;font-weight:700>return</span> {<span style=color:#ba2121>&#34;user_id&#34;</span>: user_id}
+
+<span style=color:#a2f>@app</span><span style=color:#666>.</span>get(<span style=color:#ba2121>&#34;/users/me&#34;</span>)
+<span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>read_user_me</span>():
+    <span style=color:green;font-weight:700>return</span> {<span style=color:#ba2121>&#34;user_id&#34;</span>: <span style=color:#ba2121>&#34;the current user&#34;</span>}
+</code></pre></div><p><a href=http://127.0.0.1:8000/users/me target=_blank rel="noreferrer noopener">http://127.0.0.1:8000/users/me</a>
+的结果不再是 <code>"user_id": "the current user"</code>，而是 <code>"user_id": "me"</code>。这是因为当路径 (path) 相同时，fastapi 只匹配首个路径操作 (path operation)。也因此 <a href=http://127.0.0.1:8000/users target=_blank rel="noreferrer noopener">http://127.0.0.1:8000/users</a>
+的结果是 <code>["Rick", "Morty"]</code>。</p>
+<p>FastAPI 非常好的一点是它可以自动生成 API 文档：<a href=http://127.0.0.1:8000/docs target=_blank rel="noreferrer noopener">http://127.0.0.1:8000/docs</a>
+</p>
+<p>一切结束之后，关闭虚拟环境</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>conda deactivate
+</code></pre></div>
+<a href=https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/>#编程</a>
+<p style=color:#777>最后一次修改于 2024-09-01</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<div class=content>
+<script src=https://giscus.app/client.js data-repo=hongtaoh/hongtaoh.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyNjM3NDMzMTY=" data-category=Announcements data-category-id=DIC_kwDOD7hnVM4CUKk6 data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en data-loading=lazy crossorigin=anonymous async></script>
+</br>
+</div>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/cn/blog/index.xml type=application/rss+xml title="RSS feed">
+订阅 </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank>
+版权
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+郝鸿涛
+2020-2024
+</div>
+</footer>
