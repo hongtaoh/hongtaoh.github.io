@@ -4,7 +4,7 @@ title:
 
 {{<figure src="/media/me_cali_2023_summer.png" caption="Me in Seven Miles, CA in 2023 Summer (Credit goes to Zhan)" width="440">}} 
 
-I graduated with a Master's degree in Media Arts and Sciences from [the Media School of Indiana University](https://mediaschool.indiana.edu/index.html) in 2020, advised by [Dr. Nicole Martins](https://mediaschool.indiana.edu/people/profile.html?p=nicomart). From August 2020 to August 2021, I volunteered as a research assistant for [YY](http://yongyeol.com/). I earned my first Master's degree in Journalism from Renmin University of China, Beijing. I am now a third-year PhD student in Computer Sciences at the University of Wisconsin-Madison.
+I graduated with a Master's degree in Media Arts and Sciences from [the Media School of Indiana University](https://mediaschool.indiana.edu/index.html) in 2020, advised by [Dr. Nicole Martins](https://mediaschool.indiana.edu/people/profile.html?p=nicomart). From August 2020 to August 2021, I volunteered as a research assistant for [YY](http://yongyeol.com/). I earned my first Master's degree in Journalism from Renmin University of China, Beijing. I am now a fourth-year PhD student in Computer Sciences at the University of Wisconsin-Madison.
 
 <!-- I worked with Professor [Yea-Seul Kim](https://pages.cs.wisc.edu/~yeaseulkim/) in the first year. I am now doing research with [Michael Gleicher](https://gleicher.sites.cs.wisc.edu/). -->
   
