@@ -54,7 +54,9 @@
 conda create --name fastapi <span style=color:#19177c>python</span><span style=color:#666>=</span>3.11
 </code></pre></div><p>虚拟环境设置好之后，启动它并安装 FastAPI：</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>conda activate fastapi
-conda install fastapi
+<span style=color:#408080;font-style:italic># Use pip to install FastAPI with standard dependencies</span>
+pip install <span style=color:#ba2121>&#34;fastapi[standard]&#34;</span>
+
 </code></pre></div><p>在 <code>fastapi</code> 项目里创建 <code>main.py</code>:</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>from</span> <span style=color:#00f;font-weight:700>fastapi</span> <span style=color:green;font-weight:700>import</span> FastAPI
 <span style=color:green;font-weight:700>from</span> <span style=color:#00f;font-weight:700>typing</span> <span style=color:green;font-weight:700>import</span> Optional 
@@ -69,7 +71,7 @@ app <span style=color:#666>=</span> FastAPI()
 <span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>read_item</span>(item_id: <span style=color:green>int</span>, q:Optional[<span style=color:green>str</span>] <span style=color:#666>=</span> <span style=color:green;font-weight:700>None</span>):
     <span style=color:green;font-weight:700>return</span> {<span style=color:#ba2121>&#34;item_id&#34;</span>: item_id, <span style=color:#ba2121>&#34;q&#34;</span>: q}
 
-<span style=color:#408080;font-style:italic># order matterrs</span>
+<span style=color:#408080;font-style:italic># order matters</span>
 
 <span style=color:#a2f>@app</span><span style=color:#666>.</span>get(<span style=color:#ba2121>&#34;/users/me&#34;</span>)
 <span style=color:green;font-weight:700>async</span> <span style=color:green;font-weight:700>def</span> <span style=color:#00f>read_user_me</span>():
