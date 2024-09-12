@@ -8,7 +8,7 @@ I graduated with a Master's degree in Media Arts and Sciences from [the Media Sc
 
 <!-- I worked with Professor [Yea-Seul Kim](https://pages.cs.wisc.edu/~yeaseulkim/) in the first year. I am now doing research with [Michael Gleicher](https://gleicher.sites.cs.wisc.edu/). -->
   
-[Curriculum Vitae](/files/hongtao_hao_cv.pdf)
+[Resume](/files/hongtao_hao_resume.pdf)
 
 <!-- 这是郝鸿涛的个人主页。2016 年从河北师范大学英语翻译专业毕业后，我到中国人民大学读硕士（国际新闻班），随后在美国印第安纳大学媒体学院[读第二个硕士](/cn/2021/06/15/2y/)，于 2020 年 5 月毕业。毕业后的一年帮[安用烈老师](http://yongyeol.com/)做了一些[杂活](https://yyahn.com/covid19-dashboard/)。目前在威斯康星计算机学院读博。最骄傲的一件事是在 2015 年第一届"外研社杯”全国英语阅读大赛中[获奖](/cn/2020/01/06/fltrp-reading-contest/)。最难忘的一次经历是 [2017 年参加瑞士圣加仑论坛](/cn/2020/01/17/2017-st.gallen-memory/)。自律、喜静、极简。 -->
 
