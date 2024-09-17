@@ -1,3 +1,4 @@
+
 <a name="top"></a>
 {{ partial "header.html" . }}
 <main class = "content" role="main">
@@ -8,7 +9,7 @@
 <p>{{ with .Params.author }}{{ . }}{{ end }} 
 {{ if .Params.date }} / {{ .Date.Format "2006-01-02" }} {{ end }}</p>
 {{ end }}
-<hr/>
+<!-- <hr/> -->
 </div>
 
 <span class="article-toolbar">
@@ -33,6 +34,7 @@
 Table of Contents:
 {{ .TableOfContents }}
 </aside>
+<!-- <hr/> -->
 {{ end }}
 
 <div class="body-text list-text">

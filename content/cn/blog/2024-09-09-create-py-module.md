@@ -9,184 +9,162 @@ tags: 编程
 ---
 详情也在：[https://github.com/hongtaoh/create_py_module](https://github.com/hongtaoh/create_py_module)
 
-本教程参考 Patrick Loeber 的 [MongoDB Crash Course With Python](https://www.python-engineer.com/posts/python-mongodb-crashcourse/)
+很多时候我们只是用别人的包，但有时候我们需要自己制作一个 python 包。此教程用最简单的例子解释如何制作一个 python package 并放在 https://pypi.org/ 上。
 
-## 流程
+此教程参考 Jason Dsouza 的教程: [How to Build Your Very First Python Package](https://www.freecodecamp.org/news/build-your-first-python-package/)
 
-首先进入 [https://www.mongodb.com/](https://www.mongodb.com/)
+此教程也参考了 ChatGPT 的回答。
 
-products -> Atlas -> try free 然后填写信息完成注册
+此教程的成品：
+- https://github.com/hongtaoh/htpymodule
+- https://pypi.org/project/htpymodule/
 
-create a cluster -> M0 Free version -> Create deployment 
+首先，你要给你的包起一个名字，要不同于我的例子：`htpymodule`。包的名字如果包含 `_`，上传之后 pypi 会自动换成 `-`。
 
-Connect to Cluster0 -> copy the password -> Create Database User -> Chooose a connection method -> Connect to your application (Drivers) -> Python Version 你不用改，它指的是 Driver 的版本，不是你需要的 python 版本。
+## 项目结构
 
-按要求在终端输入
+你的包应该有类似这样的结构：
+
+```
+mypypackage/
+│
+├── htpymodule/
+│   ├── __init__.py
+│   ├── add.py
+│   ├── subtract.py
+│   └── extras/
+│       ├── multiply.py
+│       └── divide.py
+│
+├── setup.py
+├── README.md
+└── LICENSE (optional)
+```
+
+其中
+
+`add.py`:
+
+```py
+def add(x, y):
+    return x + y
+```
+
+`subtract.py`:
+
+```py
+def subtract(x, y):
+    return x - y
+```
+
+`extras/multiply.py`:
+
+```py
+def multiply(x, y):
+    return x * y
+```
+
+`extras/divide.py`:
+
+```py
+def divide(x, y):
+    if y == 0:
+        raise ValueError("Cannot divide by zero.")
+    return x / y
+```
+
+`htpymodule/__init__.py`:
+
+```py
+from .add import add
+from .subtract import subtract
+from .extras.multiply import multiply
+from .extras.divide import divide
+```
+
+`htpymodule/setup.py`:
+
+```py
+from setuptools import setup, find_packages
+
+setup(
+    name="htpymodule",
+    version="0.3.1",
+    packages=find_packages(),
+    description="A very simple example module for basic arithmetic operations.",
+    long_description=open('README.md').read(),  # Read the content of your README file for a long description
+    long_description_content_type='text/markdown',  # Ensure the long description is in markdown format
+    author="Jason Dsouza, ChatGPT, and Hongtao Hao",
+    author_email="hhao9@wisc.edu",
+    # your source code url:
+    url="https://github.com/hongtaoh/htpymodule/",
+    install_requires=[
+        # add any additional packages that 
+        # needs to be installed along with your package. Eg: 'pandas'
+    ],
+)
+```
+
+## Build & Publish
+
+在项目根目录：
 
 ```bash
-python -m pip install "pymongo[srv]"
+python setup.py sdist bdist_wheel
+pip install .
 ```
 
-然后你可以看到 Connection string:
+`python setup.py sdist bdist_wheel` 可以把 python 包弄好。
 
-```
-uri = "mongodb+srv://hhao9:SD3xI4608zDRI07q@cluster0.xi6gx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-```
+`pip install .` 可以在本地直接安装此包。
 
-选择 Done. 
-
-Deployment -> Database -> Browse Collections -> Add my own data -> 填入 Database name 和 Collection name。我填的分别是 test, books -> Create 
-
-左侧 Security -> Database Access -> Edit -> Edit Password 
-
-然后我们把 Connection string 改成
-
-```
-uri = "mongodb+srv://hhao9:gobadgers@cluster0.xi6gx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-```
-
-注意，`hhao9` 后面是我更新的密码。
-
-好。接下来我们正式进入代码阶段。我们的目标是通过 python 来对云端的数据库进行编辑。
+为了验证，你可以在根目录创建一个 `test.py`，检测该包是否正常运行：
 
 ```py
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
-from datetime import datetime, UTC
+from htpymodule import add, subtract, multiply, divide
 
-uri = "mongodb+srv://hhao9:gobadgers@cluster0.xi6gx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
-# Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
-
-print(client.list_database_names())
-
-db = client.test 
-
-print(db.list_collection_names())
+print(add(1, 2))         # Output: 3
+print(subtract(5, 3))    # Output: 2
+print(multiply(4, 2))    # Output: 8
+print(divide(10, 2))     # Output: 5.0
 ```
 
-上面会有这样的结果：
+如果一切正常，我们要把包上传到 https://pypi.org/
+
+如果你没有 PyPi 账号，先注册一个：https://pypi.org/account/register/
+
+你大概率需要设置双重验证 (Two factor authentication (2FA))。
+
+弄好之后，打开 https://pypi.org/manage/account/
+
+找到 API tokens，选择 Add API token，随便填一个 token name，选择 Entire account，然后点击 Add token。把 token 保存起来。
+
+然后，在根目录运行
 
 ```sh
-['test', 'admin', 'local']
-['books']
+pip install twine
+twine upload dist/*
 ```
 
-## 添加数据
+然后粘贴你刚才保存的 token。然后你就可以看到你的包在 pypi 上线了：https://pypi.org/project/htpymodule/
 
-我们来给 `books` 这个 collection 加入第一个数据：
+所有人都可以通过运行
 
-```py
-book1 = {
-	"name": "明朝那些事儿",
-	"author": "当年明月",
-	"category": ["历史", "文学"],
-	"status": "读完",
-	"rate": 4.5,
-    "date": datetime.now(UTC)
-}
-
-books = db.books 
-
-result = books.insert_one(book1)
+```sh
+pip install htpymodule
 ```
 
-刷新 MongoDB 页面，你会看到
+来安装你的包。
 
-![](book1.png)
+## 如何更新
 
-我们也可以添加多组数据
+每次更新时，你需要更改 `htpymodule/setup.py` 里的 `version`，比如，从 `0.1` 改成 `0.1.1`。
 
-```py
-book2 = [
-    {
-	"name": "把时间当作朋友",
-	"author": "李笑来",
-	"category": "励志",
-	"status": "读完",
-	"rate": 4.5
-    },
-    {
-	"name": "财富自由之路",
-	"author": "李笑来",
-	"category": "励志",
-	"status": "在读",
-	"rate": 4.5
-    }
-]
+然后
 
-result = books.insert_many(book2)
+```sh
+python setup.py sdist bdist_wheel
+twine upload dist/*
 ```
 
-## 查询数据
-
-```py
-result = books.find_one({"author": "李笑来"})
-```
-
-有两本李笑来的书，上面的代码会返回第一个。
-
-如果想具体一些：
-
-```py
-result = books.find_one({"author": "李笑来", "status": "在读"})
-```
-
-注意一点，如果所查询的内容在一个 array 里面，也可以直接查询：
-
-```py
-result = books.find_one({"category": "文学"})
-```
-
-如果想用 MongoDB 自动生成的 ObjectId 来查询：
-
-```py
-from bson.objectid import ObjectId
-
-result = books.find_one({"_id": ObjectId("66da20b8e9ef016fe33bb4bb")})
-```
-
-如果想查询多个：
-
-```py
-result = books.find({"author": "李笑来"})
-
-print(list(result))
-```
-
-需要注意的是，查询的结果只能用一次，如果你  print 两次 `result`，只会出现一次结果。
-
-当然，也可以查询符合该条件的数据有多少个
-
-```py
-print(books.count_documents({"author": "李笑来"}))
-```
-
-## 删除数据
-
-```py
-result = books.delete_one({"_id": ObjectId("66da20b8e9ef016fe33bb4bb")})
-```
-
-## 修改数据
-
-```py
-result = books.update_one({"name": "财富自由之路"}, {"$set": {"status": "读完"}})
-```
-
-## 说明
-
-如果出现
-
->SSL handshake failed
-
-这样的错误，回到 atlas 首页面，security -> network access 那里把你当前的 ip 地址加到白名单里。
-
-## 和 Compass 相连
-
-首先，下载 [MongoDB Compass](https://www.mongodb.com/products/tools/compass)
-
-在 Atals 首页，Deployment -> Database -> Clusters -> Connect -> Access your data through tools (Compass) -> I have MongoDB Compass installed -> 复制并修改 Connection string -> Done 
-
-打开 MongoDB Compass -> New connections -> 在 URL 处粘贴修改后的 connection string -> Connect 
+pypi 会自动保存所有的版本记录。
