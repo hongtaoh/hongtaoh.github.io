@@ -43,10 +43,129 @@
 <a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2024-09-09-create-py-module.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title=编辑本页></i>
 </a>
 </span>
+<aside class=toc>
+Table of Contents:
+<nav id=TableOfContents>
+<ul>
+<li><a href=#流程>流程</a></li>
+<li><a href=#添加数据>添加数据</a></li>
+<li><a href=#查询数据>查询数据</a></li>
+<li><a href=#删除数据>删除数据</a></li>
+<li><a href=#修改数据>修改数据</a></li>
+<li><a href=#说明>说明</a></li>
+<li><a href=#和-compass-相连>和 Compass 相连</a></li>
+</ul>
+</nav>
+</aside>
 <div class="body-text list-text">
-<p>详情请看：<a href=https://github.com/hongtaoh/create_py_module target=_blank rel="noreferrer noopener">https://github.com/hongtaoh/create_py_module</a>
+<p>详情也在：<a href=https://github.com/hongtaoh/create_py_module target=_blank rel="noreferrer noopener">https://github.com/hongtaoh/create_py_module</a>
 </p>
-<p style=color:#777>最后一次修改于 2024-09-09</p>
+<p>本教程参考 Patrick Loeber 的 <a href=https://www.python-engineer.com/posts/python-mongodb-crashcourse/ target=_blank rel="noreferrer noopener">MongoDB Crash Course With Python</a>
+</p>
+<h2 id=流程>流程<a href=#流程 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>首先进入 <a href=https://www.mongodb.com/ target=_blank rel="noreferrer noopener">https://www.mongodb.com/</a>
+</p>
+<p>products -> Atlas -> try free 然后填写信息完成注册</p>
+<p>create a cluster -> M0 Free version -> Create deployment</p>
+<p>Connect to Cluster0 -> copy the password -> Create Database User -> Chooose a connection method -> Connect to your application (Drivers) -> Python Version 你不用改，它指的是 Driver 的版本，不是你需要的 python 版本。</p>
+<p>按要求在终端输入</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>python -m pip install <span style=color:#ba2121>&#34;pymongo[srv]&#34;</span>
+</code></pre></div><p>然后你可以看到 Connection string:</p>
+<pre tabindex=0><code>uri = &quot;mongodb+srv://hhao9:SD3xI4608zDRI07q@cluster0.xi6gx.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Cluster0&quot;
+</code></pre><p>选择 Done.</p>
+<p>Deployment -> Database -> Browse Collections -> Add my own data -> 填入 Database name 和 Collection name。我填的分别是 test, books -> Create</p>
+<p>左侧 Security -> Database Access -> Edit -> Edit Password</p>
+<p>然后我们把 Connection string 改成</p>
+<pre tabindex=0><code>uri = &quot;mongodb+srv://hhao9:gobadgers@cluster0.xi6gx.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Cluster0&quot;
+</code></pre><p>注意，<code>hhao9</code> 后面是我更新的密码。</p>
+<p>好。接下来我们正式进入代码阶段。我们的目标是通过 python 来对云端的数据库进行编辑。</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py><span style=color:green;font-weight:700>from</span> <span style=color:#00f;font-weight:700>pymongo.mongo_client</span> <span style=color:green;font-weight:700>import</span> MongoClient
+<span style=color:green;font-weight:700>from</span> <span style=color:#00f;font-weight:700>pymongo.server_api</span> <span style=color:green;font-weight:700>import</span> ServerApi
+<span style=color:green;font-weight:700>from</span> <span style=color:#00f;font-weight:700>datetime</span> <span style=color:green;font-weight:700>import</span> datetime, UTC
+
+uri <span style=color:#666>=</span> <span style=color:#ba2121>&#34;mongodb+srv://hhao9:gobadgers@cluster0.xi6gx.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Cluster0&#34;</span>
+
+<span style=color:#408080;font-style:italic># Create a new client and connect to the server</span>
+client <span style=color:#666>=</span> MongoClient(uri, server_api<span style=color:#666>=</span>ServerApi(<span style=color:#ba2121>&#39;1&#39;</span>))
+
+<span style=color:green>print</span>(client<span style=color:#666>.</span>list_database_names())
+
+db <span style=color:#666>=</span> client<span style=color:#666>.</span>test 
+
+<span style=color:green>print</span>(db<span style=color:#666>.</span>list_collection_names())
+</code></pre></div><p>上面会有这样的结果：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#666>[</span><span style=color:#ba2121>&#39;test&#39;</span>, <span style=color:#ba2121>&#39;admin&#39;</span>, <span style=color:#ba2121>&#39;local&#39;</span><span style=color:#666>]</span>
+<span style=color:#666>[</span><span style=color:#ba2121>&#39;books&#39;</span><span style=color:#666>]</span>
+</code></pre></div><h2 id=添加数据>添加数据<a href=#添加数据 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>我们来给 <code>books</code> 这个 collection 加入第一个数据：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py>book1 <span style=color:#666>=</span> {
+	<span style=color:#ba2121>&#34;name&#34;</span>: <span style=color:#ba2121>&#34;明朝那些事儿&#34;</span>,
+	<span style=color:#ba2121>&#34;author&#34;</span>: <span style=color:#ba2121>&#34;当年明月&#34;</span>,
+	<span style=color:#ba2121>&#34;category&#34;</span>: [<span style=color:#ba2121>&#34;历史&#34;</span>, <span style=color:#ba2121>&#34;文学&#34;</span>],
+	<span style=color:#ba2121>&#34;status&#34;</span>: <span style=color:#ba2121>&#34;读完&#34;</span>,
+	<span style=color:#ba2121>&#34;rate&#34;</span>: <span style=color:#666>4.5</span>,
+    <span style=color:#ba2121>&#34;date&#34;</span>: datetime<span style=color:#666>.</span>now(UTC)
+}
+
+books <span style=color:#666>=</span> db<span style=color:#666>.</span>books 
+
+result <span style=color:#666>=</span> books<span style=color:#666>.</span>insert_one(book1)
+</code></pre></div><p>刷新 MongoDB 页面，你会看到</p>
+<p><img src=book1.png alt></p>
+<p>我们也可以添加多组数据</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py>book2 <span style=color:#666>=</span> [
+    {
+	<span style=color:#ba2121>&#34;name&#34;</span>: <span style=color:#ba2121>&#34;把时间当作朋友&#34;</span>,
+	<span style=color:#ba2121>&#34;author&#34;</span>: <span style=color:#ba2121>&#34;李笑来&#34;</span>,
+	<span style=color:#ba2121>&#34;category&#34;</span>: <span style=color:#ba2121>&#34;励志&#34;</span>,
+	<span style=color:#ba2121>&#34;status&#34;</span>: <span style=color:#ba2121>&#34;读完&#34;</span>,
+	<span style=color:#ba2121>&#34;rate&#34;</span>: <span style=color:#666>4.5</span>
+    },
+    {
+	<span style=color:#ba2121>&#34;name&#34;</span>: <span style=color:#ba2121>&#34;财富自由之路&#34;</span>,
+	<span style=color:#ba2121>&#34;author&#34;</span>: <span style=color:#ba2121>&#34;李笑来&#34;</span>,
+	<span style=color:#ba2121>&#34;category&#34;</span>: <span style=color:#ba2121>&#34;励志&#34;</span>,
+	<span style=color:#ba2121>&#34;status&#34;</span>: <span style=color:#ba2121>&#34;在读&#34;</span>,
+	<span style=color:#ba2121>&#34;rate&#34;</span>: <span style=color:#666>4.5</span>
+    }
+]
+
+result <span style=color:#666>=</span> books<span style=color:#666>.</span>insert_many(book2)
+</code></pre></div><h2 id=查询数据>查询数据<a href=#查询数据 class=header-anchor arialabel=Anchor> # </a></h2>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py>result <span style=color:#666>=</span> books<span style=color:#666>.</span>find_one({<span style=color:#ba2121>&#34;author&#34;</span>: <span style=color:#ba2121>&#34;李笑来&#34;</span>})
+</code></pre></div><p>有两本李笑来的书，上面的代码会返回第一个。</p>
+<p>如果想具体一些：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py>result <span style=color:#666>=</span> books<span style=color:#666>.</span>find_one({<span style=color:#ba2121>&#34;author&#34;</span>: <span style=color:#ba2121>&#34;李笑来&#34;</span>, <span style=color:#ba2121>&#34;status&#34;</span>: <span style=color:#ba2121>&#34;在读&#34;</span>})
+</code></pre></div><p>注意一点，如果所查询的内容在一个 array 里面，也可以直接查询：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py>result <span style=color:#666>=</span> books<span style=color:#666>.</span>find_one({<span style=color:#ba2121>&#34;category&#34;</span>: <span style=color:#ba2121>&#34;文学&#34;</span>})
+</code></pre></div><p>如果想用 MongoDB 自动生成的 ObjectId 来查询：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py><span style=color:green;font-weight:700>from</span> <span style=color:#00f;font-weight:700>bson.objectid</span> <span style=color:green;font-weight:700>import</span> ObjectId
+
+result <span style=color:#666>=</span> books<span style=color:#666>.</span>find_one({<span style=color:#ba2121>&#34;_id&#34;</span>: ObjectId(<span style=color:#ba2121>&#34;66da20b8e9ef016fe33bb4bb&#34;</span>)})
+</code></pre></div><p>如果想查询多个：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py>result <span style=color:#666>=</span> books<span style=color:#666>.</span>find({<span style=color:#ba2121>&#34;author&#34;</span>: <span style=color:#ba2121>&#34;李笑来&#34;</span>})
+
+<span style=color:green>print</span>(<span style=color:green>list</span>(result))
+</code></pre></div><p>需要注意的是，查询的结果只能用一次，如果你 print 两次 <code>result</code>，只会出现一次结果。</p>
+<p>当然，也可以查询符合该条件的数据有多少个</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py><span style=color:green>print</span>(books<span style=color:#666>.</span>count_documents({<span style=color:#ba2121>&#34;author&#34;</span>: <span style=color:#ba2121>&#34;李笑来&#34;</span>}))
+</code></pre></div><h2 id=删除数据>删除数据<a href=#删除数据 class=header-anchor arialabel=Anchor> # </a></h2>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py>result <span style=color:#666>=</span> books<span style=color:#666>.</span>delete_one({<span style=color:#ba2121>&#34;_id&#34;</span>: ObjectId(<span style=color:#ba2121>&#34;66da20b8e9ef016fe33bb4bb&#34;</span>)})
+</code></pre></div><h2 id=修改数据>修改数据<a href=#修改数据 class=header-anchor arialabel=Anchor> # </a></h2>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py>result <span style=color:#666>=</span> books<span style=color:#666>.</span>update_one({<span style=color:#ba2121>&#34;name&#34;</span>: <span style=color:#ba2121>&#34;财富自由之路&#34;</span>}, {<span style=color:#ba2121>&#34;$set&#34;</span>: {<span style=color:#ba2121>&#34;status&#34;</span>: <span style=color:#ba2121>&#34;读完&#34;</span>}})
+</code></pre></div><h2 id=说明>说明<a href=#说明 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>如果出现</p>
+<blockquote>
+<p>SSL handshake failed</p>
+</blockquote>
+<p>这样的错误，回到 atlas 首页面，security -> network access 那里把你当前的 ip 地址加到白名单里。</p>
+<h2 id=和-compass-相连>和 Compass 相连<a href=#和-compass-相连 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>首先，下载 <a href=https://www.mongodb.com/products/tools/compass target=_blank rel="noreferrer noopener">MongoDB Compass</a>
+</p>
+<p>在 Atals 首页，Deployment -> Database -> Clusters -> Connect -> Access your data through tools (Compass) -> I have MongoDB Compass installed -> 复制并修改 Connection string -> Done</p>
+<p>打开 MongoDB Compass -> New connections -> 在 URL 处粘贴修改后的 connection string -> Connect</p>
+<a href=https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/>#编程</a>
+<p style=color:#777>最后一次修改于 2024-09-17</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>
