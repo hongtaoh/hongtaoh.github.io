@@ -215,40 +215,55 @@ h4, h5, h6 {
   color: grey;
 }
 
-/* Code blocks
-pre, code {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  background-color: #f6f8fa;
-  border: 1px solid #e1e4e8;
+/* table of contents styling. Based on the blog of Zachary Wade Betz: https://zwbetz.com/ */
+.toc {
+  border: .25rem solid #757575;
+  padding: 1rem; 
+  margin-top: 1rem;
+  margin-bottom: 1em;
+  /* color: #757575; */
+}
+
+.toc a,
+.toc a:visited {
+  text-decoration: none;
+  /* color: #757575; */
+}
+
+.toc a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+}
+
+/* Style for the copy button */
+.copy-code-button {
+  position: absolute; /* Position it absolutely within the container */
+  top: -20px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin: 5px 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
   border-radius: 3px;
-  padding: 0.5em;
-  overflow-x: auto;
+  z-index: 1; /* Ensure it is above other content */
 }
 
-pre {
-  padding: 16px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.copy-code-button:hover {
+  background-color: #0056b3;
 }
-
-code {
-  background-color: #f6f8fa;
-  padding: 0.2em 0.4em;
-  font-size: 85%;
-}
-
-pre code {
-  background-color: transparent;
-  padding: 0;
-} */
 
 /* Code block container */
+
 pre {
-  background-color: #f7f7f7;  /* Light gray background */
-  padding: 15px;  /* Padding around the code block */
-  border-radius: 5px;  /* Rounded corners */
-  overflow-x: auto;  /* Scrollable if code overflows horizontally */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);  /* Light shadow for emphasis */
+  position: relative;
+  padding: 16px;
+  margin: 0;
+  border-radius: 6px;
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
 }
 
 /* Actual code inside the block */
