@@ -4,7 +4,189 @@ date: 2024-09-09T19:20:51-05:00
 author: "郝鸿涛"
 slug: create-py-module
 draft: false
-toc: false
-tags: 
+toc: true
+tags: 编程
 ---
-详情请看：[https://github.com/hongtaoh/create_py_module](https://github.com/hongtaoh/create_py_module)
+详情也在：[https://github.com/hongtaoh/create_py_module](https://github.com/hongtaoh/create_py_module)
+
+本教程参考 Patrick Loeber 的 [MongoDB Crash Course With Python](https://www.python-engineer.com/posts/python-mongodb-crashcourse/)
+
+## 流程
+
+首先进入 [https://www.mongodb.com/](https://www.mongodb.com/)
+
+products -> Atlas -> try free 然后填写信息完成注册
+
+create a cluster -> M0 Free version -> Create deployment 
+
+Connect to Cluster0 -> copy the password -> Create Database User -> Chooose a connection method -> Connect to your application (Drivers) -> Python Version 你不用改，它指的是 Driver 的版本，不是你需要的 python 版本。
+
+按要求在终端输入
+
+```bash
+python -m pip install "pymongo[srv]"
+```
+
+然后你可以看到 Connection string:
+
+```
+uri = "mongodb+srv://hhao9:SD3xI4608zDRI07q@cluster0.xi6gx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+```
+
+选择 Done. 
+
+Deployment -> Database -> Browse Collections -> Add my own data -> 填入 Database name 和 Collection name。我填的分别是 test, books -> Create 
+
+左侧 Security -> Database Access -> Edit -> Edit Password 
+
+然后我们把 Connection string 改成
+
+```
+uri = "mongodb+srv://hhao9:gobadgers@cluster0.xi6gx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+```
+
+注意，`hhao9` 后面是我更新的密码。
+
+好。接下来我们正式进入代码阶段。我们的目标是通过 python 来对云端的数据库进行编辑。
+
+```py
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+from datetime import datetime, UTC
+
+uri = "mongodb+srv://hhao9:gobadgers@cluster0.xi6gx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+# Create a new client and connect to the server
+client = MongoClient(uri, server_api=ServerApi('1'))
+
+print(client.list_database_names())
+
+db = client.test 
+
+print(db.list_collection_names())
+```
+
+上面会有这样的结果：
+
+```sh
+['test', 'admin', 'local']
+['books']
+```
+
+## 添加数据
+
+我们来给 `books` 这个 collection 加入第一个数据：
+
+```py
+book1 = {
+	"name": "明朝那些事儿",
+	"author": "当年明月",
+	"category": ["历史", "文学"],
+	"status": "读完",
+	"rate": 4.5,
+    "date": datetime.now(UTC)
+}
+
+books = db.books 
+
+result = books.insert_one(book1)
+```
+
+刷新 MongoDB 页面，你会看到
+
+![](book1.png)
+
+我们也可以添加多组数据
+
+```py
+book2 = [
+    {
+	"name": "把时间当作朋友",
+	"author": "李笑来",
+	"category": "励志",
+	"status": "读完",
+	"rate": 4.5
+    },
+    {
+	"name": "财富自由之路",
+	"author": "李笑来",
+	"category": "励志",
+	"status": "在读",
+	"rate": 4.5
+    }
+]
+
+result = books.insert_many(book2)
+```
+
+## 查询数据
+
+```py
+result = books.find_one({"author": "李笑来"})
+```
+
+有两本李笑来的书，上面的代码会返回第一个。
+
+如果想具体一些：
+
+```py
+result = books.find_one({"author": "李笑来", "status": "在读"})
+```
+
+注意一点，如果所查询的内容在一个 array 里面，也可以直接查询：
+
+```py
+result = books.find_one({"category": "文学"})
+```
+
+如果想用 MongoDB 自动生成的 ObjectId 来查询：
+
+```py
+from bson.objectid import ObjectId
+
+result = books.find_one({"_id": ObjectId("66da20b8e9ef016fe33bb4bb")})
+```
+
+如果想查询多个：
+
+```py
+result = books.find({"author": "李笑来"})
+
+print(list(result))
+```
+
+需要注意的是，查询的结果只能用一次，如果你  print 两次 `result`，只会出现一次结果。
+
+当然，也可以查询符合该条件的数据有多少个
+
+```py
+print(books.count_documents({"author": "李笑来"}))
+```
+
+## 删除数据
+
+```py
+result = books.delete_one({"_id": ObjectId("66da20b8e9ef016fe33bb4bb")})
+```
+
+## 修改数据
+
+```py
+result = books.update_one({"name": "财富自由之路"}, {"$set": {"status": "读完"}})
+```
+
+## 说明
+
+如果出现
+
+>SSL handshake failed
+
+这样的错误，回到 atlas 首页面，security -> network access 那里把你当前的 ip 地址加到白名单里。
+
+## 和 Compass 相连
+
+首先，下载 [MongoDB Compass](https://www.mongodb.com/products/tools/compass)
+
+在 Atals 首页，Deployment -> Database -> Clusters -> Connect -> Access your data through tools (Compass) -> I have MongoDB Compass installed -> 复制并修改 Connection string -> Done 
+
+打开 MongoDB Compass -> New connections -> 在 URL 处粘贴修改后的 connection string -> Connect 
