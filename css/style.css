@@ -235,6 +235,11 @@ h4, h5, h6 {
   border-bottom: 1px solid;
 }
 
+.code-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
 /* Style for the copy button */
 .copy-code-button {
   position: absolute; /* Position it absolutely within the container */
