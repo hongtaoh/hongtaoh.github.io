@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>统计学 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link><description>Recent content in 统计学 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 17 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hongtaoh.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/index.xml" rel="self" type="application/rss+xml"/><item><title>用模拟的方法学习统计学之中心极限定理</title><link>https://hongtaoh.com/cn/2024/09/17/stats-simulation/</link><pubDate>Tue, 17 Sep 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/09/17/stats-simulation/</guid><description>我学习统计学比较喜欢的方法是：
+问题为先导 用频率，不用密度 模拟为先，如有必要再继续用数学公式（如无必要则只用模拟） 这篇主要讲标准误 (standard error) 和中心极限定理 (Central Limit Theorem)。我说了以问题为先导，那我们先来看一个问题：
+全球人类的智商分布符合正态分布， $\mathcal{N}(100, 15^2)$。我们从全球 80 亿人中随机抽取 100 个人，这 100 人的平均智商大于等于 $110$ 的概率是多少？
+标准误 如果我们只用模拟，不用数学公式。上面这题就很好解决：80 亿人抽 100 个人，我们重复 1 万次，每次都算出平均值。平均值大于等于 110 的次数除以 1 万，就是随机抽取 100 人，该 100 人平均智商大于等于 110 的概率。这个应该很好理解吧？
+但我们不满足于此。我们想看看从正态分布为 $\mathcal{N}(\mu, \sigma^2)$ 的母体中随机抽取 $M$ 个大小为 $N$ 的样本。每个样本算出其平均值 ($\bar{X}$)，也就是说总共有 $M$ 个 $\bar{X}$。我们想看一下所有 $\bar{X}$ 的分布是否存在某种规律。顺带提一句：这个分布的标准差被称为「标准误 (standard error)」。
+我们先把母体的正态分布模拟一下：
+import numpy as np import matplotlib.pyplot as plt # Set the seed for reproducibility np.</description></item></channel></rss>
