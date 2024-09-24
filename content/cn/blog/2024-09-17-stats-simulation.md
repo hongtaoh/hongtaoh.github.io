@@ -166,20 +166,22 @@ $$`
 
 `$$\bar{X} \sim \mathcal{N} \left(100, \frac{15^2}{100} \right)$$`
 
-`$\bar{X} = 100$` 对的 `$Z$` 值为 `$\frac{110 - 100}{15} = \frac{2}{3}$`
+`$\bar{X} = 100$` 对的 `$Z$` 值为 `$\frac{110 - 100}{1.5} = \frac{20}{3}$`
 
 
 ```python
 import scipy.stats as stats
 
-z = 2/3
+z = 20/3
 prob_less_equal = stats.norm.cdf(z)
 prob_greater_equal = 1 - prob_less_equal
 print(f"P(Z ≥ {z:.2f}) = {prob_greater_equal:.4f}")
 ```
 
-    P(Z ≥ 0.67) = 0.2525
+    P(Z ≥ 6.67) = 0.0000
 
+
+可以看到概率几乎为零。这也可以从上图 (Sample Size = 100) 明显看出来。
 
 ## 中心极限定理
 
@@ -207,7 +209,7 @@ plt.show()
 
 
     
-![png](/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_15_0.png)
+![png](/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_16_0.png)
     
 
 
@@ -246,7 +248,7 @@ plt.show()
 
 
     
-![png](/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_17_0.png)
+![png](/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_18_0.png)
     
 
 
