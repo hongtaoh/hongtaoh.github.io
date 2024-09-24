@@ -196,6 +196,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
 }
 
+/* from https://github.com/CyrusYip/hugo-theme-yue/ */
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  overflow-wrap: break-word;
+}
+
 h1 {
   font-size: 28px;
   font-weight: bold;
@@ -295,6 +300,47 @@ blockquote {
   background-color: #f9f9f9;
 }
 
+/*Styling Custome blocks. based on Yihui Xie's Bookdown book's CSS: 
+  https://github.com/rstudio/bookdown/blob/master/inst/examples/css/style.css */
+  .note,
+  .important,
+  .tip,
+  .info,
+  .caution,
+  .warning {
+    min-height: 2.2em;
+    padding: 1em 1em 0.1em 4em;
+    background: #f5f5f5 2px top/3em no-repeat;
+    font-family: Optima, 'Songti SC', Simsun;
+    font-size: 19px;
+  } 
+  .note {
+    background-image: url("/media/blocks/note.png");
+  }
+  .important {
+    background-image: url("/media/blocks/important.png");
+  }
+  .tip {
+    background-image: url("/media/blocks/tip.png");
+  }
+  .info {
+    background-image: url("/media/blocks/tip.png");
+  }
+  .caution {
+    background-image: url("/media/blocks/caution.png");
+  }
+  .warning {
+    background-image: url("/media/blocks/warning.png");
+  }
+  .reminder {
+    min-height: 3.2em;
+    padding: 1em 1em 1em 4em;
+    background: #f5f5f5 2px center/3em no-repeat;
+    font-family: Optima, 'Songti SC', Simsun;
+    font-size: 19px;
+    background-image: url("/media/blocks/reminder.png");
+  }
+
 /* Lists */
 ul, ol {
   padding-left: 2em;
@@ -380,5 +426,8 @@ body-text.list-text a[href^="#fnref:"] {
   }
   pre, code {
     font-size: 12px;
+  }
+  h1, h2, h3, h4, h5, h6, p, ul, ol {
+    overflow-wrap: break-word;
   }
 }
