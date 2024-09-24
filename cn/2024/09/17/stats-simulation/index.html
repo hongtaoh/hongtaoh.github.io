@@ -164,15 +164,16 @@ N = 10000, Mean (X̄) = 100.01, Std (X̄) = 0.14, σ/sqrt(10000) = 0.15
 </blockquote>
 <p>从 80 亿人中抽取 100 人，假设我们抽取无数次，每次算出这 100 人的智商平均值 (<code>$\bar{X}$</code>)。<code>$\bar{X}$</code> 的分布为：</p>
 <p><code>$$\bar{X} \sim \mathcal{N} \left(100, \frac{15^2}{100} \right)$$</code></p>
-<p><code>$\bar{X} = 100$</code> 对的 <code>$Z$</code> 值为 <code>$\frac{110 - 100}{15} = \frac{2}{3}$</code></p>
+<p><code>$\bar{X} = 100$</code> 对的 <code>$Z$</code> 值为 <code>$\frac{110 - 100}{1.5} = \frac{20}{3}$</code></p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>scipy.stats</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>stats</span>
 
-z <span style=color:#666>=</span> <span style=color:#666>2</span><span style=color:#666>/</span><span style=color:#666>3</span>
+z <span style=color:#666>=</span> <span style=color:#666>20</span><span style=color:#666>/</span><span style=color:#666>3</span>
 prob_less_equal <span style=color:#666>=</span> stats<span style=color:#666>.</span>norm<span style=color:#666>.</span>cdf(z)
 prob_greater_equal <span style=color:#666>=</span> <span style=color:#666>1</span> <span style=color:#666>-</span> prob_less_equal
 <span style=color:green>print</span>(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;P(Z ≥ </span><span style=color:#b68;font-weight:700>{</span>z<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>) = </span><span style=color:#b68;font-weight:700>{</span>prob_greater_equal<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.4f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#34;</span>)
-</code></pre></div><pre><code>P(Z ≥ 0.67) = 0.2525
+</code></pre></div><pre><code>P(Z ≥ 6.67) = 0.0000
 </code></pre>
+<p>可以看到概率几乎为零。这也可以从上图 (Sample Size = 100) 明显看出来。</p>
 <h2 id=中心极限定理>中心极限定理<a href=#中心极限定理 class=header-anchor arialabel=Anchor> # </a></h2>
 <p>上面我们是从正态分布的母体中抽样。假如我们从非正态分布的母体中抽样，每次也算出样本平均值，这些样本平均值的分布会怎么样？</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>labmda_param <span style=color:#666>=</span> <span style=color:#666>2.0</span> 
@@ -191,7 +192,7 @@ plt<span style=color:#666>.</span>title(<span style=color:#ba2121>f</span><span 
 plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#34;Value&#34;</span>)
 plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#34;Frequency&#34;</span>)
 plt<span style=color:#666>.</span>show()
-</code></pre></div><p><img src=/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_15_0.png alt=png></p>
+</code></pre></div><p><img src=/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_16_0.png alt=png></p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>num_samples <span style=color:#666>=</span> <span style=color:#666>2000</span>
 sample_sizes <span style=color:#666>=</span> [<span style=color:#666>10</span>, <span style=color:#666>100</span>, <span style=color:#666>1000</span>, <span style=color:#666>10000</span>]
 sample_means <span style=color:#666>=</span> {size: obtain_sample_means(
@@ -217,7 +218,7 @@ plt<span style=color:#666>.</span>tight_layout()
 
 <span style=color:#408080;font-style:italic># Show the plot</span>
 plt<span style=color:#666>.</span>show()
-</code></pre></div><p><img src=/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_17_0.png alt=png></p>
+</code></pre></div><p><img src=/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_18_0.png alt=png></p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green>print</span>(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;μ = </span><span style=color:#b68;font-weight:700>{</span>population_mu<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, σ = </span><span style=color:#b68;font-weight:700>{</span>population_sigma<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#34;</span>)
 <span style=color:green;font-weight:700>for</span> sample_size <span style=color:#a2f;font-weight:700>in</span> sample_sizes:
     sub_data <span style=color:#666>=</span> sample_means[sample_size]
