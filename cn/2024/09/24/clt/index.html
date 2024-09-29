@@ -35,9 +35,9 @@
 </header>
 <main class=content role=main>
 <div style=text-align:center>
-<h1>用模拟的方法学习统计学之中心极限定理</h1>
+<h1>理解中心极限定理</h1>
 <p>郝鸿涛
-/ 2024-09-17 </p>
+/ 2024-09-24 </p>
 </div>
 <span class=article-toolbar>
 <a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2024-09-17-stats-simulation.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title=编辑本页></i>
@@ -69,7 +69,7 @@ Table of Contents:
 </blockquote>
 <h2 id=标准误>标准误<a href=#标准误 class=header-anchor arialabel=Anchor> # </a></h2>
 <p>如果我们只用模拟，不用数学公式。上面这题就很好解决：80 亿人抽 100 个人，我们重复 1 万次，每次都算出平均值。平均值大于等于 110 的次数除以 1 万，就是随机抽取 100 人，该 100 人平均智商大于等于 110 的概率。这个应该很好理解吧？</p>
-<p>但我们不满足于此。我们想看看从正态分布为 <code>$\mathcal{N}(\mu, \sigma^2)$</code> 的母体中随机抽取 <code>$M$</code> 个大小为 <code>$N$</code> 的样本。每个样本算出其平均值 (<code>$\bar{X}$</code>)，也就是说总共有 <code>$M$</code> 个 <code>$\bar{X}$</code>。我们想看一下所有 <code>$\bar{X}$</code> 的分布是否存在某种规律。顺带提一句：这个分布的标准差被称为「标准误 (standard error)」。</p>
+<p>但我们不满足于此。我们想看看从正态分布为 <code>$\mathcal{N}(\mu, \sigma^2)$</code> 的母体中随机抽取 <code>$M$</code> 个大小为 <code>$N$</code> 的样本。每个样本算出其平均值 (<code>$\bar{X}$</code>)，也就是说总共有 <code>$M$</code> 个 <code>$\bar{X}$</code>。我们想看一下 <code>$\bar{X}$</code> 的分布是否存在某种规律。顺带提一句：这个分布的标准差被称为「标准误 (standard error)」。</p>
 <p>我们先把母体的正态分布模拟一下：</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>numpy</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>np</span>
 <span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>matplotlib.pyplot</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>plt</span>
@@ -129,7 +129,7 @@ plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(
              alpha<span style=color:#666>=</span><span style=color:#666>0.7</span>, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;steelblue&#39;</span>, edgecolor<span style=color:#666>=</span><span style=color:#ba2121>&#39;black&#39;</span>)
     <span style=color:#408080;font-style:italic># Plot vertical line at the mean</span>
     plt<span style=color:#666>.</span>axvline(mu, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;red&#39;</span>, linestyle<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, linewidth<span style=color:#666>=</span><span style=color:#666>2</span>)
-    plt<span style=color:#666>.</span>title(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Sample Size = </span><span style=color:#b68;font-weight:700>{</span>size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, μ = </span><span style=color:#b68;font-weight:700>{</span>mu<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, σ = </span><span style=color:#b68;font-weight:700>{</span>sigma<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#39;</span>)    
+    plt<span style=color:#666>.</span>title(<span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;Sample Size = </span><span style=color:#b68;font-weight:700>{</span>size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, `$\mathbb</span><span style=color:#b62;font-weight:700>{{</span><span style=color:#ba2121>E</span><span style=color:#b62;font-weight:700>}}</span><span style=color:#ba2121>[\bar</span><span style=color:#b62;font-weight:700>{{</span><span style=color:#ba2121>X</span><span style=color:#b62;font-weight:700>}}</span><span style=color:#ba2121>] = </span><span style=color:#b68;font-weight:700>{</span>mu<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`, `$S = </span><span style=color:#b68;font-weight:700>{</span>sigma<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`&#39;</span>)
     plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#39;`$</span><span style=color:#b62;font-weight:700>\\</span><span style=color:#ba2121>bar{{X}}$`&#39;</span>)
     plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#39;# of Samples&#39;</span>)
 
@@ -146,16 +146,16 @@ plt<span style=color:#666>.</span>show()
     sub_data <span style=color:#666>=</span> sample_means[sample_size]
     mu <span style=color:#666>=</span> np<span style=color:#666>.</span>mean(sub_data)
     sigma <span style=color:#666>=</span> np<span style=color:#666>.</span>std(sub_data)
-    <span style=color:green>print</span>(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;N = </span><span style=color:#b68;font-weight:700>{</span>sample_size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, Mean (X̄) = </span><span style=color:#b68;font-weight:700>{</span>mu<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, Std (X̄) = </span><span style=color:#b68;font-weight:700>{</span>sigma<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, &#34;</span> \
+    <span style=color:green>print</span>(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;N = </span><span style=color:#b68;font-weight:700>{</span>sample_size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, 样本平均值的平均值 = </span><span style=color:#b68;font-weight:700>{</span>mu<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, 样本平均值的标准差 = </span><span style=color:#b68;font-weight:700>{</span>sigma<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, &#34;</span> \
           <span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;σ/sqrt(</span><span style=color:#b68;font-weight:700>{</span>sample_size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>) = </span><span style=color:#b68;font-weight:700>{</span>(population_sigma<span style=color:#666>/</span>np<span style=color:#666>.</span>sqrt(sample_size))<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#34;</span>)
 </code></pre></div><pre><code>μ = 100.01, σ = 15.01
-N = 10, Mean (X̄) = 99.97, Std (X̄) = 4.72, σ/sqrt(10) = 4.75
-N = 100, Mean (X̄) = 100.07, Std (X̄) = 1.49, σ/sqrt(100) = 1.50
-N = 1000, Mean (X̄) = 100.02, Std (X̄) = 0.46, σ/sqrt(1000) = 0.47
-N = 10000, Mean (X̄) = 100.01, Std (X̄) = 0.14, σ/sqrt(10000) = 0.15
+N = 10, 样本平均值的平均值 = 99.97, 样本平均值的标准差 = 4.72, σ/sqrt(10) = 4.75
+N = 100, 样本平均值的平均值 = 100.07, 样本平均值的标准差 = 1.49, σ/sqrt(100) = 1.50
+N = 1000, 样本平均值的平均值 = 100.02, 样本平均值的标准差 = 0.46, σ/sqrt(1000) = 0.47
+N = 10000, 样本平均值的平均值 = 100.01, 样本平均值的标准差 = 0.14, σ/sqrt(10000) = 0.15
 </code></pre>
 <p>结论：</p>
-<p>从一个正态分布 <code>$\mathcal{N}(\mu, \sigma^2)$</code> 的母体中，随机不放回抽取 <code>$M$</code> 个大小为 <code>$N$</code> 的样本，所有样本的平均值 <code>$\bar{X}$</code> 的分布为：</p>
+<p>从一个正态分布 <code>$\mathcal{N}(\mu, \sigma^2)$</code> 的母体中，随机不放回抽取 <code>$M$</code> 个大小为 <code>$N$</code> 的样本，样本的平均值 <code>$\bar{X}$</code> 的分布为：</p>
 <p><code>$$ \bar{X} \sim \mathcal{N} \left( \mu, \frac{\sigma^2}{N} \right) $$</code></p>
 <h3 id=解答问题>解答问题<a href=#解答问题 class=header-anchor arialabel=Anchor> # </a></h3>
 <p>有了以上结论，最初的问题就很好解答了。</p>
@@ -206,10 +206,13 @@ plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(
     mu <span style=color:#666>=</span> np<span style=color:#666>.</span>mean(sub_data)
     sigma <span style=color:#666>=</span> np<span style=color:#666>.</span>std(sub_data)
     plt<span style=color:#666>.</span>subplot(<span style=color:#666>2</span>, <span style=color:#666>2</span>, i <span style=color:#666>+</span> <span style=color:#666>1</span>)  <span style=color:#408080;font-style:italic># 2x2 grid, subplot index starts at 1</span>
-    plt<span style=color:#666>.</span>hist(sub_data, bins<span style=color:#666>=</span><span style=color:#ba2121>&#34;auto&#34;</span>, density<span style=color:#666>=</span><span style=color:green;font-weight:700>False</span>, alpha<span style=color:#666>=</span><span style=color:#666>0.7</span>, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;steelblue&#39;</span>, edgecolor<span style=color:#666>=</span><span style=color:#ba2121>&#39;black&#39;</span>)
+    plt<span style=color:#666>.</span>hist(sub_data, bins<span style=color:#666>=</span><span style=color:#ba2121>&#34;auto&#34;</span>, density<span style=color:#666>=</span><span style=color:green;font-weight:700>False</span>,
+             alpha<span style=color:#666>=</span><span style=color:#666>0.7</span>, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;steelblue&#39;</span>, edgecolor<span style=color:#666>=</span><span style=color:#ba2121>&#39;black&#39;</span>)
     <span style=color:#408080;font-style:italic># Plot vertical line at the mean</span>
     plt<span style=color:#666>.</span>axvline(mu, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;red&#39;</span>, linestyle<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, linewidth<span style=color:#666>=</span><span style=color:#666>2</span>)
-    plt<span style=color:#666>.</span>title(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Sample Size = </span><span style=color:#b68;font-weight:700>{</span>size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, μ = </span><span style=color:#b68;font-weight:700>{</span>mu<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, σ = </span><span style=color:#b68;font-weight:700>{</span>sigma<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.4f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#39;</span>)    
+    plt<span style=color:#666>.</span>title(<span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;Sample Size = </span><span style=color:#b68;font-weight:700>{</span>size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, &#39;</span>
+              <span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;`$\mathbb</span><span style=color:#b62;font-weight:700>{{</span><span style=color:#ba2121>E</span><span style=color:#b62;font-weight:700>}}</span><span style=color:#ba2121>[\bar</span><span style=color:#b62;font-weight:700>{{</span><span style=color:#ba2121>X</span><span style=color:#b62;font-weight:700>}}</span><span style=color:#ba2121>] = </span><span style=color:#b68;font-weight:700>{</span>mu<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`, &#39;</span>
+              <span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;`$S = </span><span style=color:#b68;font-weight:700>{</span>sigma<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`&#39;</span>)
     plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#39;`$</span><span style=color:#b62;font-weight:700>\\</span><span style=color:#ba2121>bar{{X}}$`&#39;</span>)
     plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#39;# of Samples&#39;</span>)
 
@@ -233,11 +236,17 @@ N = 1000, Mean (X̄) = 0.50, Std (X̄) = 0.0156, σ/sqrt(1000) = 0.0159
 N = 10000, Mean (X̄) = 0.50, Std (X̄) = 0.0047, σ/sqrt(10000) = 0.0050
 </code></pre>
 <p>我们看到，不管母体分布如何，只要每次样本的样本量足够大，<code>$\bar{X}$</code> 的分布都无限趋近于正态分布。</p>
-<p>结论是，不论母体分布是不是正态，假设母体平均值为 <code>$\mu$</code>，标准差为 <code>$\sigma$</code>，我们从母体中随机不放回抽取 <code>$M$</code> 个大小为 <code>$N$</code> 的样本，所有样本的平均值 <code>$\bar{X}$</code> 的分布为：</p>
-<p><code>$$\bar{X} \sim \mathcal{N} \left(\mu, \frac{\sigma}{\sqrt{N}} \right)$$</code></p>
+<p>结论是，不论母体分布是不是正态，假设母体平均值为 <code>$\mu$</code>，标准差为 <code>$\sigma$</code>，我们从母体中随机不放回抽取 <code>$M$</code> 个大小为 <code>$N$</code> 的样本，样本的平均值 <code>$\bar{X}$</code> 的分布为：</p>
+<p><code>$$ \bar{X} \sim \mathcal{N} \left( \mu, \frac{\sigma^2}{N} \right) $$</code></p>
 <p>以上就是中心极限定理。至于「每次样本的样本量足够大」到底是多大，我们从上图中看到，如果母体是一个高度偏态分布，那么当 <code>$N$</code> 大于 <code>$1000$</code> 时，<code>$\bar{X}$</code> 的分布就已经呈现正态分布的形态了。</p>
+<p>但是在具体用的时候，我们还是要遵循一定的法则。</p>
+<ul>
+<li>如果母体本身是正态分布，那么对于 <code>$N \ge 1$</code>，<code>$\bar{X}$</code> 的分布基本就是上面所描述的正态分布。</li>
+<li>如果母体本身非正态分布，对于 <code>$N \ge 30$</code>，<code>$\bar{X}$</code> 的分布基本上也符合上述正态分布的特征。</li>
+<li>如果母体本身非正态分布，对于 <code>$N \lt 30$</code>，<code>$\bar{X}$</code> 的分布无法用上面的正态分布准确描述。此时，较好的做法是使用 t 分布（t-distribution）来进行估计。</li>
+</ul>
 <a href=https://hongtaoh.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/>#统计学</a>
-<p style=color:#777>最后一次修改于 2024-09-24</p>
+<p style=color:#777>最后一次修改于 2024-09-29</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>

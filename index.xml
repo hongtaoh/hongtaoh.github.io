@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/</link><description>Recent content on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/index.xml" rel="self" type="application/rss+xml"/><item><title>心流状态</title><link>https://hongtaoh.com/cn/2024/09/18/flow/</link><pubDate>Wed, 18 Sep 2024 10:17:18 -0500</pubDate><guid>https://hongtaoh.com/cn/2024/09/18/flow/</guid><description>这个视频 讲到了 flow 这个概念，国内貌似翻译成「心流」。
-人在心流的状态时，完全沉浸在自己所从事的活动中，做起来毫不费力，感觉不到时间的流逝，停止了思考，没有对事物的评判，感觉完全听不下来。事后感觉很有成就感、创造性和效率。
-想要达到心流状态，你要做你发自内心热爱的事情，而且该任务的难度适中，不太容易也不太难。
-以下是视频给出的几个小建议：
-安静 不受打扰的环境 把任务分成小任务 调整难度，有挑战性但是没有非常困难 不要强迫自己达到心流状态</description></item><item><title>用模拟的方法学习统计学之中心极限定理</title><link>https://hongtaoh.com/cn/2024/09/17/stats-simulation/</link><pubDate>Tue, 17 Sep 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/09/17/stats-simulation/</guid><description>我学习统计学比较喜欢的方法是：
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/</link><description>Recent content on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/index.xml" rel="self" type="application/rss+xml"/><item><title>理解中心极限定理</title><link>https://hongtaoh.com/cn/2024/09/24/clt/</link><pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/09/24/clt/</guid><description>我学习统计学比较喜欢的方法是：
 问题为先导 用频率，不用密度 模拟为先，如有必要再继续用数学公式（如无必要则只用模拟） 这篇主要讲标准误 (standard error) 和中心极限定理 (Central Limit Theorem)。我说了以问题为先导，那我们先来看一个问题：
 全球人类的智商分布符合正态分布， $\mathcal{N}(100, 15^2)$。我们从全球 80 亿人中随机抽取 100 个人，这 100 人的平均智商大于等于 $110$ 的概率是多少？
 标准误 如果我们只用模拟，不用数学公式。上面这题就很好解决：80 亿人抽 100 个人，我们重复 1 万次，每次都算出平均值。平均值大于等于 110 的次数除以 1 万，就是随机抽取 100 人，该 100 人平均智商大于等于 110 的概率。这个应该很好理解吧？
-但我们不满足于此。我们想看看从正态分布为 $\mathcal{N}(\mu, \sigma^2)$ 的母体中随机抽取 $M$ 个大小为 $N$ 的样本。每个样本算出其平均值 ($\bar{X}$)，也就是说总共有 $M$ 个 $\bar{X}$。我们想看一下所有 $\bar{X}$ 的分布是否存在某种规律。顺带提一句：这个分布的标准差被称为「标准误 (standard error)」。
+但我们不满足于此。我们想看看从正态分布为 $\mathcal{N}(\mu, \sigma^2)$ 的母体中随机抽取 $M$ 个大小为 $N$ 的样本。每个样本算出其平均值 ($\bar{X}$)，也就是说总共有 $M$ 个 $\bar{X}$。我们想看一下 $\bar{X}$ 的分布是否存在某种规律。顺带提一句：这个分布的标准差被称为「标准误 (standard error)」。
 我们先把母体的正态分布模拟一下：
-import numpy as np import matplotlib.pyplot as plt # Set the seed for reproducibility np.</description></item><item><title>如何开发一个 Python 包 (保姆级教程)</title><link>https://hongtaoh.com/cn/2024/09/09/create-py-module/</link><pubDate>Mon, 09 Sep 2024 19:20:51 -0500</pubDate><guid>https://hongtaoh.com/cn/2024/09/09/create-py-module/</guid><description>详情也在：https://github.com/hongtaoh/create_py_module 很多时候我们只是用别人的包，但有时候我们需要自己制作一个 python 包。此教程用最简单的例子解释如何制作一个 python package 并放在 https://pypi.org/ 上。
+import numpy as np import matplotlib.pyplot as plt # Set the seed for reproducibility np.</description></item><item><title>心流状态</title><link>https://hongtaoh.com/cn/2024/09/18/flow/</link><pubDate>Wed, 18 Sep 2024 10:17:18 -0500</pubDate><guid>https://hongtaoh.com/cn/2024/09/18/flow/</guid><description>这个视频 讲到了 flow 这个概念，国内貌似翻译成「心流」。
+人在心流的状态时，完全沉浸在自己所从事的活动中，做起来毫不费力，感觉不到时间的流逝，停止了思考，没有对事物的评判，感觉完全听不下来。事后感觉很有成就感、创造性和效率。
+想要达到心流状态，你要做你发自内心热爱的事情，而且该任务的难度适中，不太容易也不太难。
+以下是视频给出的几个小建议：
+安静 不受打扰的环境 把任务分成小任务 调整难度，有挑战性但是没有非常困难 不要强迫自己达到心流状态</description></item><item><title>如何开发一个 Python 包 (保姆级教程)</title><link>https://hongtaoh.com/cn/2024/09/09/create-py-module/</link><pubDate>Mon, 09 Sep 2024 19:20:51 -0500</pubDate><guid>https://hongtaoh.com/cn/2024/09/09/create-py-module/</guid><description>详情也在：https://github.com/hongtaoh/create_py_module 很多时候我们只是用别人的包，但有时候我们需要自己制作一个 python 包。此教程用最简单的例子解释如何制作一个 python package 并放在 https://pypi.org/ 上。
 此教程参考 Jason Dsouza 的教程: How to Build Your Very First Python Package 此教程也参考了 ChatGPT 的回答。
 此教程的成品：
 https://github.com/hongtaoh/htpymodule https://pypi.org/project/htpymodule/ 首先，你要给你的包起一个名字，要不同于我的例子：htpymodule。包的名字如果包含 _，上传之后 pypi 会自动换成 -。
