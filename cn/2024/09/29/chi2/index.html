@@ -1,0 +1,386 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script src=/js/copy-code.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/cn/>关于</a></li>
+<li><a href=/cn/blog/>日志</a></li>
+<li><a href=/>English</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>理解卡方分布</h1>
+<p>郝鸿涛
+/ 2024-09-29 </p>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2024-09-24-chi2.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title=编辑本页></i>
+</a>
+</span>
+<aside class=toc>
+Table of Contents:
+<nav id=TableOfContents>
+<ul>
+<li><a href=#方差分布>方差分布</a></li>
+<li><a href=#卡方分布>卡方分布</a></li>
+<li><a href=#解决问题>解决问题</a></li>
+<li><a href=#总结>总结</a></li>
+</ul>
+</nav>
+</aside>
+<div class="body-text list-text">
+<h2 id=方差分布>方差分布<a href=#方差分布 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>我们上次讲到了<a href=/cn/2024/09/24/clt/>标准误和正态分布</a>
+。在其中，我们只看了样本平均值 (<code>$\bar{X}$</code>) 的分布，没有看样本方差 (<code>$S^2$</code>) 的分布。这次我们来看一下样本方差的分布有什么规律。</p>
+<p>依然，我们以问题为导向。</p>
+<blockquote>
+<p>全球人类的智商分布符合正态分布， <code>$\mathcal{N}(100, 15^2)$</code>。我们从全球 <code>$80$</code> 亿人中随机抽取 <code>$100$</code> 个人，这 <code>$100$</code> 人智商的方差大于等于 <code>$250$</code> 的概率是多少？</p>
+</blockquote>
+<p>首先，我们再次回到智商的正态分布图：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>numpy</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>np</span>
+<span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>matplotlib.pyplot</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>plt</span>
+
+<span style=color:#408080;font-style:italic># Set the seed for reproducibility</span>
+np<span style=color:#666>.</span>random<span style=color:#666>.</span>seed(<span style=color:#666>42</span>)
+
+<span style=color:#408080;font-style:italic># Parameters for the normal distribution</span>
+mean <span style=color:#666>=</span> <span style=color:#666>100</span>       <span style=color:#408080;font-style:italic># Mean of the distribution</span>
+std_dev <span style=color:#666>=</span> <span style=color:#666>15</span>    <span style=color:#408080;font-style:italic># Standard deviation of the distribution</span>
+size <span style=color:#666>=</span> <span style=color:#666>100000</span>    <span style=color:#408080;font-style:italic># Number of data points</span>
+
+<span style=color:#408080;font-style:italic># Generate the data</span>
+data <span style=color:#666>=</span> np<span style=color:#666>.</span>random<span style=color:#666>.</span>normal(mean, std_dev, size)
+
+population_mu <span style=color:#666>=</span> np<span style=color:#666>.</span>mean(data)
+population_var <span style=color:#666>=</span> np<span style=color:#666>.</span>var(data)
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># Create a histogram of the data</span>
+plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(<span style=color:#666>6</span>, <span style=color:#666>4</span>))
+plt<span style=color:#666>.</span>hist(data, bins<span style=color:#666>=</span><span style=color:#ba2121>&#34;auto&#34;</span>, density<span style=color:#666>=</span><span style=color:green;font-weight:700>False</span>, 
+         alpha<span style=color:#666>=</span><span style=color:#666>0.6</span>, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;g&#39;</span>, edgecolor<span style=color:#666>=</span><span style=color:#ba2121>&#39;black&#39;</span>)
+
+<span style=color:#408080;font-style:italic># Add titles and labels</span>
+plt<span style=color:#666>.</span>title(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;Histogram of IQ Distribution, sample Size = </span><span style=color:#b68;font-weight:700>{</span>size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, &#34;</span>\
+          <span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;μ = </span><span style=color:#b68;font-weight:700>{</span>population_mu<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, σ² = </span><span style=color:#b68;font-weight:700>{</span>population_var<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#34;</span>)
+plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#39;IQ&#39;</span>)
+plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#39;# of People&#39;</span>)
+
+<span style=color:#408080;font-style:italic># Show the plot</span>
+plt<span style=color:#666>.</span>show()
+</code></pre></div><p><img src=/cn/blog/2024-09-24-chi2_files/2024-09-24-chi2_3_0.png alt=png></p>
+<p>假设我们从母体中抽取 <code>$M$</code> 个大小为 <code>$N$</code> 的样本。也就是说，从母体中，每次抽取 <code>$N$</code> 个人，重复 <code>$M$</code> 次。每次是一个样本，其方差计算公式为：</p>
+<p><code>$$ S^2 = \frac{1}{N-1} \sum_{i=1}^{N} (X_i - \bar{X})^2 $$</code></p>
+<p>其中：</p>
+<p><code>$N$</code> 是样本大小</p>
+<p><code>$\bar{X}$</code> 是样本平均值</p>
+<p><code>$X_i$</code> 代表样本中第 <code>$i$</code> 个人的智商</p>
+<p>下面，我们设 <code>$M = 2000$</code>，然后取不同的 <code>$N$</code>，画出 <code>$S^2$</code> 的分布图。</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>obtain_sample_vars</span>(data, sample_size, num_samples):
+    <span style=color:#ba2121>&#34;&#34;&#34;sample from data, each time to get a sample of sample_size 
+</span><span style=color:#ba2121>    and calcuate the sample&#39;s variance.
+</span><span style=color:#ba2121>    Continue for num_samples times. 
+</span><span style=color:#ba2121>    &#34;&#34;&#34;</span>
+    sample_vars <span style=color:#666>=</span> np<span style=color:#666>.</span>zeros(num_samples)
+    <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(num_samples):
+        sample <span style=color:#666>=</span> np<span style=color:#666>.</span>random<span style=color:#666>.</span>choice(data, size<span style=color:#666>=</span>sample_size, replace<span style=color:#666>=</span><span style=color:green;font-weight:700>False</span>)
+        sample_vars[i] <span style=color:#666>=</span> np<span style=color:#666>.</span>var(sample, ddof<span style=color:#666>=</span><span style=color:#666>1</span>)
+    <span style=color:green;font-weight:700>return</span> sample_vars
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>num_samples <span style=color:#666>=</span> <span style=color:#666>2000</span>
+sample_sizes <span style=color:#666>=</span> [<span style=color:#666>10</span>, <span style=color:#666>100</span>, <span style=color:#666>1000</span>, <span style=color:#666>10000</span>]
+sample_vars <span style=color:#666>=</span> {size: obtain_sample_vars(
+    data, size, num_samples) <span style=color:green;font-weight:700>for</span> size <span style=color:#a2f;font-weight:700>in</span> sample_sizes}
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># Plotting</span>
+plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(<span style=color:#666>12</span>, <span style=color:#666>10</span>))
+
+<span style=color:#408080;font-style:italic># Create subplots</span>
+<span style=color:green;font-weight:700>for</span> i, size <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>enumerate</span>(sample_sizes):
+    sub_data <span style=color:#666>=</span> sample_vars[size]
+    mu <span style=color:#666>=</span> np<span style=color:#666>.</span>mean(sub_data)
+    sigma <span style=color:#666>=</span> np<span style=color:#666>.</span>std(sub_data)
+    plt<span style=color:#666>.</span>subplot(<span style=color:#666>2</span>, <span style=color:#666>2</span>, i <span style=color:#666>+</span> <span style=color:#666>1</span>)  <span style=color:#408080;font-style:italic># 2x2 grid, subplot index starts at 1</span>
+    plt<span style=color:#666>.</span>hist(sub_data, bins<span style=color:#666>=</span><span style=color:#ba2121>&#34;auto&#34;</span>, density<span style=color:#666>=</span><span style=color:green;font-weight:700>False</span>, 
+             alpha<span style=color:#666>=</span><span style=color:#666>0.7</span>, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;steelblue&#39;</span>, edgecolor<span style=color:#666>=</span><span style=color:#ba2121>&#39;black&#39;</span>)
+    <span style=color:#408080;font-style:italic># Plot vertical line at the mean</span>
+    plt<span style=color:#666>.</span>axvline(mu, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;red&#39;</span>, linestyle<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, linewidth<span style=color:#666>=</span><span style=color:#666>2</span>)
+    plt<span style=color:#666>.</span>title(<span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;Sample Variance with `$N$` = </span><span style=color:#b68;font-weight:700>{</span>size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, &#39;</span>
+              <span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;`$\mathbb</span><span style=color:#b62;font-weight:700>{{</span><span style=color:#ba2121>E</span><span style=color:#b62;font-weight:700>}}</span><span style=color:#ba2121>[S^2] = </span><span style=color:#b68;font-weight:700>{</span>mu<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`, &#39;</span>
+              <span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;`$S (S^2) = </span><span style=color:#b68;font-weight:700>{</span>sigma<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`&#39;</span>) 
+    plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#39;`$S^2$`&#39;</span>)
+    plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#39;# of Samples&#39;</span>)
+
+<span style=color:#408080;font-style:italic># Adjust layout</span>
+plt<span style=color:#666>.</span>tight_layout()
+
+<span style=color:#408080;font-style:italic># Show the plot</span>
+plt<span style=color:#666>.</span>show()
+</code></pre></div><p><img src=/cn/blog/2024-09-24-chi2_files/2024-09-24-chi2_7_0.png alt=png></p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green>print</span>(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;母体平均值 (μ) = </span><span style=color:#b68;font-weight:700>{</span>population_mu<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, 母体方差 (σ²) = </span><span style=color:#b68;font-weight:700>{</span>population_var<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#34;</span>)
+<span style=color:green;font-weight:700>for</span> sample_size <span style=color:#a2f;font-weight:700>in</span> sample_sizes:
+    sub_data <span style=color:#666>=</span> sample_vars[sample_size]
+    sample_mean <span style=color:#666>=</span> np<span style=color:#666>.</span>mean(sub_data)
+    sample_var <span style=color:#666>=</span> np<span style=color:#666>.</span>var(sub_data)
+    sample_var_estimates <span style=color:#666>=</span> <span style=color:#666>2</span><span style=color:#666>*</span>population_var<span style=color:#666>**</span><span style=color:#666>2</span><span style=color:#666>/</span>(sample_size <span style=color:#666>-</span> <span style=color:#666>1</span>)
+
+    <span style=color:green>print</span>(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;N = </span><span style=color:#b68;font-weight:700>{</span>sample_size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, S² 的平均值 = </span><span style=color:#b68;font-weight:700>{</span>sample_mean<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, &#34;</span>\
+          <span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;S² 方差 = </span><span style=color:#b68;font-weight:700>{</span>sample_var<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, &#34;</span> \
+          <span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;2*σ⁴/(N-1) = </span><span style=color:#b68;font-weight:700>{</span>sample_var_estimates<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#34;</span>) 
+</code></pre></div><pre><code>母体平均值 (μ) = 100.01, 母体方差 (σ²) = 225.41
+N = 10, S² 的平均值 = 222.95, S² 方差 = 11019.87, 2*σ⁴/(N-1) = 11290.60
+N = 100, S² 的平均值 = 224.65, S² 方差 = 1016.65, 2*σ⁴/(N-1) = 1026.42
+N = 1000, S² 的平均值 = 225.85, S² 方差 = 100.72, 2*σ⁴/(N-1) = 101.72
+N = 10000, S² 的平均值 = 225.42, S² 方差 = 9.24, 2*σ⁴/(N-1) = 10.16
+</code></pre>
+<p>以上，我们看到：</p>
+<p><code>$$\mathrm{E}[S^2] = \sigma^2$$</code></p>
+<p>也就是说当 <code>$N \ge 2$</code> 时，<code>$S^2$</code> 的平均值和母体方差是 (<code>$\sigma^2$</code>) 基本上是一样的。</p>
+<p><code>$S^2$</code> 的方差基本上符合这样的规律：</p>
+<p><code>$$Var(S^2) = \frac{2 \cdot \sigma^4}{N-1}$$</code></p>
+<p>另外，我们也看到，当 <code>$N$</code> 比较大的时候，<code>$S^2$</code> 的分布越来越趋近于正态分布：</p>
+<p><code>$$S^2 \sim \mathcal{N} \left(\sigma^2, \frac{2 \cdot \sigma^4}{N-1} \right)$$</code></p>
+<p>但是当 <code>$N$</code> 小的时候，明显无法用正态分布来描述 <code>$S^2$</code> 的分布：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>num_samples <span style=color:#666>=</span> <span style=color:#666>2000</span>
+sample_sizes <span style=color:#666>=</span> [<span style=color:#666>3</span>, <span style=color:#666>5</span>, <span style=color:#666>10</span>, <span style=color:#666>20</span>]
+sample_vars <span style=color:#666>=</span> {size: obtain_sample_vars(
+    data, size, num_samples) <span style=color:green;font-weight:700>for</span> size <span style=color:#a2f;font-weight:700>in</span> sample_sizes}
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># Plotting</span>
+plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(<span style=color:#666>12</span>, <span style=color:#666>10</span>))
+
+<span style=color:#408080;font-style:italic># Create subplots</span>
+<span style=color:green;font-weight:700>for</span> i, size <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>enumerate</span>(sample_sizes):
+    sub_data <span style=color:#666>=</span> sample_vars[size]
+    mu <span style=color:#666>=</span> np<span style=color:#666>.</span>mean(sub_data)
+    sigma <span style=color:#666>=</span> np<span style=color:#666>.</span>std(sub_data)
+    plt<span style=color:#666>.</span>subplot(<span style=color:#666>2</span>, <span style=color:#666>2</span>, i <span style=color:#666>+</span> <span style=color:#666>1</span>)  <span style=color:#408080;font-style:italic># 2x2 grid, subplot index starts at 1</span>
+    plt<span style=color:#666>.</span>hist(sub_data, bins<span style=color:#666>=</span><span style=color:#ba2121>&#34;auto&#34;</span>, density<span style=color:#666>=</span><span style=color:green;font-weight:700>False</span>, 
+             alpha<span style=color:#666>=</span><span style=color:#666>0.7</span>, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;steelblue&#39;</span>, edgecolor<span style=color:#666>=</span><span style=color:#ba2121>&#39;black&#39;</span>)
+    <span style=color:#408080;font-style:italic># Plot vertical line at the mean</span>
+    plt<span style=color:#666>.</span>axvline(mu, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;red&#39;</span>, linestyle<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, linewidth<span style=color:#666>=</span><span style=color:#666>2</span>)
+    plt<span style=color:#666>.</span>title(<span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;Sample Variance with `$N$` = </span><span style=color:#b68;font-weight:700>{</span>size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>, &#39;</span>
+              <span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;`$\mathbb</span><span style=color:#b62;font-weight:700>{{</span><span style=color:#ba2121>E</span><span style=color:#b62;font-weight:700>}}</span><span style=color:#ba2121>[S^2] = </span><span style=color:#b68;font-weight:700>{</span>mu<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`, &#39;</span>
+              <span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;`$S (S^2) = </span><span style=color:#b68;font-weight:700>{</span>sigma<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`&#39;</span>) 
+    plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#39;`$S^2$`&#39;</span>)
+    plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#39;# of Samples&#39;</span>)
+
+<span style=color:#408080;font-style:italic># Adjust layout</span>
+plt<span style=color:#666>.</span>tight_layout()
+
+<span style=color:#408080;font-style:italic># Show the plot</span>
+plt<span style=color:#666>.</span>show()
+</code></pre></div><p><img src=/cn/blog/2024-09-24-chi2_files/2024-09-24-chi2_11_0.png alt=png></p>
+<p>该怎么解决这个问题？</p>
+<h2 id=卡方分布>卡方分布<a href=#卡方分布 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>我们现在跳出来，暂时不去想现在这个问题，而来了解一下<a href=https://zh.wikipedia.org/zh-hans/%E5%8D%A1%E6%96%B9%E5%88%86%E4%BD%88 target=_blank rel="noreferrer noopener">卡方分布</a>
+。</p>
+<p>假设我们从标准正态分布 <code>$\mathcal N(0, 1)$</code> 中随机抽取 <code>$k$</code> 个数，<code>$Z_1, ... , Z_k$</code> 然后求他们的平方和</p>
+<p><code>$$Q = \sum_{i=1}^{k} Z_{i}^{2}$$</code></p>
+<p>我们说 <code>$Q$</code> 服从自由度为 <code>$k$</code> 的卡方分布，<code>$\chi_{k}^{2}$</code>。</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># Parameters for the normal distribution</span>
+mean <span style=color:#666>=</span> <span style=color:#666>0</span>       <span style=color:#408080;font-style:italic># Mean of the distribution</span>
+std_dev <span style=color:#666>=</span> <span style=color:#666>1</span>    <span style=color:#408080;font-style:italic># Standard deviation of the distribution</span>
+size <span style=color:#666>=</span> <span style=color:#666>100000</span>    <span style=color:#408080;font-style:italic># Number of data points</span>
+
+<span style=color:#408080;font-style:italic># Generate the data</span>
+data <span style=color:#666>=</span> np<span style=color:#666>.</span>random<span style=color:#666>.</span>normal(mean, std_dev, size)
+
+population_mu <span style=color:#666>=</span> np<span style=color:#666>.</span>mean(data)
+population_var <span style=color:#666>=</span> np<span style=color:#666>.</span>var(data)
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># Create a histogram of the data</span>
+plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(<span style=color:#666>6</span>, <span style=color:#666>4</span>))
+plt<span style=color:#666>.</span>hist(data, bins<span style=color:#666>=</span><span style=color:#ba2121>&#34;auto&#34;</span>, density<span style=color:#666>=</span><span style=color:green;font-weight:700>False</span>, 
+         alpha<span style=color:#666>=</span><span style=color:#666>0.6</span>, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;g&#39;</span>, edgecolor<span style=color:#666>=</span><span style=color:#ba2121>&#39;black&#39;</span>)
+
+<span style=color:#408080;font-style:italic># Add titles and labels</span>
+plt<span style=color:#666>.</span>title(<span style=color:#ba2121>f</span><span style=color:#ba2121>&#34;Standard Normal Distribution Simulation&#34;</span>)
+plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#39;X&#39;</span>)
+plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#39;Frequency&#39;</span>)
+
+<span style=color:#408080;font-style:italic># Show the plot</span>
+plt<span style=color:#666>.</span>show()
+</code></pre></div><p><img src=/cn/blog/2024-09-24-chi2_files/2024-09-24-chi2_15_0.png alt=png></p>
+<p>接下来，我们抽样。我们分别看一下 <code>$k = 1, 2, 3, 5, 10, 20$</code> 的情况。每种情况我们抽 <code>$2000$</code> 个样本。</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>obtain_q</span>(data, sample_size, num_samples):
+    <span style=color:#ba2121>&#34;&#34;&#34;sample from data, each time to get a sample of sample_size (k)
+</span><span style=color:#ba2121>    and calcuate Q.
+</span><span style=color:#ba2121>    Continue for num_samples times. 
+</span><span style=color:#ba2121>    &#34;&#34;&#34;</span>
+    qs <span style=color:#666>=</span> np<span style=color:#666>.</span>zeros(num_samples)
+    <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(num_samples):
+        sample <span style=color:#666>=</span> np<span style=color:#666>.</span>random<span style=color:#666>.</span>choice(data, size<span style=color:#666>=</span>sample_size, replace<span style=color:#666>=</span><span style=color:green;font-weight:700>False</span>)
+        qs[i] <span style=color:#666>=</span> <span style=color:green>sum</span>(k<span style=color:#666>**</span><span style=color:#666>2</span> <span style=color:green;font-weight:700>for</span> k <span style=color:#a2f;font-weight:700>in</span> sample)
+    <span style=color:green;font-weight:700>return</span> qs
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>num_samples <span style=color:#666>=</span> <span style=color:#666>2000</span>
+sample_sizes <span style=color:#666>=</span> [<span style=color:#666>1</span>, <span style=color:#666>2</span>, <span style=color:#666>3</span>, <span style=color:#666>5</span>, <span style=color:#666>10</span>, <span style=color:#666>20</span>]
+qs <span style=color:#666>=</span> {size: obtain_q(
+    data, size, num_samples) <span style=color:green;font-weight:700>for</span> size <span style=color:#a2f;font-weight:700>in</span> sample_sizes}
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>from</span> <span style=color:#00f;font-weight:700>scipy.stats</span> <span style=color:green;font-weight:700>import</span> chi2
+
+<span style=color:#408080;font-style:italic># Plotting</span>
+plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(<span style=color:#666>12</span>, <span style=color:#666>10</span>))
+
+
+<span style=color:#408080;font-style:italic># Create subplots</span>
+<span style=color:green;font-weight:700>for</span> i, size <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>enumerate</span>(sample_sizes):
+    sub_data <span style=color:#666>=</span> qs[size]
+    plt<span style=color:#666>.</span>subplot(<span style=color:#666>3</span>, <span style=color:#666>2</span>, i <span style=color:#666>+</span> <span style=color:#666>1</span>)  <span style=color:#408080;font-style:italic># 2x2 grid, subplot index starts at 1</span>
+    plt<span style=color:#666>.</span>hist(sub_data, bins<span style=color:#666>=</span><span style=color:#ba2121>&#34;auto&#34;</span>, density<span style=color:#666>=</span><span style=color:green;font-weight:700>True</span>, 
+             alpha<span style=color:#666>=</span><span style=color:#666>0.7</span>, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;steelblue&#39;</span>, edgecolor<span style=color:#666>=</span><span style=color:#ba2121>&#39;black&#39;</span>)
+    
+    <span style=color:#408080;font-style:italic># Plot the theoretical chi-square distribution line</span>
+    x <span style=color:#666>=</span> np<span style=color:#666>.</span>linspace(<span style=color:#666>0</span>, np<span style=color:#666>.</span>max(sub_data), <span style=color:#666>1000</span>)  <span style=color:#408080;font-style:italic># Define the x-axis range</span>
+    plt<span style=color:#666>.</span>plot(x, chi2<span style=color:#666>.</span>pdf(x, df<span style=color:#666>=</span>size), 
+             color<span style=color:#666>=</span><span style=color:#ba2121>&#34;green&#34;</span>, lw<span style=color:#666>=</span><span style=color:#666>2</span>, 
+             label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Chi-Square PDF (df=</span><span style=color:#b68;font-weight:700>{</span>size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>)&#39;</span>)  <span style=color:#408080;font-style:italic># Plot PDF line</span>
+
+    plt<span style=color:#666>.</span>title(<span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;Q with `$k$` = </span><span style=color:#b68;font-weight:700>{</span>size<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#39;</span>) 
+    plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#39;`$Q$`&#39;</span>)
+    plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#39;Density&#39;</span>)
+    plt<span style=color:#666>.</span>legend()
+
+<span style=color:#408080;font-style:italic># Adjust layout</span>
+plt<span style=color:#666>.</span>tight_layout()
+
+<span style=color:#408080;font-style:italic># Show the plot</span>
+plt<span style=color:#666>.</span>show()
+</code></pre></div><p><img src=/cn/blog/2024-09-24-chi2_files/2024-09-24-chi2_20_0.png alt=png></p>
+<p>科学家根据标准正态分布的特性<a href=https://en.wikipedia.org/wiki/Proofs_related_to_chi-squared_distribution target=_blank rel="noreferrer noopener">推导出了</a>
+卡方分布的概率密度函数:</p>
+<p><code>$$f(x; k) = \frac{1}{2^{k/2} \Gamma(k/2)} x^{(k/2) - 1} e^{-x/2}, \quad \text{for } x \geq 0$$</code></p>
+<p>其中 <code>$x$</code> 就是 <code>$X$</code> 轴上的任意数字。<code>$k$</code> 是自由度，也就是我们上面的例子中每次随机抽取几个数。</p>
+<p><code>$\Gamma$</code> 函数的定义：</p>
+<p><code>$$\Gamma(n) = \int_0^{\infty} t^{n-1} e^{-t} \, dt$$</code></p>
+<p>上面我把精确的卡方分布密度函数也画出来了。</p>
+<p>上面是从 <code>$\mathcal N(0, 1)$</code> 随机抽样，那如果换成更普遍的情况呢？</p>
+<p>假设我们从正态分布 <code>$\mathcal N(\mu, \sigma^2)$</code> 中随机抽取 <code>$k$</code> 个数，<code>$X_1, ... , X_k$</code>。</p>
+<p><code>$\sum_{X_i}^{2}$</code> 确实不是卡方分布，但是</p>
+<p><code>$$Z_i = \frac{X_i - \mu}{\sigma}$$</code></p>
+<p><code>$$Q = \sum_{i=1}^{k} Z_{i}^{2}$$</code></p>
+<p><code>$Q$</code> 依旧符合卡方分布。</p>
+<p>继续假设，如果我们不知道母体的平均值 (<code>$\mu$</code>) 但是知道 <code>$\sigma$</code>，也就是说我们只能用样本平均值 <code>$\bar{X}$</code> 来获取 <code>$Z$</code> 的近似值:</p>
+<p><code>$$T_i = \frac{X_i - \bar{X}}{\sigma}$$</code></p>
+<p>统计学家证明</p>
+<p><code>$$Q = \sum_{i=1}^{k} T_{i}^{2} = \sum_{i=1}^{k} \frac{(X_i - \bar{X})^2}{\sigma^2}$$</code></p>
+<p>的分布依旧是一个卡方分布，但是自由度要减去一：</p>
+<p><code>$$Q \sim \chi_{k-1}^{2}$$</code></p>
+<p>因为</p>
+<p><code>$$S^2 = \frac{\sum_{i=1}^{k} (X_i - \bar{X})^2}{k-1}$$</code></p>
+<p>所以</p>
+<p><code>$$Q = \frac{S^2 (k-1)}{\sigma^2}$$</code></p>
+<p>所以，我们最后的结论是：</p>
+<p><code>$$\frac{S^2 (k-1)}{\sigma^2} \sim \chi_{k-1}^{2}$$</code></p>
+<p>也就是说 <code>$\frac{S^2 (k-1)}{\sigma^2}$</code> 服从自由度为 <code>$k-1$</code> 的卡方分布。其中</p>
+<p><code>$k$</code> 是样本量</p>
+<p><code>$S^2$</code> 是样本方差</p>
+<p><code>$\sigma$</code> 是母体标准差</p>
+<h2 id=解决问题>解决问题<a href=#解决问题 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>现在我们回到最初的问题：</p>
+<blockquote>
+<p>全球人类的智商分布符合正态分布， <code>$\mathcal{N}(100, 15^2)$</code>。我们从全球 <code>$80$</code> 亿人中随机抽取 <code>$100$</code> 个人，这 <code>$100$</code> 人智商的方差大于等于 <code>$250$</code> 的概率是多少？</p>
+</blockquote>
+<p>我们看到 <code>$k=100$</code>。<code>$S^2 \ge 250 $</code> 的概率也就是 在一个自由度为 <code>$99$</code> 的卡方分布中，<code>$x \ge \frac{S^2 (k-1)}{\sigma^2} = \frac{250 \times 99}{15^2}$</code> 的概率。</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df <span style=color:#666>=</span> <span style=color:#666>99</span>
+threshold <span style=color:#666>=</span> (<span style=color:#666>250</span><span style=color:#666>*</span>df)<span style=color:#666>/</span>(<span style=color:#666>15</span><span style=color:#666>**</span><span style=color:#666>2</span>)
+prob <span style=color:#666>=</span> <span style=color:#666>1</span> <span style=color:#666>-</span> chi2<span style=color:#666>.</span>cdf(threshold, df)
+x <span style=color:#666>=</span> np<span style=color:#666>.</span>linspace(<span style=color:#666>0</span>, <span style=color:#666>300</span>, <span style=color:#666>1000</span>)
+y <span style=color:#666>=</span> chi2<span style=color:#666>.</span>pdf(x, df)
+plt<span style=color:#666>.</span>figure(figsize <span style=color:#666>=</span> (<span style=color:#666>6</span>, <span style=color:#666>4</span>))
+plt<span style=color:#666>.</span>plot(x, y, label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Chi-Square PDF (df = </span><span style=color:#b68;font-weight:700>{</span>df<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>)&#39;</span>, color <span style=color:#666>=</span> <span style=color:#ba2121>&#34;steelblue&#34;</span>)
+plt<span style=color:#666>.</span>fill_between(x, y, 
+                 where<span style=color:#666>=</span>(x <span style=color:#666>&gt;=</span> threshold), 
+                 color<span style=color:#666>=</span><span style=color:#ba2121>&#39;orange&#39;</span>, 
+                 alpha <span style=color:#666>=</span> <span style=color:#666>0.5</span>, 
+                 label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;P(x &gt;= </span><span style=color:#b68;font-weight:700>{</span>threshold<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>)&#39;</span>)
+plt<span style=color:#666>.</span>title(<span style=color:#ba2121>&#39;Chi-Square Distribution with Highlighted Region&#39;</span>)
+plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#39;`$x$`&#39;</span>)
+plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#39;Probability Density&#39;</span>)
+plt<span style=color:#666>.</span>axvline(threshold, color<span style=color:#666>=</span><span style=color:#ba2121>&#34;red&#34;</span>, 
+            linestyle<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, 
+            label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Threshold = </span><span style=color:#b68;font-weight:700>{</span>threshold<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>)&#39;</span>)
+plt<span style=color:#666>.</span>legend()
+plt<span style=color:#666>.</span>grid(<span style=color:green;font-weight:700>True</span>)
+plt<span style=color:#666>.</span>show()
+
+</code></pre></div><p><img src=/cn/blog/2024-09-24-chi2_files/2024-09-24-chi2_22_0.png alt=png></p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>prob
+</code></pre></div><pre><code>0.2114202344878623
+</code></pre>
+<h2 id=总结>总结<a href=#总结 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>我们从一个均值为 <code>$\mu$</code>、方差为 <code>$\sigma^2$</code> 的正态分布 <code>$\mathcal N(\mu, \sigma^2)$</code> 中随机取 <code>$k$</code> 个<a href=https://zh.wikipedia.org/wiki/%E7%8B%AC%E7%AB%8B%E5%90%8C%E5%88%86%E5%B8%83 target=_blank rel="noreferrer noopener">独立同分布</a>
+(i.i.d) 的随机变量 <code>$X_1, X_2, ... , X_k$</code>。这些随机变量构成一个样本。该样本的方差为 <code>$S^2$</code>。取无数个样本。</p>
+<p>对样本的方差进行标准化：</p>
+<p><code>$$Q = \frac{(k-1) S^2}{\sigma^2}$$</code></p>
+<p><code>$Q$</code> 服从自由度为 <code>$k-1$</code> 的卡方分布：</p>
+<p><code>$$Q \sim \chi_{k-1}^{2}$$</code></p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>dfs <span style=color:#666>=</span> [<span style=color:#666>1</span>, <span style=color:#666>2</span>, <span style=color:#666>3</span>, <span style=color:#666>4</span>, <span style=color:#666>6</span>, <span style=color:#666>9</span>]
+x <span style=color:#666>=</span> np<span style=color:#666>.</span>linspace(<span style=color:#666>0</span>, <span style=color:#666>8</span>, <span style=color:#666>1000</span>)  <span style=color:#408080;font-style:italic># Define the x-axis range</span>
+plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(<span style=color:#666>10</span>, <span style=color:#666>6</span>))
+<span style=color:#408080;font-style:italic># Colors for each chi-square distribution</span>
+colors <span style=color:#666>=</span> [<span style=color:#ba2121>&#39;olive&#39;</span>, <span style=color:#ba2121>&#39;limegreen&#39;</span>, <span style=color:#ba2121>&#39;cyan&#39;</span>, <span style=color:#ba2121>&#39;blue&#39;</span>, <span style=color:#ba2121>&#39;purple&#39;</span>, <span style=color:#ba2121>&#39;red&#39;</span>]
+
+<span style=color:green;font-weight:700>for</span> df, color <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>zip</span>(dfs, colors):
+    plt<span style=color:#666>.</span>plot(x, chi2<span style=color:#666>.</span>pdf(x, df<span style=color:#666>=</span>df), color<span style=color:#666>=</span>color, lw<span style=color:#666>=</span><span style=color:#666>2</span>, 
+         label<span style=color:#666>=</span><span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;`$k=</span><span style=color:#b68;font-weight:700>{</span>df<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`&#39;</span>)  <span style=color:#408080;font-style:italic># Plot PDF line</span>
+    
+plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>r</span><span style=color:#ba2121>&#39;`$x$`&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>14</span>)
+plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>r</span><span style=color:#ba2121>&#39;`$f_{k(x)}$`&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>14</span>)
+plt<span style=color:#666>.</span>title(<span style=color:#ba2121>r</span><span style=color:#ba2121>&#39;`$\chi^2_k$` Distributions for Different Degrees of Freedom&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>16</span>)
+plt<span style=color:#666>.</span>legend(title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Degrees of Freedome&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>12</span>)
+plt<span style=color:#666>.</span>grid(<span style=color:green;font-weight:700>True</span>)
+plt<span style=color:#666>.</span>ylim(<span style=color:#666>0</span>, <span style=color:#666>0.5</span>)  <span style=color:#408080;font-style:italic># Restrict y-axis limits</span>
+
+plt<span style=color:#666>.</span>show()
+</code></pre></div><p><img src=/cn/blog/2024-09-24-chi2_files/2024-09-24-chi2_25_0.png alt=png></p>
+<a href=https://hongtaoh.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/>#统计学</a>
+<p style=color:#777>最后一次修改于 2024-09-29</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<div class=content>
+<script src=https://giscus.app/client.js data-repo=hongtaoh/hongtaoh.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyNjM3NDMzMTY=" data-category=Announcements data-category-id=DIC_kwDOD7hnVM4CUKk6 data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en data-loading=lazy crossorigin=anonymous async></script>
+</br>
+</div>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/cn/blog/index.xml type=application/rss+xml title="RSS feed">
+订阅 </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank>
+版权
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+郝鸿涛
+2020-2024
+</div>
+</footer>

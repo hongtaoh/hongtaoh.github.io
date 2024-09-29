@@ -235,15 +235,15 @@ N = 100, Mean (X̄) = 0.50, Std (X̄) = 0.0495, σ/sqrt(100) = 0.0503
 N = 1000, Mean (X̄) = 0.50, Std (X̄) = 0.0156, σ/sqrt(1000) = 0.0159
 N = 10000, Mean (X̄) = 0.50, Std (X̄) = 0.0047, σ/sqrt(10000) = 0.0050
 </code></pre>
-<p>我们看到，不管母体分布如何，只要每次样本的样本量足够大，<code>$\bar{X}$</code> 的分布都无限趋近于正态分布。</p>
+<p>我们看到，不管母体分布如何，只要每次样本的样本量足够大 (通常认为 <code>$N \ge 30$</code> 即可)，<code>$\bar{X}$</code> 的分布都无限趋近于正态分布。</p>
 <p>结论是，不论母体分布是不是正态，假设母体平均值为 <code>$\mu$</code>，标准差为 <code>$\sigma$</code>，我们从母体中随机不放回抽取 <code>$M$</code> 个大小为 <code>$N$</code> 的样本，样本的平均值 <code>$\bar{X}$</code> 的分布为：</p>
 <p><code>$$ \bar{X} \sim \mathcal{N} \left( \mu, \frac{\sigma^2}{N} \right) $$</code></p>
 <p>以上就是中心极限定理。至于「每次样本的样本量足够大」到底是多大，我们从上图中看到，如果母体是一个高度偏态分布，那么当 <code>$N$</code> 大于 <code>$1000$</code> 时，<code>$\bar{X}$</code> 的分布就已经呈现正态分布的形态了。</p>
 <p>但是在具体用的时候，我们还是要遵循一定的法则。</p>
 <ul>
-<li>如果母体本身是正态分布，那么对于 <code>$N \ge 1$</code>，<code>$\bar{X}$</code> 的分布基本就是上面所描述的正态分布。</li>
+<li>如果母体本身是正态分布，那么对于 <code>$N \ge 1$</code>，<code>$\bar{X}$</code> 的分布理论上完全符合上面所描述的正态分布。</li>
 <li>如果母体本身非正态分布，对于 <code>$N \ge 30$</code>，<code>$\bar{X}$</code> 的分布基本上也符合上述正态分布的特征。</li>
-<li>如果母体本身非正态分布，对于 <code>$N \lt 30$</code>，<code>$\bar{X}$</code> 的分布无法用上面的正态分布准确描述。此时，较好的做法是使用 t 分布（t-distribution）来进行估计。</li>
+<li>如果母体本身非正态分布，对于 <code>$N \lt 30$</code>，<code>$\bar{X}$</code> 的分布无法用上面的正态分布准确描述。此时，较好的做法是使用 <code>$t$</code> 分布（<code>$t$</code>-distribution）来进行估计。</li>
 </ul>
 <a href=https://hongtaoh.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/>#统计学</a>
 <p style=color:#777>最后一次修改于 2024-09-29</p>
