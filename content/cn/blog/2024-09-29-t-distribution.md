@@ -4,7 +4,7 @@ title: 理解 t 分布与假设检验
 date: 2024-09-29
 author: 郝鸿涛
 slug: t
-draft: true
+draft: false
 toc: true
 tags: 统计学
 
