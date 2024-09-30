@@ -307,9 +307,10 @@ threshold <span style=color:#666>=</span> (<span style=color:#666>250</span><spa
 prob <span style=color:#666>=</span> <span style=color:#666>1</span> <span style=color:#666>-</span> chi2<span style=color:#666>.</span>cdf(threshold, df)
 x <span style=color:#666>=</span> np<span style=color:#666>.</span>linspace(<span style=color:#666>0</span>, <span style=color:#666>300</span>, <span style=color:#666>1000</span>)
 y <span style=color:#666>=</span> chi2<span style=color:#666>.</span>pdf(x, df)
-plt<span style=color:#666>.</span>figure(figsize <span style=color:#666>=</span> (<span style=color:#666>6</span>, <span style=color:#666>4</span>))
+plt<span style=color:#666>.</span>figure(figsize <span style=color:#666>=</span> (<span style=color:#666>10</span>, <span style=color:#666>6</span>))
 plt<span style=color:#666>.</span>plot(x, y, label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Chi-Square PDF (df = </span><span style=color:#b68;font-weight:700>{</span>df<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>)&#39;</span>, color <span style=color:#666>=</span> <span style=color:#ba2121>&#34;steelblue&#34;</span>)
 plt<span style=color:#666>.</span>fill_between(x, y, 
+                <span style=color:#408080;font-style:italic>#  where=np.logical_or(x &gt;= threshold, x &lt;= 80), </span>
                  where<span style=color:#666>=</span>(x <span style=color:#666>&gt;=</span> threshold), 
                  color<span style=color:#666>=</span><span style=color:#ba2121>&#39;orange&#39;</span>, 
                  alpha <span style=color:#666>=</span> <span style=color:#666>0.5</span>, 
@@ -319,7 +320,7 @@ plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>&#39;`$x$`&#3
 plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>&#39;Probability Density&#39;</span>)
 plt<span style=color:#666>.</span>axvline(threshold, color<span style=color:#666>=</span><span style=color:#ba2121>&#34;red&#34;</span>, 
             linestyle<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, 
-            label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Threshold = </span><span style=color:#b68;font-weight:700>{</span>threshold<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>)&#39;</span>)
+            label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Threshold = </span><span style=color:#b68;font-weight:700>{</span>threshold<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>&#39;</span>)
 plt<span style=color:#666>.</span>legend()
 plt<span style=color:#666>.</span>grid(<span style=color:green;font-weight:700>True</span>)
 plt<span style=color:#666>.</span>show()
@@ -346,7 +347,7 @@ colors <span style=color:#666>=</span> [<span style=color:#ba2121>&#39;olive&#39
          label<span style=color:#666>=</span><span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;`$k=</span><span style=color:#b68;font-weight:700>{</span>df<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`&#39;</span>)  <span style=color:#408080;font-style:italic># Plot PDF line</span>
     
 plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>r</span><span style=color:#ba2121>&#39;`$x$`&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>14</span>)
-plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>r</span><span style=color:#ba2121>&#39;`$f_{k(x)}$`&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>14</span>)
+plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>r</span><span style=color:#ba2121>&#39;`$P(x)$`&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>14</span>)
 plt<span style=color:#666>.</span>title(<span style=color:#ba2121>r</span><span style=color:#ba2121>&#39;`$\chi^2_k$` Distributions for Different Degrees of Freedom&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>16</span>)
 plt<span style=color:#666>.</span>legend(title <span style=color:#666>=</span> <span style=color:#ba2121>&#39;Degrees of Freedome&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>12</span>)
 plt<span style=color:#666>.</span>grid(<span style=color:green;font-weight:700>True</span>)
