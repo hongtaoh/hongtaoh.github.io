@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编程 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/</link><description>Recent content in 编程 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 09 Sep 2024 19:20:51 -0500</lastBuildDate><atom:link href="https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>如何开发一个 Python 包 (保姆级教程)</title><link>https://hongtaoh.com/cn/2024/09/09/create-py-module/</link><pubDate>Mon, 09 Sep 2024 19:20:51 -0500</pubDate><guid>https://hongtaoh.com/cn/2024/09/09/create-py-module/</guid><description>详情也在：https://github.com/hongtaoh/create_py_module 很多时候我们只是用别人的包，但有时候我们需要自己制作一个 python 包。此教程用最简单的例子解释如何制作一个 python package 并放在 https://pypi.org/ 上。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编程 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/</link><description>Recent content in 编程 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 05 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>SQL 简易教程</title><link>https://hongtaoh.com/cn/2024/10/05/sql/</link><pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/10/05/sql/</guid><description>说实话，平常我用不到 SQL，所以一直没有去学。因为要面试，在准备 SQL 方面的知识，就快速学习了一下。我的感觉是和 Pandas 没差多少。
+我用的是苹果电脑，Windows 的会不太一样。
+我选择用 Sqlite ，因为这个最简单，不需要服务器。
+首先检查 sqlite3 是否安装：
+sqlite3 --version 我假设你已经安装了 Anaconda。接着，我们建一个虚拟环境
+conda create --name sql conda activate sql conda install pandas jupyter ipython-sql 然后创建一个文件夹
+mkdir sql-learn cd sql-learn 下载两个文档：
+curl -o sqlite.txt https://www.sqltutorial.org/wp-content/uploads/2020/04/sqlite.txt curl -o sqlite-data.txt https://www.sqltutorial.org/wp-content/uploads/2020/04/sqlite-data.txt 如果你怕安全性有问题，我建议你把两个网址打开，确认是单纯的 txt 文档。
+然后：
+sqlite3 tutorial.db 接着
+.read sqlite.txt 继续
+.read sqlite-data.txt 检查一下
+.tables 结果应该是
+sqlite&amp;gt; .tables countries dependents jobs regions departments employees locations SELECT * FROM countries LIMIT 5; 结果应该是</description></item><item><title>如何开发一个 Python 包 (保姆级教程)</title><link>https://hongtaoh.com/cn/2024/09/09/create-py-module/</link><pubDate>Mon, 09 Sep 2024 19:20:51 -0500</pubDate><guid>https://hongtaoh.com/cn/2024/09/09/create-py-module/</guid><description>详情也在：https://github.com/hongtaoh/create_py_module 很多时候我们只是用别人的包，但有时候我们需要自己制作一个 python 包。此教程用最简单的例子解释如何制作一个 python package 并放在 https://pypi.org/ 上。
 此教程参考 Jason Dsouza 的教程: How to Build Your Very First Python Package 此教程也参考了 ChatGPT 的回答。
 此教程的成品：
 https://github.com/hongtaoh/htpymodule https://pypi.org/project/htpymodule/ 首先，你要给你的包起一个名字，要不同于我的例子：htpymodule。包的名字如果包含 _，上传之后 pypi 会自动换成 -。

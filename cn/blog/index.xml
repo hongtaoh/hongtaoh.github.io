@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日志 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/cn/blog/</link><description>Recent content in 日志 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>理解 t 分布与假设检验</title><link>https://hongtaoh.com/cn/2024/09/29/t/</link><pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/09/29/t/</guid><description>上次讲到标准误和正态分布 时，我们的假设我们知道母体的均值 $\mu$ 和标准差 $\sigma$。那我们假设一下，当我们不知道母体标准差的时候下面这个问题如何回答？
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日志 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/cn/blog/</link><description>Recent content in 日志 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/cn/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>SQL 简易教程</title><link>https://hongtaoh.com/cn/2024/10/05/sql/</link><pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/10/05/sql/</guid><description>说实话，平常我用不到 SQL，所以一直没有去学。因为要面试，在准备 SQL 方面的知识，就快速学习了一下。我的感觉是和 Pandas 没差多少。
+我用的是苹果电脑，Windows 的会不太一样。
+我选择用 Sqlite ，因为这个最简单，不需要服务器。
+首先检查 sqlite3 是否安装：
+sqlite3 --version 我假设你已经安装了 Anaconda。接着，我们建一个虚拟环境
+conda create --name sql conda activate sql conda install pandas jupyter ipython-sql 然后创建一个文件夹
+mkdir sql-learn cd sql-learn 下载两个文档：
+curl -o sqlite.txt https://www.sqltutorial.org/wp-content/uploads/2020/04/sqlite.txt curl -o sqlite-data.txt https://www.sqltutorial.org/wp-content/uploads/2020/04/sqlite-data.txt 如果你怕安全性有问题，我建议你把两个网址打开，确认是单纯的 txt 文档。
+然后：
+sqlite3 tutorial.db 接着
+.read sqlite.txt 继续
+.read sqlite-data.txt 检查一下
+.tables 结果应该是
+sqlite&amp;gt; .tables countries dependents jobs regions departments employees locations SELECT * FROM countries LIMIT 5; 结果应该是</description></item><item><title>理解 t 分布与假设检验</title><link>https://hongtaoh.com/cn/2024/09/29/t/</link><pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/09/29/t/</guid><description>上次讲到标准误和正态分布 时，我们的假设我们知道母体的均值 $\mu$ 和标准差 $\sigma$。那我们假设一下，当我们不知道母体标准差的时候下面这个问题如何回答？
 一本上古秘籍里写到天狼星人的智商服从正态分布 $\mathcal N(150, \sigma^2)$。方差具体数值因为年代太久，字迹变得模糊而不可知。突然有一天，联合国政府收到一封宇宙中传来的匿名电子邮件，专家破译后得知这封信警告地球，全部天狼星人已经伪装成地球人，到达了 A 国的 B 城市，并已经把该城市所有的地球人心智和灵魂转化成了天狼星人，他们企图之后全部控制地球。为了不引发大规模冲突，联合国政府在一个深夜从 B 城市中随机悄悄绑架了 20 个人。然后让他们进行智力测试，得出的结果是，这些人的智力均值为 $160$，方差为 $20^2$。假设 (1) 这个宇宙中只有地球人和天狼星人可以测智商、(2)地球人的平均智商和天狼星人的完全不同。请问：这些人到底是不是天狼星人？
 我们不知道怎么解决。
 像我们学习卡方分布时一样，我们暂时抛开这个问题，学一个概念：$t$ 分布。

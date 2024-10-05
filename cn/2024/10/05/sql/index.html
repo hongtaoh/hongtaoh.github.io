@@ -1,0 +1,2465 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script src=/js/copy-code.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/cn/>关于</a></li>
+<li><a href=/cn/blog/>日志</a></li>
+<li><a href=/>English</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>SQL 简易教程</h1>
+<p>郝鸿涛
+/ 2024-10-05 </p>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2024-10-05-sql.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title=编辑本页></i>
+</a>
+</span>
+<aside class=toc>
+Table of Contents:
+<nav id=TableOfContents>
+<ul>
+<li><a href=#all-tables>All tables</a></li>
+<li><a href=#query>Query</a></li>
+<li><a href=#sort>Sort</a></li>
+<li><a href=#filter-data>Filter data</a>
+<ul>
+<li><a href=#distinct>DISTINCT</a></li>
+<li><a href=#limit--offset>LIMIT & OFFSET</a></li>
+<li><a href=#where>Where</a></li>
+<li><a href=#comparison-oprators>Comparison oprators</a></li>
+<li><a href=#logical-operators>Logical operators</a></li>
+</ul>
+</li>
+<li><a href=#conditional-expression>Conditional Expression</a></li>
+<li><a href=#join-multiple-tables>Join multiple tables</a>
+<ul>
+<li><a href=#alias>Alias</a></li>
+<li><a href=#inner-join>Inner Join</a></li>
+<li><a href=#left-join>LEFT JOIN</a></li>
+</ul>
+</li>
+<li><a href=#aggregate-functions>Aggregate functions</a></li>
+</ul>
+</nav>
+</aside>
+<div class="body-text list-text">
+<p>说实话，平常我用不到 SQL，所以一直没有去学。因为要面试，在准备 SQL 方面的知识，就快速学习了一下。我的感觉是和 Pandas 没差多少。</p>
+<p>我用的是苹果电脑，Windows 的会不太一样。</p>
+<p>我选择用 <a href=https://www.sqlite.org/ target=_blank rel="noreferrer noopener">Sqlite</a>
+，因为这个最简单，不需要服务器。</p>
+<p>首先检查 <code>sqlite3</code> 是否安装：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>sqlite3 --version
+</code></pre></div><p>我假设你已经安装了 Anaconda。接着，我们建一个虚拟环境</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>conda create --name sql
+conda activate sql
+conda install pandas jupyter ipython-sql 
+</code></pre></div><p>然后创建一个文件夹</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>mkdir sql-learn
+<span style=color:green>cd</span> sql-learn 
+</code></pre></div><p>下载两个文档：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>curl -o sqlite.txt https://www.sqltutorial.org/wp-content/uploads/2020/04/sqlite.txt
+curl -o sqlite-data.txt https://www.sqltutorial.org/wp-content/uploads/2020/04/sqlite-data.txt
+</code></pre></div><p>如果你怕安全性有问题，我建议你把两个网址打开，确认是单纯的 <code>txt</code> 文档。</p>
+<p>然后：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>sqlite3 tutorial.db
+</code></pre></div><p>接着</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>.read sqlite.txt
+</code></pre></div><p>继续</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>.read sqlite-data.txt
+</code></pre></div><p>检查一下</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>.tables
+</code></pre></div><p>结果应该是</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>sqlite&gt; .tables
+countries    dependents   <span style=color:green>jobs</span>         regions    
+departments  employees    locations  
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>SELECT * FROM countries LIMIT 5;
+</code></pre></div><p>结果应该是</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>sqlite&gt; SELECT * FROM countries LIMIT 5;
+AR|Argentina|<span style=color:#666>2</span>
+AU|Australia|<span style=color:#666>3</span>
+BE|Belgium|<span style=color:#666>1</span>
+BR|Brazil|<span style=color:#666>2</span>
+CA|Canada|<span style=color:#666>2</span>
+</code></pre></div><p>如果没问题，就可以继续开始了。</p>
+<p>我在 VS Code 里用 Jupyter Notebook。建一个 <code>ipynb</code> 文档，然后下面的都是在那里面操作。</p>
+<p>本文严重参考 <a href=https://www.sqltutorial.org/ target=_blank rel="noreferrer noopener">https://www.sqltutorial.org/</a>
+上的内容。</p>
+<p>首先</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-py data-lang=py><span style=color:#666>%</span>load_ext sql
+<span style=color:#666>%</span>sql sqlite:<span style=color:#666>///</span>tutorial<span style=color:#666>.</span>db
+</code></pre></div><p>但是我这个博客里因为数据在别的地方，所以第二行会不一样：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#666>%</span>load_ext sql
+<span style=color:#666>%</span>config SqlMagic<span style=color:#666>.</span>displaycon <span style=color:#666>=</span> <span style=color:green;font-weight:700>False</span>
+<span style=color:#666>%</span>sql sqlite:<span style=color:#666>///../</span>static<span style=color:#666>/</span>files<span style=color:#666>/</span>cnblog<span style=color:#666>/</span>sql<span style=color:#666>-</span>learn<span style=color:#666>/</span>tutorial<span style=color:#666>.</span>db
+</code></pre></div><pre><code>The sql extension is already loaded. To reload it, use:
+  %reload_ext sql
+</code></pre>
+<h2 id=all-tables>All tables<a href=#all-tables class=header-anchor arialabel=Anchor> # </a></h2>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>name<span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>sqlite_master<span style=color:#bbb> </span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>type</span><span style=color:#666>=</span><span style=color:#ba2121>&#39;table&#39;</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>regions</td>
+</tr>
+<tr>
+<td>sqlite_sequence</td>
+</tr>
+<tr>
+<td>countries</td>
+</tr>
+<tr>
+<td>locations</td>
+</tr>
+<tr>
+<td>departments</td>
+</tr>
+<tr>
+<td>jobs</td>
+</tr>
+<tr>
+<td>employees</td>
+</tr>
+<tr>
+<td>dependents</td>
+</tr>
+</tbody>
+</table>
+<h2 id=query>Query<a href=#query class=header-anchor arialabel=Anchor> # </a></h2>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>locations<span style=color:#bbb> </span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>5</span><span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>location_id</th>
+<th>street_address</th>
+<th>postal_code</th>
+<th>city</th>
+<th>state_province</th>
+<th>country_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1400</td>
+<td>2014 Jabberwocky Rd</td>
+<td>26192</td>
+<td>Southlake</td>
+<td>Texas</td>
+<td>US</td>
+</tr>
+<tr>
+<td>1500</td>
+<td>2011 Interiors Blvd</td>
+<td>99236</td>
+<td>South San Francisco</td>
+<td>California</td>
+<td>US</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>2004 Charade Rd</td>
+<td>98199</td>
+<td>Seattle</td>
+<td>Washington</td>
+<td>US</td>
+</tr>
+<tr>
+<td>1800</td>
+<td>147 Spadina Ave</td>
+<td>M5V 2L7</td>
+<td>Toronto</td>
+<td>Ontario</td>
+<td>CA</td>
+</tr>
+<tr>
+<td>2400</td>
+<td>8204 Arthur St</td>
+<td>None</td>
+<td>London</td>
+<td>None</td>
+<td>UK</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name<span style=color:#bbb> </span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span><span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steven</td>
+<td>King</td>
+</tr>
+<tr>
+<td>Neena</td>
+<td>Kochhar</td>
+</tr>
+<tr>
+<td>Lex</td>
+<td>De Haan</td>
+</tr>
+<tr>
+<td>Alexander</td>
+<td>Hunold</td>
+</tr>
+<tr>
+<td>Bruce</td>
+<td>Ernst</td>
+</tr>
+<tr>
+<td>David</td>
+<td>Austin</td>
+</tr>
+<tr>
+<td>Valli</td>
+<td>Pataballa</td>
+</tr>
+<tr>
+<td>Diana</td>
+<td>Lorentz</td>
+</tr>
+<tr>
+<td>Nancy</td>
+<td>Greenberg</td>
+</tr>
+<tr>
+<td>Daniel</td>
+<td>Faviet</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>employee_id,<span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&lt;</span><span style=color:#bbb> </span><span style=color:#666>3000</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>employee_id</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>118</td>
+<td>2866.5</td>
+</tr>
+<tr>
+<td>119</td>
+<td>2756.25</td>
+</tr>
+<tr>
+<td>126</td>
+<td>2976.75</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic># %%sql </span>
+<span style=color:#408080;font-style:italic># delete from employees where hire_date &lt; &#39;1990-01-01&#39;;</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name,<span style=color:#bbb> </span>salary,<span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:#666>1</span>.<span style=color:#666>5</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+<th>salary * 1.5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steven</td>
+<td>King</td>
+<td>24000.0</td>
+<td>36000.0</td>
+</tr>
+<tr>
+<td>Neena</td>
+<td>Kochhar</td>
+<td>17000.0</td>
+<td>25500.0</td>
+</tr>
+<tr>
+<td>Lex</td>
+<td>De Haan</td>
+<td>17000.0</td>
+<td>25500.0</td>
+</tr>
+<tr>
+<td>Alexander</td>
+<td>Hunold</td>
+<td>9000.0</td>
+<td>13500.0</td>
+</tr>
+<tr>
+<td>Bruce</td>
+<td>Ernst</td>
+<td>6000.0</td>
+<td>9000.0</td>
+</tr>
+<tr>
+<td>David</td>
+<td>Austin</td>
+<td>4800.0</td>
+<td>7200.0</td>
+</tr>
+<tr>
+<td>Valli</td>
+<td>Pataballa</td>
+<td>4800.0</td>
+<td>7200.0</td>
+</tr>
+<tr>
+<td>Diana</td>
+<td>Lorentz</td>
+<td>4200.0</td>
+<td>6300.0</td>
+</tr>
+<tr>
+<td>Nancy</td>
+<td>Greenberg</td>
+<td>12000.0</td>
+<td>18000.0</td>
+</tr>
+<tr>
+<td>Daniel</td>
+<td>Faviet</td>
+<td>9000.0</td>
+<td>13500.0</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>first_name,<span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>last_name,<span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>salary,<span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:#666>1</span>.<span style=color:#666>5</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>as</span><span style=color:#bbb> </span>new_salary<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+<th>new_salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steven</td>
+<td>King</td>
+<td>24000.0</td>
+<td>36000.0</td>
+</tr>
+<tr>
+<td>Neena</td>
+<td>Kochhar</td>
+<td>17000.0</td>
+<td>25500.0</td>
+</tr>
+<tr>
+<td>Lex</td>
+<td>De Haan</td>
+<td>17000.0</td>
+<td>25500.0</td>
+</tr>
+<tr>
+<td>Alexander</td>
+<td>Hunold</td>
+<td>9000.0</td>
+<td>13500.0</td>
+</tr>
+<tr>
+<td>Bruce</td>
+<td>Ernst</td>
+<td>6000.0</td>
+<td>9000.0</td>
+</tr>
+<tr>
+<td>David</td>
+<td>Austin</td>
+<td>4800.0</td>
+<td>7200.0</td>
+</tr>
+<tr>
+<td>Valli</td>
+<td>Pataballa</td>
+<td>4800.0</td>
+<td>7200.0</td>
+</tr>
+<tr>
+<td>Diana</td>
+<td>Lorentz</td>
+<td>4200.0</td>
+<td>6300.0</td>
+</tr>
+<tr>
+<td>Nancy</td>
+<td>Greenberg</td>
+<td>12000.0</td>
+<td>18000.0</td>
+</tr>
+<tr>
+<td>Daniel</td>
+<td>Faviet</td>
+<td>9000.0</td>
+<td>13500.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id=sort>Sort<a href=#sort class=header-anchor arialabel=Anchor> # </a></h2>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employee_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>first_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>last_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>hire_date,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>employee_id</th>
+<th>first_name</th>
+<th>last_name</th>
+<th>hire_date</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Steven</td>
+<td>King</td>
+<td>1987-06-17</td>
+<td>24000.0</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Neena</td>
+<td>Kochhar</td>
+<td>1989-09-21</td>
+<td>17000.0</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Lex</td>
+<td>De Haan</td>
+<td>1993-01-13</td>
+<td>17000.0</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Alexander</td>
+<td>Hunold</td>
+<td>1990-01-03</td>
+<td>9000.0</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Bruce</td>
+<td>Ernst</td>
+<td>1991-05-21</td>
+<td>6000.0</td>
+</tr>
+<tr>
+<td>105</td>
+<td>David</td>
+<td>Austin</td>
+<td>1997-06-25</td>
+<td>4800.0</td>
+</tr>
+<tr>
+<td>106</td>
+<td>Valli</td>
+<td>Pataballa</td>
+<td>1998-02-05</td>
+<td>4800.0</td>
+</tr>
+<tr>
+<td>107</td>
+<td>Diana</td>
+<td>Lorentz</td>
+<td>1999-02-07</td>
+<td>4200.0</td>
+</tr>
+<tr>
+<td>108</td>
+<td>Nancy</td>
+<td>Greenberg</td>
+<td>1994-08-17</td>
+<td>12000.0</td>
+</tr>
+<tr>
+<td>109</td>
+<td>Daniel</td>
+<td>Faviet</td>
+<td>1994-08-16</td>
+<td>9000.0</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employee_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>first_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>last_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>hire_date,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb>   
+</span><span style=color:#bbb>    </span>first_name<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>employee_id</th>
+<th>first_name</th>
+<th>last_name</th>
+<th>hire_date</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>121</td>
+<td>Adam</td>
+<td>Fripp</td>
+<td>1997-04-10</td>
+<td>8200.0</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Alexander</td>
+<td>Hunold</td>
+<td>1990-01-03</td>
+<td>9000.0</td>
+</tr>
+<tr>
+<td>115</td>
+<td>Alexander</td>
+<td>Khoo</td>
+<td>1995-05-18</td>
+<td>3100.0</td>
+</tr>
+<tr>
+<td>193</td>
+<td>Britney</td>
+<td>Everett</td>
+<td>1997-03-03</td>
+<td>3900.0</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Bruce</td>
+<td>Ernst</td>
+<td>1991-05-21</td>
+<td>6000.0</td>
+</tr>
+<tr>
+<td>179</td>
+<td>Charles</td>
+<td>Johnson</td>
+<td>2000-01-04</td>
+<td>6200.0</td>
+</tr>
+<tr>
+<td>109</td>
+<td>Daniel</td>
+<td>Faviet</td>
+<td>1994-08-16</td>
+<td>9000.0</td>
+</tr>
+<tr>
+<td>105</td>
+<td>David</td>
+<td>Austin</td>
+<td>1997-06-25</td>
+<td>4800.0</td>
+</tr>
+<tr>
+<td>114</td>
+<td>Den</td>
+<td>Raphaely</td>
+<td>1994-12-07</td>
+<td>11000.0</td>
+</tr>
+<tr>
+<td>107</td>
+<td>Diana</td>
+<td>Lorentz</td>
+<td>1999-02-07</td>
+<td>4200.0</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employee_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>first_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>last_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>hire_date,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb>   
+</span><span style=color:#bbb>    </span>first_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>last_name<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>employee_id</th>
+<th>first_name</th>
+<th>last_name</th>
+<th>hire_date</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>121</td>
+<td>Adam</td>
+<td>Fripp</td>
+<td>1997-04-10</td>
+<td>8200.0</td>
+</tr>
+<tr>
+<td>115</td>
+<td>Alexander</td>
+<td>Khoo</td>
+<td>1995-05-18</td>
+<td>3100.0</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Alexander</td>
+<td>Hunold</td>
+<td>1990-01-03</td>
+<td>9000.0</td>
+</tr>
+<tr>
+<td>193</td>
+<td>Britney</td>
+<td>Everett</td>
+<td>1997-03-03</td>
+<td>3900.0</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Bruce</td>
+<td>Ernst</td>
+<td>1991-05-21</td>
+<td>6000.0</td>
+</tr>
+<tr>
+<td>179</td>
+<td>Charles</td>
+<td>Johnson</td>
+<td>2000-01-04</td>
+<td>6200.0</td>
+</tr>
+<tr>
+<td>109</td>
+<td>Daniel</td>
+<td>Faviet</td>
+<td>1994-08-16</td>
+<td>9000.0</td>
+</tr>
+<tr>
+<td>105</td>
+<td>David</td>
+<td>Austin</td>
+<td>1997-06-25</td>
+<td>4800.0</td>
+</tr>
+<tr>
+<td>114</td>
+<td>Den</td>
+<td>Raphaely</td>
+<td>1994-12-07</td>
+<td>11000.0</td>
+</tr>
+<tr>
+<td>107</td>
+<td>Diana</td>
+<td>Lorentz</td>
+<td>1999-02-07</td>
+<td>4200.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id=filter-data>Filter data<a href=#filter-data class=header-anchor arialabel=Anchor> # </a></h2>
+<h3 id=distinct>DISTINCT<a href=#distinct class=header-anchor arialabel=Anchor> # </a></h3>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24000.0</td>
+</tr>
+<tr>
+<td>17000.0</td>
+</tr>
+<tr>
+<td>17000.0</td>
+</tr>
+<tr>
+<td>14000.0</td>
+</tr>
+<tr>
+<td>13500.0</td>
+</tr>
+<tr>
+<td>13000.0</td>
+</tr>
+<tr>
+<td>12000.0</td>
+</tr>
+<tr>
+<td>12000.0</td>
+</tr>
+<tr>
+<td>11000.0</td>
+</tr>
+<tr>
+<td>10000.0</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>distinct</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24000.0</td>
+</tr>
+<tr>
+<td>17000.0</td>
+</tr>
+<tr>
+<td>14000.0</td>
+</tr>
+<tr>
+<td>13500.0</td>
+</tr>
+<tr>
+<td>13000.0</td>
+</tr>
+<tr>
+<td>12000.0</td>
+</tr>
+<tr>
+<td>11000.0</td>
+</tr>
+<tr>
+<td>10000.0</td>
+</tr>
+<tr>
+<td>9000.0</td>
+</tr>
+<tr>
+<td>8600.0</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>job_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span>job_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>job_id</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>8300.0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>12000.0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4400.0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>24000.0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>17000.0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>17000.0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>9000.0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>8200.0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>7800.0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>7700.0</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>distinct</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span>job_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span>job_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>job_id</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>8300.0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>12000.0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4400.0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>24000.0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>17000.0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>9000.0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>8200.0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>7800.0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>7700.0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>6900.0</td>
+</tr>
+</tbody>
+</table>
+<p><code>DISTINCT</code> only keeps one <code>NULL</code>.</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>distinct</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span>phone_number<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>phone_number<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>phone_number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+</tr>
+<tr>
+<td>515.123.4444</td>
+</tr>
+<tr>
+<td>515.123.4567</td>
+</tr>
+<tr>
+<td>515.123.4568</td>
+</tr>
+<tr>
+<td>515.123.4569</td>
+</tr>
+<tr>
+<td>515.123.5555</td>
+</tr>
+<tr>
+<td>515.123.7777</td>
+</tr>
+<tr>
+<td>515.123.8080</td>
+</tr>
+<tr>
+<td>515.123.8181</td>
+</tr>
+<tr>
+<td>515.123.8888</td>
+</tr>
+</tbody>
+</table>
+<h3 id=limit--offset>LIMIT & OFFSET<a href=#limit--offset class=header-anchor arialabel=Anchor> # </a></h3>
+<p><code>LIMIT</code> means to show many many rows. <code>OFFSET</code> means starting from which row. First row is 0. So <code>OFFSET 3</code> means starting from the fourth row.</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employee_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>first_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>last_name<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb>    
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span>first_name<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>employee_id</th>
+<th>first_name</th>
+<th>last_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>121</td>
+<td>Adam</td>
+<td>Fripp</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Alexander</td>
+<td>Hunold</td>
+</tr>
+<tr>
+<td>115</td>
+<td>Alexander</td>
+<td>Khoo</td>
+</tr>
+<tr>
+<td>193</td>
+<td>Britney</td>
+<td>Everett</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Bruce</td>
+<td>Ernst</td>
+</tr>
+<tr>
+<td>179</td>
+<td>Charles</td>
+<td>Johnson</td>
+</tr>
+<tr>
+<td>109</td>
+<td>Daniel</td>
+<td>Faviet</td>
+</tr>
+<tr>
+<td>105</td>
+<td>David</td>
+<td>Austin</td>
+</tr>
+<tr>
+<td>114</td>
+<td>Den</td>
+<td>Raphaely</td>
+</tr>
+<tr>
+<td>107</td>
+<td>Diana</td>
+<td>Lorentz</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employee_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>first_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>last_name<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb>    
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span>first_name<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>5</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>offset</span><span style=color:#bbb> </span><span style=color:#666>3</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>employee_id</th>
+<th>first_name</th>
+<th>last_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>193</td>
+<td>Britney</td>
+<td>Everett</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Bruce</td>
+<td>Ernst</td>
+</tr>
+<tr>
+<td>179</td>
+<td>Charles</td>
+<td>Johnson</td>
+</tr>
+<tr>
+<td>109</td>
+<td>Daniel</td>
+<td>Faviet</td>
+</tr>
+<tr>
+<td>105</td>
+<td>David</td>
+<td>Austin</td>
+</tr>
+</tbody>
+</table>
+<h3 id=where>Where<a href=#where class=header-anchor arialabel=Anchor> # </a></h3>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb>  
+</span><span style=color:#bbb>    </span>employee_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>first_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>last_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:#666>&gt;</span><span style=color:#bbb> </span><span style=color:#666>14000</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb> 
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>employee_id</th>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Steven</td>
+<td>King</td>
+<td>24000.0</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Neena</td>
+<td>Kochhar</td>
+<td>17000.0</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Lex</td>
+<td>De Haan</td>
+<td>17000.0</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb>  
+</span><span style=color:#bbb>    </span>employee_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>first_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>last_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>department_id<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span>department_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#666>5</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>first_name;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>employee_id</th>
+<th>first_name</th>
+<th>last_name</th>
+<th>department_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>121</td>
+<td>Adam</td>
+<td>Fripp</td>
+<td>5</td>
+</tr>
+<tr>
+<td>193</td>
+<td>Britney</td>
+<td>Everett</td>
+<td>5</td>
+</tr>
+<tr>
+<td>126</td>
+<td>Irene</td>
+<td>Mikkilineni</td>
+<td>5</td>
+</tr>
+<tr>
+<td>120</td>
+<td>Matthew</td>
+<td>Weiss</td>
+<td>5</td>
+</tr>
+<tr>
+<td>122</td>
+<td>Payam</td>
+<td>Kaufling</td>
+<td>5</td>
+</tr>
+<tr>
+<td>192</td>
+<td>Sarah</td>
+<td>Bell</td>
+<td>5</td>
+</tr>
+<tr>
+<td>123</td>
+<td>Shanta</td>
+<td>Vollman</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb>  
+</span><span style=color:#bbb>    </span>employee_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>first_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>last_name<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span>last_name<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#ba2121>&#34;Chen&#34;</span><span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>employee_id</th>
+<th>first_name</th>
+<th>last_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>110</td>
+<td>John</td>
+<td>Chen</td>
+</tr>
+</tbody>
+</table>
+<h3 id=comparison-oprators>Comparison oprators<a href=#comparison-oprators class=header-anchor arialabel=Anchor> # </a></h3>
+<ul>
+<li><code>=</code>: equal</li>
+<li><code>&lt;></code>: not equal</li>
+<li><code>></code></li>
+<li><code>>=</code></li>
+<li><code>&lt;</code></li>
+<li><code>&lt;=</code></li>
+</ul>
+<h3 id=logical-operators>Logical operators<a href=#logical-operators class=header-anchor arialabel=Anchor> # </a></h3>
+<ul>
+<li><code>ALL</code></li>
+<li><code>AND</code></li>
+<li><code>ANY</code></li>
+<li><code>BETWEEN</code></li>
+<li><code>EXISTS</code></li>
+<li><code>IN</code></li>
+<li><code>LIKE</code></li>
+<li><code>NOT</code></li>
+<li><code>OR</code></li>
+<li><code>SOME</code></li>
+<li><code>IS NULL</code></li>
+</ul>
+<h4 id=and>AND<a href=#and class=header-anchor arialabel=Anchor> # </a></h4>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name,<span style=color:#bbb> </span>salary<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&gt;</span><span style=color:#bbb> </span><span style=color:#666>5000</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>AND</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&lt;</span><span style=color:#bbb> </span><span style=color:#666>7000</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Luis</td>
+<td>Popp</td>
+<td>6900.0</td>
+</tr>
+<tr>
+<td>Shanta</td>
+<td>Vollman</td>
+<td>6500.0</td>
+</tr>
+<tr>
+<td>Susan</td>
+<td>Mavris</td>
+<td>6500.0</td>
+</tr>
+<tr>
+<td>Charles</td>
+<td>Johnson</td>
+<td>6200.0</td>
+</tr>
+<tr>
+<td>Bruce</td>
+<td>Ernst</td>
+<td>6000.0</td>
+</tr>
+<tr>
+<td>Pat</td>
+<td>Fay</td>
+<td>6000.0</td>
+</tr>
+</tbody>
+</table>
+<h4 id=or>OR<a href=#or class=header-anchor arialabel=Anchor> # </a></h4>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name,<span style=color:#bbb> </span>salary<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#666>7000</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>OR</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#666>8000</span>;<span style=color:#bbb> 
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matthew</td>
+<td>Weiss</td>
+<td>8000.0</td>
+</tr>
+<tr>
+<td>Kimberely</td>
+<td>Grant</td>
+<td>7000.0</td>
+</tr>
+</tbody>
+</table>
+<h4 id=is-null>IS NULL<a href=#is-null class=header-anchor arialabel=Anchor> # </a></h4>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name,<span style=color:#bbb> </span>phone_number<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>phone_number<span style=color:#bbb> </span><span style=color:green;font-weight:700>IS</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>NULL</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>phone_number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Charles</td>
+<td>Johnson</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Jack</td>
+<td>Livingston</td>
+<td>None</td>
+</tr>
+<tr>
+<td>John</td>
+<td>Russell</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Jonathon</td>
+<td>Taylor</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Karen</td>
+<td>Partners</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Kimberely</td>
+<td>Grant</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h4 id=between>BETWEEN<a href=#between class=header-anchor arialabel=Anchor> # </a></h4>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name,<span style=color:#bbb> </span>salary<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>BETWEEN</span><span style=color:#bbb> </span><span style=color:#666>9000</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>and</span><span style=color:#bbb> </span><span style=color:#666>12000</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nancy</td>
+<td>Greenberg</td>
+<td>12000.0</td>
+</tr>
+<tr>
+<td>Shelley</td>
+<td>Higgins</td>
+<td>12000.0</td>
+</tr>
+<tr>
+<td>Den</td>
+<td>Raphaely</td>
+<td>11000.0</td>
+</tr>
+<tr>
+<td>Hermann</td>
+<td>Baer</td>
+<td>10000.0</td>
+</tr>
+<tr>
+<td>Alexander</td>
+<td>Hunold</td>
+<td>9000.0</td>
+</tr>
+<tr>
+<td>Daniel</td>
+<td>Faviet</td>
+<td>9000.0</td>
+</tr>
+</tbody>
+</table>
+<h4 id=in>IN<a href=#in class=header-anchor arialabel=Anchor> # </a></h4>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name,<span style=color:#bbb> </span>department_id<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>department_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#666>6</span>,<span style=color:#bbb> </span><span style=color:#666>8</span>,<span style=color:#bbb> </span><span style=color:#666>9</span>)<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> </span>department_id;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>department_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alexander</td>
+<td>Hunold</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Bruce</td>
+<td>Ernst</td>
+<td>6</td>
+</tr>
+<tr>
+<td>David</td>
+<td>Austin</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Valli</td>
+<td>Pataballa</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Diana</td>
+<td>Lorentz</td>
+<td>6</td>
+</tr>
+<tr>
+<td>John</td>
+<td>Russell</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Karen</td>
+<td>Partners</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Jonathon</td>
+<td>Taylor</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Jack</td>
+<td>Livingston</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Kimberely</td>
+<td>Grant</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Charles</td>
+<td>Johnson</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Steven</td>
+<td>King</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Neena</td>
+<td>Kochhar</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Lex</td>
+<td>De Haan</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<h4 id=like>LIKE<a href=#like class=header-anchor arialabel=Anchor> # </a></h4>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>employee_id,<span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>first_name<span style=color:#bbb> </span><span style=color:green;font-weight:700>LIKE</span><span style=color:#bbb> </span><span style=color:#ba2121>&#39;_h%&#39;</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> </span>first_name;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>employee_id</th>
+<th>first_name</th>
+<th>last_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>179</td>
+<td>Charles</td>
+<td>Johnson</td>
+</tr>
+<tr>
+<td>123</td>
+<td>Shanta</td>
+<td>Vollman</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Shelley</td>
+<td>Higgins</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Shelli</td>
+<td>Baida</td>
+</tr>
+</tbody>
+</table>
+<p><code>_</code> represents a single character.</p>
+<p><code>%</code> represents <code>0</code>, <code>1</code>, or multiple characters.</p>
+<h4 id=all-any>ALL, ANY<a href=#all-any class=header-anchor arialabel=Anchor> # </a></h4>
+<p>SQLITE does not support <code>ALL</code> or <code>ANY</code>. But there are alternatives.</p>
+<p>For example</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&gt;=</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>ALL</span><span style=color:#bbb> </span>(<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>department_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#666>8</span><span style=color:#bbb>
+</span><span style=color:#bbb></span>);<span style=color:#bbb>
+</span></code></pre></div><p>can be done via</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&gt;=</span><span style=color:#bbb> </span>(<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>MAX</span>(salary)<span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>department_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#666>8</span><span style=color:#bbb>
+</span><span style=color:#bbb></span>)<span style=color:#bbb>
+</span></code></pre></div><p>And</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&gt;=</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>ANY</span><span style=color:#bbb> </span>(<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>department_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#666>8</span><span style=color:#bbb>
+</span><span style=color:#bbb></span>);<span style=color:#bbb>
+</span></code></pre></div><p>can be achieved through</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&gt;=</span><span style=color:#bbb> </span>(<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>MIN</span>(salary)<span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>department_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#666>8</span><span style=color:#bbb>
+</span><span style=color:#bbb></span>);<span style=color:#bbb>
+</span></code></pre></div><p>or</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>department_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#666>8</span><span style=color:#bbb>
+</span><span style=color:#bbb></span>);<span style=color:#bbb>
+</span></code></pre></div><h4 id=exists>EXISTS<a href=#exists class=header-anchor arialabel=Anchor> # </a></h4>
+<p>For example, show names of those who have dependents:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span>e<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>EXISTS</span>(<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>dependents<span style=color:#bbb> </span>d<span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>d.employee_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span>e.employee_id<span style=color:#bbb>
+</span><span style=color:#bbb></span>)<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steven</td>
+<td>King</td>
+</tr>
+<tr>
+<td>Neena</td>
+<td>Kochhar</td>
+</tr>
+<tr>
+<td>Lex</td>
+<td>De Haan</td>
+</tr>
+<tr>
+<td>Alexander</td>
+<td>Hunold</td>
+</tr>
+<tr>
+<td>Bruce</td>
+<td>Ernst</td>
+</tr>
+<tr>
+<td>David</td>
+<td>Austin</td>
+</tr>
+<tr>
+<td>Valli</td>
+<td>Pataballa</td>
+</tr>
+<tr>
+<td>Diana</td>
+<td>Lorentz</td>
+</tr>
+<tr>
+<td>Nancy</td>
+<td>Greenberg</td>
+</tr>
+<tr>
+<td>Daniel</td>
+<td>Faviet</td>
+</tr>
+</tbody>
+</table>
+<p>在我看来，上面的这行就说明了 sql 相比于 csv 的优势。通过 <code>employee_id</code> 这一栏，我们把两个数据连在一起，放在了一个数据库。</p>
+<h2 id=conditional-expression>Conditional Expression<a href=#conditional-expression class=header-anchor arialabel=Anchor> # </a></h2>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name,<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>CASE</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>when</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&lt;</span><span style=color:#bbb> </span><span style=color:#666>3000</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>then</span><span style=color:#bbb> </span><span style=color:#ba2121>&#39;low&#39;</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>when</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&gt;=</span><span style=color:#bbb> </span><span style=color:#666>3000</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>and</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&lt;=</span><span style=color:#bbb> </span><span style=color:#666>5000</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>then</span><span style=color:#bbb> </span><span style=color:#ba2121>&#39;average&#39;</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>ELSE</span><span style=color:#bbb> </span><span style=color:#ba2121>&#39;high&#39;</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>END</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>evaluation<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>LIMIT</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>evaluation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steven</td>
+<td>King</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Neena</td>
+<td>Kochhar</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Lex</td>
+<td>De Haan</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Alexander</td>
+<td>Hunold</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Bruce</td>
+<td>Ernst</td>
+<td>high</td>
+</tr>
+<tr>
+<td>David</td>
+<td>Austin</td>
+<td>average</td>
+</tr>
+<tr>
+<td>Valli</td>
+<td>Pataballa</td>
+<td>average</td>
+</tr>
+<tr>
+<td>Diana</td>
+<td>Lorentz</td>
+<td>average</td>
+</tr>
+<tr>
+<td>Nancy</td>
+<td>Greenberg</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Daniel</td>
+<td>Faviet</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>first_name,<span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>last_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>phone_number,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>CASE</span><span style=color:#bbb>
+</span><span style=color:#bbb>        </span><span style=color:green;font-weight:700>WHEN</span><span style=color:#bbb> </span>phone_number<span style=color:#bbb> </span><span style=color:green;font-weight:700>IS</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>NULL</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>THEN</span><span style=color:#bbb> </span><span style=color:#ba2121>&#39;No phone number&#39;</span><span style=color:#bbb>
+</span><span style=color:#bbb>        </span><span style=color:green;font-weight:700>ELSE</span><span style=color:#bbb> </span>phone_number<span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>END</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>final_phone_number<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>phone_number<span style=color:#bbb> </span><span style=color:green;font-weight:700>IS</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>NULL</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>LIMIT</span><span style=color:#bbb> </span><span style=color:#666>10</span><span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>phone_number</th>
+<th>final_phone_number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John</td>
+<td>Russell</td>
+<td>None</td>
+<td>No phone number</td>
+</tr>
+<tr>
+<td>Karen</td>
+<td>Partners</td>
+<td>None</td>
+<td>No phone number</td>
+</tr>
+<tr>
+<td>Jonathon</td>
+<td>Taylor</td>
+<td>None</td>
+<td>No phone number</td>
+</tr>
+<tr>
+<td>Jack</td>
+<td>Livingston</td>
+<td>None</td>
+<td>No phone number</td>
+</tr>
+<tr>
+<td>Kimberely</td>
+<td>Grant</td>
+<td>None</td>
+<td>No phone number</td>
+</tr>
+<tr>
+<td>Charles</td>
+<td>Johnson</td>
+<td>None</td>
+<td>No phone number</td>
+</tr>
+</tbody>
+</table>
+<h2 id=join-multiple-tables>Join multiple tables<a href=#join-multiple-tables class=header-anchor arialabel=Anchor> # </a></h2>
+<h3 id=alias>Alias<a href=#alias class=header-anchor arialabel=Anchor> # </a></h3>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name,<span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:#666>1</span>.<span style=color:#666>1</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>new_salary<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>ORDER</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>BY</span><span style=color:#bbb> </span>new_salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>DESC</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>LIMIT</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>new_salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steven</td>
+<td>King</td>
+<td>26400.000000000004</td>
+</tr>
+<tr>
+<td>Neena</td>
+<td>Kochhar</td>
+<td>18700.0</td>
+</tr>
+<tr>
+<td>Lex</td>
+<td>De Haan</td>
+<td>18700.0</td>
+</tr>
+<tr>
+<td>John</td>
+<td>Russell</td>
+<td>15400.000000000002</td>
+</tr>
+<tr>
+<td>Karen</td>
+<td>Partners</td>
+<td>14850.000000000002</td>
+</tr>
+<tr>
+<td>Michael</td>
+<td>Hartstein</td>
+<td>14300.000000000002</td>
+</tr>
+<tr>
+<td>Nancy</td>
+<td>Greenberg</td>
+<td>13200.000000000002</td>
+</tr>
+<tr>
+<td>Shelley</td>
+<td>Higgins</td>
+<td>13200.000000000002</td>
+</tr>
+<tr>
+<td>Den</td>
+<td>Raphaely</td>
+<td>12100.000000000002</td>
+</tr>
+<tr>
+<td>Hermann</td>
+<td>Baer</td>
+<td>11000.0</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>e.first_name,<span style=color:#bbb> </span>e.last_name<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>e<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>LIMIT</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steven</td>
+<td>King</td>
+</tr>
+<tr>
+<td>Neena</td>
+<td>Kochhar</td>
+</tr>
+<tr>
+<td>Lex</td>
+<td>De Haan</td>
+</tr>
+<tr>
+<td>Alexander</td>
+<td>Hunold</td>
+</tr>
+<tr>
+<td>Bruce</td>
+<td>Ernst</td>
+</tr>
+<tr>
+<td>David</td>
+<td>Austin</td>
+</tr>
+<tr>
+<td>Valli</td>
+<td>Pataballa</td>
+</tr>
+<tr>
+<td>Diana</td>
+<td>Lorentz</td>
+</tr>
+<tr>
+<td>Nancy</td>
+<td>Greenberg</td>
+</tr>
+<tr>
+<td>Daniel</td>
+<td>Faviet</td>
+</tr>
+</tbody>
+</table>
+<h3 id=inner-join>Inner Join<a href=#inner-join class=header-anchor arialabel=Anchor> # </a></h3>
+<p>取共有的。</p>
+<p><img src=https://www.sqltutorial.org/wp-content/uploads/2016/03/SQL-INNER-JOIN.png alt></p>
+<p>图片来源: https://www.sqltutorial.org/wp-content/uploads/2016/03/SQL-INNER-JOIN.png</p>
+<p>我们来看一个例子：</p>
+<p><img src=https://www.sqltutorial.org/wp-content/uploads/2016/03/emp_dept_tables.png alt></p>
+<p>图片来源：https://www.sqltutorial.org/wp-content/uploads/2016/03/emp_dept_tables.png</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>department_id,<span style=color:#bbb> </span>department_name<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>departments<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>department_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#666>1</span>,<span style=color:#bbb> </span><span style=color:#666>2</span>,<span style=color:#bbb> </span><span style=color:#666>3</span>)<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>department_id</th>
+<th>department_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Administration</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Marketing</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Purchasing</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name,<span style=color:#bbb> </span>department_id<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>department_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#666>1</span>,<span style=color:#bbb> </span><span style=color:#666>2</span>,<span style=color:#bbb> </span><span style=color:#666>3</span>)<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>ORDER</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>BY</span><span style=color:#bbb> </span>department_id<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>department_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jennifer</td>
+<td>Whalen</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Michael</td>
+<td>Hartstein</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Pat</td>
+<td>Fay</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Den</td>
+<td>Raphaely</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Alexander</td>
+<td>Khoo</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Shelli</td>
+<td>Baida</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Sigal</td>
+<td>Tobias</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Guy</td>
+<td>Himuro</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Karen</td>
+<td>Colmenares</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>e.first_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>e.last_name,<span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>e.department_id,<span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>d.department_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>d.department_name<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>e<span style=color:#bbb>
+</span><span style=color:#bbb>        </span><span style=color:green;font-weight:700>INNER</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>JOIN</span><span style=color:#bbb>
+</span><span style=color:#bbb>    </span>departments<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>d<span style=color:#bbb> </span><span style=color:green;font-weight:700>ON</span><span style=color:#bbb> </span>d.department_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span>e.department_id<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>e.department_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#666>1</span>,<span style=color:#bbb> </span><span style=color:#666>2</span>,<span style=color:#bbb> </span><span style=color:#666>3</span>)<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>first_name</th>
+<th>last_name</th>
+<th>department_id</th>
+<th>department_id_1</th>
+<th>department_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jennifer</td>
+<td>Whalen</td>
+<td>1</td>
+<td>1</td>
+<td>Administration</td>
+</tr>
+<tr>
+<td>Michael</td>
+<td>Hartstein</td>
+<td>2</td>
+<td>2</td>
+<td>Marketing</td>
+</tr>
+<tr>
+<td>Pat</td>
+<td>Fay</td>
+<td>2</td>
+<td>2</td>
+<td>Marketing</td>
+</tr>
+<tr>
+<td>Den</td>
+<td>Raphaely</td>
+<td>3</td>
+<td>3</td>
+<td>Purchasing</td>
+</tr>
+<tr>
+<td>Alexander</td>
+<td>Khoo</td>
+<td>3</td>
+<td>3</td>
+<td>Purchasing</td>
+</tr>
+<tr>
+<td>Shelli</td>
+<td>Baida</td>
+<td>3</td>
+<td>3</td>
+<td>Purchasing</td>
+</tr>
+<tr>
+<td>Sigal</td>
+<td>Tobias</td>
+<td>3</td>
+<td>3</td>
+<td>Purchasing</td>
+</tr>
+<tr>
+<td>Guy</td>
+<td>Himuro</td>
+<td>3</td>
+<td>3</td>
+<td>Purchasing</td>
+</tr>
+<tr>
+<td>Karen</td>
+<td>Colmenares</td>
+<td>3</td>
+<td>3</td>
+<td>Purchasing</td>
+</tr>
+</tbody>
+</table>
+<h3 id=left-join>LEFT JOIN<a href=#left-join class=header-anchor arialabel=Anchor> # </a></h3>
+<p><img src=https://www.sqltutorial.org/wp-content/uploads/2016/03/SQL-LEFT-JOIN.png alt></p>
+<p>图片来源：https://www.sqltutorial.org/wp-content/uploads/2016/03/SQL-LEFT-JOIN.png</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>country_id,<span style=color:#bbb> </span>country_name<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>countries<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>country_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#ba2121>&#39;US&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;UK&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;CN&#39;</span>)<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>country_id</th>
+<th>country_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CN</td>
+<td>China</td>
+</tr>
+<tr>
+<td>UK</td>
+<td>United Kingdom</td>
+</tr>
+<tr>
+<td>US</td>
+<td>United States of America</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>country_id,<span style=color:#bbb> </span>street_address,<span style=color:#bbb> </span>city<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>locations<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>country_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#ba2121>&#39;US&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;UK&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;CN&#39;</span>)<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>country_id</th>
+<th>street_address</th>
+<th>city</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US</td>
+<td>2014 Jabberwocky Rd</td>
+<td>Southlake</td>
+</tr>
+<tr>
+<td>US</td>
+<td>2011 Interiors Blvd</td>
+<td>South San Francisco</td>
+</tr>
+<tr>
+<td>US</td>
+<td>2004 Charade Rd</td>
+<td>Seattle</td>
+</tr>
+<tr>
+<td>UK</td>
+<td>8204 Arthur St</td>
+<td>London</td>
+</tr>
+<tr>
+<td>UK</td>
+<td>Magdalen Centre, The Oxford Science Park</td>
+<td>Oxford</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>l.country_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>l.street_address,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>l.city<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>countries<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>c</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>LEFT</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>JOIN</span><span style=color:#bbb> </span>locations<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>l<span style=color:#bbb> </span><span style=color:green;font-weight:700>on</span><span style=color:#bbb> </span>l.country_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#ba2121>&#39;US&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;UK&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;CN&#39;</span>)<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>country_name</th>
+<th>country_id</th>
+<th>country_id_1</th>
+<th>street_address</th>
+<th>city</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>China</td>
+<td>CN</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr>
+<td>United Kingdom</td>
+<td>UK</td>
+<td>UK</td>
+<td>8204 Arthur St</td>
+<td>London</td>
+</tr>
+<tr>
+<td>United Kingdom</td>
+<td>UK</td>
+<td>UK</td>
+<td>Magdalen Centre, The Oxford Science Park</td>
+<td>Oxford</td>
+</tr>
+<tr>
+<td>United States of America</td>
+<td>US</td>
+<td>US</td>
+<td>2014 Jabberwocky Rd</td>
+<td>Southlake</td>
+</tr>
+<tr>
+<td>United States of America</td>
+<td>US</td>
+<td>US</td>
+<td>2011 Interiors Blvd</td>
+<td>South San Francisco</td>
+</tr>
+<tr>
+<td>United States of America</td>
+<td>US</td>
+<td>US</td>
+<td>2004 Charade Rd</td>
+<td>Seattle</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>l.country_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>l.street_address,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>l.city<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>locations<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>l<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>LEFT</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>JOIN</span><span style=color:#bbb> </span>countries<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>c</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>on</span><span style=color:#bbb> </span>l.country_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#ba2121>&#39;US&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;UK&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;CN&#39;</span>)<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>country_name</th>
+<th>country_id</th>
+<th>country_id_1</th>
+<th>street_address</th>
+<th>city</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>United Kingdom</td>
+<td>UK</td>
+<td>UK</td>
+<td>8204 Arthur St</td>
+<td>London</td>
+</tr>
+<tr>
+<td>United Kingdom</td>
+<td>UK</td>
+<td>UK</td>
+<td>Magdalen Centre, The Oxford Science Park</td>
+<td>Oxford</td>
+</tr>
+<tr>
+<td>United States of America</td>
+<td>US</td>
+<td>US</td>
+<td>2014 Jabberwocky Rd</td>
+<td>Southlake</td>
+</tr>
+<tr>
+<td>United States of America</td>
+<td>US</td>
+<td>US</td>
+<td>2011 Interiors Blvd</td>
+<td>South San Francisco</td>
+</tr>
+<tr>
+<td>United States of America</td>
+<td>US</td>
+<td>US</td>
+<td>2004 Charade Rd</td>
+<td>Seattle</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_name,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>l.country_id,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>l.street_address,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>l.city<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span>countries<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>c</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>INNER</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>JOIN</span><span style=color:#bbb> </span>locations<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>l<span style=color:#bbb> </span><span style=color:green;font-weight:700>on</span><span style=color:#bbb> </span>l.country_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> 
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#ba2121>&#39;US&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;UK&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;CN&#39;</span>)<span style=color:#bbb>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>country_name</th>
+<th>country_id</th>
+<th>country_id_1</th>
+<th>street_address</th>
+<th>city</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>United Kingdom</td>
+<td>UK</td>
+<td>UK</td>
+<td>8204 Arthur St</td>
+<td>London</td>
+</tr>
+<tr>
+<td>United Kingdom</td>
+<td>UK</td>
+<td>UK</td>
+<td>Magdalen Centre, The Oxford Science Park</td>
+<td>Oxford</td>
+</tr>
+<tr>
+<td>United States of America</td>
+<td>US</td>
+<td>US</td>
+<td>2014 Jabberwocky Rd</td>
+<td>Southlake</td>
+</tr>
+<tr>
+<td>United States of America</td>
+<td>US</td>
+<td>US</td>
+<td>2011 Interiors Blvd</td>
+<td>South San Francisco</td>
+</tr>
+<tr>
+<td>United States of America</td>
+<td>US</td>
+<td>US</td>
+<td>2004 Charade Rd</td>
+<td>Seattle</td>
+</tr>
+</tbody>
+</table>
+<h2 id=aggregate-functions>Aggregate functions<a href=#aggregate-functions class=header-anchor arialabel=Anchor> # </a></h2>
+<p>待续</p>
+<a href=https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/>#编程</a>
+<p style=color:#777>最后一次修改于 2024-10-05</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<div class=content>
+<script src=https://giscus.app/client.js data-repo=hongtaoh/hongtaoh.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyNjM3NDMzMTY=" data-category=Announcements data-category-id=DIC_kwDOD7hnVM4CUKk6 data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en data-loading=lazy crossorigin=anonymous async></script>
+</br>
+</div>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/cn/blog/index.xml type=application/rss+xml title="RSS feed">
+订阅 </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank>
+版权
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+郝鸿涛
+2020-2024
+</div>
+</footer>
