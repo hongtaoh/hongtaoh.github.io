@@ -25,3 +25,5 @@ python hupyter.py notebooks/2024-09-17-stats-simulation.ipynb cn/blog
 python hupyter.py notebooks/2024-09-24-chi2.ipynb cn/blog
 
 python hupyter.py notebooks/2024-09-29-t-distribution.ipynb cn/blog
+
+python hupyter.py notebooks/2024-10-05-sql.ipynb cn/blog
