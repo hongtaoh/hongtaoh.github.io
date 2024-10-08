@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/</link><description>Recent content on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/index.xml" rel="self" type="application/rss+xml"/><item><title>SQL 简易教程</title><link>https://hongtaoh.com/cn/2024/10/05/sql/</link><pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/10/05/sql/</guid><description>说实话，平常我用不到 SQL，所以一直没有去学。因为要面试，在准备 SQL 方面的知识，就快速学习了一下。我的感觉是和 Pandas 没差多少。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/</link><description>Recent content on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://hongtaoh.com/index.xml" rel="self" type="application/rss+xml"/><item><title>如何理解置信区间</title><link>https://hongtaoh.com/cn/2024/10/08/ci/</link><pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/10/08/ci/</guid><description>import numpy as np import matplotlib.pyplot as plt from scipy.stats import t 英文维基百科上的置信区间 (confidence interval) 词条 对此概念解释非常详细。
+我们依然拿天狼星人举例子。SpaceX 公司登陆火星之后发现火星地下上全是天狼星人。他们搜集了全部的在火星上居住天狼星人的信息之后，对其进行抽样。随机抽取了 100 个天狼星人，然后测量他们的智商 ($X_1, X_2, X_3, ... X_n$)。记样本均值为 $\bar{X}$、样本方差为 $S^2$。
+我们现在最迫切需要知道的是：天狼星人的智商大体是什么样。
+注意，我们现在不是要去比较天狼星人和地球人智商有没有显著差异，而是想知道天狼星人的智商大概是什么样。你当然可以直接抛给我一个数：$\bar{X}$，说这是这 100 个天狼星人的平均智商。但是，问题是，我想知道母体的数据啊。
+怎么办？
+我们把所有天狼星人智商这一母体的均值记为 $\mu$，方差记为 $\sigma^2$。
+假设上面的抽样进行无数次，也就是每次随机抽取 100 个天狼星人，记录其样本均值和方差，并且每次算出
+$$T = \frac{\bar{X} - \mu}{\frac{S}{\sqrt{n}}}$$
+其中 $n = 100$。
+你会说，等等，$\mu$ 我们并不知道啊，$T$ 根本没法算。
+确实，一个具体的 $T$ 在我们不知道母体均值 $\mu$ 的情况下确实没办法计算。但是，回顾一下我们对于 t 分布的讲解 ，你会发现，不管母体如何，每次从母体中随机抽取 100 人，计算 $T$ ，重复无数次，这些 $T$ 的分布全部都是 $T \sim t_{99}$：
+## params df = 99 alpha = 0.</description></item><item><title>SQL 简易教程</title><link>https://hongtaoh.com/cn/2024/10/05/sql/</link><pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/10/05/sql/</guid><description>说实话，平常我用不到 SQL，所以一直没有去学。因为要面试，在准备 SQL 方面的知识，就快速学习了一下。我的感觉是和 Pandas 没差多少。
 我用的是苹果电脑，Windows 的会不太一样。
 我选择用 Sqlite ，因为这个最简单，不需要服务器。
 首先检查 sqlite3 是否安装：

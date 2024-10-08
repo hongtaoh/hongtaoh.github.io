@@ -1,0 +1,186 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script src=/js/copy-code.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/cn/>关于</a></li>
+<li><a href=/cn/blog/>日志</a></li>
+<li><a href=/>English</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>如何理解置信区间</h1>
+<p>郝鸿涛
+/ 2024-10-08 </p>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2024-10-08-confidence-interval.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title=编辑本页></i>
+</a>
+</span>
+<aside class=toc>
+Table of Contents:
+<nav id=TableOfContents>
+<ul>
+<li><a href=#置信区间的构成>置信区间的构成</a></li>
+<li><a href=#置信区间的解读>置信区间的解读</a></li>
+<li><a href=#置信区间和假设检验的关系>置信区间和假设检验的关系</a></li>
+</ul>
+</nav>
+</aside>
+<div class="body-text list-text">
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>numpy</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>np</span> 
+<span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>matplotlib.pyplot</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>plt</span> 
+<span style=color:green;font-weight:700>from</span> <span style=color:#00f;font-weight:700>scipy.stats</span> <span style=color:green;font-weight:700>import</span> t
+</code></pre></div><p>英文维基百科上的置信区间 (confidence interval) <a href=https://en.wikipedia.org/wiki/Confidence_interval#Example target=_blank rel="noreferrer noopener">词条</a>
+对此概念解释非常详细。</p>
+<p>我们依然拿天狼星人举例子。SpaceX 公司登陆火星之后发现火星地下上全是天狼星人。他们搜集了全部的在火星上居住天狼星人的信息之后，对其进行抽样。随机抽取了 100 个天狼星人，然后测量他们的智商 (<code>$X_1, X_2, X_3, ... X_n$</code>)。记样本均值为 <code>$\bar{X}$</code>、样本方差为 <code>$S^2$</code>。</p>
+<p>我们现在最迫切需要知道的是：天狼星人的智商大体是什么样。</p>
+<p>注意，我们现在不是要去比较天狼星人和地球人智商有没有显著差异，而是想知道天狼星人的智商大概是什么样。你当然可以直接抛给我一个数：<code>$\bar{X}$</code>，说这是这 100 个天狼星人的平均智商。但是，问题是，我想知道母体的数据啊。</p>
+<p>怎么办？</p>
+<p>我们把所有天狼星人智商这一母体的均值记为 <code>$\mu$</code>，方差记为 <code>$\sigma^2$</code>。</p>
+<p>假设上面的抽样进行无数次，也就是每次随机抽取 100 个天狼星人，记录其样本均值和方差，并且每次算出</p>
+<p><code>$$T = \frac{\bar{X} - \mu}{\frac{S}{\sqrt{n}}}$$</code></p>
+<p>其中 <code>$n = 100$</code>。</p>
+<p>你会说，等等，<code>$\mu$</code> 我们并不知道啊，<code>$T$</code> 根本没法算。</p>
+<p>确实，一个具体的 <code>$T$</code> 在我们不知道母体均值 <code>$\mu$</code> 的情况下确实没办法计算。但是，回顾一下我们对于 <a href=/cn/2024/09/29/t/>t 分布的讲解</a>
+，你会发现，不管母体如何，每次从母体中随机抽取 100 人，计算 <code>$T$</code> ，重复无数次，这些 <code>$T$</code> 的分布全部都是 <code>$T \sim t_{99}$</code>：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#408080;font-style:italic>## params</span>
+df <span style=color:#666>=</span> <span style=color:#666>99</span>
+alpha <span style=color:#666>=</span> <span style=color:#666>0.05</span>
+x <span style=color:#666>=</span> np<span style=color:#666>.</span>linspace(<span style=color:#666>-</span><span style=color:#666>4</span>, <span style=color:#666>4</span>, <span style=color:#666>1000</span>)
+
+<span style=color:#408080;font-style:italic># calculate PDF for t-distribution</span>
+y <span style=color:#666>=</span> t<span style=color:#666>.</span>pdf(x, df<span style=color:#666>=</span>df)
+
+<span style=color:#408080;font-style:italic># critical values for the given alpha level</span>
+q_value_upper <span style=color:#666>=</span> t<span style=color:#666>.</span>ppf(<span style=color:#666>1</span> <span style=color:#666>-</span> alpha<span style=color:#666>/</span><span style=color:#666>2</span>, df) 
+q_value_lower <span style=color:#666>=</span> t<span style=color:#666>.</span>ppf(alpha<span style=color:#666>/</span><span style=color:#666>2</span>, df)
+
+<span style=color:#408080;font-style:italic># Plot the t-distribution PDF</span>
+plt<span style=color:#666>.</span>figure(figsize<span style=color:#666>=</span>(<span style=color:#666>12</span>, <span style=color:#666>6</span>))
+plt<span style=color:#666>.</span>plot(x, y, color<span style=color:#666>=</span><span style=color:#ba2121>&#39;steelblue&#39;</span>, lw<span style=color:#666>=</span><span style=color:#666>2</span>, 
+    label<span style=color:#666>=</span><span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;`$t$`-distribution with `$df=</span><span style=color:#b68;font-weight:700>{</span>df<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`&#39;</span>)  
+
+<span style=color:#408080;font-style:italic># Fill the area between the critical values for the two-tailed region</span>
+plt<span style=color:#666>.</span>fill_between(x, y, 
+                 where<span style=color:#666>=</span>np<span style=color:#666>.</span>logical_and(x <span style=color:#666>&lt;=</span> q_value_upper, x <span style=color:#666>&gt;=</span> q_value_lower), 
+                 color<span style=color:#666>=</span><span style=color:#ba2121>&#39;orange&#39;</span>, 
+                 alpha <span style=color:#666>=</span> <span style=color:#666>0.5</span>, 
+                 label<span style=color:#666>=</span><span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;Critical Region (`$1 - \alpha = </span><span style=color:#b68;font-weight:700>{</span><span style=color:#666>1</span> <span style=color:#666>-</span> alpha<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>$`)&#39;</span>)
+plt<span style=color:#666>.</span>axvline(q_value_lower, color<span style=color:#666>=</span><span style=color:#ba2121>&#34;purple&#34;</span>, 
+            linestyle<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, 
+            label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Lower Critical Value (</span><span style=color:#b68;font-weight:700>{</span>q_value_lower<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>)&#39;</span>)
+plt<span style=color:#666>.</span>axvline(q_value_upper, color<span style=color:#666>=</span><span style=color:#ba2121>&#34;red&#34;</span>, 
+            linestyle<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, 
+            label<span style=color:#666>=</span><span style=color:#ba2121>f</span><span style=color:#ba2121>&#39;Upper Critical Value (</span><span style=color:#b68;font-weight:700>{</span>q_value_upper<span style=color:#b68;font-weight:700>:</span><span style=color:#ba2121>.2f</span><span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121>)&#39;</span>)
+plt<span style=color:#666>.</span>axhline(<span style=color:#666>0</span>, color <span style=color:#666>=</span> <span style=color:#ba2121>&#34;black&#34;</span>)
+plt<span style=color:#666>.</span>xlabel(<span style=color:#ba2121>r</span><span style=color:#ba2121>&#39;`$T$`&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>14</span>)
+plt<span style=color:#666>.</span>ylabel(<span style=color:#ba2121>r</span><span style=color:#ba2121>&#39;`$P(T)$`&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>14</span>)
+plt<span style=color:#666>.</span>title(<span style=color:#ba2121>rf</span><span style=color:#ba2121>&#39;T-Distribution with </span><span style=color:#b68;font-weight:700>{</span>df<span style=color:#b68;font-weight:700>}</span><span style=color:#ba2121> Degrees of Freedom&#39;</span>, fontsize <span style=color:#666>=</span> <span style=color:#666>16</span>)
+plt<span style=color:#666>.</span>grid(<span style=color:green;font-weight:700>True</span>, linestyle<span style=color:#666>=</span><span style=color:#ba2121>&#39;--&#39;</span>, alpha <span style=color:#666>=</span> <span style=color:#666>0.6</span>)
+plt<span style=color:#666>.</span>legend(fontsize <span style=color:#666>=</span> <span style=color:#666>12</span>)
+plt<span style=color:#666>.</span>show()
+</code></pre></div><p><img src=/cn/blog/2024-10-08-confidence-interval_files/2024-10-08-confidence-interval_4_0.png alt=png></p>
+<h2 id=置信区间的构成>置信区间的构成<a href=#置信区间的构成 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>我们把 <code>$t_{99}$</code> 的 <code>$97.5\%$</code> 百分位数 (percentile) 记为 <code>$c$</code>，也就是上图中红线所对应的 <code>$T = 1.98$</code>。其所代表的含义是所有的 <code>$T$</code> 中，落在红线以及红线往左区域的 <code>$T$</code> 占比为是 <code>$97.5\%$</code>。也可以理解为，随机一个 <code>$T$</code> 落在红线以及红线往左区域的概率是 <code>$97.5\%$</code></p>
+<p>因为 <code>$t$</code> 分布是对称的，所以一个随机的 <code>$T$</code> 落在 <code>$[-c, c]$</code> 这个区间 (也就是上图的黄色区域所对应的 <code>$T$</code> 值区间) 的概率是 <code>$95\%$</code>，我们可以表示为：</p>
+<p><code>$$P_T (-c \le T \le c) = 0.95$$</code></p>
+<p>代入上面的 <code>$T$</code> 计算公式可得到：</p>
+<p><code>$$P (-c \le \frac{\bar{X} - \mu}{\frac{S}{\sqrt{n}}} \le c) = 0.95$$</code></p>
+<p>所以</p>
+<p><code>$$P (-c \cdot \frac{S}{\sqrt{n}} \le \bar{X} - \mu \le c \cdot \frac{S}{\sqrt{n}}) = 0.95$$</code></p>
+<p>所以</p>
+<p><code>$$P (-c \cdot \frac{S}{\sqrt{n}} - \bar{X} \le - \mu \le c \cdot \frac{S}{\sqrt{n}} - \bar{X}) = 0.95$$</code></p>
+<p>所以</p>
+<p><code>$$P_{\mu} (\bar{X} - \frac{c \cdot S}{\sqrt{n}} \le \mu \le \bar{X} + \frac{c \cdot S}{\sqrt{n}})$$</code></p>
+<p>我们把</p>
+<p><code>$$\left[\bar{X} - \frac{c \cdot S}{\sqrt{n}}, \bar{X} + \frac{c \cdot S}{\sqrt{n}} \right]$$</code></p>
+<p>称为母体均值 <code>$\mu$</code> 的 <code>$95\%$</code> 置信区间。</p>
+<h2 id=置信区间的解读>置信区间的解读<a href=#置信区间的解读 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>也许很多人将</p>
+<p><code>$$P_{\mu} (\bar{X} - \frac{c \cdot S}{\sqrt{n}} \le \mu \le \bar{X} + \frac{c \cdot S}{\sqrt{n}})$$</code></p>
+<p>或者</p>
+<p><code>$$\left[\bar{X} - \frac{c \cdot S}{\sqrt{n}}, \bar{X} + \frac{c \cdot S}{\sqrt{n}} \right]$$</code></p>
+<p>错误地理解为：</p>
+<blockquote>
+<p>母体均值 <code>$\mu$</code> 落在以上区间的概率是 95%。</p>
+</blockquote>
+<p>这一解读之所以错误是因为虽然 <code>$\mu$</code> 未知，但却是一个具体的值 (「常量」)，而不是一个变量。当一个样本被观测到之后，<code>$c, S, n, \bar{X}$</code> 这些全都是常量，以上的区间也是一个常量。所以 「<code>$\mu$</code> 在这个区间」并不存在概率一说。它要么在，要么不在。</p>
+<p>既然</p>
+<p><code>$$P_{\mu} (\bar{X} - \frac{c \cdot S}{\sqrt{n}} \le \mu \le \bar{X} + \frac{c \cdot S}{\sqrt{n}})$$</code></p>
+<p>的确是一个概率，但是 <code>$\mu$</code> 是一个常量，那变量只能是这个区间了。所以置信区间正确的理解为：</p>
+<p>从一个分布为 <code>$\mathcal N \sim(\mu, \sigma^2)$</code> 的母体中随机一个大小为 <code>$n$</code> 的样本，算出 <code>$\bar{X}$</code> 和 <code>$S$</code>，记 <code>$c$</code> 为 <code>$t_{n-1}$</code> 这一分布的 <code>$1 - \frac{\alpha}{2}$</code> 百分位数 (percentile)，并计算出这样一个区间</p>
+<p><code>$$\left[\bar{X} - \frac{c \cdot S}{\sqrt{n}}, \bar{X} + \frac{c \cdot S}{\sqrt{n}} \right]$$</code></p>
+<p>上面这个过程我们重复无数次，得到无数个这样的区间。那这些区间中，有 <code>$\left( 100 (1 - \alpha) \right) \%$</code> 包含了母体均值 <code>$\mu$</code>。</p>
+<h2 id=置信区间和假设检验的关系>置信区间和假设检验的关系<a href=#置信区间和假设检验的关系 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>我们随机抽取了 100 个天狼星人，算出了样本均值<code>$\bar{X}$</code>、样本标准差 <code>$S$</code>，并由此构造了一个 <code>$95\%$</code>的置信区间。</p>
+<p>假如上帝将天狼星人智商这一母体的均值 <code>$\mu$</code> 告诉我们了，而且我们看到这一均值就在这个置信区间之内。那么，我们也可以知道，用这个样本数据算出的 <code>$T$</code>，一定落在上图的黄色区域。</p>
+<p>为什么呢？</p>
+<p>因为</p>
+<blockquote>
+<p>假如上帝将天狼星人智商这一母体的均值 <code>$\mu$</code> 告诉我们了，而且我们看到这一均值就在这个置信区间之内</p>
+</blockquote>
+<p>意味着</p>
+<p><code>$$\bar{X} - \frac{c \cdot S}{\sqrt{n}} \le \mu \le \bar{X} + \frac{c \cdot S}{\sqrt{n}}$$</code></p>
+<p>成立。所以</p>
+<p><code>$$-c \cdot \frac{S}{\sqrt{n}} \le \bar{X} - \mu \le c \cdot \frac{S}{\sqrt{n}}$$</code></p>
+<p>成立。所以</p>
+<p><code>$$-c \le T = \frac{\bar{X} - \mu}{\frac{S}{\sqrt{n}}} \le c$$</code></p>
+<p>成立。</p>
+<p>所以「用这个样本数据算出的 <code>$T$</code>，一定落在上图的黄色区域」。</p>
+<a href=https://hongtaoh.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/>#统计学</a>
+<p style=color:#777>最后一次修改于 2024-10-08</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<div class=content>
+<script src=https://giscus.app/client.js data-repo=hongtaoh/hongtaoh.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyNjM3NDMzMTY=" data-category=Announcements data-category-id=DIC_kwDOD7hnVM4CUKk6 data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en data-loading=lazy crossorigin=anonymous async></script>
+</br>
+</div>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/cn/blog/index.xml type=application/rss+xml title="RSS feed">
+订阅 </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank>
+版权
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+郝鸿涛
+2020-2024
+</div>
+</footer>

@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>统计学 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link><description>Recent content in 统计学 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 29 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hongtaoh.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/index.xml" rel="self" type="application/rss+xml"/><item><title>理解 t 分布与假设检验</title><link>https://hongtaoh.com/cn/2024/09/29/t/</link><pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/09/29/t/</guid><description>上次讲到标准误和正态分布 时，我们的假设我们知道母体的均值 $\mu$ 和标准差 $\sigma$。那我们假设一下，当我们不知道母体标准差的时候下面这个问题如何回答？
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>统计学 on 郝鸿涛：Hongtao Hao</title><link>https://hongtaoh.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link><description>Recent content in 统计学 on 郝鸿涛：Hongtao Hao</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 08 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hongtaoh.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/index.xml" rel="self" type="application/rss+xml"/><item><title>如何理解置信区间</title><link>https://hongtaoh.com/cn/2024/10/08/ci/</link><pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/10/08/ci/</guid><description>import numpy as np import matplotlib.pyplot as plt from scipy.stats import t 英文维基百科上的置信区间 (confidence interval) 词条 对此概念解释非常详细。
+我们依然拿天狼星人举例子。SpaceX 公司登陆火星之后发现火星地下上全是天狼星人。他们搜集了全部的在火星上居住天狼星人的信息之后，对其进行抽样。随机抽取了 100 个天狼星人，然后测量他们的智商 ($X_1, X_2, X_3, ... X_n$)。记样本均值为 $\bar{X}$、样本方差为 $S^2$。
+我们现在最迫切需要知道的是：天狼星人的智商大体是什么样。
+注意，我们现在不是要去比较天狼星人和地球人智商有没有显著差异，而是想知道天狼星人的智商大概是什么样。你当然可以直接抛给我一个数：$\bar{X}$，说这是这 100 个天狼星人的平均智商。但是，问题是，我想知道母体的数据啊。
+怎么办？
+我们把所有天狼星人智商这一母体的均值记为 $\mu$，方差记为 $\sigma^2$。
+假设上面的抽样进行无数次，也就是每次随机抽取 100 个天狼星人，记录其样本均值和方差，并且每次算出
+$$T = \frac{\bar{X} - \mu}{\frac{S}{\sqrt{n}}}$$
+其中 $n = 100$。
+你会说，等等，$\mu$ 我们并不知道啊，$T$ 根本没法算。
+确实，一个具体的 $T$ 在我们不知道母体均值 $\mu$ 的情况下确实没办法计算。但是，回顾一下我们对于 t 分布的讲解 ，你会发现，不管母体如何，每次从母体中随机抽取 100 人，计算 $T$ ，重复无数次，这些 $T$ 的分布全部都是 $T \sim t_{99}$：
+## params df = 99 alpha = 0.</description></item><item><title>理解 t 分布与假设检验</title><link>https://hongtaoh.com/cn/2024/09/29/t/</link><pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate><guid>https://hongtaoh.com/cn/2024/09/29/t/</guid><description>上次讲到标准误和正态分布 时，我们的假设我们知道母体的均值 $\mu$ 和标准差 $\sigma$。那我们假设一下，当我们不知道母体标准差的时候下面这个问题如何回答？
 一本上古秘籍里写到天狼星人的智商服从正态分布 $\mathcal N(150, \sigma^2)$。方差具体数值因为年代太久，字迹变得模糊而不可知。突然有一天，联合国政府收到一封宇宙中传来的匿名电子邮件，专家破译后得知这封信警告地球，全部天狼星人已经伪装成地球人，到达了 A 国的 B 城市，并已经把该城市所有的地球人心智和灵魂转化成了天狼星人，他们企图之后全部控制地球。为了不引发大规模冲突，联合国政府在一个深夜从 B 城市中随机悄悄绑架了 20 个人。然后让他们进行智力测试，得出的结果是，这些人的智力均值为 $160$，方差为 $20^2$。假设 (1) 这个宇宙中只有地球人和天狼星人可以测智商、(2)地球人的平均智商和天狼星人的完全不同。请问：这些人到底是不是天狼星人？
 我们不知道怎么解决。
 像我们学习卡方分布时一样，我们暂时抛开这个问题，学一个概念：$t$ 分布。
