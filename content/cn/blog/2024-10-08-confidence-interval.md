@@ -171,3 +171,27 @@ plt.show()
 成立。
 
 所以「用这个样本数据算出的 `$T$`，一定落在上图的黄色区域」。
+
+## 模拟
+
+我比较懒，有一个现成的模拟置信区间构成过程的网站：[https://www.rossmanchance.com/applets/2021/confsim/ConfSim.html](https://www.rossmanchance.com/applets/2021/confsim/ConfSim.html)。我目前就懒得重新弄了。
+
+其中 Describe process 的选择：
+
+Statistics: Means 
+
+Distribution: Normal
+
+Method: t
+
+Population mean: 3
+
+Population SD: 10.0
+
+Sample size: 100
+
+Number of intervals: 100
+
+其他不用动，然后点击 `Sample` 这个按钮。
+
+
