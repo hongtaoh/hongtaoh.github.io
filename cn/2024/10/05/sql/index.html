@@ -82,6 +82,7 @@ Table of Contents:
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>conda create --name sql
 conda activate sql
 conda install pandas jupyter ipython-sql 
+pip install <span style=color:#19177c>SQLAlchemy</span><span style=color:#666>==</span>1.4.46 <span style=color:#408080;font-style:italic># 因为最新版本的 sqlalchemy 和 ipython-sql 有冲突</span>
 </code></pre></div><p>然后创建一个文件夹</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>mkdir sql-learn
 <span style=color:green>cd</span> sql-learn 
@@ -118,15 +119,16 @@ CA|Canada|<span style=color:#666>2</span>
 <span style=color:#666>%</span>sql sqlite:<span style=color:#666>///</span>tutorial<span style=color:#666>.</span>db
 </code></pre></div><p>但是我这个博客里因为数据在别的地方，所以第二行会不一样：</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#666>%</span>load_ext sql
-<span style=color:#666>%</span>config SqlMagic<span style=color:#666>.</span>displaycon <span style=color:#666>=</span> <span style=color:green;font-weight:700>False</span>
 <span style=color:#666>%</span>sql sqlite:<span style=color:#666>///../</span>static<span style=color:#666>/</span>files<span style=color:#666>/</span>cnblog<span style=color:#666>/</span>sql<span style=color:#666>-</span>learn<span style=color:#666>/</span>tutorial<span style=color:#666>.</span>db
-</code></pre></div><pre><code>The sql extension is already loaded. To reload it, use:
-  %reload_ext sql
+</code></pre></div><pre><code>'Connected: @../static/files/cnblog/sql-learn/tutorial.db'
 </code></pre>
 <h2 id=all-tables>All tables<a href=#all-tables class=header-anchor arialabel=Anchor> # </a></h2>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>name<span style=color:#bbb> </span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>sqlite_master<span style=color:#bbb> </span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>type</span><span style=color:#666>=</span><span style=color:#ba2121>&#39;table&#39;</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code> * sqlite:///../static/files/cnblog/sql-learn/tutorial.db
+Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>name</th>
@@ -162,7 +164,9 @@ CA|Canada|<span style=color:#666>2</span>
 <h2 id=query>Query<a href=#query class=header-anchor arialabel=Anchor> # </a></h2>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>locations<span style=color:#bbb> </span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>5</span><span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>location_id</th>
@@ -218,7 +222,9 @@ CA|Canada|<span style=color:#666>2</span>
 </table>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name<span style=color:#bbb> </span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span><span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -270,7 +276,9 @@ CA|Canada|<span style=color:#666>2</span>
 </table>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>employee_id,<span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&lt;</span><span style=color:#bbb> </span><span style=color:#666>3000</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>employee_id</th>
@@ -297,7 +305,9 @@ CA|Canada|<span style=color:#666>2</span>
 </code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name,<span style=color:#bbb> </span>salary,<span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:#666>1</span>.<span style=color:#666>5</span><span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -376,7 +386,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb>    </span>salary,<span style=color:#bbb> 
 </span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:#666>*</span><span style=color:#bbb> </span><span style=color:#666>1</span>.<span style=color:#666>5</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>as</span><span style=color:#bbb> </span>new_salary<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -460,7 +472,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb>    </span>employees<span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>employee_id</th>
@@ -556,7 +570,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb>    </span>first_name<span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>employee_id</th>
@@ -653,7 +669,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb>    </span>last_name<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>employee_id</th>
@@ -746,7 +764,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>salary</th>
@@ -793,7 +813,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>salary</th>
@@ -842,7 +864,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb>    </span>job_id,<span style=color:#bbb>
 </span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>job_id</th>
@@ -902,7 +926,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb>    </span>job_id,<span style=color:#bbb>
 </span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>job_id</th>
@@ -961,7 +987,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span>phone_number<span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>phone_number</th>
@@ -1012,7 +1040,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb>
 </span><span style=color:#bbb>    </span>first_name<span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>employee_id</th>
@@ -1083,7 +1113,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb>
 </span><span style=color:#bbb>    </span>first_name<span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>5</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>offset</span><span style=color:#bbb> </span><span style=color:#666>3</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>employee_id</th>
@@ -1132,7 +1164,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:#666>&gt;</span><span style=color:#bbb> </span><span style=color:#666>14000</span><span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span><span style=color:#bbb> 
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>employee_id</th>
@@ -1174,7 +1208,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb>    </span>department_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#666>5</span><span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span>first_name;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>employee_id</th>
@@ -1237,7 +1273,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb>    </span>employees<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb>
 </span><span style=color:#bbb>    </span>last_name<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#ba2121>&#34;Chen&#34;</span><span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>employee_id</th>
@@ -1282,7 +1320,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&gt;</span><span style=color:#bbb> </span><span style=color:#666>5000</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>AND</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>&lt;</span><span style=color:#bbb> </span><span style=color:#666>7000</span><span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -1328,7 +1368,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>select</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name,<span style=color:#bbb> </span>salary<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#666>7000</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>OR</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:#666>8000</span>;<span style=color:#bbb> 
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -1355,7 +1397,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>phone_number<span style=color:#bbb> </span><span style=color:green;font-weight:700>IS</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>NULL</span><span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> </span>first_name,<span style=color:#bbb> </span>last_name;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -1402,7 +1446,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>BETWEEN</span><span style=color:#bbb> </span><span style=color:#666>9000</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>and</span><span style=color:#bbb> </span><span style=color:#666>12000</span><span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> </span>salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>desc</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -1449,7 +1495,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>department_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#666>6</span>,<span style=color:#bbb> </span><span style=color:#666>8</span>,<span style=color:#bbb> </span><span style=color:#666>9</span>)<span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> </span>department_id;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -1536,7 +1584,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>from</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>first_name<span style=color:#bbb> </span><span style=color:green;font-weight:700>LIKE</span><span style=color:#bbb> </span><span style=color:#ba2121>&#39;_h%&#39;</span><span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>order</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>by</span><span style=color:#bbb> </span>first_name;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>employee_id</th>
@@ -1606,7 +1656,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>d.employee_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span>e.employee_id<span style=color:#bbb>
 </span><span style=color:#bbb></span>)<span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>limit</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -1667,7 +1719,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>END</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>evaluation<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>LIMIT</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -1740,7 +1794,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>where</span><span style=color:#bbb> </span>phone_number<span style=color:#bbb> </span><span style=color:green;font-weight:700>IS</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>NULL</span><span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>LIMIT</span><span style=color:#bbb> </span><span style=color:#666>10</span><span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -1796,7 +1852,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>ORDER</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>BY</span><span style=color:#bbb> </span>new_salary<span style=color:#bbb> </span><span style=color:green;font-weight:700>DESC</span><span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>LIMIT</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -1862,7 +1920,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>e.first_name,<span style=color:#bbb> </span>e.last_name<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>e<span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>LIMIT</span><span style=color:#bbb> </span><span style=color:#666>10</span>;<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -1924,7 +1984,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>department_id,<span style=color:#bbb> </span>department_name<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>departments<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>department_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#666>1</span>,<span style=color:#bbb> </span><span style=color:#666>2</span>,<span style=color:#bbb> </span><span style=color:#666>3</span>)<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>department_id</th>
@@ -1951,7 +2013,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>employees<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>department_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#666>1</span>,<span style=color:#bbb> </span><span style=color:#666>2</span>,<span style=color:#bbb> </span><span style=color:#666>3</span>)<span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>ORDER</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>BY</span><span style=color:#bbb> </span>department_id<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -2021,7 +2085,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb>    </span>departments<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>d<span style=color:#bbb> </span><span style=color:green;font-weight:700>ON</span><span style=color:#bbb> </span>d.department_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span>e.department_id<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span>e.department_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#666>1</span>,<span style=color:#bbb> </span><span style=color:#666>2</span>,<span style=color:#bbb> </span><span style=color:#666>3</span>)<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>first_name</th>
@@ -2105,7 +2171,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>country_id,<span style=color:#bbb> </span>country_name<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>countries<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>country_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#ba2121>&#39;US&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;UK&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;CN&#39;</span>)<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>country_id</th>
@@ -2132,7 +2200,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>country_id,<span style=color:#bbb> </span>street_address,<span style=color:#bbb> </span>city<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>locations<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> </span>country_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#ba2121>&#39;US&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;UK&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;CN&#39;</span>)<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>country_id</th>
@@ -2180,7 +2250,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>LEFT</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>JOIN</span><span style=color:#bbb> </span>locations<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>l<span style=color:#bbb> </span><span style=color:green;font-weight:700>on</span><span style=color:#bbb> </span>l.country_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#ba2121>&#39;US&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;UK&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;CN&#39;</span>)<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>country_name</th>
@@ -2247,7 +2319,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>LEFT</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>JOIN</span><span style=color:#bbb> </span>countries<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>c</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>on</span><span style=color:#bbb> </span>l.country_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#ba2121>&#39;US&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;UK&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;CN&#39;</span>)<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>country_name</th>
@@ -2307,7 +2381,9 @@ CA|Canada|<span style=color:#666>2</span>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>INNER</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>JOIN</span><span style=color:#bbb> </span>locations<span style=color:#bbb> </span><span style=color:green;font-weight:700>AS</span><span style=color:#bbb> </span>l<span style=color:#bbb> </span><span style=color:green;font-weight:700>on</span><span style=color:#bbb> </span>l.country_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> 
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>WHERE</span><span style=color:#bbb> 
 </span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>c</span>.country_id<span style=color:#bbb> </span><span style=color:green;font-weight:700>IN</span><span style=color:#bbb> </span>(<span style=color:#ba2121>&#39;US&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;UK&#39;</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;CN&#39;</span>)<span style=color:#bbb>
-</span></code></pre></div><table>
+</span></code></pre></div><pre><code>Done.
+</code></pre>
+<table>
 <thead>
 <tr>
 <th>country_name</th>
@@ -2358,7 +2434,7 @@ CA|Canada|<span style=color:#666>2</span>
 <h2 id=aggregate-functions>Aggregate functions<a href=#aggregate-functions class=header-anchor arialabel=Anchor> # </a></h2>
 <p>待续</p>
 <a href=https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/>#编程</a>
-<p style=color:#777>最后一次修改于 2024-10-05</p>
+<p style=color:#777>最后一次修改于 2024-10-11</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>

@@ -1,0 +1,708 @@
+<a name=top></a><!doctype html>
+<html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>郝鸿涛：Hongtao Hao</title>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css rel=stylesheet>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/vega@5.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@4.17.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.12.2></script>
+<script src=/js/copy-code.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<link rel=icon href=https://hongtaoh.com/ht10.ico>
+</head>
+<body>
+<div class=wrapper>
+<header class=header>
+<nav class=nav>
+<a href=/ class=nav-logo>
+<img src=/media/ht10.png width=50 height=50 alt="Hongtao Hao">
+</a>
+<ul class=nav-links>
+<li><a href=/cn/>关于</a></li>
+<li><a href=/cn/blog/>日志</a></li>
+<li><a href=/>English</a></li>
+</ul>
+</nav>
+</header>
+<main class=content role=main>
+<div style=text-align:center>
+<h1>弄懂四种基本数据合并 (Join)</h1>
+<p>郝鸿涛
+/ 2024-10-11 </p>
+</div>
+<span class=article-toolbar>
+<a href=https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/cn/blog/2024-10-11-join.md style=font-size:24px;color:#000 target=_blank><i class="fa fa-edit" aria-hidden=true title=编辑本页></i>
+</a>
+</span>
+<aside class=toc>
+Table of Contents:
+<nav id=TableOfContents>
+<ul>
+<li><a href=#生成数据>生成数据</a></li>
+<li><a href=#inner-join>INNER JOIN</a></li>
+<li><a href=#left-join>LEFT JOIN</a></li>
+<li><a href=#right-join>RIGHT JOIN</a></li>
+<li><a href=#full-join>FULL JOIN</a></li>
+<li><a href=#pandas>Pandas</a>
+<ul>
+<li><a href=#inner-join-1>Inner Join</a></li>
+<li><a href=#left-join-1>Left Join</a></li>
+<li><a href=#right-join-1>Right Join</a></li>
+<li><a href=#full-join-1>Full Join</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</aside>
+<div class="body-text list-text">
+<p>数据处理中经常会用到四种基本的数据合并：Inner Join, Left Join, Right Join, Outer Join。下面我尝试用 SQL 以及两个简单的数据列表把这四个基本概念讲一下。</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#666>%</span>load_ext sql
+<span style=color:#666>%</span>sql sqlite:<span style=color:#666>///</span>:memory:
+</code></pre></div><pre><code>The sql extension is already loaded. To reload it, use:
+  %reload_ext sql
+
+
+
+
+
+'Connected: @:memory:'
+</code></pre>
+<h2 id=生成数据>生成数据<a href=#生成数据 class=header-anchor arialabel=Anchor> # </a></h2>
+<p>首先，我们生成两个简单的数据：Project 和 Employee。两个数据都有 <code>employee_id</code> 这个变量。</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>CREATE</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>TABLE</span><span style=color:#bbb> </span>Project<span style=color:#bbb> </span>(<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>project_id<span style=color:#bbb> </span><span style=color:green>INT</span>,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>employee_id<span style=color:#bbb> </span><span style=color:green>INT</span>,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>PRIMARY</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>KEY</span><span style=color:#bbb> </span>(project_id,<span style=color:#bbb> </span>employee_id),<span style=color:#bbb>
+</span><span style=color:#bbb>    </span><span style=color:green;font-weight:700>FOREIGN</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>KEY</span><span style=color:#bbb> </span>(employee_id)<span style=color:#bbb> </span><span style=color:green;font-weight:700>REFERENCES</span><span style=color:#bbb> </span>Employee(employee_id)<span style=color:#bbb>
+</span><span style=color:#bbb></span>);<span style=color:#bbb>
+</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:#408080;font-style:italic>-- Insert data into Project table
+</span><span style=color:#408080;font-style:italic></span><span style=color:green;font-weight:700>INSERT</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>INTO</span><span style=color:#bbb> </span>Project<span style=color:#bbb> </span>(project_id,<span style=color:#bbb> </span>employee_id)<span style=color:#bbb> </span><span style=color:green;font-weight:700>VALUES</span><span style=color:#bbb>
+</span><span style=color:#bbb></span>(<span style=color:#666>1</span>,<span style=color:#bbb> </span><span style=color:#666>1</span>),<span style=color:#bbb>
+</span><span style=color:#bbb></span>(<span style=color:#666>1</span>,<span style=color:#bbb> </span><span style=color:#666>2</span>),<span style=color:#bbb>
+</span><span style=color:#bbb></span>(<span style=color:#666>1</span>,<span style=color:#bbb> </span><span style=color:#666>3</span>),<span style=color:#bbb>
+</span><span style=color:#bbb></span>(<span style=color:#666>2</span>,<span style=color:#bbb> </span><span style=color:#666>1</span>),<span style=color:#bbb>
+</span><span style=color:#bbb></span>(<span style=color:#666>2</span>,<span style=color:#bbb> </span><span style=color:#666>4</span>);<span style=color:#bbb>  </span><span style=color:#408080;font-style:italic>-- Only employees 1, 2, 3, and 4 are in projects
+</span><span style=color:#408080;font-style:italic></span><span style=color:#bbb>
+</span></code></pre></div><pre><code> * sqlite:///:memory:
+(sqlite3.OperationalError) table Project already exists
+[SQL: CREATE TABLE Project (
+    project_id INT,
+    employee_id INT,
+    PRIMARY KEY (project_id, employee_id),
+    FOREIGN KEY (employee_id) REFERENCES Employee(employee_id)
+);]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+</code></pre>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>CREATE</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>TABLE</span><span style=color:#bbb> </span>Employee<span style=color:#bbb> </span>(<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>employee_id<span style=color:#bbb> </span><span style=color:green>INT</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>PRIMARY</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>KEY</span>,<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>name<span style=color:#bbb> </span><span style=color:green>VARCHAR</span>(<span style=color:#666>50</span>),<span style=color:#bbb>
+</span><span style=color:#bbb>    </span>experience_years<span style=color:#bbb> </span><span style=color:green>INT</span><span style=color:#bbb>
+</span><span style=color:#bbb></span>);<span style=color:#bbb>
+</span><span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:#408080;font-style:italic>-- Insert data into Employee table
+</span><span style=color:#408080;font-style:italic></span><span style=color:green;font-weight:700>INSERT</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>INTO</span><span style=color:#bbb> </span>Employee<span style=color:#bbb> </span>(employee_id,<span style=color:#bbb> </span>name,<span style=color:#bbb> </span>experience_years)<span style=color:#bbb> </span><span style=color:green;font-weight:700>VALUES</span><span style=color:#bbb>
+</span><span style=color:#bbb></span>(<span style=color:#666>1</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;Khaled&#39;</span>,<span style=color:#bbb> </span><span style=color:#666>3</span>),<span style=color:#bbb>
+</span><span style=color:#bbb></span>(<span style=color:#666>2</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;Ali&#39;</span>,<span style=color:#bbb> </span><span style=color:#666>2</span>),<span style=color:#bbb>
+</span><span style=color:#bbb></span>(<span style=color:#666>3</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;John&#39;</span>,<span style=color:#bbb> </span><span style=color:#666>1</span>),<span style=color:#bbb>
+</span><span style=color:#bbb></span>(<span style=color:#666>4</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;Doe&#39;</span>,<span style=color:#bbb> </span><span style=color:#666>2</span>),<span style=color:#bbb>
+</span><span style=color:#bbb></span>(<span style=color:#666>5</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;Alex&#39;</span>,<span style=color:#bbb> </span><span style=color:#666>4</span>);<span style=color:#bbb>  </span><span style=color:#408080;font-style:italic>-- Note: Employee 5 is not in the Project table
+</span><span style=color:#408080;font-style:italic></span><span style=color:#bbb>
+</span></code></pre></div><pre><code> * sqlite:///:memory:
+(sqlite3.OperationalError) table Employee already exists
+[SQL: CREATE TABLE Employee (
+    employee_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    experience_years INT
+);]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+</code></pre>
+<p>Project:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>+-------------+-------------+
+| project_id  | employee_id |
++-------------+-------------+
+| <span style=color:#666>1</span>           | <span style=color:#666>1</span>           |
+| <span style=color:#666>1</span>           | <span style=color:#666>2</span>           |
+| <span style=color:#666>1</span>           | <span style=color:#666>3</span>           |
+| <span style=color:#666>2</span>           | <span style=color:#666>1</span>           |
+| <span style=color:#666>2</span>           | <span style=color:#666>4</span>           |
++-------------+-------------+
+</code></pre></div><p>Employee:</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>+-------------+--------+------------------+
+| employee_id | name   | experience_years |
++-------------+--------+------------------+
+| <span style=color:#666>1</span>           | Khaled | <span style=color:#666>3</span>                |
+| <span style=color:#666>2</span>           | Ali    | <span style=color:#666>2</span>                |
+| <span style=color:#666>3</span>           | John   | <span style=color:#666>1</span>                |
+| <span style=color:#666>4</span>           | Doe    | <span style=color:#666>2</span>                |
+| <span style=color:#666>5</span>           | Alex   | <span style=color:#666>4</span>                |
++-------------+--------+------------------+
+</code></pre></div><h2 id=inner-join>INNER JOIN<a href=#inner-join class=header-anchor arialabel=Anchor> # </a></h2>
+<p>Inner Join 是取共有的：</p>
+<p><img src=https://www.sqltutorial.org/wp-content/uploads/2016/03/SQL-INNER-JOIN.png alt></p>
+<p>图片来源: https://www.sqltutorial.org/wp-content/uploads/2016/03/SQL-INNER-JOIN.png</p>
+<p>Join 的时候，我们可以把表一加在表二上，也可以把表二加在表一上。对于 inner join 来说，这两个一样。我们两个都讲讲。</p>
+<p>假如我们把 Employee 加在 Project 上，首先这个 key 是 <code>employee_id</code>，也就是两个表共有的一个变量，这个很好理解。第一步是把 Employee 这个表做成一个 Hashmap:</p>
+<pre tabindex=0><code>{
+    1: ['Khaled', 3],
+    2: ['Ali', 2],
+    3: ['John', 1],
+    4: ['Doe', 2],
+    5: ['Alex', 4]
+}
+</code></pre><p>然后把这个 hashmap 对应到 Project 上。</p>
+<p>或者，我们也可以把 Project 加到 Employee 上：</p>
+<p>首先也是做一个 hashmap, 但是要注意，因为相同的 <code>employee_id</code> 可以对应多个 <code>project_id</code>，所以这个 hashmap 中的 <code>value</code> 需要是一个 list。</p>
+<pre tabindex=0><code>{
+    1:[1,2],
+    2:[1],
+    3:[1],
+    4:[2]
+}
+</code></pre><p>然后把这个 hashmap 对应到 Employee 表上。这里有两点需要注意：</p>
+<ol>
+<li>因为 <code>employee_id = 1</code> 对应两个 <code>project_id</code>，所以 Project 表中 <code>employee_id = 1</code> 那一行要重复一次。</li>
+<li>Project 中 <code>employee_id = 5</code> 在我们这个 hashmap 中没有，所以在最后的结果中把这一行删除。</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>p.project_id,<span style=color:#bbb> </span>p.employee_id,<span style=color:#bbb> </span>e.name,<span style=color:#bbb> </span>e.experience_years<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>Project<span style=color:#bbb> </span>p<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>INNER</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>JOIN</span><span style=color:#bbb> </span>Employee<span style=color:#bbb> </span>e<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>ON</span><span style=color:#bbb> </span>p.employee_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span>e.employee_id;<span style=color:#bbb>
+</span></code></pre></div><pre><code> * sqlite:///:memory:
+Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>project_id</th>
+<th>employee_id</th>
+<th>name</th>
+<th>experience_years</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>Ali</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>John</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>Doe</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id=left-join>LEFT JOIN<a href=#left-join class=header-anchor arialabel=Anchor> # </a></h2>
+<p><img src=https://www.sqltutorial.org/wp-content/uploads/2016/03/SQL-LEFT-JOIN.png alt></p>
+<p>图片来源：https://www.sqltutorial.org/wp-content/uploads/2016/03/SQL-LEFT-JOIN.png</p>
+<p><code>TableA LEFT JOIN TableB</code> 从操作上来讲是说把 TableB 做成一个 Hashmap，然后对应到 TableA 上。和 Inner Join 的不同在于，如果 TableA 中有这个 hashmap 无法对应的 key 怎么办？比如 <code>Employee LEFT JOIN Project</code> 的话，<code>Employee</code> 中的 <code>employee_id = 5</code> 就是 <code>Project</code> 中没有的。首先， <code>employee_id = 5</code> 肯定是要保留的，不会像 <code>INNER JOIN</code> 那样直接忽略。我们可以把 <code>employee_id = 5</code> 那一样的 <code>project_id</code> 定为 NULL。这一点所有的程序都是一样的。不同的是，有的程序 (比如 SQLite) 会把 <code>employee_id</code> 也变成 NULL，但也有程序会把 <code>employee_id = 5</code> 保留，比如 Pandas。</p>
+<p>当然，如果 hashmap 中有 TableA 无法对应的 key，那就和 Inner Join 没差别了，这个多出来的 key 和对应的 TableB 中的变量直接忽视。</p>
+<p>看结果你就可以理解了：</p>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>p.project_id,<span style=color:#bbb> </span>p.employee_id,<span style=color:#bbb> </span>e.name,<span style=color:#bbb> </span>e.experience_years<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>Employee<span style=color:#bbb> </span>e<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>LEFT</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>JOIN</span><span style=color:#bbb> </span>Project<span style=color:#bbb> </span>p<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>ON</span><span style=color:#bbb> </span>p.employee_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span>e.employee_id;<span style=color:#bbb>
+</span></code></pre></div><pre><code> * sqlite:///:memory:
+Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>project_id</th>
+<th>employee_id</th>
+<th>name</th>
+<th>experience_years</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>Ali</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>John</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>Doe</td>
+<td>2</td>
+</tr>
+<tr>
+<td>None</td>
+<td>None</td>
+<td>Alex</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb> 
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>SELECT</span><span style=color:#bbb> </span>p.project_id,<span style=color:#bbb> </span>p.employee_id,<span style=color:#bbb> </span>e.name,<span style=color:#bbb> </span>e.experience_years<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>FROM</span><span style=color:#bbb> </span>Project<span style=color:#bbb> </span>p<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>LEFT</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>JOIN</span><span style=color:#bbb> </span>Employee<span style=color:#bbb> </span>e<span style=color:#bbb>
+</span><span style=color:#bbb></span><span style=color:green;font-weight:700>ON</span><span style=color:#bbb> </span>p.employee_id<span style=color:#bbb> </span><span style=color:#666>=</span><span style=color:#bbb> </span>e.employee_id;<span style=color:#bbb>
+</span></code></pre></div><pre><code> * sqlite:///:memory:
+Done.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>project_id</th>
+<th>employee_id</th>
+<th>name</th>
+<th>experience_years</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>Ali</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>John</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>Doe</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id=right-join>RIGHT JOIN<a href=#right-join class=header-anchor arialabel=Anchor> # </a></h2>
+<p><code>TableA LEFT JOIN TableB</code> 和 <code>TableB RIGHT JOIN TableA</code> 是一样的。所以如果你理解了 LEFT JOIN 你也可以理解 RIGHT JOIN。</p>
+<p>因为 SQLite 不支持 <code>RIGHT JOIN</code>，下面我会用 Pandas 来演示。</p>
+<h2 id=full-join>FULL JOIN<a href=#full-join class=header-anchor arialabel=Anchor> # </a></h2>
+<p>因为 SQLite 不支持 <code>FULL JOIN</code>，下面我会用 Pandas 来演示。</p>
+<p><img src=https://www.sqltutorial.org/wp-content/uploads/2016/07/SQL-FULL-OUTER-JOIN.png alt></p>
+<p>图片来源：https://www.sqltutorial.org/wp-content/uploads/2016/07/SQL-FULL-OUTER-JOIN.png</p>
+<h2 id=pandas>Pandas<a href=#pandas class=header-anchor arialabel=Anchor> # </a></h2>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>pandas</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>pd</span>
+
+<span style=color:#408080;font-style:italic># Creating the Project DataFrame</span>
+project_data <span style=color:#666>=</span> {
+    <span style=color:#ba2121>&#39;project_id&#39;</span>: [<span style=color:#666>1</span>, <span style=color:#666>1</span>, <span style=color:#666>1</span>, <span style=color:#666>2</span>, <span style=color:#666>2</span>], 
+    <span style=color:#ba2121>&#39;employee_id&#39;</span>: [<span style=color:#666>1</span>, <span style=color:#666>2</span>, <span style=color:#666>3</span>, <span style=color:#666>1</span>, <span style=color:#666>4</span>]}
+project_df <span style=color:#666>=</span> pd<span style=color:#666>.</span>DataFrame(project_data)
+
+<span style=color:#408080;font-style:italic># Creating the Employee DataFrame</span>
+employee_data <span style=color:#666>=</span> {
+    <span style=color:#ba2121>&#39;employee_id&#39;</span>: [<span style=color:#666>1</span>, <span style=color:#666>2</span>, <span style=color:#666>3</span>, <span style=color:#666>4</span>, <span style=color:#666>5</span>], 
+    <span style=color:#ba2121>&#39;name&#39;</span>: [<span style=color:#ba2121>&#39;Khaled&#39;</span>, <span style=color:#ba2121>&#39;Ali&#39;</span>, <span style=color:#ba2121>&#39;John&#39;</span>, <span style=color:#ba2121>&#39;Doe&#39;</span>, <span style=color:#ba2121>&#39;Alex&#39;</span>], 
+    <span style=color:#ba2121>&#39;experience_years&#39;</span>: [<span style=color:#666>3</span>, <span style=color:#666>2</span>, <span style=color:#666>1</span>, <span style=color:#666>2</span>, <span style=color:#666>4</span>]}
+employee_df <span style=color:#666>=</span> pd<span style=color:#666>.</span>DataFrame(employee_data)
+</code></pre></div><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>project_df
+</code></pre></div><div>
+<style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
+<table border=1 class=dataframe>
+<thead>
+<tr style=text-align:right>
+<th></th>
+<th>project_id</th>
+<th>employee_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>employee_df
+</code></pre></div><div>
+<style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
+<table border=1 class=dataframe>
+<thead>
+<tr style=text-align:right>
+<th></th>
+<th>employee_id</th>
+<th>name</th>
+<th>experience_years</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2</td>
+<td>Ali</td>
+<td>2</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3</td>
+<td>John</td>
+<td>1</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4</td>
+<td>Doe</td>
+<td>2</td>
+</tr>
+<tr>
+<th>4</th>
+<td>5</td>
+<td>Alex</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id=inner-join-1>Inner Join<a href=#inner-join-1 class=header-anchor arialabel=Anchor> # </a></h3>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df <span style=color:#666>=</span> pd<span style=color:#666>.</span>merge(project_df, employee_df, how <span style=color:#666>=</span> <span style=color:#ba2121>&#39;inner&#39;</span>, on <span style=color:#666>=</span> <span style=color:#ba2121>&#39;employee_id&#39;</span>)
+df
+</code></pre></div><div>
+<style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
+<table border=1 class=dataframe>
+<thead>
+<tr style=text-align:right>
+<th></th>
+<th>project_id</th>
+<th>employee_id</th>
+<th>name</th>
+<th>experience_years</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1</td>
+<td>2</td>
+<td>Ali</td>
+<td>2</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1</td>
+<td>3</td>
+<td>John</td>
+<td>1</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2</td>
+<td>4</td>
+<td>Doe</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id=left-join-1>Left Join<a href=#left-join-1 class=header-anchor arialabel=Anchor> # </a></h3>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df <span style=color:#666>=</span> pd<span style=color:#666>.</span>merge(project_df, employee_df, how <span style=color:#666>=</span> <span style=color:#ba2121>&#39;left&#39;</span>, on <span style=color:#666>=</span> <span style=color:#ba2121>&#39;employee_id&#39;</span>)
+df
+</code></pre></div><div>
+<style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
+<table border=1 class=dataframe>
+<thead>
+<tr style=text-align:right>
+<th></th>
+<th>project_id</th>
+<th>employee_id</th>
+<th>name</th>
+<th>experience_years</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1</td>
+<td>2</td>
+<td>Ali</td>
+<td>2</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1</td>
+<td>3</td>
+<td>John</td>
+<td>1</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2</td>
+<td>4</td>
+<td>Doe</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df <span style=color:#666>=</span> pd<span style=color:#666>.</span>merge(employee_df, project_df, how <span style=color:#666>=</span> <span style=color:#ba2121>&#39;left&#39;</span>, on <span style=color:#666>=</span> <span style=color:#ba2121>&#39;employee_id&#39;</span>)
+df
+</code></pre></div><div>
+<style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
+<table border=1 class=dataframe>
+<thead>
+<tr style=text-align:right>
+<th></th>
+<th>employee_id</th>
+<th>name</th>
+<th>experience_years</th>
+<th>project_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+<td>1.0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+<td>2.0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2</td>
+<td>Ali</td>
+<td>2</td>
+<td>1.0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>3</td>
+<td>John</td>
+<td>1</td>
+<td>1.0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>4</td>
+<td>Doe</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr>
+<th>5</th>
+<td>5</td>
+<td>Alex</td>
+<td>4</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id=right-join-1>Right Join<a href=#right-join-1 class=header-anchor arialabel=Anchor> # </a></h3>
+<p>这个和 Left Join 一样。</p>
+<h3 id=full-join-1>Full Join<a href=#full-join-1 class=header-anchor arialabel=Anchor> # </a></h3>
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>df <span style=color:#666>=</span> pd<span style=color:#666>.</span>merge(project_df, employee_df, how <span style=color:#666>=</span> <span style=color:#ba2121>&#39;outer&#39;</span>, on <span style=color:#666>=</span> <span style=color:#ba2121>&#39;employee_id&#39;</span>)
+df
+</code></pre></div><div>
+<style scoped>.dataframe tbody tr th:only-of-type{vertical-align:middle}<pre><code>.dataframe tbody tr th{vertical-align:top}.dataframe thead th{text-align:right}</code></pre><p></style></p>
+<table border=1 class=dataframe>
+<thead>
+<tr style=text-align:right>
+<th></th>
+<th>project_id</th>
+<th>employee_id</th>
+<th>name</th>
+<th>experience_years</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1.0</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2.0</td>
+<td>1</td>
+<td>Khaled</td>
+<td>3</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1.0</td>
+<td>2</td>
+<td>Ali</td>
+<td>2</td>
+</tr>
+<tr>
+<th>3</th>
+<td>1.0</td>
+<td>3</td>
+<td>John</td>
+<td>1</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2.0</td>
+<td>4</td>
+<td>Doe</td>
+<td>2</td>
+</tr>
+<tr>
+<th>5</th>
+<td>NaN</td>
+<td>5</td>
+<td>Alex</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<a href=https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/>#编程</a>
+<p style=color:#777>最后一次修改于 2024-10-11</p>
+</div>
+<a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
+</main>
+<footer class=footer>
+<div class=content>
+<script src=https://giscus.app/client.js data-repo=hongtaoh/hongtaoh.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyNjM3NDMzMTY=" data-category=Announcements data-category-id=DIC_kwDOD7hnVM4CUKk6 data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en data-loading=lazy crossorigin=anonymous async></script>
+</br>
+</div>
+<script type=text/javascript src=/js/math-code.js></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type=text/javascript src=/js/center-img.js></script>
+<ul class=footer-links>
+<li><a href=/cn/blog/index.xml type=application/rss+xml title="RSS feed">
+订阅 </a>
+</li>
+<li>
+<a href=http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank>
+版权
+<i class="fa fa-cc" aria-hidden=true title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+</a>
+</li>
+</ul>
+<div class=copyright-text>
+©
+郝鸿涛
+2020-2024
+</div>
+</footer>
