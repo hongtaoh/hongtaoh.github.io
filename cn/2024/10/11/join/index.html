@@ -52,6 +52,7 @@ Table of Contents:
 <li><a href=#left-join>LEFT JOIN</a></li>
 <li><a href=#right-join>RIGHT JOIN</a></li>
 <li><a href=#full-join>FULL JOIN</a></li>
+<li><a href=#self-join>SELF JOIN</a></li>
 <li><a href=#pandas>Pandas</a>
 <ul>
 <li><a href=#inner-join-1>Inner Join</a></li>
@@ -67,14 +68,7 @@ Table of Contents:
 <p>数据处理中经常会用到四种基本的数据合并：Inner Join, Left Join, Right Join, Outer Join。下面我尝试用 SQL 以及两个简单的数据列表把这四个基本概念讲一下。</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#666>%</span>load_ext sql
 <span style=color:#666>%</span>sql sqlite:<span style=color:#666>///</span>:memory:
-</code></pre></div><pre><code>The sql extension is already loaded. To reload it, use:
-  %reload_ext sql
-
-
-
-
-
-'Connected: @:memory:'
+</code></pre></div><pre><code>'Connected: @:memory:'
 </code></pre>
 <h2 id=生成数据>生成数据<a href=#生成数据 class=header-anchor arialabel=Anchor> # </a></h2>
 <p>首先，我们生成两个简单的数据：Project 和 Employee。两个数据都有 <code>employee_id</code> 这个变量。</p>
@@ -95,14 +89,14 @@ Table of Contents:
 </span><span style=color:#bbb></span>(<span style=color:#666>2</span>,<span style=color:#bbb> </span><span style=color:#666>4</span>);<span style=color:#bbb>  </span><span style=color:#408080;font-style:italic>-- Only employees 1, 2, 3, and 4 are in projects
 </span><span style=color:#408080;font-style:italic></span><span style=color:#bbb>
 </span></code></pre></div><pre><code> * sqlite:///:memory:
-(sqlite3.OperationalError) table Project already exists
-[SQL: CREATE TABLE Project (
-    project_id INT,
-    employee_id INT,
-    PRIMARY KEY (project_id, employee_id),
-    FOREIGN KEY (employee_id) REFERENCES Employee(employee_id)
-);]
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
+Done.
+5 rows affected.
+
+
+
+
+
+[]
 </code></pre>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#666>%%</span><span style=color:green;font-weight:700>sql</span><span style=color:#bbb>
 </span><span style=color:#bbb></span><span style=color:green;font-weight:700>CREATE</span><span style=color:#bbb> </span><span style=color:green;font-weight:700>TABLE</span><span style=color:#bbb> </span>Employee<span style=color:#bbb> </span>(<span style=color:#bbb>
@@ -120,13 +114,14 @@ Table of Contents:
 </span><span style=color:#bbb></span>(<span style=color:#666>5</span>,<span style=color:#bbb> </span><span style=color:#ba2121>&#39;Alex&#39;</span>,<span style=color:#bbb> </span><span style=color:#666>4</span>);<span style=color:#bbb>  </span><span style=color:#408080;font-style:italic>-- Note: Employee 5 is not in the Project table
 </span><span style=color:#408080;font-style:italic></span><span style=color:#bbb>
 </span></code></pre></div><pre><code> * sqlite:///:memory:
-(sqlite3.OperationalError) table Employee already exists
-[SQL: CREATE TABLE Employee (
-    employee_id INT PRIMARY KEY,
-    name VARCHAR(50),
-    experience_years INT
-);]
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
+Done.
+5 rows affected.
+
+
+
+
+
+[]
 </code></pre>
 <p>Project:</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>+-------------+-------------+
@@ -344,6 +339,8 @@ Done.
 <p>因为 SQLite 不支持 <code>FULL JOIN</code>，下面我会用 Pandas 来演示。</p>
 <p><img src=https://www.sqltutorial.org/wp-content/uploads/2016/07/SQL-FULL-OUTER-JOIN.png alt></p>
 <p>图片来源：https://www.sqltutorial.org/wp-content/uploads/2016/07/SQL-FULL-OUTER-JOIN.png</p>
+<h2 id=self-join>SELF JOIN<a href=#self-join class=header-anchor arialabel=Anchor> # </a></h2>
+<p>SQL 有 <code>self join</code> 的功能。其本质就是 <code>inner join</code>: <code>TableA INNER JOIN TableA</code>。</p>
 <h2 id=pandas>Pandas<a href=#pandas class=header-anchor arialabel=Anchor> # </a></h2>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>import</span> <span style=color:#00f;font-weight:700>pandas</span> <span style=color:green;font-weight:700>as</span> <span style=color:#00f;font-weight:700>pd</span>
 
@@ -677,7 +674,7 @@ df
 </table>
 </div>
 <a href=https://hongtaoh.com/tags/%E7%BC%96%E7%A8%8B/>#编程</a>
-<p style=color:#777>最后一次修改于 2024-10-11</p>
+<p style=color:#777>最后一次修改于 2024-10-12</p>
 </div>
 <a href=#top><i class="fa fa-chevron-up" style=font-size:30px;color:#000></i></a>
 </main>
