@@ -29,3 +29,5 @@ python hupyter.py notebooks/2024-09-29-t-distribution.ipynb cn/blog
 python hupyter.py notebooks/2024-10-05-sql.ipynb cn/blog
 
 python hupyter.py notebooks/2024-10-08-confidence-interval.ipynb cn/blog
+
+python hupyter.py notebooks/2024-10-11-join.ipynb cn/blog
