@@ -2,7 +2,7 @@ html,
 body {
   margin: auto;
   padding: 0;
-  position: relative;
+  /* position: relative; */
 }
 
 body {
@@ -176,14 +176,9 @@ div.splitbox div.right {
   line-height: 1.7;
 }
 
-.wrapper {
-  overflow: hidden;
-  position: relative;
-}
-
 .header {
   padding: 20px 0;
-  position: relative;
+  /* position: relative; */
   background: #f5f5f5;
   border-bottom: 1px solid #eaeaea;
 }
@@ -248,7 +243,7 @@ h4, h5, h6 {
 /* Style for the copy button */
 .copy-code-button {
   position: absolute; /* Position it absolutely within the container */
-  top: -20px; /* Adjust as needed */
+  top: -16px; /* Adjust as needed */
   right: 10px; /* Adjust as needed */
   background-color: #007bff;
   color: white;
@@ -269,8 +264,8 @@ h4, h5, h6 {
 
 pre {
   position: relative;
-  padding: 16px;
-  margin: 0;
+  padding: 20px;
+  margin-top: 10px;
   border-radius: 6px;
   background-color: #f6f8fa;
   border: 1px solid #e1e4e8;
