@@ -11,7 +11,7 @@ type : list-single
 
 邮箱：hongtaoh@cs.wisc.edu
 
-微信：silaupek
+<!-- 微信：silaupek -->
 
 <!-- ## 我的经历
 
