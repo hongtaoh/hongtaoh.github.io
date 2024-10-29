@@ -82,7 +82,7 @@ from .extras.multiply import multiply
 from .extras.divide import divide
 ```
 
-`htpymodule/setup.py`:
+`setup.py`:
 
 ```py
 from setuptools import setup, find_packages
