@@ -150,6 +150,10 @@ plt.show()
 
 >平均每一分钟来 5 辆公交车 (`$\lambda = 5$`)，请问下一分钟来 2 辆公交车的概率是多少？
 
+或者同样的：
+
+>中国男足队平均每场比赛进 5 个球 (请允许我再平行宇宙做一次梦)，请问下一场比赛中国进 2 个球的概率是多少？
+
 我们可以用 Binomial Distribution。我们把 1 分钟分成 60 份。以下，0 代表没有公交车来，1 表示有公交车来。这就变成了 「60 choose k」这个问题。因为平均每分钟 5 辆，所以 `$p = 5/60$`
 
 `$$P_k = {60 \choose k} \left(\frac{\lambda}{60} \right)^k \left(1 - \frac{\lambda}{60} \right)^{(60 - k)}$$`
@@ -199,7 +203,7 @@ plt.show()
 
 有同学有可能会问，为什么一定是分成 60 份，我分成 10 亿份可以吗？你优秀，当然可以。
 
-我们假设一分钟分成 `$n$` 份，这个问题就变成一个这样的泊松分布：
+我们假设一分钟分成 `$n$` 份，这个问题就变成一个这样的[泊松分布](https://en.wikipedia.org/wiki/Poisson_distribution)：
 
 `$$
 \begin{align*}
@@ -229,6 +233,35 @@ P(X = k) &= \frac{n^k}{n^k}\cdot \frac{\lambda^k}{k!} \cdot \frac{e^{-\lambda}}{
 \end{align*} \tag{2}
 $$`
 
+
+
+我们具体来看一下进 0-10 个球的概率分别是多少：
+
+
+```python
+from scipy.stats import poisson
+
+lam = 5
+dist = poisson(lam)
+pmfs = [dist.pmf(i) for i in range(11)]
+x_axis = range(11)
+plt.bar(x_axis, pmfs, color='steelblue', label=r'Poisson distribution with `$\lambda=5$`')
+plt.xlabel("Number of Goals")
+plt.ylabel("Probability Mass Function (PMF)")
+plt.title(f"Poisson Distribution of Goals (`$\lambda=5$`)")
+```
+
+
+
+
+    Text(0.5, 1.0, 'Poisson Distribution of Goals (`$\\lambda=5$`)')
+
+
+
+
+    
+![png](/cn/blog/2024-03-23-discrete-distributions_files/2024-03-23-discrete-distributions_12_1.png)
+    
 
 
 ### 泊松分布的用处
