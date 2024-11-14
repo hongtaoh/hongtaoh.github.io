@@ -10,7 +10,7 @@ Embedding an Observable notebook in a Hugo blog post is no different than [embed
 
 ## Direct embedding through `iframe`
 
-You can embed a visualization on ObservableHQ directly through an `iframe`. I talked about how to do it [here](en/2020/11/02/exporting-observable-notebook/#embed-directly-via-iframe).
+You can embed a visualization on ObservableHQ directly through an `iframe`. I talked about how to do it [here](/en/2020/11/02/exporting-observable-notebook/#embed-directly-via-iframe).
 
 This is the result:
 
