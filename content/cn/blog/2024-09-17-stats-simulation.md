@@ -109,8 +109,8 @@ for i, size in enumerate(sample_sizes):
              alpha=0.7, color='steelblue', edgecolor='black')
     # Plot vertical line at the mean
     plt.axvline(mu, color='red', linestyle='--', linewidth=2)
-    plt.title(rf'Sample Size = {size}, `$\mathbb{{E}}[\bar{{X}}] = {mu:.2f}$`, `$S = {sigma:.2f}$`')
-    plt.xlabel('`$\\bar{{X}}$`')
+    plt.title(rf'Sample Size = {size}, $\mathbb{{E}}[\bar{{X}}] = {mu:.2f}$, $S = {sigma:.2f}$')
+    plt.xlabel('$\\bar{{X}}$')
     plt.ylabel('# of Samples')
 
 # Adjust layout
@@ -237,9 +237,9 @@ for i, size in enumerate(sample_sizes):
     # Plot vertical line at the mean
     plt.axvline(mu, color='red', linestyle='--', linewidth=2)
     plt.title(rf'Sample Size = {size}, '
-              rf'`$\mathbb{{E}}[\bar{{X}}] = {mu:.2f}$`, '
-              rf'`$S = {sigma:.2f}$`')
-    plt.xlabel('`$\\bar{{X}}$`')
+              rf'$\mathbb{{E}}[\bar{{X}}] = {mu:.2f}$, '
+              rf'$S = {sigma:.2f}$')
+    plt.xlabel('$\\bar{{X}}$')
     plt.ylabel('# of Samples')
 
 # Adjust layout

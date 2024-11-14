@@ -86,15 +86,15 @@ plt.figure(figsize=(10, 6))
 for df, color in zip(dfs, colors):
     if df == np.inf:
         plt.plot(x, t.pdf(x, df=df), color=color, lw=2, 
-                 label=rf'`$k= +\infty$` (Normal)')
+                 label=rf'$k= +\infty$ (Normal)')
     else:
         plt.plot(x, t.pdf(x, df=df), color=color, lw=2, 
-            label=rf'`$k={df}$`')  # Plot PDF line
+            label=rf'$k={df}$')  # Plot PDF line
 
 plt.axhline(0, color='black')
-plt.xlabel(r'`$x$`', fontsize = 14)
-plt.ylabel(r'`$P(x)$`', fontsize = 14)
-plt.title(r'`$t_k$` Distributions for Different Degrees of Freedom', fontsize = 16)
+plt.xlabel(r'$x$', fontsize = 14)
+plt.ylabel(r'$P(x)$', fontsize = 14)
+plt.title(r'$t_k$ Distributions for Different Degrees of Freedom', fontsize = 16)
 plt.legend(title = 'Degrees of Freedome', fontsize = 12)
 plt.grid(True)
 
@@ -146,23 +146,23 @@ q_value_lower = t.ppf(alpha/2, df)
 # Plot the t-distribution PDF
 plt.figure(figsize=(12, 6))
 plt.plot(x, y, color='steelblue', lw=2, 
-    label=rf'`$t$`-distribution with `$df={df}$`')  
+    label=rf'$t$-distribution with $df={df}$')  
 
 # Fill the area between the critical values for the two-tailed region
 plt.fill_between(x, y, 
                  where=np.logical_and(x <= q_value_upper, x >= q_value_lower), 
                  color='orange', 
                  alpha = 0.5, 
-                 label=rf'Critical Region (`$1 - \alpha = {1 - alpha:.2f}$`)')
-plt.axvline(q_value_lower, color="red", 
+                 label=rf'Critical Region ($1 - \alpha = {1 - alpha:.2f}$)')
+plt.axvline(q_value_lower, color="purple", 
             linestyle='--', 
             label=f'Lower Critical Value ({q_value_lower:.2f})')
 plt.axvline(q_value_upper, color="red", 
             linestyle='--', 
             label=f'Upper Critical Value ({q_value_upper:.2f})')
 plt.axhline(0, color = "black")
-plt.xlabel(r'`$T$`', fontsize = 14)
-plt.ylabel(r'`$P(T)$`', fontsize = 14)
+plt.xlabel(r'$T$', fontsize = 14)
+plt.ylabel(r'$P(T)$', fontsize = 14)
 plt.title(rf'T-Distribution with {df} Degrees of Freedom', fontsize = 16)
 plt.grid(True, linestyle='--', alpha = 0.6)
 plt.legend(fontsize = 12)

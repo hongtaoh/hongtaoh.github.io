@@ -245,10 +245,10 @@ lam = 5
 dist = poisson(lam)
 pmfs = [dist.pmf(i) for i in range(11)]
 x_axis = range(11)
-plt.bar(x_axis, pmfs, color='steelblue', label=r'Poisson distribution with `$\lambda=5$`')
+plt.bar(x_axis, pmfs, color='steelblue', label=r'Poisson distribution with $\lambda=5$')
 plt.xlabel("Number of Goals")
 plt.ylabel("Probability Mass Function (PMF)")
-plt.title(f"Poisson Distribution of Goals (`$\lambda=5$`)")
+plt.title(f"Poisson Distribution of Goals ($\lambda=5$)")
 ```
 
 
