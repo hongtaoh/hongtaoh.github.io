@@ -260,6 +260,13 @@ h4, h5, h6 {
   background-color: #0056b3;
 }
 
+.code-collapse summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #007acc;
+  margin-bottom: 8px;
+}
+
 /* Code block container */
 
 pre {

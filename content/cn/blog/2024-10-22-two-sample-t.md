@@ -24,6 +24,7 @@ from scipy.stats import t
 
 
 ```python
+# 此例取自 Chelsey Green 老师教的 STAT 571 at UW-Madison, 2024Fall
 X1 = np.array([90, 100, 92, 96, 96, 96, 92, 98, 102, 94, 94, 102, 94, 88, 104])
 X2 = np.array([88, 92, 82, 90, 78, 86, 88, 72, 84, 102, 94, 70, 94, 92, 94])
 data = {

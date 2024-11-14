@@ -68,6 +68,21 @@ if __name__ == '__main__':
 
     txt = re.sub(r'\!\[png\]\(', f'![png](/{arg2}/', txt)
 
+    # Identify and wrap collapsible code blocks
+    code_fold_pattern = r'(```python\n)#\| code-fold:true\n(.*?)(```)'  # Adjusted pattern
+    txt = re.sub(code_fold_pattern, r'{{< codeCollapse >}}\2{{< /codeCollapse >}}', txt, flags=re.DOTALL)
+
+    # Pattern to identify content within {{< codeCollapse >}} or ```python``` blocks
+    code_block_pattern = r'(\{\{< codeCollapse >\}}\n.*?\n\{\{< /codeCollapse >\}\})|(```python\n.*?\n```)'  # Matches both code collapse and python code blocks
+
+    def remove_backticks_in_code(match):
+        # Remove backticks around $...$ expressions within the matched block
+        code_block = match.group(0)  # Whole matched block
+        return re.sub(r'`(\$[^$]*\$)`', r'\1', code_block)
+
+    # Apply the substitution only within matched code blocks
+    txt = re.sub(code_block_pattern, remove_backticks_in_code, txt, flags=re.DOTALL)
+
     # write to file
     with open(mdfile, 'w') as f:
         f.write(txt)

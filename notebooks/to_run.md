@@ -33,3 +33,5 @@ python hupyter.py notebooks/2024-10-08-confidence-interval.ipynb cn/blog
 python hupyter.py notebooks/2024-10-11-join.ipynb cn/blog
 
 python hupyter.py notebooks/2024-10-22-two-sample-t.ipynb cn/blog
+
+python hupyter.py notebooks/2024-11-14-power.ipynb cn/blog
