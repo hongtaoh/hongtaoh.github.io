@@ -37,3 +37,5 @@ python hupyter.py notebooks/2024-10-22-two-sample-t.ipynb cn/blog
 python hupyter.py notebooks/2024-11-14-power.ipynb cn/blog
 
 python hupyter.py notebooks/2024-11-15-rt.ipynb cn/blog
+
+python hupyter.py notebooks/2024-11-15-aov.ipynb cn/blog
