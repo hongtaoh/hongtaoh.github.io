@@ -39,3 +39,7 @@ python hupyter.py notebooks/2024-11-14-power.ipynb cn/blog
 python hupyter.py notebooks/2024-11-15-rt.ipynb cn/blog
 
 python hupyter.py notebooks/2024-11-15-aov.ipynb cn/blog
+
+python hupyter.py notebooks/2024-11-19-weighted-sum.ipynb cn/blog
+
+python hupyter.py notebooks/2024-11-19-gmm.ipynb cn/blog
