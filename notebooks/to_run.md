@@ -43,3 +43,7 @@ python hupyter.py notebooks/2024-11-15-aov.ipynb cn/blog
 python hupyter.py notebooks/2024-11-19-weighted-sum.ipynb cn/blog
 
 python hupyter.py notebooks/2024-11-19-gmm.ipynb cn/blog
+
+python hupyter.py notebooks/2024-11-23-corr.ipynb cn/blog
+
+python hupyter.py notebooks/2024-11-24-multi-normal.ipynb cn/blog
