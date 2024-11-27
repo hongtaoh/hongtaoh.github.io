@@ -49,3 +49,5 @@ python hupyter.py notebooks/2024-11-23-corr.ipynb cn/blog
 python hupyter.py notebooks/2024-11-24-multi-normal.ipynb cn/blog
 
 python hupyter.py notebooks/2024-11-27-beta.ipynb cn/blog
+
+python hupyter.py notebooks/2024-11-27-multinomial.ipynb cn/blog
