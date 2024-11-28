@@ -1,6 +1,6 @@
 ---
 
-title: "理解多项分布 (Multinomial Distribution)"
+title: "多项分布"
 date: 2024-11-27
 author: 郝鸿涛
 slug: multinomial
@@ -38,7 +38,7 @@ RRW, RWR, WRR
 
 那依此类推，
 
->随机抛掷 k 面骰子 n 次，每个面 i 出现的概率是 `$p_i \left(\sum{p_i} \right)$`，那么每个面分别出现 `$x_1, x_2,...,x_k \left(\sum{x_i} = n\right)$` 次的概率为：
+>随机抛掷 k 面骰子 n 次，每个面 i 出现的概率是 `$p_i \left(\sum{p_i} = 1 \right)$`，那么每个面分别出现 `$x_1, x_2,...,x_k \left(\sum{x_i} = n\right)$` 次的概率为：
 
 `$$f(x_1,...,x_k|p_1,...,p_k) = \frac{n!}{x_1!x_2!...x_k!} \cdot p_1^{x_1} \cdot p_2^{x_2} \cdot ... \cdot p_k^{x_k}$$`
 
