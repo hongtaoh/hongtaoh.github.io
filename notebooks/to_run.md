@@ -55,3 +55,5 @@ python hupyter.py notebooks/2024-11-27-multinomial.ipynb cn/blog
 <!-- python hupyter.py notebooks/2024-11-27-dirichlet-dist.ipynb cn/blog -->
 
 python hupyter.py notebooks/2024-11-27-crp.ipynb cn/blog
+
+python hupyter.py notebooks/2024-11-28-anova.ipynb cn/blog
