@@ -52,7 +52,7 @@ python hupyter.py notebooks/2024-11-27-beta.ipynb cn/blog
 
 python hupyter.py notebooks/2024-11-27-multinomial.ipynb cn/blog
 
-<!-- python hupyter.py notebooks/2024-11-27-dirichlet-dist.ipynb cn/blog -->
+python hupyter.py notebooks/2024-11-27-dirichlet-dist.ipynb cn/blog
 
 python hupyter.py notebooks/2024-11-27-crp.ipynb cn/blog
 
