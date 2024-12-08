@@ -228,6 +228,7 @@ m = Model(Gurobi.Optimizer)
 optimize!(m)
 ```
 
+{{< indentedblock >}}
     Set parameter Username
     Academic license - for non-commercial use only - expires 2024-02-21
     Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (mac64[x86])
@@ -295,6 +296,7 @@ optimize!(m)
 
 
 
+{{< /indentedblock >}}
 ```julia
 u = value.(u)
 ```
@@ -302,6 +304,7 @@ u = value.(u)
 
 
 
+{{< indentedblock >}}
     5-element Vector{Float64}:
       0.002320865140005629
      -0.08461679037317738
@@ -311,6 +314,7 @@ u = value.(u)
 
 
 
+{{< /indentedblock >}}
 ### A simpler way
 
 In fact, there is a much simpler way. Because the above operations are used frequently, there is a special operator for that: `\`
@@ -323,6 +327,7 @@ u = A\y
 
 
 
+{{< indentedblock >}}
     5-element Vector{Float64}:
       0.002320865086925458
      -0.08461679037336926
@@ -333,6 +338,7 @@ u = A\y
 
 
 
+{{< /indentedblock >}}
 ```julia
 Plots.scatter(x, y,
     label="",

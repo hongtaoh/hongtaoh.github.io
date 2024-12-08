@@ -1,0 +1,13 @@
+project:
+  type: hugo
+
+execute:
+  echo: true          # Show the code block
+  output: asis        # Render output as plain text (no indentation)
+  warning: false      # Suppress warnings
+  error: false        # Suppress errors
+
+format:
+  hugo-md:
+    resources:
+      path: static    # Store images in Hugo's static directory
