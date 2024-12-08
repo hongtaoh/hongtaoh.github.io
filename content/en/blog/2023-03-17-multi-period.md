@@ -37,11 +37,13 @@ pre = ([], [:l], [:l], [:l], [:m, :n], [:o, :t])
 
 
 
+{{< indentedblock >}}
     (Any[], [:l], [:l], [:l], [:m, :n], [:o, :t])
 
 
 
 
+{{< /indentedblock >}}
 ```julia
 preDict = OrderedDict(zip(tasks, pre))
 durDict = OrderedDict(zip(tasks, durations))
@@ -50,6 +52,7 @@ durDict = OrderedDict(zip(tasks, durations))
 
 
 
+{{< indentedblock >}}
     OrderedDict{Symbol, Int64} with 6 entries:
       :l => 3
       :o => 3
@@ -60,6 +63,7 @@ durDict = OrderedDict(zip(tasks, durations))
 
 
 
+{{< /indentedblock >}}
 The key idea behind the solution is that we set a start time for each task. That start time is at least the start time of any of the preceeding task plus the duration of that preceeding task. Therefore, the start time of task `$l$` is zero. We want to minimize the starting time of task `$s$`. 
 
 
@@ -86,6 +90,7 @@ end
 optimize!(m)
 ```
 
+{{< indentedblock >}}
     Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
     Copyright (c) 2022 ERGO-Code under MIT licence terms
     Presolving model
@@ -99,6 +104,7 @@ optimize!(m)
 
 
 
+{{< /indentedblock >}}
 ```julia
 objective_value(m)
 ```
@@ -106,8 +112,10 @@ objective_value(m)
 
 
 
+{{< indentedblock >}}
     10.0
 
 
 
+{{< /indentedblock >}}
 Therefore, this project takes at least 10 days. 

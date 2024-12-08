@@ -64,11 +64,7 @@ plt.show()
 ```
 
 
-    
 ![png](/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_4_0.png)
-    
-
-
 然后我们从母体中抽取 `num_sample` 个大小为 `sample_size` 的样本，得到每个样本的平均值：
 
 
@@ -121,11 +117,7 @@ plt.show()
 ```
 
 
-    
 ![png](/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_8_0.png)
-    
-
-
 我们直观可以感受到的是，不管样本大小为何，`$\bar{X}$` 的平均值不变，和母体一样。但是随着样本大小逐渐增大，`$\bar{X}$` 的标准差变得越来越小。
 
 下面，我们具体算一下：
@@ -141,6 +133,7 @@ for sample_size in sample_sizes:
           f"σ/sqrt({sample_size}) = {(population_sigma/np.sqrt(sample_size)):.2f}")
 ```
 
+{{< indentedblock >}}
     μ = 100.01, σ = 15.01
     N = 10, 样本平均值的平均值 = 99.97, 样本平均值的标准差 = 4.72, σ/sqrt(10) = 4.75
     N = 100, 样本平均值的平均值 = 100.07, 样本平均值的标准差 = 1.49, σ/sqrt(100) = 1.50
@@ -148,6 +141,7 @@ for sample_size in sample_sizes:
     N = 10000, 样本平均值的平均值 = 100.01, 样本平均值的标准差 = 0.14, σ/sqrt(10000) = 0.15
 
 
+{{< /indentedblock >}}
 结论：
 
 从一个正态分布 `$\mathcal{N}(\mu, \sigma^2)$` 的母体中，随机不放回抽取 `$M$` 个大小为 `$N$` 的样本，样本的平均值 `$\bar{X}$` 的分布为：
@@ -178,9 +172,11 @@ prob_greater_equal = 1 - prob_less_equal
 print(f"P(Z ≥ {z:.2f}) = {prob_greater_equal:.4f}")
 ```
 
+{{< indentedblock >}}
     P(Z ≥ 6.67) = 0.0000
 
 
+{{< /indentedblock >}}
 可以看到概率几乎为零。这也可以从上图 (Sample Size = 100) 明显看出来。
 
 ## 中心极限定理
@@ -208,12 +204,7 @@ plt.show()
 ```
 
 
-    
 ![png](/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_16_0.png)
-    
-
-
-
 ```python
 num_samples = 2000
 sample_sizes = [10, 100, 1000, 10000]
@@ -250,12 +241,7 @@ plt.show()
 ```
 
 
-    
 ![png](/cn/blog/2024-09-17-stats-simulation_files/2024-09-17-stats-simulation_18_0.png)
-    
-
-
-
 ```python
 print(f"μ = {population_mu:.2f}, σ = {population_sigma:.2f}")
 for sample_size in sample_sizes:
@@ -266,6 +252,7 @@ for sample_size in sample_sizes:
           f"σ/sqrt({sample_size}) = {(population_sigma/np.sqrt(sample_size)):.4f}")
 ```
 
+{{< indentedblock >}}
     μ = 100.01, σ = 0.50
     N = 10, Mean (X̄) = 0.51, Std (X̄) = 0.1623, σ/sqrt(10) = 0.1591
     N = 100, Mean (X̄) = 0.50, Std (X̄) = 0.0495, σ/sqrt(100) = 0.0503
@@ -273,6 +260,7 @@ for sample_size in sample_sizes:
     N = 10000, Mean (X̄) = 0.50, Std (X̄) = 0.0047, σ/sqrt(10000) = 0.0050
 
 
+{{< /indentedblock >}}
 我们看到，不管母体分布如何，只要每次样本的样本量足够大 (通常认为 `$N \ge 30$` 即可)，`$\bar{X}$` 的分布都无限趋近于正态分布。
 
 结论是，不论母体分布是不是正态，假设母体平均值为 `$\mu$`，标准差为 `$\sigma$`，我们从母体中随机不放回抽取 `$M$` 个大小为 `$N$` 的样本，样本的平均值 `$\bar{X}$` 的分布为：

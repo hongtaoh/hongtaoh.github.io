@@ -69,6 +69,7 @@ optimize!(m)
 println("Solver terminated with status ", termination_status(m))
 ```
 
+{{< indentedblock >}}
     Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
     Copyright (c) 2022 ERGO-Code under MIT licence terms
     Presolving model
@@ -89,6 +90,7 @@ println("Solver terminated with status ", termination_status(m))
 
 
 
+{{< /indentedblock >}}
 ```julia
 println("Boats built with regular labor each month: ", Array{Int}(value.(x)))
 println("Boats built with overtime labor each month: ", Array{Int}(value.(y)))
@@ -96,12 +98,14 @@ println("Inventory: ", Array{Int}(value.(h)))
 println("Minimum cost: \`$", objective_value(m))
 ```
 
+{{< indentedblock >}}
     Boats built with regular labor each month: [40, 40, 40, 25]
     Boats built with overtime labor each month: [0, 10, 30, 0]
     Inventory: [10, 10, 0, 0, 0]
     Minimum cost: $`76400.0
 
 
+{{< /indentedblock >}}
 In above,
 
 ```
@@ -149,6 +153,7 @@ dist = NamedArray([8 15 50; 10 17 20; 30 26 15], (sites, mills), ("Sites", "Mill
 
 
 
+{{< indentedblock >}}
     3×3 Named Matrix{Int64}
     Sites ╲ Mills │ :A  :B  :C
     ──────────────┼───────────
@@ -159,6 +164,7 @@ dist = NamedArray([8 15 50; 10 17 20; 30 26 15], (sites, mills), ("Sites", "Mill
 
 
 
+{{< /indentedblock >}}
 ```julia
 @variable(m, x[sites, mills] >= 0)
 
@@ -169,6 +175,7 @@ dist = NamedArray([8 15 50; 10 17 20; 30 26 15], (sites, mills), ("Sites", "Mill
 optimize!(m)
 ```
 
+{{< indentedblock >}}
     Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
     Copyright (c) 2022 ERGO-Code under MIT licence terms
     Presolving model
@@ -188,6 +195,7 @@ optimize!(m)
 
 
 
+{{< /indentedblock >}}
 ```julia
 NamedArray(Int[value(x[i,j]) for i in sites, j in mills], (sites, mills), ("Sites", "Mills"))
 ```
@@ -195,6 +203,7 @@ NamedArray(Int[value(x[i,j]) for i in sites, j in mills], (sites, mills), ("Site
 
 
 
+{{< indentedblock >}}
     3×3 Named Matrix{Int64}
     Sites ╲ Mills │ :A  :B  :C
     ──────────────┼───────────
@@ -204,6 +213,7 @@ NamedArray(Int[value(x[i,j]) for i in sites, j in mills], (sites, mills), ("Site
 
 
 
+{{< /indentedblock >}}
 # Swim relay problem (Van Roy and Mason)
 The coach of a swim team needs to assign swimmers to a 200-yard medley relay team to compete in a tournament. The problem is that his best swimmers are good in more than one stroke, so it's not clear which swimmer to assign to which stroke. Here are the best times for each swimmer:
 
@@ -247,6 +257,7 @@ supply = Dict(zip(strokes, [1,1,1,1]))
 optimize!(m)
 ```
 
+{{< indentedblock >}}
     Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
     Copyright (c) 2022 ERGO-Code under MIT licence terms
     Presolving model
@@ -265,6 +276,7 @@ optimize!(m)
 
 
 
+{{< /indentedblock >}}
 ```julia
 NamedArray([value(x[s,p]) for s in strokes, p in persons], (strokes, persons), ("Stroke", "Person"))
 ```
@@ -272,6 +284,7 @@ NamedArray([value(x[s,p]) for s in strokes, p in persons], (strokes, persons), (
 
 
 
+{{< indentedblock >}}
     4×5 Named Matrix{Float64}
     Stroke ╲ Person │  :carl  :chris  :david   :tony    :ken
     ────────────────┼───────────────────────────────────────
@@ -281,3 +294,5 @@ NamedArray([value(x[s,p]) for s in strokes, p in persons], (strokes, persons), (
     :freestyle      │    1.0    -0.0     0.0     0.0     0.0
 
 
+
+{{< /indentedblock >}}

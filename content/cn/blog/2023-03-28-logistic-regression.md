@@ -42,11 +42,13 @@ df.shape
 
 
 
+{{< indentedblock >}}
     (59999, 785)
 
 
 
 
+{{< /indentedblock >}}
 ```python
 df.head(2)
 ```
@@ -159,11 +161,13 @@ df.iloc[1,:].max()
 
 
 
+{{< indentedblock >}}
     255
 
 
 
 
+{{< /indentedblock >}}
 ```python
 def data_loader(file):
     df = pd.read_csv(file)
@@ -185,6 +189,7 @@ x_train
 
 
 
+{{< indentedblock >}}
     array([[0., 0., 0., ..., 0., 0., 0.],
            [0., 0., 0., ..., 0., 0., 0.],
            [0., 0., 0., ..., 0., 0., 0.],
@@ -196,6 +201,7 @@ x_train
 
 
 
+{{< /indentedblock >}}
 ```python
 y_train
 ```
@@ -203,11 +209,13 @@ y_train
 
 
 
+{{< indentedblock >}}
     array([0, 4, 1, ..., 5, 6, 8])
 
 
 
 
+{{< /indentedblock >}}
 ```python
 example_to_draw = x_train[0, :].reshape(28,28)
 plt.imshow(example_to_draw, cmap='gray')
@@ -215,12 +223,7 @@ plt.show()
 ```
 
 
-    
 ![png](/cn/blog/2023-03-28-logistic-regression_files/2023-03-28-logistic-regression_12_0.png)
-    
-
-
-
 ```python
 test_labels = [8, 4]
 indices = np.where(np.isin(y_train, test_labels))[0]
@@ -249,11 +252,13 @@ x.shape, y.shape
 
 
 
+{{< indentedblock >}}
     ((11693, 784), (11693,))
 
 
 
 
+{{< /indentedblock >}}
 ```python
 example_to_draw = x[345, :].reshape(28,28)
 plt.imshow(example_to_draw, cmap='gray')
@@ -263,11 +268,7 @@ plt.show()
 ```
 
 
-    
 ![png](/cn/blog/2023-03-28-logistic-regression_files/2023-03-28-logistic-regression_16_0.png)
-    
-
-
 我们现在想做的是，我给你一个数字，也就是 x 中的随便一行，你要告诉我这个数字是几。人眼肯定很好识别，但现在我们需要让机器识别数字。
 
 我们注意看。x 的每一行是 784 个像素，每一个像素是一个数值，该数值介于 0 到 1 之间。数值越低，颜色越深。上图中白色部分，数字肯定很高，接近于 1.0。
@@ -323,6 +324,7 @@ def check_random_pred_result(n):
 check_random_pred_result(10)
 ```
 
+{{< indentedblock >}}
     Actual result is 0, prediction is 1.0
     Actual result is 1, prediction is 0.9999999999999629
     Actual result is 0, prediction is 0.9999999999999998
@@ -336,6 +338,7 @@ check_random_pred_result(10)
 
 
 
+{{< /indentedblock >}}
 ```python
 np.log(0.1)
 ```
@@ -343,10 +346,12 @@ np.log(0.1)
 
 
 
+{{< indentedblock >}}
     -2.3025850929940455
 
 
 
+{{< /indentedblock >}}
 我们看到，预测总是 1，这说明上面的随机参数 w, b 是没办法帮我们完成任务的。我们要做的是根据真实结果和预测结果，来一步步调整参数，最终让我们的预测结果逼近真实结果。下一个关键问题是如何调整参数。
 
 我们首先需要关注的是真实结果和预测结果的误差。这个误差最简单粗暴的测量方法是两者相减，但这种方法不适合机器学习，我现在还没办法说明为什么。我们通常用的测量方法，也就是我们通常说的「损失函数」(loss function)，是 binary cross entropy。记真实结果为 `$a$`，预测结果为 `$y$`，那两者之间的差别我们用 binary cross entropy loss 来测量。
@@ -457,6 +462,7 @@ for epoch in range(epochs):
          )
 ```
 
+{{< indentedblock >}}
     第 1 轮  损失为 40423.12  该轮中损失减少了 9.959577e+06  正确识别率为 49.9615%
     第 2 轮  损失为 40360.96  该轮中损失减少了 62.16079  正确识别率为 50.0385%
     第 3 轮  损失为 4434.966  该轮中损失减少了 35925.99  正确识别率为 93.5089%
@@ -479,6 +485,7 @@ for epoch in range(epochs):
     第 20 轮  损失为 1017.52  该轮中损失减少了 38.52664  正确识别率为 98.3836%
 
 
+{{< /indentedblock >}}
 ## 检测
 
 
@@ -505,5 +512,8 @@ accuracy = sum((a > 0.5).astype(int) == y)/len(y)
 print(' 正确识别率为 {:.4%}'.format(accuracy))
 ```
 
+{{< indentedblock >}}
      正确识别率为 98.7219%
 
+
+{{< /indentedblock >}}
