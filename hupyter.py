@@ -25,11 +25,11 @@ def fix_indentation(text):
     in_math = False
     indented_block = []
     iframe_block = []
+    in_indented_block = False
     
-    for line in lines:
+    for i, line in enumerate(lines):
         # Handle math mode
         if '$$' in line:
-            # If this line both starts and ends math mode
             if line.count('$$') == 2:
                 result.append(line)
                 continue
@@ -76,12 +76,13 @@ def fix_indentation(text):
             continue
             
         if line.strip().startswith('```'):
+            # Handle any existing indented block before code block
             if indented_block:
-                if any(l.strip() for l in indented_block):
-                    result.append('{{< indentedblock >}}')
-                    result.extend(indented_block)
-                    result.append('{{< /indentedblock >}}')
+                result.append('{{< indentedblock >}}')
+                result.extend(indented_block)
+                result.append('{{< /indentedblock >}}')
                 indented_block = []
+                in_indented_block = False
             in_code_block = not in_code_block
             result.append(line)
             continue
@@ -91,32 +92,58 @@ def fix_indentation(text):
             continue
             
         if line.strip().startswith('!['):
+            # Handle any existing indented block before image
             if indented_block:
+                result.append('{{< indentedblock >}}')
+                result.extend(indented_block)
+                result.append('{{< /indentedblock >}}')
+                indented_block = []
+                in_indented_block = False
+            result.append(line)
+            continue
+            
+        # Check if line is indented
+        is_indented = line != line.lstrip()
+        
+        # Start or continue indented block
+        if is_indented:
+            if not in_indented_block and indented_block:
+                # If we have collected some non-indented empty lines before
+                # and now we hit an indented line, keep those empty lines
+                in_indented_block = True
+            indented_block.append(line)
+            in_indented_block = True
+        # Handle empty lines
+        elif not line.strip():
+            if in_indented_block:
+                # If we're in an indented block, preserve the empty line
+                indented_block.append(line)
+            else:
+                # If we're not in an indented block, add to result directly
+                result.append(line)
+        # Handle non-indented content
+        else:
+            if indented_block:
+                # Only create indented block if there was actual content
                 if any(l.strip() for l in indented_block):
                     result.append('{{< indentedblock >}}')
                     result.extend(indented_block)
                     result.append('{{< /indentedblock >}}')
+                else:
+                    # If indented_block only contained empty lines, add them directly
+                    result.extend(indented_block)
                 indented_block = []
+                in_indented_block = False
             result.append(line)
-            continue
-            
-        is_indented = line != line.lstrip()
-        has_content = bool(line.strip())
-        
-        if is_indented or (indented_block and not has_content):
-            indented_block.append(line)
-        else:
-            if indented_block and any(l.strip() for l in indented_block):
-                result.append('{{< indentedblock >}}')
-                result.extend(indented_block)
-                result.append('{{< /indentedblock >}}')
-            indented_block = []
-            result.append(line.lstrip())
     
-    if indented_block and any(l.strip() for l in indented_block):
-        result.append('{{< indentedblock >}}')
-        result.extend(indented_block)
-        result.append('{{< /indentedblock >}}')
+    # Handle any remaining indented block
+    if indented_block:
+        if any(l.strip() for l in indented_block):
+            result.append('{{< indentedblock >}}')
+            result.extend(indented_block)
+            result.append('{{< /indentedblock >}}')
+        else:
+            result.extend(indented_block)
     
     return '\n'.join(result)
 
@@ -177,7 +204,8 @@ if __name__ == '__main__':
     txt = re.sub(r'\!\[png\]\(', f'![png](/{arg2}/', txt)
 
     # Identify and wrap collapsible code blocks
-    code_fold_pattern = r'(```python\n)#\| code-fold:true\n(.*?)(```)'  # Adjusted pattern
+    # Adjusted pattern for code-fold
+    code_fold_pattern = r'(```python\n)#\|code-fold:\s*true(.*?)(```)'  # Matches `code-fold: true` with optional space
     txt = re.sub(code_fold_pattern, r'{{< codeCollapse >}}\2{{< /codeCollapse >}}', txt, flags=re.DOTALL)
 
     # Pattern to identify content within {{< codeCollapse >}} or ```python``` blocks

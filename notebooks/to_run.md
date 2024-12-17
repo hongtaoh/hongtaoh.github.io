@@ -59,3 +59,5 @@ python hupyter.py notebooks/2024-11-27-crp.ipynb cn/blog
 python hupyter.py notebooks/2024-11-28-anova.ipynb cn/blog
 
 python hupyter.py notebooks/2024-12-11-dp.ipynb cn/blog
+
+python hupyter.py notebooks/2024-12-12-igmm.ipynb cn/blog
