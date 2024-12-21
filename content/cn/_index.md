@@ -34,20 +34,16 @@ type : list-single
 
 - [谢益辉](https://yihui.org/)
 
+- [于淼](https://yufree.cn/)
+
 <!-- - [张晶](https://kristenjz.github.io/) -->
 
 - [吴诗涛](https://shitao.netlify.app/)
 
 <!-- - [tianheg](https://github.com/tianheg) -->
 
-<!-- - [赵文轩](https://allanware.github.io/) -->
-
 - [黄湘云](https://xiangyun.rbind.io/)
 
-<!-- - 落园 -->
-
-<!-- https://blog.shuiba.co/
-https://dlyang.me/ -->
 
 ## 关于本站
 

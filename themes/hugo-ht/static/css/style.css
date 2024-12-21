@@ -403,6 +403,22 @@ body-text.list-text a[href^="#fnref:"] {
   font-size: 14px;
 }
 
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.pagination a:hover {
+  text-decoration: underline;
+}
+
+
 /* Responsive design for small screens */
 @media only screen and (max-width: 600px) {
   body {
