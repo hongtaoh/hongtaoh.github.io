@@ -75,7 +75,7 @@ def fix_indentation(text):
             result.append(line)
             continue
             
-        if line.strip().startswith(''):
+        if line.strip().startswith('```'):
             if indented_block:
                 if any(l.strip() for l in indented_block):
                     result.append('{{< indentedblock >}}')
