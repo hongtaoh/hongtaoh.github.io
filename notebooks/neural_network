@@ -1,0 +1,79 @@
+// Neural Network Architecture
+digraph {
+	rankdir=LR
+	subgraph cluster_0 {
+		label="Input Layer"
+		style=filled
+		color=lightgrey
+		a1 [label="a₁⁽⁰⁾"]
+		a2 [label="a₂⁽⁰⁾"]
+		a3 [label="a₃⁽⁰⁾"]
+		a4 [label="a₄⁽⁰⁾"]
+		adots [label="..."]
+		a9 [label="a₉⁽⁰⁾"]
+	}
+	subgraph cluster_1 {
+		label="Hidden Layer 1 (sigmoid)"
+		z1_1 [label="z₁⁽¹⁾"]
+		z2_1 [label="z₂⁽¹⁾"]
+		zdots1 [label="..."]
+		z7_1 [label="z₇⁽¹⁾"]
+	}
+	subgraph cluster_2 {
+		label="Hidden Layer 2"
+		a1_2 [label="a₁⁽²⁾"]
+		a2_2 [label="a₂⁽²⁾"]
+		adots2 [label="..."]
+		a7_2 [label="a₇⁽²⁾"]
+	}
+	subgraph cluster_3 {
+		label="Output Layer (softmax)"
+		z1_3 [label="z₁⁽³⁾"]
+		z2_3 [label="z₂⁽³⁾"]
+		zdots3 [label="..."]
+		z4_3 [label="z₄⁽³⁾"]
+	}
+	subgraph cluster_4 {
+		label=Predictions
+		y1 [label="y₁"]
+		y2 [label="y₂"]
+		ydots [label="..."]
+		y4 [label="y₄"]
+	}
+	a1 -> z1_1
+	a1 -> z2_1
+	a1 -> z7_1
+	a2 -> z1_1
+	a2 -> z2_1
+	a2 -> z7_1
+	a3 -> z1_1
+	a3 -> z2_1
+	a3 -> z7_1
+	a4 -> z1_1
+	a4 -> z2_1
+	a4 -> z7_1
+	a9 -> z1_1
+	a9 -> z2_1
+	a9 -> z7_1
+	z1_1 -> a1_2
+	z1_1 -> a2_2
+	z1_1 -> a7_2
+	z2_1 -> a1_2
+	z2_1 -> a2_2
+	z2_1 -> a7_2
+	z7_1 -> a1_2
+	z7_1 -> a2_2
+	z7_1 -> a7_2
+	a1_2 -> z1_3
+	a1_2 -> z2_3
+	a1_2 -> z4_3
+	a2_2 -> z1_3
+	a2_2 -> z2_3
+	a2_2 -> z4_3
+	a7_2 -> z1_3
+	a7_2 -> z2_3
+	a7_2 -> z4_3
+	z1_3 -> y1
+	z2_3 -> y2
+	z4_3 -> y4
+}
