@@ -20,7 +20,7 @@ python hupyter.py notebooks/2024-03-23-e.ipynb cn/blog
 
 python hupyter.py notebooks/2024-07-05-k-means.ipynb cn/blog
 
-python hupyter.py notebooks/2024-09-17-stats-simulation.ipynb cn/blog
+python hupyter.py notebooks/2024-09-17-clt.ipynb cn/blog
 
 python hupyter.py notebooks/2024-09-24-chi2.ipynb cn/blog
 
