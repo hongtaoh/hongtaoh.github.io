@@ -7,9 +7,9 @@ draft: false
 toc: false
 tags: 感悟
 ---
-人的一生由两层波动造成：
+人的一生由两层波动组成：
 
-- 客观波动 (Objective Quantum Fluctuation)，也就是佛教中的共业 (Collective Karma) + 别业 (Individual Karma)，这包含了你出生在地球、气候变化、科技发展、你的家庭条件、父母、基因、智商、命运等。
+- 客观波动 (Objective Quantum Fluctuation)，也就是佛教中的共业 (Collective Karma) + 别业 (Individual Karma)，这包含了你出生在哪颗星球、气候变化、科技发展、你的家庭条件、父母、基因、智商等。
 - 主观波动 (Subjective Wave Collapse)：个体基于主观好恶导致的决策波动。
 
 
