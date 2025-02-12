@@ -1,5 +1,5 @@
 ---
-title: "人的自我价值感"
+title: "自我价值感"
 date: 2025-02-12T12:00:38-06:00
 author: "郝鸿涛"
 slug: self-value
