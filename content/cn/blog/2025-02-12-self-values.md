@@ -2,7 +2,7 @@
 title: "人的自我价值感"
 date: 2025-02-12T12:00:38-06:00
 author: "郝鸿涛"
-slug: values
+slug: self-value
 draft: false
 toc: false
 tags: 感悟
