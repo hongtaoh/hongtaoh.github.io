@@ -40,11 +40,14 @@ tags:
 ```bash
 cd quickstart
 git init
-git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
+cd themes
+git clone https://github.com/hongtaoh/hugo-ht
+cd hugo-ht
+rm -rf .git
+cd ../..
 cp -r themes/hugo-ht/exampleSite/* .
 cp -r themes/hugo-ht/archetypes . 
 rm hugo.toml
-rm themes/hugo-ht/.git
 ```
 
 回到 quickstart 文件夹，你会看到一个文件为 `vercel.json` (受 [Rick Cogley 帖子](https://discourse.gohugo.io/t/vercel-tips/34766) 启发)。打开它，并把 `HUGO_VERSION` 改成你的 hugo version。
