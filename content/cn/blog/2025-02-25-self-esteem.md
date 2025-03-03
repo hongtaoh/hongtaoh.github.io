@@ -35,7 +35,7 @@ tags: 读书
 
 >A sense of inadequacy, of not being "enough", a feeling of guilt or shame or inferiority, a clear lack of self-acceptance, self-trust, and self-love. In other words, a problem of self-esteem. 
 
-也就是说，低自尊的表现是是：觉得自己做不到、自己不够好、认为自己低人一等、内疚、羞耻、不接受自己、不信任自己、不爱自己。
+也就是说，低自尊的表现是：觉得自己做不到、自己不够好、认为自己低人一等、内疚、羞耻、不接受自己、不信任自己、不爱自己。
 
 有一点让我没想到，作者说，自尊再强都无所谓，就像人永远不可能「过于健康」。因此，自豪 (pride) 无罪，应当鼓励。杨笠说的「普信男」，在这一观点下，根本不值得去辩论。实话讲，如果一个很普通的人，对自己「过于自信」，我想拜他为师。如果现实不断打击依然自信不减，这种信念下，这个人最后不成功是一个比行星撞地球还小概率的事件。
 
