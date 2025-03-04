@@ -7,6 +7,10 @@ draft: false
 toc: false
 ---
 
+{{< block class="note" >}}
+Wisconsin Department of Revenue updated their efile system. Please visit [https://www.revenue.wi.gov/Pages/WisTax/home.aspx](https://www.revenue.wi.gov/Pages/WisTax/home.aspx) and follow their most recent instructions.  
+{{< end >}}
+
 If you are a Chinese student, also refer to [this tutorial](https://github.com/mzj14/prepare-tax-return). This blog is heavily influenced by it. 
 
 First off, you should have already completed your federal tax return on [Glacier Tax Prep](https://www.online-tax.net/glogin.asp). If not, do your federal tax return first!
