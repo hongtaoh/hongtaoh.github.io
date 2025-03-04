@@ -8,7 +8,7 @@ toc: false
 ---
 
 {{< block class="note" >}}
-Wisconsin Department of Revenue updated their efile system. Please visit [https://www.revenue.wi.gov/Pages/WisTax/home.aspx](https://www.revenue.wi.gov/Pages/WisTax/home.aspx) and follow their most recent instructions.  
+Because Wisconsin Department of Revenue updated their efile system, this tutorial is oudated. Please visit [https://www.revenue.wi.gov/Pages/WisTax/home.aspx](https://www.revenue.wi.gov/Pages/WisTax/home.aspx) and follow their most recent instructions.  
 {{< end >}}
 
 If you are a Chinese student, also refer to [this tutorial](https://github.com/mzj14/prepare-tax-return). This blog is heavily influenced by it. 
