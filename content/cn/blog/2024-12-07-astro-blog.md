@@ -13,6 +13,8 @@ Astro 简介请看[官方文档](https://docs.astro.build/zh-cn/concepts/why-ast
 我比较喜欢的 Astro 博客主题:
 
 - [astro-theme-panda](https://github.com/yuhangch/astro-theme-panda)
+- [Citrus](https://github.com/artemkutsan/astro-citrus)
+- [smallworld](https://github.com/anaxite/astro-smallworld/)
 - [hira.page](https://github.com/psephopaiktes/hira.page)
 - [astro-i18n-starter](https://github.com/psephopaiktes/astro-i18n-starter)
 - [nordlys](https://github.com/FjellOverflow/nordlys)

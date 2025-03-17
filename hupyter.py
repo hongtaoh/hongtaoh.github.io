@@ -162,17 +162,33 @@ if __name__ == '__main__':
         os.system(f'cp -r {files_folder}/* {target_static_folder}')
         os.system(f'rm -rf {files_folder}')
 
-    # handle image links
+    # Better approach - only replace in actual image links
     md_image_links_raw = re.findall(r'!\[(.*?)\]\((.*?)\)', txt)
-    md_image_links = [b for (a, b) in md_image_links_raw]
-    
-    for lk in md_image_links:
-        if 'https://' in lk:
+
+    for alt_text, img_path in md_image_links_raw:
+        if 'https://' in img_path:
             continue
-        if files_folder_name not in lk:
-            image_folder_name = re.findall(r'^.+?(?=\/)', lk)[0]
-            txt = re.sub(f'{image_folder_name}/', f'/{arg2}/{files_folder_name}/', txt)
-            os.system(f'cp {notebook_folder_name}/{lk} {static_folder}/{files_folder_name}')
+        if files_folder_name not in img_path:
+            try:
+                image_folder_name = re.findall(r'^.+?(?=\/)', img_path)[0]
+                # Only replace this specific image path, not globally
+                new_path = f'/{arg2}/{files_folder_name}/{img_path.split("/", 1)[1]}'
+                txt = txt.replace(f'![{alt_text}]({img_path})', f'![{alt_text}]({new_path})')
+                os.system(f'cp {notebook_folder_name}/{img_path} {static_folder}/{files_folder_name}')
+            except (IndexError, Exception) as e:
+                print(f"Warning: Could not process image {img_path}: {e}")
+
+    # # handle image links
+    # md_image_links_raw = re.findall(r'!\[(.*?)\]\((.*?)\)', txt)
+    # md_image_links = [b for (a, b) in md_image_links_raw]
+    
+    # for lk in md_image_links:
+    #     if 'https://' in lk:
+    #         continue
+    #     if files_folder_name not in lk:
+    #         image_folder_name = re.findall(r'^.+?(?=\/)', lk)[0]
+    #         txt = re.sub(f'{image_folder_name}/', f'/{arg2}/{files_folder_name}/', txt)
+    #         os.system(f'cp {notebook_folder_name}/{lk} {static_folder}/{files_folder_name}')
     
     txt = re.sub(r'\!\[png\]\(', f'![png](/{arg2}/', txt)
 
