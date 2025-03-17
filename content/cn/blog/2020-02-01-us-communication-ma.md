@@ -63,7 +63,7 @@ aliases:
 
   大部分学校是让你做助教，非常少的学校有助研 (RA) 的机会。
 
-对于家里多金的朋友，如果以下项目申请不上，可以用钱砸这些硕士项目：南加大，宾大，密歇根州立，威斯康星大学麦迪逊分校新闻与大众传播学院，西北大学，纽约布法罗等等，这些都是很好的项目，但是不给钱。有些学校会给一些小奖，比如维克森林大学 (Wake Forest University)。
+对于家里多金的朋友，如果以下项目申请不上，可以用钱砸这些硕士项目：南加大，宾大，密歇根州立，西北大学，纽约布法罗等等，这些都是很好的项目，但是不给钱。有些学校会给一些小奖，比如维克森林大学 (Wake Forest University)。
 
 ## 我比较确定给硕士生全奖的项目
 
@@ -146,6 +146,8 @@ aliases:
 - 美国大学 (American University, [School of Communication](https://www.american.edu/soc/degrees.cfm)，看简介，有可能有全奖)
 
 - 圣地亚哥州立大学 ([Sen Diego State University, School of Communication](https://communication.sdsu.edu/)) (这个学校虽然看起来不起眼，但我觉得真的还不错。只提供了硕士学位。学院提到了 [The Graduate Teaching Associate 项目](https://communication.sdsu.edu/academics/graduate_teaching_associates)，貌似可以提供全奖。)
+
+- 威斯康星大学麦迪逊分校 (University of Wisconsin Madison, [School of Journalism and Mass Communication](https://journalism.wisc.edu/))。我看学院官网上有 [Research MA Students](https://journalism.wisc.edu/graduate/students/)，应该是给奖的。
 
 - 威斯康星大学密尔沃基分校 (University of Wisconsin-Milwaukee, [Department of Communication](https://uwm.edu/communication/))
 
