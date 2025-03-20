@@ -5,6 +5,7 @@ author: Hongtao Hao
 slug: get-started-with-hugo
 draft: false
 toc: true
+translate: false
 ---
 
 A friend asked me whether I can help him create his own personal website. I have long been wanting to write a simple tutorial on this and now I think it's time to do that.
