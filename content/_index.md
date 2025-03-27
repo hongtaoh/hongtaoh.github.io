@@ -14,6 +14,6 @@ I graduated with a Master's degree in Media Arts and Sciences from [the Media Sc
 
 我写过一些关于[留学申请的帖子](https://hongtaoh.com/tags/%e7%95%99%e5%ad%a6/)，也许能帮到你。
 
-每两周我会抽出半小时免费给需要的人提供帮助，如果你觉得我可以帮到你，你可以在[这里](https://calendly.com/hongtaoh/chat-with-hongtao)预约。
+每两周我会抽出半小时免费给需要的人提供帮助，如果你觉得我可以帮到你，可以在[这里](https://calendly.com/hongtaoh/chat-with-hongtao)预约。
 
 <!-- 文书修改请移步[付费咨询](/cn/#我的博客)。 -->
