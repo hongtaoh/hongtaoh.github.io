@@ -39,7 +39,7 @@ en = "/en/:year/:month/:day/:slug/"
     url = "/cn/"
     weight = 1
 [[menu.cn]]
-    name = "日志"
+    name = "文章"
     url = "/cn/blog/"
     weight = 2
 [[menu.cn]]
