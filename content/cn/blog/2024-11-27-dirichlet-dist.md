@@ -10,6 +10,22 @@ tags: 统计
 
 ---
 
+{{<block class="tip">}}
+
+我是这么理解 Dirichlet Distribution 的：
+
+假设你有三个数。你想让这三个数总共出现 10 次。那可以是 [1, 0, 9], 也可以是 [2, 2, 6] 等等。只要每个数大于等于 0，且三个数之和等于 10 就好。这其实就是找到三个概率，满足 ``$p_i \ge 0$`` 以及 ``$\sum p_i = 1$``。概率找好之后，分别乘以总共出现的次数，就是各自的计数。
+
+你可以想象在一个三维空间，我们要求 ``$x, y, z \ge 0$`` 并且 ``$x+y+z=1$``。那所有符合要求的点在一个平面上，而且这个平面是一个三角形，三角形的顶点分别是 `(0,0,1), (0,1,0), (1,0,0)`。这和二维空间里，要求 ``$x, y \ge 0$`` 且 ``$x+y = 1$`` 类似，不过在二维空间的话，所有的点在一条直线上，两个顶点分别是 `(0,1), (1,0)`。
+
+回到三维空间那个三角形平面。如果所有的点是均匀分布，那 X, Y, Z 各自的分布 (边缘分布，marginal distribution) 都是 uniform distribution。但这只是一种情况，像下面的交互图表所显示的那样，这个三角形上的密度是不一样的，由三个 ``$\alpha$`` 控制。也就是说这三个 ``$\alpha$`` 是 Dirichlet 的参数。
+
+从 Dirichlet 分布中采样，也就是按照这种密度，随机抽取三个点。结果是一个向量。因为这个向量里的三个数都是概率，所以也说这个结果是一个概率向量。参数向量 ``$\boldsymbol {\alpha }$`` 决定了哪些数更容易被抽到。如果三个 ``$\alpha$`` 都是 1，那三个都是均匀分布。如果都小于 1，那三个数更可能分布在 0 和 1 这两个极端，边缘分布 (Marginal Distribution) 呈 U 型，而不是集中在中间。相反，当 ``$\alpha_i \gt 1$``，那边缘分布集中在中心区域。
+
+总结一下，Dirichlet Distribution 就是要随机抽取 ``$k$`` 个大于等于 0 的数 (概率)，必须满足所抽到的概率之和为 1。所有满足条件的数字之集合是一个 k-1 维的 [simplex](https://en.wikipedia.org/wiki/Simplex)，Dirichlet Distribution 是这个 simplex 上的概率密度函数。参数向量 ``$\boldsymbol {\alpha }$`` 控制这个 simplex 上的密度分布形状。
+
+{{<end>}}
+
 ## 基本概念
 
 我们在 [双项分布](/cn/2024/03/23/discrete-distributions/) 的基础上介绍了 [Beta 分布](/cn/2024/11/27/beta/)。同样的，我们要在 [多项分布](/cn/2024/11/27/multinomial/) 的基础上介绍 [Dirichlet Distribution](https://en.wikipedia.org/wiki/Dirichlet_distribution)。
