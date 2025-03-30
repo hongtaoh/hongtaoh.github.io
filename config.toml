@@ -35,17 +35,21 @@ en = "/en/:year/:month/:day/:slug/"
     url = "/cn/blog/"
     weight = 5
 [[menu.cn]]
-    name = "关于"
+    name = "余简"
     url = "/cn/"
     weight = 1
 [[menu.cn]]
-    name = "文章"
+    name = "札记"
     url = "/cn/blog/"
     weight = 2
 [[menu.cn]]
+    name = "事目"
+    url = "/tags/"
+    weight = 3
+[[menu.cn]]
     name = "English"
     url = "/"
-    weight = 3
+    weight = 4
 
 [params]
     description = "Peronal website of Hongtao Hao"
