@@ -12,5 +12,3 @@ I graduated with a Master's degree in Media Arts and Sciences from [the Media Sc
 
 <!-- 这是郝鸿涛的个人主页。2016 年从河北师范大学英语翻译专业毕业后，我到中国人民大学读硕士（国际新闻班），随后在美国印第安纳大学媒体学院[读第二个硕士](/cn/2021/06/15/2y/)，于 2020 年 5 月毕业。毕业后的一年帮[安用烈老师](http://yongyeol.com/)做了一些[杂活](https://yyahn.com/covid19-dashboard/)。目前在威斯康星计算机学院读博。最骄傲的一件事是在 2015 年第一届"外研社杯”全国英语阅读大赛中[获奖](/cn/2020/01/06/fltrp-reading-contest/)。最难忘的一次经历是 [2017 年参加瑞士圣加仑论坛](/cn/2020/01/17/2017-st.gallen-memory/)。自律、喜静、极简。 -->
 
-接受付费咨询 (文书修改、选校、转码、个人网站制作等)，[Zoom 预约链接](https://calendly.com/hongtaoh/chat-with-hongtao)。1000 元/60 分钟，600 元/30 分钟。之前已经预约的免费咨询不会收费。
-
