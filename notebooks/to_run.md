@@ -65,3 +65,5 @@ python hupyter.py notebooks/2024-12-14-log-sum-exp.ipynb en/blog
 python hupyter.py notebooks/2025-02-03-igmm.ipynb cn/blog
 
 python hupyter.py notebooks/2025-03-16-bert.ipynb cn/blog
+
+python hupyter.py notebooks/2025-04-16-kde.ipynb cn/blog

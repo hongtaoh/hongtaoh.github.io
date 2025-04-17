@@ -193,8 +193,8 @@ if __name__ == '__main__':
     txt = re.sub(r'\!\[png\]\(', f'![png](/{arg2}/', txt)
 
     # Identify and wrap collapsible code blocks
-    # Adjusted pattern for code-fold
-    code_fold_pattern = r'(```python\n)#\|code-fold:\s*true(.*?)(```)'  # Matches `code-fold: true` with optional space
+    # More flexible pattern for code-fold with various spacing options
+    code_fold_pattern = r'(```python\n)#\|\s*code-fold\s*:\s*true(.*?)(```)'
     txt = re.sub(code_fold_pattern, r'{{< codeCollapse >}}\2{{< /codeCollapse >}}', txt, flags=re.DOTALL)
 
     # Pattern to identify content within {{< codeCollapse >}} or ```python``` blocks
@@ -207,6 +207,9 @@ if __name__ == '__main__':
 
     # Apply the substitution only within matched code blocks
     txt = re.sub(code_block_pattern, remove_backticks_in_code, txt, flags=re.DOTALL)
+
+    # Add spacing after images by adding a blank line
+    txt = re.sub(r'(!\[.*?\]\(.*?\))(\n[^!\n])', r'\1\n\n\2', txt)
 
     # write to file
     with open(mdfile, 'w') as f:
