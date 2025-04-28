@@ -35,16 +35,16 @@ en = "/en/:year/:month/:day/:slug/"
     url = "/cn/blog/"
     weight = 5
 [[menu.cn]]
-    name = "余简"
+    name = "关于"
     url = "/cn/"
     weight = 1
 [[menu.cn]]
-    name = "札记"
-    url = "/cn/blog/"
+    name = "标签"
+    url = "/tags/"
     weight = 2
 [[menu.cn]]
-    name = "事目"
-    url = "/tags/"
+    name = "文章"
+    url = "/cn/blog/"
     weight = 3
 [[menu.cn]]
     name = "English"
