@@ -13,7 +13,7 @@ type : list-single
 
 ## 咨询
 
-接受付费咨询 (文书修改、选校、转码、个人网站制作等)，[Zoom 预约链接](https://calendly.com/hongtaoh/chat-with-hongtao)。1000 元/60 分钟，600 元/30 分钟。之前已经预约的免费咨询不会收费。
+接受付费咨询 (文书修改、选校、转码、个人网站制作等)，[Zoom 预约链接](https://calendly.com/hongtaoh/chat-with-hongtao)。1000 元/60 分钟，600 元/30 分钟。
 
 <!-- 微信：silaupek -->
 
