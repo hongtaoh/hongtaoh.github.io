@@ -47,7 +47,7 @@
 
 本站结构采用 [Hugo](https://gohugo.io)。主题为在谢益辉 [Hugo Xmin](https://github.com/yihui/hugo-xmin) 基础上“微改”而来的 [Hugo-ht](https://github.com/hongtaoh/hugo-ht)。
 
-
+<!-- 
 ## 咨询
 
-接受付费咨询 (文书修改、选校、转码、个人网站制作等)，[Zoom 预约链接](https://calendly.com/hongtaoh/chat-with-hongtao)。1000 元/60 分钟，600 元/30 分钟。
+接受付费咨询 (文书修改、选校、转码、个人网站制作等)，[Zoom 预约链接](https://calendly.com/hongtaoh/chat-with-hongtao)。1000 元/60 分钟，600 元/30 分钟。 -->
