@@ -18,38 +18,6 @@ en = "/en/:year/:month/:day/:slug/"
     name = "Home"
     url = "/"
     weight = 1
-[[menu.en]]
-    name = "Projects"
-    url = "/en/projects/"
-    weight = 2
-[[menu.en]]
-    name = "Research"
-    url = "/en/research/"
-    weight = 3
-[[menu.en]]
-    name = "Blog"
-    url = "/en/blog/"
-    weight = 4
-[[menu.en]]
-    name = "中文"
-    url = "/cn/blog/"
-    weight = 5
-[[menu.cn]]
-    name = "关于"
-    url = "/cn/"
-    weight = 1
-[[menu.cn]]
-    name = "标签"
-    url = "/tags/"
-    weight = 2
-[[menu.cn]]
-    name = "文章"
-    url = "/cn/blog/"
-    weight = 3
-[[menu.cn]]
-    name = "English"
-    url = "/"
-    weight = 4
 
 [params]
     description = "Peronal website of Hongtao Hao"
