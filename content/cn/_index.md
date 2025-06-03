@@ -1,19 +1,13 @@
 ---
-title: '关于'
-type : list-single
 ---
 
-<!-- ## 我是谁
+## 我是谁
 
-郝鸿涛，河北邯郸人。(文科+社科+工科) 非典型混合体、业余前端杂耍演员、自封冷笑话八段选手 -->
+这是郝鸿涛的个人主页。2016 年从河北师范大学英语翻译专业毕业后，我到中国人民大学读硕士（国际新闻班），随后在美国印第安纳大学媒体学院[读第二个硕士](/cn/2021/06/15/2y/)，于 2020 年 5 月毕业。毕业后的一年帮[安用烈老师](http://yongyeol.com/)做了一些[杂活](https://yyahn.com/covid19-dashboard/)。目前在威斯康星计算机学院读博。最骄傲的一件事是在 2015 年第一届"外研社杯”全国英语阅读大赛中[获奖](/cn/2020/01/06/fltrp-reading-contest/)。最难忘的一次经历是 [2017 年参加瑞士圣加仑论坛](/cn/2020/01/17/2017-st.gallen-memory/)。自律、喜静、极简。
 
 ## 我的联系方式
 
 邮箱：hongtaoh@cs.wisc.edu
-
-## 咨询
-
-接受付费咨询 (文书修改、选校、转码、个人网站制作等)，[Zoom 预约链接](https://calendly.com/hongtaoh/chat-with-hongtao)。1000 元/60 分钟，600 元/30 分钟。
 
 <!-- 微信：silaupek -->
 
@@ -52,3 +46,8 @@ type : list-single
 ## 关于本站
 
 本站结构采用 [Hugo](https://gohugo.io)。主题为在谢益辉 [Hugo Xmin](https://github.com/yihui/hugo-xmin) 基础上“微改”而来的 [Hugo-ht](https://github.com/hongtaoh/hugo-ht)。
+
+
+## 咨询
+
+接受付费咨询 (文书修改、选校、转码、个人网站制作等)，[Zoom 预约链接](https://calendly.com/hongtaoh/chat-with-hongtao)。1000 元/60 分钟，600 元/30 分钟。

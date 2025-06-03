@@ -1,5 +1,3 @@
 ---
-title: 'English blog'
-date: ''
 ---
 

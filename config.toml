@@ -7,96 +7,33 @@ footnotereturnlinkcontents = "↩"
 enableGitInfo = true
 enableRobotsTXT = true
 
-[permalinks]
-cn = "/cn/:year/:month/:day/:slug/"
-en = "/en/:year/:month/:day/:slug/"
+[module.hugoVersion]
+  min = "0.119.0"
 
-[frontmatter]
-  lastmod = ["lastmod", ":git", "date", "publishDate"]
-
-[[menu.en]]
-    name = "Home"
-    url = "/"
-    weight = 1
-
-[params]
-    description = "Peronal website of Hongtao Hao"
-    homeText = "Hongtao Hao's Personal Website"
-    blogDirName = "blog"
-    singleLang = false
-    defaultLang = "en"
-    MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
-    MathJaxVersion = "2.7.5"
-    favicon = "/ht10.ico"
-    copyright = "&copy;"
-    copyrightYear = "2020-2025"
-    GithubEdit = "https://github.com/hongtaoh/hongtaoh.github.io/edit/sources/content/"
-    GithubRepo = "https://github.com/hongtaoh/hongtaoh.github.io"
-    ContentSource = "https://raw.githubusercontent.com/hongtaoh/hongtaoh.github.io/sources/content/"
-
-[params.logo]
-  url = "ht10.png"
-  width = 50.0
-  height = 50.0
-  alt = "Hongtao Hao"
-
-[params.lang]
-
-    [params.lang.author]
-      en = "Hongtao Hao"
-      cn = "郝鸿涛"
-
-    [params.lang.poweredBy]
-      en = "Made with"
-      cn = "本站驱动"
-
-    [params.lang.edit]
-      en = "Suggest an edit of this page"
-      cn = "编辑本页"
-
-    [params.lang.lastupdate]
-      en = "Last modified on"
-      cn = "最后一次修改于"
-
-    [params.lang.Sitelastupdate]
-      en = "Site last updated on"
-      cn = "最近一次更新于"
-
-    [params.lang.subscribe]
-      en = "Subscribe"
-      cn = "订阅"
-
-    [params.lang.sourceCode]
-      en = "Content in"
-      cn = "内容存于"
-
-    [params.lang.license]
-      en = "License"
-      cn = "版权"
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
 
 [markup]
- defaultMarkdownHandler = "goldmark"
-
+  defaultMarkdownHandler = "goldmark"
   [markup.goldmark]
-
     [markup.goldmark.extensions]
-    definitionList = true
-    footnote = true
-    linkify = false
-    strikethrough = true
-    table = true
-    taskList = true
-    typographer = true
-
+      definitionList = true
+      footnote = true
+      linkify = false
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
     [markup.goldmark.parser]
-    attribute = true
-    autoHeadingID = true
-
+      attribute = true
+      autoHeadingID = true
     [markup.goldmark.renderer]
-    hardWraps = false
-    unsafe = true
-    xHTML = false
-  
+      hardWraps = false
+      unsafe = true
+      xHTML = false
+
   [markup.highlight]
     codeFences = true
     guessSyntax = false
@@ -109,10 +46,78 @@ en = "/en/:year/:month/:day/:slug/"
     tabWidth = 4
 
   [markup.tableOfContents]
-  endLevel = 3
-  ordered = false
-  startLevel = 2
+    endLevel = 3
+    ordered = true
+    startLevel = 2
 
 [imaging]
-quality = 100
-      
+  quality = 100
+
+[params]
+  MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
+  MathJaxVersion = "2.7.5"
+  favicon = "/ht10.ico"
+  GithubRepo = "https://github.com/hongtaoh/hongtaoh.github.io"
+  copyright = "&copy;"
+  copyrightYearStart = "2020"
+  blogDirName = "blog"
+  logo = { url = "ht10.png", width = 50.0, height = 50.0, alt = "Hongtao Hao" }
+
+[languages]
+
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
+    title = "Hongtao Hao"
+    contentDir = "content/en"
+
+    [languages.en.params]
+      description = "Personal website of Hongtao Hao"
+      licenseURL = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    
+    [languages.en.taxonomies]
+      tag = "tags"
+      category = "categories"
+
+    [languages.en.permalinks]
+      posts = "/posts/:year/:month/:day/:slug/"
+
+    [[languages.en.menu.main]]
+      name = "Home"
+      url = "/"
+      weight = 1
+
+    [[languages.en.menu.main]]
+      name = "Blog"
+      url = "/blog/"
+      weight = 2
+
+  [languages.cn]
+    languageName = "中文"
+    languageCode = "zh-cn"
+    weight = 2
+    title = "郝鸿涛"
+    contentDir = "content/cn"
+
+    [languages.cn.params]
+      description = "郝鸿涛的个人网站"
+      licenseURL = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"
+
+    [languages.cn.taxonomies]
+      tag = "tags"
+      category = "categories"
+
+    [languages.cn.permalinks]
+      posts = "/posts/:year/:month/:day/:slug/"
+
+    [[languages.cn.menu.main]]
+      name = "首页"
+      url = "/"
+      weight = 1
+
+    [[languages.cn.menu.main]]
+      name = "博客"
+      url = "/blog/"
+      weight = 2
+
