@@ -81,7 +81,7 @@ enableRobotsTXT = true
       category = "categories"
 
     [languages.en.permalinks]
-      posts = "/posts/:year/:month/:day/:slug/"
+      posts = "/blog/:year/:month/:day/:slug/"
 
     [[languages.en.menu.main]]
       name = "Home"
@@ -109,15 +109,18 @@ enableRobotsTXT = true
       category = "categories"
 
     [languages.cn.permalinks]
-      posts = "/posts/:year/:month/:day/:slug/"
+      posts = "/blog/:year/:month/:day/:slug/"
 
     [[languages.cn.menu.main]]
-      name = "首页"
-      url = "/"
+      name = "关于"
+      url = "/about/"
       weight = 1
 
     [[languages.cn.menu.main]]
       name = "博客"
       url = "/blog/"
       weight = 2
+    
+
+    
 
