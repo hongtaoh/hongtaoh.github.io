@@ -8,7 +8,7 @@ toc: true
 tags: 
 ---
 {{<block class="reminder">}}
-按照这个教程建好后，你的 GitHub 仓库会大致是：[https://github.com/hongtaoh/mywebsite](https://github.com/hongtaoh/mywebsite)。建好的网站会是这样：[https://hugo-ht.vercel.app/](https://hugo-ht.vercel.app/)。
+按照这个教程建好后，你的 GitHub 仓库会大致是：[https://github.com/hongtaoh/mywebsite](https://github.com/hongtaoh/mywebsite)。建好的网站会是这样：[https://hugo-ht-example.vercel.app/](https://hugo-ht-example.vercel.app/)。
 {{<end>}}
 
 这部分是我[之前一篇教程的更新版](/cn/2021/03/02/personal-website-tutorial/)，因为之前的弄得有点复杂，其实不用那么复杂。
@@ -47,6 +47,7 @@ rm -rf .git
 cd ../..
 cp -r themes/hugo-ht/exampleSite/* .
 cp -r themes/hugo-ht/archetypes . 
+cp themes/hugo-ht/config.toml .
 rm hugo.toml
 ```
 
@@ -59,6 +60,8 @@ hugo v0.119.0-b84644c008e0dc2c4b67bd69cccf87a41a03937e+extended darwin/arm64 Bui
 ```
 
 那 `HUGO_VERSION` 就是 `0.119.0`。
+
+另外，请把 `config.toml` 中的 `baseURL = "https://example.com"` 改成 `baseURL = ""`。
 
 然后回到终端，复制下面的代码（记得把 `YOURREPO` 换成你上面复制的 url），把所有代码粘贴到终端，然后点回车。
 
@@ -91,8 +94,15 @@ git push -u origin main
 先在终端 cd 到你的 Hugo 文件夹，然后在终端输入：
 
 ```bash
-hugo new cn/posts/2024-04-06-a-new-post.md
+hugo new content/cn/posts/2024-04-06-a-new-post.md
 ```
+
+或者
+
+```bash
+hugo new content/en/posts/2024-04-06-a-new-post.md
+```
+
 2021-04-06 只是一个例子，你换成你当天的日期就好。a-new-post 也只是一个例子，换成你想用的名称就好。
 
 然后接着输入
@@ -111,9 +121,9 @@ hugo server -D
 
 - baseURL: 替换成你网站的域名，应该是类似这种 `https://myblog-hongtao.vercel.app/`。
 
-- GithubEdit: 把所有的 USERNAME 换成你的 GitHub 用户名，把所有的 REPONAME 换成 仓库名，我这里是 mywebsite (如果你新建的仓库名不是 mywebsite，那你需要用你自己起的名字)
+- Github: 把所有的 USERNAME 换成你的 GitHub 用户名，把所有的 REPONAME 换成 仓库名，我这里是 mywebsite (如果你新建的仓库名不是 mywebsite，那你需要用你自己起的名字)
 
-- Params.lang.author 部分 `Your Name` 和「你的名字」换成你的大名。
+- `i18n` 文件夹里的文本内容。
 
 ### 更新网站
 
@@ -130,7 +140,7 @@ hugo server -D
 总结一下，每次更新网站时，首先 `cd` 到你的 Hugo 文件夹，然后运行：
 
 ```bash
-git add . # 或者如 git add README.md
+git add . 
 git commit -m "请给自己留言"
 git push
 ```
@@ -152,7 +162,17 @@ bash deploy.sh
 
 ### 修改博客语言
 
-你首先需要把 `themes/hugo-ht` 这个文件夹改名，比如，`themes/hugo-ht-theme`，然后 `config.toml` 中改成
+如果你只想用中文，那很简单：
+
+1. 把 `config.toml` 中 `[languages.en]` 那部分全部去掉。
+2. 把 `config.toml` 中 `defaultContentLanguage = "en"` 改成 `defaultContentLanguage = "cn"`
+3. 把 `config.toml` 中 `defaultContentLanguageInSubdir = true` 改成 `defaultContentLanguageInSubdir = true`。
+
+为了以防万一，我专门弄了一个纯中文的版本：
+    - Github Repo: [https://github.com/hongtaoh/hugoht-cn-demo](https://github.com/hongtaoh/hugoht-cn-demo)
+    - Demo: [https://hugoht-cn-demo.vercel.app](https://hugoht-cn-demo.vercel.app)
+
+<!-- 你首先需要把 `themes/hugo-ht` 这个文件夹改名，比如，`themes/hugo-ht-theme`，然后 `config.toml` 中改成
 
 ```toml
 theme = "hugo-ht-theme"
@@ -166,7 +186,7 @@ theme = "hugo-ht-theme"
 
 #### 中文为主，英文为辅
 
-看[这里](/cn/2021/03/02/personal-website-tutorial/#中文为主英文为辅)
+看[这里](/cn/2021/03/02/personal-website-tutorial/#中文为主英文为辅) -->
 
 ### 添加评论
 

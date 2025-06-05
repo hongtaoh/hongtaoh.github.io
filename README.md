@@ -6,8 +6,28 @@ This repository is licensed under MIT.
 
 ## Update hugo-ht
 
+### Push 
+
+```sh
+cd themes/hugo-ht
+
+git status
+git add .
+git commit -m "Update theme: your message"
+git push origin master  
+
+cd ../../
+
+git add themes/hugo-ht
+git commit -m "Update submodule pointer to latest theme commit"
+git push origin main  
+```
+
+### Pull 
+
 ```sh
 cd themes/hugo-ht
 git pull origin master
 cd ../..
 ```
+
