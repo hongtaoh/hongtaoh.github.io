@@ -119,7 +119,7 @@ hugo server -D
 
 你 Hugo 文件夹根目录下的 config.toml 有几个地方需要你自己改：
 
-- baseURL: 替换成你网站的域名，应该是类似这种 `https://myblog-hongtao.vercel.app/`。
+- baseURL: 替换成你网站的域名，应该是类似这种 `https://myblog-hongtao.vercel.app`。
 
 - Github: 把所有的 USERNAME 换成你的 GitHub 用户名，把所有的 REPONAME 换成 仓库名，我这里是 mywebsite (如果你新建的仓库名不是 mywebsite，那你需要用你自己起的名字)
 
