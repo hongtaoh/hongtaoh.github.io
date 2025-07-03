@@ -26,14 +26,14 @@ aliases:
 
 本教程旨在手把手帮你搭建属于你的个人网站。建站工具是[Hugo](https://gohugo.io/) + [GitHub](https://github.com/)。两个都是免费的。完成后，你的个人网站网址是：`https://github用户名.github.io`。
 
-{{<block class="info">}}
+<!-- {{<block class="info">}}
 如果你参考这篇帖子顺利把个人网站建起来，欢迎把名字贴在下面！可以在评论区里说，我会加上去。
 
 - [张晶](https://kristenjz.github.io/)
 - [毛月](https://ashleygua.github.io/)
 - [崔頔](https://cuidi1996.github.io/about/)
 
-{{<end>}}
+{{<end>}} -->
 
 ## 前期准备
 
@@ -184,6 +184,18 @@ hugo server -D # 这里的 D 是 draft 的意思
 这一点很重要！！
 
 下面比较麻烦，如果你做得不成功，可以把上面的重做一下，然后用 Netlify 而不是 GitHub Pages。用 Netlify 的教程看[这里](/cn/2020/01/04/hugo-netlify-deploy/)。
+{{<end>}}
+
+{{<block class="info">}}
+
+2025-07-02 更新：
+
+现在看，「密钥设置」、「设置 Personal Token」、「添加 Workflow」这三部分貌似现在已经不必要了。
+
+「新建 Github 仓库」弄好直接，直接「上传到 Github」即可。然后到该 Github 仓库 点击 Settings，找到 Pages，在 Build and deployment 那里，Source 选择 Github Actions，然后选择 Hugo，修改一下 Hugo version。然后确认。
+
+弄好之后，别忘了回到终端，`git pull`。因为上面的步骤会在添加 `.github/workflows/hugo.yml`，你本地还没有。必须用 `git pull` 将本地内容更新。
+
 {{<end>}}
 
 ## 密钥设置
@@ -612,7 +624,7 @@ open content/cn/hobby/_index.md -a TextEdit
 
 Github 的 [官方指南](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site) 给出了方法。到 `<username>/<username>.github.io` 这个仓库，找到 Settings, 然后在 GitHub Pages 中的 Custom domain 这里填入我们自己的域名即可。
 
-{{<figure src="https://docs.github.com/assets/images/help/pages/save-custom-subdomain.png" title="图片来源：GitHub">}}
+<!-- {{<figure src="https://docs.github.com/assets/images/help/pages/save-custom-subdomain.png" title="图片来源：GitHub">}} -->
 
 比如，你买的域名是 example.com，在 Custome domain 这里输入 example.com 就行。
 
