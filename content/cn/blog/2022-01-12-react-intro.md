@@ -27,7 +27,7 @@ npm start
 
 把 src 文件夹中除 `index.js` 外的文档都删除。让 `index.js` 内容只剩下：
 
-```js
+```txt
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -39,13 +39,13 @@ ReactDOM.render(<p>你好！</p>, document.getElementById('root'));
 
 在 `index.js` 中加入以下内容：
 
-```js
+```txt
 const Hello = <p>你好！</p>;
 ```
 
 把上面的代码放到 `ReactDOM.render()` 上面。然后，把 `ReactDOM.render(<p>你好！</p>, document.getElementById('root'));` 改成：
 
-```js
+```txt
 ReactDOM.render(Hello, document.getElementById('root'));
 ```
 
@@ -59,7 +59,7 @@ ReactDOM.render(Hello, document.getElementById('root'));
 
 2. JSX 中写 javascript 用 `{}` 包起来
 
-```js
+```txt
 let text = 'good';
 const myElement = <h1>I am {text} enough.</h1>
 
@@ -70,7 +70,7 @@ ReactDOM.render(myElement, document.getElementById('root'))
 
 4. JSX 中的 HTML 代码必须只有一个“高层”：
 
-```js
+```txt
 const myelement = (
   <div>
     <p>I am a paragraph.</p>
@@ -81,7 +81,7 @@ const myelement = (
 
 也就是说，上面两个段落，你必须用 `<div>` 包起来。如果不想用 `<div>`，用一个空的 html 元素就好：
 
-```js
+```txt
 const myelement = (
   <>
     <p>I am a paragraph.</p>
@@ -114,7 +114,7 @@ const myelement = (
 
 2. 组件的功能和 JavaScript 的 Function 一样，不过组件返回的结果是 HTML:
 
-```js
+```txt
 function Book() {
 	return <h1>我是一本书。</h1>
 };
@@ -126,7 +126,7 @@ function Book() {
 
 5. 如何使用组件 `<组件名 />`：
 
-```js
+```txt
 ReactDOM.render(<Book />, document.getElementById('root'));
 ```
 
@@ -138,7 +138,7 @@ ReactDOM.render(<Book />, document.getElementById('root'));
 
 props 是 properties 的缩写。它有点像是 [HTML 中的属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Attributes) (attributes)，比如 `id` 和 `class`。
 
-```js
+```txt
 function Book(props) {
 	return <h1>我是一本{props.adj}书。</h1>
 };
@@ -152,7 +152,7 @@ ReactDOM.render(<Book adj="极好的" />, document.getElementById('root'));
 
 7. 组件中使用别的组件
 
-```js
+```txt
 function Book() {
 	return <h1>我是一本书。</h1>
 };
@@ -175,7 +175,7 @@ React 的核心思想是让代码可以重复使用。刚才我们定义了 Book
 
 如果 Book 组件你会在两个或者两个以上 js 文件中用到，你可以把它单独弄成一个 js 文件。新建一个 js 文件，记得命名时首字母要大写，比如：`Book.js`，把以下代码放进去：
 
-```js
+```txt
 function Book() {
 	return <h1>我是一本书。</h1>
 };
@@ -187,7 +187,7 @@ export default Book;
 
 然后把 `Book.js` 放到 `src` 文件夹，以后用到 Book 组件就这样用它：
 
-```js
+```txt
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Book from './Book.js';
@@ -199,7 +199,7 @@ ReactDOM.render(<Book />, document.getElementById('root'));
 
 props 的基本用法上面讲过了，这里不重复。这里主要讲一下，props 也可以在另一个组件中使用，这和它在 `ReactDOM.render()` 中的基础用法是一样：
 
-```js
+```txt
 function Book(props) {
 	return <h1>我是一本{props.adj}书。</h1>
 };
@@ -245,7 +245,7 @@ ReactDOM.render(<Question />, document.getElementById('root')) -->
 
 但是在 React 中我们这样写：
 
-```js
+```txt
 <button onClick={hitme}>你打我呀</button>
 ```
 
@@ -258,7 +258,7 @@ ReactDOM.render(<Question />, document.getElementById('root')) -->
 
 把这个事件和事件中用到的函数都放到一个组件中：
 
-```js
+```txt
 function TryHitme() {
 	const hitme = () => {
 		alert("你打不着");
@@ -274,7 +274,7 @@ ReactDOM.render(<TryHitme />, document.getElementById('root'));
 
 值得讲一下的是上面的那个[箭头函数 (Arrow Function)](https://www.w3schools.com/react/react_es6_arrow.asp)，这是 ES6 之后才有的。上面那个箭头函数等同于：
 
-```js
+```txt
 const hitme = function() {
 	return alert('你打不着')
 }
@@ -282,7 +282,7 @@ const hitme = function() {
 
 `return` 后面的内容只能[在同一行写](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return#automatic_semicolon_insertion)，如果内容过多，你可以把内容放在括号 () 里：
 
-```js
+```txt
 const hitme = function() {
 	return (
 		alert('你打不着啊打不着，打不着啊打不着，你打不着啊打不着，打不着啊打不着，你打不着啊打不着，打不着啊打不着，你打不着啊打不着，打不着啊打不着，你看你就是打不着')
@@ -298,7 +298,7 @@ const hitme = function() {
 
 ### If statement
 
-```js
+```txt
 function Happy() {
 	return <h2>今儿呀嘛真高兴啊</h2>
 }
@@ -323,7 +323,7 @@ ReactDOM.render(<MyMood isHappy={false} />, document.getElementById('root'))
 你可以把 `<MyMood isHappy={false} />` 改成 `<MyMood isHappy={true} />` 看结果有啥变化。
 
 上面那个 if statement 可以[简化为](https://www.w3schools.com/react/react_es6_ternary.asp)：
-```js
+```txt
 function Mood(props) {
 	const HappyOrNot = props.isHappy;
 	return (
@@ -334,7 +334,7 @@ function Mood(props) {
 
 ### && 
 
-```js
+```txt
 function Happy() {
 	return <h2>今儿呀嘛真高兴啊</h2>
 }
@@ -371,7 +371,7 @@ ReactDOM.render(<MyMood isHappy={false}/>,
 
 一个简单的例子：
 
-```js
+```txt
 function Lessons(props) {
 	return <li>我学了 {props.subject}。</li>
 }
@@ -397,7 +397,7 @@ ReactDOM.render(<WhatILearned/>, document.getElementById('root'))
 
 为了让名单便于管理，比如，便于删除和更新，我们可以给每一个名单中的项目加上一个索引，这里用 `id`:
 
-```js
+```txt
 function Lessons(props) {
 	return <li>我学了 {props.name}。</li>
 }
@@ -425,7 +425,7 @@ ReactDOM.render(<WhatILearned/>, document.getElementById('root'))
 
 ### 状态钩子：useState()
 
-```js
+```txt
 import { useState } from "react";
 import ReactDOM from "react-dom";
 
@@ -456,7 +456,7 @@ ReactDOM.render(<ClickOrNot />, document.getElementById('root'));
 
 我们来看 `useState` 怎么用。
 
-```js
+```txt
 function ClickOrNot() {
 	const [click, setClick] = useState("anything")
 }
@@ -480,7 +480,7 @@ function ClickOrNot() {
 
 参考：
 
-```js
+```txt
 import { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -508,7 +508,7 @@ ReactDOM.render(<ClickPlus />, document.getElementById('root'));
 要实现这样的效果，我们要用到副作用钩子 (useEffect)。我们还需要用到一个 JavaScript 函数：[`setTimeout`](https://www.w3schools.com/jsref/met_win_settimeout.asp)。
 
 
-```js
+```txt
 import { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -531,7 +531,7 @@ ReactDOM.render(<Timer />, document.getElementById('root'));
 
 首先，setTimeout() 函数比较基本的句法是 `setTimeout(function, milliseconds)`。也就是，你规定的 milliseconds 过去后，setTimeout 函数会运行你写的 function。所以
 
-```js
+```txt
 setTimeout(() => {
 	setCount((count) => count + 1)
 }, 1000)
@@ -539,7 +539,7 @@ setTimeout(() => {
 
 这段代码表达的意思是，当 1000 毫秒，也就是 1 秒过去后，运行 `() => {setCount((count) => count + 1)}` 这个函数。因为这个函数里还包含着另外一个函数，所以我们用 `{}` 把它包起来。这个里面的函数是：
 
-```js
+```txt
 setCount((count) => count + 1) 
 // (count) 直接省略为 count 也是可以的，因为只有一个参数，即 count
 ```
@@ -562,7 +562,7 @@ setCount((count) => count + 1)
 
 为了充分理解这句话，我举一个例子。这个例子取自 Ben Ilegbodu 的博客文章 [*Object & array dependencies in the React useEffect Hook*](https://www.benmvp.com/blog/object-array-dependencies-react-useEffect-hook/)。
 
-```js
+```txt
 import { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -601,7 +601,7 @@ https://www.pluralsight.com/guides/fetching-data-updating-state-hooks
 
 https://hyf.js.org/react-naive-book/lesson10
 
-```js
+```txt
 // 这组我不懂的是，什么时候用 `componentDidMount` 或者 `componentDidUpdate`?
 
 import React, { Component } from 'react'
@@ -634,7 +634,7 @@ ReactDOM.render(<LikeButton/>, document.getElementById('root'))
 
 用状态钩子：
 
-```js
+```txt
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
@@ -657,7 +657,7 @@ ReactDOM.render(<LikeButton/>, document.getElementById('root'))
 
 https://hyf.js.org/react-naive-book/lesson13
 
-```js
+```txt
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -691,7 +691,7 @@ ReactDOM.render(<Index/>, document.getElementById("root"))
 
 用 `map` 函数：
 
-```js
+```txt
 import React from 'react'
 import ReactDOM from 'react-dom'
 
