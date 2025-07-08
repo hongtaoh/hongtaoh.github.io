@@ -7,9 +7,9 @@
 
 ## 我的联系方式
 
-邮箱：hongtaoh@cs.wisc.edu
+微信：silaupek
 
-<!-- 微信：silaupek -->
+邮箱：hongtaoh@cs.wisc.edu
 
 <!-- ## 我的经历
 
