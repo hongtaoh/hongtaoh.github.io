@@ -25,26 +25,36 @@ He earned his Master's degree in Media Arts and Sciences from [the Media School 
 
 (underline authors contributed equally)
 
-- Addressing Whiteness in communication scholar composition and collaboration across seven decades of ICA journals (1951–2022)\
-    <u>Haley R Hatfield</u>, <u>Hongtao Hao</u>, Matthew Klein, Jing Zhang, Yijie Fu, Jaemin Kim, Jongmin Lee, Sun Joo Ahn\
-    *Journal of Communication* (2025)
-- Investigating interaction modes and user agency in human-llm collaboration for domain-specific data analysis\
-    Jiajing Guo, Vikram Mohanty, Jorge H Piazentin Ono, Hongtao Hao, Liang Gou, Liu Ren\
-    *Extended Abstracts of the CHI Conference on Human Factors in Computing Systems* (2024)
-
-- Can LLMS infer domain knowledge from code exemplars? A preliminary study\
-    Jiajing Guo, Vikram Mohanty, Hongtao Hao, Liang Gou, Liu Ren\
-    *Companion Proceedings of the 29th International Conference on Intelligent User Interfaces* (2024)
-
-- Selfie-editing among young Chinese women may have little to do with self-objectification\
-    Hongtao Hao\
-    *Current Psychology* (2024)
+- Stage-Aware Event-Based Modeling (SA-EBM) for Disease Progression\
+    Hongtao Hao, Vivek Prabhakaran, Veena A Nair, Nagesh Adluru, Joseph L. Austerweil, for the Alzheimer’s Disease Neuroimaging Initiative\
+    *Machine Learning for Healthcare* (2025)\
+    [Demo](https://saebm.hongtaoh.com/) | [PDF](https://saebm.hongtaoh.com/static/saebm.pdf) | [Package](https://pypi.org/project/pysaebm/) | [Code](https://github.com/hongtaoh/saebm)
 
 - Thirty-Two Years of IEEE VIS: Authors, Fields of Study and Citations\
     Hongtao Hao, Yumian Cui, Zhengxiang Wang, Yea-Seul Kim\
-    *IEEE Transactions on Visualization and Computer Graphics* (2022)
+    *IEEE Transactions on Visualization and Computer Graphics* (2022)\
+    [PDF](https://pages.cs.wisc.edu/~yeaseulkim/assets/papers/2022_31_vis.pdf) | [Demo](https://32vis.hongtaoh.com/) | [Code](https://github.com/hongtaoh/32vis)
 
 
+- Investigating interaction modes and user agency in human-llm collaboration for domain-specific data analysis\
+    Jiajing Guo, Vikram Mohanty, Jorge H Piazentin Ono, Hongtao Hao, Liang Gou, Liu Ren\
+    *Extended Abstracts of the CHI Conference on Human Factors in Computing Systems* (2024)\
+    [DOI](https://dl.acm.org/doi/full/10.1145/3613905.3651042)
+
+- Can LLMS infer domain knowledge from code exemplars? A preliminary study\
+    Jiajing Guo, Vikram Mohanty, Hongtao Hao, Liang Gou, Liu Ren\
+    *Companion Proceedings of the 29th International Conference on Intelligent User Interfaces* (2024)\
+    [DOI](https://dl.acm.org/doi/abs/10.1145/3640544.3645228)
+
+- Addressing Whiteness in communication scholar composition and collaboration across seven decades of ICA journals (1951–2022)\
+    <u>Haley R Hatfield</u>, <u>Hongtao Hao</u>, Matthew Klein, Jing Zhang, Yijie Fu, Jaemin Kim, Jongmin Lee, Sun Joo Ahn\
+    *Journal of Communication* (2025)\
+    [DOI](https://academic.oup.com/joc/article/74/6/451/7687236) | [Code](https://github.com/hongtaoh/ICA_Journals)
+
+- Selfie-editing among young Chinese women may have little to do with self-objectification\
+    Hongtao Hao\
+    *Current Psychology* (2024)\
+    [DOI](https://link.springer.com/article/10.1007/s12144-023-04616-y)
 
 
 <!-- {{<figure src="/media/me_cali_2023_summer.png" caption="Me in Seven Miles, CA in 2023 Summer (Credit goes to Zhan)" width="340">}}  -->
