@@ -7,6 +7,17 @@ draft: false
 toc: true
 tags: 经验
 ---
+
+{{< block class="tip" >}}
+
+相关博客：
+
+- [美国威斯康星州驾照笔试介绍、备考、与考试流程](/cn/2021/09/12/wi-permit/)
+- [威斯康星麦迪逊驾照路考指南](/cn/2024/09/03/road-test-wi/)
+
+{{< end >}}
+
+
 你可以看这篇帖子的 [PDF 版](/files/cnblog/wi-driving-knowledge.pdf) 以及它的[源代码](https://github.com/hongtaoh/hongtaoh.github.io/blob/sources/static/files/cnblog/wi-driving-knowledge.Rmd)。
 
 以下考点主要出自 [driving-tests.org](https://lacrosselibrary.driving-tests.org/wisconsin/) 以及 [*Wisconsin Motorists’ Handbook (August 2021)*](https://wisconsindot.gov/Documents/dmv/shared/bds126-motorists-handbook.pdf)。

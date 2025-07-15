@@ -7,6 +7,15 @@ draft: false
 toc: false
 tags: 经验
 ---
+{{< block class="tip" >}}
+
+相关博客：
+
+- [美国威斯康星州驾照笔试介绍、备考、与考试流程](/cn/2021/09/12/wi-permit/)
+- [美国威斯康星州驾照笔试考点总结](/cn/2021/09/11/driving-knowledge-wi/)
+
+{{< end >}}
+
 麦迪逊路考主要考察转向 (Turn)、交叉路口处理 (Intersections)、变道 (Lane change)、Y turn、路边停车 (roadside parking)。路边停车时，注意是上坡还是下坡，或者平路，以此来选择停车后方向盘是否需要往两侧打死。路边停车时，撞到路沿 (curb) 一般会直接挂掉。
 
 过完笔试之后，就可以立马预约路考。可以去 dmv、电话、[网络预约](https://wisconsindot.gov/Pages/online-srvcs/sch-road-test/schedule.aspx)。
