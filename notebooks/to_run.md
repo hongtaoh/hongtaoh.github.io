@@ -67,3 +67,5 @@ python hupyter.py notebooks/2025-02-03-igmm.ipynb cn/blog
 python hupyter.py notebooks/2025-03-16-bert.ipynb cn/blog
 
 python hupyter.py notebooks/2025-04-16-kde.ipynb cn/blog
+
+python hupyter.py notebooks/2025-07-23-llm2.ipynb cn/blog

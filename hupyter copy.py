@@ -14,6 +14,7 @@ Special cases:
 - empty 
 - latex, between $$ and $$
 """
+
 def fix_indentation(text):
     """Process text to handle indentation and wrap in Hugo shortcode blocks."""
     lines = text.split('\n')
@@ -25,8 +26,8 @@ def fix_indentation(text):
     indented_block = []
     iframe_block = []
     
-    for i, line in enumerate(lines): # Keeping 'i' for potential future debug prints
-        # Handle math mode (between $$ and $$)
+    for line in lines:
+        # Handle math mode
         if '$$' in line:
             # If this line both starts and ends math mode
             if line.count('$$') == 2:
@@ -41,7 +42,7 @@ def fix_indentation(text):
             result.append(line)
             continue
             
-        # Handle iframe blocks
+        # Handle iframe
         if '<iframe' in line:
             iframe_block = [line]
             continue
@@ -52,7 +53,7 @@ def fix_indentation(text):
                 iframe_block = []
             continue
             
-        # Handle LaTeX align environment (between \begin{align} and \end{align})
+        # Handle LaTeX align environment
         if '\\begin{align' in line:
             in_latex = True
             result.append(line)
@@ -66,7 +67,7 @@ def fix_indentation(text):
             result.append(line)
             continue
             
-        # Handle HTML table or div blocks (pass through untouched)
+        # Rest of the processing
         if '<table' in line or '<div' in line:
             in_table = True
         elif '</table>' in line or '</div>' in line:
@@ -74,81 +75,47 @@ def fix_indentation(text):
             result.append(line)
             continue
             
-        # Handle code blocks (```)
         if line.strip().startswith('```'):
-            # If we were in an indented block before this code block, close it
             if indented_block:
-                if any(l.strip() for l in indented_block): # Check if block has content
+                if any(l.strip() for l in indented_block):
                     result.append('{{< indentedblock >}}')
-                    # Clean and join the lines for the indented block
-                    cleaned_block_lines = [l.strip() for l in indented_block]
-                    # Remove leading/trailing blank lines from the block
-                    while cleaned_block_lines and not cleaned_block_lines[0]:
-                        cleaned_block_lines.pop(0)
-                    while cleaned_block_lines and not cleaned_block_lines[-1]:
-                        cleaned_block_lines.pop()
-                    result.append('\n'.join(cleaned_block_lines))
+                    result.extend(indented_block)
                     result.append('{{< /indentedblock >}}')
-                indented_block = [] # Reset the indented block buffer
-            in_code_block = not in_code_block # Toggle code block state
-            result.append(line) # Add the ``` line
+                indented_block = []
+            in_code_block = not in_code_block
+            result.append(line)
             continue
         
-        # If currently inside a code block or table, pass lines through untouched
         if in_code_block or in_table:
             result.append(line)
             continue
             
-        # Handle image links (don't wrap in indentedblock, process immediately)
         if line.strip().startswith('!['):
-            if indented_block: # If there was a preceding indented block, close it
+            if indented_block:
                 if any(l.strip() for l in indented_block):
                     result.append('{{< indentedblock >}}')
-                    cleaned_block_lines = [l.strip() for l in indented_block]
-                    while cleaned_block_lines and not cleaned_block_lines[0]:
-                        cleaned_block_lines.pop(0)
-                    while cleaned_block_lines and not cleaned_block_lines[-1]:
-                        cleaned_block_lines.pop()
-                    result.append('\n'.join(cleaned_block_lines))
+                    result.extend(indented_block)
                     result.append('{{< /indentedblock >}}')
                 indented_block = []
-            result.append(line) # Add the image line
+            result.append(line)
             continue
             
-        # Determine if the current line is indented or part of an ongoing indented block
-        is_indented = line != line.lstrip() # True if line has leading whitespace
-        has_content = bool(line.strip()) # True if line has non-whitespace characters
+        is_indented = line != line.lstrip()
+        has_content = bool(line.strip())
         
         if is_indented or (indented_block and not has_content):
-            # If line is indented, or if it's a blank line following an indented block,
-            # add it to the indented_block buffer.
             indented_block.append(line)
         else:
-            # If line is not indented, and it's not a continuation of an indented block,
-            # then the current indented block (if any) has ended.
             if indented_block and any(l.strip() for l in indented_block):
                 result.append('{{< indentedblock >}}')
-                # Clean and join the lines for the indented block
-                cleaned_block_lines = [l.strip() for l in indented_block]
-                # Remove leading/trailing blank lines from the block
-                while cleaned_block_lines and not cleaned_block_lines[0]:
-                    cleaned_block_lines.pop(0)
-                while cleaned_block_lines and not cleaned_block_lines[-1]:
-                    cleaned_block_lines.pop()
-                result.append('\n'.join(cleaned_block_lines))
+                result.extend(indented_block)
                 result.append('{{< /indentedblock >}}')
-            indented_block = [] # Reset the indented block buffer
-            result.append(line.lstrip()) # Add the current (non-indented) line, stripped of its own leading whitespace
-
-    # After the loop, handle any remaining content in indented_block
+            indented_block = []
+            result.append(line.lstrip())
+    
     if indented_block and any(l.strip() for l in indented_block):
         result.append('{{< indentedblock >}}')
-        cleaned_block_lines = [l.strip() for l in indented_block]
-        while cleaned_block_lines and not cleaned_block_lines[0]:
-            cleaned_block_lines.pop(0)
-        while cleaned_block_lines and not cleaned_block_lines[-1]:
-            cleaned_block_lines.pop()
-        result.append('\n'.join(cleaned_block_lines))
+        result.extend(indented_block)
         result.append('{{< /indentedblock >}}')
     
     return '\n'.join(result)
