@@ -7,7 +7,7 @@ categories: []
 tags: 经历
 draft: false
 ---
-{{<figure src="/media/champion.JPG" title="获奖时刻">}}
+<!-- {{<figure src="/media/champion.JPG" title="获奖时刻">}} -->
 
 ## 激动的一刻
 说备赛经验之前，容我先分享一下至今难忘的一段经历：

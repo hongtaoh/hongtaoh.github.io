@@ -68,7 +68,7 @@ Luis Schuepbach 是当年杂志的负责人 (Magazine Project Manager)，他 201
 
 然后拿了我的胸章 (badge)，见了其他杂志团队成员。记者一共九位，两个英国男生、两个德国那女生、一个意大利女生、一个印度男生、一个加拿大女生、一个荷兰女生，然后是我。摄影师两位，一个在英国留学的德国男生、一个在德国留学的巴西美女。正如 Andrew Curry 和 Luis Schuepbach 在 [杂志](https://symposium.org/wp-content/uploads/2021/12/Magazine-49th-St.-Gallen-Symposium.pdf) 首页中所说，我们来自四个大洲、八个国家。
 
-{{<figure src="/media/cnblog/sgs/mgz/badge.JPG" caption="我的胸章">}}
+<!-- {{<figure src="/media/cnblog/sgs/mgz/badge.JPG" caption="我的胸章">}} -->
 
 {{<figure src="/media/cnblog/sgs/mgz/sg-u-snow.JPG" caption="站在高处俯瞰圣加仑大学校园内的雪">}}
 

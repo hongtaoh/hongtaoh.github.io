@@ -3,7 +3,7 @@ title: "回乡一月记"
 date: 2023-02-19T21:13:03-06:00
 author: "郝鸿涛"
 slug: going-home
-draft: false
+draft: true
 toc: false
 tags: 经历
 ---
