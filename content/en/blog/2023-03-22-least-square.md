@@ -197,7 +197,7 @@ Plots.scatter(x, y,
     ylabel="y"
 )
 
-savefig("/en/blog/2023-03-22-least-square_files/least-squares-01.png")
+savefig("juliaplots/least-squares-01.png")
 ```
 
 ![](/en/blog/2023-03-22-least-square_files/least-squares-01.png)
@@ -229,73 +229,70 @@ optimize!(m)
 ```
 
 {{< indentedblock >}}
-    Set parameter Username
-    Academic license - for non-commercial use only - expires 2024-02-21
-    Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (mac64[x86])
-    
-    CPU model: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz
-    Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
-    
-    Optimize a model with 0 rows, 5 columns and 0 nonzeros
-    Model fingerprint: 0xc477cc36
-    Model has 15 quadratic objective terms
-    Coefficient statistics:
-      Matrix range     [0e+00, 0e+00]
-      Objective range  [1e+02, 2e+06]
-      QObjective range [3e+01, 2e+10]
-      Bounds range     [0e+00, 0e+00]
-      RHS range        [0e+00, 0e+00]
-    Warning: Model contains large quadratic objective coefficients
-             Consider reformulating model or setting NumericFocus parameter
-             to avoid numerical issues.
-    Presolve time: 0.00s
-    Presolved: 0 rows, 5 columns, 0 nonzeros
-    Presolved model has 15 quadratic objective terms
-    Ordering time: 0.00s
-    
-    Barrier statistics:
-     Free vars  : 9
-     AA' NZ     : 6.000e+00
-     Factor NZ  : 1.000e+01
-     Factor Ops : 3.000e+01 (less than 1 second per iteration)
-     Threads    : 1
-    
-                      Objective                Residual
-    Iter       Primal          Dual         Primal    Dual     Compl     Time
-       0   3.35330000e+02  3.35330000e+02  0.00e+00 2.34e+06  0.00e+00     0s
-       1   3.33379918e+02  3.35327161e+02  2.23e-08 2.33e+06  0.00e+00     0s
-       2   3.33281966e+02  3.35327055e+02  4.91e-08 2.33e+06  0.00e+00     0s
-       3   3.33104809e+02  3.35326933e+02  1.08e-07 2.33e+06  0.00e+00     0s
-       4   3.32715344e+02  3.35326658e+02  2.37e-07 2.33e+06  0.00e+00     0s
-       5   3.20366412e+02  3.35178088e+02  5.17e-07 2.29e+06  0.00e+00     0s
-       6   3.18195814e+02  3.35161569e+02  1.14e-06 2.29e+06  0.00e+00     0s
-       7   3.13444319e+02  3.35122582e+02  2.50e-06 2.28e+06  0.00e+00     0s
-       8   2.81119294e+02  3.33872605e+02  5.38e-06 2.18e+06  0.00e+00     0s
-       9   2.60552748e+02  3.33436335e+02  1.18e-05 2.16e+06  0.00e+00     0s
-      10   2.67193397e+02  3.30286001e+02  2.97e-06 2.05e+06  0.00e+00     0s
-      11   2.65244952e+02  3.28704816e+02  6.46e-06 2.00e+06  0.00e+00     0s
-      12   2.77148108e+02  3.27643838e+02  1.41e-05 1.98e+06  0.00e+00     0s
-      13   2.48136085e+02  3.09760405e+02  2.89e-05 1.68e+06  0.00e+00     0s
-      14   9.38163318e+01  2.76831470e+02  1.16e-05 1.34e+06  0.00e+00     0s
-      15   1.10524099e+02  2.61479626e+02  3.38e-06 1.21e+06  0.00e+00     0s
-      16   1.03515571e+02  2.45285834e+02  7.12e-06 1.10e+06  0.00e+00     0s
-      17   1.15518922e+02  2.36704952e+02  1.53e-05 1.04e+06  0.00e+00     0s
-      18   4.94511564e+01  2.11255549e+02  5.38e-06 8.79e+05  0.00e+00     0s
-      19   5.54851811e+01  1.91957180e+02  1.68e-06 7.69e+05  0.00e+00     0s
-      20   5.84647149e+01  1.86886513e+02  3.99e-06 7.42e+05  0.00e+00     0s
-      21   6.15863372e+01  1.70310423e+02  8.34e-06 6.55e+05  0.00e+00     0s
-      22   7.64449887e+01  1.52720041e+02  1.73e-05 5.67e+05  0.00e+00     0s
-      23   1.21617080e+01  1.71645472e+01  2.14e-06 5.67e-01  0.00e+00     0s
-      24   1.71642681e+01  1.71643923e+01  5.68e-11 5.67e-07  0.00e+00     0s
-    
-    Barrier solved model in 24 iterations and 0.00 seconds (0.00 work units)
-    Optimal objective 1.71642681e+01
-    
-    
-    User-callback calls 88, time in user-callback 0.00 sec
+Set parameter Username
+Academic license - for non-commercial use only - expires 2024-02-21
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (mac64[x86])
+
+CPU model: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz
+Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
+
+Optimize a model with 0 rows, 5 columns and 0 nonzeros
+Model fingerprint: 0xc477cc36
+Model has 15 quadratic objective terms
+Coefficient statistics:
+Matrix range     [0e+00, 0e+00]
+Objective range  [1e+02, 2e+06]
+QObjective range [3e+01, 2e+10]
+Bounds range     [0e+00, 0e+00]
+RHS range        [0e+00, 0e+00]
+Warning: Model contains large quadratic objective coefficients
+Consider reformulating model or setting NumericFocus parameter
+to avoid numerical issues.
+Presolve time: 0.00s
+Presolved: 0 rows, 5 columns, 0 nonzeros
+Presolved model has 15 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+Free vars  : 9
+AA' NZ     : 6.000e+00
+Factor NZ  : 1.000e+01
+Factor Ops : 3.000e+01 (less than 1 second per iteration)
+Threads    : 1
+
+Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+0   3.35330000e+02  3.35330000e+02  0.00e+00 2.34e+06  0.00e+00     0s
+1   3.33379918e+02  3.35327161e+02  2.23e-08 2.33e+06  0.00e+00     0s
+2   3.33281966e+02  3.35327055e+02  4.91e-08 2.33e+06  0.00e+00     0s
+3   3.33104809e+02  3.35326933e+02  1.08e-07 2.33e+06  0.00e+00     0s
+4   3.32715344e+02  3.35326658e+02  2.37e-07 2.33e+06  0.00e+00     0s
+5   3.20366412e+02  3.35178088e+02  5.17e-07 2.29e+06  0.00e+00     0s
+6   3.18195814e+02  3.35161569e+02  1.14e-06 2.29e+06  0.00e+00     0s
+7   3.13444319e+02  3.35122582e+02  2.50e-06 2.28e+06  0.00e+00     0s
+8   2.81119294e+02  3.33872605e+02  5.38e-06 2.18e+06  0.00e+00     0s
+9   2.60552748e+02  3.33436335e+02  1.18e-05 2.16e+06  0.00e+00     0s
+10   2.67193397e+02  3.30286001e+02  2.97e-06 2.05e+06  0.00e+00     0s
+11   2.65244952e+02  3.28704816e+02  6.46e-06 2.00e+06  0.00e+00     0s
+12   2.77148108e+02  3.27643838e+02  1.41e-05 1.98e+06  0.00e+00     0s
+13   2.48136085e+02  3.09760405e+02  2.89e-05 1.68e+06  0.00e+00     0s
+14   9.38163318e+01  2.76831470e+02  1.16e-05 1.34e+06  0.00e+00     0s
+15   1.10524099e+02  2.61479626e+02  3.38e-06 1.21e+06  0.00e+00     0s
+16   1.03515571e+02  2.45285834e+02  7.12e-06 1.10e+06  0.00e+00     0s
+17   1.15518922e+02  2.36704952e+02  1.53e-05 1.04e+06  0.00e+00     0s
+18   4.94511564e+01  2.11255549e+02  5.38e-06 8.79e+05  0.00e+00     0s
+19   5.54851811e+01  1.91957180e+02  1.68e-06 7.69e+05  0.00e+00     0s
+20   5.84647149e+01  1.86886513e+02  3.99e-06 7.42e+05  0.00e+00     0s
+21   6.15863372e+01  1.70310423e+02  8.34e-06 6.55e+05  0.00e+00     0s
+22   7.64449887e+01  1.52720041e+02  1.73e-05 5.67e+05  0.00e+00     0s
+23   1.21617080e+01  1.71645472e+01  2.14e-06 5.67e-01  0.00e+00     0s
+24   1.71642681e+01  1.71643923e+01  5.68e-11 5.67e-07  0.00e+00     0s
+
+Barrier solved model in 24 iterations and 0.00 seconds (0.00 work units)
+Optimal objective 1.71642681e+01
 
 
-
+User-callback calls 88, time in user-callback 0.00 sec
 {{< /indentedblock >}}
 ```julia
 u = value.(u)
@@ -305,15 +302,12 @@ u = value.(u)
 
 
 {{< indentedblock >}}
-    5-element Vector{Float64}:
-      0.002320865140005629
-     -0.08461679037317738
-      0.969732004634473
-     -3.3515882584235666
-      4.320673076823761
-
-
-
+5-element Vector{Float64}:
+0.002320865140005629
+-0.08461679037317738
+0.969732004634473
+-3.3515882584235666
+4.320673076823761
 {{< /indentedblock >}}
 ### A simpler way
 
@@ -328,16 +322,12 @@ u = A\y
 
 
 {{< indentedblock >}}
-    5-element Vector{Float64}:
-      0.002320865086925458
-     -0.08461679037336926
-      0.9697320046439619
-     -3.3515882584477747
-      4.3206730769230814
-
-
-
-
+5-element Vector{Float64}:
+0.002320865086925458
+-0.08461679037336926
+0.9697320046439619
+-3.3515882584477747
+4.3206730769230814
 {{< /indentedblock >}}
 ```julia
 Plots.scatter(x, y,
@@ -357,7 +347,7 @@ Plots.plot!(xs, f,
     label = "fourth-degree polynomial fit line"
 )
 
-savefig("/en/blog/2023-03-22-least-square_files/least-squares-02.png")
+savefig("juliaplots/least-squares-02.png")
 ```
 
 ![](/en/blog/2023-03-22-least-square_files/least-squares-02.png)
@@ -392,7 +382,7 @@ Plots.plot!(xs, ys,
     label = "fourth-degree polynomial fit line"
 )
 
-savefig("/en/blog/2023-03-22-least-square_files/least-squares-03.png")
+savefig("juliaplots/least-squares-03.png")
 ```
 
 ![](/en/blog/2023-03-22-least-square_files/least-squares-03.png)

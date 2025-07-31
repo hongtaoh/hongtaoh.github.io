@@ -70,26 +70,23 @@ println("Solver terminated with status ", termination_status(m))
 ```
 
 {{< indentedblock >}}
-    Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
-    Copyright (c) 2022 ERGO-Code under MIT licence terms
-    Presolving model
-    4 rows, 12 cols, 15 nonzeros
-    4 rows, 12 cols, 15 nonzeros
-    Presolve : Reductions: rows 4(-1); columns 12(-1); elements 15(-2)
-    Solving the presolved LP
-    Using EKK dual simplex solver - serial
-      Iteration        Objective     Infeasibilities num(sum)
-              0     2.0000000000e+02 Pr: 4(185) 0s
-              5     7.6400000000e+04 Pr: 0(0) 0s
-    Solving the original LP from the solution after postsolve
-    Model   status      : Optimal
-    Simplex   iterations: 5
-    Objective value     :  7.6400000000e+04
-    HiGHS run time      :          0.00
-    Solver terminated with status OPTIMAL
-
-
-
+Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
+Copyright (c) 2022 ERGO-Code under MIT licence terms
+Presolving model
+4 rows, 12 cols, 15 nonzeros
+4 rows, 12 cols, 15 nonzeros
+Presolve : Reductions: rows 4(-1); columns 12(-1); elements 15(-2)
+Solving the presolved LP
+Using EKK dual simplex solver - serial
+Iteration        Objective     Infeasibilities num(sum)
+0     2.0000000000e+02 Pr: 4(185) 0s
+5     7.6400000000e+04 Pr: 0(0) 0s
+Solving the original LP from the solution after postsolve
+Model   status      : Optimal
+Simplex   iterations: 5
+Objective value     :  7.6400000000e+04
+HiGHS run time      :          0.00
+Solver terminated with status OPTIMAL
 {{< /indentedblock >}}
 ```julia
 println("Boats built with regular labor each month: ", Array{Int}(value.(x)))
@@ -99,12 +96,10 @@ println("Minimum cost: \`$", objective_value(m))
 ```
 
 {{< indentedblock >}}
-    Boats built with regular labor each month: [40, 40, 40, 25]
-    Boats built with overtime labor each month: [0, 10, 30, 0]
-    Inventory: [10, 10, 0, 0, 0]
-    Minimum cost: $`76400.0
-
-
+Boats built with regular labor each month: [40, 40, 40, 25]
+Boats built with overtime labor each month: [0, 10, 30, 0]
+Inventory: [10, 10, 0, 0, 0]
+Minimum cost: $`76400.0
 {{< /indentedblock >}}
 In above,
 
@@ -154,16 +149,12 @@ dist = NamedArray([8 15 50; 10 17 20; 30 26 15], (sites, mills), ("Sites", "Mill
 
 
 {{< indentedblock >}}
-    3×3 Named Matrix{Int64}
-    Sites ╲ Mills │ :A  :B  :C
-    ──────────────┼───────────
-    1             │  8  15  50
-    2             │ 10  17  20
-    3             │ 30  26  15
-
-
-
-
+3×3 Named Matrix{Int64}
+Sites ╲ Mills │ :A  :B  :C
+──────────────┼───────────
+1             │  8  15  50
+2             │ 10  17  20
+3             │ 30  26  15
 {{< /indentedblock >}}
 ```julia
 @variable(m, x[sites, mills] >= 0)
@@ -176,25 +167,22 @@ optimize!(m)
 ```
 
 {{< indentedblock >}}
-    Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
-    Copyright (c) 2022 ERGO-Code under MIT licence terms
-    Presolving model
-    6 rows, 9 cols, 18 nonzeros
-    5 rows, 9 cols, 15 nonzeros
-    Presolve : Reductions: rows 5(-1); columns 9(-0); elements 15(-3)
-    Solving the presolved LP
-    Using EKK dual simplex solver - serial
-      Iteration        Objective     Infeasibilities num(sum)
-              0     0.0000000000e+00 Pr: 5(155) 0s
-              5     5.7600000000e+03 Pr: 0(0) 0s
-    Solving the original LP from the solution after postsolve
-    Model   status      : Optimal
-    Simplex   iterations: 5
-    Objective value     :  5.7600000000e+03
-    HiGHS run time      :          0.00
-
-
-
+Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
+Copyright (c) 2022 ERGO-Code under MIT licence terms
+Presolving model
+6 rows, 9 cols, 18 nonzeros
+5 rows, 9 cols, 15 nonzeros
+Presolve : Reductions: rows 5(-1); columns 9(-0); elements 15(-3)
+Solving the presolved LP
+Using EKK dual simplex solver - serial
+Iteration        Objective     Infeasibilities num(sum)
+0     0.0000000000e+00 Pr: 5(155) 0s
+5     5.7600000000e+03 Pr: 0(0) 0s
+Solving the original LP from the solution after postsolve
+Model   status      : Optimal
+Simplex   iterations: 5
+Objective value     :  5.7600000000e+03
+HiGHS run time      :          0.00
 {{< /indentedblock >}}
 ```julia
 NamedArray(Int[value(x[i,j]) for i in sites, j in mills], (sites, mills), ("Sites", "Mills"))
@@ -204,15 +192,12 @@ NamedArray(Int[value(x[i,j]) for i in sites, j in mills], (sites, mills), ("Site
 
 
 {{< indentedblock >}}
-    3×3 Named Matrix{Int64}
-    Sites ╲ Mills │ :A  :B  :C
-    ──────────────┼───────────
-    1             │  0  20   0
-    2             │ 30   0   0
-    3             │  0  15  30
-
-
-
+3×3 Named Matrix{Int64}
+Sites ╲ Mills │ :A  :B  :C
+──────────────┼───────────
+1             │  0  20   0
+2             │ 30   0   0
+3             │  0  15  30
 {{< /indentedblock >}}
 # Swim relay problem (Van Roy and Mason)
 The coach of a swim team needs to assign swimmers to a 200-yard medley relay team to compete in a tournament. The problem is that his best swimmers are good in more than one stroke, so it's not clear which swimmer to assign to which stroke. Here are the best times for each swimmer:
@@ -258,24 +243,21 @@ optimize!(m)
 ```
 
 {{< indentedblock >}}
-    Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
-    Copyright (c) 2022 ERGO-Code under MIT licence terms
-    Presolving model
-    9 rows, 20 cols, 40 nonzeros
-    9 rows, 20 cols, 40 nonzeros
-    Presolve : Reductions: rows 9(-0); columns 20(-0); elements 40(-0) - Not reduced
-    Problem not reduced by presolve: solving the LP
-    Using EKK dual simplex solver - serial
-      Iteration        Objective     Infeasibilities num(sum)
-              0     0.0000000000e+00 Pr: 4(4) 0s
-              8     1.2620000000e+02 Pr: 0(0) 0s
-    Model   status      : Optimal
-    Simplex   iterations: 8
-    Objective value     :  1.2620000000e+02
-    HiGHS run time      :          0.00
-
-
-
+Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
+Copyright (c) 2022 ERGO-Code under MIT licence terms
+Presolving model
+9 rows, 20 cols, 40 nonzeros
+9 rows, 20 cols, 40 nonzeros
+Presolve : Reductions: rows 9(-0); columns 20(-0); elements 40(-0) - Not reduced
+Problem not reduced by presolve: solving the LP
+Using EKK dual simplex solver - serial
+Iteration        Objective     Infeasibilities num(sum)
+0     0.0000000000e+00 Pr: 4(4) 0s
+8     1.2620000000e+02 Pr: 0(0) 0s
+Model   status      : Optimal
+Simplex   iterations: 8
+Objective value     :  1.2620000000e+02
+HiGHS run time      :          0.00
 {{< /indentedblock >}}
 ```julia
 NamedArray([value(x[s,p]) for s in strokes, p in persons], (strokes, persons), ("Stroke", "Person"))
@@ -285,14 +267,11 @@ NamedArray([value(x[s,p]) for s in strokes, p in persons], (strokes, persons), (
 
 
 {{< indentedblock >}}
-    4×5 Named Matrix{Float64}
-    Stroke ╲ Person │  :carl  :chris  :david   :tony    :ken
-    ────────────────┼───────────────────────────────────────
-    :ackstroke      │    0.0     0.0     1.0     0.0     0.0
-    :breaststroke   │    0.0     0.0     0.0     1.0     0.0
-    :butterfly      │    0.0     1.0     0.0    -0.0     0.0
-    :freestyle      │    1.0    -0.0     0.0     0.0     0.0
-
-
-
+4×5 Named Matrix{Float64}
+Stroke ╲ Person │  :carl  :chris  :david   :tony    :ken
+────────────────┼───────────────────────────────────────
+:ackstroke      │    0.0     0.0     1.0     0.0     0.0
+:breaststroke   │    0.0     0.0     0.0     1.0     0.0
+:butterfly      │    0.0     1.0     0.0    -0.0     0.0
+:freestyle      │    1.0    -0.0     0.0     0.0     0.0
 {{< /indentedblock >}}

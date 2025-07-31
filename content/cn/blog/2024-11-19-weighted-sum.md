@@ -27,10 +27,7 @@ final_scores
 
 
 {{< indentedblock >}}
-    132.0
-
-
-
+132.0
 {{< /indentedblock >}}
 这个方法有问题。
 
@@ -54,8 +51,5 @@ final_scores
 
 
 {{< indentedblock >}}
-    88.0
-
-
-
+88.0
 {{< /indentedblock >}}

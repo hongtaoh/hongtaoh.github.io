@@ -211,18 +211,6 @@ if __name__ == '__main__':
             except (IndexError, Exception) as e:
                 print(f"Warning: Could not process image {img_path}: {e}")
 
-    # # handle image links
-    # md_image_links_raw = re.findall(r'!\[(.*?)\]\((.*?)\)', txt)
-    # md_image_links = [b for (a, b) in md_image_links_raw]
-    
-    # for lk in md_image_links:
-    #     if 'https://' in lk:
-    #         continue
-    #     if files_folder_name not in lk:
-    #         image_folder_name = re.findall(r'^.+?(?=\/)', lk)[0]
-    #         txt = re.sub(f'{image_folder_name}/', f'/{arg2}/{files_folder_name}/', txt)
-    #         os.system(f'cp {notebook_folder_name}/{lk} {static_folder}/{files_folder_name}')
-    
     txt = re.sub(r'\!\[png\]\(', f'![png](/{arg2}/', txt)
 
     # Identify and wrap collapsible code blocks

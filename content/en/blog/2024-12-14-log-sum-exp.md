@@ -7,7 +7,6 @@ slug: log-sum-exp
 draft: false
 toc: true
 tags: Math
-translate: false
 ---
 
 ## Motivationn & Definition

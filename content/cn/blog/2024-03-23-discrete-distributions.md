@@ -42,21 +42,18 @@ plt.bar(bernoulli_values, probs, tick_label = ['Failure (0)', 'Success (1)'])
 plt.title("Bernoulli Distribution")
 plt.xlabel("Random Variable X")
 plt.ylabel("Probability Mass Function")
-# plt.savefig("/cn/blog/2024-03-23-discrete-distributions_files/bernoulli_distribution.png")
+# plt.savefig("img/bernoulli_distribution.png")
 ```
 
 
 
 
 {{< indentedblock >}}
-    Text(0, 0.5, 'Probability Mass Function')
-
-
-
-
-    
+Text(0, 0.5, 'Probability Mass Function')
 {{< /indentedblock >}}
 ![png](/cn/blog/2024-03-23-discrete-distributions_files/2024-03-23-discrete-distributions_4_1.png)
+
+
 ## Binomial Distribution 
 
 如果要了解 Binomial Distribution, 我们需要一些排列组合知识。
@@ -139,6 +136,8 @@ plt.show()
 
 
 ![png](/cn/blog/2024-03-23-discrete-distributions_files/2024-03-23-discrete-distributions_6_0.png)
+
+
 以上代码基本上是 ChatGPT 生成的，根据维基百科[这张图](https://en.wikipedia.org/wiki/Binomial_distribution#/media/File:Binomial_distribution_pmf.svg)。
 
 ## Poisson Distribution 泊松分布
@@ -192,6 +191,8 @@ plt.show()
 
 
 ![png](/cn/blog/2024-03-23-discrete-distributions_files/2024-03-23-discrete-distributions_9_0.png)
+
+
 有同学有可能会问，为什么一定是分成 60 份，我分成 10 亿份可以吗？你优秀，当然可以。
 
 我们假设一分钟分成 `$n$` 份，这个问题就变成一个这样的[泊松分布](https://en.wikipedia.org/wiki/Poisson_distribution)：
@@ -246,14 +247,11 @@ plt.title(f"Poisson Distribution of Goals ($\lambda=5$)")
 
 
 {{< indentedblock >}}
-    Text(0.5, 1.0, 'Poisson Distribution of Goals (`$\\lambda=5$`)')
-
-
-
-
-    
+Text(0.5, 1.0, 'Poisson Distribution of Goals (`$\\lambda=5$`)')
 {{< /indentedblock >}}
 ![png](/cn/blog/2024-03-23-discrete-distributions_files/2024-03-23-discrete-distributions_12_1.png)
+
+
 ### 泊松分布的用处
 
 泊松分布有什么用呢？可以用来估计 Binomial distribution 的值，特别是当 `$n$` 特别大且 `$p$` 非常小时。

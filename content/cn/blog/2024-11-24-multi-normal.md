@@ -37,10 +37,7 @@ print("生成数据的相关系数:", np.corrcoef(x, y)[0, 1])
 ```
 
 {{< indentedblock >}}
-    生成数据的相关系数: 0.8032636045203917
-
-
-
+生成数据的相关系数: 0.8032636045203917
 {{< /indentedblock >}}
 ```python
 import matplotlib.pyplot as plt
@@ -55,10 +52,13 @@ plt.show()
 
 
 ![png](/cn/blog/2024-11-24-multi-normal_files/2024-11-24-multi-normal_3_0.png)
+
+
 我们可以把密度用 Z 轴来表示：
 
 
 {{< codeCollapse >}}
+
 from scipy.stats import gaussian_kde 
 
 values = np.vstack([x, y])
@@ -81,6 +81,8 @@ plt.show()
 
 
 ![png](/cn/blog/2024-11-24-multi-normal_files/2024-11-24-multi-normal_5_0.png)
+
+
 既然 X 与 Y 并不独立（相关系数为 0.8），那多元正态分布就可以用来描述联合密度概率，比如 `$P(X = 1 \& Y = 1)$`
 
 
@@ -92,10 +94,7 @@ kde([[1], [1]])
 
 
 {{< indentedblock >}}
-    array([0.14583542])
-
-
-
+array([0.14583542])
 {{< /indentedblock >}}
 上面我们用的是模拟的方法，用了 1 万个随机数据。但更加普遍，也更加正确的做法是直接用多元正态分布的概率密度函数 (PDF):
 
