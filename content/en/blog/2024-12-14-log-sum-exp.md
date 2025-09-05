@@ -13,7 +13,7 @@ tags: Math
 
 In this post, we explain the concept of [Log-Sum-Exp](https://en.wikipedia.org/wiki/LogSumExp).
 
-Suppose we have three extremely small numbers: `$a_1 = e^{-200}, a_2 = e^{-201}, a_3 = e^{-202}$`. We are interested in the sum of these three numbers. 
+Suppose we have three extremely small numbers: `$a_1 = e^{-200}, a_2 = e^{-201}, a_3 = e^{-202}$`. We are interested in the log of their sum. 
 
 There are two issues to solve here:
 

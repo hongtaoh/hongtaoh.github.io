@@ -5,8 +5,8 @@
 
 ## Hongtao Hao 
 
-Fifth-Year PhD Student in Computer Science \
-CS Department, University of Wisconsin-Madison
+PhD candidate \
+Department of Computer Sciences, University of Wisconsin-Madison
 
 **[Resume](/files/hongtao_hao_resume.pdf)**
 
@@ -17,7 +17,7 @@ CS Department, University of Wisconsin-Madison
 
 ## BIO
 
-Hongtao Hao is a fifth-year Ph.D. student in Computer Sciences at the University of Wisconsin-Madison, where he is fortunate to work with [Professor Joseph Austerweil](https://psych.wisc.edu/staff/austerweil-joe/). His research interests encompass machine learning (with applications in healthcare and social sciences), stochastic processes, and Bayesian nonparametrics.
+Hongtao Hao is a PhD candidate in computer science at the University of Wisconsin-Madison, where he is fortunate to work with [Professor Joseph Austerweil](https://psych.wisc.edu/staff/austerweil-joe/). His research interests encompass machine learning (with applications in healthcare and social sciences), stochastic processes, and Bayesian nonparametrics.
 
 He earned his Master's degree in Media Arts and Sciences from [the Media School of Indiana University](https://mediaschool.indiana.edu/index.html) in 2020, advised by [Dr. Nicole Martins](https://mediaschool.indiana.edu/people/profile.html?p=nicomart). Prior to his Ph.D. studies, he volunteered as a research assistant for [Yong-Yeol Ahn](http://yongyeol.com/) from August 2020 to August 2021. He also holds a Master's degree in Journalism from Renmin University of China (Beijing) and an undergraduate degree in English from Hebei Normal University (Shijiazhuang).
 
