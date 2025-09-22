@@ -28,13 +28,12 @@ He earned his Master's degree in Media Arts and Sciences from [the Media School 
 - Stage-Aware Event-Based Modeling (SA-EBM) for Disease Progression\
     Hongtao Hao, Vivek Prabhakaran, Veena A Nair, Nagesh Adluru, Joseph L. Austerweil, for the Alzheimer’s Disease Neuroimaging Initiative\
     *Machine Learning for Healthcare* (2025)\
-    [Demo](https://saebm.hongtaoh.com/) | [PDF](https://saebm.hongtaoh.com/static/saebm.pdf) | [Package](https://pypi.org/project/pysaebm/) | [Code](https://github.com/hongtaoh/saebm)
+    [Demo](https://saebm.hongtaoh.com/) |[PDF](https://saebm.hongtaoh.com/static/saebm.pdf) | [Package](https://pypi.org/project/pysaebm/) | [Code](https://github.com/hongtaoh/saebm)
 
 - Thirty-Two Years of IEEE VIS: Authors, Fields of Study and Citations\
     Hongtao Hao, Yumian Cui, Zhengxiang Wang, Yea-Seul Kim\
     *IEEE Transactions on Visualization and Computer Graphics* (2022)\
     [PDF](https://pages.cs.wisc.edu/~yeaseulkim/assets/papers/2022_31_vis.pdf) | [Demo](https://32vis.hongtaoh.com/) | [Code](https://github.com/hongtaoh/32vis)
-
 
 - Investigating interaction modes and user agency in human-llm collaboration for domain-specific data analysis\
     Jiajing Guo, Vikram Mohanty, Jorge H Piazentin Ono, Hongtao Hao, Liang Gou, Liu Ren\
