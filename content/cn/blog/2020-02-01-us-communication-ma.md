@@ -10,10 +10,10 @@ aliases:
   - /cn/2020/02/01/us-communication-ma-programs/
   - /cn/2020/02/01/us-communication-phd-programs/
 ---
-{{<block class="tip">}}
+<!-- {{<block class="tip">}}
 - 针对申请 2026 Fall 的朋友，我打算建一个微信群。如果你感兴趣，可以添加我的微信 silaupek。
 - 北京时间 2025 年 11 月 8 日晚上 10:00 我会办一场答疑，[Zoom 地址](https://uwmadison.zoom.us/j/98326922955?pwd=UbhM2b5szdDCpSOCacqwru991oWOgj.1)。
-{{<end>}}
+{{<end>}} -->
 
 {{<block class="tip">}}
 如果你对这个名单有建议，请点击目录上方的修改按钮， Fork 此 GitHub 仓库，提出修改建议后[提交合并请求](https://hongtaoh.com/en/2020/10/05/github-pull-request/)即可。
