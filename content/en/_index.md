@@ -1,69 +1,375 @@
 ---
 ---
+<div class="about-container">
 
-<img src="/media/hongtao_up_2024.png" alt="Me in Upper Peninsula of Michigan in 2024 Fall (Credit: Jinhui Wang)" width="260" style="float: right; margin: 0 0 1em 1em;" />
+<!-- Text -->
+<div class="about-text">
 
-## Hongtao Hao 
+# Hongtao Hao
 
-PhD candidate \
-Department of Computer Sciences, University of Wisconsin-Madison
-
-**[Resume](/files/hongtao_hao_resume.pdf)**
-
-**Email**: hongtaoh@cs.wisc.edu\
-**GitHub**: [@hongtaoh](https://github.com/hongtaoh)\
-**[Google Scholar](https://scholar.google.com/citations?user=VO6EfSzAAG0C&hl=en&oi=sra)**
+## PhD Candidate · AI/ML for Healthcare
 
 
-## BIO
+I am a PhD candidate (ABD) in Computer Science at the University of Wisconsin–Madison,
+advised by Professor [Joseph Austerweil](https://alab.psych.wisc.edu/people/).
+My research focuses on AI/ML for healthcare, with emphasis on disease progression modeling using probabilistic methods and unsupervised learning.
 
-Hongtao Hao is a PhD candidate in computer science at the University of Wisconsin-Madison, where he is fortunate to work with [Professor Joseph Austerweil](https://psych.wisc.edu/staff/austerweil-joe/). His research interests encompass machine learning (with applications in healthcare and social sciences), stochastic processes, and Bayesian nonparametrics.
+Beyond research, I have authored 100+ tutorials on coding, math, ML, and statistics
+on my bilingual blog. I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development.
 
-He earned his Master's degree in Media Arts and Sciences from [the Media School of Indiana University](https://mediaschool.indiana.edu/index.html) in 2020, advised by [Dr. Nicole Martins](https://mediaschool.indiana.edu/people/profile.html?p=nicomart). Prior to his Ph.D. studies, he volunteered as a research assistant for [Yong-Yeol Ahn](http://yongyeol.com/) from August 2020 to August 2021. He also holds a Master's degree in Journalism from Renmin University of China (Beijing) and an undergraduate degree in English from Hebei Normal University (Shijiazhuang).
+Currently seeking Machine Learning Engineer (MLE) roles in industry.
 
-## WORKS
+<!-- Contact / Resume -->
+<div class="about-links">
+<a href="/files/hongtao_hao_resume.pdf" class="btn">Resume</a>
+<a href="mailto:hongtaoh@cs.wisc.edu">Email</a>
+<a href="https://github.com/hongtaoh" target="_blank">GitHub</a>
+<a href="https://scholar.google.com/citations?user=VO6EfSzAAG0C&hl=en&oi=sra" target="_blank">Google Scholar</a>
+</div>
+</div>
 
-(underline authors contributed equally)
+<!-- Photo -->
+<div class="about-photo">
+    <img src="/media/hongtao_up_2024.png"
+        alt="Hongtao Hao in Upper Peninsula, 2024"
+        loading="lazy">
+</div>
+</div>
 
-- Stage-Aware Event-Based Modeling (SA-EBM) for Disease Progression\
-    Hongtao Hao, Vivek Prabhakaran, Veena A Nair, Nagesh Adluru, Joseph L. Austerweil, for the Alzheimer’s Disease Neuroimaging Initiative\
-    *Machine Learning for Healthcare* (2025)\
-    [Demo](https://saebm.hongtaoh.com/) |[PDF](https://saebm.hongtaoh.com/static/saebm.pdf) | [Package](https://pypi.org/project/pysaebm/) | [Code](https://github.com/hongtaoh/saebm)
+</br>
 
-- Thirty-Two Years of IEEE VIS: Authors, Fields of Study and Citations\
-    Hongtao Hao, Yumian Cui, Zhengxiang Wang, Yea-Seul Kim\
-    *IEEE Transactions on Visualization and Computer Graphics* (2022)\
-    [PDF](https://pages.cs.wisc.edu/~yeaseulkim/assets/papers/2022_31_vis.pdf) | [Demo](https://32vis.hongtaoh.com/) | [Code](https://github.com/hongtaoh/32vis)
+## Experience
 
-- Investigating interaction modes and user agency in human-llm collaboration for domain-specific data analysis\
-    Jiajing Guo, Vikram Mohanty, Jorge H Piazentin Ono, Hongtao Hao, Liang Gou, Liu Ren\
-    *Extended Abstracts of the CHI Conference on Human Factors in Computing Systems* (2024)\
-    [DOI](https://dl.acm.org/doi/full/10.1145/3613905.3651042)
-
-- Can LLMS infer domain knowledge from code exemplars? A preliminary study\
-    Jiajing Guo, Vikram Mohanty, Hongtao Hao, Liang Gou, Liu Ren\
-    *Companion Proceedings of the 29th International Conference on Intelligent User Interfaces* (2024)\
-    [DOI](https://dl.acm.org/doi/abs/10.1145/3640544.3645228)
-
-- Addressing Whiteness in communication scholar composition and collaboration across seven decades of ICA journals (1951–2022)\
-    <u>Haley R Hatfield</u>, <u>Hongtao Hao</u>, Matthew Klein, Jing Zhang, Yijie Fu, Jaemin Kim, Jongmin Lee, Sun Joo Ahn\
-    *Journal of Communication* (2025)\
-    [DOI](https://academic.oup.com/joc/article/74/6/451/7687236) | [Code](https://github.com/hongtaoh/ICA_Journals)
-
-- Selfie-editing among young Chinese women may have little to do with self-objectification\
-    Hongtao Hao\
-    *Current Psychology* (2024)\
-    [DOI](https://link.springer.com/article/10.1007/s12144-023-04616-y)
+**Research Intern** — Robert Bosch LLC, Sunnyvale, CA (Jun – Aug 2023)  
+- Built an **LLM-powered application** that engineers to conduct data analysis via a generative AI interface.  
+- Results contributed to **two co-authored papers** (CHI EA ’24, IUI ’24 Companion).
 
 
-<!-- {{<figure src="/media/me_cali_2023_summer.png" caption="Me in Seven Miles, CA in 2023 Summer (Credit goes to Zhan)" width="340">}}  -->
 
-<!-- This is Hongtao Hao. I graduated with a Master's degree in Media Arts and Sciences from [the Media School of Indiana University](https://mediaschool.indiana.edu/index.html) in 2020, advised by [Dr. Nicole Martins](https://mediaschool.indiana.edu/people/profile.html?p=nicomart). From August 2020 to August 2021, I volunteered as a research assistant for [YY](http://yongyeol.com/). I earned my first Master's degree in Journalism from Renmin University of China, Beijing. I am now a fifth-year PhD student in Computer Sciences at the University of Wisconsin-Madison, fortunate to work with [Joseph Austerweil](https://psych.wisc.edu/staff/austerweil-joe/). -->
+## Research
 
-<!-- I worked with Professor [Yea-Seul Kim](https://pages.cs.wisc.edu/~yeaseulkim/) in the first year. I am now doing research with [Michael Gleicher](https://gleicher.sites.cs.wisc.edu/). -->
-  
-<!-- [Resume](/files/hongtao_hao_resume.pdf) -->
+Peer-reviewed publications and preprints from my academic work.
 
-<!-- 这是郝鸿涛的个人主页。2016 年从河北师范大学英语翻译专业毕业后，我到中国人民大学读硕士（国际新闻班），随后在美国印第安纳大学媒体学院[读第二个硕士](/cn/2021/06/15/2y/)，于 2020 年 5 月毕业。毕业后的一年帮[安用烈老师](http://yongyeol.com/)做了一些[杂活](https://yyahn.com/covid19-dashboard/)。目前在威斯康星计算机学院读博。最骄傲的一件事是在 2015 年第一届"外研社杯”全国英语阅读大赛中[获奖](/cn/2020/01/06/fltrp-reading-contest/)。最难忘的一次经历是 [2017 年参加瑞士圣加仑论坛](/cn/2020/01/17/2017-st.gallen-memory/)。自律、喜静、极简。 -->
+{{< pubcard
+    img="https://saebm.hongtaoh.com/static/images/tau.svg"
+    link="https://saebm.hongtaoh.com/"
+    title="Stage-Aware Event-Based Modeling (SA-EBM) for Disease Progression"
+    intro="Improved accuracy of disease progression modeling by 40% compared to four SOTA algorithms."
+    authors="Hongtao Hao, Vivek Prabhakaran, Veena A Nair, Nagesh Adluru, Joseph L. Austerweil, for the Alzheimer’s Disease Neuroimaging Initiative"
+    venue="Machine Learning for Healthcare, 2025"
+    pdf="https://saebm.hongtaoh.com/static/saebm.pdf"
+    demo="https://saebm.hongtaoh.com/"
+    code="https://github.com/hongtaoh/saebm"
+    package="https://pypi.org/project/pysaebm/"
+>}}
+
+{{< pubcard
+    img="/media/research/chi_ea.png"
+    link="https://dl.acm.org/doi/full/10.1145/3613905.3651042"
+    title="Investigating Interaction Modes and User Agency in Human-LLM Collaboration for Domain-Specific Data Analysis"
+    intro="Studied interaction paradigms and user agency for effective human-LLM collaboration in domain-specific data analysis."
+    authors="Jiajing Guo, Vikram Mohanty, Jorge H Piazentin Ono, Hongtao Hao, Liang Gou, Liu Ren"
+    venue="CHI Extended Abstracts, 2024"
+>}}
+
+{{< pubcard
+    img="/media/research/iui-2024.png"
+    link="https://dl.acm.org/doi/abs/10.1145/3640544.3645228"
+    title="Can LLMs Infer Domain Knowledge from Code Exemplars? A Preliminary Study"
+    intro="A preliminary study on the ability of LLMs to extract domain-specific knowledge from code exemplars."
+    authors="Jiajing Guo, Vikram Mohanty, Hongtao Hao, Liang Gou, Liu Ren"
+    venue="IUI Companion, 2024"
+>}}
+
+{{< pubcard
+    img="/media/research/joc_02.jpeg"
+    link="https://academic.oup.com/joc/article/74/6/451/7687236"
+    title="Addressing Whiteness in Communication Scholar Composition and Collaboration across Seven Decades of ICA Journals (1951–2022)"
+    intro="A large-scale analysis of author composition and collaboration networks across seven decades of ICA journals."
+    authors="Haley Hatfield, Hongtao Hao* (Equal Contribution), Matthew Klein, Jing Zhang, Yijie Fu, Jaemin Kim, Jongmin Lee, Sun Joo Ahn"
+    venue="Journal of Communication, 2024"
+    code="https://github.com/hongtaoh/ICA_Journals"
+>}}
+
+{{< pubcard
+    img="/media/research/selfie-freq.png"
+    link="https://link.springer.com/article/10.1007/s12144-023-04616-y"
+    title="Selfie-editing among young Chinese women may have little to do with self-objectification"
+    intro="A psychological study analyzing motivations behind selfie-editing behaviors, challenging the link to self-objectification."
+    authors="Hongtao Hao"
+    venue="Current Psychology, 2024"
+    pdf="https://doi.org/10.1007/s12144-023-04616-y"
+    code="https://osf.io/c78z3/"
+    data="https://osf.io/yb7en"
+>}}
+
+{{< pubcard
+    img="/media/research/32vis-author-network.png"
+    link="https://32vis.hongtaoh.com/"
+    title="Thirty-Two Years of IEEE VIS: Authors, Fields of Study and Citations"
+    intro="Analyzed authorship, fields, and citation networks across three decades of IEEE VIS publications."
+    authors="Hongtao Hao, Yumian Cui, Zhengxiang Wang, Yea-Seul Kim"
+    venue="IEEE Transactions on Visualization and Computer Graphics, 2022"
+    pdf="https://arxiv.org/pdf/2208.03772.pdf"
+    code="https://github.com/hongtaoh/32vis"
+    data="https://osf.io/zkvjm/"
+    demo="https://32vis.hongtaoh.com/"
+>}}
+
+</br>
+
+## Selected Projects
+
+Personal and collaborative coding projects beyond academic publications.
+
+<div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1rem;">
+
+{{< projectcard
+    img="/media/projects/hermatch.png"
+    link="https://hermatch-svelte.vercel.app/"
+    title="Chinese Women’s Partner Choice Data Lab (中国女性择偶数据实验室)"
+    intro="An interactive one-page Svelte app that estimates how many men fit user-selected partner criteria."
+    code="https://github.com/hongtaoh/hermatch_svelte"
+    data="https://github.com/hongtaoh/ChineseMenData"
+    tags="Front-End, Data Visualization, Svelte"
+>}}
+
+{{< projectcard
+    img="/media/cnblog/htmovies.png"
+    link="https://htmovies.vercel.app/"
+    title="LLM-Powered Movie Recommendation"
+    intro="A recommender system using retrieval-augmented generation (RAG) and the TMDB dataset."
+    code="https://github.com/hongtaoh/Movie_Recommendations_Easy"
+    tags="LLM, Recommendation, RAG"
+>}}
+
+{{< projectcard
+    img="/media/projects/icaconf.png"
+    link="https://icaconf.vercel.app/?search_term=&filtered_year="
+    title="ICA Conference Paper Browser"
+    intro="Scraped and cleaned a decade of ICA conference papers; built a React.js interface for browsing authors, sessions, and topics."
+    code="https://github.com/hongtaoh/ica-conference-app"
+    data="https://github.com/hongtaoh/ica_conf"
+    tags="Front-End, React, Data Visualization"
+>}}
+
+{{< projectcard
+    img="/media/projects/atus.png"
+    link="https://atus.hongtaoh.com/"
+    title="Deep Learning for American Time Use Survey (ATUS)"
+    intro="Predicted time-use patterns from demographics using TensorFlow.js; deployed as an interactive web app."
+    code="https://github.com/hongtaoh/atus-vis"
+    demo="https://observablehq.com/@hongtaoh/tensorflow-neural-network-new"
+    tags="Deep Learning, Visualization, TensorFlow.js"
+>}}
+
+{{< projectcard
+    img="/media/projects/covid.png"
+    link="https://observablehq.com/@yy/covid-19-fatality-rate"
+    title="Coronavirus Trend Visualizations"
+    intro="Contributed to a dynamic Covid-19 visualization project that became a Top 10 Most Liked Observable notebook in 2020."
+    tags="Data Visualization, Covid-19, Observable"
+>}}
+
+{{< projectcard
+    img="/media/projects/pysaebm.png"
+    link="https://pypi.org/project/pysaebm/"
+    title="pysaebm: Open-Source Python Package"
+    intro="Developed and maintain an open-source package for event-based modeling, making advanced methods accessible to ML practitioners."
+    code="https://github.com/jpcca/pysaebm"
+    tags="Python, ML, Open Source"
+>}}
+
+{{< projectcard
+    img="https://themes.gohugo.io/themes/hugo-ht/screenshot_hu_f6418ef3e63100cd.webp"
+    link="https://themes.gohugo.io/themes/hugo-ht/"
+    title="Hugo-HT"
+    intro="A minimal multilingual Hugo theme; this homepage is built on it."
+    tags="Front-End, Hugo, Theme"
+>}}
+
+{{< projectcard
+    img="/media/projects/ebmbook.png"
+    link="https://ebmbook.vercel.app/"
+    title="Introduction to Event-Based Model (EBM)"
+    intro="A tutorial website that explains step by step how EBMs model disease progression."
+    code="https://github.com/hongtaoh/ebmBook"
+    tags="ML, Education, Tutorial"
+>}}
+
+</div>
+
+## Technical Skills
+
+<div class="skills-grid">
+<div class="skill-card">
+    <h3>Languages</h3>
+    <div class="tags">
+    <span>Python</span><span>R</span><span>Julia</span>
+    <span>JavaScript</span><span>SQL</span>
+    </div>
+</div>
+
+<div class="skill-card">
+    <h3>ML & Data Science</h3>
+    <div class="tags">
+    <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span>
+    <span>Pandas</span><span>NumPy</span><span>LangChain</span>
+    <span>Bayesian Modeling</span>
+    </div>
+</div>
+
+<div class="skill-card">
+    <h3>Web & Cloud</h3>
+    <div class="tags">
+    <span>FastAPI</span><span>Next.js</span><span>React</span>
+    <span>MongoDB</span><span>Azure</span><span>GCP</span>
+    <span>CI/CD</span><span>HPC</span>
+    </div>
+</div>
+
+<div class="skill-card">
+    <h3>Data Visualization</h3>
+    <div class="tags">
+    <span>D3.js</span><span>Observable</span><span>Chart.js</span>
+    <span>Matplotlib</span>
+    </div>
+</div>
+</div>
 
 
+</br>
+
+## Tutorials
+
+### Machine Learning
+
+<div class="tutorial-grid">
+
+{{< tutorialcard
+    link="/cn/2023/04/24/lr/"
+    title="Logistic Regression"
+    intro="Step-by-step explanation of logistic regression with practical intuition."
+>}}
+
+{{< tutorialcard
+    link="/en/2025/04/17/kde/"
+    title="Kernel Density Estimation"
+    intro="An intuitive guide to estimating probability density functions with KDE."
+>}}
+
+{{< tutorialcard
+    link="/en/2024/12/12/igmm/"
+    title="Infinite Gaussian Mixture Model"
+    intro="How IGMMs extend Gaussian mixture models for flexible clustering."
+>}}
+
+{{< tutorialcard
+    link="/en/2022/09/26/knn/"
+    title="K-Nearest Neighbors with MNIST"
+    intro="Hands-on guide to KNN classification using the MNIST dataset."
+>}}
+
+</div>
+<div class="see-more-tutorials">
+  See more: <a href="/en/tags/ml/">all ML tutorials</a>
+</div>
+
+
+### Statistics
+
+<div class="tutorial-grid">
+
+{{< tutorialcard
+    link="/cn/2024/11/28/aov/"
+    title="Introduction to ANOVA"
+    intro="Understand analysis of variance with clear explanations and examples."
+>}}
+
+{{< tutorialcard
+    link="/cn/2024/11/14/power-alpha-errors/"
+    title="Statistical Power"
+    intro="Explains power, Type I, and Type II errors in hypothesis testing."
+>}}
+
+{{< tutorialcard
+    link="/cn/2024/09/24/clt/"
+    title="Central Limit Theorem"
+    intro="Step-by-step intuition for why the CLT is so important in statistics."
+>}}
+
+{{< tutorialcard
+    link="/cn/2024/10/08/ci/"
+    title="Confidence Intervals"
+    intro="How to interpret and calculate confidence intervals in practice."
+>}}
+</div>
+<div class="see-more-tutorials">
+  See more: <a href="/cn/tags/统计/">all Statistics tutorials</a> 
+</div>
+
+
+### LLM
+<div class="tutorial-grid">
+{{< tutorialcard
+    link="/cn/2025/07/18/llm/"
+    title="Introduction to LLM"
+    intro="Overview of large language models, their architecture, and use cases."
+>}}
+
+{{< tutorialcard
+    link="/cn/2025/07/20/llm/"
+    title="Processing Textual Data"
+    intro="A practical guide to preparing and processing data for LLMs."
+>}}
+</div>
+
+### Coding / Full-Stack
+<div class="tutorial-grid">
+{{< tutorialcard
+    link="/cn/2024/09/01/fastapi/"
+    title="FastAPI Crash Course"
+    intro="Beginner-friendly introduction to building APIs with FastAPI."
+>}}
+
+{{< tutorialcard
+    link="/cn/2024/10/05/sql/"
+    title="SQL Crash Course"
+    intro="Learn SQL basics and practice queries step by step."
+>}}
+
+{{< tutorialcard
+    link="/en/2024/12/14/log-sum-exp/"
+    title="Log-Sum-Exp Trick"
+    intro="Explains numerical stability issues and the log-sum-exp trick."
+>}}
+</div>
+<div class="see-more-tutorials">
+  See more: <a href="/cn/tags/编程/">all Coding tutorials</a> 
+</div>
+
+
+### Optimization
+<div class="tutorial-grid">
+{{< tutorialcard
+    link="/en/2023/03/22/least-squares/"
+    title="Least Squares"
+    intro="Simple and intuitive guide to least squares optimization."
+>}}
+
+{{< tutorialcard
+    link="/en/2023/03/17/optimization-duality/"
+    title="Optimization Duality"
+    intro="Explains the concept of duality in optimization problems."
+>}}
+
+{{< tutorialcard
+    link="/en/2023/03/17/optimization-intro/"
+    title="Intro to Optimization"
+    intro="Walkthrough of optimization basics with the TopBrass problem."
+>}}
+
+<div class="see-more-tutorials">
+  See more: <a href="en/tags/optimization/">all Optimization tutorials</a>
+</div>
+</div>

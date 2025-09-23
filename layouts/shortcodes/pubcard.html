@@ -1,0 +1,45 @@
+<div class="pubcard" style="display:flex; margin-bottom:1rem; align-items:flex-start;">
+
+  <!-- Thumbnail -->
+  <div style="flex:0 0 95px; margin-right:0.8rem;">
+    {{ with .Get "img" }}
+      <a href="{{ $.Get "link" }}"><img src="{{ . }}" alt="thumbnail" style="max-width:95px; border-radius:3px;"></a>
+    {{ end }}
+  </div>
+
+  <!-- Metadata -->
+  <div style="flex:1;">
+    <!-- Title -->
+    <div style="font-weight:600; font-size:1rem; line-height:1.3;">
+      <a href="{{ .Get "link" }}">{{ .Get "title" }}</a>
+    </div>
+
+    <!-- Intro -->
+    {{ with .Get "intro" }}
+      <div style="font-size:0.85rem; color:#444; margin:0.2rem 0;">
+        {{ . }}
+      </div>
+    {{ end }}
+
+    <!-- Authors + Venue -->
+    {{ $authors := .Get "authors" }}
+    {{ $venue := .Get "venue" }}
+    {{ if or $authors $venue }}
+      <div style="font-size:0.8rem; color:#666; margin-bottom:0.2rem;">
+        {{ with $authors }}{{ . }}{{ end }}
+        {{ if and $authors $venue }} &nbsp; | &nbsp; {{ end }}
+        {{ with $venue }}<em>{{ . }}</em>{{ end }}
+      </div>
+    {{ end }}
+
+    <!-- Links (inline, small) -->
+    <div style="font-size:0.75rem; color:#888;">
+      {{ if .Get "pdf" }}<a href="{{ .Get "pdf" }}">PDF</a>{{ end }}
+      {{ if .Get "arxiv" }} | <a href="{{ .Get "arxiv" }}">arXiv</a>{{ end }}
+      {{ if .Get "code" }} | <a href="{{ .Get "code" }}">Code</a>{{ end }}
+      {{ if .Get "data" }} | <a href="{{ .Get "data" }}">Data</a>{{ end }}
+      {{ if .Get "demo" }} | <a href="{{ .Get "demo" }}">Demo</a>{{ end }}
+      {{ if .Get "package" }} | <a href="{{ .Get "package" }}">Package</a>{{ end }}
+    </div>
+  </div>
+</div>

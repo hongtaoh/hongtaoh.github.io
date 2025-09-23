@@ -65,6 +65,7 @@ hasCJKLanguage = true
   copyright = "&copy;"
   copyrightYearStart = "2020"
   blogDirName = "blog"
+  customCSS = ["css/custom.css"]
   logo = { url = "ht10.png", width = 50.0, height = 50.0, alt = "Hongtao Hao" }
 
 [languages]
