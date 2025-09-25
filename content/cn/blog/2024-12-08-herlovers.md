@@ -8,6 +8,11 @@ toc: false
 tags: 
 ---
 
+{{< block class="reminder" >}}
+最近发现这个项目有人看。我用 Svelte 弄了一下: [https://hermatch-svelte.vercel.app/](https://hermatch-svelte.vercel.app/)。可能看起来更高大上一些，但效果是一样的。
+{{< end >}}
+
+
 数据请参考：[https://github.com/hongtaoh/ChineseMenData](https://github.com/hongtaoh/ChineseMenData)。
 
 <iframe width="100%" height="1628" frameborder="0"
