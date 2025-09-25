@@ -44,11 +44,9 @@ Currently seeking Machine Learning Engineer (MLE) roles in industry.
 - Built an **LLM-powered application** that engineers to conduct data analysis via a generative AI interface.  
 - Results contributed to **two co-authored papers** (CHI EA ’24, IUI ’24 Companion).
 
-
-
 ## Research
 
-Peer-reviewed publications and preprints from my academic work.
+Peer-reviewed publications from my academic work.
 
 {{< pubcard
     img="https://saebm.hongtaoh.com/static/images/tau.svg"
@@ -215,26 +213,26 @@ Personal and collaborative coding projects beyond academic publications.
     <div class="tags">
     <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span>
     <span>Pandas</span><span>NumPy</span><span>LangChain</span>
-    <span>Bayesian Modeling</span>
+    <span>JAX</span>
     </div>
 </div>
 
 <div class="skill-card">
     <h3>Web & Cloud</h3>
     <div class="tags">
-    <span>FastAPI</span><span>Next.js</span><span>React</span>
+    <span>FastAPI</span><span>Next.js</span><span>D3.js</span><span>React</span>
     <span>MongoDB</span><span>Azure</span><span>GCP</span>
-    <span>CI/CD</span><span>HPC</span>
+    <span>CI/CD</span><span>HPC</span><span>Docker</span>
     </div>
 </div>
 
-<div class="skill-card">
+<!-- <div class="skill-card">
     <h3>Data Visualization</h3>
     <div class="tags">
     <span>D3.js</span><span>Observable</span><span>Chart.js</span>
     <span>Matplotlib</span>
     </div>
-</div>
+</div> -->
 </div>
 
 
