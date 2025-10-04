@@ -17,7 +17,7 @@ My research focuses on AI/ML for healthcare, with emphasis on disease progressio
 Beyond research, I have authored 100+ tutorials on coding, math, ML, and statistics
 on my bilingual blog. I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development.
 
-Currently seeking Machine Learning Engineer (MLE) roles in industry.
+Currently seeking Machine Learning Engineer (MLE) and reseaerch roles.
 
 <!-- Contact / Resume -->
 <div class="about-links">
