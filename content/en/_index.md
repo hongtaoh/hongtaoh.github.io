@@ -17,7 +17,9 @@ My research focuses on AI/ML for healthcare, with emphasis on disease progressio
 Beyond research, I have authored 100+ tutorials on coding, math, ML, and statistics
 on my bilingual blog. I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development.
 
-Currently seeking Machine Learning Engineer (MLE) and reseaerch roles.
+Currently seeking research and Machine Learning Engineer (MLE) roles. 
+
+I have outlined my ML experiences in [this document](https://docs.google.com/document/d/1uUCtlczbH5rBPwHKKdVpu4urY5UuyeYA7RwQB80n3tY/edit?usp=sharing).
 
 <!-- Contact / Resume -->
 <div class="about-links">
@@ -56,7 +58,7 @@ Peer-reviewed publications from my academic work.
     intro="Improved accuracy of disease progression modeling by 40% compared to four SOTA algorithms."
     authors="Hongtao Hao, Vivek Prabhakaran, Veena A Nair, Nagesh Adluru, Joseph L. Austerweil, for the Alzheimer’s Disease Neuroimaging Initiative"
     venue="Machine Learning for Healthcare, 2025"
-    pdf="https://saebm.hongtaoh.com/static/saebm.pdf"
+    pdf="https://proceedings.mlr.press/v298/hao25a.html"
     demo="https://saebm.hongtaoh.com/"
     code="https://github.com/hongtaoh/saebm"
     package="https://pypi.org/project/pysaebm/"
