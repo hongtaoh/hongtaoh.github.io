@@ -12,6 +12,14 @@ tags: 留学
 - 北京时间 2025 年 11 月 8 日晚上 10:00 我会办一场答疑，[Zoom 地址](https://uwmadison.zoom.us/j/98326922955?pwd=UbhM2b5szdDCpSOCacqwru991oWOgj.1)。
 {{<end>}} -->
 
+{{<block class="info">}}
+认识很久的朋友，现在做教授。感兴趣的可以试试。
+
+[Kai-Cheng Yang](https://www.kaichengyang.me/)，Assistant Professor @ School of Computing at Binghamton University. 
+
+真的很厉害的一个研究者，发表惊人，而且人非常好。如果有幸可以去跟他一起做科研，绝对是值得投资的一段时间。超级非常推荐。
+{{<end>}}
+
 {{<block class="tip">}}
 相关博文：
 

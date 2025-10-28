@@ -7,6 +7,15 @@ draft: false
 toc: false
 tags: 留学
 ---
+
+{{<block class="info">}}
+认识很久的朋友，现在做教授。感兴趣的可以试试。
+
+[Kai-Cheng Yang](https://www.kaichengyang.me/)，Assistant Professor @ School of Computing at Binghamton University. 
+
+真的很厉害的一个研究者，发表惊人，而且人非常好。如果有幸可以去跟他一起做科研，绝对是值得投资的一段时间。超级非常推荐。
+{{<end>}}
+
 {{<block class="info">}}
 
 我建议用以下两个工具来自己修改自己的 SOP:
