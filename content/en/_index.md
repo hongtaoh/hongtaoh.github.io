@@ -9,15 +9,11 @@
 
 ## PhD Candidate · AI/ML for Healthcare
 
+I am a PhD candidate (ABD) in Computer Science at the University of Wisconsin–Madison, advised by Professor [Joseph Austerweil](https://alab.psych.wisc.edu/people/). My research focuses on AI/ML for healthcare, with emphasis on disease progression modeling using probabilistic methods and unsupervised learning.
 
-I am a PhD candidate (ABD) in Computer Science at the University of Wisconsin–Madison,
-advised by Professor [Joseph Austerweil](https://alab.psych.wisc.edu/people/).
-My research focuses on AI/ML for healthcare, with emphasis on disease progression modeling using probabilistic methods and unsupervised learning.
+Beyond research, I have authored 100+ tutorials on coding, math, ML, and statistics on my bilingual blog. I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development.
 
-Beyond research, I have authored 100+ tutorials on coding, math, ML, and statistics
-on my bilingual blog. I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development.
-
-Currently seeking research and Machine Learning Engineer (MLE) roles. 
+**I am currently seeking research and Machine Learning Engineer (MLE) roles starting early (January-June) 2026.** 
 
 I have outlined my ML experiences in [this document](https://docs.google.com/document/d/1uUCtlczbH5rBPwHKKdVpu4urY5UuyeYA7RwQB80n3tY/edit?usp=sharing).
 
@@ -52,12 +48,30 @@ I have outlined my ML experiences in [this document](https://docs.google.com/doc
 Peer-reviewed publications from my academic work.
 
 {{< pubcard
+    img="/media/research/bebms.png"
+    link="/"
+    title="Bayesian Event-Based Model for Disease Subtype and Stage Inference (Camera-ready version available on Nov. 11 2025)"
+    intro="Extended Event-Based Models to handle heterogeneous patient subgroups, improving performance by 27% over SOTA."
+    authors="Hongtao Hao, Joseph L. Austerweil, for the Alzheimer’s Disease Neuroimaging Initiative"
+    venue="Machine Learning for Health (ML4H) Symposium, 2025"
+>}}
+
+{{< pubcard
+    img="/media/research/jpm2.png"
+    link="/"
+    title="Joint Progression Modeling (JPM): A Probabilistic Framework for Mixed-Pathology Progression (Camera-ready version available on Nov. 11 2025)"
+    intro="Proposed a Bayesian ranking model for multi-pathology progression, boosting accuracy by 21% over baseline."
+    authors="Hongtao Hao, Joseph L. Austerweil, for the Alzheimer’s Disease Neuroimaging Initiative"
+    venue="Machine Learning for Health (ML4H) Symposium, 2025"
+>}}
+
+{{< pubcard
     img="https://saebm.hongtaoh.com/static/images/tau.svg"
     link="https://saebm.hongtaoh.com/"
     title="Stage-Aware Event-Based Modeling (SA-EBM) for Disease Progression"
     intro="Improved accuracy of disease progression modeling by 40% compared to four SOTA algorithms."
     authors="Hongtao Hao, Vivek Prabhakaran, Veena A Nair, Nagesh Adluru, Joseph L. Austerweil, for the Alzheimer’s Disease Neuroimaging Initiative"
-    venue="Machine Learning for Healthcare, 2025"
+    venue="Machine Learning for Healthcare (MLHC), 2025"
     pdf="https://proceedings.mlr.press/v298/hao25a.html"
     demo="https://saebm.hongtaoh.com/"
     code="https://github.com/hongtaoh/saebm"
@@ -87,7 +101,7 @@ Peer-reviewed publications from my academic work.
     link="https://academic.oup.com/joc/article/74/6/451/7687236"
     title="Addressing Whiteness in Communication Scholar Composition and Collaboration across Seven Decades of ICA Journals (1951–2022)"
     intro="A large-scale analysis of author composition and collaboration networks across seven decades of ICA journals."
-    authors="Haley Hatfield, Hongtao Hao* (Equal Contribution), Matthew Klein, Jing Zhang, Yijie Fu, Jaemin Kim, Jongmin Lee, Sun Joo Ahn"
+    authors="Haley Hatfield*, Hongtao Hao* (Equal Contribution), Matthew Klein, Jing Zhang, Yijie Fu, Jaemin Kim, Jongmin Lee, Sun Joo Ahn"
     venue="Journal of Communication, 2024"
     code="https://github.com/hongtaoh/ICA_Journals"
 >}}
@@ -166,7 +180,7 @@ Personal and collaborative coding projects beyond academic publications.
 
 {{< projectcard
     img="/media/projects/covid.png"
-    link="https://observablehq.com/@yy/covid-19-fatality-rate"
+    link="https://covid19-dashboard.pages.dev/"
     title="Coronavirus Trend Visualizations"
     intro="Contributed to a dynamic Covid-19 visualization project that became a Top 10 Most Liked Observable notebook in 2020."
     tags="Data Visualization, Covid-19, Observable"

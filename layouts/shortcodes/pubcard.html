@@ -21,12 +21,14 @@
       </div>
     {{ end }}
 
-    <!-- Authors + Venue -->
     {{ $authors := .Get "authors" }}
     {{ $venue := .Get "venue" }}
     {{ if or $authors $venue }}
       <div style="font-size:0.8rem; color:#666; margin-bottom:0.2rem;">
-        {{ with $authors }}{{ . }}{{ end }}
+        {{ with $authors }}
+          {{ $formatted := replace . "Hongtao Hao" "<span style=\"color:orange; font-weight:500;\">Hongtao Hao</span>" }}
+          {{ $formatted | safeHTML }}
+        {{ end }}
         {{ if and $authors $venue }} &nbsp; | &nbsp; {{ end }}
         {{ with $venue }}<em>{{ . }}</em>{{ end }}
       </div>
