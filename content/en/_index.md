@@ -49,20 +49,26 @@ Peer-reviewed publications from my academic work.
 
 {{< pubcard
     img="/media/research/bebms.png"
-    link="/"
-    title="Bayesian Event-Based Model for Disease Subtype and Stage Inference (Camera-ready version available on Nov. 11 2025)"
+    link="https://github.com/hongtaoh/bebms"
+    title="Bayesian Event-Based Model for Disease Subtype and Stage Inference"
     intro="Extended Event-Based Models to handle heterogeneous patient subgroups, improving performance by 27% over SOTA."
     authors="Hongtao Hao, Joseph L. Austerweil, for the Alzheimer’s Disease Neuroimaging Initiative"
     venue="Machine Learning for Health (ML4H) Symposium, 2025"
+    pdf="https://raw.githubusercontent.com/hongtaoh/bebms/main/ml4h_bebms.pdf"
+    code="https://github.com/hongtaoh/bebms"
+    package="https://github.com/jpcca/bebms_pkg"
 >}}
 
 {{< pubcard
     img="/media/research/jpm2.png"
-    link="/"
-    title="Joint Progression Modeling (JPM): A Probabilistic Framework for Mixed-Pathology Progression (Camera-ready version available on Nov. 11 2025)"
+    link="https://github.com/hongtaoh/jpm"
+    title="Joint Progression Modeling (JPM): A Probabilistic Framework for Mixed-Pathology Progression"
     intro="Proposed a Bayesian ranking model for multi-pathology progression, boosting accuracy by 21% over baseline."
     authors="Hongtao Hao, Joseph L. Austerweil, for the Alzheimer’s Disease Neuroimaging Initiative"
     venue="Machine Learning for Health (ML4H) Symposium, 2025"
+    pdf="https://raw.githubusercontent.com/hongtaoh/jpm/main/ml4h_jpm.pdf"
+    code="https://github.com/hongtaoh/jpm"
+    package="https://github.com/jpcca/pyjpm"
 >}}
 
 {{< pubcard
