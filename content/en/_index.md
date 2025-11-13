@@ -13,13 +13,14 @@ I am a PhD candidate (ABD) in Computer Science at the University of Wisconsin–
 
 Beyond research, I have authored 100+ tutorials on coding, math, ML, and statistics on my bilingual blog. I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development.
 
-**I am currently seeking research and Machine Learning Engineer (MLE) roles starting early (January-June) 2026.** 
+**I am currently seeking research and Machine Learning Engineer (MLE) roles starting from early (January-June) 2026.** 
 
 I have outlined my ML experiences in [this document](https://docs.google.com/document/d/1uUCtlczbH5rBPwHKKdVpu4urY5UuyeYA7RwQB80n3tY/edit?usp=sharing).
 
 <!-- Contact / Resume -->
 <div class="about-links">
 <a href="/files/hongtao_hao_resume.pdf" class="btn">Resume</a>
+<a href="/files/hongtao_hao_cv.pdf" class="btn">CV</a>
 <a href="mailto:hongtaoh@cs.wisc.edu">Email</a>
 <a href="https://github.com/hongtaoh" target="_blank">GitHub</a>
 <a href="https://scholar.google.com/citations?user=VO6EfSzAAG0C&hl=en&oi=sra" target="_blank">Google Scholar</a>
