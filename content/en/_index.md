@@ -58,6 +58,7 @@ Peer-reviewed publications from my academic work.
     pdf="https://raw.githubusercontent.com/hongtaoh/bebms/main/ml4h_bebms.pdf"
     code="https://github.com/hongtaoh/bebms"
     package="https://github.com/jpcca/bebms_pkg"
+    poster="/files/bebms_poster.pdf"
 >}}
 
 {{< pubcard
@@ -70,6 +71,7 @@ Peer-reviewed publications from my academic work.
     pdf="https://raw.githubusercontent.com/hongtaoh/jpm/main/ml4h_jpm.pdf"
     code="https://github.com/hongtaoh/jpm"
     package="https://github.com/jpcca/pyjpm"
+    poster="/files/jpm_poster.pdf"
 >}}
 
 {{< pubcard
@@ -83,6 +85,7 @@ Peer-reviewed publications from my academic work.
     demo="https://saebm.hongtaoh.com/"
     code="https://github.com/hongtaoh/saebm"
     package="https://pypi.org/project/pysaebm/"
+    poster="https://saebm.hongtaoh.com/static/poster.pdf"
 >}}
 
 {{< pubcard
