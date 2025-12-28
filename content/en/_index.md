@@ -50,12 +50,12 @@ Peer-reviewed publications from my academic work.
 
 {{< pubcard
     img="/media/research/bebms.png"
-    link="https://github.com/hongtaoh/bebms"
+    link="https://www.arxiv.org/abs/2512.03467"
     title="Bayesian Event-Based Model for Disease Subtype and Stage Inference"
     intro="Extended Event-Based Models to handle heterogeneous patient subgroups, improving performance by 27% over SOTA."
     authors="Hongtao Hao, Joseph L. Austerweil"
     venue="Machine Learning for Health (ML4H) Symposium 2025 & NeurIPS 2025 Workshop (Learning from Time Series for Health)"
-    pdf="https://raw.githubusercontent.com/hongtaoh/bebms/main/ml4h_bebms.pdf"
+    pdf="https://www.arxiv.org/abs/2512.03467"
     code="https://github.com/hongtaoh/bebms"
     package="https://github.com/jpcca/bebms_pkg"
     poster="/files/bebms_poster.pdf"
@@ -63,12 +63,12 @@ Peer-reviewed publications from my academic work.
 
 {{< pubcard
     img="/media/research/jpm2.png"
-    link="https://github.com/hongtaoh/jpm"
+    link="https://www.arxiv.org/abs/2512.03475"
     title="Joint Progression Modeling (JPM): A Probabilistic Framework for Mixed-Pathology Progression"
     intro="Proposed a Bayesian ranking model for multi-pathology progression, boosting accuracy by 21% over baseline."
     authors="Hongtao Hao, Joseph L. Austerweil"
     venue="Machine Learning for Health (ML4H) Symposium 2025 & NeurIPS 2025 Workshop (Learning from Time Series for Health)"
-    pdf="https://raw.githubusercontent.com/hongtaoh/jpm/main/ml4h_jpm.pdf"
+    pdf="https://www.arxiv.org/abs/2512.03475"
     code="https://github.com/hongtaoh/jpm"
     package="https://github.com/jpcca/pyjpm"
     poster="/files/jpm_poster.pdf"
