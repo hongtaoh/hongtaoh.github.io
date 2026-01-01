@@ -206,7 +206,7 @@ Personal and collaborative coding projects beyond academic publications.
 >}}
 
 {{< projectcard
-    img="https://themes.gohugo.io/themes/hugo-ht/screenshot_hu_f6418ef3e63100cd.webp"
+    img="https://themes.gohugo.io/themes/hugo-ht/screenshot_hu_2834ffdb5cf85810.webp"
     link="https://themes.gohugo.io/themes/hugo-ht/"
     title="Hugo-HT"
     intro="A minimal multilingual Hugo theme; this homepage is built on it."
