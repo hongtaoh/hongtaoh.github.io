@@ -19,6 +19,9 @@ hasCJKLanguage = true
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
 
+[frontmatter]
+  lastmod = ["lastmod", ":git", "date"]
+
 [markup]
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark]
