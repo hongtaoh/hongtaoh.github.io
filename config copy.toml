@@ -100,6 +100,34 @@ hasCJKLanguage = true
       name = "Blog"
       url = "/blog/"
       weight = 2
+
+  [languages.cn]
+    languageName = "中文"
+    languageCode = "zh-cn"
+    weight = 2
+    title = "郝鸿涛"
+    contentDir = "content/cn"
+
+    [languages.cn.params]
+      description = "郝鸿涛的个人网站"
+      licenseURL = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"
+
+    [languages.cn.taxonomies]
+      tag = "tags"
+      category = "categories"
+
+    [languages.cn.permalinks]
+      blog = "/:year/:month/:day/:slug/"
+
+    [[languages.cn.menu.main]]
+      name = "关于"
+      url = "/about/"
+      weight = 1
+
+    [[languages.cn.menu.main]]
+      name = "博客"
+      url = "/blog/"
+      weight = 2
     
 
     
