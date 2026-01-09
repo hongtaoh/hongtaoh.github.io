@@ -84,7 +84,4 @@ hasCJKLanguage = true
       description = "Personal website of Hongtao Hao"
       licenseURL = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 
-    [[languages.en.menu.main]]
-      name = "Home"
-      url = "/"
-      weight = 1
+    
