@@ -13,14 +13,14 @@ I am a PhD candidate (ABD) in Computer Science at the University of Wisconsin–
 
 Beyond research, I have authored 100+ tutorials on coding, math, ML, and statistics on my bilingual blog. I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development.
 
-**I am currently seeking research and Machine Learning Engineer (MLE) roles starting from early (January-June) 2026.** 
+**I am currently seeking research and Machine Learning Engineer (MLE) roles starting from June 2026.** 
 
-I have outlined my ML experiences in [this document](https://docs.google.com/document/d/1uUCtlczbH5rBPwHKKdVpu4urY5UuyeYA7RwQB80n3tY/edit?usp=sharing).
+<!-- I have outlined my ML experiences in [this document](https://docs.google.com/document/d/1uUCtlczbH5rBPwHKKdVpu4urY5UuyeYA7RwQB80n3tY/edit?usp=sharing). -->
 
 <!-- Contact / Resume -->
 <div class="about-links">
 <a href="/files/hongtao_hao_resume.pdf" class="btn">Resume</a>
-<a href="/files/hongtao_hao_cv.pdf" class="btn">CV</a>
+<!-- <a href="/files/hongtao_hao_cv.pdf" class="btn">CV</a> -->
 <a href="mailto:hongtaoh@cs.wisc.edu">Email</a>
 <a href="https://github.com/hongtaoh" target="_blank">GitHub</a>
 <a href="https://scholar.google.com/citations?user=VO6EfSzAAG0C&hl=en&oi=sra" target="_blank">Google Scholar</a>
@@ -38,11 +38,30 @@ I have outlined my ML experiences in [this document](https://docs.google.com/doc
 
 </br>
 
-## Experience
+## Experiences
 
-**Research Intern** — Robert Bosch LLC, Sunnyvale, CA (Jun – Aug 2023)  
-- Built an **LLM-powered application** that engineers to conduct data analysis via a generative AI interface.  
-- Results contributed to **two co-authored papers** (CHI EA ’24, IUI ’24 Companion).
+**PhD Researcher (Healthcare ML)** — University of Wisconsin–Madison, Madison, WI (Aug. 2021 – Present) 
+
+- Designed and implemented novel Bayesian probabilistic models for healthcare disease progression and subtype discovery that are validated against real-world clinical datasets (ADNI, NACC), achieving 21-46% ordering accuracy improvements
+and 89% disease staging accuracy improvements over state-of-the-art methods across diverse synthetic datasets.
+- Designed and executed 9,000 + distributed computing jobs on CHTC HPC clusters for large-scale experiments, demonstrating strong experience with scalable ML/AI systems.
+- Built and maintained three production-ready open-source Python packages (pysaebm, pyjpm, bebms) for probabilistic disease progression modeling, demonstrating ability to transform complex research algorithms into well-documented, pip-installable tools adopted by the broader research community.
+
+
+
+**Research Intern** — Robert Bosch LLC, Sunnyvale, CA (Jun – Aug 2023) 
+
+- Built full-stack LLM powered data analysis application using Python, MongoDB, and Streamlit, enabling domain-specific querying and automated insight generation from corporate datasets.
+- Implemented scalable evaluation pipeline using Microsoft Azure for metrics such as response quality and relevance, contributing to 2 peer-reviewed publications on LLM-human interaction patterns and LLM capabilities of domain-specific
+data analysis (CHI EA ’24, IUI ’24 Companion).
+
+**Research Assistant (Full-time), Data Visualization** - YY Lab @ Indiana University Bloomington, IN  (Aug 2020 - May 2021)
+
+- Maintained COVID-19 trend visualization dashboard (https://covid19-dashboard.pages.dev) in D3.js under Prof. Yong-Yeol Ahn, achieving Top 10 Most Liked notebooks on Observable platform (2020).
+- Automated data workflow with CI/CD pipeline, ensuring daily synchronization with Our World in Data (OWID) COVID-19 Pandemic dataset covering 200+ countries and regions.
+- Implemented interactive visualization features including temporal controls (delay parameter, play speed, time-reversal),
+data range filtering, and user interface.
+
 
 ## Research
 
