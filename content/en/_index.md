@@ -169,13 +169,12 @@ Personal and collaborative coding projects beyond academic publications.
 <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1rem;">
 
 {{< projectcard
-    img="/media/projects/hermatch.png"
-    link="https://hermatch-svelte.vercel.app/"
-    title="Chinese Women’s Partner Choice Data Lab (中国女性择偶数据实验室)"
-    intro="An interactive one-page Svelte app that estimates how many men fit user-selected partner criteria."
-    code="https://github.com/hongtaoh/hermatch_svelte"
-    data="https://github.com/hongtaoh/ChineseMenData"
-    tags="Front-End, Data Visualization, Svelte"
+    img="/media/projects/rlhf.png"
+    link="https://github.com/hongtaoh/TriFetch_Code"
+    title="RLHF Control Room for Medical AI"
+    intro="An Online RLHF (Reinforcement Learning from Human Feedback) Workbench for medical AI. "
+    code="https://github.com/hongtaoh/TriFetch_Code"
+    tags="LLM, Reinforcement Learning, RLHF"
 >}}
 
 {{< projectcard
@@ -195,6 +194,16 @@ Personal and collaborative coding projects beyond academic publications.
     code="https://github.com/hongtaoh/ica-conference-app"
     data="https://github.com/hongtaoh/ica_conf"
     tags="Front-End, React, Data Visualization"
+>}}
+
+{{< projectcard
+    img="/media/projects/hermatch.png"
+    link="https://hermatch-svelte.vercel.app/"
+    title="Chinese Women’s Partner Choice Data Lab (中国女性择偶数据实验室)"
+    intro="An interactive one-page Svelte app that estimates how many men fit user-selected partner criteria."
+    code="https://github.com/hongtaoh/hermatch_svelte"
+    data="https://github.com/hongtaoh/ChineseMenData"
+    tags="Front-End, Data Visualization, Svelte"
 >}}
 
 {{< projectcard
