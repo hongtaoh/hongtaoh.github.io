@@ -178,6 +178,15 @@ Personal and collaborative coding projects beyond academic publications.
 >}}
 
 {{< projectcard
+    img="/media/projects/llm_chtc.png"
+    link="https://github.com/hongtaoh/chtc_llm_demo"
+    title="LLM Inference Demo on HTCondor"
+    intro="An end-to-end LLM inference pipeline on HPC infrastructure using HTCondor job scheduling."
+    code="https://github.com/hongtaoh/chtc_llm_demo"
+    tags="LLM Inference, HPC"
+>}}
+
+{{< projectcard
     img="/media/cnblog/htmovies.png"
     link="https://htmovies.vercel.app/"
     title="LLM-Powered Movie Recommendation"
