@@ -128,3 +128,8 @@ hasCJKLanguage = true
       name = "博客"
       url = "/blog/"
       weight = 2
+
+    [[languages.cn.menu.main]]
+      name = "学习"
+      url = "/learn/"
+      weight = 3
