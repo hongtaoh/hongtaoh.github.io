@@ -11,7 +11,7 @@
 
 I am a PhD candidate (ABD) in Computer Science at the University of Wisconsin–Madison, advised by Professor [Joseph Austerweil](https://alab.psych.wisc.edu/people/). My research focuses on AI/ML for healthcare, with emphasis on disease progression modeling using probabilistic methods and unsupervised learning.
 
-Beyond research, I have authored 100+ tutorials on coding, math, ML, and statistics on my bilingual blog. I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development.
+Beyond research, I have authored [100+ tutorials](/en/tutorials/) on coding, math, ML, and statistics on my bilingual blog. I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development.
 
 **I am currently seeking research and Machine Learning Engineer (MLE) roles starting from June 2026.** 
 
