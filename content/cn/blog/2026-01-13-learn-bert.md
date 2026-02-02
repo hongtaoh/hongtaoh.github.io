@@ -280,7 +280,7 @@ BERT 是一种 Masked Language Model (MLM)。什么意思？
 
 我们首先对 `$W^Q$`, `$W^K$`, `$W^V$` 进行随机初始化。那怎么训练呢？
 
-我用 Claude 生成了 [100 个简单的英文句子]('/files/simple_sentences.txt)。首先，我们得到所有单独的词，制作一个 TOKEN-EMBEDDING 查找表，这里要加上一个 `[MASK]`。我们把这个表叫做 `$E$`，也是随机初始化。
+我用 Claude 生成了 [100 个简单的英文句子](/files/simple_sentences.txt)。首先，我们得到所有单独的词，制作一个 TOKEN-EMBEDDING 查找表，这里要加上一个 `[MASK]`。我们把这个表叫做 `$E$`，也是随机初始化。
 
 `$$E \in \mathbb{R}^{m \times d}$$`
 
