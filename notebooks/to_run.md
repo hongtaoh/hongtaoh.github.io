@@ -71,3 +71,5 @@ python hupyter.py notebooks/2025-04-16-kde.ipynb cn/blog
 python hupyter.py notebooks/2025-07-23-llm2.ipynb cn/blog
 
 python hupyter.py notebooks/2026-01-13-learn-bert.ipynb cn/blog
+
+python hupyter.py notebooks/2026-02-19-ads-ranking.ipynb en/blog

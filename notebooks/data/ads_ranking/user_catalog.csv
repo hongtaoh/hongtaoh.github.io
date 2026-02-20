@@ -1,0 +1,11 @@
+user_id,age_group,gender,country
+1,18-24,M,US
+2,25-34,F,UK
+3,35-44,M,Germany
+4,25-34,F,US
+5,18-24,M,Japan
+6,45+,F,US
+7,35-44,M,Brazil
+8,25-34,F,UK
+9,18-24,M,Germany
+10,45+,F,Japan
