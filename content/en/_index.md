@@ -9,11 +9,11 @@
 
 ## PhD Candidate · AI/ML for Healthcare
 
-I am a PhD candidate (ABD) in Computer Science at the University of Wisconsin–Madison, advised by Professor [Joseph Austerweil](https://alab.psych.wisc.edu/people/). My research focuses on AI/ML for healthcare, with emphasis on disease progression modeling using probabilistic methods and unsupervised learning.
+I am a PhD candidate (ABD) in Computer Sciences at the University of Wisconsin–Madison, advised by Professor [Joseph Austerweil](https://alab.psych.wisc.edu/people/). My research focuses on AI/ML for healthcare. Beyond research, I have authored [100+ tutorials](/en/tutorials/) on coding, math, ML, and statistics on my bilingual blog. 
 
-Beyond research, I have authored [100+ tutorials](/en/tutorials/) on coding, math, ML, and statistics on my bilingual blog. I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development.
+<!-- I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development. -->
 
-**I am currently seeking research and Machine Learning Engineer (MLE) roles starting from May 2026.** 
+<!-- **I am currently seeking research and Machine Learning Engineer (MLE) roles starting from May 2026.**  -->
 
 <!-- I have outlined my ML experiences in [this document](https://docs.google.com/document/d/1uUCtlczbH5rBPwHKKdVpu4urY5UuyeYA7RwQB80n3tY/edit?usp=sharing). -->
 
@@ -24,21 +24,21 @@ Beyond research, I have authored [100+ tutorials](/en/tutorials/) on coding, mat
 <a href="mailto:hongtaoh@cs.wisc.edu">Email</a>
 <a href="https://github.com/hongtaoh" target="_blank">GitHub</a>
 <a href="https://scholar.google.com/citations?user=VO6EfSzAAG0C&hl=en&oi=sra" target="_blank">Google Scholar</a>
-<a href="https://www.linkedin.com/in/hongtao-hao-007245252/" target="_blank">LinkedIn</a>
+<!-- <a href="https://www.linkedin.com/in/hongtao-hao-007245252/" target="_blank">LinkedIn</a> -->
 </div>
 </div>
 
 <!-- Photo -->
-<div class="about-photo">
+<!-- <div class="about-photo">
     <img src="/media/hongtao_up_2024.png"
         alt="Hongtao Hao in Upper Peninsula, 2024"
         loading="lazy">
-</div>
+</div> -->
 </div>
 
 </br>
 
-## Experiences
+<!-- ## Experiences
 
 **PhD Researcher (Healthcare ML)** — University of Wisconsin–Madison, Madison, WI (Aug. 2021 – Present) 
 
@@ -60,7 +60,7 @@ data analysis (CHI EA ’24, IUI ’24 Companion).
 - Maintained COVID-19 trend visualization dashboard (https://covid19-dashboard.pages.dev) in D3.js under Prof. Yong-Yeol Ahn, achieving Top 10 Most Liked notebooks on Observable platform (2020).
 - Automated data workflow with CI/CD pipeline, ensuring daily synchronization with Our World in Data (OWID) COVID-19 Pandemic dataset covering 200+ countries and regions.
 - Implemented interactive visualization features including temporal controls (delay parameter, play speed, time-reversal),
-data range filtering, and user interface.
+data range filtering, and user interface. -->
 
 
 ## Research
@@ -261,34 +261,34 @@ Personal and collaborative coding projects beyond academic publications.
 
 </div>
 
-## Technical Skills
+<!-- ## Technical Skills -->
 
-<div class="skills-grid">
-<div class="skill-card">
+<!-- <div class="skills-grid"> -->
+<!-- <div class="skill-card">
     <h3>Languages</h3>
     <div class="tags">
     <span>Python</span><span>R</span><span>Julia</span>
     <span>JavaScript</span><span>SQL</span>
     </div>
-</div>
+</div> -->
 
-<div class="skill-card">
+<!-- <div class="skill-card">
     <h3>ML & Data Science</h3>
     <div class="tags">
     <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span>
     <span>Pandas</span><span>NumPy</span><span>LangChain</span>
     <span>JAX</span>
     </div>
-</div>
+</div> -->
 
-<div class="skill-card">
+<!-- <div class="skill-card">
     <h3>Web & Cloud</h3>
     <div class="tags">
     <span>FastAPI</span><span>Next.js</span><span>D3.js</span><span>React</span>
     <span>MongoDB</span><span>Azure</span><span>GCP</span>
     <span>CI/CD</span><span>HPC</span><span>Docker</span>
     </div>
-</div>
+</div> -->
 
 <!-- <div class="skill-card">
     <h3>Data Visualization</h3>
@@ -297,10 +297,10 @@ Personal and collaborative coding projects beyond academic publications.
     <span>Matplotlib</span>
     </div>
 </div> -->
-</div>
+<!-- </div> -->
 
 
-</br>
+<!-- </br> -->
 
 <!-- ## Tutorials
 
