@@ -32,6 +32,8 @@ tags: 留学
 
 {{<block class="info">}}
 博主张沥今分享了[她的博士申请经验](https://github.com/zhanglj37/Tutorial-on-PhD-Application)，我觉得很值得参考。
+
+博主 Junyu Jiang 分享的 [我的26fall北美社科混申总结](junyuj.com/blog/2026-03-05-26fall-ss-mixed-application.html) 也值得参考。
 {{<end>}}
 
 {{<block class="info">}}
