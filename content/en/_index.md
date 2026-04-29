@@ -68,6 +68,17 @@ data range filtering, and user interface. -->
 Peer-reviewed publications from my academic work.
 
 {{< pubcard
+    img="/media/research/tempo.png"
+    link="https://www.arxiv.org/abs/2604.23368"
+    title="TEMPO: Transformers for Temporal Disease Progression from Cross-Sectional Data"
+    intro="TEMPO is a Transformer-based framework that uses simulation-based supervised learning to infer the continuous disease progression from purely cross-sectional clinical data."
+    authors="Hongtao Hao, Joseph L. Austerweil"
+    venue="7th Annual Conference on Health, Inference, and Learning"
+    pdf="https://arxiv.org/pdf/2604.23368"
+    code="https://github.com/jpcca/tempo"
+>}}
+
+{{< pubcard
     img="/media/research/bebms.png"
     link="https://www.arxiv.org/abs/2512.03467"
     title="Bayesian Event-Based Model for Disease Subtype and Stage Inference"
