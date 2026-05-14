@@ -32,6 +32,7 @@
 - [Reinforcement Learning from Human Feedback](https://github.com/hongtaoh/TriFetch_Code)
 
 ## Mathematics
+
 - [Calculus](/en/2022/09/30/clac/)
 - [Linear Algebra](/en/2022/07/07/la/)
 - [Understanding Dot Product](/en/2022/08/27/dot-product/)
