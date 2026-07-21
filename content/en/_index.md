@@ -68,6 +68,17 @@ data range filtering, and user interface. -->
 Peer-reviewed publications from my academic work.
 
 {{< pubcard
+    img="/media/research/ica.png"
+    link="https://ica.hongtaoh.com"
+    demo="https://ica.hongtaoh.com"
+    title="ICAConfPubs: A Dataset and User Interface for ICA Conference Papers (2003-2018)"
+    intro="Dataset of all past annual International Communication Association papers and authors."
+    authors="Hongtao Hao, Xinyue Chen, Jiye Sun, Yanling Zhao, Jing Zhang"
+    pdf="https://arxiv.org/pdf/2607.14234"
+    code="https://github.com/hongtaoh/ica_conf_pubs"
+>}}
+
+{{< pubcard
     img="/media/research/tempo.png"
     link="https://www.arxiv.org/abs/2604.23368"
     title="TEMPO: Transformers for Temporal Disease Progression from Cross-Sectional Data"
