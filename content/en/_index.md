@@ -9,7 +9,7 @@
 
 ## PhD Candidate · AI/ML for Healthcare
 
-I completed my PhD in Computer Sciences at the University of Wisconsin–Madison (2026), advised by Professor [Joseph Austerweil](https://alab.psych.wisc.edu/people/). [My research](https://www.proquest.com/docview/3336070599) focuses on AI/ML for healthcare. Beyond research, I have authored [100+ tutorials](/en/tutorials/) on coding, math, ML, and statistics on my bilingual blog. 
+I completed my PhD in Computer Sciences at the University of Wisconsin–Madison (2026), advised by Professor [Joseph Austerweil](https://alab.psych.wisc.edu/people/). [My research](/files/hongtao_hao_phd_dissertation.pdf) focuses on AI/ML for healthcare. Beyond research, I have authored [100+ tutorials](/en/tutorials/) on coding, math, ML, and statistics on my bilingual blog. 
 
 <!-- I bring hands-on experience with ML research, LLM applications, cloud computing, high-performance computing, and full-stack development. -->
 
