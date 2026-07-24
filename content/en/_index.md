@@ -69,12 +69,12 @@ Peer-reviewed publications from my academic work.
 
 {{< pubcard
     img="/media/research/tempo.png"
-    link="https://www.arxiv.org/abs/2604.23368"
+    link="https://proceedings.mlr.press/v333/hao26a.html"
     title="TEMPO: Transformers for Temporal Disease Progression from Cross-Sectional Data"
     intro="TEMPO is a Transformer-based framework that uses simulation-based supervised learning to infer the continuous disease progression from purely cross-sectional clinical data."
     authors="Hongtao Hao, Joseph L. Austerweil"
     venue="7th Annual Conference on Health, Inference, and Learning"
-    pdf="https://arxiv.org/pdf/2604.23368"
+    pdf="https://proceedings.mlr.press/v333/hao26a.html"
     code="https://github.com/jpcca/tempo"
 >}}
 
