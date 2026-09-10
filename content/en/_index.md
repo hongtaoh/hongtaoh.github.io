@@ -7,7 +7,7 @@
 
 # Hongtao Hao
 
-## PhD Candidate · AI/ML for Healthcare
+## AI/ML for Healthcare
 
 I completed my PhD in Computer Sciences at the University of Wisconsin–Madison (2026), advised by Professor [Joseph Austerweil](https://alab.psych.wisc.edu/people/). [My research](/files/hongtao_hao_phd_dissertation.pdf) focuses on AI/ML for healthcare. Beyond research, I have authored [100+ tutorials](/en/tutorials/) on coding, math, ML, and statistics on my bilingual blog. 
 
@@ -66,6 +66,27 @@ data range filtering, and user interface. -->
 ## Research
 
 Peer-reviewed publications from my academic work.
+
+{{< pubcard
+
+    img="/media/research/bayesian_eig.png"
+
+    link="https://openreview.net/forum?id=v3QuTfvmkk"
+
+    title="Adaptive Bayesian Active Querying with LLMs for Efficient Information Gathering"
+
+    intro="We propose a hybrid framework that combines LLM-generated queries with Bayesian belief tracking and adaptive, cost-aware information gathering for efficient sequential diagnosis."
+
+    authors="Ognjen Malkoc, Hongtao Hao, Grisha Szep, Shubham Saha, Mizuki Oka, Joseph Austerweil"
+
+    venue="Data and AI for Health (DAIH) Workshop at COLM 2026"
+
+    pdf="https://openreview.net/forum?id=v3QuTfvmkk"
+
+    code="https://github.com/hongtaoh/bayesian_eig_colm"
+
+>}}
+
 
 {{< pubcard
     img="/media/research/tempo.png"
