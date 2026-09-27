@@ -79,7 +79,7 @@ Peer-reviewed publications from my academic work.
 
     authors="Ognjen Malkoc, Hongtao Hao, Grisha Szep, Shubham Saha, Mizuki Oka, Joseph Austerweil"
 
-    venue="Data and AI for Health (DAIH) Workshop at COLM 2026"
+    venue="Deploying AI in Healthcare (DAIH) Workshop at COLM 2026"
 
     pdf="https://openreview.net/forum?id=v3QuTfvmkk"
 
@@ -101,12 +101,12 @@ Peer-reviewed publications from my academic work.
 
 {{< pubcard
     img="/media/research/bebms.png"
-    link="https://www.arxiv.org/abs/2512.03467"
+    link="https://proceedings.mlr.press/v297/hao26a.html"
     title="Bayesian Event-Based Model for Disease Subtype and Stage Inference"
     intro="Extended Event-Based Models to handle heterogeneous patient subgroups, improving performance by 27% over SOTA."
     authors="Hongtao Hao, Joseph L. Austerweil"
     venue="Machine Learning for Health (ML4H) Symposium 2025 & NeurIPS 2025 Workshop (Learning from Time Series for Health)"
-    pdf="https://www.arxiv.org/abs/2512.03467"
+    pdf="https://proceedings.mlr.press/v297/hao26a.html"
     code="https://github.com/hongtaoh/bebms"
     package="https://github.com/jpcca/bebms_pkg"
     poster="/files/bebms_poster.pdf"
@@ -114,12 +114,12 @@ Peer-reviewed publications from my academic work.
 
 {{< pubcard
     img="/media/research/jpm2.png"
-    link="https://www.arxiv.org/abs/2512.03475"
+    link="https://proceedings.mlr.press/v297/hao26b.html"
     title="Joint Progression Modeling (JPM): A Probabilistic Framework for Mixed-Pathology Progression"
     intro="Proposed a Bayesian ranking model for multi-pathology progression, boosting accuracy by 21% over baseline."
     authors="Hongtao Hao, Joseph L. Austerweil"
     venue="Machine Learning for Health (ML4H) Symposium 2025 & NeurIPS 2025 Workshop (Learning from Time Series for Health)"
-    pdf="https://www.arxiv.org/abs/2512.03475"
+    pdf="https://proceedings.mlr.press/v297/hao26b.html"
     code="https://github.com/hongtaoh/jpm"
     package="https://github.com/jpcca/pyjpm"
     poster="/files/jpm_poster.pdf"
