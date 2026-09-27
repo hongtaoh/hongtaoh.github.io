@@ -23,7 +23,7 @@ I completed my PhD in Computer Sciences at the University of Wisconsin–Madison
 <!-- <a href="/files/hongtao_hao_cv.pdf" class="btn">CV</a> -->
 <a href="mailto:hongtaoh@cs.wisc.edu">Email</a>
 <a href="https://github.com/hongtaoh" target="_blank">GitHub</a>
-<a href="https://scholar.google.com/citations?user=VO6EfSzAAG0C&hl=en&oi=sra" target="_blank">Google Scholar</a>
+<a href="https://scholar.google.com/citations?user=7MRh6q8AAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>
 <!-- <a href="https://www.linkedin.com/in/hongtao-hao-007245252/" target="_blank">LinkedIn</a> -->
 </div>
 </div>
