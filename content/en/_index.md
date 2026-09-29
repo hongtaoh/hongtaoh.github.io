@@ -83,7 +83,7 @@ Peer-reviewed publications from my academic work.
 
     pdf="https://openreview.net/forum?id=v3QuTfvmkk"
 
-    code="https://github.com/hongtaoh/bayesian_eig_colm"
+    code="https://github.com/gaudiy/rnd_bayesian_eig_colm"
 
 >}}
 
